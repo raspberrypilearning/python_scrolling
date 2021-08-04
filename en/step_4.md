@@ -1,22 +1,38 @@
-## Upgrade your project
+## Step title
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Summary or upgrade project task
+Add an introductory sentence. What will learners achieve by the end of this step?
 </div>
 <div>
-![](images/image.png){:width="300px"}
+Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
 </div>
 </div>
+
+--- task ---
+
+Open a [new Scratch project](http://rpf.io/scratch-new){:target="_blank"}. Scratch will open in another browser tab.
+
+[[[working-offline]]]
+
+--- /task ---
+
+--- task ---
+
+Step content... 
+Can use:
+**Test:**
+**Choose:**
+**Tip:**
+
+--- task ---
+
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
-
----
-title: Completed project
----
-
-You can view the [completed project here](https://scratch.mit.edu/projects/485673032/){:target="_blank"}.
-
+Each debug in a collapse or ingredient
 --- /collapse ---
+
+--- /task ---
 
 --- save ---
