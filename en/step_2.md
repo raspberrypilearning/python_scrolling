@@ -1,8 +1,8 @@
-## Step title
+## Define your window
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add an introductory sentence. What will learners achieve by the end of this step?
+The first step is to define your game window, define some of the colours you will be using and create a backdrop for your game. 
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
