@@ -1,47 +1,40 @@
 ## Introduction
 
-In this project, <mark> short project description </mark>
+Write python code to make a fun game that uses x,y coordinates to draw geometric shapes which move on the screen.
 
-<mark>Boxout (wherever wanted/needed) </mark>
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Term**</span> description of term or interesting phrase.
-</p>
-
-<mark>Objectives in language that learners will understand</mark>
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
+<span style="color: #0faeb0">**Random**</span> means *not having any order or pattern*. Programmers use randomness **all the time**: it shows up in encryption, simulations, data handling and especially in video games! The example project uses randomness to generate both a galaxy of stars **and** a field of asteroids! </p>
 
 You will:
-+ 
-+ 
-+
++ Draw geometric shapes using python
++ Make drawn shapes move using **x,y coordinates**
++ Use colour detection to recognise 'collisions'
 
 <mark>Image of many different examples in a strip</mark>
+
+### Get inspiration 
+
+You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
 --- no-print ---
 
 --- task ---
+Look at this example and think about how all the shapes on the screen (except the rocketship) have been made from circles, ellipses, squares, rectangles and triangles.
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-### Try it 
-
-Description of what to do or think about when looking at the example.
-
 </div>
 <div>
-**Gobo watching**: [See inside](https://scratch.mit.edu/projects/495141114/editor){:target="_blank"}
+**Asteroids**: [See inside](https://trinket.io/python/df07d4f46b){:target="_blank"}
 <div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495141114/?autostart=false" frameborder="0"></iframe>
+  <iframe src="https://trinket.io/embed/python/df07d4f46b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 </div>
 
 --- /task ---
 
-### Get inspiration 
-
-You are going to make some design decisions to ...
 
 --- task ---
 
