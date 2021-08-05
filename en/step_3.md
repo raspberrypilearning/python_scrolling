@@ -11,9 +11,7 @@ Image, gif or video showing what they will achieve by the end of the step.
 
 --- task ---
 
-Open a [new Scratch project](http://rpf.io/scratch-new){:target="_blank"}. Scratch will open in another browser tab.
-
-[[[working-offline]]]
+Do python things.
 
 --- /task ---
 
