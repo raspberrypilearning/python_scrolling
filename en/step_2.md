@@ -49,6 +49,7 @@ def setup():
 --- /task ---
 
 Next, we need to set the background colour. 
+
 --- task ---
 
 **Choose:** Think about the colours you will use for your face and change the `background` colour values to set your screen to a complementary colour:
@@ -82,5 +83,6 @@ def draw():
 
 --- task ---
 
+--- /task ---
 
 --- save ---
