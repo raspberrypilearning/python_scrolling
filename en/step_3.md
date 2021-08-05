@@ -5,7 +5,7 @@
 Add an introductory sentence. What will learners achieve by the end of this step?
 </div>
 <div>
-Image, gif or video showing what they will achieve by the end of the step. ![image of finished project](images/image.png){:width="300px"}
+Image, gif or video showing what they will achieve by the end of the step.
 </div>
 </div>
 
@@ -25,6 +25,7 @@ Can use:
 **Choose:**
 **Tip:**
 --- /task ---
+
 --- task ---
 
 **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
