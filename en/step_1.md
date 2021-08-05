@@ -36,7 +36,7 @@ Look at this example and think about how all the shapes on the screen (except th
 
 --- /task ---
 
-
+### Get inspiration
 --- task ---
 
 Explore these example projects to get more ideas:
@@ -50,7 +50,7 @@ Explore these example projects to get more ideas:
 
 --- print-only ---
 
-### Get inspiration 
+ 
 
 You are going to make some design decisions to create your character. See inside example projects in [Scratch 1: Googly eye character - Examples](https://scratch.mit.edu/studios/29029028/){:target="_blank"} Scratch studio.
 
