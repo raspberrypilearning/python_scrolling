@@ -50,39 +50,4 @@ def setup():
 
 Next, we need to set the background colour. 
 
---- task ---
-
-**Choose:** Think about the colours you will use for your face and change the `background` colour values to set your screen to a complementary colour:
-
-[[[generic-theory-simple-colours]]]
-
---- collapse ---
-
----
-title: Setting the background colour when your program starts
----
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 20
-line_highlights: 21,22,23
----
-def draw():    
-    global BLACK
-    BLACK = (0,0,0)
-    background(BLACK) # Use any colour you like, but remember to set it up as a variable above! 
-
---- /code ---
-
---- /collapse ---
-
---- /task ---
-
---- task ---
-
---- /task ---
-
 --- save ---

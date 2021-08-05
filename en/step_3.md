@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add an introductory sentence. What will learners achieve by the end of this step?
+Now that our window is ready, we need to set a background.
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step.
@@ -11,9 +11,37 @@ Image, gif or video showing what they will achieve by the end of the step.
 
 --- task ---
 
-Do python things.
+**Choose:** Think about the colours you will use for your face and change the `background` colour values to set your screen to a complementary colour:
 
-[[[python-offline]]]
+[[[generic-theory-simple-colours]]]
+
+--- collapse ---
+
+---
+title: Setting the background colour when your program starts
+---
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+line_numbers: true
+line_number_start: 20
+line_highlights: 21,22,23
+---
+def draw():    
+    global BLACK
+    BLACK = (0,0,0)
+    background(BLACK) # Use any colour you like, but remember to set it up as a variable above! 
+
+--- /code ---
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+You can also use the random function in python
 
 --- /task ---
 
