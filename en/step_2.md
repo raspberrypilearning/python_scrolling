@@ -17,7 +17,7 @@ Open the [starter project](https://trinket.io/python/ea490530aa){:target="_blank
 
 --- /task ---
 
-The first step is to define your game window, define some of the colours you will be using and create a backdrop for your game. 
+The first step is to define your game window and create a backdrop for your game. 
 
 --- task ---
 Under the ```setup()``` function in the starter project, enter the size of your game window by setting the `size` of your canvas.
@@ -36,15 +36,51 @@ language: python
 filename: main.py - setup()
 line_numbers: true
 line_number_start: 6
-line_highlights: 7
+line_highlights: 8
 ---
 def setup():
-    size(400, 400) # 400, 400 works well bu
+    #setup your game here
+    size(400, 400)
 
 --- /code ---
 
 --- /collapse ---
 
 --- /task ---
+
+Next, we need to set the background colour. 
+--- task ---
+
+**Choose:** Think about the colours you will use for your face and change the `background` colour values to set your screen to a complementary colour:
+
+[[[generic-theory-simple-colours]]]
+
+--- collapse ---
+
+---
+title: Setting the background colour when your program starts
+---
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+line_numbers: true
+line_number_start: 20
+line_highlights: 21,22,23
+---
+def draw():    
+    global BLACK
+    BLACK = (0,0,0)
+    background(BLACK) # Use any colour you like, but remember to set it up as a variable above! 
+
+--- /code ---
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
 
 --- save ---
