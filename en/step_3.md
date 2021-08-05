@@ -30,6 +30,9 @@ Can use:
 **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
+---
+title: put a title here
+---
 
 Each debug in a collapse or ingredient
 
