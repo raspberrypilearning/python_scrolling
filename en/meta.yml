@@ -9,7 +9,7 @@ steps:
   - title: Introduction
   - title: Define your window
   - title: Make a scrolling backdrop
-  - title: Draw obstacles that move around
+  - title: Draw objects that move around
   - title: Add a player sprite
   - title: Reflection
     knowledge_quiz:
