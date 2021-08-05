@@ -1,4 +1,4 @@
-## Make a scrolling backdrop
+## Make a backdrop
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
@@ -12,6 +12,8 @@ Image, gif or video showing what they will achieve by the end of the step.
 --- task ---
 
 Do python things.
+
+[[[python-offline]]]
 
 --- /task ---
 
@@ -41,3 +43,4 @@ Each debug in a collapse or ingredient
 --- /task ---
 
 --- save ---
+

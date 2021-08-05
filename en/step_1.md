@@ -6,9 +6,9 @@ Write python code to make a fun game that uses x,y coordinates to draw geometric
 <span style="color: #0faeb0">**Random**</span> means *not having any order or pattern*. Programmers use randomness **all the time**: it shows up in encryption, simulations, data handling and especially in video games! The example project uses randomness to generate both a galaxy of stars **and** a field of asteroids! </p>
 
 You will:
-+ Draw geometric shapes using python
-+ Make drawn shapes move using **x,y coordinates**
-+ Use colour detection to recognise 'collisions'
++ Use code to create an animation or game
++ Create an environment and populate it with sprites
++ Have something happen when a **condition** is true
 
 <mark>Image of many different examples in a strip</mark>
 
@@ -26,9 +26,10 @@ Look at this example and think about how all the shapes on the screen (except th
 
 </div>
 <div>
+
 **Asteroids**: [See inside](https://trinket.io/python/df07d4f46b){:target="_blank"}
 <div class="scratch-preview" style="margin-left: 15px;">
-  <iframe src="https://trinket.io/embed/python/df07d4f46b" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+  <iframe src="https://trinket.io/embed/python/df07d4f46b?outputOnly=true&runOption=run&start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 </div>
@@ -40,9 +41,9 @@ Look at this example and think about how all the shapes on the screen (except th
 
 Explore these example projects to get more ideas:
 
-**Don't eat donut**: [See inside](https://scratch.mit.edu/projects/495865093/editor){:target="_blank"}
+**Aquarium**: [See inside](https://trinket.io/python/629ecb2eca){:target="_blank"}
 <div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495865093/?autostart=false" frameborder="0"></iframe>
+  <iframe src="https://trinket.io/embed/python/629ecb2eca?outputOnly=true&runOption=run" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 **Under the sea**: [See inside](https://scratch.mit.edu/projects/495866460/editor){:target="_blank"}

@@ -1,4 +1,4 @@
-## Draw objects that move around
+## Add moving sprites
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
@@ -16,6 +16,9 @@ Open a [new Scratch project](http://rpf.io/scratch-new){:target="_blank"}. Scrat
 [[[working-offline]]]
 
 --- /task ---
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
+<span style="color: #0faeb0">**Sprites**</span> are computer graphics which can be moved on screen and thought about as a single unit or thing. You are writing a **function** that draws a single shape (a sprite) and then lets you make lots of copies of it in another **function** </p>
 
 --- task ---
 

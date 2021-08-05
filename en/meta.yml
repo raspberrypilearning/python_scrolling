@@ -7,10 +7,9 @@ copyedit: false
 last_tested: "2021-03-26"
 steps:
   - title: Introduction
-  - title: Define your window
-  - title: Make a scrolling backdrop
-  - title: Draw objects that move around
-  - title: Add a player sprite
+  - title: Make a backdrop
+  - title: Add moving sprites
+  - title: Create behaviour with conditions
   - title: Reflection
     knowledge_quiz:
       path: quiz1
