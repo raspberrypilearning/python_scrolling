@@ -9,7 +9,8 @@ steps:
   - title: Introduction
   - title: Create your window
   - title: Make a backdrop with randomness
-  - title: Add moving sprites
+  - title: Add sprites
+  - title: Make your sprites move
   - title: Create behaviour with conditions
   - title: Reflection
     knowledge_quiz:
