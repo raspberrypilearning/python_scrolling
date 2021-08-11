@@ -20,7 +20,7 @@ You could make a cloud from ellipses, trees from triangles and rectangles, or an
 <span style="color: #0faeb0">**Sprites**</span> are computer graphics which can be moved on screen and thought about as a single unit or thing. You are writing a **function** that draws a single shape (a sprite) and then lets you make it do something interesting in another **function** </p>
 
 --- task ---
-**Create** your sprites by creating simple shapes. This example links three ellipses to create a cloud or 
+**Create** your sprites by creating simple shapes. This example links three ellipses to create a cloud 
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ line_number_start: 10
 line_highlights: 
 ---
 def cloud(x, y, size, colour):
-  fill(colour)
+  fill(128, 128, 128)
   ellipse(x, y, size, size)
   ellipse(x + (size * 0.75), y, size * 1.5, size * 1.5)
   ellipse(x + (size * 1.5), y, size, size)
@@ -44,6 +44,24 @@ def cloud(x, y, size, colour):
 
 
 [[[processing-python-triangle]]]
+--- /task ---
+
+--- task ---
+Add your new function to the `draw()` function by calling it using the name you created and giving it some coordinates. 
+
+Using the example function `cloud()` (shown above) would look like this:
+
+--- code ---
+---
+language: python
+filename: main.py - draw()
+line_numbers: true
+line_number_start: 11
+line_highlights: 12
+---
+def draw():
+  cloud(200, 200) # will draw a cloud sprite in the centre of the window
+--- /code ---
 --- /task ---
 
 --- task ---
@@ -76,22 +94,6 @@ def cloud(x, y, size, colour):
 [[[generic-theory-simple-colours]]]
 
 --- /task ---
-Add your new function to the `draw()` function by calling it using the name you created. 
-
-Using the example function `cloud()` shown above would look like this:
-
---- code ---
----
-language: python
-filename: main.py - draw()
-line_numbers: true
-line_number_start: 11
-line_highlights: 12
----
-def draw():
-  cloud()
---- /code ---
-
 
 --- task ---
 **Test:** Run your code and change the colour until you are happy with it.
