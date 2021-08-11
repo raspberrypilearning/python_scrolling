@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Add an introductory sentence. What will learners achieve by the end of this step?
+By the end of this step, you will create a sprite that will move in your window, using x and y coordinates.
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step. ![image of finished project](images/image.png){:width="300px"}
@@ -10,10 +10,9 @@ Image, gif or video showing what they will achieve by the end of the step. ![ima
 </div>
 
 --- task ---
+**Think** about what shape you would like your sprite to be. 
 
-Open a [new Scratch project](http://rpf.io/scratch-new){:target="_blank"}. Scratch will open in another browser tab.
-
-[[[working-offline]]]
+You could make a cloud shape from ellipses, trees from triangles and rectangles, or anything you like! 
 
 --- /task ---
 
