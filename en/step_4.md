@@ -31,7 +31,6 @@ line_number_start: 10
 line_highlights: 
 ---
 def cloud(x, y, size, colour):
-  no_stroke()
   fill(colour)
   ellipse(x, y, size, size)
   ellipse(x + (size * 0.75), y, size * 1.5, size * 1.5)
@@ -63,32 +62,39 @@ If you don't want an outline then use `no_stroke()`.
 language: python
 filename: main.py - draw()
 line_numbers: true
-line_number_start: 11
-line_highlights: 13
+line_number_start: 10
+line_highlights: 11
 ---
-def draw():
-  stroke(0) # you can also use no_stroke() 
-  fill(255, 255, 0) # bright yellow
-  ellipse(width/2, height/2, 200, 200) # circle in the middle
+def cloud(x, y, size, colour):
+  stroke(0) #you can also use no_stroke()
+  fill(128, 128, 128) # grey
+  ellipse(x, y, size, size)
+  ellipse(x + (size * 0.75), y, size * 1.5, size * 1.5)
+  ellipse(x + (size * 1.5), y, size, size)
 --- /code ---
-
 
 [[[generic-theory-simple-colours]]]
 
 --- /task ---
+Add your new function to the `draw()` function by calling it using the name you created. 
+
+Using the example function `cloud()` shown above would look like this:
+
+--- code ---
+---
+language: python
+filename: main.py - draw()
+line_numbers: true
+line_number_start: 11
+line_highlights: 12
+---
+def draw():
+  cloud()
+--- /code ---
+
 
 --- task ---
-
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
-
---- collapse ---
----
-title: put a title here
----
-
-Each debug in a collapse or ingredient
-
---- /collapse ---
+**Test:** Run your code and change the colour until you are happy with it.
 
 --- /task ---
 
