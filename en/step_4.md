@@ -98,6 +98,33 @@ def draw():
 
 --- /task ---
 
+--- task ---
+
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+
+--- collapse ---
+
+---
+title: I've updated my size and colour but the output area stays the same
+---
+
+After changing the code, you will need to `run` your project to see the changes in the output area. 
+
+--- /collapse ---
+
+--- collapse ---
+
+---
+title: I've tried different numbers but the color doesn't change 
+---
+
+The maximum amount of red, green or blue is `255`. Make sure all your `background` colour values are between `0` and `255`.  
+
+--- /collapse ---
+
+--- /task ---
+
+
 Now that you have sprites that look the way you want, the next step is to make them move. 
 
 --- save ---
