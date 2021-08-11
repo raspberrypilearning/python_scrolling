@@ -17,10 +17,10 @@ Open the [starter project](https://trinket.io/python/ea490530aa){:target="_blank
 
 --- /task ---
 
-The first step is to define your game window and create a backdrop for your game. 
+The first step is to define your window and create a backdrop for your animation. 
 
 --- task ---
-Under the ```setup()``` function in the starter project, enter the size of your game window by setting the `size` of your canvas.
+Under the ```setup()``` function in the starter project, enter the size of your animation window by setting the `size` of your canvas.
 
 **Choose:** Experiment with the numbers and re-run your code to find a size that you are happy with.
 
@@ -36,11 +36,11 @@ language: python
 filename: main.py - setup()
 line_numbers: true
 line_number_start: 6
-line_highlights: 8
+line_highlights: 7
 ---
 def setup():
-    #setup your game here
     size(400, 400)
+
 
 --- /code ---
 
