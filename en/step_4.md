@@ -98,4 +98,8 @@ def draw():
 
 --- /task ---
 
+### Make your sprites move
+
+Now that you have sprites that look the way you want, we need to make them move. 
+
 --- save ---
