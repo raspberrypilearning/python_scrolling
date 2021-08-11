@@ -61,6 +61,8 @@ def draw():
 
 --- /task ---
 
+Now, we will create the function that will draw a single star. Once we've done that, we can place our single star in lots of random places in the window. To make a 'star', we want to draw a single white ellipse, with no stroke, that is 5 pixels by 5 pixels. 
+
 --- task ---
 **Create:** Find the line in your script that says `#draw_star() function goes here`. Underneath that line type:
 
@@ -80,9 +82,14 @@ def draw_star(x, y):
 
 --- /task ---
 
+The next step is to create a starfield using our single star. To do this, we're using a randomisation method  in python called 'seeded randomisation', using the `seed()` method. 
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
+The `seed()` method is used to create a repeatable random number or sequence. A random number generator needs a number to start with (called the <span style="color: #0faeb0">seed value</span>), to be able to generate a random number. Usually, when you call for a random number using `randint()`, python uses your **system time** as the seed value. By using `seed()` and specifying the seed value in your program, you will **always get the same random number**.</p>
+
+
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
