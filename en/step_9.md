@@ -6,7 +6,7 @@ You could also show your family how your project works.
 
 If you have a Scratch account, you can share your project through Scratch. You can send a link to people you know, and the whole Scratch community will be able to find your project and try it out.
 
-[[[share-python]]]
+[[[share-scratch]]]
 
 Why not invite your friends to create a project? Let them know how you had fun.
 
