@@ -96,6 +96,7 @@ def cloud(x, y, size, colour):
 --- /task ---
 
 --- task ---
+
 **Test:** Run your code and change the colour until you are happy with it.
 
 --- /task ---
@@ -125,7 +126,6 @@ The maximum amount of red, green or blue is `255`. Make sure all your `backgroun
 --- /collapse ---
 
 --- /task ---
-
 
 Now that you have sprites that look the way you want, the next step is to make them move. 
 

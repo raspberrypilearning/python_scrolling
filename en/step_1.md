@@ -21,13 +21,13 @@ You are going to make some design decisions about the kind of game you will make
 --- no-print ---
 
 --- task ---
+
 Look at these examples and think about how all the obstacles on the screen have been made from shapes.
 
 What happens if you hit an obstacle? How do you win the game?
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
-
 </div>
 <div>
 Look through these example projects and try them out to get more ideas:
@@ -48,6 +48,7 @@ Skiing
 --- /task ---
 
 ### Get inspiration
+
 --- task ---
 
 Explore these example projects to get more ideas:
@@ -69,7 +70,6 @@ Explore these example projects to get more ideas:
   <iframe src="https://trinket.io/embed/python/798c5bdc26?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
 </div>
-  
 
 --- /task ---
 --- /no-print ---
@@ -77,6 +77,7 @@ Explore these example projects to get more ideas:
 --- print-only ---
 
 You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
+
 
 <mark>one image file per example</mark>
 

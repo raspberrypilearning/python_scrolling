@@ -1,6 +1,7 @@
 title: Don't collide!
 hero_image: images/banner.png
 description: Build an obstacle game where your character has to reach a finishing point without colliding.
+
 version: 4
 listed: false
 copyedit: false

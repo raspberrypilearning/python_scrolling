@@ -6,6 +6,7 @@ Now that our window is ready, we need to set a background.
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step.
+ 
 </div>
 </div>
 
