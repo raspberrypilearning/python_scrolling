@@ -8,9 +8,10 @@ last_tested: "2021-03-26"
 steps:
   - title: Introduction
   - title: Create your window
-  - title: Make a backdrop with randomness
-  - title: Add sprites
+  - title: Make a backdrop
+  - title: Add sprites to interact with
   - title: Make your sprites move
+  - title: Add a player sprite and stick it to the mouse
   - title: Create behaviour with conditions
   - title: Reflection
     knowledge_quiz:
