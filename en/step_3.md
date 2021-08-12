@@ -33,6 +33,8 @@ line_highlights: 9
 
 --- /code ---
 
+--- /collapse ---
+
 --- /task ---
 
 Now you can create an overlay of simple shapes using randomness. In the example, we make a field of stars for our spaceship to fly over using tiny ellipses spread randomly around the window. 
