@@ -1,15 +1,18 @@
-title: design-project-template
+title: Don't collide!
 hero_image: images/banner.png
-description: design-project-template description
+description: Build an obstacle game where your character has to reach a finishing point without colliding.
+
 version: 4
 listed: false
 copyedit: false
 last_tested: "2021-03-26"
 steps:
   - title: Introduction
-  - title: Step title
-  - title: Step title
-  - title: Step title
+  - title: Choose your theme
+  - title: Create obstacles
+  - title: Obstacle scrolling
+  - title: Collision detection
+  - title: Win the game
   - title: Reflection
     knowledge_quiz:
       path: quiz1
