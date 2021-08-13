@@ -65,7 +65,7 @@ Explore these example projects to get more ideas:
   </iframe>
 </div>
 
-**Roller sk8te**: [See inside](https://trinket.io/python/798c5bdc26){:target="_blank"}
+**Roller sk8**: [See inside](https://trinket.io/python/798c5bdc26){:target="_blank"}
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/798c5bdc26?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
