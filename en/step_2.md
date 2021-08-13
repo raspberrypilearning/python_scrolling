@@ -14,8 +14,6 @@ Image, gif or video showing what they will achieve by the end of the step. ![](i
 
 Open the [starter project](https://trinket.io/python/ea490530aa){:target="_blank"}. Trinket will open in another browser tab.
 
-[[[python-offline]]]
-
 --- /task ---
 
 The first step is to define your window and create a backdrop for your animation. 
