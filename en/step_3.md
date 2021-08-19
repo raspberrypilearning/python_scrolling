@@ -9,7 +9,7 @@ Image, gif or video showing what they will achieve by the end of the step.
 </div>
 </div>
 
-
+What 
 
 --- task ---
 
