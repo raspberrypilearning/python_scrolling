@@ -53,11 +53,7 @@ Skiing
 
 Explore these example projects to get more ideas:
 
-**Aquarium**: [See inside](https://trinket.io/python/629ecb2eca){:target="_blank"}
-<div class="trinket">
-  <iframe src="https://trinket.io/embed/python/629ecb2eca?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-  </iframe>
-</div>
+<mark>Save the Shark clone — Philip to make</mark>
 
 **Skiing**: [See inside](https://trinket.io/python/76e628bff2){:target="_blank"}
 <div class="trinket">
@@ -72,6 +68,7 @@ Explore these example projects to get more ideas:
 </div>
 
 --- /task ---
+
 --- /no-print ---
 
 --- print-only ---

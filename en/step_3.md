@@ -2,40 +2,17 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Now that our window is ready, we need to set a background.
+Create the obstacles that you will have to avoid to keep playing the game
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step.
- 
 </div>
 </div>
+
+
 
 --- task ---
 
-**Choose:** Think about the colours you will use for your animation, and pick a `background` colour you like:
-
-[[[generic-theory-simple-colours]]]
-
---- collapse ---
-
----
-title: Setting the background colour when your program starts
----
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 9
-line_highlights: 9
----
-
-  background(255, 255, 255) # Try different numbers to change the colour 
-
---- /code ---
-
---- /collapse ---
 
 --- /task ---
 
