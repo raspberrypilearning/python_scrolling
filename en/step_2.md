@@ -97,10 +97,6 @@ Control the character's movement using the mouse pointer
 
 Add code for the character to follow the mouse pointer. You can do this by getting the coordinates of the mouse pointer and using them as the coordinates for your character image when you draw it.
 
-<mark>ingredient for mouse pointer (see explore projects)</mark>
-
---- /task ---
-
 --- collapse ---
 ---
 title: Getting the coordinates of the mouse pointer
@@ -116,5 +112,6 @@ image(skater, mouse_x, mouse_y, 30, 30)
 
 --- /collapse ---
 
+--- /task ---
 
 --- save ---

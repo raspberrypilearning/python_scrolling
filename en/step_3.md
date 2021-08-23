@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Create the obstacles that you will have to avoid to keep playing the game
+Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step.
@@ -13,25 +13,9 @@ Your obstacles will be made from shapes in processing. Can you make them out of 
 
 --- task ---
 
-**Choose:** what colours you will use for your obstacles. Add new colour variables to the `draw()` function.
+**Choose:** what colours you will use for your obstacles. Add new colour variables to the `setup()` function.
 
-<mark>collapse needed? Example needed?</mark>
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 20
-line_highlights: 21,23
----
-
-def draw():    
-    global BLACK, WHITE
-    BLACK = (0,0,0)
-    WHITE = (255,255,255)
-
---- /code ---
+[[[generic-theory-simple-colours]]]
 
 --- /task ---
 
@@ -41,35 +25,53 @@ What shape(s) will your obstacles be?
 
 Create a function that will draw your obstacles
 
-<mark>Again, to decide if code is needed here or even a collapse/ingredient</mark>
-
---- code ---
+--- collapse ---
 ---
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 10
-line_highlights: 
+title: Create a filled in shape
 ---
 
-#draw_star() function goes here
-def draw_star(x, y):
-  no_stroke()
-  fill(WHITE)
-  ellipse(x, y, 5, 5)
+To fill a shape use the `fill()` function with a colour. Remember you can use `no_fill()` to turn your fill off.
 
---- /code ---
+```python
+fill(100, 200, 50)
+ellipse(160, 220, 50, 50)
+```
+
+--- /collapse ---
+
+[[[processing-python-ellipse]]]
+
+[[[processing-python-rect]]]
+
+[[[processing-python-triangle]]]
+
+**Tip:** You can use several simple shapes in the same function to create a more complex obstacle (like the trees in the example Skiing project).
+
+<mark>A small gallery of complex shapes from simple primitives</mark>
+
+--- /task ---
+
+Placing enough obstacles for the game would be time consuming and take too much code. You can use a `for` loop and `randint()` to choose their positions for you. However, `randint()` will start from a new number in every frame, so your obstacles will jump all over the place! If you use the `seed()` function first, you can avoid this.
+
+[[[using-seed-in-python]]]
+
+<mark>We are here</mark>
+
+--- task ---
+
+
 
 --- /task ---
 
 The next step is to create a starfield using our single star. To do this, we're using a randomisation method  in python called 'seeded randomisation', using the `seed()` method. 
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-The `seed()` method is used to create a repeatable random number or sequence. A random number generator needs a number to start with (called the <span style="color: #0faeb0">seed value</span>), to be able to generate a random number. Usually, when you call for a random number using `randint()`, python uses your **system time** as the seed value. By using `seed()` and specifying the seed value in your program, you will **always get the same random number**.</p>
+
 
 --- task ---
 
 **Create:** Write a function that will draw your shape multiple times in the window, in random co-ordinates.
+
+
 
 
 --- code ---
@@ -93,14 +95,40 @@ def starfield(drift):
 
 --- /code ---
 
+--- /task ---
+
+--- task ---
+
+
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+
 --- collapse ---
 ---
-title: put a title here
+title: I am having trouble with the colour of my shapes
 ---
 
-Each debug in a collapse or ingredient
+Make sure that, if you have variables for colour, they are defined as global variables.
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+line_numbers: true
+line_number_start: 20
+line_highlights: 21
+---
+
+def setup():    
+    global BLACK, WHITE
+    BLACK = (0,0,0)
+    WHITE = (255,255,255)
+
+--- /code ---
 
 --- /collapse ---
+
+
+--- /task ---
 
 --- /task ---
 
