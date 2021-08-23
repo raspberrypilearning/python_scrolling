@@ -9,19 +9,13 @@ Image, gif or video showing what they will achieve by the end of the step.
 </div>
 </div>
 
-What 
+Your obstacles will be made from shapes in processing. Can you make them out of a combination of shapes or just one shape? How does the obstacle fit with your theme?
 
 --- task ---
 
+**Choose:** what colours you will use for your obstacles. Add new colour variables to the `draw()` function.
 
---- /task ---
-
-Now you can create an overlay of simple shapes using randomness. In the example, we make a field of stars for our spaceship to fly over using tiny ellipses spread randomly around the window. 
-
---- task ---
-
-**Choose:** Define the colour for your background shapes by adding a new colour variable to the `draw()` function. We used white, as shown here:
-python
+<mark>collapse needed? Example needed?</mark>
 
 --- code ---
 ---
@@ -41,12 +35,13 @@ def draw():
 
 --- /task ---
 
-Now, we will create the function that will draw a single shape. Once we've done that, we can place our single shape in lots of random places in the window. To make a 'star', we want to draw a single white ellipse, with no stroke, that is 5 pixels by 5 pixels. 
-8
+What shape(s) will your obstacles be?
 
 --- task ---
 
-**Create:** Find the line in your script that says `#draw_star() function goes here`. Underneath that line type:
+Create a function that will draw your obstacles
+
+<mark>Again, to decide if code is needed here or even a collapse/ingredient</mark>
 
 --- code ---
 ---
