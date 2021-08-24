@@ -1,18 +1,20 @@
-## Upgrade your project
+## Share
 
-If you have time you can upgrade to your project. 
+If you are in a club, why not share your project with friends?
 
-Here are some ideas you could try:
-- ...
-- ...
+You could also show your family how your project works by sending them a link. 
 
-<mark> Optional </mark>Each example project in the [Introduction](.) has a ‘See Inside’ link for you to open the project in Scratch and look at the code to get ideas and see how they work.
+To get a link go to the **Share** menu button in the upper-right of your trinket's edit page and select **Link**.
 
-**Sporg**: [See inside](https://scratch.mit.edu/projects/495865892/editor){:target="_blank"}
-<div class="scratch-preview" style="margin-left: 15px;">
-  <iframe allowtransparency="true" width="485" height="402" src="https://scratch.mit.edu/projects/embed/495865892/?autostart=false" frameborder="0"></iframe>
-</div>
+![The `Share` menu button extended with `Link` highlighted.](images/share-button.png)
 
-Take a look at our [Googly eye character Scratch studio](https://scratch.mit.edu/studios/29120534){:target="_blank"} to see projects created by community members.
+**Tip:** You can share a link to your project even if you don't have a Trinket account, however without an account, the link to your project will change each time you update it. If you have shared the link with someone, you will need to send a new link for them to see the changes. 
 
---- save ---
+--- task ---
+
+Inspire the Raspberry Pi Foundation community with your project!
+
+<mark> get Liz to create once back</mark>
+To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/8sVH4f){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+
+--- /task ---

@@ -30,7 +30,7 @@ Create a function that will draw your obstacles. This function should take the (
 title: Create a filled in shape
 ---
 
-To fill a shape use the `fill()` function with a colour. Remember you can use `no_fill()` to turn your fill off.
+To fill a shape, use the `fill()` function with a colour. Remember you can use `no_fill()` to turn your fill off.
 
 ```python
 fill(100, 200, 50)
@@ -51,34 +51,29 @@ ellipse(160, 220, 50, 50)
 
 --- /task ---
 
-Placing enough obstacles for the game would be time consuming and take a lot of code. You can use a `randint()` to choose a number of obstacles, and a `for` loop with `randint()` to choose their positions for you. However, `randint()` will start from a new number in every frame, so your obstacles will jump all over the place — if you use the `seed()` function first, you can avoid this.
+Repeating code to place enough obstacles for the game would be time consuming and inefficient. 
+
+To solve this, you could use a `for` loop with `randint()` to choose obstacle positions for you, however, because `randint()` will start from a new number in every frame, your obstacles change position each frame.
+
+If you use the `seed()` function first, you can avoid the obstacles jumping around.
+
+--- task ---
+Write a function that will draw your obstacle multiple times in the game, in random co-ordinates. Call this function in `draw()`, so it runs in every frame.
 
 [[[using-seed-in-python]]]
 
---- collapse ---
----
-title: Run a for loop a certain number of times
----
-
-To run the code in a `for` loop a certain number of times, you can use the `range()` function.
-
-```python
-for item in range(10):
-  print('Doing something')
-```
-
-**Tip:** Because this code isn't using the value of `item`, you don't need to worry about the fact `range(10)` gives the numbers 0 to 9, instead of 1 to 10 — there are still ten numbers, so the code will run ten times.
---- /collapse ---
-
---- task ---
-
-Write a function that will draw your obstacle multiple times in the game, in random co-ordinates. Call this function in `draw()`, so it runs in every frame.
+[[generic-python-for-loop-repeat]]
 
 --- save ---
 
 --- /task ---
 
 --- task ---
+
+**Epilepsy Warning:** Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. You can
+- Ask somebody to run it for you
+- Move on and complete the project, asking someone to run the project for you at the end so you can debug.
+- Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
 
 **Test:** Run your program and check your obstacles all stay in the same place, rather than changing position every time a frame is drawn.
 

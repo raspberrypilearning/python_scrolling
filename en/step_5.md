@@ -1,8 +1,10 @@
-## Collision detection
+## Win the game
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-In this step you will move your sprites on screen using their x,y coordinates.
+
+In this step you will import an image to use as a 'player sprite', that will follow your mouse pointer using x and y co-ordinates.
+
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step. ![image of finished project](images/image.png){:width="300px"}
@@ -10,29 +12,6 @@ Image, gif or video showing what they will achieve by the end of the step. ![ima
 </div>
 
 --- task ---
-**Think** about how you want your sprites to move on screen. 
-
-They can move around randomly, following a pattern, or in relation to the mouse cursor like this example:
-<div>
-<iframe src="https://trinket.io/embed/python/4d024928ac" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Think** about what sort of sprite makes sense for your game.
 
 --- /task ---
-
---- task ---
-Experiment with moving your sprite around the screen using translation and rotation.
-
-[[[processing-translation]]]
-
-[[[processing-rotation]]]
-
-[[[python-operators]]]
-
---- /task ---
-
---- task ---
-
---- /task ---
-
-
---- save ---

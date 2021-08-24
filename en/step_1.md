@@ -4,7 +4,7 @@ Build a scrolling obstacle game where your character has to reach a finishing po
 
 <mark>
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Random**</span> means *not having any order or pattern*. Programmers use randomness **all the time**: it shows up in encryption, simulations, data handling and especially in video games! The example project uses randomness to generate both a galaxy of stars **and** a field of asteroids! </p>
+<span style="color: #0faeb0">**Obbys**</span> are the </p>
 </mark>
 
 You will:
