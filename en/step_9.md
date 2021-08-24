@@ -1,6 +1,6 @@
 ## What next?
 
-If you are following the [PathwayName](https://projects.raspberrypi.org/en/raspberrypi/pathway-name) pathway, you can move on to the [ProjectName](https://projects.raspberrypi.org/en/projects/project-name) project. In this project, you will make a (add description here).
+If you are following the [Python Intro](https://projects.raspberrypi.org/en/pathways/python-intro) pathway, you can move on to the [Powerful Patters](https://projects.raspberrypi.org/en/projects/powerful-patterns) project. In this project, you will create inspirational art.
 
 --- print-only ---
 
