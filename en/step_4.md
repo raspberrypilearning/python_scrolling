@@ -2,49 +2,12 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-By the end of this step, you will create a sprite that will move in your window, using x and y coordinates.
+By the end of this step, you will use x and y coordinates to move obstacles across the screen to make it look as though the player's sprite is moving in the opposite direction.
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step. ![image of finished project](images/image.png){:width="300px"}
 </div>
 </div>
-
---- task ---
-**Think** about what shape you would like your moving sprite to be. You will need to draw it using simple shapes.
-
-You could make a cloud from ellipses, trees from triangles and rectangles, or anything you like! 
-
---- /task ---
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Sprites**</span> are computer graphics which can be moved on screen and thought about as a single unit or thing. You are writing a **function** that draws a single shape (a sprite) and then lets you make it do something interesting in another **function** </p>
-
---- task ---
-**Create** your sprites by creating simple shapes. This example links three ellipses to create a cloud 
-
---- code ---
----
-language: python
-filename: main.py - draw()
-line_numbers: true
-line_number_start: 10
-line_highlights: 
----
-def cloud(x, y, size, colour):
-  fill(128, 128, 128)
-  ellipse(x, y, size, size)
-  ellipse(x + (size * 0.75), y, size * 1.5, size * 1.5)
-  ellipse(x + (size * 1.5), y, size, size)
---- /code ---
-
-[[[processing-python-ellipse]]]
-
-
-[[[processing-python-rect]]]
-
-
-[[[processing-python-triangle]]]
---- /task ---
 
 --- task ---
 Add your new function to the `draw()` function by calling it using the name you created and giving it some coordinates. 

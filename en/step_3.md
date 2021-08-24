@@ -23,7 +23,7 @@ What shape(s) will your obstacles be?
 
 --- task ---
 
-Create a function that will draw your obstacles
+Create a function that will draw your obstacles. This function should take the (x, y) coordinates of the obstacle as parameters.
 
 --- collapse ---
 ---
@@ -51,54 +51,40 @@ ellipse(160, 220, 50, 50)
 
 --- /task ---
 
-Placing enough obstacles for the game would be time consuming and take too much code. You can use a `for` loop and `randint()` to choose their positions for you. However, `randint()` will start from a new number in every frame, so your obstacles will jump all over the place! If you use the `seed()` function first, you can avoid this.
+Placing enough obstacles for the game would be time consuming and take a lot of code. You can use a `randint()` to choose a number of obstacles, and a `for` loop with `randint()` to choose their positions for you. However, `randint()` will start from a new number in every frame, so your obstacles will jump all over the place — if you use the `seed()` function first, you can avoid this.
 
 [[[using-seed-in-python]]]
 
-<mark>We are here</mark>
+--- collapse ---
+---
+title: Run a for loop a certain number of times
+---
+
+To run the code in a `for` loop a certain number of times, you can use the `range()` function.
+
+```python
+for item in range(10):
+  print('Doing something')
+```
+
+**Tip:** Because this code isn't using the value of `item`, you don't need to worry about the fact `range(10)` gives the numbers 0 to 9, instead of 1 to 10 — there are still ten numbers, so the code will run ten times.
+--- /collapse ---
 
 --- task ---
 
+Write a function that will draw your obstacle multiple times in the game, in random co-ordinates. Call this function in `draw()`, so it runs in every frame.
 
-
---- /task ---
-
-The next step is to create a starfield using our single star. To do this, we're using a randomisation method  in python called 'seeded randomisation', using the `seed()` method. 
-
-
-
---- task ---
-
-**Create:** Write a function that will draw your shape multiple times in the window, in random co-ordinates.
-
-
-
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 
-line_highlights: 
----
-
-#starfield() function goes here
-def starfield(drift):
-  seed(141234161689789)
-
-  star_count = randint(10,50)
-  
-  for star in range(star_count):
-    star_x = randint(0,400)
-    star_y = randint(0,400)
-
---- /code ---
+--- save ---
 
 --- /task ---
 
 --- task ---
 
+**Test:** Run your program and check your obstacles all stay in the same place, rather than changing position every time a frame is drawn.
+
+--- /task ---
+
+--- task ---
 
 **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
@@ -109,28 +95,59 @@ title: I am having trouble with the colour of my shapes
 
 Make sure that, if you have variables for colour, they are defined as global variables.
 
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 20
-line_highlights: 21
----
-
+```python
 def setup():    
     global BLACK, WHITE
     BLACK = (0,0,0)
     WHITE = (255,255,255)
-
---- /code ---
+```
 
 --- /collapse ---
 
+--- collapse ---
+---
+title: Only one obstacle is being drawn
+---
+
+Check that your function to draw multiple obstacles is:
+ + using a `for` loop to call the obstacle drawing function more than once
+ + using `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
+
+For example:
+
+```python
+def draw_obstacles():
+  # Use seed to get the same random numbers each frame
+  seed('my random seed')
+
+  # Randomly choose the number of obstacles to draw
+  obstacle_count = randint(10, 30)
+
+  # Running the obstacle positioning code in a loop
+  for obstacle in range(obstacle_count):
+    
+    # Pick an x coordinate at random
+    x_coord = randint(1, 400)
+    
+    # Pick a y coordinate at random
+    y_coord = randint(1, 400)
+
+    # Call your function to drawn an obstacle
+    draw_obstacle(x_coord, y_coord)
+```
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: The obstacles are changing position every time a frame is drawn
+---
+
+Make sure that you have used `seed()` inside the function that draws multiple obstacles.
+
+--- /collapse ---
 
 --- /task ---
 
 --- /task ---
-
---- save --- 
 
