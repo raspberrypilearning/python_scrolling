@@ -2,135 +2,147 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Now that our window is ready, we need to set a background.
+Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step.
- 
 </div>
 </div>
+
+Your obstacles will be made from shapes in processing. Can you make them out of a combination of shapes or just one shape? How does the obstacle fit with your theme?
 
 --- task ---
 
-**Choose:** Think about the colours you will use for your animation, and pick a `background` colour you like:
+**Choose:** what colours you will use for your obstacles. Add new colour variables to the `setup()` function.
 
 [[[generic-theory-simple-colours]]]
 
---- collapse ---
-
----
-title: Setting the background colour when your program starts
----
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 9
-line_highlights: 9
----
-
-  background(255, 255, 255) # Try different numbers to change the colour 
-
---- /code ---
-
---- /collapse ---
-
 --- /task ---
 
-Now you can create an overlay of simple shapes using randomness. In the example, we make a field of stars for our spaceship to fly over using tiny ellipses spread randomly around the window. 
+What shape(s) will your obstacles be?
 
 --- task ---
 
-**Choose:** Define the colour for your background shapes by adding a new colour variable to the `draw()` function. We used white, as shown here:
-python
+Create a function that will draw your obstacles. This function should take the (x, y) coordinates of the obstacle as parameters.
 
---- code ---
+--- collapse ---
 ---
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 20
-line_highlights: 21,23
+title: Create a filled in shape
 ---
 
-def draw():    
+To fill a shape, use the `fill()` function with a colour. Remember you can use `no_fill()` to turn your fill off.
+
+```python
+fill(100, 200, 50)
+ellipse(160, 220, 50, 50)
+```
+
+--- /collapse ---
+
+[[[processing-python-ellipse]]]
+
+[[[processing-python-rect]]]
+
+[[[processing-python-triangle]]]
+
+**Tip:** You can use several simple shapes in the same function to create a more complex obstacle (like the trees in the example Skiing project).
+
+<mark>A small gallery of complex shapes from simple primitives</mark>
+
+--- /task ---
+
+Repeating code to place enough obstacles for the game would be time consuming and inefficient. 
+
+To solve this, you could use a `for` loop with `randint()` to choose obstacle positions for you, however, because `randint()` will start from a new number in every frame, your obstacles change position each frame.
+
+If you use the `seed()` function first, you can avoid the obstacles jumping around.
+
+--- task ---
+Write a function that will draw your obstacle multiple times in the game, in random co-ordinates. Call this function in `draw()`, so it runs in every frame.
+
+[[[using-seed-in-python]]]
+
+[[generic-python-for-loop-repeat]]
+
+--- save ---
+
+--- /task ---
+
+--- task ---
+
+**Epilepsy Warning:** Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. You can
+- Ask somebody to run it for you
+- Move on and complete the project, asking someone to run the project for you at the end so you can debug.
+- Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
+
+**Test:** Run your program and check your obstacles all stay in the same place, rather than changing position every time a frame is drawn.
+
+--- /task ---
+
+--- task ---
+
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+
+--- collapse ---
+---
+title: I am having trouble with the colour of my shapes
+---
+
+Make sure that, if you have variables for colour, they are defined as global variables.
+
+```python
+def setup():    
     global BLACK, WHITE
     BLACK = (0,0,0)
     WHITE = (255,255,255)
+```
 
---- /code ---
-
---- /task ---
-
-Now, we will create the function that will draw a single shape. Once we've done that, we can place our single shape in lots of random places in the window. To make a 'star', we want to draw a single white ellipse, with no stroke, that is 5 pixels by 5 pixels. 
-8
-
---- task ---
-
-**Create:** Find the line in your script that says `#draw_star() function goes here`. Underneath that line type:
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 10
-line_highlights: 
----
-
-#draw_star() function goes here
-def draw_star(x, y):
-  no_stroke()
-  fill(WHITE)
-  ellipse(x, y, 5, 5)
-
---- /code ---
-
---- /task ---
-
-The next step is to create a starfield using our single star. To do this, we're using a randomisation method  in python called 'seeded randomisation', using the `seed()` method. 
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-The `seed()` method is used to create a repeatable random number or sequence. A random number generator needs a number to start with (called the <span style="color: #0faeb0">seed value</span>), to be able to generate a random number. Usually, when you call for a random number using `randint()`, python uses your **system time** as the seed value. By using `seed()` and specifying the seed value in your program, you will **always get the same random number**.</p>
-
---- task ---
-
-**Create:** Write a function that will draw your shape multiple times in the window, in random co-ordinates.
-
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 
-line_highlights: 
----
-
-#starfield() function goes here
-def starfield(drift):
-  seed(141234161689789)
-
-  star_count = randint(10,50)
-  
-  for star in range(star_count):
-    star_x = randint(0,400)
-    star_y = randint(0,400)
-
---- /code ---
+--- /collapse ---
 
 --- collapse ---
 ---
-title: put a title here
+title: Only one obstacle is being drawn
 ---
 
-Each debug in a collapse or ingredient
+Check that your function to draw multiple obstacles is:
+ + using a `for` loop to call the obstacle drawing function more than once
+ + using `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
+
+For example:
+
+```python
+def draw_obstacles():
+  # Use seed to get the same random numbers each frame
+  seed('my random seed')
+
+  # Randomly choose the number of obstacles to draw
+  obstacle_count = randint(10, 30)
+
+  # Running the obstacle positioning code in a loop
+  for obstacle in range(obstacle_count):
+    
+    # Pick an x coordinate at random
+    x_coord = randint(1, 400)
+    
+    # Pick a y coordinate at random
+    y_coord = randint(1, 400)
+
+    # Call your function to drawn an obstacle
+    draw_obstacle(x_coord, y_coord)
+```
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: The obstacles are changing position every time a frame is drawn
+---
+
+Make sure that you have used `seed()` inside the function that draws multiple obstacles.
 
 --- /collapse ---
 
 --- /task ---
 
---- save --- 
+--- /task ---
 

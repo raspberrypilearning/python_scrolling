@@ -4,15 +4,15 @@ Build a scrolling obstacle game where your character has to reach a finishing po
 
 <mark>
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Random**</span> means *not having any order or pattern*. Programmers use randomness **all the time**: it shows up in encryption, simulations, data handling and especially in video games! The example project uses randomness to generate both a galaxy of stars **and** a field of asteroids! </p>
+<span style="color: #0faeb0">**Obbys**</span> are the </p>
 </mark>
 
 You will:
-+ Make a game with a goal using code that checks for game **conditions**
++ Make a game using code that checks for game **conditions**
 + Create a moving environment using x and y coordinates to `translate` the screen
 + Personalise a game to your interests
 
-<mark>Image of many different examples in a strip</mark>
+![Image of examples of 6 different projects: 1)rollerskating in a ring which looks like the number 8; 2) skiing game; 3) asteroids game; 4) skating around pylons; 5) arcade game with circle player and rectangle monster obstacles; 6) Travel the rainbow to get to the pot of gold](images/projects_row.png)
 
 ### Get inspiration 
 
@@ -32,30 +32,11 @@ What happens if you hit an obstacle? How do you win the game?
 <div>
 Look through these example projects and try them out to get more ideas:
 
+<mark>need the right asteroids link here (no cloud asteroids) - Philip to fill in?</mark>
+
 **Asteroids**: [See inside](https://trinket.io/python/df07d4f46b){:target="_blank"}
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/df07d4f46b?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-  </iframe>
-</div>
-</div>
-
-Under the sea
-
-Rollerskate
-
-Skiing
-
---- /task ---
-
-### Get inspiration
-
---- task ---
-
-Explore these example projects to get more ideas:
-
-**Aquarium**: [See inside](https://trinket.io/python/629ecb2eca){:target="_blank"}
-<div class="trinket">
-  <iframe src="https://trinket.io/embed/python/629ecb2eca?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
 </div>
 
@@ -65,13 +46,18 @@ Explore these example projects to get more ideas:
   </iframe>
 </div>
 
-**Roller sk8te**: [See inside](https://trinket.io/python/798c5bdc26){:target="_blank"}
+**Roller sk8**: [See inside](https://trinket.io/python/798c5bdc26){:target="_blank"}
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/798c5bdc26?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
 </div>
 
+<mark>Save the Shark clone — Philip to make</mark>
+
+</div>
+
 --- /task ---
+
 --- /no-print ---
 
 --- print-only ---

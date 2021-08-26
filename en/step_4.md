@@ -1,103 +1,75 @@
-## Obstacle scrolling
+## Movement and collision
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-By the end of this step, you will create a sprite that will move in your window, using x and y coordinates.
+Get the obstacles to move, and check if the player character hits an obstacle.
 </div>
 <div>
 Image, gif or video showing what they will achieve by the end of the step. ![image of finished project](images/image.png){:width="300px"}
 </div>
 </div>
 
---- task ---
-**Think** about what shape you would like your moving sprite to be. You will need to draw it using simple shapes.
-
-You could make a cloud from ellipses, trees from triangles and rectangles, or anything you like! 
-
---- /task ---
-
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Sprites**</span> are computer graphics which can be moved on screen and thought about as a single unit or thing. You are writing a **function** that draws a single shape (a sprite) and then lets you make it do something interesting in another **function** </p>
+The obstacles will move so that it appears as though the game is scrolling. You can use `frame_count` to update the obstacles in each frame so that the player character moves through them.
 
 --- task ---
-**Create** your sprites by creating simple shapes. This example links three ellipses to create a cloud 
 
---- code ---
----
-language: python
-filename: main.py - draw()
-line_numbers: true
-line_number_start: 10
-line_highlights: 
----
-def cloud(x, y, size, colour):
-  fill(128, 128, 128)
-  ellipse(x, y, size, size)
-  ellipse(x + (size * 0.75), y, size * 1.5, size * 1.5)
-  ellipse(x + (size * 1.5), y, size, size)
---- /code ---
+Create a function to move your obstacles and call the `translate()` function within it. Don't forget to call your new function in `draw()`
 
-[[[processing-python-ellipse]]]
-
-
-[[[processing-python-rect]]]
-
-
-[[[processing-python-triangle]]]
---- /task ---
-
---- task ---
-Add your new function to the `draw()` function by calling it using the name you created and giving it some coordinates. 
-
-Using the example function `cloud()` (shown above) would look like this:
-
---- code ---
----
-language: python
-filename: main.py - draw()
-line_numbers: true
-line_number_start: 11
-line_highlights: 12
----
-def draw():
-  cloud(200, 200) # will draw a cloud sprite in the centre of the window
---- /code ---
---- /task ---
-
---- task ---
-**Test:** Run your code and change it to get your sprite to the size and shape that you want.
+[[[processing-translation]]]
+<<<mark>>> add ingredient here for push/pop matrix, make sure it is short, then add it to the invent project as well (at the same time as the loops ingredient)<<</mark>>>
 
 --- /task ---
 
 --- task ---
 
-Choose a stroke colour for the outline and a fill colour for the main part of the shape.
+**Test** Experiment with moving the obstacles.
 
-If you don't want an outline then use `no_stroke()`.
+[[[processing-translation]]]
 
---- code ---
+[[[processing-rotation]]]
+
+[[[python-operators]]]
+
+--- /task ---
+
+Now you can set up your game to detect if there is a collision.
+
+--- task ---
+
+Add a function for your player character's actions and use conditions to find out if the mouse is touching an obstacle, then do something if it is.
+
+A collision will occur if the mouse is touching a certain colour (the obstacle colour).
+
+Have fun with emojis and/or the player character image.
+
+--- collapse ---
 ---
-language: python
-filename: main.py - draw()
-line_numbers: true
-line_number_start: 10
-line_highlights: 11
+title: Conditionals
 ---
-def cloud(x, y, size, colour):
-  stroke(0) #you can also use no_stroke()
-  fill(128, 128, 128) # grey
-  ellipse(x, y, size, size)
-  ellipse(x + (size * 0.75), y, size * 1.5, size * 1.5)
-  ellipse(x + (size * 1.5), y, size, size)
---- /code ---
 
-[[[generic-theory-simple-colours]]]
+Here is how conditionals are used in the example skiing project:
+
+```python 
+  mouse_colour = color(get(mouse_x, mouse_y))
+  
+  if mouse_colour == GREEN: # hit a tree
+    image(crashed, mouse_x, mouse_y, 30, 30)
+    print('💥💥💥💥💥⛷️')
+  elif mouse_colour == RED: # crossed the finish line
+    print('🥳🥳🥳🥳🥳⛷️')
+  else:
+    image(skiing, mouse_x, mouse_y, 30, 30)
+```
+
+--- /collapse ---
+
+**Tip:** Collisions don't have to be bad things. A character running into a power-up, or collecting an item for points, is also a kind of collision.
 
 --- /task ---
 
 --- task ---
 
-**Test:** Run your code and change the colour until you are happy with it.
+**Test:** Check if a collision is detected.
 
 --- /task ---
 
@@ -108,25 +80,28 @@ def cloud(x, y, size, colour):
 --- collapse ---
 
 ---
-title: I've updated my size and colour but the output area stays the same
+title: Ordering
 ---
 
-After changing the code, you will need to `run` your project to see the changes in the output area. 
+Ordering of functions, particularly re: translation
 
 --- /collapse ---
 
 --- collapse ---
 
 ---
-title: I've tried different numbers but the color doesn't change 
+title: There is no collision when the player reaches an obstacle
 ---
 
-The maximum amount of red, green or blue is `255`. Make sure all your `background` colour values are between `0` and `255`.  
+If your player character is touching an obstacle and nothing is happening, there are a few things you should check:
+
+ - Are you using the exact same colour when drawing the object and in the `if` statement checking for the collision? You can make sure of this by using the same `global` variable in both places.
+ - Are you drawing the player character sprite before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the sprite image. You need to check the colour, *then* draw the sprite.
+ - Is there code inside your if statement that will run to let you know when a collision has happened? Add a `print()` statement with a unique message to be sure this code is running.
+ - Have you correctly indented the code for your `if` statement so it runs when the condition is met?
 
 --- /collapse ---
 
 --- /task ---
-
-Now that you have sprites that look the way you want, the next step is to make them move. 
 
 --- save ---
