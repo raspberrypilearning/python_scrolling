@@ -8,11 +8,11 @@ Build a scrolling obstacle game where your character has to reach a finishing po
 </mark>
 
 You will:
-+ Make a game with a goal using code that checks for game **conditions**
++ Make a game using code that checks for game **conditions**
 + Create a moving environment using x and y coordinates to `translate` the screen
 + Personalise a game to your interests
 
-<mark>Image of many different examples in a strip</mark>
+![Image of examples of 6 different projects: 1)rollerskating in a ring which looks like the number 8; 2) skiing game; 3) asteroids game; 4) skating around pylons; 5) arcade game with circle player and rectangle monster obstacles; 6) Travel the rainbow to get to the pot of gold](images/projects_row.png)
 
 ### Get inspiration 
 
@@ -32,28 +32,13 @@ What happens if you hit an obstacle? How do you win the game?
 <div>
 Look through these example projects and try them out to get more ideas:
 
+<mark>need the right asteroids link here (no cloud asteroids) - Philip to fill in?</mark>
+
 **Asteroids**: [See inside](https://trinket.io/python/df07d4f46b){:target="_blank"}
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/df07d4f46b?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
 </div>
-</div>
-
-Under the sea
-
-Rollerskate
-
-Skiing
-
---- /task ---
-
-### Get inspiration
-
---- task ---
-
-Explore these example projects to get more ideas:
-
-<mark>Save the Shark clone — Philip to make</mark>
 
 **Skiing**: [See inside](https://trinket.io/python/76e628bff2){:target="_blank"}
 <div class="trinket">
@@ -65,6 +50,10 @@ Explore these example projects to get more ideas:
 <div class="trinket">
   <iframe src="https://trinket.io/embed/python/798c5bdc26?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
+</div>
+
+<mark>Save the Shark clone — Philip to make</mark>
+
 </div>
 
 --- /task ---
