@@ -5,11 +5,11 @@
 Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
-Image, gif or video showing what they will achieve by the end of the step.
+![Image of 400x400 screen with a light purple background. There is a road in the image with 5 orange pylons as obstacles.](images/obstacles.png)
 </div>
 </div>
 
-Your obstacles will be made from shapes in processing. Can you make them out of a combination of shapes or just one shape? How does the obstacle fit with your theme?
+Your obstacles will be made from shapes in processing. Can you make them out of a combination of shapes or just one shape? How do the obstacles fit with your theme?
 
 --- task ---
 
@@ -70,10 +70,17 @@ Write a function that will draw your obstacle multiple times in the game, in ran
 
 --- task ---
 
-**Epilepsy Warning:** Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. You can
+--- collapse ---
+---
+title: **Epilepsy Warning:**
+---
+
+Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. You can
 - Ask somebody to run it for you
 - Move on and complete the project, asking someone to run the project for you at the end so you can debug.
 - Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
+
+--- /collapse ---
 
 **Test:** Run your program and check your obstacles all stay in the same place, rather than changing position every time a frame is drawn.
 

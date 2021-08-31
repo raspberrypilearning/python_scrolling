@@ -6,13 +6,14 @@ In this step you will create the theme of your game.
 
 </div>
 <div>
-Image, gif or video showing what they will achieve by the end of the step. ![](images/image.png){:width="300px"}
+![Image of turtle size 100x100 against a blue background (screen size 400x400)](images/theme-turtle.png){:width="300px"}
 </div>
 </div>
 
 --- task ---
 
 Open the [starter project](https://trinket.io/python/575bd82b01){:target="_blank"}. Trinket will open in another browser tab.
+<mark>Need the right starter project here (Philip has?)</mark>
 
 --- /task ---
 
@@ -106,7 +107,7 @@ You can get the coordinates of the mouse pointer from built-in variables —`mou
 
 ```python
 
-image(skater, mouse_x, mouse_y, 30, 30)
+image(skater, mouse_x, mouse_y, 30, 30) #the image of a skater sized 30x30 will go to the mouse pointer coordinates
 
 ```
 
