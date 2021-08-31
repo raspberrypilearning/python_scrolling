@@ -47,7 +47,7 @@ Have fun with emojis and/or the player character image.
 title: Conditionals
 ---
 
-Here is how conditionals are used in the example skiing project:
+Here is how conditionals are used in the example skiing project to see if the player has touched an obstacle:
 
 ```python 
   mouse_colour = color(get(mouse_x, mouse_y))
@@ -55,8 +55,6 @@ Here is how conditionals are used in the example skiing project:
   if mouse_colour == GREEN: # hit a tree
     image(crashed, mouse_x, mouse_y, 30, 30)
     print('💥💥💥💥💥⛷️')
-  elif mouse_colour == RED: # crossed the finish line
-    print('🥳🥳🥳🥳🥳⛷️')
   else:
     image(skiing, mouse_x, mouse_y, 30, 30)
 ```
@@ -93,11 +91,11 @@ Ordering of functions, particularly re: translation
 title: There is no collision when the player reaches an obstacle
 ---
 
-If your player character is touching an obstacle and nothing is happening, there are a few things you should check:
+If your player character is touching the finishing and nothing is happening, there are a few things you should check:
 
- - Are you using the exact same colour when drawing the object and in the `if` statement checking for the collision? You can make sure of this by using the same `global` variable in both places.
- - Are you drawing the player character sprite before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the sprite image. You need to check the colour, *then* draw the sprite.
- - Is there code inside your if statement that will run to let you know when a collision has happened? Add a `print()` statement with a unique message to be sure this code is running.
+ - Are you using the exact same colour when drawing the object and in the `if` statement checking for the win? You can make sure of this by using the same `global` variable in both places.
+ - Are you drawing the player character sprite before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the sprite image. You need to check the colour, **then** draw the sprite.
+ - Is there code inside your if statement that will run to let you know when the win has happened? Add a `print()` statement with a unique message to be sure this code is running.
  - Have you correctly indented the code for your `if` statement so it runs when the condition is met?
 
 --- /collapse ---
