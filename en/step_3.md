@@ -58,6 +58,7 @@ To solve this, you could use a `for` loop with `randint()` to choose obstacle po
 If you use the `seed()` function first, you can avoid the obstacles jumping around.
 
 --- task ---
+
 Write a function that will draw your obstacle multiple times in the game, in random co-ordinates. Call this function in `draw()`, so it runs in every frame.
 
 [[[using-seed-in-python]]]
@@ -150,6 +151,3 @@ Make sure that you have used `seed()` inside the function that draws multiple ob
 --- /collapse ---
 
 --- /task ---
-
---- /task ---
-
