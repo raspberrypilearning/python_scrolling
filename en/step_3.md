@@ -47,7 +47,7 @@ ellipse(160, 220, 50, 50)
 
 **Tip:** You can use several simple shapes in the same function to create a more complex obstacle (like the trees in the example Skiing project).
 
-<mark>A small gallery of complex shapes from simple primitives</mark>
+![Strip of images showing games with obstacles made from a number of shapes.](images/complex-obstacles.png)
 
 --- /task ---
 
