@@ -4,7 +4,7 @@ Build a scrolling obstacle game where your character has to reach a finishing po
 
 <mark>
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Obbys**</span> are the </p>
+<span style="color: #0faeb0">**Obbys**</span> are a type of platformer game, gaining popularity recently through Roblox, where players have to make it to the end of the level by moving from place to place, avoiding obstacles and other hazzards. </p>
 </mark>
 
 You will:
@@ -30,7 +30,6 @@ What happens if you hit an obstacle? How do you win the game?
 <div style="flex-basis: 175px; flex-grow: 1">  
 </div>
 <div>
-Look through these example projects and try them out to get more ideas:
 
 <mark>need the right asteroids link here (no cloud asteroids) - Philip to fill in?</mark>
 
