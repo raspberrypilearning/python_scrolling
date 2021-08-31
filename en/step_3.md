@@ -73,7 +73,7 @@ Write a function that will draw your obstacle multiple times in the game, in ran
 
 --- collapse ---
 ---
-title: **Epilepsy Warning**
+title: Epilepsy Warning
 ---
 
 Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. You can
