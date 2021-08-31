@@ -63,7 +63,7 @@ Write a function that will draw your obstacle multiple times in the game, in ran
 
 [[[using-seed-in-python]]]
 
-[[[generic-python-for-loop-repeat]]]
+<mark>generic-python-for-loop-repeat</mark>
 
 --- save ---
 
