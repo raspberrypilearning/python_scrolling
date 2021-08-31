@@ -5,7 +5,7 @@
 Get the obstacles to move, and check if the player character hits an obstacle.
 </div>
 <div>
-![image of finished project](images/image.png){:width="300px"}
+![image of finished project](images/move-and-detect.gif){:width="300px"}
 </div>
 </div>
 
