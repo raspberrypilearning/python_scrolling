@@ -6,26 +6,24 @@ In this step you will create the theme of your game.
 
 </div>
 <div>
-![Image of turtle size 100x100 against a blue background (screen size 400x400)](images/theme-turtle.png){:width="300px"}
+![Image of turtle size 100x100 against a blue background with screen size 400x400](images/theme-turtle.png){:width="300px"}
 </div>
 </div>
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/575bd82b01){:target="_blank"}. Trinket will open in another browser tab.
-<mark>Need the right starter project here (Philip has?)</mark>
+Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
 
 --- /task ---
 
 What is the theme of your game? You could choose anything you want. Here are some ideas:
-- a sport
-- a hobby
+- a sport, or hobby
 - a movie, show or game
-- nature
-- science
+- science, or nature
 - anything else!
 
 --- task ---
+
 **Choose:** Set the size of your canvas.
 
 --- collapse ---
@@ -44,7 +42,6 @@ line_highlights: 7
 ---
 def setup():
     size(400, 400)
-
 
 --- /code ---
 
@@ -80,7 +77,7 @@ line_highlights: 9
 
 --- /task ---
 
-Now think about the character that is playing the game and avoiding the obstacles. Is it an object? Person? Animal?
+Now think about the character that is playing the game and avoiding the obstacles. Is it an object? person? animal?
 
 --- task ---
 
@@ -99,6 +96,7 @@ Control the character's movement using the mouse pointer
 Add code for the character to follow the mouse pointer. You can do this by getting the coordinates of the mouse pointer and using them as the coordinates for your character image when you draw it.
 
 --- collapse ---
+
 ---
 title: Getting the coordinates of the mouse pointer
 ---
