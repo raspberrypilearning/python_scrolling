@@ -2,7 +2,7 @@
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-In this step you will create the theme of your game.
+In this step you will set the theme of your game and create a character that follows the mouse pointer.
 
 </div>
 <div>
@@ -77,15 +77,41 @@ line_highlights: 9
 
 --- /task ---
 
-Now think about the character that is playing the game and avoiding the obstacles. Is it an object? person? animal?
+Now think about the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
 
 --- task ---
 
-Add an image for your character.
+Upload an image for your character or use one of the characters provided in the starter project.
 
-You can use the characters provided or use your own image.
+To view your chosen image in the output area: 
++ load the image into the `setup()` function 
++ call the `image()` in the `draw()` function. 
+
+--- collapse ---
+
+---
+title: View the starter images
+---
+
+Click on the 'manage images' icon. 
+
+![The picture icon in the top right of the code area.](images/manage-images.png)
+
+Images included in the starter project will be shown in the **Image Library** list. 
+
+![The Image library with list of included images.](images/starter-images.png)
+
+--- /collapse ---
 
 [[[processing-add-image]]]
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your code to see your image displayed in the output area. 
+
+The image will be shown at the co-ordinates you entered. It will also be the `width` and `height` you chose. 
 
 --- /task ---
 
@@ -93,7 +119,9 @@ Control the character's movement using the mouse pointer
 
 --- task ---
 
-Add code for the character to follow the mouse pointer. You can do this by getting the coordinates of the mouse pointer and using them as the coordinates for your character image when you draw it.
+Amend your `image()` code so that you character follows the mouse pointer. 
+
+You can do this by getting the coordinates of the mouse pointer and using them as the coordinates for your character image when you draw it.
 
 --- collapse ---
 
@@ -101,15 +129,25 @@ Add code for the character to follow the mouse pointer. You can do this by getti
 title: Getting the coordinates of the mouse pointer
 ---
 
-You can get the coordinates of the mouse pointer from built-in variables —`mouse_x` and `mouse_y` — that the p5 library gives you. 
+You can get the coordinates of the mouse pointer from built-in variables `mouse_x` and `mouse_y` that the p5 library gives you. 
 
-```python
+--- code ---
+---
+language: python
+filename: main.py - draw()
+---
 
-image(skater, mouse_x, mouse_y, 30, 30) #the image of a skater sized 30x30 will go to the mouse pointer coordinates
+image(skater, mouse_x, mouse_y, 30, 30) # the image will go to the mouse pointer coordinates
 
-```
+--- /code ---
 
 --- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+**Test:** Run your project again to check that your character moves to the mouse pointer each time it is redrawn. 
 
 --- /task ---
 

@@ -9,11 +9,29 @@ Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 </div>
 
-Your obstacles will be made from shapes in processing. Can you make them out of a combination of shapes or just one shape? How do the obstacles fit with your theme?
+Your obstacles will be made from shapes in processing. 
++ Will you make them out of a combination of shapes or just one shape? 
++ How do the obstacles fit with your theme?
 
 --- task ---
 
 **Choose:** what colours you will use for your obstacles. Add new colour variables to the `setup()` function.
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+line_numbers: true
+line_number_start: 
+line_highlights: 
+---
+
+global GREEN, BROWN
+  
+GREEN = color(15, 135, 0)
+BROWN = color(134, 56, 0)
+
+--- /code ---
 
 [[[generic-theory-simple-colours]]]
 
@@ -23,7 +41,9 @@ What shape(s) will your obstacles be?
 
 --- task ---
 
-Create a function that will draw your obstacles. This function should take the (x, y) coordinates of the obstacle as parameters.
+Create an `obstacle()` function that will draw your obstacles. This function should take the (x, y) coordinates of the obstacle as parameters.
+
+Call this function in `draw()`, so it runs in every frame.
 
 --- collapse ---
 ---
@@ -32,10 +52,15 @@ title: Create a filled in shape
 
 To fill a shape, use the `fill()` function with a colour. Remember you can use `no_fill()` to turn your fill off.
 
-```python
+--- code ---
+---
+language: python
+---
+
 fill(100, 200, 50)
 ellipse(160, 220, 50, 50)
-```
+
+--- /code ---
 
 --- /collapse ---
 
