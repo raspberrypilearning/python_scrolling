@@ -2,10 +2,8 @@
 
 Build a scrolling obstacle game where your character has to reach a finishing point without colliding with obstacles.
 
-<mark>
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
 <span style="color: #0faeb0">**Obbys**</span> are a type of platformer game, gaining popularity recently through Roblox, where players have to make it to the end of the level by moving from place to place, avoiding obstacles and other hazzards. </p>
-</mark>
 
 You will:
 + Make a game using code that checks for game **conditions**
