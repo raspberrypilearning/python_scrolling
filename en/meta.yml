@@ -11,7 +11,6 @@ steps:
   - title: Choose your theme
   - title: Create obstacles
   - title: Movement and collision
-  - title: Win the game
   - title: Reflection
     knowledge_quiz:
       path: quiz1

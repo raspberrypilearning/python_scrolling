@@ -5,7 +5,7 @@
 legend: Question 3 of 3
 ---
 
-
+Something on functions?
 
 --- choices ---
 

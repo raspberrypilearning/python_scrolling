@@ -1,19 +1,19 @@
-## Share
+## What next?
 
-If you are in a club, why not share your project with friends?
+If you are following the [Python Intro](https://projects.raspberrypi.org/en/pathways/python-intro) pathway, you can move on to the [Powerful Patterns](https://projects.raspberrypi.org/en/projects/powerful-patterns) project. In this project, you will create inspirational art that can be scaled using repeated patterns.
 
-You could also show your family how your project works by sending them a link. 
+--- print-only ---
 
-To get a link go to the **Share** menu button in the upper-right of your trinket's edit page and select **Link**.
+![One of the examples from the Powerful patterns project shown using rotated geometric shapes](images/kek-project.png)
 
-![The `Share` menu button extended with `Link` highlighted.](images/share-button.png)
+--- /print-only ---
 
-**Tip:** You can share a link to your project even if you don't have a Trinket account, however without an account, the link to your project will change each time you update it. If you have shared the link with someone, you will need to send a new link for them to see the changes. 
+--- no-print ---
 
---- task ---
+<iframe src="https://trinket.io/embed/python/81be7eb895?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
-Inspire the Raspberry Pi Foundation community with your project!
 
-To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+--- /no-print ---
 
---- /task ---
+If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+

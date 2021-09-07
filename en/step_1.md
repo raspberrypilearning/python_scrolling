@@ -31,9 +31,9 @@ What happens if you hit an obstacle? How do you win the game?
 
 <mark>need the right asteroids link here (no cloud asteroids) - Philip to fill in?</mark>
 
-**Asteroids**: [See inside](https://trinket.io/python/df07d4f46b){:target="_blank"}
+**Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
-  <iframe src="https://trinket.io/embed/python/df07d4f46b?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+  <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
   </iframe>
 </div>
 
@@ -49,7 +49,11 @@ What happens if you hit an obstacle? How do you win the game?
   </iframe>
 </div>
 
-<mark>Save the Shark clone — Philip to make</mark>
+**Swimming shark**: [See inside](https://trinket.io/python/847372f14f){:target="_blank"}
+<div class="trinket">
+  <iframe src="https://trinket.io/embed/python/847372f14f?outputOnly=true&runOption=run&start=result" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+  </iframe>
+</div>
 
 </div>
 

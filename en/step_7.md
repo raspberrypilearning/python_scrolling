@@ -1,16 +1,19 @@
-## Upgrade your project
+## Share
 
-If you have time you can upgrade to your project. 
+If you are in a club, why not share your project with friends?
 
-Here are some ideas you could try:
- - Victory/defeat condition (and/or score)
- - New pickups/power-ups
- - Race track/safe path
- - Infinite scroll
+You could also show your family how your project works by sending them a link. 
 
-Each example project in the [Introduction](.) has a ‘See Inside’ link for you to open the project and look at the code to get ideas and see how they work.
+To get a link go to the **Share** menu button in the upper-right of your trinket's edit page and select **Link**.
 
-Take a look at some Powerful patterns projects created by community members in the Raspberry Pi Foundation’s [Powerful patterns - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"} to see projects created by community members.
+![The `Share` menu button extended with `Link` highlighted.](images/share-button.png)
 
---- save ---
+**Tip:** You can share a link to your project even if you don't have a Trinket account, however without an account, the link to your project will change each time you update it. If you have shared the link with someone, you will need to send a new link for them to see the changes. 
 
+--- task ---
+
+Inspire the Raspberry Pi Foundation community with your project!
+
+To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+
+--- /task ---
