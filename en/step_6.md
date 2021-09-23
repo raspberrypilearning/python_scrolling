@@ -1,1 +1,1 @@
-**Tip:** Collisions don't have to be bad things. A character running into a power-up, or collecting an item for points, is also a kind of collision.
+## Reflection
