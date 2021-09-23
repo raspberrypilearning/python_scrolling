@@ -1,73 +1,122 @@
-## Movement and collision
+## Collision detection
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Get the obstacles to move, and check if the player character hits an obstacle.
+Endless runner games often end when the player collides with an obstacle.
 </div>
 <div>
-![image of finished project](images/move-and-detect.gif){:width="300px"}
+![image of finished project](images/collision-detect.gif){:width="300px"}
 </div>
 </div>
 
-The obstacles will move so that it appears as though the game is scrolling. You can use `frame_count` to update the obstacles in each frame so that the player character moves through them.
+Now you can set up your player to react to an obstacle collision.
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
+<span style="color: #0faeb0">**Collision detection**</span> .</p>
 
 --- task ---
 
-Create a function to move your obstacles and call the `translate()` function within it. Don't forget to call your new function in `draw()`
+In your `draw_player()` function, Create a variable called `collide` and set it to get the colour at the position of the player.
 
-[[[processing-translation]]]
-<<<mark>>> add ingredient here for push/pop matrix, make sure it is short, then add it to the invent project as well (at the same time as the loops ingredient)<<</mark>>>
+--- code ---
+---
+language: python
+filename: main.py - draw_player()
+
+---
+
+collide = get(mouse_x, player_y)
+
+--- /code ---
 
 --- /task ---
 
 --- task ---
 
-**Test** Experiment with moving the obstacles.
+Create a condition to check `if` the `collide` variable is the same as the `safe` variable - if it is then your player is safely touching the background and has not collided with an obstacle.
 
-[[[processing-translation]]]
+Move your code to draw your obstacle inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision. 
 
-[[[processing-rotation]]]
-
-[[[python-operators]]]
-
---- /task ---
-
-Now you can set up your game to detect if there is a collision.
-
---- task ---
-
-Add a function for your player character's actions and use conditions to find out if the mouse is touching an obstacle, then do something if it is.
-
-A collision will occur if the mouse is touching a certain colour (the obstacle colour).
-
-Have fun with emojis and/or the player character image.
+**Choose:** how should your player react? You could:
++ Change the image to a `crashed` version
++ Use a different emoji for the player
++ You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image.
 
 --- collapse ---
+
 ---
-title: Conditionals
+title: Change the image 
 ---
 
-Here is how conditionals are used in the example skiing project to see if the player has touched an obstacle:
+You can use a different image to represent your player when it collides with an obstacle. 
 
-```python 
-  mouse_colour = color(get(mouse_x, mouse_y))
-  
-  if mouse_colour == GREEN: # hit a tree
-    image(crashed, mouse_x, mouse_y, 30, 30)
-    print('💥💥💥💥💥⛷️')
-  else:
-    image(skiing, mouse_x, mouse_y, 30, 30)
-```
+Here's an example:
+
+--- code ---
+---
+language: python
+filename: main.py - draw_player()
+
+---
+def draw_player():
+  player_y = int(height * 0.8)
+
+  collide = get(mouse_x, player_y)
+
+  if collide == safe: # On background
+    image(skiing, mouse_x, player_y, 30, 30)
+  else: # Collided
+    image(crashed, mouse_x, player_y, 30, 30)
+
+--- /code ---
 
 --- /collapse ---
 
-**Tip:** Collisions don't have to be bad things. A character running into a power-up, or collecting an item for points, is also a kind of collision.
+--- collapse ---
+
+---
+title: Use emoji characters
+---
+
+You can use emoji characters in the p5 `text()` function to use an emoji to represent your player. 
+
+Here's an example:
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+---
+def setup():
+  size(400, 400)
+  text_size(40) # controls the size of the emoji 
+  text_align(CENTER, TOP) # position around the centre
+--- /code ---
+
+--- code ---
+---
+language: python
+filename: main.py - draw_obstacles()
+---
+def draw_player():
+  if collide == safe: # On background
+    text('🎈', mouse_x, player_y)
+  else: # Collided
+    text('💥', mouse_x, player_y)
+
+--- /code ---
+
+--- /collapse ---
+
+[[[processing-tint]]]
+
+[[[generic-theory-simple-colours]]]
 
 --- /task ---
 
 --- task ---
 
-**Test:** Check if a collision is detected.
+**Test:** Check if a collision is detected and the reaction takes place each time a collision occurs.
 
 --- /task ---
 
@@ -93,12 +142,69 @@ title: There is no collision when the player reaches an obstacle
 
 If your player character is touching the finishing and nothing is happening, there are a few things you should check:
 
- - Are you using the exact same colour when drawing the object and in the `if` statement checking for the win? You can make sure of this by using the same `global` variable in both places.
- - Are you drawing the player character sprite before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the sprite image. You need to check the colour, **then** draw the sprite.
- - Is there code inside your if statement that will run to let you know when the win has happened? Add a `print()` statement with a unique message to be sure this code is running.
+ - Make sure you call `draw_obstacles()` before `draw_players()`. If you check for collisions before drawing the obstacles in a frame, then there won't be any obstacles to collide with!
+ - Make sure you are using the exact same colour when drawing the object and in the `if` statement checking for the collision? You can make sure of this by using the same `global` variable in both places.
+ - Are you drawing the player character before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the player. You need to check the colour first and **then** draw the player.
+ - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using a different image?
  - Have you correctly indented the code for your `if` statement so it runs when the condition is met?
 
+Printing the colour of the pixel you are checking for a collision can be useful:
+
+```python
+  print(red(collide), green(collide), blue(collide))
+```
+
+You can also print a circle around the point you are checking and adjust the point you check if you need to:
+
+```python
+  no_fill()
+  ellipse(mouse_x, player_y, 10, 10) # draw collision point
+```
+
 --- /collapse ---
+
+--- /task ---
+
+--- task ---
+**Optional:** At the moment you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom and left and right-most edges. 
+
+--- collapse ---
+
+---
+title: Collision detection with multiple pixels
+---
+
+def draw_player():
+  
+  player_y = int(height * 0.8)
+  # Useful for debugging
+  # Draw circles around the pixels to check for collisions
+  
+  no_fill()
+  ellipse(mouse_x, player_y, 10, 10) # draw collision point
+  ellipse(mouse_x, player_y + 40, 10, 10)
+  ellipse(mouse_x - 12, player_y + 20, 10, 10)
+  ellipse(mouse_x + 12, player_y + 20, 10, 10)
+
+  collide = get(mouse_x, player_y)
+  collide2 = get(mouse_x - 12, player_y + 20)
+  collide3 = get(mouse_x + 12, player_y + 20)
+  collide4 = get(mouse_x, player_y + 40)
+  
+  if mouse_x < width: # off the left of the screen
+    collide2 = safe
+  
+  if mouse_x > width: # off the right of the screen
+    collide3 = safe
+    
+  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
+    text('🎈', mouse_x, player_y)
+  else:
+    text('💥', mouse_x, player_y)
+
+--- /collapse ---
+
+You could even use a loop and check lots of different pixels. This is how collision detected works in games. 
 
 --- /task ---
 

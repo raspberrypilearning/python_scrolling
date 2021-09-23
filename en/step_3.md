@@ -5,39 +5,145 @@
 Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
-![Image of 400x400 screen with a light purple background. There is a road in the image with 5 orange pylons as obstacles.](images/obstacles.png)
+![.](images/obstacles.png)
 </div>
 </div>
 
-Your obstacles will be made from shapes in processing. Can you make them out of a combination of shapes or just one shape? How do the obstacles fit with your theme?
+### Start with one obstacle
+
+You can make obstacles in the sames ways that you made your player. How do the obstacles fit with your theme? 
+
+You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
 
 --- task ---
+Define a `draw_obstacles()` function: 
 
-**Choose:** what colours you will use for your obstacles. Add new colour variables to the `setup()` function.
+--- code ---
+---
+language: python
+filename: main.py - draw_obstacles()
+---
+def draw_obstacles():
+   ob_x = width/2
+   ob_y = height/2
+   text('🌵', ob_x, ob_y) # Replace with your obstacle
+    
 
-[[[generic-theory-simple-colours]]]
+--- /code ---
+
+Add code to `draw()` to call `draw_obstacles()` each frame.
+
+--- code ---
+---
+language: python
+filename: main.py - draw()
+---
+
+def draw():
+    safe = color(200, 100, 0) # Add the colour of your theme
+    background(safe)  
+    draw_obstacles() # Before drawing the player
+    draw_player()
+    
+--- /code ---
 
 --- /task ---
 
-What shape(s) will your obstacles be?
-
 --- task ---
 
-Create a function that will draw your obstacles. This function should take the (x, y) coordinates of the obstacle as parameters.
+**Choose:** What does your obstacle look like? Your obstacle could be:
++ An image provided in the starter project
++ An emoji 🌵 or text
++ Drawn using a series of shapes 
 
 --- collapse ---
+
 ---
-title: Create a filled in shape
+title: Use a starter image
 ---
 
-To fill a shape, use the `fill()` function with a colour. Remember you can use `no_fill()` to turn your fill off.
+Click on the 'manage images' icon. 
 
-```python
-fill(100, 200, 50)
-ellipse(160, 220, 50, 50)
-```
+![The picture icon in the top right of the code area.](images/manage-images.png)
+
+Images included in the starter project will be shown in the **Image Library** list. 
+
+![The Image library with list of included images.](images/starter-images.png)
+
+Make a note of the name of the image you want to use.
+
+Load the image into the `setup()` function 
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+
+---
+def setup():
+    size(400, 400)
+    player = load_image('skiing.png') # Load your image
+    obstacle = load_image('rocket.png') # Load your image
+
+--- /code ---
+
+Call the `image()` and set it as global in the `draw_obstacles()` function
+
+--- code ---
+---
+language: python
+filename: main.py - draw_obstacles()
+
+---
+
+def draw_obstacles():
+   ob_x = width/2
+   ob_y = height/2
+   
+   global obstacle
+   
+   image(obstacle, ob_x, ob_y, 30, 30) #resize to fit your theme
+
+--- /code ---
 
 --- /collapse ---
+
+--- collapse ---
+
+---
+title: Use emoji characters
+---
+
+You can use emoji characters in the p5 `text()` function to use an emoji to represent your player. 
+
+Here's an example:
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+---
+def setup():
+  size(400, 400)
+  text_size(40) # controls the size of the emoji 
+  text_align(CENTER, TOP) # position around the centre
+--- /code ---
+
+--- code ---
+---
+language: python
+filename: main.py - draw_obstacles()
+---
+def draw_obstacles():
+  ob_x = width/2
+  ob_y = height/2
+  text('🌵', ob_x, ob_y)
+
+--- /code ---
+
+--- /collapse ---
+
+[[[generic-theory-simple-colours]]]
 
 [[[processing-python-ellipse]]]
 
@@ -45,45 +151,133 @@ ellipse(160, 220, 50, 50)
 
 [[[processing-python-triangle]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex obstacle (like the trees in the example Skiing project).
+[[[processing-tint]]]
 
-![Strip of images showing games with obstacles made from a number of shapes.](images/complex-obstacles.png)
+[[[processing-stroke]]]
+
+**Tip:** You can use several simple shapes in the same function to create a more complex player.
+
+--- collapse ---
+
+---
+title: Draw an obstacle using multiple shapes
+---
+
+![desc](images/tree_obstacle.png)
+
+--- code ---
+---
+language: python
+filename: main.py - draw_obstacles()
+
+---
+
+def draw_obstacles():
+    ob_x = width/2
+    ob_y = height/2
+    # Draw a fir tree
+    no_stroke()
+    fill(0,255,0) # green for needles
+    triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
+    triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
+    triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
+    fill(150,100,100) # brown for trun
+    rect(ob_x + 15, ob_y + 70, 10, 10)
+
+--- /code ---
+
+--- /collapse ---
 
 --- /task ---
 
-Repeating code to place enough obstacles for the game would be time consuming and inefficient. 
+### Get your obstacle moving
 
-To solve this, you could use a `for` loop with `randint()` to choose obstacle positions for you, however, because `randint()` will start from a new number in every frame, your obstacles change position each frame.
+--- task ---
+Now add code to increase the y position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle. 
 
-If you use the `seed()` function first, you can avoid the obstacles jumping around.
+The p5 `frame_count` variable starts counting the frames when you click run. 
+
+`ob_y %= height` sets the y position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen in reappears at the top.
+
+--- code ---
+---
+language: python
+filename: main.py - draw()
+---
+
+def draw_obstacles():
+   ob_x = width/2
+   ob_y = height/2 + frame_count # increases each frame
+   ob_y %= height # wrap around
+   text('🌵', ob_x, ob_y) # Replace with your obstacle
+
+--- /code ---
+
+--- /task ---
+
+### Lots of obstacles
+
+You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
+
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
+<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
 
 --- task ---
 
-Write a function that will draw your obstacle multiple times in the game, in random co-ordinates. Call this function in `draw()`, so it runs in every frame.
+This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
+
+<mark>Change starter file to import * or also import the seed function so they don't need to do it</mark>
+
+--- code ---
+---
+language: python
+filename: main.py - draw()
+---
+
+def draw_obstacles():
+  
+  seed(12345678) # Any number is fine
+  
+  for i in range(6):  
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + frame_count
+    ob_y %= height
+    text('🌵', ob_x, ob_y) # Replace with your obstacle
+
+--- /code ---
+
+Useful information:
 
 [[[using-seed-in-python]]]
 
-**generic-python-for-loop-repeat**
-
---- save ---
+[[[generic-python-for-loop-repeat]]]
 
 --- /task ---
-
---- task ---
 
 --- collapse ---
 ---
 title: Epilepsy Warning
 ---
 
-Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. You can
+Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. You can:
+- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
 - Ask somebody to run it for you
 - Move on and complete the project, asking someone to run the project for you at the end so you can debug.
 - Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
 
 --- /collapse ---
 
-**Test:** Run your program and check your obstacles all stay in the same place, rather than changing position every time a frame is drawn.
+--- task ---
+**Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom. 
+
+Change your code until you are happy with the obstacles you have. You can:
+
++ Change the seed to get obstacles in different starting positions
++ Change the number of times to loop repeats to get a different number of obstacles
++ Adjust the size of the obstacles
+
+**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
 
 --- /task ---
 
@@ -93,51 +287,33 @@ Testing your program has the potential to induce seizures for people with photos
 
 --- collapse ---
 ---
-title: I am having trouble with the colour of my shapes
----
-
-Make sure that, if you have variables for colour, they are defined as global variables.
-
-```python
-def setup():    
-    global BLACK, WHITE
-    BLACK = (0,0,0)
-    WHITE = (255,255,255)
-```
-
---- /collapse ---
-
---- collapse ---
----
 title: Only one obstacle is being drawn
 ---
 
 Check that your function to draw multiple obstacles is:
  + using a `for` loop to call the obstacle drawing function more than once
  + using `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
+ + check that you are using `ob_x` and `ob_y` as the coordinates for your obstacle
 
 For example:
 
-```python
+--- code ---
+---
+language: python
+filename: main.py
+
+---
 def draw_obstacles():
-  # Use seed to get the same random numbers each frame
-  seed('my random seed')
 
-  # Randomly choose the number of obstacles to draw
-  obstacle_count = randint(10, 30)
+  seed(12345678)
+  
+  for i in range(6):  
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + frame_count
+    ob_y %= height
+    text('🌵', ob_x, ob_y) # Replace with your obstacle
 
-  # Running the obstacle positioning code in a loop
-  for obstacle in range(obstacle_count):
-    
-    # Pick an x coordinate at random
-    x_coord = randint(1, 400)
-    
-    # Pick a y coordinate at random
-    y_coord = randint(1, 400)
-
-    # Call your function to drawn an obstacle
-    draw_obstacle(x_coord, y_coord)
-```
+--- /code ---
 
 --- /collapse ---
 
@@ -150,4 +326,18 @@ Make sure that you have used `seed()` inside the function that draws multiple ob
 
 --- /collapse ---
 
+--- collapse ---
+---
+title: I only have one obstacle
+---
+
+Make sure that you have used `seed()` inside the function that draws multiple obstacles.
+
+--- /collapse ---
+
 --- /task ---
+
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
+Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
+
+--- save ---
