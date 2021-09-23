@@ -186,6 +186,8 @@ def draw_obstacles():
 
 --- /code ---
 
+--- /collapse ---
+
 --- /task ---
 
 ### Get your obstacle moving
