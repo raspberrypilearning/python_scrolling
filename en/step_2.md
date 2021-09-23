@@ -26,26 +26,16 @@ Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank
 
 **Choose:** Set the size of your canvas.
 
---- collapse ---
-
----
-title: Setting the screen size when your program starts
----
-
 --- code ---
 ---
 language: python
 filename: main.py - setup()
-line_numbers: true
-line_number_start: 6
-line_highlights: 7
+
 ---
 def setup():
     size(400, 400)
 
 --- /code ---
-
---- /collapse ---
 
 --- /task ---
 
@@ -55,20 +45,18 @@ Create a variable called `safe` to store the background colour based on the them
 
 This is the colour that it is safe for the player to be on and you will use this variable again later.
 
-[[[generic-theory-simple-colours]]]
-
 --- code ---
 ---
 language: python
 filename: main.py - draw()
-line_numbers: true
-line_number_start: 9
-line_highlights: 9-10
 ---
-    safe = color(200, 100, 0) # Update to the colour of your theme
+def draw():
+    safe = color(200, 100, 0) # Add the colour of your theme
     background(safe)  
 
 --- /code ---
+
+[[[generic-theory-simple-colours]]]
 
 --- /task ---
 
@@ -97,13 +85,17 @@ def draw_player():
 
 --- /code ---
 
-And add the code to the end of `draw()` to call `draw_player()` each frame.
+Add code to `draw()` to call `draw_player()` each frame.
 
 --- code ---
 ---
 language: python
 filename: main.py - draw()
 ---
+
+def draw():
+    safe = color(200, 100, 0) # Add the colour of your theme
+    background(safe)  
     draw_player()
     
 --- /code ---
@@ -116,14 +108,13 @@ Next you will add code to the `draw_player()` function to draw your shape. You m
 
 **Choose:** What does your player look like? Your player could be:
 + An image provided in the starter project
-+ An image you upload 
-+ An emoji or text
++ An emoji 🎈 or text
 + Drawn using a series of shapes 
 
 --- collapse ---
 
 ---
-title: View the starter images
+title: Use a starter image
 ---
 
 Click on the 'manage images' icon. 
@@ -136,7 +127,7 @@ Images included in the starter project will be shown in the **Image Library** li
 
 Make a note of the name of the image you want to use.
 
-+ load the image into the `setup()` function 
+Load the image into the `setup()` function 
 
 --- code ---
 ---
@@ -144,12 +135,13 @@ language: python
 filename: main.py - setup()
 
 ---
-
-player = load_image('skiing.png') # Load your image
+def setup():
+    size(400, 400)
+    player = load_image('skiing.png') # Load your image
 
 --- /code ---
 
-+ call the `image()` in the `draw_player()` function
+Call the `image()` and set it as global in the `draw_player()` function
 
 --- code ---
 ---
@@ -159,6 +151,7 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():
+  player_y = int(height * 0.8) # towards the bottom of the screen
   
   global player
 
@@ -167,8 +160,6 @@ def draw_player():
 --- /code ---
 
 --- /collapse ---
-
-[[[processing-add-image]]]
 
 --- collapse ---
 
@@ -186,6 +177,7 @@ language: python
 filename: main.py - setup()
 ---
 def setup():
+  size(400, 400)
   text_size(40) # controls the size of the emoji 
   text_align(CENTER, TOP) # position around the centre
 --- /code ---
@@ -204,10 +196,24 @@ def draw_player():
 
 <mark>Create and add an ingredient on the text function and its setup functions</mark>
 
+[[[generic-theory-simple-colours]]]
+
+[[[processing-python-ellipse]]]
+
+[[[processing-python-rect]]]
+
+[[[processing-python-triangle]]]
+
+[[[processing-tint]]]
+
+[[[processing-stroke]]]
+
+**Tip:** You can use several simple shapes in the same function to create a more complex player.
+
 --- collapse ---
 
 ---
-title: Draw a player using shapes
+title: Draw a player using multiple shapes
 ---
 
 ![desc](images/face_player.png)
@@ -228,25 +234,32 @@ def draw_player():
   
   # Eyes
   fill(0, 100, 200)
-  ellipse(mouse_x-10, player_y-10, 20, 20)
-  ellipse(mouse_x+10, player_y-10, 20, 20)
+  ellipse(mouse_x - 10, player_y - 10, 20, 20)
+  ellipse(mouse_x + 10, player_y - 10, 20, 20)
   fill(0)
-  ellipse(mouse_x-10, player_y-10, 10, 10)
-  ellipse(mouse_x+10, player_y-10, 10, 10)
+  ellipse(mouse_x - 10, player_y - 10, 10, 10)
+  ellipse(mouse_x + 10, player_y - 10, 10, 10)
   fill(255)
-  ellipse(mouse_x-12, player_y-12, 5, 5)
-  ellipse(mouse_x+12, player_y-12, 5, 5)
+  ellipse(mouse_x - 12, player_y - 12, 5, 5)
+  ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
 --- /collapse ---
-
 
 --- /task ---
 
 --- task ---
 
 **Test:** Run your code and move the mouse to control the player. 
+
+**Debug:** If you can't see your player then try switching to full screen. Also, check the `x` and `y` coordinates that you use to draw the player.
+
+**Debug:** If your image doesn't load then check the filename really carefully. Remember capital letters are different to lower case letters and punctuation is important.
+
+**Debug:** If your image is too big or too small, check the inputs that control the width and height of the image. 
+
+**Debug:** If your emoji is too big or too small, change the input to `text_size()`.
 
 --- /task ---
 
