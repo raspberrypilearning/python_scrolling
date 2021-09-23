@@ -251,7 +251,7 @@ Useful information:
 
 [[[using-seed-in-python]]]
 
-[[[generic-python-for-loop-repeat]]]
+**generic-python-for-loop-repeat**
 
 --- /task ---
 
