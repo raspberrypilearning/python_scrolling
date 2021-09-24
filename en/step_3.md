@@ -202,7 +202,7 @@ The p5 `frame_count` variable starts counting the frames when you click run.
 --- code ---
 ---
 language: python
-filename: main.py - draw()
+filename: main.py - draw_obstacles()
 ---
 
 def draw_obstacles():
@@ -232,7 +232,7 @@ This code uses a `for` loop with `randint()` to choose obstacle positions for yo
 --- code ---
 ---
 language: python
-filename: main.py - draw()
+filename: main.py - draw_obstacles()
 ---
 
 def draw_obstacles():
@@ -300,7 +300,7 @@ For example:
 --- code ---
 ---
 language: python
-filename: main.py
+filename: main.py — draw_obstacles()
 
 ---
 def draw_obstacles():
