@@ -164,6 +164,7 @@ You can also print a circle around the point you are checking and adjust the poi
 title: Collision detection with multiple pixels
 ---
 
+```python
 def draw_player():
   
   player_y = int(height * 0.8)
@@ -191,6 +192,7 @@ def draw_player():
     text('🎈', mouse_x, player_y)
   else:
     text('💥', mouse_x, player_y)
+```
 
 --- /collapse ---
 
