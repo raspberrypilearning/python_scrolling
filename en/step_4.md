@@ -127,16 +127,6 @@ def draw_player():
 --- collapse ---
 
 ---
-title: Ordering
----
-
-Ordering of functions, particularly re: translation
-
---- /collapse ---
-
---- collapse ---
-
----
 title: There is no collision when the player reaches an obstacle
 ---
 
