@@ -68,7 +68,7 @@ def draw():
 
 Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
 
-The player will appear at a fixed y position and same x position as the mouse pointer which is stored in the p5 variable `mouse_x`. 
+The player will appear at a fixed y position and same x position as the mouse pointer, which is stored in the p5 variable `mouse_x`. 
 
 --- task ---
 It's a good idea to organise the code for drawing the player character into a function.
@@ -81,7 +81,7 @@ language: python
 filename: main.py - draw_player()
 ---
 def draw_player():
-  player_y = int(height * 0.8) # towards the bottom of the screen
+  player_y = int(height * 0.8) # towards the screen bottom
 
 --- /code ---
 
@@ -94,7 +94,7 @@ filename: main.py - draw()
 ---
 
 def draw():
-    safe = color(200, 100, 0) # Add the colour of your theme
+    safe = color(200, 100, 0) # Your chosen colour
     background(safe)  
     draw_player()
     
@@ -151,7 +151,7 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():
-  player_y = int(height * 0.8) # towards the bottom of the screen
+  player_y = int(height * 0.8) # towards the screen bottom
   
   global player
 
