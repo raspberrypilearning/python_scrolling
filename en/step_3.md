@@ -326,15 +326,6 @@ Make sure that you have used `seed()` inside the function that draws multiple ob
 
 --- /collapse ---
 
---- collapse ---
----
-title: I only have one obstacle
----
-
-Make sure that you have used `seed()` inside the function that draws multiple obstacles.
-
---- /collapse ---
-
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
