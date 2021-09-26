@@ -28,7 +28,3 @@ Each example project in the [Introduction](./) has a ‘See Inside’ link for y
 Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"} to see projects created by community members.
 
 --- save ---
-
- 
- 
- **Tip:** Collisions don't have to be bad things. A character running into a power-up, or collecting an item for points, is also a kind of collision.
