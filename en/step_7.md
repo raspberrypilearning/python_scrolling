@@ -25,7 +25,7 @@ Add lives to your game, to allow players to survive a few collisions. This is a 
 
 Each example project in the [Introduction](./) has a ‘See Inside’ link for you to open the project and look at the code to get ideas and see how they work.
 
-Take a look at some Powerful patterns projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"} to see projects created by community members.
+Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"} to see projects created by community members.
 
 --- save ---
 
