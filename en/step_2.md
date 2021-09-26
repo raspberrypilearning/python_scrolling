@@ -253,13 +253,52 @@ def draw_player():
 
 **Test:** Run your code and move the mouse to control the player. 
 
-**Debug:** If you can't see your player then try switching to full screen. Also, check the `x` and `y` coordinates that you use to draw the player.
+Does it move like you expect?
 
-**Debug:** If your image doesn't load then check the filename really carefully. Remember capital letters are different to lower case letters and punctuation is important.
+--- /task ---
 
-**Debug:** If your image is too big or too small, check the inputs that control the width and height of the image. 
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
-**Debug:** If your emoji is too big or too small, change the input to `text_size()`.
+--- task ---
+
+--- collapse ---
+---
+title: I can't see the player
+---
+
+Try switching to full screen. Also, check the `x` and `y` coordinates that you use to draw the player — make sure they are inside the canvas you created with `size()`.
+--- /collapse ---
+
+--- collapse ---
+---
+title: An image isn't loading
+---
+
+First, check that the image is in the image library. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: An image is the wrong size
+---
+
+Check the inputs that control the width and height of the image:
+
+```python
+image(image_file, x_coord, y_coord, width, height)
+```
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: An emoji is the wrong size
+---
+
+If your emoji is too big or too small, change the input to `text_size()`.
+
+--- /collapse ---
 
 --- /task ---
 
