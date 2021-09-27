@@ -13,18 +13,18 @@ You can add variety to your obstacles in a few ways:
 ### Add a win condition
 You can have players win the game in a few ways:
  - Achieving a winning score
- - Reaching a certain level of the game.
+ - Reaching a certain level of the game
 
 Once they have won, you should tell them somehow — maybe using `print()` or `text()` and then stop the game.
 
 ### Give players more than one life
-Add lives to your game, to allow players to survive a few collisions. This is a little tricker than just doing `lives =- 1` every time they collide with something:
- - The player may spend multiple frames in contact with an object, and so lose more than one life for a single collision — you'll need to prevent that from happening. 
- - You will also need a way for players to know how many lives they have left, and maybe some sort of warning that tells them when they're on their last life.
+Add lives to your game, to allow players to survive a few collisions. This is a little trickier than just doing `lives =- 1` every time they collide with something:
+ - The player may spend multiple frames in contact with an object, and so lose more than one life for a single collision — you'll need to prevent that from happening 
+ - You will also need a way for players to know how many lives they have left, and maybe some sort of warning that tells them when they're on their last life
  - You could add an object that, when the player collides with it, gives them an extra life. Remember that you'll need to modify your regular collision code so as it doesn't subtract a life at the same time!
 
-Each example project in the [Introduction](./) has a ‘See Inside’ link for you to open the project and look at the code to get ideas and see how they work.
+Each example project in the [Introduction](./) has a **See Inside** link for you to open the project and look at the code to get ideas and see how they work.
 
-Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"} to see projects created by community members.
+Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
 
 --- save ---
