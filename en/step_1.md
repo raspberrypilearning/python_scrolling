@@ -39,7 +39,7 @@ What happens if you hit an obstacle? Does it get harder as you play?
 
 **Face**: [See inside](https://trinket.io/python/88e108c819){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/88e108c819?runOption=run" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/88e108c819?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 **Don't pop**: [See inside](https://trinket.io/python/974800f4ef){:target="_blank"}
