@@ -10,7 +10,7 @@ You will:
 + Learn about procedural generation and collision detection
 + Personalise a game to your interests
 
-![Image of examples of different projects](images/projects_row.png)
+![Images of different project examples.](images/projects_row.png)
 
 ### Get inspiration 
 
