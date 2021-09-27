@@ -117,9 +117,9 @@ global score
 
 Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Using p5's `text()` function to display it as text on the game screen instead.
 
-<mark>Python string concat ingredient — inc casting </mark>
+[[[processing-python-text]]]
 
-<mark>Processing text function ingredient</mark>
+[[[generic-python-simple-string-formating]]]
 
 --- /task ---
 
