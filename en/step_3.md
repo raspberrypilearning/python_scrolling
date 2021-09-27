@@ -11,7 +11,7 @@ Create the obstacles that you will have to avoid to keep playing the game.
 
 ### Start with one obstacle
 
-You can make obstacles in the sames ways that you made your player. How do the obstacles fit with your theme? 
+You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme? 
 
 You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
 
@@ -26,7 +26,7 @@ filename: main.py - draw_obstacles()
 def draw_obstacles():
    ob_x = width/2
    ob_y = height/2
-   text('🌵', ob_x, ob_y) # Replace with your obstacle
+   text('🌵', ob_x, ob_y) #Replace with your obstacle
     
 
 --- /code ---
@@ -40,9 +40,9 @@ filename: main.py - draw()
 ---
 
 def draw():
-    safe = color(200, 100, 0) # Add the colour of your theme
+    safe = color(200, 100, 0) #Add the colour of your theme
     background(safe)  
-    draw_obstacles() # Before drawing the player
+    draw_obstacles() #Before drawing the player
     draw_player()
     
 --- /code ---
@@ -62,17 +62,17 @@ def draw():
 title: Use a starter image
 ---
 
-Click on the 'manage images' icon. 
+Click on the **manage images** icon. 
 
 ![The picture icon in the top right of the code area.](images/manage-images.png)
 
-Images included in the starter project will be shown in the **Image Library** list. 
+Images included in the starter project will be shown in the `Image library` list. 
 
-![The Image library with list of included images.](images/starter-images.png)
+![The Image library with a list of included images.](images/starter-images.png)
 
 Make a note of the name of the image you want to use.
 
-Load the image into the `setup()` function 
+Load the image into the `setup()` function. 
 
 --- code ---
 ---
@@ -82,12 +82,12 @@ filename: main.py - setup()
 ---
 def setup():
     size(400, 400)
-    player = load_image('skiing.png') # Load your image
-    obstacle = load_image('rocket.png') # Load your image
+    player = load_image('skiing.png') #Load your image
+    obstacle = load_image('rocket.png') #Load your image
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_obstacles()` function
+Call the `image()` and set it as global in the `draw_obstacles()` function.
 
 --- code ---
 ---
@@ -102,7 +102,7 @@ def draw_obstacles():
    
    global obstacle
    
-   image(obstacle, ob_x, ob_y, 30, 30) #resize to fit your theme
+   image(obstacle, ob_x, ob_y, 30, 30) #Resize to fit your theme
 
 --- /code ---
 
@@ -114,7 +114,7 @@ def draw_obstacles():
 title: Use emoji characters
 ---
 
-You can use emoji characters in the p5 `text()` function to use an emoji to represent your player. 
+You can use emoji characters in the p5 `text()` function to represent your obstacles. 
 
 Here's an example:
 
@@ -125,8 +125,8 @@ filename: main.py - setup()
 ---
 def setup():
   size(400, 400)
-  text_size(40) # controls the size of the emoji 
-  text_align(CENTER, TOP) # position around the centre
+  text_size(40) #Controls the size of the emoji 
+  text_align(CENTER, TOP) #Position around the centre
 --- /code ---
 
 --- code ---
@@ -155,7 +155,7 @@ def draw_obstacles():
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex player.
+**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
 
 --- collapse ---
 
@@ -175,9 +175,9 @@ filename: main.py - draw_obstacles()
 def draw_obstacles():
     ob_x = width/2
     ob_y = height/2
-    # Draw a fir tree
+    #Draw a fir tree
     no_stroke()
-    fill(0,255,0) # green for needles
+    fill(0,255,0) #Green for needles
     triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
     triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
     triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
@@ -193,11 +193,11 @@ def draw_obstacles():
 ### Get your obstacle moving
 
 --- task ---
-Now add code to increase the y position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle. 
+Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle. 
 
 The p5 `frame_count` variable starts counting the frames when you click run. 
 
-`ob_y %= height` sets the y position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen in reappears at the top.
+`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
 
 --- code ---
 ---
@@ -207,9 +207,9 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles():
    ob_x = width/2
-   ob_y = height/2 + frame_count # increases each frame
-   ob_y %= height # wrap around
-   text('🌵', ob_x, ob_y) # Replace with your obstacle
+   ob_y = height/2 + frame_count #Increases each frame
+   ob_y %= height #Wrap around
+   text('🌵', ob_x, ob_y) #Replace with your obstacle
 
 --- /code ---
 
@@ -237,13 +237,13 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles():
   
-  seed(12345678) # Any number is fine
+  seed(12345678) #Any number is fine
   
   for i in range(6):  
     ob_x = randint(0, height)
     ob_y = randint(0, height) + frame_count
     ob_y %= height
-    text('🌵', ob_x, ob_y) # Replace with your obstacle
+    text('🌵', ob_x, ob_y) #Replace with your obstacle
 
 --- /code ---
 
@@ -257,13 +257,13 @@ Useful information:
 
 --- collapse ---
 ---
-title: Epilepsy Warning
+title: Epilepsy warning
 ---
 
-Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. You can:
+Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
 - Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
 - Ask somebody to run it for you
-- Move on and complete the project, asking someone to run the project for you at the end so you can debug.
+- Move on and complete the project, asking someone to run the project for you at the end so you can debug
 - Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
 
 --- /collapse ---
@@ -290,10 +290,10 @@ Change your code until you are happy with the obstacles you have. You can:
 title: Only one obstacle is being drawn
 ---
 
-Check that your function to draw multiple obstacles is:
- + using a `for` loop to call the obstacle drawing function more than once
- + using `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
- + check that you are using `ob_x` and `ob_y` as the coordinates for your obstacle
+Check your function that draws multiple obstacles:
+ + Make sure it uses a `for` loop to call the obstacle drawing function more than once
+ + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
+ + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
 
 For example:
 
@@ -311,7 +311,7 @@ def draw_obstacles():
     ob_x = randint(0, height)
     ob_y = randint(0, height) + frame_count
     ob_y %= height
-    text('🌵', ob_x, ob_y) # Replace with your obstacle
+    text('🌵', ob_x, ob_y) #Replace with your obstacle
 
 --- /code ---
 
