@@ -194,8 +194,6 @@ def draw_player():
 
 --- /collapse ---
 
-<mark>Create and add an ingredient on the text function and its setup functions</mark>
-
 [[[processing-python-text]]]
 
 [[[generic-theory-simple-colours]]]
