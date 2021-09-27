@@ -227,8 +227,6 @@ You could draw lots of copies of your obstacle at different starting locations b
 
 This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
 
-<mark>Change starter file to import * or also import the seed function so they don't need to do it</mark>
-
 --- code ---
 ---
 language: python
