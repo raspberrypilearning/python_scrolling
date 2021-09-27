@@ -6,15 +6,15 @@ Set the theme of your game and create a player character that follows the mouse 
 
 </div>
 <div>
-![Image of turtle size 100x100 against a blue background with screen size 400x400](images/theme-turtle.png){:width="300px"}
+![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
 </div>
 </div>
 
 What is the theme of your game? You could choose anything you want. Here are some ideas:
-- a sport, or hobby
-- a movie, show or game
-- science, or nature
-- anything else!
+- A sport or hobby
+- A movie, show, or game
+- Science or nature
+- Anything else!
 
 --- task ---
 
@@ -51,7 +51,7 @@ language: python
 filename: main.py - draw()
 ---
 def draw():
-    safe = color(200, 100, 0) # Add the colour of your theme
+    safe = color(200, 100, 0) #Add the colour of your theme
     background(safe)  
 
 --- /code ---
@@ -68,12 +68,12 @@ def draw():
 
 Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
 
-The player will appear at a fixed y position and same x position as the mouse pointer, which is stored in the p5 variable `mouse_x`. 
+The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`. 
 
 --- task ---
 It's a good idea to organise the code for drawing the player character into a function.
 
-Define a `draw_player()` function and create a `player_y` position for the fixed y position of the player: 
+Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player: 
 
 --- code ---
 ---
@@ -81,7 +81,7 @@ language: python
 filename: main.py - draw_player()
 ---
 def draw_player():
-  player_y = int(height * 0.8) # towards the screen bottom
+  player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- /code ---
 
@@ -94,7 +94,7 @@ filename: main.py - draw()
 ---
 
 def draw():
-    safe = color(200, 100, 0) # Your chosen colour
+    safe = color(200, 100, 0) #Your chosen colour
     background(safe)  
     draw_player()
     
@@ -117,11 +117,11 @@ Next you will add code to the `draw_player()` function to draw your shape. You m
 title: Use a starter image
 ---
 
-Click on the 'manage images' icon. 
+Click on the **manage images** icon. 
 
 ![The picture icon in the top right of the code area.](images/manage-images.png)
 
-Images included in the starter project will be shown in the **Image Library** list. 
+Images included in the starter project will be shown in the `Image library` list. 
 
 ![The Image library with list of included images.](images/starter-images.png)
 
@@ -137,11 +137,11 @@ filename: main.py - setup()
 ---
 def setup():
     size(400, 400)
-    player = load_image('skiing.png') # Load your image
+    player = load_image('skiing.png') #Load your image
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_player()` function
+Call the `image()` and set it as global in the `draw_player()` function.
 
 --- code ---
 ---
@@ -151,7 +151,7 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():
-  player_y = int(height * 0.8) # towards the screen bottom
+  player_y = int(height * 0.8) #Positioned towards the screen bottom
   
   global player
 
@@ -178,8 +178,8 @@ filename: main.py - setup()
 ---
 def setup():
   size(400, 400)
-  text_size(40) # controls the size of the emoji 
-  text_align(CENTER, TOP) # position around the centre
+  text_size(40) #Controls the size of the emoji 
+  text_align(CENTER, TOP) #Position around the centre
 --- /code ---
 
 --- code ---
@@ -228,11 +228,11 @@ filename: main.py - draw_player()
 def draw_player():
   player_y = int(height * 0.8)
   noStroke()
-  # Face
+  #Face
   fill(0, 200, 100)
   ellipse(mouse_x, player_y, 60, 60)
   
-  # Eyes
+  #Eyes
   fill(0, 100, 200)
   ellipse(mouse_x - 10, player_y - 10, 20, 20)
   ellipse(mouse_x + 10, player_y - 10, 20, 20)
@@ -274,7 +274,7 @@ Try switching to full screen. Also, check the `x` and `y` coordinates that you u
 title: An image isn't loading
 ---
 
-First, check that the image is in the image library. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
 
 --- /collapse ---
 
