@@ -32,7 +32,7 @@ What happens if you hit an obstacle? Does it get harder as you play?
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Skiing**: [See inside](https://trinket.io/python/76e628bff2){:target="_blank"}
+**Skiing cat**: [See inside](https://trinket.io/python/76e628bff2){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/76e628bff2?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -63,9 +63,10 @@ What happens if you hit an obstacle? Does it get harder as you play?
 
 You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
-![Example project 1](images/example1.png)
-![Example project 2](images/example2.png)
-![Example project 3](images/example3.png)
-![Example project 4](images/example4.png)
+![Dodge asteroids project example](images/example1.png)
+![Skiing cat project example](images/example2.png)
+![Face project example](images/example3.png)
+![Don't pop project example](images/example4.png)
+![Clean car project example](images/example5.png)
 
 --- /print-only ---
