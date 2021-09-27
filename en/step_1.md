@@ -25,6 +25,7 @@ Look at these examples. Think about how the players and obstacles have been made
 What happens if you hit an obstacle? Does it get harder as you play?
 
 <div style="display: flex; flex-wrap: wrap">
+<div style="flex-basis: 175px; flex-grow: 1">  
 
 **Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
@@ -51,6 +52,7 @@ What happens if you hit an obstacle? Does it get harder as you play?
 <iframe src="https://trinket.io/embed/python/70da6c454d?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
+</div>
 </div>
 
 --- /task ---
