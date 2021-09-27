@@ -24,7 +24,7 @@ level = 1
 
 This code uses the `height` and the `frame_count` to increase the `level` variable every time the player finishes a screen, then prints out the new level for the player.
 
-**Choose:** This code limits the level to 5, so it doesn't get too hard to play. There's no reason your game has to use 5, but you should choose a limt. Humans can only move so fast!
+**Choose:** This code limits the levels to five, so it doesn't get too hard to play. There's no reason your game has to use five, but you should choose a limit. Humans can only move so fast!
 
 --- code ---
 ---
@@ -34,11 +34,11 @@ line_numbers: false
 ---
 def draw_obstacles():
   
-  global level # use the global level
+  global level #Use the global level
   
   if frame_count % height == height - 1 and level < 5:
     level += 1
-    print('You reached level', level)
+    print('You have reached level', level)
 --- /code ---
 
 --- /task ---
@@ -47,7 +47,7 @@ The two main options for increasing difficulty are to make the game move faster,
 
 --- task ---
 
-The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the y-coordinate during obstacle generation.
+The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
 
 --- code ---
 ---
@@ -58,7 +58,7 @@ line_numbers: false
   for i in range(6):
     ob_x = randint(0, height)
     ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height # wrap around
+    ob_y %= height #Wrap around
     text('🌵', ob_x, ob_y)
 --- /code ---
 
@@ -78,7 +78,7 @@ The longer a player lasts without colliding with an obstacle, the better they're
 
 --- task ---
 
-Create a `global` `score` variable to track the player's score. Set it to `10` so players start a new game without any points.
+Create a global `score` variable to track the player's score. Set it to `0` so players start a new game without any points.
 
 --- code ---
 ---
@@ -115,7 +115,7 @@ global score
 
 --- task ---
 
-Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Using p5's `text()` function to display it as text on the game screen instead.
+Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Use the p5 `text()` function to display it as text on the game screen instead.
 
 <mark>Python string concat ingredient — inc casting </mark>
 
