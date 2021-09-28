@@ -143,6 +143,8 @@ def draw_obstacles():
 
 --- /collapse ---
 
+[[[processing-python-text]]]
+
 [[[generic-theory-simple-colours]]]
 
 [[[processing-python-ellipse]]]
