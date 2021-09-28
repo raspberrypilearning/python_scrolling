@@ -14,44 +14,62 @@ Have fun!
 legend: Question 1 of 3
 ---
 
-Which of these functions accepts the player's score as a parameter, and prints out a message if the score is over 10000?
+You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+
+```python
+score = 5000
+lives = 2
+
+if score >= 5000 and lives >= 3:
+  print('Great flying!')
+
+elif score >= 5000:
+  print('Doing well!')
+  if lives > 1:
+    print('Keep going!')
+  else:
+    print('But be careful!')
+
+elif lives > 1:
+  print('Push harder!')
+
+else:
+  print('Head for base!')
+```
 
 --- choices ---
 
-- (x) ```python
-def score_message(score):
-  if score > 10000:
-    print('⭐️⭐️⭐️⭐️')
+- ( ) 
 ```
-
+Great flying!
+```
   --- feedback ---
-Correct! This function accepts `score` as a parameter and tests whether it is strictly over 10000 before printing a congratulatory message.
+While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
   --- /feedback ---
 
-- ( ) ```python
-def score_message():
-  if score < 10000:
-    print('⭐️⭐️⭐️⭐️')
+- (x) 
 ```
-
-  --- feedback ---
-
-  --- /feedback ---
-
-- ( ) ```python
-def score_message(score):
-  if score > 10000:
-    print('⭐️⭐️⭐️⭐️')
+Doing well!
+Keep going!
 ```
-
   --- feedback ---
-
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
   --- /feedback ---
 
 - ( ) 
-
+```
+Doing well!
+```
   --- feedback ---
+Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+  --- /feedback ---
 
+- ( ) 
+```
+Push harder!
+```
+  --- feedback ---
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition which is true.
   --- /feedback ---
 
 --- /choices ---
