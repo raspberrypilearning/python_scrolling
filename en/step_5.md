@@ -15,6 +15,7 @@ language: python
 filename: main.py
 line_numbers: false
 ---
+# Include global variables here
 level = 1
 --- /code ---
 
@@ -43,9 +44,15 @@ def draw_obstacles():
 
 --- /task ---
 
+--- task ---
+
+
 The two main options for increasing difficulty are to make the game move faster, and to increase the number of obstacles.
 
---- task ---
+--- collapse ---
+---
+title: Speed your game up
+---
 
 The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
 
@@ -62,13 +69,18 @@ line_numbers: false
     text('🌵', ob_x, ob_y)
 --- /code ---
 
---- /task ---
+--- /collapse ---
 
---- task ---
+--- collapse ---
+---
+title: Add more obstacles
+---
 
 Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
 
 **Tip:** Of course, you can always use `level * 2`, or even larger multiples, if you want to make your game harder.
+
+--- /collapse ---
 
 --- /task ---
 
@@ -86,6 +98,7 @@ language: python
 filename: main.py
 line_numbers: false
 ---
+# Include global variables here
 score = 0
 --- /code ---
 
@@ -115,9 +128,11 @@ global score
 
 --- task ---
 
-Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Use the p5 `text()` function to display it as text on the game screen instead.
+Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Use the p5 `text()` function inside your `draw()` function, to display it as text on the game screen instead.
 
 [[[processing-python-text]]]
+
+You can use the `+` operator to combine two or more strings if you want to give a heading like 'score' or 'points'.
 
 [[[generic-python-simple-string-formating]]]
 
@@ -136,5 +151,44 @@ You can use the `level` variable to signal 'Game over' by setting it to 0 — a 
 --- task ---
 
 Create an `if` statement in `draw()` that tests whether `level > 0` before calling any of the functions — like `background()`, `draw_obstacles()`, and `draw_player()` — that update the game. Because these functions are not called, the entire game seems to end, even though your program is still running.
+
+--- /task ---
+
+--- task ---
+
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+
+--- collapse ---
+---
+title: The score doesn't display
+---
+
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: The game doesn't stop after a collision
+---
+
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: The game doesn't get faster
+---
+
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: New obstacles don't appear
+---
+
+Maybe the exact same spot?
+
+--- /collapse ---
 
 --- /task ---

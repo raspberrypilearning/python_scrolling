@@ -23,7 +23,7 @@ lives = 2
 if score >= 5000 and lives >= 3:
   print('Great flying!')
 
-elif score >= 5000:
+if score >= 5000: 
   print('Doing well!')
   if lives > 1:
     print('Keep going!')
