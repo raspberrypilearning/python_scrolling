@@ -64,6 +64,10 @@ What happens if you hit an obstacle? Does it get harder as you play?
 
 You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
-![Images of different project examples.](images/showcase_projects.png)
+![Dodge asteroids project example](images/example1.png){:width="300px"}
+![Skiing cat project example](images/example2.png){:width="300px"}
+![Avoid the germs project example](images/example3.png){:width="300px"}
+![Don't pop project example](images/example4.png){:width="300px"}
+![Clean car project example](images/example5.png){:width="300px"}
 
 --- /print-only ---
