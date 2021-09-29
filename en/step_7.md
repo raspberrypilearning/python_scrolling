@@ -5,7 +5,7 @@
 If you have time you can upgrade your project.
 </div>
 <div>
-![.](images/example1.png)
+![Example sace project with lives.](images/example1.png){:width="300px"}
 </div>
 </div>
 

@@ -5,7 +5,7 @@
 Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
 </div>
 <div>
-![.](images/score.png)
+![Example project with a text score on the screen.](images/score.png){:width="300px"}
 </div>
 </div>
 

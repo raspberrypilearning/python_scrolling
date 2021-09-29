@@ -12,7 +12,7 @@ Endless runner games often end when the player collides with an obstacle.
 Now you can set up your player to react to an obstacle collision.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Checking for overlapping objects in a game or app is called <span style="color: #0faeb0">**collision detection**</span>.</p>
+Checking for overlapping objects in a game or app is called <span style="color: #0faeb0">**collision detection**</span>. Some games use complex maths to calculate overlaps.</p>
 
 --- task ---
 
