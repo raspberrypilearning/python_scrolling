@@ -5,33 +5,35 @@
 legend: Question 3 of 3
 ---
 
-You have created a game with a player that can move around, procedurally generated obstacles, increasing levels of difficulty, and a scoring system. If you wanted to let players save their game, which of the following is the smallest set of values you could store to recreate the game as they left it? This might not matter much in a game this size, but imagine you had millions of players, with thousands of pieces of information related to each of their characters — learning to save space like this is important!
+You made a game that you're really pleased with and shared it. A player has shared some polite feedback with some changes they would like to see. 
+
+What would be the best way to react to their suggestions?
 
 --- choices ---
 
-- ( ) The value of `frame_count`.
+- ( ) Immediately make all the changes they have suggested.
 
   --- feedback ---
-`frame_count` is the key to a lot of the game's state at any given moment. A lot of the other numbers can be calculated from it, but not quite all of them.
+It's great to get feedback, but you shouldn't change your game just to keep one player happy, maybe other players might give different feedback. 
   --- /feedback ---
 
-- ( ) The values of `frame_count`, `level`, `score`, and the player's `x` and `y` coordinates.
+- ( ) Ignore the suggestions because you know best.
 
   --- feedback ---
-This is all the information you need to re-create the game at a given moment, but you can recreate some of these values from some of the others.
+Not quite. You should certainly ignore or report any feedback that is unkind but if a player has given constructive feedback then you should consider it.
   --- /feedback ---
 
-- (x) The value of `frame_count` and the player's `x` and `y` coordinates. 
+- (x) Consider their feedback with other feedback and decide how to improve your game. 
 
   --- feedback ---
-Correct! You can calculate everything you need to recreate the game state using `frame_count` — from which you can calculate `level` and `score` — and the player's `x` and `y` coordinates.
+Correct! You should consider any feedback you get and make decisions to improve the game for all players. 
   --- /feedback ---
 
-- ( ) The values of `frame_count`, `score`, and the player's `x` and `y` coordinates.
+- ( ) Feel really sad that the player didn't think your game was perfect.
 
 
   --- feedback ---
-You're close: you can calculate `level` from `score`, so you don't need to store it. However, you can calculate one more of these variables instead of storing it, too.
+No! You shouldn't feel sad if someone suggests improvements to your game. Polite feedback is really useful and can help improve your game. You should be pleased that they were interested enough in your game to give feedback.
   --- /feedback ---
 
 --- /choices ---

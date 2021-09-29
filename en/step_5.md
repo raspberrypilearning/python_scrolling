@@ -1,6 +1,13 @@
 ## Speed up!
 
-Most endless runner games increase the difficulty of the game as the player progresses, and give them a score. 
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
+Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
+</div>
+<div>
+![.](images/score.png)
+</div>
+</div>
 
 ### Add difficulty levels
 Creating clear difficulty levels will make it easier for your player to understand what is happening.
