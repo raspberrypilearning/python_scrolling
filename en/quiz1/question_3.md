@@ -5,7 +5,7 @@
 legend: Question 3 of 3
 ---
 
-Your game is a hit and someone has just published a video reviewing it. While they enjoyed it, they describe some changes they'd like to see.
+You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
 
 What would be the best way to react to their suggestions?
 
