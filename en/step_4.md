@@ -11,8 +11,14 @@ Endless runner games often end when the player collides with an obstacle.
 
 Now you can set up your player to react to an obstacle collision.
 
-<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Checking for overlapping objects in a game or app is called <span style="color: #0faeb0">**collision detection**</span>. Some games use complex maths to calculate overlaps.</p>
+<p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
+<span style="color: #0faeb0">**Collision detection**</span> is determining when two objects created inside a computer simulation — whether that's a game, and animation, or something else — are touching. There are several ways to do this, for example: 
+  - checking if the colours appearing at the location of an object are the colours of that object, or a different one
+  - keeping track of the shape of every object, and checking if those shapes overlap
+  - creating a set of boundary points, or lines, around an object and checking if they come into contact with any other 'collidable' objects
+When such a collision is detected, the program can react in some way. In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a powerup).
+</p>
+
 
 --- task ---
 
@@ -35,7 +41,7 @@ collide = get(mouse_x, player_y)
 
 Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
 
-Move your code to draw your obstacle inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision. 
+Move your code to draw your player inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision. 
 
 **Choose:** How should your player react? You could:
 + Change the image to a `crashed` version

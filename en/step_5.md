@@ -61,7 +61,7 @@ The two main options for increasing difficulty are to make the game move faster,
 title: Speed your game up
 ---
 
-The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
+The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation. Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead. You might expect it to be more than this — since `799 * 3` is notably bigger than `799 * 2` — but, beacuse `level` increases only a single frame before `frame_count` is an even multiple of `height`, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are effectively instantly hidden by `ob_y %= height`. This leaves only the `level` extra pixels in eachs step.
 
 --- code ---
 ---
