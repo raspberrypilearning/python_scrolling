@@ -5,7 +5,7 @@
 Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
-![.](images/obstacles.png)
+![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
 </div>
 </div>
 

@@ -5,7 +5,7 @@
 Endless runner games often end when the player collides with an obstacle.
 </div>
 <div>
-![Image of finished project.](images/collision-detect.gif){:width="300px"}
+![Image of finished step.](images/collision.png){:width="300px"}
 </div>
 </div>
 

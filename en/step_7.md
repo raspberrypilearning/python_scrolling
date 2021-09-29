@@ -1,6 +1,13 @@
-## Upgrade your project
+## Upgrade your project 
 
-If you have time you can upgrade your project. 
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
+If you have time you can upgrade your project.
+</div>
+<div>
+![Example sace project with lives.](images/example1.png){:width="300px"}
+</div>
+</div>
 
 Here are some ideas you could try:
 
