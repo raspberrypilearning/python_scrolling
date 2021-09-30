@@ -1,10 +1,10 @@
 ## Reflection
 
-Well done, you made a game!  Now it's time to reflect - reflecting is an important part of learning because it helps make new connections in your brain.
+Well done, you made a game!  Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
 
-Answer the three questions below to reflect on what you've learned.
+Answer the three questions below to reflect on what you've learnt.
 
-After each question, press submit. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
 
 Have fun!
 
@@ -69,7 +69,7 @@ Close, but `score >= 5000` isn't the only condition the program would find true 
 Push harder!
 ```
   --- feedback ---
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition which is true.
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
   --- /feedback ---
 
 --- /choices ---
