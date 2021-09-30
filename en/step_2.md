@@ -32,7 +32,7 @@ language: python
 filename: main.py - setup()
 
 ---
-def setup():
+def setup():    
     size(400, 400)
 
 --- /code ---
@@ -50,8 +50,8 @@ This is the colour that it is safe for the player to be on and you will use this
 language: python
 filename: main.py - draw()
 ---
-def draw():
-    safe = color(200, 100, 0) #Add the colour of your theme
+def draw():    
+    safe = color(200, 100, 0) #Add the colour of your theme   
     background(safe)  
 
 --- /code ---
@@ -80,7 +80,7 @@ Define a `draw_player()` function and create a `player_y` position for the fixed
 language: python
 filename: main.py - draw_player()
 ---
-def draw_player():
+def draw_player():    
   player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- /code ---
@@ -93,10 +93,10 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw():
-    safe = color(200, 100, 0) #Your chosen colour
-    background(safe)  
-    draw_player()
+def draw():    
+    safe = color(200, 100, 0) #Your chosen colour    
+    background(safe)    
+    draw_player()    
     
 --- /code ---
 
@@ -135,8 +135,8 @@ language: python
 filename: main.py - setup()
 
 ---
-def setup():
-    size(400, 400)
+def setup():   
+    size(400, 400)    
     player = load_image('skiing.png') #Load your image
 
 --- /code ---
@@ -150,10 +150,10 @@ filename: main.py - draw_player()
 
 ---
 
-def draw_player():
-  player_y = int(height * 0.8) #Positioned towards the screen bottom
+def draw_player():    
+  player_y = int(height * 0.8) #Positioned towards the screen bottom    
   
-  global player
+  global player    
 
   image(player, mouse_x, player_y, 30, 30)
 
@@ -176,10 +176,10 @@ Here's an example:
 language: python
 filename: main.py - setup()
 ---
-def setup():
-  size(400, 400)
-  text_size(40) #Controls the size of the emoji 
-  text_align(CENTER, TOP) #Position around the centre
+def setup():    
+  size(400, 400)     
+  text_size(40) #Controls the size of the emoji     
+  text_align(CENTER, TOP) #Position around the centre     
 --- /code ---
 
 --- code ---
@@ -187,9 +187,9 @@ def setup():
 language: python
 filename: main.py - draw_player()
 ---
-def draw_player():
-  player_y = int(height * 0.8)
-  text('🎈', mouse_x, player_y)
+def draw_player():     
+  player_y = int(height * 0.8)    
+  text('🎈', mouse_x, player_y)     
 --- /code ---
 
 --- /collapse ---
@@ -225,23 +225,23 @@ filename: main.py - draw_player()
 
 ---
 
-def draw_player():
-  player_y = int(height * 0.8)
-  noStroke()
-  #Face
-  fill(0, 200, 100)
+def draw_player():    
+  player_y = int(height * 0.8)    
+  noStroke()    
+  #Face    
+  fill(0, 200, 100)    
   ellipse(mouse_x, player_y, 60, 60)
   
-  #Eyes
-  fill(0, 100, 200)
-  ellipse(mouse_x - 10, player_y - 10, 20, 20)
-  ellipse(mouse_x + 10, player_y - 10, 20, 20)
-  fill(0)
-  ellipse(mouse_x - 10, player_y - 10, 10, 10)
-  ellipse(mouse_x + 10, player_y - 10, 10, 10)
-  fill(255)
-  ellipse(mouse_x - 12, player_y - 12, 5, 5)
-  ellipse(mouse_x + 12, player_y - 12, 5, 5)
+  #Eyes    
+  fill(0, 100, 200)    
+  ellipse(mouse_x - 10, player_y - 10, 20, 20)    
+  ellipse(mouse_x + 10, player_y - 10, 20, 20)    
+  fill(0)    
+  ellipse(mouse_x - 10, player_y - 10, 10, 10)     
+  ellipse(mouse_x + 10, player_y - 10, 10, 10)     
+  fill(255)    
+  ellipse(mouse_x - 12, player_y - 12, 5, 5)    
+  ellipse(mouse_x + 12, player_y - 12, 5, 5)    
 
 --- /code ---
 
@@ -266,7 +266,7 @@ Does it move like you expect?
 title: I can't see the player
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you use to draw the player — make sure they are inside the canvas you created with `size()`.
+Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
 --- /collapse ---
 
 --- collapse ---
