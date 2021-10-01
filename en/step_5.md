@@ -63,7 +63,11 @@ title: Speed your game up
 
 The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation. 
 
-Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead. You might expect it to be more than this — since `799 * 3` is notably bigger than `799 * 2` — but, because `level` increases only a single frame before `frame_count` is an even multiple of `height`, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are instantly hidden by `ob_y %= height`. This leaves only the `level` extra pixels in each step.
+Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead. 
+
+Looking at the code, you might expect the speed to increase by more than `level` pixels. 
+For example, at the point just before your `level` increases, the `frame_count` is `799` — as the `level` increases one frame before the `frame_count` is an even multiple of `height` (set at `400` pixels) — and `799 * 3` is notably bigger than `799 * 2`. However, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are hidden by `ob_y %= height`. This leaves only the `level` extra pixels in each step.
+
 
 --- code ---
 ---
