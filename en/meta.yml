@@ -3,9 +3,9 @@ hero_image: images/banner.png
 description: Build an endless runner game where your character must avoid colliding with obstacles
 
 version: 4
-listed: false
-copyedit: false
-last_tested: "2021-03-26"
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
 steps:
   - title: Introduction
   - title: Set the theme
