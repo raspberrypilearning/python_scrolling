@@ -5,11 +5,14 @@
 Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
 </div>
 <div>
+
 ![Example project with a text score on the screen.](images/score.png){:width="300px"}
+
 </div>
 </div>
 
 ### Add difficulty levels
+
 Creating clear difficulty levels will make it easier for your player to understand what is happening.
 
 --- task ---
@@ -22,8 +25,10 @@ language: python
 filename: main.py
 line_numbers: false
 ---
+
 #Include global variables here
 level = 1
+
 --- /code ---
 
 --- /task ---
@@ -40,6 +45,7 @@ language: python
 filename: main.py — draw_obstacles()
 line_numbers: false
 ---
+
 def draw_obstacles():
   
   global level #Use the global level
@@ -47,6 +53,7 @@ def draw_obstacles():
   if frame_count % height == height - 1 and level < 5:
     level += 1
     print('You have reached level', level)
+
 --- /code ---
 
 --- /task ---
@@ -75,11 +82,13 @@ language: python
 filename: main.py — draw_obstacles()
 line_numbers: false
 ---
+
   for i in range(6):
     ob_x = randint(0, height)
     ob_y = randint(0, height) + (frame_count * level)
     ob_y %= height #Wrap around
     text('🌵', ob_x, ob_y)
+
 --- /code ---
 
 --- /collapse ---
@@ -111,8 +120,10 @@ language: python
 filename: main.py
 line_numbers: false
 ---
+
 #Include global variables here
 score = 0
+
 --- /code ---
 
 --- /task ---
@@ -128,6 +139,7 @@ You can increase your player's score for every frame where they have not collide
 language: python
 filename: main.py — draw_player()
 ---
+
 global score
 
   if collide == safe:
@@ -135,6 +147,7 @@ global score
     score += level
   else:
     text('💥', mouse_x, player_y)
+
 --- /code ---
 
 --- /task ---
@@ -189,12 +202,14 @@ It should look something like this:
 language: python
 filename: main.py — draw()
 ---
+
   if level > 0:
     background(safe) 
     fill(255)
     text('Score: ' + str(score), width/2, 20)
     draw_obstacles()
     draw_player()
+
 --- /code ---
 
 --- /collapse ---
@@ -214,12 +229,14 @@ If your game is correctly detecting collisons, then check that you have properly
 language: python
 filename: main.py — draw()
 ---
+
   if level > 0:
     background(safe) 
     fill(255)
     text('Score: ' + str(score), width/2, 20)
     draw_obstacles()
     draw_player()
+
 --- /code ---
 
 Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. For example:
@@ -229,12 +246,14 @@ Finally, if both of those are working correctly, your game may not be setting `l
 language: python
 filename: main.py — draw_player()
 ---
+
   if collide == safe:
     text('🎈', mouse_x, player_y)
     score += level
   else:
     text('💥', mouse_x, player_y)
     level = 0
+
 --- /code ---
 
 --- /collapse ---
@@ -254,11 +273,13 @@ language: python
 filename: main.py — draw_obstacles()
 line_numbers: false
 ---
+
   for i in range(6 + level):
     ob_x = randint(0, height)
     ob_y = randint(0, height) + (frame_count * level)
     ob_y %= height #Wrap around
     text('🌵', ob_x, ob_y)
+
 --- /code ---
 
 --- /collapse ---
@@ -278,11 +299,13 @@ language: python
 filename: main.py — draw_obstacles()
 line_numbers: false
 ---
+
   for i in range(6 + level):
     ob_x = randint(0, height)
     ob_y = randint(0, height) + (frame_count * level)
     ob_y %= height #Wrap around
     text('🌵', ob_x, ob_y)
+    
 --- /code ---
 
 If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
