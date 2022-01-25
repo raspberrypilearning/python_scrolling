@@ -9,7 +9,6 @@ After each question, press **submit**. You will be guided towards the correct an
 Have fun!
 
 --- question ---
-
 ---
 legend: Question 1 of 3
 ---
@@ -43,26 +42,42 @@ else:
 ```
 Great flying!
 ```
-  --- feedback --- While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false. --- /feedback ---
+  --- feedback ---
+
+While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+
+  --- /feedback ---
 
 - (x)
 ```
 Doing well!
 Keep going!
 ```
-  --- feedback --- This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement. --- /feedback ---
+  --- feedback ---
+
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+
+  --- /feedback ---
 
 - ( )
 ```
 Doing well!
 ```
-  --- feedback --- Close, but `score >= 5000` isn't the only condition the program would find true as it ran. --- /feedback ---
+  --- feedback ---
+
+Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+
+  --- /feedback ---
 
 - ( )
 ```
 Push harder!
 ```
-  --- feedback --- While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true. --- /feedback ---
+  --- feedback ---
+
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+
+  --- /feedback ---
 
 --- /choices ---
 
