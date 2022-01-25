@@ -74,6 +74,7 @@ Now choose the character that is playing the game and avoiding the obstacles. Is
 The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`. 
 
 --- task ---
+
 It's a good idea to organise the code for drawing the player character into a function.
 
 Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player: 
