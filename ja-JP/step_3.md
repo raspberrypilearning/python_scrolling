@@ -5,7 +5,9 @@
 Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
+
 ![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
+
 </div>
 </div>
 
@@ -15,13 +17,16 @@ You can make obstacles in the same ways that you made your player. How do the ob
 
 You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
 
---- task --- Define a `draw_obstacles()` function:
+--- task ---
+
+Define a `draw_obstacles()` function:
 
 --- code ---
 ---
 language: python
 filename: main.py - draw_obstacles()
 ---
+
 def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Replace with your obstacle
 
 
@@ -50,7 +55,6 @@ draw_obstacles() #Before drawing the player draw_player()
 + Drawn using a series of shapes
 
 --- collapse ---
-
 ---
 title: Use a starter image
 ---
@@ -69,9 +73,10 @@ Load the image into the `setup()` function.
 
 --- code ---
 ---
-language: python filename: main.py - setup()
-
+language: python
+filename: main.py - setup()
 ---
+
 def setup(): size(400, 400) player = load_image('skiing.png') #Load your image obstacle = load_image('rocket.png') #Load your image
 
 --- /code ---
@@ -80,8 +85,8 @@ Call the `image()` and set it as global in the `draw_obstacles()` function.
 
 --- code ---
 ---
-language: python filename: main.py - draw_obstacles()
-
+language: python
+filename: main.py - draw_obstacles()
 ---
 
 def draw_obstacles(): ob_x = width/2 ob_y = height/2
@@ -95,7 +100,6 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 --- /collapse ---
 
 --- collapse ---
-
 ---
 title: Use emoji characters
 ---
@@ -109,13 +113,17 @@ Here's an example:
 language: python
 filename: main.py - setup()
 ---
-def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre --- /code ---
+
+def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre
+
+--- /code ---
 
 --- code ---
 ---
 language: python
 filename: main.py - draw_obstacles()
 ---
+
 def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 --- /code ---
@@ -139,7 +147,6 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 **Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
 
 --- collapse ---
-
 ---
 title: Draw an obstacle using multiple shapes
 ---
@@ -148,8 +155,8 @@ title: Draw an obstacle using multiple shapes
 
 --- code ---
 ---
-language: python filename: main.py - draw_obstacles()
-
+language: python
+filename: main.py - draw_obstacles()
 ---
 
 def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke() fill(0,255,0) #Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # brown for trun rect(ob_x + 15, ob_y + 70, 10, 10)
@@ -162,7 +169,9 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 ### Get your obstacle moving
 
---- task --- Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
+--- task ---
+
+Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
 
 The p5 `frame_count` variable starts counting the frames when you click run.
 
@@ -228,7 +237,9 @@ Testing your program has the potential to induce seizures for people with photos
 
 --- /collapse ---
 
---- task --- **Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom.
+--- task ---
+
+**Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom.
 
 Change your code until you are happy with the obstacles you have. You can:
 
@@ -258,9 +269,10 @@ For example:
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
-
+language: python
+filename: main.py — draw_obstacles()
 ---
+
 def draw_obstacles():
 
   seed(12345678)
