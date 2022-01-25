@@ -6,7 +6,9 @@ Set the theme of your game and create a player character that follows the mouse 
 
 </div>
 <div>
+
 ![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+
 </div>
 </div>
 
@@ -28,9 +30,10 @@ Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank
 
 --- code ---
 ---
-language: python filename: main.py - setup()
-
+language: python
+filename: main.py - setup()
 ---
+
 def setup():    
 size(400, 400)
 
@@ -49,6 +52,7 @@ This is the colour that it is safe for the player to be on and you will use this
 language: python
 filename: main.py - draw()
 ---
+
 def draw():    
 safe = color(200, 100, 0) #Add the colour of your theme   
 background(safe)
@@ -78,6 +82,7 @@ Define a `draw_player()` function and create a `player_y` position for the fixed
 language: python
 filename: main.py - draw_player()
 ---
+
 def draw_player():    
 player_y = int(height * 0.8) #Positioned towards the screen bottom
 
@@ -110,7 +115,6 @@ Next you will add code to the `draw_player()` function to draw your shape. You m
 + Drawn using a series of shapes
 
 --- collapse ---
-
 ---
 title: Use a starter image
 ---
@@ -129,9 +133,10 @@ Load the image into the `setup()` function
 
 --- code ---
 ---
-language: python filename: main.py - setup()
-
+language: python
+filename: main.py - setup()
 ---
+
 def setup():   
 size(400, 400)    
 player = load_image('skiing.png') #Load your image
@@ -142,8 +147,8 @@ Call the `image()` and set it as global in the `draw_player()` function.
 
 --- code ---
 ---
-language: python filename: main.py - draw_player()
-
+language: python
+filename: main.py - draw_player()
 ---
 
 def draw_player():    
@@ -158,7 +163,6 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 --- /collapse ---
 
 --- collapse ---
-
 ---
 title: Use emoji characters
 ---
@@ -172,10 +176,12 @@ Here's an example:
 language: python
 filename: main.py - setup()
 ---
+
 def setup():    
 size(400, 400)     
 text_size(40) #Controls the size of the emoji     
-text_align(CENTER, TOP) #Position around the centre     
+text_align(CENTER, TOP) #Position around the centre
+
 --- /code ---
 
 --- code ---
@@ -183,9 +189,11 @@ text_align(CENTER, TOP) #Position around the centre
 language: python
 filename: main.py - draw_player()
 ---
+
 def draw_player():     
 player_y = int(height * 0.8)    
-text('🎈', mouse_x, player_y)     
+text('🎈', mouse_x, player_y)
+
 --- /code ---
 
 --- /collapse ---
@@ -207,7 +215,6 @@ text('🎈', mouse_x, player_y)
 **Tip:** You can use several simple shapes in the same function to create a more complex player.
 
 --- collapse ---
-
 ---
 title: Draw a player using multiple shapes
 ---
@@ -216,8 +223,8 @@ title: Draw a player using multiple shapes
 
 --- code ---
 ---
-language: python filename: main.py - draw_player()
-
+language: python
+filename: main.py - draw_player()
 ---
 
 def draw_player():    
@@ -261,7 +268,9 @@ Does it move like you expect?
 title: I can't see the player
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`. --- /collapse ---
+Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+
+--- /collapse ---
 
 --- collapse ---
 ---
