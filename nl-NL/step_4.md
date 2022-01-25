@@ -5,7 +5,9 @@
 Endless runner games often end when the player collides with an obstacle.
 </div>
 <div>
+
 ![Image of finished step.](images/collision.png){:width="300px"}
+
 </div>
 </div>
 
@@ -25,8 +27,8 @@ In your `draw_player()` function, create a variable called `collide` and set it 
 
 --- code ---
 ---
-language: python filename: main.py - draw_player()
-
+language: python
+filename: main.py - draw_player()
 ---
 
 collide = get(mouse_x, player_y)
@@ -47,7 +49,6 @@ Move your code to draw your player inside your `if collide == safe` condition an
 + You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image
 
 --- collapse ---
-
 ---
 title: Change the image
 ---
@@ -58,9 +59,10 @@ Here's an example:
 
 --- code ---
 ---
-language: python filename: main.py - draw_player()
-
+language: python
+filename: main.py - draw_player()
 ---
+
 def draw_player(): player_y = int(height * 0.8)
 
   collide = get(mouse_x, player_y)
@@ -72,7 +74,6 @@ def draw_player(): player_y = int(height * 0.8)
 --- /collapse ---
 
 --- collapse ---
-
 ---
 title: Use emoji characters
 ---
@@ -86,13 +87,17 @@ Here's an example:
 language: python
 filename: main.py - setup()
 ---
-def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre --- /code ---
+
+def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre
+
+--- /code ---
 
 --- code ---
 ---
 language: python
 filename: main.py - draw_obstacles()
 ---
+
 def draw_player(): if collide == safe: #On background text('🎈', mouse_x, player_y) else: #Collided text('💥', mouse_x, player_y)
 
 --- /code ---
@@ -116,7 +121,6 @@ def draw_player(): if collide == safe: #On background text('🎈', mouse_x, play
 **Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
-
 ---
 title: There is no collision when the player reaches an obstacle
 ---
@@ -146,10 +150,11 @@ You can also print a circle around the point you are checking and adjust the poi
 
 --- /task ---
 
---- task --- **Optional:** At the moment, you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom or left- and right-most edges.
+--- task ---
+
+**Optional:** At the moment, you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom or left- and right-most edges.
 
 --- collapse ---
-
 ---
 title: Collision detection with multiple pixels
 ---
