@@ -1,81 +1,81 @@
-## Reflection
+## Αναστοχασμός
 
-Well done, you made a game!  Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+Μπράβο, έφτιαξες ένα παιχνίδι!  Τώρα, ήρθε η ώρα να εξετάσεις τις νέες γνώσεις- ο αναστοχασμός είναι σημαντικό μέρος της μάθησης, επειδή βοηθά στη δημιουργία νέων συνδέσεων στον εγκέφαλό σου.
 
-Answer the three questions below to reflect on what you've learnt.
+Απάντησε στις τρεις ερωτήσεις παρακάτω για να διαπιστώσεις τι έμαθες.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Μετά από κάθε ερώτηση, πάτα **υποβολή**. Θα οδηγηθείς στη σωστή απάντηση. Μπορείς να επαναλάβεις αυτήν τη δραστηριότητα όσες φορές θέλεις.
 
-Have fun!
+Καλή διασκέδαση!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Ερώτηση 1 από 3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+Χρησιμοποίησες πολλές προτάσεις `if` για να ελέγξεις τη συμπεριφορά του παιχνιδιού σου. Μερικές από αυτές μπορεί να είχαν πιο περίπλοκες συνθήκες, χρησιμοποιώντας το `and` για να κάνουν πολλαπλούς ελέγχους ταυτόχρονα. Αν εκτελούσες το ακόλουθο κομμάτι κώδικα υπό συνθήκη, τι περιμένεις να προκύψει στην έξοδο;
 
 ```python
 score = 5000
 lives = 2
 
 if score >= 5000 and lives >= 3:
-  print('Great flying!')
+  print('Υπέροχη πτήση!')
 
 if score >= 5000: 
-  print('Doing well!')
+  print('Καλά τα πας!')
   if lives > 1:
-    print('Keep going!')
+    print('Συνέχισε!')
   else:
-    print('But be careful!')
+    print('Αλλά πρόσεχε!')
 
 elif lives > 1:
-  print('Push harder!')
+  print('Προσπάθησε πιο πολύ!')
 
 else:
-  print('Head for base!')
+  print('Κατευθύνσου προς τη βάση!')
 ```
 
 --- choices ---
 
 - ( )
 ```
-Great flying!
+Υπέροχη πτήση!
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+Ενώ η συνθήκη `score >= 5000` είναι αληθής, σε μια συνθήκη `and` και τα δύο μέρη πρέπει να είναι αληθή, και η συνθήκη `lives >= 3` είναι ψευδής.
 
   --- /feedback ---
 
 - (x)
 ```
-Doing well!
-Keep going!
+Τα πας καλά!
+Συνέχισε!
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+Αυτό είναι σωστό — η συνθήκη `score >= 5000` είναι αληθής, και αληθής επίσης είναι η `lives > 1` στην εμφωλευμένη εντολή `if`.
 
   --- /feedback ---
 
 - ( )
 ```
-Doing well!
+Τα πας καλά!
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+Σχεδόν, αλλά η `score >= 5000` δεν είναι η μοναδική συνθήκη που θα έβρισκε αληθή το πρόγραμμα κατά την εκτέλεσή του.
 
   --- /feedback ---
 
 - ( )
 ```
-Push harder!
+Προσπάθησε πιο πολύ!
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+Ενώ η συνθήκη `lives > 1` είναι αληθής, μόνο ο κώδικας μέσα στην πρώτη αληθή συνθήκη σε μια εντολή `if`/`elif`/`else` εκτελείται και η `lives > 1` δεν είναι η πρώτη συνθήκη που είναι αληθής.
 
   --- /feedback ---
 
