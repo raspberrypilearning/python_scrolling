@@ -1,19 +1,19 @@
-## Reflection
+## تفكير
 
-Well done, you made a game!  Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+أحسنت صنع لعبة!  الآن ، حان وقت التفكير - التفكير جزء مهم من التعلم ، لأنه يساعد في إنشاء روابط جديدة في عقلك.
 
-Answer the three questions below to reflect on what you've learnt.
+أجب عن الأسئلة الثلاثة أدناه للتفكر فيما تعلمته.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+بعد كل سؤال ، اضغط على**submit**. سيتم توجيهك نحو الإجابة الصحيحة. يمكنك القيام بهذا النشاط عدة مرات كما تريد.
 
-Have fun!
+إستمتع!
 
 --- question ---
 ---
-legend: Question 1 of 3
+القائمة: السؤال 1 من 3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+لقد استخدمت الكثير من عبارات `if`للتحكم في سلوك لعبتك. بعض العبارات قد يتم استخدامها في حالات أكثر تعقيدًا ، مثل استخدام `and` لإجراء اختبارات متعددة في وقت واحد. إذا قمت بتشغيل الجزء التالي من الكود الشرطي، فماذا تتوقع أن يكون الناتج؟
 
 ```python
 score = 5000
@@ -50,8 +50,8 @@ While `score >= 5000` is true, for an `and` condtion both parts must be true, an
 
 - (x)
 ```
-Doing well!
-Keep going!
+أحسنت صنعاً!
+واصل التقدم!
 ```
   --- feedback ---
 
@@ -61,7 +61,7 @@ This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested
 
 - ( )
 ```
-Doing well!
+أحسنت صنعاً!
 ```
   --- feedback ---
 
