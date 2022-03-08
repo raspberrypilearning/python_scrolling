@@ -1,79 +1,79 @@
 #!/bin/python3
 
-# Import library code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint, seed
 
-level = 1
+niveau = 1
 score = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
+# La fonction dessine_obstacle vient ici
+def dessine_obstacles():
   
-  global level
+  global niveau
   
   seed(12345678)
   
-  if frame_count % height == height - 1 and level < 5:
-    level += 1
-    print('You reached level', level)
+  if frame_count % height == height - 1 and niveau < 5:
+    niveau += 1
+    print('Tu as atteint le niveau', niveau)
     
-  for i in range(6 + level):
+  for i in range(6 + niveau):
     ob_x = randint(0, height)
-    ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height # wrap around
+    ob_y = randint(0, height) + (frame_count * niveau)
+    ob_y %= height # enveloppant
     text('🌵', ob_x, ob_y)
 
     
-# The draw_player function goes here
-def draw_player():
+# La fonction dessine_joueur vient ici
+def dessine_joueur():
   
-  global score, level
+  global score, niveau
   
-  player_y = int(height * 0.8)
+  joueur_y = int(height * 0.8)
   
   no_fill()
-  #ellipse(mouse_x, player_y, 10, 10) # draw collision point
-  #ellipse(mouse_x, player_y + 40, 10, 10)
-  #ellipse(mouse_x - 12, player_y + 20, 10, 10)
-  #ellipse(mouse_x + 12, player_y + 20, 10, 10)
+  #ellipse(mouse_x, joueur_y, 10, 10) # dessine le point de collision
+  #ellipse(mouse_x, joueur_y + 40, 10, 10)
+  #ellipse(mouse_x - 12, joueur_y + 20, 10, 10)
+  #ellipse(mouse_x + 12, joueur_y + 20, 10, 10)
 
-  collide = get(mouse_x, player_y)
-  collide2 = get(mouse_x - 12, player_y + 20)
-  collide3 = get(mouse_x + 12, player_y + 20)
-  collide4 = get(mouse_x, player_y + 40)
+  collision = get(mouse_x, joueur_y)
+  collide2 = get(mouse_x - 12, joueur_y + 20)
+  collision3 = get(mouse_x + 12, joueur_y + 20)
+  collide4 = get(mouse_x, joueur_y + 40)
   
-  if mouse_x < width: # off the left of the screen
-    collide2 = safe
+  if mouse_x < width : # sur la gauche de l'écran
+    collision2 = sur
   
-  if mouse_x > width: # off the right of the screen
-    collide3 = safe
+  if mouse_x > width : # à droite de l'écran
+    collision3 = sur
     
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    text('🎈', mouse_x, player_y)
-    score += level
+  if collision == sur and collision2 == sur and collision3 == sur and collision4 == sur :
+    text('🎈', mouse_x, joueur_y)
+    score += niveau
   else:
-    text('💥', mouse_x, player_y)
-    level = 0
+    text('💥', mouse_x, joueur_y)
+    niveau = 0
     
   
-def setup():
-  # Setup your animation here
+def configuration():
+  # Configure ton animation ici
   text_size(40)
-  text_align(CENTER, TOP) # position around the centre, top
+  text_align(CENTER, TOP) # position près du centre, en haut
   size(400, 400)
   
   
-def draw():
-  # Things to do in every frame
-  global score, safe, level
-  safe = color(200, 150, 0)
+def dessin():
+  # Choses à faire dans chaque image
+  global score, sur, niveau
+  sur = color(200, 150, 0)
   
-  if level > 0:
-    background(safe) 
+  if niveau > 0:
+    background(sur) 
     fill(255)
     text('Score: ' + str(score), width/2, 20)
-    draw_obstacles()
-    draw_player()
+    dessine_obstacles()
+    dessine_joueur() 
   
 run()
