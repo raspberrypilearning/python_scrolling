@@ -27,28 +27,28 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**Η γάτα κάνει σκι**: [See inside](https://trinket.io/python/76e628bff2){:target="_blank"}
+**Η γάτα κάνει σκι**: [Δες μέσα](https://trinket.io/python/76e628bff2){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/76e628bff2?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Μην σκάσει**: [See inside](https://trinket.io/python/974800f4ef){:target="_blank"}
+**Μην σκάσει**: [Δες μέσα](https://trinket.io/python/974800f4ef){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/974800f4ef?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Απόφυγε τα μικρόβια**: [See inside](https://trinket.io/python/88e108c819){:target="_blank"}
+**Απόφυγε τα μικρόβια**: [Δες μέσα](https://trinket.io/python/88e108c819){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/88e108c819?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 
-**Καθαρό αυτοκίνητο**: [See inside](https://trinket.io/python/70da6c454d){:target="_blank"}
+**Καθαρό αυτοκίνητο**: [Δες μέσα](https://trinket.io/python/70da6c454d){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/70da6c454d?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Απόφυγε τους αστεροειδείς**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
+**Απόφυγε τους αστεροειδείς**: [Δες μέσα](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
