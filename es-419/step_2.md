@@ -1,32 +1,32 @@
-## Set the theme
+## Elige el tema
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Set the theme of your game and create a player character that follows the mouse pointer.
+Elige el tema de tu juego y crea un personaje que siga el puntero del ratón (mouse).
 
 </div>
 <div>
 
-![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+![Imagen de una tortuga de tamaño 100x100 con un fondo azul con un tamaño de pantalla de 400x400.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
-- A sport or hobby
-- A movie, show, or game
-- Science or nature
-- Anything else!
+¿Cuál es el tema de tu juego? Puedes elegir el que quieras. Aquí tienes algunas sugerencias:
+- Un deporte o pasatiempo
+- Una película, programa de Tv o juego
+- Ciencias o naturaleza
+- ¡Cualquier otro tema!
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
+Abre el [proyecto inicial ](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket se abrirá en otra pestaña del navegador.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Set the size of your canvas.
+**Elige:** Delimita el tamaño de tu canvas (espacio de trabajo).
 
 --- code ---
 ---
@@ -43,9 +43,9 @@ size(400, 400)
 
 --- task ---
 
-Create a variable called `safe` to store the background colour based on the theme you want for your game.
+Crea una variable llamada `a_salvo` para almacenar el color de fondo según el tema que elegiste para tu juego.
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+Este es el color en el que tu personaje estará a salvo, más adelante tendrás que usar esta variable nuevamente.
 
 --- code ---
 ---
@@ -54,8 +54,8 @@ filename: main.py - draw()
 ---
 
 def draw():    
-safe = color(200, 100, 0) #Add the colour of your theme   
-background(safe)
+a_salvo = color(200, 100, 0) #Agrega el color de tu tema   
+background(a_salvo)
 
 --- /code ---
 
@@ -65,19 +65,19 @@ background(safe)
 
 --- task ---
 
-**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+**Prueba:** Ejecuta tu código para ver el color de fondo. Cámbialo hasta que estés satisfecho con el color y el tamaño de la pantalla.
 
 --- /task ---
 
-Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
+Ahora elige el personaje que va a jugar y evitar los obstáculos. ¿Es un objeto, una persona, un animal o algo más?
 
-The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
+Tu jugador aparecerá en una posición fija de `y` y en la misma posición de `x` que el puntero del ratón (mouse), que se almacena en la variable `mouse_x` de la biblioteca `p5`.
 
 --- task ---
 
-It's a good idea to organise the code for drawing the player character into a function.
+Es una buena idea organizar el código para dibujar tu personaje dentro de una función.
 
-Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
+Define una función `dibujar_jugador()` y crea una posición `jugador_y` para la posición fija `y` del jugador:
 
 --- code ---
 ---
@@ -90,7 +90,7 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- /code ---
 
-Add code to `draw()` to call `draw_player()` each frame.
+Agrega código a `draw()` para llamar a tu función `dibujar_jugador()` cada cuadro (frame).
 
 --- code ---
 ---
@@ -99,39 +99,39 @@ filename: main.py - draw()
 ---
 
 def draw():    
-safe = color(200, 100, 0) #Your chosen colour    
-background(safe)    
-draw_player()
+a_salvo = color(200, 100, 0) #Tu color elegido    
+background(a_salvo)    
+dibujar_jugador()
 
 --- /code ---
 
 --- /task ---
 
-Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
+Luego, agregarás código a la función `dibujar_jugador()` para dibujar tu forma. Probablemente también tengas que agregar código para `setup()`.
 
 --- task ---
 
-**Choose:** What does your player look like? Your player could be:
-+ An image provided in the starter project
-+ An emoji 🎈 or text
-+ Drawn using a series of shapes
+**Elige:** ¿Cómo luce tu personaje? Este podría ser:
++ Una imagen proporcionada en el proyecto inicial
++ Un emoji 🎈 o texto
++ Un dibujo hecho con varias formas
 
 --- collapse ---
 ---
-title: Use a starter image
+title: Usa una imagen de inicio
 ---
 
-Click on the **manage images** icon.
+Haz clic en el ícono **manage images** (administrar imágenes).
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![El ícono de la imagen en la parte superior derecha del área del código.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+Las imagenes incluídas en el proyecto inicial se mostrarán en una lista al hacer clic en `Image library` (Biblioteca de imágenes).
 
-![The Image library with list of included images.](images/starter-images.png)
+![La biblioteca de imágenes (Image library) con la lista de imágenes incluidas.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Apunta el nombre de la imagen que quieras utilizar.
 
-Load the image into the `setup()` function
+Carga la imagen ('load_image') dentro de la función `setup()`
 
 --- code ---
 ---
@@ -141,11 +141,11 @@ filename: main.py - setup()
 
 def setup():   
 size(400, 400)    
-player = load_image('skiing.png') #Load your image
+jugador = load_image('skiing.png') #Carga tu imagen
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_player()` function.
+Llama a tu imagen con `image()` y configúralo como global en la función `dibujar_jugador()`.
 
 --- code ---
 ---
@@ -156,9 +156,9 @@ filename: main.py - draw_player()
 def draw_player():    
 player_y = int(height * 0.8) #Positioned towards the screen bottom
 
-  global player
+  global jugador
 
-  image(player, mouse_x, player_y, 30, 30)
+  image(jugador, mouse_x, jugador_y, 30, 30)
 
 --- /code ---
 
@@ -166,12 +166,12 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Usa emojis
 ---
 
-You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
+Puedes usar emojis con la función `text()` de la bilbioteca p5 para representar a tu jugador.
 
-Here's an example:
+Aquí tienes un ejemplo:
 
 --- code ---
 ---
@@ -181,8 +181,8 @@ filename: main.py - setup()
 
 def setup():    
 size(400, 400)     
-text_size(40) #Controls the size of the emoji     
-text_align(CENTER, TOP) #Position around the centre
+text_size(40) #Controla el tamaño del emoji     
+text_align(CENTER, TOP) #Ubicado alrededor del centro
 
 --- /code ---
 
@@ -214,11 +214,11 @@ text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex player.
+**Sugerencia:** Puedes usar varias formas sencillas en la misma función para crear un jugador más complejo.
 
 --- collapse ---
 ---
-title: Draw a player using multiple shapes
+title: Dibuja un personaje usando múltiples formas
 ---
 
 ![desc](images/face_player.png)
@@ -236,16 +236,16 @@ noStroke()
 fill(0, 200, 100)    
 ellipse(mouse_x, player_y, 60, 60)
 
-  #Eyes    
+  #Ojos    
 fill(0, 100, 200)    
-ellipse(mouse_x - 10, player_y - 10, 20, 20)    
-ellipse(mouse_x + 10, player_y - 10, 20, 20)    
+ellipse(mouse_x - 10, jugador_y - 10, 20, 20)    
+ellipse(mouse_x + 10, jugador_y - 10, 20, 20)    
 fill(0)    
-ellipse(mouse_x - 10, player_y - 10, 10, 10)     
-ellipse(mouse_x + 10, player_y - 10, 10, 10)     
+ellipse(mouse_x - 10, jugador_y - 10, 10, 10)     
+ellipse(mouse_x + 10, jugador_y - 10, 10, 10)     
 fill(255)    
-ellipse(mouse_x - 12, player_y - 12, 5, 5)    
-ellipse(mouse_x + 12, player_y - 12, 5, 5)
+ellipse(mouse_x - 12, jugador_y - 12, 5, 5)    
+ellipse(mouse_x + 12, jugador_y - 12, 5, 5)
 
 --- /code ---
 
@@ -255,53 +255,53 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player.
+**Prueba:** Ejecuta tu código y mueve el ratón (mouse) para controlar a tu jugador.
 
-Does it move like you expect?
+¿Se mueve como lo esperabas?
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Depuración:** Es posible que encuentres algunos errores en tu proyecto que tendrás que corregir. Aquí hay algunos errores comunes.
 
 --- task ---
 
 --- collapse ---
 ---
-title: I can't see the player
+title: No puedo ver el jugador
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+Intenta cambiar a pantalla completa. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image isn't loading
+title: Una imagen no se carga
 ---
 
-First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+Primero, asegúrate de que la imagen esté en `Image library` (Biblioteca de imágenes). Luego, lee el nombre del archivo con mucho cuidado: recuerda que las letras mayúsculas son diferentes a las minúsculas y que la puntuación es importante.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image is the wrong size
+title: Una imagen tiene el tamaño incorrecto
 ---
 
-Check the inputs that control the width and height of the image:
+Comprueba las entradas (inputs) que controlan el ancho (width) y el alto (height) de la imagen:
 
 ```python
-image(image_file, x_coord, y_coord, width, height)
+image(Archivo_de_imagen, coordenada_x, coordenada_y, width, height)
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An emoji is the wrong size
+title: Un emoji tiene el tamaño incorrecto
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+Si tu emoji es demasiado grande o pequeño, cambia la entrada de `text_size()`.
 
 --- /collapse ---
 
