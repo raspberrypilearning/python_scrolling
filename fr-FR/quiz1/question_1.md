@@ -1,81 +1,81 @@
-## Reflection
+## Réflexion
 
-Well done, you made a game!  Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+Bravo, tu as créé un jeu !  Maintenant, il est temps de réfléchir - la réflexion est une partie importante de l'apprentissage, car elle aide à établir de nouvelles connexions dans ton cerveau.
 
-Answer the three questions below to reflect on what you've learnt.
+Réponds aux trois questions ci-dessous pour réfléchir à ce que tu as appris.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Après chaque question, appuie sur **soumettre**. Tu seras guidé vers la bonne réponse. Tu peux faire cette activité autant de fois que tu le souhaites.
 
-Have fun!
+Amuse-toi bien !
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend : Question 1 sur 3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+Tu as utilisé beaucoup d'instructions `if` pour contrôler le comportement de ton jeu. Certains d'entre elles auraient pu avoir des conditions plus complexes, utilisant `and` pour effectuer plusieurs tests à la fois. Si tu exécutais le morceau de code conditionnel suivant, à quoi t'attendrais-tu comme résultat ?
 
 ```python
 score = 5000
-lives = 2
+vies = 2
 
-if score >= 5000 and lives >= 3:
-  print('Great flying!')
+if score >= 5000 and vies >= 3:
+  print('Superbe vol !')
 
 if score >= 5000: 
-  print('Doing well!')
-  if lives > 1:
-    print('Keep going!')
+  print('Ça va bien !')
+  if vies > 1 :
+    print('Continue !')
   else:
-    print('But be careful!')
+    print('Mais attention !')
 
-elif lives > 1:
-  print('Push harder!')
+elif vies > 1:
+  print('Pousse plus fort !')
 
-else:
-  print('Head for base!')
+else :
+  print('Va à la base !')
 ```
 
 --- choices ---
 
 - ( )
 ```
-Great flying!
+Superbe vol !
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+Tant que `score >= 5000` est vrai, pour une condition `et` les deux parties doivent être vraies, et `vies >= 3` est faux.
 
   --- /feedback ---
 
 - (x)
 ```
-Doing well!
-Keep going!
+Ça va bien !
+Continue !
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+C'est correct - `score >= 5000` est vrai, de même que `vies > 1` sur l'instruction imbriquée `if`.
 
   --- /feedback ---
 
 - ( )
 ```
-Doing well!
+Ça va bien !
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+Proche, mais `score >= 5000` n'est pas la seule condition que le programme trouverait vraie pendant son exécution.
 
   --- /feedback ---
 
 - ( )
 ```
-Push harder!
+Pousse plus fort!
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+Tant que `vies > 1` est vrai, seul le code à l'intérieur de la première condition vraie dans une instruction `if`/`elif`/`else` est exécuté, et `vies > 1` n'est pas la première condition qui est vraie.
 
   --- /feedback ---
 
