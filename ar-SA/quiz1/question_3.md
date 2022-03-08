@@ -1,43 +1,43 @@
 --- question ---
 ---
-legend: Question 3 of 3
+القائمة: السؤال 3 من 3
 ---
 
-You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
+لقد صنعت لعبة تسعدك حقًا وشاركتها. راجعه أحد اللاعبين وشارك ببعض التعليقات المدروسة مع بعض التغييرات التي يرغبون في رؤيتها.
 
-What would be the best way to react to their suggestions?
+ما هي أفضل طريقة للرد على اقتراحاتهم؟
 
 --- choices ---
 
-- ( ) Immediately make all the changes they have suggested.
+- () أجرِ جميع التغييرات التي اقترحتها على الفور.
 
   --- feedback ---
 
-It's great to get feedback, but you shouldn't change your game just to keep one player happy, maybe other players might give different feedback.
+إنه لأمر رائع أن تحصل على تعليقات ، لكن لا يجب عليك تغيير لعبتك لمجرد إبقاء لاعب واحد سعيدًا ، فربما يقدم اللاعبون الآخرون ملاحظات مختلفة.
 
   --- /feedback ---
 
-- ( ) Ignore the suggestions because you know best.
+- () تجاهل الاقتراحات لأنك أعلم.
 
   --- feedback ---
 
-Not quite. It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
+ليس تماما. عادة ما يستحق الاستماع إلى ما يقوله المستخدمون عن عملك. إذا قدم اللاعب ملاحظات بناءة ، فعليك التفكير في ذلك.
 
   --- /feedback ---
 
-- (x) Consider their feedback with other feedback and decide how to improve your game.
+- () ضع في اعتبارك ملاحظاتهم مع التعليقات الأخرى وحدد كيفية تحسين لعبتك.
 
   --- feedback ---
 
-Correct! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
+صحيح! يجب أن تفكر في أي تعليقات تحصل عليها - بينما تحاول دائمًا الحصول على أكثر من وجهة نظر - واتخاذ قرارات لتحسين اللعبة لجميع اللاعبين.
 
   --- /feedback ---
 
-- ( ) Feel really sad that the player didn't think your game was perfect.
+- () أشعر بالحزن الشديد لأن اللاعب لم يعتقد أن لعبتك كانت مثالية.
 
   --- feedback ---
 
-No! You shouldn't feel sad if someone suggests improvements to your game. Constructive feedback is really useful and can help improve your game. You should be pleased that they were interested enough in your game to give feedback.
+لا! لا يجب أن تشعر بالحزن إذا اقترح أحدهم تحسينات على لعبتك. التعليقات البناءة مفيدة حقًا ويمكن أن تساعد في تحسين لعبتك. يجب أن تكون مسرورًا لأنهم كانوا مهتمين بما يكفي بلعبتك لتقديم ملاحظات.
 
   --- /feedback ---
 
