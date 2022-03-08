@@ -1,8 +1,8 @@
-# Definitions for compatibility with the p5py processing library 
+# Définitions pour la compatibilité avec la bibliothèque de traitement p5py 
 from processing import *
 import __main__
 
-# Shape
+# Forme
 from processing import rectMode as rect_mode
 from processing import ellipseMode as ellipse_mode
 from processing import strokeWeight as stroke_weight
@@ -11,19 +11,19 @@ from processing import strokeJoin as stroke_join
 from processing import noStroke as no_stroke
 from processing import noFill as no_fill
 
-# Fonts
+# Polices
 from processing import createFont as create_font
 from processing import loadFont as load_font
 from processing import textFont as text_font
 
-# Text
+# Texte
 from processing import textAlign as text_align
 from processing import textLeading as text_leading
 from processing import textMode as text_mode
 from processing import textSize as text_size
 from processing import textWidth as text_width
 
-# Colour
+# Couleur
 from processing import blendColor as blend_color
 from processing import lerpColor as lerp_color
 from processing import color as Color
@@ -35,12 +35,12 @@ from processing import loadImage as load_image
 from processing import noTint as no_tint
 from processing import requestImage as request_image
 
-# Environment
+# Environnement
 from processing import frameRate as frame_rate
 from processing import noCursor as no_cursor
 from processing import noLoop as no_loop
 
-# Transform
+# Transformer
 from processing import applyMatrix as apply_matrix
 from processing import popMatrix as pop_matrix
 from processing import printMatrix as print_matrix
@@ -53,14 +53,14 @@ from processing import popStyle as pop_style
 
 from processing import run as main_run
 
-# Keyboard
+# Clavier
 
-def mousePressed():
+def souris_pressee():
   if hasattr(__main__, "mouse_pressed"):
     mouse_pressed = getattr(__main__, "mouse_pressed")
     mouse_pressed()
     
-def mouseReleased():
+def souris_relachee():
   if hasattr(__main__, "mouse_released"):
     mouse_released = getattr(__main__, "mouse_released")
     mouse_released()
@@ -72,7 +72,7 @@ __main__.mouse_py = 0
 __main__.frame_count = 0
 __main__.frame_rate = 60
 
-def mouseMoved():
+def souris_bougee():
   __main__.mouse_x = mouse.x
   __main__.mouse_y = mouse.y
   __main__.mouse_px = mouse.px
@@ -81,23 +81,23 @@ def mouseMoved():
     mouse_moved = getattr(__main__, "mouse_moved")
     mouse_moved()
 
-def mouseDragged():
+def souris_glissee():
   if hasattr(__main__, "mouse_dragged"):
     mouse_dragged = getattr(__main__, "mouse_dragged")
     mouse_dragged()
 
-def new_draw():
+def nouveau_dessin():
   __main__.frame_count = frameCount
   frameRate = __main__.frame_rate
   old_draw()
   
 def run():
-  global old_draw
-  old_draw = __main__.draw
-  __main__.draw = new_draw
+  global ancien_dessin
+  ancien_dessin = __main__.draw
+  __main__.draw = nouveau_dessin
   main_run()
   
-def grid():
+def grille():
   pushMatrix()
   stroke(200)
   fill(0)
@@ -108,11 +108,11 @@ def grid():
  
   for x in x_coords:
     for y in y_coords:
-      show_coord(x, y)
+      montre_coord(x, y)
 
   popMatrix()
 
-def show_coord(x, y):
+def montre_coord(x, y):
   if x == width:
     x_align = RIGHT
   elif x == 0:
