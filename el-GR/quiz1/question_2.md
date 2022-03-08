@@ -1,50 +1,50 @@
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Ερώτηση 2 από 3
 ---
 
-In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
+Σε αυτό το έργο χρησιμοποίησες τη διαδικαστική παραγωγή— ζητώντας από τον υπολογιστή να δημιουργήσει και να τοποθετήσει μέρη του κόσμου σου. Αν και αυτό είναι μια εξαιρετική εξοικονόμηση χρόνου, ιδιαίτερα αν δημιουργείς πολλαπλά επίπεδα, μπορεί να δημιουργήσει ορισμένα προβλήματα. Ποιο από αυτά τα ζητήματα πρέπει να προσέξεις όταν δοκιμάζεις τη διαδικαστική παραγωγή;
 
 --- choices ---
 
-- (x) All of them
+- (x) Όλα τα παρακάτω
 
   --- feedback ---
 
-Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+Σωστό! Όλα αυτά μπορούν να συμβούν όταν χρησιμοποιείται η διαδικαστική παραγωγή. Μπορείς είτε να προσθέσεις περισσότερο κώδικα για να ελέγξεις και να επιλύσεις αυτά τα ζητήματα ή να δοκιμάσεις διαφορετικές τιμές seed μέχρι να βρεις μια που να λειτουργεί.
 
   --- /feedback ---
 
-- ( ) Obstacles could be generated that leave the player with no route forward.
+- ( ) Θα μπορούσαν να δημιουργηθούν εμπόδια που δεν αφήνουν διαδρομή προς τα εμπρός για τον παίκτη.
 
   --- feedback ---
 
-Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
+Όχι ακριβως. Αυτό μπορεί να συμβεί με εμπόδια που δημιουργούνται διαδικαστικά, ιδιαίτερα όταν το παιχνίδι ξεκινά για πρώτη φορά.
 
 
-**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
+**Συμβουλή:** Θα μπορούσες να επιλύσεις αυτό το ζήτημα αποτρέποντας τα εμπόδια να εμφανίζονται πολύ κοντά στην αρχική θέση του παίκτη. Μπορείς να σκεφτείς άλλες λύσεις;
 
   --- /feedback ---
 
-- ( ) Obstacles appear directly underneath the player.
+- ( ) Τα εμπόδια εμφανίζονται ακριβώς κάτω από τον παίκτη.
 
   --- feedback ---
 
-Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
+Όχι ακριβως. Αυτό μπορεί να συμβεί είτε στην αρχή του παιχνιδιού, είτε όταν προστεθούν νέα εμπόδια ως αποτέλεσμα της αύξησης του επιπέδου δυσκολίας, αν τύχει να επιλέξουν μια θέση κοντά σε αυτήν του παίκτη.
 
 
-**Tip:** A potential solution might be to make the player temporarially immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
+**Συμβουλή:** Μια πιθανή λύση μπορεί να είναι να κάνεις τον παίκτη προσωρινά απρόσβλητο στη σύγκρουση σε όλα τα εμπόδια, ή ακόμα και μόνο σε εμπόδια που δημιουργήθηκαν πρόσφατα, για ένα μικρό χρονικό διάστημα μετά την αύξηση του επιπέδου. Τι προβλήματα μπορεί να έχει το εμπόδιο στο να επιλέξει στη δημιουργία μιας νέας θέσης εάν είναι πολύ κοντά στον παίκτη;
 
   --- /feedback ---
 
-- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
+- ( ) Τα εμπόδια ομαδοποιούνται όλα μαζί, αφήνοντας πολύ ελεύθερο χώρο αλλού.
 
   --- feedback ---
 
-Not quite. Because random generation can choose groups of numebers that are close together, this can be a problem.
+Όχι ακριβώς. Επειδή η τυχαία παραγωγή μπορεί να επιλέξει ομάδες αριθμών που είναι κοντά μεταξύ τους, αυτό μπορεί να είναι πρόβλημα.
 
 
-**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
+**Συμβουλή:** Μια λύση μπορεί να είναι η μετάβαση σε ημιτυχαία παραγωγή — χώρισε την οθόνη σε κομμάτια και χρησιμοποίησε τυχαίους αριθμούς για να δημιουργήσεις εμπόδια μέσα σε καθένα από αυτά τα κομμάτια. Μπορείς να σκεφτείς πώς θα μπορούσες να χρησιμοποιήσεις αυτό το είδος διαδικαστικής παραγωγής για να κάνεις το παιχνίδι σου πιο ενδιαφέρον ή πιο προκλητικό;
 
   --- /feedback ---
 
