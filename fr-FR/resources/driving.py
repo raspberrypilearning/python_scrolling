@@ -1,64 +1,64 @@
 #!/bin/python3
 
-# Import library code
+# Importer le code de la bibliothèque
 from p5 import *
 from random import randint, seed
 
-level = 1
+niveau = 1
 score = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
+# La fonction dessine_obstacle vient ici
+def dessine_obstacles():
   
-  global level
+  global niveau
   
   seed(123456789)
   
-  if frame_count % width == width - 1 and level < 10:
-    level += 1
-    print('You reached level', level)
+  if frame_count % width == width - 1 and niveau < 10:
+    niveau += 1
+    print('Tu as atteint le niveau', niveau)
     
-  for i in range(6 + level):
-    ob_x = randint(0, width) - (frame_count * level)
+  for i in range(6 + niveau):
+    ob_x = randint(0, width) - (frame_count * niveau)
     ob_y = randint(0, height) 
-    ob_x %= width # wrap around
+    ob_x %= width # envelopper
     text('💩', ob_x, ob_y)
     
-# The draw_player function goes here
-def draw_player():
+# La fonction dessine_joueur vient ici
+def dessine_joueur():
   
-  global score, level
+  global score, niveau
   
-  player_x = int(width * 0.2)
-  player_y = mouse_y
+  joueur_x = int(width * 0.2)
+  joueur_y = mouse_y
   
-  collide = get(player_x + 50, player_y + 15)
-  collide2 = get(player_x + 50, player_y - 15)
-  collide3 = get(player_x, player_y + 15)
-  collide4 = get(player_x, player_y - 15)
-  collide5 = get(player_x - 50, player_y + 15)
-  collide6 = get(player_x - 50, player_y - 15)
+  collision = get(joueur_x + 50, joueur_y + 15)
+  collision2 = get(joueur_x + 50, joueur_y - 15)
+  collision3 = get(joueur_x, joueur_y + 15)
+  collision4 = get(joueur_x, joueur_y - 15)
+  collision5 = get(joueur_x - 50, joueur_y + 15)
+  collision6 = get(joueur_x - 50, joueur_y - 15)
   
-  if player_y > height - 18: # Off the bottom of the screen
-    collide = safe
-    collide3 = safe
-    collide5 = safe
+  if joueur_y > height - 18: # Hors dessous de l'écran
+    collision = sur
+    collision3 = sur
+    collision5 = sur
     
-  elif player_y < 18: # Off the top of the screen
-    collide2 = safe
-    collide4 = safe
-    collide6 = safe
+  elif joueur_y < 18: # hors dessus écran
+    collision2 = sur
+    collision4 = sur
+    collision6 = sur
     
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    image(car, player_x, player_y, 100, 31)
-    score += level
+  if collision == sur and collision2 == sur and collision3 == sur and collision4 == sur:
+    image(car, joueur_x, joueur_y, 100, 31)
+    score += niveau
   else:
-    text('💥', player_x, player_y)
-    level = 0
+    text('💥', joueur_x, joueur_y)
+    niveau = 0
     
   
-def setup():
-  # Setup your animation here
+def configuration():
+  # Configure ton animation ici
   global car
   
   size(400, 400)
@@ -66,21 +66,21 @@ def setup():
   image_mode(CENTER)
   
   
-def draw():
-  # Things to do in every frame
-  global score, safe, level
-  safe = color(128)
+def dessin():
+  # Choses à faire dans chaque image
+  global score, sur, niveau
+  sur = color(128)
   
-  if level > 0:
-    background(safe)
+  if niveau > 0:
+    background(sur)
     fill(255)
     text_size(16)
     text_align(RIGHT, TOP)
     text('Score', width * 0.45, 10, width * 0.5, 20)
     text(str(score), width * 0.45, 25, width * 0.5, 20)
     text_size(20)
-    text_align(CENTER, TOP) # position around the centre, top
-    draw_obstacles()
-    draw_player()
+    text_align(CENTER, TOP) # position près du centre, en haut
+    dessine_obstacles()
+    dessine_joueur() 
   
 run()
