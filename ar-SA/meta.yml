@@ -1,35 +1,35 @@
 ---
-title: Don't collide!
+title: لا تصطدم!
 hero_image: images/banner.png
-description: Build an endless runner game where your character must avoid colliding with obstacles
+description: قم ببناء لعبة عداء لا نهاية لها حيث يجب على شخصيتك تجنب الاصطدام بالعقبات
 version: 4
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Introduction
+    title: المقدمة
   - 
-    title: Set the theme
+    title: عيّن الموضوع
   - 
-    title: Create obstacles
+    title: اصنع عقبات
     completion: engaged
   - 
-    title: Collision detection
+    title: كشف الاصطدام
   - 
-    title: Speed up!
+    title: اسرع!
     completion: internal
   - 
-    title: Reflection
+    title: انعكاس
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
   - 
-    title: Upgrade your project
+    title: قم بتطوير مشروعك
     completion: external
   - 
-    title: Share
+    title: مشاركة
   - 
-    title: What next?
+    title: ما التالي؟
