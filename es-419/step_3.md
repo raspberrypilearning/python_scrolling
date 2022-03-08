@@ -1,25 +1,25 @@
-## Create obstacles
+## Crea los obstáculos
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Create the obstacles that you will have to avoid to keep playing the game.
+Crea los obstáculos que tendrás que esquivar para seguir jugando.
 </div>
 <div>
 
-![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
+![Ejemplo del proyecto esquiando con obstaculos de árboles](images/obstacles.png){:width="300px"}
 
 </div>
 </div>
 
-### Start with one obstacle
+### Empieza con un único obstáculo
 
-You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
+Puedes crear obstáculos de la misma manera que creaste tu jugador. ¿Cómo encajan estos obstáculos con tu tema?
 
-You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
+Vas a usar un bucle `for` para crear muchas copias, así que solo tendrás que crear o elegir un único obstáculo.
 
 --- task ---
 
-Define a `draw_obstacles()` function:
+Define una función `dibujar_obstaculos()`:
 
 --- code ---
 ---
@@ -27,7 +27,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Replace with your obstacle
+def dibujar_obstaculos(): obstaculo_x = width/2 obstaculo_y = height/2 text('🌵', obstaculo_x, obstaculo_y) #Reemplázalo con tu obstáculo
 
 
 --- /code ---
@@ -40,8 +40,8 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw(): safe = color(200, 100, 0) #Add the colour of your theme background(safe)  
-draw_obstacles() #Before drawing the player draw_player()
+def draw(): a_salvo = color(200, 100, 0) #Agrega el color de tu tema background(a_salvo)  
+dibujar_obstaculos() #Antes de dibujar tu jugador dibujar_jugador()
 
 --- /code ---
 
@@ -49,27 +49,27 @@ draw_obstacles() #Before drawing the player draw_player()
 
 --- task ---
 
-**Choose:** What does your obstacle look like? Your obstacle could be:
-+ An image provided in the starter project
-+ An emoji 🌵 or text
-+ Drawn using a series of shapes
+**Elige:** ¿Cómo luce tu obstáculo? Tu obstáculo podría ser:
++ Una imagen proporcionada en el proyecto inicial
++ Un emoji 🌵 o texto
++ Un dibujo hecho combinando varias formas
 
 --- collapse ---
 ---
-title: Use a starter image
+title: Usa una imagen de inicio
 ---
 
-Click on the **manage images** icon.
+Haz clic en el ícono **manage images** (administrar imágenes).
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![El ícono de la imagen en la parte superior derecha del área del código.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+Las imagenes incluídas en el proyecto inicial se mostrarán en una lista al hacer clic en `Image library` (Biblioteca de imágenes).
 
-![The Image library with a list of included images.](images/starter-images.png)
+![La biblioteca de imágenes (Image library) con una lista de imágenes incluidas.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Apunta el nombre de la imagen que quieras utilizar.
 
-Load the image into the `setup()` function.
+Carga la imagen ('load_image') dentro de la función `setup()`.
 
 --- code ---
 ---
@@ -77,11 +77,11 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) player = load_image('skiing.png') #Load your image obstacle = load_image('rocket.png') #Load your image
+def setup(): size(400, 400) jugador = load_image('skiing.png') #Carga la imagen de tu jugador obstaculo = load_image('rocket.png') #Carga la imagen de tu obstáculo
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_obstacles()` function.
+Llama a tu imagen con `image()` y configúralo como global en la función `dibujar_obstaculos()`.
 
 --- code ---
 ---
@@ -91,9 +91,9 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
-   global obstacle
+   global obstaculo
 
-   image(obstacle, ob_x, ob_y, 30, 30) #Resize to fit your theme
+   image(obstaculo, obstaculo_x, obstaculo_y, 30, 30) #Cambia el tamaño para que se adapte a tu tema
 
 --- /code ---
 
@@ -101,12 +101,12 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Usa emojis
 ---
 
-You can use emoji characters in the p5 `text()` function to represent your obstacles.
+Puedes usar emojis en la función `text()` de la bilbioteca p5 para representar tus obstáculos.
 
-Here's an example:
+Aquí tienes un ejemplo:
 
 --- code ---
 ---
@@ -114,7 +114,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre
+def setup(): size(400, 400) text_size(40) #Controla el tamaño del emoji text_align(CENTER, TOP) #Ubicado alrededor del centro
 
 --- /code ---
 
@@ -124,7 +124,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
+def dibujar_obstaculos(): obstaculo_x = width/2 obstaculo_y = height/2 text('🌵', obstaculo_x, obstaculo_y)
 
 --- /code ---
 
@@ -144,11 +144,11 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
+**Sugerencia:** Puedes usar varias formas sencillas en la misma función para crear un obstáculo más complejo.
 
 --- collapse ---
 ---
-title: Draw an obstacle using multiple shapes
+title: Dibuja un obstáculo usando múltiples formas
 ---
 
 ![desc](images/tree_obstacle.png)
@@ -159,7 +159,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke() fill(0,255,0) #Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # brown for trun rect(ob_x + 15, ob_y + 70, 10, 10)
+def dibujar_obstaculos(): obstaculo_x = width/2 obstaculo_y = height/2 #Dibuja un árbol de pino no_stroke() fill(0,255,0) # Verde para la hojas triangle(obstaculo_x + 20, obstaculo_y + 20, obstaculo_x + 10, obstaculo_y + 40, obstaculo_x + 30, obstaculo_y + 40) triangle(obstaculo_x + 20, obstaculo_y + 30, obstaculo_x + 5, obstaculo_y + 55, obstaculo_x + 35, obstaculo_y + 55) triangle(obstaculo_x + 20, obstaculo_y + 40, obstaculo_x + 0, obstaculo_y + 70, obstaculo_x + 40, obstaculo_y + 70) fill(150,100,100) # Marrón para el tronco rect(obstaculo_x + 15, obstaculo_y + 70, 10, 10)
 
 --- /code ---
 
@@ -167,15 +167,15 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 --- /task ---
 
-### Get your obstacle moving
+### Haz que tu obstáculo se mueva
 
 --- task ---
 
 Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
 
-The p5 `frame_count` variable starts counting the frames when you click run.
+La variable `frame_count` de la biblioteca p5 comienza a contar los cuadros (frames) cuando haces clic en run (ejecutar).
 
-`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
+`obstaculo_y %= height` fija la posición `y` en el resto cuando se divide por `height`. Con una `height` (altura) de '400', esto convertirá `401` en `1`, de modo que cuando los obstáculos desaparezcan de la parte inferior de la pantalla, reaparecerán en la parte superior.
 
 --- code ---
 ---
@@ -183,23 +183,23 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Increases each frame ob_y %= height #Wrap around text('🌵', ob_x, ob_y) #Replace with your obstacle
+def dibujar_obstaculos(): obstaculo_x = width/2 obstaculo_y = height/2 + frame_count #Aumenta cada frame obstaculo_y %= height #Recircular text('🌵', obstaculo_x, obstaculo_y) #Reemplaza con tu obstáculo
 
 --- /code ---
 
 --- /task ---
 
-### Lots of obstacles
+### Muchos obstáculos
 
-You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
+Podrías dibujar muchas copias de tu obstáculo con diferentes posiciones de inicio, pero eso sería mucho trabajo. Usemos un atajo.
 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
+<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. Una <span style="color: #0faeb0">seed</span> (semilla) significa que puedes generar los mismos resultados cada vez que uses la misma semilla.</p>
 
 --- task ---
 
-This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
+Este código usa un bucle `for` con `randint()` para elegir las posiciones de los obstáculos por ti. Si llamas primero a la función aleatoria `seed()` significa que siempre obtendrás los mismos números aleatorios. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
 
 --- code ---
 ---
