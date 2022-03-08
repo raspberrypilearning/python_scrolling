@@ -1,50 +1,50 @@
 --- question ---
 ---
-legend: Question 2 of 3
+القائمة: السؤال 2 من 3
 ---
 
-In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
+في هذا المشروع ، استخدمت التوليد الإجرائي - جعل الكمبيوتر ينشئ ويضع أجزاء من عالمك من أجلك. أثناء القيام بذلك يعد توفيرًا كبيرًا للوقت ، خاصة إذا كنت تقوم بإنشاء مستويات كبيرة جدًا ، فقد يؤدي ذلك إلى حدوث بعض المشكلات. أي من هذه المشكلات يجب أن تبحث عنها عند اختبار الجيل الإجرائي الخاص بك؟
 
 --- choices ---
 
-- (x) All of them
+- (خ) كل منهم
 
   --- feedback ---
 
-Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+صحيح! كل هذا يمكن أن يحدث عند استخدام الجيل الإجرائي. يمكنك إما إضافة المزيد من التعليمات البرمجية للتحقق من هذه المشكلات والتغلب عليها ، أو تجربة بذور مختلفة حتى تجد واحدة تعمل.
 
   --- /feedback ---
 
-- ( ) Obstacles could be generated that leave the player with no route forward.
+- () يمكن إنشاء عقبات تترك اللاعب بدون طريق للأمام.
 
   --- feedback ---
 
-Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
+ليس تماما. يمكن أن يحدث هذا مع العقبات التي تم إنشاؤها من الناحية الإجرائية ، خاصة عند بدء اللعبة لأول مرة.
 
 
-**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
+**نصيحة:** يمكنك التغلب على هذه المشكلة عن طريق منع ظهور العوائق بالقرب من موضع بدء اللاعب. هل يمكنك التفكير في حلول أخرى؟
 
   --- /feedback ---
 
-- ( ) Obstacles appear directly underneath the player.
+- () تظهر العوائق أسفل اللاعب مباشرة.
 
   --- feedback ---
 
-Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
+ليس تماما. يمكن أن يحدث هذا إما في بداية اللعبة ، أو عند إضافة عوائق جديدة نتيجة لزيادة مستوى الصعوبة ، إذا حدث ذلك لاختيار موقع قريب من اللاعب.
 
 
-**Tip:** A potential solution might be to make the player temporarially immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
+**نصيحة:** قد يكون الحل المحتمل هو جعل اللاعب محصنًا مؤقتًا من الاصطدام بجميع العوائق ، أو حتى العوائق التي تم إنشاؤها حديثًا فقط ، لفترة قصيرة بعد زيادة المستوى. ما هي المشاكل التي قد تنشأ عن وجود عقبة تختار مركزًا جديدًا إذا كانت قريبة جدًا من اللاعب؟
 
   --- /feedback ---
 
-- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
+- () يتم تجميع جميع العوائق معًا ، مما يترك الكثير من المساحات المفتوحة في مكان آخر.
 
   --- feedback ---
 
-Not quite. Because random generation can choose groups of numebers that are close together, this can be a problem.
+ليس تماما. نظرًا لأن التوليد العشوائي يمكن أن يختار مجموعات من الأرقام القريبة من بعضها البعض ، فقد تكون هذه مشكلة.
 
 
-**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
+**نصيحة:** قد يكون أحد الحلول هو التبديل إلى التوليد شبه العشوائي - قم بتقسيم الشاشة إلى أجزاء واستخدام أرقام عشوائية لإنشاء عوائق داخل كل من هذه القطع. هل يمكنك التفكير في كيفية استخدام هذا النوع من الجيل الإجرائي لجعل لعبتك أكثر تشويقًا ، أو أكثر تحديًا؟
 
   --- /feedback ---
 
