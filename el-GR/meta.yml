@@ -1,35 +1,35 @@
 ---
-title: Don't collide!
+title: Μη συγκρουστείς!
 hero_image: images/banner.png
-description: Build an endless runner game where your character must avoid colliding with obstacles
+description: Δημιούργησε ένα ατελείωτο παιχνίδι δρομέα όπου ο χαρακτήρας σου πρέπει να αποφεύγει τη σύγκρουση με τα εμπόδια
 version: 4
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Introduction
+    title: Εισαγωγή
   - 
-    title: Set the theme
+    title: Ορίζοντας το θέμα
   - 
-    title: Create obstacles
+    title: Δημιούργησε τα εμπόδια
     completion: engaged
   - 
-    title: Collision detection
+    title: Ανίχνευση σύγκρουσης
   - 
-    title: Speed up!
+    title: Επιτάχυνε!
     completion: internal
   - 
-    title: Reflection
+    title: Αναστοχασμός
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
   - 
-    title: Upgrade your project
+    title: Αναβάθμιση του έργου σου
     completion: external
   - 
-    title: Share
+    title: Μοιράσου
   - 
-    title: What next?
+    title: Και μετά;
