@@ -1,10 +1,10 @@
-## What next?
+## Και τώρα;
 
-If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/pathways/python-intro) pathway, you can move on to the [Powerful patterns](https://projects.raspberrypi.org/en/projects/powerful-patterns) project. In this project, you will create inspirational art that can be scaled using repeated patterns.
+Εάν ακολουθείς το μονοπάτι [Εισαγωγή στην Python](https://projects.raspberrypi.org/en/pathways/python-intro), μπορείς να προχωρήσεις στο έργο [Ισχυρά μοτίβα](https://projects.raspberrypi.org/en/projects/powerful-patterns). Σε αυτό το έργο, θα δημιουργήσεις εμπνευσμένη τέχνη που μπορεί να κλιμακωθεί χρησιμοποιώντας επαναλαμβανόμενα μοτίβα.
 
 --- print-only ---
 
-![One of the examples from the Powerful patterns project using rotated geometric shapes.](images/kek-project.png)
+![Ένα από τα παραδείγματα από το έργο Ισχυρά μοτίβα που χρησιμοποιεί περιστρεφόμενα γεωμετρικά σχήματα.](images/kek-project.png)
 
 --- /print-only ---
 
@@ -13,5 +13,5 @@ If you are following the [Introduction to Python](https://projects.raspberrypi.o
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+Αν θέλεις να διασκεδάσεις περισσότερο εξερευνώντας την Python, τότε μπορείς να δοκιμάσεις οποιοδήποτε από [αυτά τα έργα](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
 
