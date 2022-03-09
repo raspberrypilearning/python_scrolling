@@ -49,7 +49,7 @@ def dessine_joueur():
     vitesse = 0
     
   
-def configuration():
+def setup():
   
   global ski, chute
   
@@ -60,7 +60,7 @@ def configuration():
   ski = load_image('skiing.png')
   chute = load_image('fallenover.png')
   
-def dessin():
+def draw():
   # Choses à faire dans chaque image
   global score, sur, vitesse, ski, chute
   sur = color(255)
@@ -70,6 +70,6 @@ def dessin():
     fill(0)
     text('Score: ' + str(score), width/2, 20)
     dessine_obstacles()
-    dessine_joueur() 
+    dessine_joueur()
   
 run()
