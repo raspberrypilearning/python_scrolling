@@ -41,7 +41,7 @@ def joueur_ecrase():
 
   # Les yeux
   fill(149, 161, 195)
-  ellipse(mouse_x - 10, joueurs_y - 10, 20, 20)
+  ellipse(mouse_x - 10, joueur_y - 10, 20, 20)
   ellipse(mouse_x + 10, joueur_y - 10, 20, 20)
   fill(0)
   ellipse(mouse_x - 10, joueur_y - 10, 10, 10)
