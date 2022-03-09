@@ -4,76 +4,72 @@
 from p5 import *
 from random import randint, seed
 
-niveau = 1
+vitesse = 1
 score = 0
 
-# La fonction dessine_obstacle vient ici
+# La fonction dessine_arriere_plan va ici
 def dessine_obstacles():
   
-  global niveau
+  global vitesse
   
   seed(12345678)
   
-  if frame_count % height == height - 1 and niveau < 5:
-    niveau += 1
-    print('Tu as atteint le niveau', niveau)
+  if frame_count % height == height - 1 and vitesse < 5:
+    vitesse += 1
+    print('Tu as atteint le niveau', vitesse)
     
-  for i in range(6 + niveau):
+  for i in range(6):
     ob_x = randint(0, height)
-    ob_y = randint(0, height) + (frame_count * niveau)
+    ob_y = randint(0, height) + (frame_count * vitesse)
     ob_y %= height # enveloppant
-    text('🌵', ob_x, ob_y)
-
+    no_stroke()
+    fill(0,255,0)
+    triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
+    triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
+    triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
+    fill(150,100,100)
+    rect(ob_x + 15, ob_y + 70, 10, 10)
     
 # La fonction dessine_joueur vient ici
 def dessine_joueur():
   
-  global score, niveau
+  global score, vitesse, ski, chute
   
   joueur_y = int(height * 0.8)
   
-  no_fill()
-  #ellipse(mouse_x, joueur_y, 10, 10) # dessine le point de collision
-  #ellipse(mouse_x, joueur_y + 40, 10, 10)
-  #ellipse(mouse_x - 12, joueur_y + 20, 10, 10)
-  #ellipse(mouse_x + 12, joueur_y + 20, 10, 10)
+  fill(sur)
 
   collision = get(mouse_x, joueur_y)
-  collision2 = get(mouse_x - 12, joueur_y + 20)
-  collision3 = get(mouse_x + 12, joueur_y + 20)
-  collision4 = get(mouse_x, joueur_y + 40)
   
-  if mouse_x < width: # sur la gauche de l'écran
-    collision2 = sur
-  
-  if mouse_x > width: # à droite de l'écran
-    collision3 = sur
-    
-  if collision == sur and collision2 == sur and collision3 == sur and collision4 == sur:
-    text('🎈', mouse_x, joueur_y)
-    score += niveau
+  if collision == sur:
+    image(ski, mouse_x, joueur_y, 30, 30)
+    score += vitesse
   else:
-    text('💥', mouse_x, joueur_y)
-    niveau = 0
+    image(chute, mouse_x, joueur_y, 30, 30)
+    vitesse = 0
     
   
-def setup():
+def configuration():
+  
+  global ski, chute
+  
   # Configure ton animation ici
   text_size(40)
   text_align(CENTER, TOP) # position près du centre, en haut
   size(400, 400)
+  ski = load_image('skiing.png')
+  chute = load_image('fallenover.png')
   
-  
-def draw():
+def dessin():
   # Choses à faire dans chaque image
-  global score, sur, niveau
-  sur = color(200, 150, 0)
-  
-  if niveau > 0:
+  global score, sur, vitesse, ski, chute
+  sur = color(255)
+
+  if vitesse > 0:
     background(sur) 
-    fill(255)
+    fill(0)
     text('Score: ' + str(score), width/2, 20)
     dessine_obstacles()
-    dessine_joueur()
+    dessine_joueur() 
   
 run()
