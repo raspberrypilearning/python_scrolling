@@ -143,7 +143,7 @@ También puedes imprimir ('print') un círculo alrededor del punto que estás ve
 
 ```python
   no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #Draw collision point
+  ellipse(mouse_x, jugador_y, 10, 10) #Dibuja el punto de colisión
 ```
 
 --- /collapse ---
@@ -152,7 +152,7 @@ También puedes imprimir ('print') un círculo alrededor del punto que estás ve
 
 --- task ---
 
-**Optional:** At the moment, you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom or left- and right-most edges.
+**Opcional:** Por ahora, solo estás detectando colisiones en un píxel en tu jugador. También podrías detectar colisiones en los otros píxeles al borde de tu jugador, como la parte inferior o los bordes más a la izquierda o a la derecha.
 
 --- collapse ---
 ---
@@ -160,33 +160,33 @@ title: Detección de colisiones con múltiples píxeles
 ---
 
 ```python
-def draw_player():
+def dibujar_jugador():
 
-  player_y = int(height * 0.8)
-  #Useful for debugging
-  #Draw circles around the pixels to check for collisions
+  jugador_y = int(height * 0.8)
+  #Útil para depurar
+  #Dibuja círculos alrededor de los píxeles para verificar colisiones
 
   no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #Draw collision point
-  ellipse(mouse_x, player_y + 40, 10, 10)
-  ellipse(mouse_x - 12, player_y + 20, 10, 10)
-  ellipse(mouse_x + 12, player_y + 20, 10, 10)
+  ellipse(mouse_x, jugador_y, 10, 10) #Dibuja punto de colisión
+  ellipse(mouse_x, jugador_y + 40, 10, 10)
+  ellipse(mouse_x - 12, jugador_y + 20, 10, 10)
+  ellipse(mouse_x + 12, jugador_y + 20, 10, 10)
 
-  collide = get(mouse_x, player_y)
-  collide2 = get(mouse_x - 12, player_y + 20)
-  collide3 = get(mouse_x + 12, player_y + 20)
-  collide4 = get(mouse_x, player_y + 40)
+  colision = get(mouse_x, jugador_y)
+  colision2 = get(mouse_x - 12, jugador_y + 20)
+  colision3 = get(mouse_x + 12, jugador_y + 20)
+  colision4 = get(mouse_x, jugador_y + 40)
 
-  if mouse_x < width: #Off the left of the screen
-    collide2 = safe
+  if mouse_x < width: #A la izquierda de la pantalla
+    colision2 = a_salvo
 
-  if mouse_x > width: #Off the right of the screen
-    collide3 = safe
+  if mouse_x > width: #A la derecha de la pantalla
+    colision3 = a_salvo
 
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    text('🎈', mouse_x, player_y)
+  if colision == a_salvo and colision2 == a_salvo and colision3 == a_salvo and colision4 == a_salvo:
+    text('🎈', mouse_x, jugador_y)
   else:
-    text('💥', mouse_x, player_y)
+    text('💥', mouse_x, jugador_y)
 ```
 
 --- /collapse ---
