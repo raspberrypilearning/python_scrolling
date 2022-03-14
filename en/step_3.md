@@ -185,7 +185,7 @@ def draw_obstacles():
     triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
     triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
     triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
-    fill(150,100,100) # brown for trun
+    fill(150,100,100) # brown for trunk
     rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
