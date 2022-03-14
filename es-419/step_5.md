@@ -1,23 +1,23 @@
-## Speed up!
+## ¡Acelera!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
+La mayoría de los juegos tipo endless runner (corredor infinito) aumentan la dificultad del juego a medida que el jugador avanza y les dan un puntaje.
 </div>
 <div>
 
-![Example project with a text score on the screen.](images/score.png){:width="300px"}
+![Proyecto de ejemplo con el texto puntaje en la pantalla.](images/score.png){:width="300px"}
 
 </div>
 </div>
 
-### Add difficulty levels
+### Agregar niveles de dificultad
 
-Creating clear difficulty levels will make it easier for your player to understand what is happening.
+Crear niveles de dificultad claros facilitará que tu jugador entienda lo que está sucediendo.
 
 --- task ---
 
-Create a `global` `level` variable to track the level the player is currently on. Set it to `1` so players start a new game on the first level.
+Crea una variable `nivel` que sea `global` para hacer seguimiento del nivel en el que se encuentra actualmente el jugador. Establece el valor de la variable en `1` para que los jugadores comiencen un nuevo juego en el primer nivel.
 
 --- code ---
 ---
@@ -25,8 +25,8 @@ language: python filename: main.py
 line_numbers: false
 ---
 
-# Include global variables here
-level = 1
+# Incluye variables globales aquí
+nivel = 1
 
 --- /code ---
 
@@ -34,9 +34,9 @@ level = 1
 
 --- task ---
 
-This code uses the `height` and the `frame_count` to increase the `level` variable every time the player finishes a screen, then prints out the new level for the player.
+Este código usa `height` (altura) y `frame_count` (recuento de cuadros o fotogramas) para aumentar la variable `nivel` cada vez que el jugador despeja una pantalla, luego genera el nuevo nivel para el jugador.
 
-**Choose:** This code limits the levels to five, so it doesn't get too hard to play. There's no reason your game has to use five, but you should choose a limit. Humans can only move so fast!
+**Elige:** Este código limita los niveles a cinco, para que no sea demasiado difícil de jugar. No hay ninguna razón por la que tu juego tenga que usar cinco niveles, pero deberías elegir un límite. ¡Los humanos tienen límites para moverse!
 
 --- code ---
 ---
@@ -44,11 +44,11 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-def draw_obstacles():
+def dibujar_obstaculos():
 
-  global level #Use the global level
+  global nivel #Usa el nivel global
 
-  if frame_count % height == height - 1 and level < 5: level += 1 print('You have reached level', level)
+  if frame_count % height == height - 1 and nivel < 5: nivel += 1 print('Llegaste al nivel', nivel)
 
 --- /code ---
 
@@ -57,18 +57,18 @@ def draw_obstacles():
 --- task ---
 
 
-The two main options for increasing difficulty are to make the game move faster, and to increase the number of obstacles.
+Las dos opciones principales para aumentar la dificultad son hacer que el juego vaya más rápido y aumentar la cantidad de obstáculos.
 
 --- collapse ---
 ---
-title: Speed your game up
+title: Acelera tu juego
 ---
 
-The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
+La velocidad del juego está controlada por la rapidez con la que los obstáculos parecen moverse hacia el jugador. Este código acelera esto al agregar `frame_count * nivel` a la coordenada `y` durante la generación de obstáculos.
 
-Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead.
+En lugar de mover los obstáculos por píxel en cada cuadro (frame), este código los mueve en cambio por píxeles de `nivel`.
 
-Looking at the code, you might expect the speed to increase by more than `level` pixels. For example, at the point just before your `level` increases, the `frame_count` is `799` — as the `level` increases one frame before the `frame_count` is an even multiple of `height` (set at `400` pixels) — and `799 * 3` is notably bigger than `799 * 2`. However, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are hidden by `ob_y %= height`. This leaves only the `level` extra pixels in each step.
+Al observar este código, es posible que esperes que la velocidad aumente más que por píxeles de `nivel`. Por ejemplo, en el punto justo antes de que cambie el `nivel` a uno superior, el `frame_count` es `799` — debido a que el `nivel` incrementa un cuadro (frame) antes de que el `frame_count` sea un múltiplo par de la altura o `height` (Establecida en `400` píxeles) — y `799 * 3` es notablemente mayor que `799 * 2`. Sin embargo, los píxeles adicionales creados al multiplicar el total de `frame_count` por un número mayor están siendo ocultados por `obstaculo_y %= height`. Esto solo deja los píxeles adicionales del `nivel` en cada paso.
 
 
 --- code ---
@@ -77,7 +77,7 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+  for i in range(6): obstaculo_x = randint(0, height) obstaculo_y = randint(0, height) + (frame_count * nivel) obstaculo_y %= height #Recircular text('🌵', obstaculo_x, obstaculo_y)
 
 --- /code ---
 
@@ -85,20 +85,20 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: Add more obstacles
+titulo: Agrega más obstáculos
 ---
 
-Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
+Puedes agregar obstáculos adicionales tan solo aumentando la cantidad de veces que se ejecuta el bucle `for` que los crea. Puedes hacer esto aumentando el número que le pasas a la función `range()` por `nivel`.
 
-**Tip:** Of course, you can always use `level * 2`, or even larger multiples, if you want to make your game harder.
+**Sugerencia:** Siempre puedes usar `nivel * 2`, o incluso múltiplos más grandes, si quieres aumentar la dificultad de tu juego.
 
 --- /collapse ---
 
 --- /task ---
 
-### Keep score
+### Registra el puntaje
 
-The longer a player lasts without colliding with an obstacle, the better they're playing your game. Adding a score will let them see how well they're doing.
+Cuanto más dure un jugador sin chocar contra un obstáculo, mejor estarán jugando. Agregar el puntaje les permitirá ver qué tan bien lo están haciendo.
 
 --- task ---
 
