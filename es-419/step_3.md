@@ -159,7 +159,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def dibujar_obstaculos(): obstaculo_x = width/2 obstaculo_y = height/2 #Dibuja un árbol de pino no_stroke() fill(0,255,0) # Verde para la hojas triangle(obstaculo_x + 20, obstaculo_y + 20, obstaculo_x + 10, obstaculo_y + 40, obstaculo_x + 30, obstaculo_y + 40) triangle(obstaculo_x + 20, obstaculo_y + 30, obstaculo_x + 5, obstaculo_y + 55, obstaculo_x + 35, obstaculo_y + 55) triangle(obstaculo_x + 20, obstaculo_y + 40, obstaculo_x + 0, obstaculo_y + 70, obstaculo_x + 40, obstaculo_y + 70) fill(150,100,100) # Marrón para el tronco rect(obstaculo_x + 15, obstaculo_y + 70, 10, 10)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke() fill(0,255,0) #Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
 
