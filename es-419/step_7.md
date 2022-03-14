@@ -1,43 +1,43 @@
-## Upgrade your project
+## Mejora tu proyecto
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-If you have time you can upgrade your project.
+Si tienes algo de tiempo, puedes mejorar tu proyecto.
 </div>
 <div>
 
-![Example sace project with lives.](images/example1.png){:width="300px"}
+![Ejemplo del proyecto Esquiva Asteroides con vidas.](images/example1.png){:width="300px"}
 
 </div>
 </div>
 
-Here are some ideas you could try:
+Aquí tienes algunas ideas que podrías probar:
 
-### Include a variety of obstacles
-You can add variety to your obstacles in a few ways:
- - Randomly choose between multiple images, emojis, or obstacle drawing functions
- - Randomly adjust the colour, shape, or size of obstacles by changing the parameters that draw them
- - Animate the obstacle by adding rotation, a colour change, or some other visual difference controlled by `frame_count`
+### Incluye una variedad de obstáculos
+Puedes agregar variedad a sus obstáculos de varias maneras:
+ - Elige aleatoriamente entre múltiples imágenes, emojis o funciones de dibujo de obstáculos
+ - Ajusta aleatoriamente el color, la forma o el tamaño de los obstáculos cambiando los parámetros que los dibujan
+ - Anima el obstáculo agregando rotación, un cambio de color o alguna otra diferencia visual controlada por `frame_count`
 
-### Add a win condition
-You can have players win the game in a few ways:
- - Achieving a winning score
- - Reaching a certain level of the game
+### Agrega una condición para ganar
+Puedes hacer que los jugadores ganen el juego de varias maneras:
+ - Al lograr una puntuación ganadora
+ - Al alcanzar cierto nivel del juego
 
-Once they have won, you should tell them somehow — maybe using `print()` or `text()` and then stop the game.
+Cuando hayan logrado ganar, deberías decírselo de alguna manera, podrías usar `print()` o `text()` y luego detener el juego.
 
-### Give players more than one life
-Add lives to your game, to allow players to survive a few collisions. This is a little trickier than just doing `lives =- 1` every time they collide with something:
- - The player may spend multiple frames in contact with an object, and so lose more than one life for a single collision — you'll need to prevent that from happening
- - You will also need a way for players to know how many lives they have left, and maybe some sort of warning that tells them when they're on their last life
- - You could add an object that, when the player collides with it, gives them an extra life. Remember that you'll need to modify your regular collision code so as it doesn't subtract a life at the same time!
+### Dale a los jugadores más de una vida
+Agrega más vidas a tu juego para que los jugadores puedan sobrevivir varias colisiones. Esto es un poco más complicado que simplemente hacer que `vidas =- 1` cada vez que chocan con algo:
+ - El jugador podría pasar varios cuadros (frames) en contacto con un objeto y, por lo tanto, perder más de una vida por una sola colisión; tienes que evitar que eso suceda
+ - También necesitarás una forma para que los jugadores sepan cuántas vidas les quedan, y tal vez algún tipo de advertencia que les indique cuando están en su última vida
+ - Podrías agregar un objeto que le de una vida adicional al jugador cuando choque con este. ¡Recuerda que deberás modificar tu código para una colisión habitual para que no te reste una vida al mismo tiempo!
 
-Each example project in the [Introduction](./) has a **See Inside** link for you to open the project and look at the code to get ideas and see how they work. The "Dodge Asteroids" project below has all of these features:
+Cada proyecto de ejemplo en la [Introducción](./) tiene un enlace **Ver dentro** para que puedas abrir el proyecto, mirar el código para inspirarte y ver cómo funciona. El proyecto "Esquiva asteroides" a continuación tiene todas estas características:
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
+**Esquiva asteroides**: [Ver dentro](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -45,6 +45,6 @@ Each example project in the [Introduction](./) has a **See Inside** link for you
 </div>
 </div>
 
-Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
+Échale un vistazo a algunos proyectos No choques creados por miembros de la comunidad en [No choques - Biblioteca comunitaria](https://wke.lt/w/s/KobNfx){:target="_blank"} de Raspberry Pi Foundation’s.
 
 --- save ---
