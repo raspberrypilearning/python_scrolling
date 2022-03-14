@@ -291,7 +291,7 @@ title: Une image n'a pas la bonne taille
 Vérifie les entrées qui contrôlent la largeur et la hauteur de l'image :
 
 ```python
-image(image_file, x_coord, y_coord, width, height)
+image(nom du fichier image, coordonnée x, coordonnée y, largeur, hauteur)
 ```
 
 --- /collapse ---
