@@ -7,7 +7,7 @@ from random import randint, seed
 speed = 1
 score = 0
 
-# Η συνάρτηση draw_obstacles πηγαίνει εδώ
+# The draw_obstacles function goes here
 def draw_obstacles():
   
   global speed
