@@ -1,86 +1,86 @@
 #!/bin/python3
 
-# Import library code
+# Importar el código de la Biblioteca p5
 from p5 import *
 from random import randint, seed
 
-level = 1
-score = 0
+nivel = 1
+puntaje = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
+# Aquí va la función dibujar_obstaculos
+def dibujar_obstaculos():
   
-  global level
+  global nivel
   
   seed(123456789)
   
-  if frame_count % width == width - 1 and level < 10:
-    level += 1
-    print('You reached level', level)
+  if frame_count % width == width - 1 and nivel < 10:
+    nivel += 1
+    print('Llegaste al nivel', nivel)
     
-  for i in range(6 + level):
-    ob_x = randint(0, width) - (frame_count * level)
-    ob_y = randint(0, height) 
-    ob_x %= width # wrap around
-    text('💩', ob_x, ob_y)
+  for i in range(6 + nivel):
+    obstaculo_x = randint(0, width) - (frame_count * nivel)
+    obstaculo_y = randint(0, height) 
+    obstaculo_x %= width # recircular
+    text('💩', obstaculo_x, obstaculo_y)
     
-# The draw_player function goes here
-def draw_player():
+# Aquí va la función dibujar_jugador
+def dibujar_jugador():
   
-  global score, level
+  global puntaje, nivel
   
-  player_x = int(width * 0.2)
-  player_y = mouse_y
+  jugador_x = int(width * 0.2)
+  jugador_y = mouse_y
   
-  collide = get(player_x + 50, player_y + 15)
-  collide2 = get(player_x + 50, player_y - 15)
-  collide3 = get(player_x, player_y + 15)
-  collide4 = get(player_x, player_y - 15)
-  collide5 = get(player_x - 50, player_y + 15)
-  collide6 = get(player_x - 50, player_y - 15)
+  colision = get(jugador_x + 50, jugador_y + 15)
+  colision2 = get(jugador_x + 50, jugador_y - 15)
+  colision3 = get(jugador_x, jugador_y + 15)
+  colision4 = get(jugador_x, jugador_y - 15)
+  colision5 = get(jugador_x - 50, jugador_y + 15)
+  colision6 = get(jugador_x - 50, jugador_y - 15)
   
-  if player_y > height - 18: # Off the bottom of the screen
-    collide = safe
-    collide3 = safe
-    collide5 = safe
+  if jugador_y > height - 18: # A la parte inferior de la pantalla
+    colision = a_salvo
+    colision3 = a_salvo
+    colision5 = a_salvo
     
-  elif player_y < 18: # Off the top of the screen
-    collide2 = safe
-    collide4 = safe
-    collide6 = safe
+  elif jugador_y < 18: # A la parte superior de la pantalla
+    colision2 = a_salvo
+    colision4 = a_salvo
+    colision6 = a_salvo
     
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    image(car, player_x, player_y, 100, 31)
-    score += level
+  if colision == a_salvo and colision2 == a_salvo and colision3 == a_salvo and colision4 == a_salvo:
+    image(carro, jugador_x, jugador_y, 100, 31)
+    puntaje += nivel
   else:
-    text('💥', player_x, player_y)
-    level = 0
+    text('💥', jugador_x, jugador_y)
+    nivel = 0
     
   
 def setup():
-  # Setup your animation here
-  global car
+  # Configura tu animación aquí
+  global carro
   
   size(400, 400)
-  car = load_image('car.png')
+  carro = load_image('car.png')
   image_mode(CENTER)
   
   
 def draw():
-  # Things to do in every frame
-  global score, safe, level
-  safe = color(128)
+  # Cosas que hacer en cada cuadro (Frame)
+  global puntaje, a_salvo, nivel
+  a_salvo = color(128)
   
-  if level > 0:
-    background(safe)
+  if nivel > 0:
+    background(a_salvo)
     fill(255)
     text_size(16)
     text_align(RIGHT, TOP)
-    text('Score', width * 0.45, 10, width * 0.5, 20)
-    text(str(score), width * 0.45, 25, width * 0.5, 20)
+    text('Puntaje', width * 0.45, 10, width * 0.5, 20)
+    text(str(puntaje), width * 0.45, 25, width * 0.5, 20)
     text_size(20)
-    text_align(CENTER, TOP) # position around the centre, top
-    draw_obstacles()
-    draw_player()
+    text_align(CENTER, TOP) # ubicado al centro y arriba
+    dibujar_obstaculos()
+    dibujar_jugador()
   
 run()
