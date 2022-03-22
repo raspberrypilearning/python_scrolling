@@ -85,8 +85,8 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+def dibujar_jugador():    
+jugador_y = int(height * 0.8) #Ubicado en la parte inferior de la pantalla
 
 --- /code ---
 
@@ -153,8 +153,8 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+def dibujar_jugador():    
+jugador_y = int(height * 0.8) #Ubicado en la parte inferior de la pantalla
 
   global jugador
 
@@ -192,9 +192,9 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():     
-player_y = int(height * 0.8)    
-text('🎈', mouse_x, player_y)
+def dibujar_jugador():     
+jugador_y = int(height * 0.8)    
+text('🎈', mouse_x, jugador_y)
 
 --- /code ---
 
@@ -229,12 +229,12 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8)    
+def dibujar_jugador():    
+jugador_y = int(height * 0.8)    
 noStroke()    
-#Face    
+#Cara    
 fill(0, 200, 100)    
-ellipse(mouse_x, player_y, 60, 60)
+ellipse(mouse_x, jugador_y, 60, 60)
 
   #Ojos    
 fill(0, 100, 200)    
@@ -270,7 +270,7 @@ ellipse(mouse_x + 12, jugador_y - 12, 5, 5)
 title: No puedo ver el jugador
 ---
 
-Intenta cambiar a pantalla completa. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+Intenta cambiar a pantalla completa. Además, verifica las coordenadas `x` e `y` que usaste para dibujar tu jugador; asegúrate de que estén dentro del canvas (espacio de trabajo) que creaste con `size()`.
 
 --- /collapse ---
 
