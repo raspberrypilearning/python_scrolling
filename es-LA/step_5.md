@@ -94,7 +94,7 @@ line_numbers: false
 
 --- collapse ---
 ---
-titulo: Agrega más obstáculos
+title: Agrega más obstáculos
 ---
 
 Puedes agregar obstáculos adicionales tan solo aumentando la cantidad de veces que se ejecuta el bucle `for` que los crea. Puedes hacer esto aumentando el número que le pasas a la función `range()` por `nivel`.
