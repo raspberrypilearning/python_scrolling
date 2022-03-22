@@ -32,7 +32,7 @@ def dibujar_obstaculos(): obstaculo_x = width/2 obstaculo_y = height/2 text('�
 
 --- /code ---
 
-Add code to `draw()` to call `draw_obstacles()` each frame.
+Agrega código a `draw()` para llamar a tu función `dibujar_obstaculos()` cada cuadro (frame).
 
 --- code ---
 ---
@@ -89,7 +89,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2
+def dibujar_obstaculos(): obstaculo_x = width/2 obstaculo_y = height/2
 
    global obstaculo
 
@@ -159,7 +159,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke() fill(0,255,0) #Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
+def dibujar_obstaculos(): obstaculo_x = width/2 obstaculo_y = height/2 #Dibuja un árbol de pino no_stroke() fill(0,255,0) # Verde para la hojas triangle(obstaculo_x + 20, obstaculo_y + 20, obstaculo_x + 10, obstaculo_y + 40, obstaculo_x + 30, obstaculo_y + 40) triangle(obstaculo_x + 20, obstaculo_y + 30, obstaculo_x + 5, obstaculo_y + 55, obstaculo_x + 35, obstaculo_y + 55) triangle(obstaculo_x + 20, obstaculo_y + 40, obstaculo_x + 0, obstaculo_y + 70, obstaculo_x + 40, obstaculo_y + 70) fill(150,100,100) # Marrón para el tronco rect(obstaculo_x + 15, obstaculo_y + 70, 10, 10)
 
 --- /code ---
 
@@ -171,7 +171,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 --- task ---
 
-Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
+Ahora agrega código para aumentar la posición `y` del obstáculo en cada cuadro (frame), y haz que se envuelva cuando llegue al fondo para crear el efecto de otro obstáculo.
 
 La variable `frame_count` de la biblioteca p5 comienza a contar los cuadros (frames) cuando haces clic en run (ejecutar).
 
@@ -195,11 +195,11 @@ Podrías dibujar muchas copias de tu obstáculo con diferentes posiciones de ini
 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. Una <span style="color: #0faeb0">seed</span> (semilla) significa que puedes generar los mismos resultados cada vez que uses la misma semilla.</p>
+<span style="color: #0faeb0">**Procedural generation**</span> (Generación de procedimientos) se usa en la creación de mundos para juegos, obstáculos y escenas de películas para crear aleatoriedad, pero donde aplican algunas reglas. Una <span style="color: #0faeb0">seed</span> (semilla) significa que puedes generar los mismos resultados cada vez que uses la misma semilla.</p>
 
 --- task ---
 
-Este código usa un bucle `for` con `randint()` para elegir las posiciones de los obstáculos por ti. Si llamas primero a la función aleatoria `seed()` significa que siempre obtendrás los mismos números aleatorios. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
+Este código usa un bucle `for` con `randint()` para elegir las posiciones de los obstáculos por ti. Si llamas primero a la función aleatoria `seed()` significa que siempre obtendrás los mismos números aleatorios. Esto significa que los obstáculos no saltarán alrededor de cada cuadro (frame) y puedes cambiar la semilla hasta que obtengas una que coloque los obstáculos de manera balanceada.
 
 --- code ---
 ---
@@ -207,16 +207,16 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles():
+def dibujar_obstaculos():
 
-  seed(12345678) #Any number is fine
+  seed(12345678) #Cualquier número funcionará
 
   for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Replace with your obstacle
+obstaculo_x = randint(0, height) obstaculo_y = randint(0, height) + frame_count obstaculo_y %= height text('🌵', obstaculo_x, obstaculo_y) #Reemplaza con tu obstáculo
 
 --- /code ---
 
-Useful information:
+Información útil:
 
 [[[using-seed-in-python]]]
 
@@ -226,46 +226,46 @@ Useful information:
 
 --- collapse ---
 ---
-title: Epilepsy warning
+title: Advertencia de epilepsia
 ---
 
-Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
-- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
-- Ask somebody to run it for you
-- Move on and complete the project, asking someone to run the project for you at the end so you can debug
-- Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
+Probar tu programa tiene el potencial de inducir convulsiones en personas con epilepsia fotosensible. Si tienes epilepsia fotosensible o sientes que puedes ser susceptible a una convulsión, no ejecutes tu programa. En su lugar, puedes:
+- Asegúrate de haber agregado la línea de código `seed ()` para asegurarte de que tus obstáculos no salten
+- Pídele a alguien que lo ejecute por ti
+- Continúa y completa el proyecto, pídele a alguien que ejecute el proyecto por ti cuando acabes para que puedas depurar
+- Cambia la velocidad de fotogramas antes de ejecutar tu programa agregando `frame_rate(1)` al comienzo de `setup()`; puedes eliminar esto una vez que hayas confirmado que no hay ningún error
 
 --- /collapse ---
 
 --- task ---
 
-**Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom.
+**Prueba:** Ejecuta tu programa y deberías ver múltiples objetos en la pantalla, envolviéndose cuando llegan al fondo.
 
-Change your code until you are happy with the obstacles you have. You can:
+Modifica tu código hasta que estés satisfecho con los obstáculos que tienes. Puedes:
 
-+ Change the seed to get obstacles in different starting positions
-+ Change the number of times to loop repeats to get a different number of obstacles
-+ Adjust the size of the obstacles
++ Cambiar la semilla (seed) para conseguir obstáculos en diferentes posiciones de inicio
++ Cambiar la cantidad de veces que se repite el bucle para obtener una cantidad diferente de obstáculos
++ Ajustar el tamaño de los obstáculos
 
-**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
+**Sugerencia:** Asegúrate de que es posible evitar los obstáculos, pero que no exista un camino demasiado fácil en el juego.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Depuración:** Es posible que encuentres algunos errores en tu proyecto que tendrás que corregir. Aquí hay algunos errores comunes.
 
 --- collapse ---
 ---
-title: Only one obstacle is being drawn
+title: Solo se dibuja un obstáculo
 ---
 
-Check your function that draws multiple obstacles:
- + Make sure it uses a `for` loop to call the obstacle drawing function more than once
- + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
- + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
+Comprueba que tu función dibuje múltiples obstáculos:
+ + Asegúrate de que use un bucle `for` para llamar a la función de dibujo de obstáculos más de una vez
+ + Asegúrate de que esté usando `randint()` para cambiar las coordenadas (x, y) que está pasando a la función de dibujo de obstáculos
+ + Comprueba que haz utilizado `obstaculo_x` y `obstaculo_y` como las coordenadas de tu obstáculo
 
-For example:
+Por ejemplo:
 
 --- code ---
 ---
@@ -273,12 +273,12 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles():
+def dibujar_obstaculos():
 
   seed(12345678)
 
   for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Replace with your obstacle
+obstaculo_x = randint(0, height) obstaculo_y = randint(0, height) + frame_count obstaculo_y %= height text('🌵', obstaculo_x, obstaculo_y) #Reemplaza con tu obstáculo
 
 --- /code ---
 
@@ -286,16 +286,16 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 
 --- collapse ---
 ---
-title: The obstacles are changing position every time a frame is drawn
+title: Los obstáculos cambian de posición cada vez que se dibuja un fotograma
 ---
 
-Make sure that you have used `seed()` inside the function that draws multiple obstacles.
+Asegúrate de haber usado `seed()` dentro de la función que dibuja múltiples obstáculos.
 
 --- /collapse ---
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
+Los programadores usan muchos trucos ingeniosos como usar el operador `%` para hacer que los objetos recirculen en la pantalla y la función `seed()` para generar los mismos números aleatorios. Cuanto más codifiques, mejores trucos aprenderás.</p>
 
 --- save ---
