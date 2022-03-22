@@ -7,7 +7,7 @@ from random import randint, seed
 vitesse = 1
 score = 0
 
-# La fonction dessine_arriere_plan va ici
+# The draw_obstacles function goes here
 def dessine_obstacles():
   
   global vitesse
