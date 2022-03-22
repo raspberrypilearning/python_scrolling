@@ -1,129 +1,129 @@
 #!/bin/python3
 
-# Import library code
+# Importar el código de la Biblioteca p5
 from p5 import *
 from random import randint, seed
 
-level = 1
-score = 0
-lives = 3
-invun = 0
+nivel = 1
+puntaje = 0
+vidas = 3
+invul = 0 #invulnerabilidad
 
-# The draw_obstacle function goes here
-def draw_obstacles():
+# Aquí va la función dibujar_obstaculos
+def dibujar_obstaculos():
   
-  global level
+  global nivel
   
-  seed(random_seed)
+  seed(semilla_aleatoria)
   
-  if frame_count % height == height - 1 and level < 8:
-    level += 1
-    print('You reached level', level)
+  if frame_count % height == height - 1 and nivel < 8:
+    nivel += 1
+    print('Llegaste al nivel', nivel)
     
-  for i in range(6 + level):
-    ob_x = randint(0, width)
-    ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height # wrap around
+  for i in range(6 + nivel):
+    obstaculo_x = randint(0, width)
+    obstaculo_y = randint(0, height) + (frame_count * nivel)
+    obstaculo_y %= height # recircular
     push_matrix()
-    translate(ob_x, ob_y)
+    translate(obstaculo_x, obstaculo_y)
     rotate(degrees(randint(1, 359)+frame_count / 1000))
-    image(rock, 0, 0, randint(18,24), randint(18,24))
+    image(asteroide, 0, 0, randint(18,24), randint(18,24))
     pop_matrix()
 
     
-# The draw_player function goes here
-def draw_player():
+# Aquí va la función dibujar_jugador
+def dibujar_jugador():
   
-  global score, level, lives, invun
+  global puntaje, nivel, vidas, invul
   
-  player_y = int(height * 0.8)
-  player_x = mouse_x
+  jugador_y = int(height * 0.8)
+  jugador_x = mouse_x
   
-  collide = get(player_x, player_y)
-  collide2 = get(player_x - 18, player_y + 17)
-  collide3 = get(player_x + 18, player_y + 17)
-  collide4 = get(player_x, player_y + 25)
+  colision = get(jugador_x, jugador_y)
+  colision2 = get(jugador_x - 18, jugador_y + 17)
+  colision3 = get(jugador_x + 18, jugador_y + 17)
+  colision4 = get(jugador_x, jugador_y + 25)
   
-  if player_x < width: # off the left of the screen
-    collide2 = safe
+  if jugador_x < width: # a la izquierda de la pantalla
+    colision2 = a_salvo
   
-  if player_x > width: # off the right of the screen
-    collide3 = safe
+  if jugador_x > width: # a la derecha de la pantalla
+    colision3 = a_salvo
     
-  if (collide == safe and collide2 == safe and collide3 == safe and collide4 == safe) or invun > 0:
-    if lives == 0 and frame_count % 12 == 0:
+  if (colision == a_salvo and colision2 == a_salvo and colision3 == a_salvo and colision4 == a_salvo) or invul > 0:
+    if vidas == 0 and frame_count % 12 == 0:
       tint(200, 0, 0)
     
-    image(rocket, player_x, player_y + 25, 64, 64)
-    score += level
-    invun -= 1
+    image(cohete, jugador_x, jugador_y + 25, 64, 64)
+    puntaje += nivel
+    invul -= 1
     no_tint()
     
-    if invun > 0:
+    if invul > 0:
       stroke(220)
       fill(220, 220, 220, 60)
-      ellipse(player_x, player_y + 18, 47, 47)
+      ellipse(jugador_x, jugador_y + 18, 47, 47)
       
-  elif lives > 0:
-    lives -= 1
-    invun = 50
+  elif vidas > 0:
+    vidas -= 1
+    invul = 50
     tint(200, 0, 0)
-    image(rocket, player_x, player_y + 25, 64, 64)
+    image(cohete, jugador_x, jugador_y + 25, 64, 64)
     no_tint()
-    score += level
+    puntaje += nivel
   else:
-    text('💥', player_x + 10, player_y + 5)
-    level = 0
+    text('💥', jugador_x + 10, jugador_y + 5)
+    nivel = 0
     
 
-def display_score():
-  global level
+def mostrar_puntaje():
+  global nivel
   
   fill(255)
   text_size(16)
   text_align(RIGHT, TOP)
-  text('Score', width * 0.45, 10, width * 0.5, 20)
-  text(str(score), width * 0.45, 25, width * 0.5, 20)
+  text('Puntaje', width * 0.45, 10, width * 0.5, 20)
+  text(str(puntaje), width * 0.45, 25, width * 0.5, 20)
   
-  if score > 10000:
-    level = 0
-    print('🎉🎉 You win! 🎉🎉')
+  if puntaje > 10000:
+    nivel = 0
+    print('🎉🎉 ¡Ganaste! 🎉🎉')
 
   
-def display_lives():
+def mostrar_vidas():
   fill(255)
-  text_size(16)
+  text_size(14.9)
   text_align(LEFT, TOP)
-  text('Lives', width * 0.05, 10, 30, 20)
+  text('Vidas', width * 0.05, 10, 30, 20)
   
-  for i in range(lives):
-    image(rocket, width * 0.05 + i * 25, 40, 20, 20)
+  for i in range(vidas):
+    image(cohete, width * 0.05 + i * 25, 40, 20, 20)
   
 
 def setup():
-  # Setup your animation here
-  global rocket, rock, random_seed
+  # Configura tu animación aquí
+  global cohete, asteroide, semilla_aleatoria
   
   text_size(40)
-  text_align(CENTER, TOP) # position around the centre, top
+  text_align(CENTER, TOP) # ubicado al centro y arriba
   size(400, 400)
   
-  rocket = load_image('rocket.png')
-  rock = load_image('moon.png')
-  random_seed = randint(0, 1000000)
+  cohete = load_image('rocket.png')
+  asteroide = load_image('moon.png')
+  semilla_aleatoria = randint(0, 1000000)
   
 def draw():
-  # Things to do in every frame
-  global score, safe, level
-  safe = color(0)
+  # Cosas que hacer en cada cuadro (Frame)
+  global puntaje, a_salvo, nivel
+  a_salvo = color(0)
   
-  if level > 0:
-    background(safe) 
+  if nivel > 0:
+    background(a_salvo) 
     fill(255)
     image_mode(CENTER)
-    draw_obstacles()
-    draw_player()
-    display_score()
-    display_lives()
+    dibujar_obstaculos()
+    dibujar_jugador()
+    mostrar_puntaje()
+    mostrar_vidas()
   
 run()
