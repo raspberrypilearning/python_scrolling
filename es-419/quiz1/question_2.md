@@ -1,50 +1,50 @@
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Pregunta 2 de 3
 ---
 
-In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
+En este proyecto, utilizaste procedural generation (generación de procedimientos): hacer que la computadora cree y ubique partes de tu mundo para ti. Si bien hacer esto es un gran ahorro de tiempo, especialmente si estás creando niveles muy grandes también puede crear algunos problemas. ¿Cuál de los problemas a continuación deberías tener en cuenta al probar tu procedural generation (generación de procedimientos?
 
 --- choices ---
 
-- (x) All of them
+- (x) Todos
 
   --- feedback ---
 
-Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+¡Correcto! Todos estos problemas pueden ocurrir cuando se utiliza la generación de procedimientos. Podrías agregar más código para verificar y solucionar estos problemas, o probar diferentes seeds (semillas) hasta que encuentres una que funcione.
 
   --- /feedback ---
 
-- ( ) Obstacles could be generated that leave the player with no route forward.
+- ( ) Podrían generarse obstáculos que dejen al jugador sin camino a seguir.
 
   --- feedback ---
 
-Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
+No exactamente. Esto puede suceder con obstáculos generados por procedimientos, particularmente cuando el juego apenas comienza.
 
 
-**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
+**Sugerencia:** Puedes solucionar este problema evitando que aparezcan obstáculos demasiado cerca de la posición inicial del jugador. ¿Se te ocurren otras soluciones?
 
   --- /feedback ---
 
-- ( ) Obstacles appear directly underneath the player.
+- ( ) Los obstáculos aparecen directamente debajo del jugador.
 
   --- feedback ---
 
-Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
+No exactamente. Esto puede suceder al comienzo del juego o cuando se agregan nuevos obstáculos como resultado del aumento del nivel de dificultad, si eligen una posición cercana a la del jugador.
 
 
-**Tip:** A potential solution might be to make the player temporarially immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
+**Sugerencia:** Una posible solución podría ser hacer que el jugador sea temporalmente invulnerable a la colisión con todos los obstáculos, o incluso solo con los obstáculos recién creados, durante un breve período de tiempo después de un cambio de nivel. ¿Qué problemas se podriar crear eligiendo una nueva posición para el obstáculo, si esta estuviera demasiado cerca del jugador?
 
   --- /feedback ---
 
-- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
+- ( ) Los obstáculos están todos agrupados, dejando demasiado espacio libre en otros lugares.
 
   --- feedback ---
 
-Not quite. Because random generation can choose groups of numebers that are close together, this can be a problem.
+No exactamente. Debido a que la generación aleatoria puede elegir grupos de números muy cercanos, esto puede ser un problema.
 
 
-**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
+**Sugerencia:** Una solución podría ser cambiar a la generación semialeatoria: dividir la pantalla en pedazos y usar números aleatorios para generar obstáculos dentro de cada uno de esos pedazos. ¿Puedes pensar en cómo podrías usar este tipo de generación de procedimientos para hacer que tu juego sea más interesante o más desafiante?
 
   --- /feedback ---
 
