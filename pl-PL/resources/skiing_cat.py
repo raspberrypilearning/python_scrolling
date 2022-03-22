@@ -7,7 +7,7 @@ from random import randint, seed
 speed = 1
 score = 0
 
-# The draw_background function goes here
+# The draw_obstacles function goes here
 def draw_obstacles():
   
   global speed
