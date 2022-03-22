@@ -1,75 +1,75 @@
 #!/bin/python3
 
-# Import library code
+# Importar el código de la Biblioteca p5
 from p5 import *
 from random import randint, seed
 
-speed = 1
-score = 0
+velocidad = 1
+puntaje = 0
 
-# The draw_background function goes here
-def draw_obstacles():
+# The draw_obstacles function goes here
+def dibujar_obstaculos():
   
-  global speed
+  global velocidad
   
   seed(12345678)
   
-  if frame_count % height == height - 1 and speed < 5:
-    speed += 1
-    print('You reached level', speed)
+  if frame_count % height == height - 1 and velocidad < 5:
+    velocidad += 1
+    print('Llegaste al nivel', velocidad)
     
   for i in range(6):
-    ob_x = randint(0, height)
-    ob_y = randint(0, height) + (frame_count * speed)
-    ob_y %= height # wrap around
+    obstaculo_x = randint(0, height)
+    obstaculo_y = randint(0, height) + (frame_count * velocidad)
+    obstaculo_y %= height # recircular
     no_stroke()
     fill(0,255,0)
-    triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
-    triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
-    triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
+    triangle(obstaculo_x + 20, obstaculo_y + 20, obstaculo_x + 10, obstaculo_y + 40, obstaculo_x + 30, obstaculo_y + 40)
+    triangle(obstaculo_x + 20, obstaculo_y + 30, obstaculo_x + 5, obstaculo_y + 55, obstaculo_x + 35, obstaculo_y + 55)
+    triangle(obstaculo_x + 20, obstaculo_y + 40, obstaculo_x + 0, obstaculo_y + 70, obstaculo_x + 40, obstaculo_y + 70)
     fill(150,100,100)
-    rect(ob_x + 15, ob_y + 70, 10, 10)
+    rect(obstaculo_x + 15, obstaculo_y + 70, 10, 10)
     
-# The draw_player function goes here
-def draw_player():
+# Aquí va la función dibujar_jugador
+def dibujar_jugador():
   
-  global score, speed, skiing, crashed
+  global puntaje, velocidad, esquiador, estrellado
   
-  player_y = int(height * 0.8)
+  jugador_y = int(height * 0.8)
   
-  fill(safe)
+  fill(a_salvo)
 
-  collide = get(mouse_x, player_y)
+  colision = get(mouse_x, jugador_y)
   
-  if collide == safe:
-    image(skiing, mouse_x, player_y, 30, 30)
-    score += speed
+  if colision == a_salvo:
+    image(esquiador, mouse_x, jugador_y, 30, 30)
+    puntaje += velocidad
   else:
-    image(crashed, mouse_x, player_y, 30, 30)
-    speed = 0
+    image(estrellado, mouse_x, jugador_y, 30, 30)
+    velocidad = 0
     
   
 def setup():
   
-  global skiing, crashed
+  global esquiador, estrellado
   
-  # Setup your animation here
+  # Configura tu animación aquí
   text_size(40)
-  text_align(CENTER, TOP) # position around the centre
+  text_align(CENTER, TOP) # ubicado relativamente al centro
   size(400, 400)
-  skiing = load_image('skiing.png')
-  crashed = load_image('fallenover.png')
+  esquiador = load_image('skiing.png')
+  estrellado = load_image('fallenover.png')
   
 def draw():
-  # Things to do in every frame
-  global score, safe, speed, skiing, crashed
-  safe = color(255)
+  # Cosas que hacer en cada cuadro (Frame)
+  global puntaje, a_salvo, velocidad, esquiador, estrellado
+  a_salvo = color(255)
 
-  if speed > 0:
-    background(safe) 
+  if velocidad > 0:
+    background(a_salvo) 
     fill(0)
-    text('Score: ' + str(score), width/2, 20)
-    draw_obstacles()
-    draw_player()
+    text('Puntaje: ' + str(puntaje), width/2, 20)
+    dibujar_obstaculos()
+    dibujar_jugador()
   
 run()
