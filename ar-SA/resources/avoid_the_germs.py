@@ -3,35 +3,35 @@
 from p5 import *
 from random import randint, seed
 
-level = 1
+المستوى = 1
 score = 0
 
-def safe_player():
+def safe_player ():
   
   global player_y
   
   # Face
-  ملء (200 ، 134 ، 145)
-  القطع الناقص (mouse_x، player_y، 60، 60)
+  fill(200, 134, 145)
+  ellipse (mouse_x - ، player_y + ، 60، 60)
 
   # عيون
   fill(178, 200, 145)
-  ellipse(mouse_x - 10, player_y - 10, 20, 20)
-  ellipse(mouse_x + 10, player_y - 10, 20, 20)
+  ellipse (mouse_x - 10، player_y + 10، 20، 20)
+  ellipse (mouse_x - 10، player_y + 10، 20، 20)
   fill(0)
-  ellipse(mouse_x - 10, player_y - 10, 10, 10)
-  ellipse(mouse_x + 10, player_y - 10, 10, 10)
+  ellipse (mouse_x - 10، player_y + 10، 10، 10)
+  ellipse (mouse_x - 10، player_y + 10، 10، 10)
   fill(255)
-  ellipse(mouse_x - 12, player_y - 12, 5, 5)
-  ellipse(mouse_x + 12, player_y - 12, 5, 5)
+  ellipse (mouse_x - 12، player_y + 12، 5، 5)
+  ellipse (mouse_x + 12، player_y + 12، 5، 5)
   
   # فم
   fill(0)
-  ellipse(mouse_x, player_y + 10, 15, 10)
+  ellipse (mouse_x - ، player_y + 10، 15، 10)
   fill(200, 134, 145)
-  ellipse(mouse_x, player_y + 5, 10, 10)
+  ellipse (mouse_x - ، player_y + 5، 10، 10)
 
-def crashed_player():
+def crashed_player ():
   
   global player_y
   
