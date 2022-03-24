@@ -1,50 +1,50 @@
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Vraag 2 van 3
 ---
 
-In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
+In dit project maakte je gebruik van procedurele generatie waarmee de computer delen van jouw wereld creërde en toonde. Hoewel dit een geweldige tijdsbesparing is, vooral als je zeer grote levels maakt, kan het enkele problemen veroorzaken. Op welke van deze problemen moet je letten bij het testen van procedurele generatie?
 
 --- choices ---
 
-- (x) All of them
+- (x) Allemaal
 
   --- feedback ---
 
-Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+Correct! Dit kan allemaal gebeuren bij het gebruik van procedurele generatie. Je kunt meer code toevoegen om deze problemen te controleren en te omzeilen, of je kunt verschillende zaden proberen totdat je er een vindt die werkt.
 
   --- /feedback ---
 
-- ( ) Obstacles could be generated that leave the player with no route forward.
+- ( ) Er kunnen obstakels worden gegenereerd waardoor de speler geen route meer heeft.
 
   --- feedback ---
 
-Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
+Niet helemaal. Dit kan gebeuren met procedureel gegenereerde obstakels, vooral wanneer het spel voor het eerst begint.
 
 
-**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
+**Tip:** Je kunt dit probleem omzeilen door te voorkomen dat obstakels te dicht bij de startpositie van de speler verschijnen. Kun je andere oplossingen bedenken?
 
   --- /feedback ---
 
-- ( ) Obstacles appear directly underneath the player.
+- ( ) Obstakels verschijnen direct onder de speler.
 
   --- feedback ---
 
-Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
+Niet helemaal. Dit kan gebeuren aan het begin van het spel, of wanneer nieuwe obstakels worden toegevoegd als gevolg van het verhogen van de moeilijkheidsgraad, als ze toevallig een positie kiezen dicht bij die van de speler.
 
 
-**Tip:** A potential solution might be to make the player temporarially immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
+**Tip:** Een mogelijke oplossing zou kunnen zijn om de speler tijdelijk immuun te maken voor botsingen met alle obstakels, of zelfs alleen nieuw gecreëerde obstakels, voor een korte tijd na een level-verhoging. Welke problemen zouden kunnen ontstaan als het obstakel een nieuwe positie kiest als het te dicht bij de speler is?
 
   --- /feedback ---
 
-- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
+- ( ) De obstakels zijn allemaal vlak bij elkaar, waardoor er op andere plaatsen te veel open ruimte overblijft.
 
   --- feedback ---
 
-Not quite. Because random generation can choose groups of numebers that are close together, this can be a problem.
+Niet helemaal. Omdat willekeurige generatie groepen getallen kan kiezen die dicht bij elkaar liggen, kan dit een probleem zijn.
 
 
-**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
+**Tip:** Een oplossing zou kunnen zijn om over te schakelen naar semi-willekeurige generatie — breek het scherm in stukjes en gebruik willekeurige getallen om obstakels in elk van die stukjes te genereren. Kun je bedenken hoe je dit soort procedurele generatie zou kunnen gebruiken om je spel interessanter of uitdagender te maken?
 
   --- /feedback ---
 
