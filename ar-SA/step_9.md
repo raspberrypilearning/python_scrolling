@@ -1,10 +1,10 @@
-## What next?
+## ماذا بعد؟
 
 إذا كنت تتبع [مقدمة إلى مسار Python](https://projects.raspberrypi.org/en/pathways/python-intro) ، يمكنك الانتقال إلى مشروع [أنماط قوية](https://projects.raspberrypi.org/en/projects/powerful-patterns). في هذا المشروع ، ستنشئ فنًا ملهمًا يمكن تحجيمه باستخدام أنماط متكررة.
 
 --- print-only ---
 
-![One of the examples from the Powerful patterns project using rotated geometric shapes.](images/kek-project.png)
+![أحد الأمثلة من مشروع الأنماط القوية باستخدام أشكال هندسية مستديرة.](images/kek-project.png)
 
 --- /print-only ---
 
@@ -13,5 +13,5 @@
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+إذا كنت ترغب في الحصول على مزيد من المتعة في استكشاف Python ، فيمكنك تجربة أي من [هذه المشاريع](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
 
