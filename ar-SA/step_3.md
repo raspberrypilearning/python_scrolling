@@ -1,25 +1,25 @@
-## Create obstacles
+## اصنع عقبات
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Create the obstacles that you will have to avoid to keep playing the game.
+قم بإنشاء العقبات التي سيتعين عليك تجنبها لمواصلة لعب اللعبة.
 </div>
 <div>
 
-![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
+! [مثال لمشروع تزلج بعوائق شجرية] (images / brothers.png) {: width = "300px"}
 
 </div>
 </div>
 
-### Start with one obstacle
+### ابدأ بعائق واحد
 
-You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
+يمكنك صنع العوائق بنفس الطرق التي صنعت بها لاعبك. كيف تتناسب العقبات مع موضوعك؟
 
-You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
+ستستخدم حلقة `مقابل` لعمل الكثير من النسخ لذا ما عليك سوى عمل أو اختيار عقبة واحدة.
 
 --- task ---
 
-Define a `draw_obstacles()` function:
+حدد دالة `draw_obstacles ()`:
 
 --- code ---
 ---
@@ -27,12 +27,12 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Replace with your obstacle
+def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2 نص ('🌵'، ob_x، ob_y) # استبدل بعقبتك
 
 
 --- /code ---
 
-Add code to `draw()` to call `draw_obstacles()` each frame.
+أضف الكود إلى `draw ()` لاستدعاء `draw_obstacles ()` لكل إطار.
 
 --- code ---
 ---
@@ -40,8 +40,8 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw(): safe = color(200, 100, 0) #Add the colour of your theme background(safe)  
-draw_obstacles() #Before drawing the player draw_player()
+def draw (): safe = color (200، 100، 0) # أضف لون السمة الخاصة بك الخلفية (آمنة)  
+draw_obstacles () # قبل رسم اللاعب draw_player ()
 
 --- /code ---
 
@@ -49,27 +49,27 @@ draw_obstacles() #Before drawing the player draw_player()
 
 --- task ---
 
-**Choose:** What does your obstacle look like? Your obstacle could be:
-+ An image provided in the starter project
-+ An emoji 🌵 or text
-+ Drawn using a series of shapes
+**اختر:** كيف تبدو العقبة التي تواجهك؟ قد تكون عقبتك:
++ صورة مقدمة في مشروع البداية
++ رمز تعبيري 🌵 أو نص
++ مرسومة باستخدام سلسلة من الأشكال
 
 --- collapse ---
 ---
-title: Use a starter image
+العنوان: استخدم صورة أولية
 ---
 
-Click on the **manage images** icon.
+انقر على **إدارة الصور** أيقونة.
 
 ![The picture icon in the top right of the code area.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+سيتم عرض الصور المضمنة في مشروع البداية في قائمة `مكتبة الصور`.
 
 ![The Image library with a list of included images.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+قم بتدوين اسم الصورة التي تريد استخدامها.
 
-Load the image into the `setup()` function.
+قم بتحميل الصورة في دالة `setup ()`.
 
 --- code ---
 ---
@@ -77,11 +77,11 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) player = load_image('skiing.png') #Load your image obstacle = load_image('rocket.png') #Load your image
+إعداد def (): الحجم (400 ، 400) لاعب = load_image ('skiing.png') # تحميل صورتك عقبة = تحميل صورتك ('صاروخ. png') # تحميل صورتك
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_obstacles()` function.
+استدع الصورة `()` واضبطها على أنها عامة في دالة `draw_player ()`.
 
 --- code ---
 ---
@@ -89,11 +89,11 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2
+def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2
 
-   global obstacle
+   عقبة عالمية
 
-   image(obstacle, ob_x, ob_y, 30, 30) #Resize to fit your theme
+   image (عقبة ، ob_x ، ob_y ، 30 ، 30) #Resize لتناسب موضوعك
 
 --- /code ---
 
@@ -101,12 +101,12 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
 --- collapse ---
 ---
-title: Use emoji characters
+العنوان: استخدم أحرف الرموز التعبيرية
 ---
 
-You can use emoji characters in the p5 `text()` function to represent your obstacles.
+يمكنك استخدام أحرف الرموز التعبيرية في دالة النص p5 `()` لاستخدام رمز تعبيري لتمثيل المشغل الخاص بك.
 
-Here's an example:
+إليك مثالاً:
 
 --- code ---
 ---
@@ -114,7 +114,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre
+إعداد def (): size (400، 400) text_size (40) # يتحكم في حجم الرموز التعبيرية text_align (CENTER، TOP) # الموضع حول المركز
 
 --- /code ---
 
@@ -124,7 +124,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
+def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2 نص ('🌵'، ob_x، ob_y) # استبدل بعقبتك
 
 --- /code ---
 
@@ -144,11 +144,11 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
+**نصيحة:** يمكنك استخدام عدة أشكال بسيطة في نفس الدالة لإنشاء مشغل أكثر تعقيدًا.
 
 --- collapse ---
 ---
-title: Draw an obstacle using multiple shapes
+العنوان: ارسم لاعبًا باستخدام أشكال متعددة
 ---
 
 ![desc](images/tree_obstacle.png)
@@ -159,7 +159,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke() fill(0,255,0) #Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 #رسم شجرة الصنوبر no_stroke() fill(0,255,0) #اخضر للاوراق الإبرية triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # بني للساق rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
 
@@ -167,15 +167,15 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 --- /task ---
 
-### Get your obstacle moving
+### احصل على عقبة تتحرك
 
 --- task ---
 
-Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
+أضف الآن تعليمات برمجية لزيادة موضع العائق `ص` لكل إطار ، واجعله يلتف حوله عندما يصل إلى أسفل لإنشاء تأثير عقبة أخرى.
 
-The p5 `frame_count` variable starts counting the frames when you click run.
+يبدأ المتغير p5 `frame_count` في حساب الإطارات عند النقر فوق "تشغيل".
 
-`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
+`ob_y٪ = height` يعين موضع `y` على الباقي عند القسمة على `ارتفاع`. مع ارتفاع `` "400" ، سيؤدي ذلك إلى تحويل 2401 `إلى` `` ، لذلك عندما تنحرف العوائق عن أسفل الشاشة ، فإنها تظهر مرة أخرى في الأعلى.
 
 --- code ---
 ---
@@ -183,23 +183,23 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Increases each frame ob_y %= height #Wrap around text('🌵', ob_x, ob_y) #Replace with your obstacle
+def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2 + frame_count # زيادة كل إطار ob_y٪ = height # الالتفاف حول نص ('🌵'، ob_x، ob_y) # استبدل العقبة الخاصة بك
 
 --- /code ---
 
 --- /task ---
 
-### Lots of obstacles
+### الكثير من العقبات
 
-You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
+يمكنك رسم الكثير من نسخ العائق الخاص بك في مواقع بدء مختلفة ولكن هذا يتطلب الكثير من العمل. دعنا نستخدم الاختصار.
 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
+<span style="color: #0faeb0">** الجيل الإجرائي **</span> يُستخدم في إنشاء عوالم اللعبة والعقبات ومشاهد الأفلام لإنشاء عشوائية ولكن مع تطبيق قواعد معينة. يعني <span style="color: #0faeb0">بذرة</span> أنه يمكنك الحصول على نفس النتائج في كل مرة تستخدم فيها نفس البذرة.</p>
 
 --- task ---
 
-This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
+يستخدم هذا الرمز حلقة من `لـ` مع `randint ()` لاختيار مواضع العائق لك. استدعاء الدالة العشوائية `()` أولاً يعني أنك ستحصل دائمًا على نفس الأرقام العشوائية. هذا يعني أن العوائق لن تقفز حول كل إطار ويمكنك تغيير البذرة حتى تحصل على واحدة تضع العوائق بشكل عادل.
 
 --- code ---
 ---
