@@ -1,29 +1,29 @@
-## Collision detection
+## Botsingsdetectie
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Endless runner games often end when the player collides with an obstacle.
+Eindeloze runner-games eindigen vaak wanneer de speler tegen een obstakel botst.
 </div>
 <div>
 
-![Image of finished step.](images/collision.png){:width="300px"}
+![Afbeelding van voltooide stap.](images/collision.png){:width="300px"}
 
 </div>
 </div>
 
-Now you can set up your player to react to an obstacle collision.
+Nu kunt je je speler instellen om te reageren op een botsing met een obstakel.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Collision detection**</span> is determining when two objects created inside a computer simulation — whether that's a game, and animation, or something else — are touching. There are several ways to do this, for example: 
-  - checking if the colours appearing at the location of an object are the colours of that object, or a different one
-  - keeping track of the shape of every object, and checking if those shapes overlap
-  - creating a set of boundary points, or lines, around an object and checking if they come into contact with any other 'collidable' objects
-When such a collision is detected, the program can react in some way. In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a powerup).
+<span style="color: #0faeb0">**Botsingsdetectie**</span> bepaalt wanneer twee objecten die in een computersimulatie zijn gemaakt elkaar raken, of dat nu een game is, een animatie of iets anders. Er zijn verschillende manieren om dit te doen, bijvoorbeeld: 
+  - controleren of de kleuren die op de locatie van een object verschijnen de kleuren van dat object zijn, of een andere kleur
+  - de vorm van elk object bijhouden en controleren of die vormen elkaar overlappen
+  - een reeks grenspunten of lijnen rond een object maken en controleren of ze in contact komen met andere 'botsbare' objecten
+Wanneer een dergelijke botsing wordt gedetecteerd, kan het programma op de een of andere manier reageren. In een videogame is dit meestal om schade aan te richten (als de speler in botsing komt met een vijand of gevaar) of om een voordeel te geven (als de speler in botsing komt met een power-up).
 </p>
 
 --- task ---
 
-In your `draw_player()` function, create a variable called `collide` and set it to get the colour at the position of the player.
+Maak in je `teken_speler()`-functie een variabele met de naam `botsen` en stel deze in om de kleur op de positie van de speler op te vragen.
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-collide = get(mouse_x, player_y)
+botsen = get(muis_x, speler_y)
 
 --- /code ---
 
@@ -39,23 +39,23 @@ collide = get(mouse_x, player_y)
 
 --- task ---
 
-Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
+Creëer een voorwaarde om te controleren `of` de `botsen` variabele gelijk is aan de `veilig` variabele — als dat zo is, dan raakt je speler veilig de achtergrond en is hij niet tegen een obstakel gebotst.
 
-Move your code to draw your player inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision.
+Verplaats je code om je speler te tekenen binnen jouw `if botsen == veilig` voorwaarde en voeg code toe aan de `else` voorwaarde om de speler te laten reageren op de botsing.
 
-**Choose:** How should your player react? You could:
-+ Change the image to a `crashed` version
-+ Use a different emoji for the player
-+ You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image
+**Kies:** Hoe moet je speler reageren? Je zou:
++ De afbeelding kunnen veranderen in een `gecrashte` versie
++ Een andere emoji voor de speler gebruiken
++ Je zou `tint()` kunnen gebruiken om het uiterlijk van een afbeelding te veranderen, vergeet niet om `no_tint()` aan te roepen na het tekenen van de afbeelding
 
 --- collapse ---
 ---
-title: Change the image
+title: Verander de afbeelding
 ---
 
-You can use a different image to represent your player when it collides with an obstacle.
+Je kunt een andere afbeelding gebruiken om je speler weer te geven wanneer deze tegen een obstakel botst.
 
-Here's an example:
+Hier is een voorbeeld:
 
 --- code ---
 ---
@@ -63,11 +63,11 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player(): player_y = int(height * 0.8)
+def teken_speler(): speler_y = int(height * 0,8)
 
-  collide = get(mouse_x, player_y)
+  botsen = get(muis_x, speler_y)
 
-  if collide == safe: #On background image(skiing, mouse_x, player_y, 30, 30) else: #Collided image(crashed, mouse_x, player_y, 30, 30)
+  if botsen == veilig: #Gelijk aan achtergrondkleur image(skien, muis_x, speler_y, 30, 30) else: #Gebotst image(gecrasht, muis_x, speler_y, 30, 30)
 
 --- /code ---
 
@@ -75,12 +75,12 @@ def draw_player(): player_y = int(height * 0.8)
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Emoji-tekens gebruiken
 ---
 
-You can use emoji characters in the p5 `text()` function to represent your collided player.
+Je kunt emoji-tekens in de p5-functie `text()` gebruiken om jouw gebotste speler weer te geven.
 
-Here's an example:
+Hier is een voorbeeld:
 
 --- code ---
 ---
@@ -88,7 +88,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre
+def setup(): size(400, 400) text_size(40) #Controleert de grootte van de emoji text_align(CENTER, TOP) #Positie rond het midden
 
 --- /code ---
 
@@ -98,7 +98,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_player(): if collide == safe: #On background text('🎈', mouse_x, player_y) else: #Collided text('💥', mouse_x, player_y)
+def teken_speler(): if botsen == veilig: #Gelijk aan chtergrondkleur text('🎈', muis_x, speler_y) else: #Gebotst text('💥', muis_x, speler_y)
 
 --- /code ---
 
@@ -112,38 +112,38 @@ def draw_player(): if collide == safe: #On background text('🎈', mouse_x, play
 
 --- task ---
 
-**Test:** Check if a collision is detected and the reaction takes place each time a collision occurs.
+**Test:** Controleer of er een botsing wordt gedetecteerd en de reactie plaatsvindt bij elke botsing.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** Mogelijk vindt je enkele fouten in jouw project die je moet oplossen. Here are some common bugs.
 
 --- collapse ---
 ---
-title: There is no collision when the player reaches an obstacle
+title: Er is geen botsing wanneer de speler een obstakel bereikt
 ---
 
-If your player character touches the obstacle and nothing happens, there are a few things you should check:
+Als je speler een obstakel raakt en er gebeurt niets, zijn er een paar dingen die je moet controleren:
 
- - Make sure you call `draw_obstacles()` before `draw_players()`. If you check for collisions before drawing the obstacles in a frame, then there won't be any obstacles to collide with!
- - Make sure you are using the exact same colour when drawing the object and in the `if` statement checking for the collision. You can make sure of this by using the same `global` variable in both places.
- - Are you drawing the player character before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the player. You need to check the colour first and **then** draw the player.
- - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using a different image?
- - Have you correctly indented the code for your `if` statement so it runs when the condition is met?
+ - Zorg ervoor dat je `teken_obstakels()` aanroept voor `teken_speler()`. Als je op botsingen controleert voordat je de obstakels in een frame tekent, zijn er geen obstakels om tegen te botsen!
+ - Zorg ervoor dat je exact dezelfde kleur gebruikt bij het tekenen van het object en in de `if` functie om te controleren op de botsing. Je kunt hiervoor zorgen door op beide plaatsen dezelfde `global`-variabele te gebruiken.
+ - Teken je het personage van de speler voordat je de kleur bij de muiscoördinaten controleert? Als dat zo is, krijg je alleen de kleuren van de speler. Je moet eerst de kleur controleren en **dan** de speler tekenen.
+ - Heb je code in het `else`-gedeelte staan om iets anders te doen wanneer een botsing wordt gedetecteerd, zoals het aanbrengen van een kleur of het gebruik van een andere afbeelding?
+ - Heb je de code voor je `if`-commando correct ingesprongen, zodat het wordt uitgevoerd wanneer aan de voorwaarde is voldaan?
 
-Printing the colour of the pixel you are checking for a collision can be useful:
+Het kan handig zijn om de kleur af te drukken van de pixel waarop je controleert op een botsing:
 
 ```python
-  print(red(collide), green(collide), blue(collide))
+  print(red(botsen), green(botsen), blue(botsen))
 ```
 
-You can also print a circle around the point you are checking and adjust the point you check if you need to:
+Je kunt ook een cirkel afdrukken rond het punt dat je aan het controleren bent en dat punt aanpassen als dat nodig is:
 
 ```python
   no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #Draw collision point
+  ellipse(muis_x, speler_y, 10, 10) #Teken botsingspunt
 ```
 
 --- /collapse ---
@@ -152,46 +152,45 @@ You can also print a circle around the point you are checking and adjust the poi
 
 --- task ---
 
-**Optional:** At the moment, you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom or left- and right-most edges.
+**Optioneel:** Op dit moment detecteer je alleen botsingen op één pixel op jouw speler. Je kunt ook botsingen detecteren bij andere pixels aan de rand van je speler, zoals de onderste of de linker- en rechterrand.
 
 --- collapse ---
 ---
-title: Collision detection with multiple pixels
+title: Botsingsdetectie met meerdere pixels
 ---
 
 ```python
-def draw_player():
-
-  player_y = int(height * 0.8)
-  #Useful for debugging
-  #Draw circles around the pixels to check for collisions
+teken_speler():
+  speler_y = int(height * 0.8)
+  #Nuttig voor het opsporen van fouten
+  #Teken cirkels rond de pixels om te controleren op botsingen
 
   no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #Draw collision point
-  ellipse(mouse_x, player_y + 40, 10, 10)
-  ellipse(mouse_x - 12, player_y + 20, 10, 10)
-  ellipse(mouse_x + 12, player_y + 20, 10, 10)
+  ellipse(muis_x, speler_y, 10, 10) #Teken botsingspunt
+  ellipse(muis_x, speler_y + 40, 10, 10)
+  ellipse(muis_x - 12, speler_y + 20, 10, 10)
+  ellips(muis_x + 12, speler_y + 20, 10, 10)
 
-  collide = get(mouse_x, player_y)
-  collide2 = get(mouse_x - 12, player_y + 20)
-  collide3 = get(mouse_x + 12, player_y + 20)
-  collide4 = get(mouse_x, player_y + 40)
+  botsen = get(muis_x, speler_y)
+  botsen2 = get(muis_x - 12, speler_y + 20)
+  botsen3 = get(muis_x + 12, speler_y + 20)
+  botsen4 = get(muis_x, speler_y + 40)
 
-  if mouse_x < width: #Off the left of the screen
-    collide2 = safe
+  if muis_x < width: #Voorbij linkerkant van het scherm
+    botsen2 = veilig
 
-  if mouse_x > width: #Off the right of the screen
-    collide3 = safe
+  if muis_x > width: #Voorbij rechterkant van het scherm
+    botsen3 = veilig
 
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    text('🎈', mouse_x, player_y)
+  if botsen == veilig and botsen2 == veilig and botsen3 == veilig and botsen4 == veilig:
+    text('🎈', muis_x, speler_y)
   else:
-    text('💥', mouse_x, player_y)
+    text('💥', muis_x, speler_y)
 ```
 
 --- /collapse ---
 
-You could even use a loop and check lots of different pixels. This is how collision detection works in games.
+Je zou zelfs een lus kunnen gebruiken en veel verschillende pixels kunnen controleren. Dat is hoe botsingsdetectie werkt in games.
 
 --- /task ---
 
