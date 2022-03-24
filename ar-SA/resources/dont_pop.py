@@ -1,16 +1,16 @@
 #!/bin/python3
 
-# Import library code
+# استيراد مكتبة الشفرات البرمجية
 from p5 import *
 from random import randint, seed
 
 level = 1
 score = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
+# تظهر دالة draw_obstacle هنا
+def draw_obstacles ():
   
-  global level
+  المستوى العالمي
   
   seed(12345678)
   
