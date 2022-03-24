@@ -1,81 +1,81 @@
-## Reflection
+## Reflectie
 
-Well done, you made a game!  Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+Goed gedaan, je hebt een spel gemaakt!  Nu is het tijd om te reflecteren - reflecteren is een belangrijk onderdeel van leren, omdat het helpt om nieuwe verbindingen in je hersenen te maken.
 
-Answer the three questions below to reflect on what you've learnt.
+Beantwoord de drie onderstaande vragen om terug te kijken op wat je hebt geleerd.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Druk na elke vraag op **indienen**. Je wordt naar het juiste antwoord geleid. Je kunt deze activiteit zo vaak doen als je wilt.
 
-Have fun!
+Veel plezier!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Vraag 1 van 3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+Je hebt veel `if` commando's gebruikt om het gedrag van je spel te sturen. Sommigen van hen hadden mogelijk complexere voorwaarden, waarbij ze `and` gebruikten om meerdere tests tegelijk uit te voeren. Als je het volgende stukje voorwaardelijke code zou uitvoeren, wat zou je dan verwachten als uitvoer?
 
 ```python
 score = 5000
-lives = 2
+levens = 2
 
-if score >= 5000 and lives >= 3:
-  print('Great flying!')
+if score >= 5000 and levens >= 3:
+  print('Dat vliegt geweldig!')
 
 if score >= 5000: 
-  print('Doing well!')
-  if lives > 1:
-    print('Keep going!')
+  print('Je doet het goed!')
+  if levens > 1:
+    print('Ga door!')
   else:
-    print('But be careful!')
+    print('Maar wees voorzichtig!')
 
-elif lives > 1:
-  print('Push harder!')
+elif levens > 1:
+  print('Harder werken!')
 
 else:
-  print('Head for base!')
+  print('Ga naar de basis!')
 ```
 
 --- choices ---
 
 - ( )
 ```
-Great flying!
+Dat vliegt geweldig!
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+Hoewel `score >= 5000` waar is, moeten voor een `and` voorwaarde beide delen waar zijn, en `levens >= 3` is onwaar.
 
   --- /feedback ---
 
 - (x)
 ```
-Doing well!
-Keep going!
+Je doet het goed!
+Ga door!
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+Dit is correct — `score >= 5000` is waar, en dat geldt ook voor `levens > 1` in de geneste `if` -conditie.
 
   --- /feedback ---
 
 - ( )
 ```
-Doing well!
+Je doet het goed!
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+Bijna, maar `score >= 5000` is niet de enige voorwaarde die het programma "waar" zou vinden terwijl het werd uitgevoerd.
 
   --- /feedback ---
 
 - ( )
 ```
-Push harder!
+Harder werken!
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+Terwijl `levens > 1` waar is, wordt alleen de code binnen de eerste ware voorwaarde in een `if`/`elif`/`else` instructie uitgevoerd, en `levens > 1` is niet de eerste voorwaarde die waar is.
 
   --- /feedback ---
 
