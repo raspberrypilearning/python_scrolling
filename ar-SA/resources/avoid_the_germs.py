@@ -3,10 +3,10 @@
 from p5 import *
 from random import randint, seed
 
-المستوى = 1
+level = 1
 score = 0
 
-def safe_player ():
+def safe_player():
   
   global player_y
   
