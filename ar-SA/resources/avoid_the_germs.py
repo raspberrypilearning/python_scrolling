@@ -10,7 +10,7 @@ def safe_player ():
   
   global player_y
   
-  # Face
+  # وجه
   fill(200, 134, 145)
   ellipse (mouse_x - ، player_y + ، 60، 60)
 
@@ -119,8 +119,9 @@ def draw():
     background(safe)
     fill(145, 134, 126)
     text('Score: ' + str(score), width/2, 20)
+
     draw_obstacles()
-    draw_player()
+    draw_player ()
   
-# Keep this to run your code
+# احتفظ بهذا لتشغيل التعليمات البرمجية الخاصة بك
 run()
