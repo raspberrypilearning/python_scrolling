@@ -45,7 +45,7 @@ filename: main.py - setup()
 
 قم بإنشاء متغير يسمى `خزن` لتخزين لون الخلفية بناءً على المظهر الذي تريده للعبتك.
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+هذا هو اللون الذي خزن أن يكون عليه اللاعب وستستخدم هذا المتغير مرة أخرى لاحقًا.
 
 --- code ---
 ---
@@ -53,9 +53,9 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw():    
-safe = color(200, 100, 0) #Add the colour of your theme   
-background(safe)
+def draw ():    
+safe = color (200، 100، 0) # أضف لون الخلفية الخاصة بك   
+(خزن)
 
 --- /code ---
 
@@ -65,7 +65,7 @@ background(safe)
 
 --- task ---
 
-**Test:** Run your code to see the background colour. قم بتغييره حتى تصبح راضيًا عن لون وحجم الشاشة.
+**اختبار:** قم بتشغيل الكود الخاص بك لمعرفة لون الخلفية. قم بتغييره حتى تصبح راضيًا عن لون وحجم الشاشة.
 
 --- /task ---
 
@@ -123,7 +123,7 @@ draw_player ()
 
 انقر على **إدارة الصور** أيقونة.
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![رمز الصورة في الجزء العلوي الأيمن من منطقة الرمز.](images/manage-images.png)
 
 سيتم عرض الصور المضمنة في مشروع البداية في قائمة `مكتبة الصور`.
 
@@ -153,12 +153,12 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+def draw_player ():    
+player_y = int (height * 0.8) # يتم وضعه باتجاه أسفل الشاشة
 
-  global player
+  لاعب عالمي
 
-  image(player, mouse_x, player_y, 30, 30)
+  image (player، mouse_x، player_y، 30، 30)
 
 --- /code ---
 
@@ -166,7 +166,7 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- collapse ---
 ---
-title: Use emoji characters
+العنوان: استخدم أحرف الرموز التعبيرية
 ---
 
 يمكنك استخدام أحرف الرموز التعبيرية في دالة النص p5 `()` لاستخدام رمز تعبيري لتمثيل المشغل الخاص بك.
@@ -301,7 +301,7 @@ image(ملف الصورة ,تنسيق x, تنسيق y, العرض ,الارتف�
 العنوان: حجم الرموز التعبيرية خاطئ
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+إذا كان رمزك التعبيري كبيرًا جدًا أو صغيرًا جدًا ، فغيّر الإدخال إلى `text_size ()`.
 
 --- /collapse ---
 
