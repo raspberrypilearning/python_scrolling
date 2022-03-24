@@ -1,19 +1,19 @@
-## Share
+## Delen
 
-If you are in a club, why not share your project with friends?
+Als je lid bent van een club, waarom zou je je project dan niet delen met vrienden?
 
-You could also show your family how your project works by sending them a link.
+Je kunt je familie ook laten zien hoe je project werkt door ze een link te sturen.
 
-To get a link, go to the **Share** menu button in the upper-right of your Trinket's edit page and select **Link**.
+Om een link te verkrijgen, ga naar de menuknop **Share** in de rechterbovenhoek van de Trinket bewerkingspagina en selecteer **Link**.
 
-![The 'Share' menu button extended, with 'Link' highlighted.](images/share-button.png)
+![De menuknop 'Share' (Delen), met 'Link' gemarkeerd.](images/share-button.png)
 
-**Tip:** You can share a link to your project even if you don't have a Trinket account; however, without an account, the link to your project will change each time you update it. If you have shared the link with someone, you will need to send a new link for them to see the changes.
+**Tip:** Je kunt een link naar je project delen, zelfs als je geen Trinket-account hebt; echter zonder account verandert de link naar je project elke keer dat je het bijwerkt. Als je de link met iemand hebt gedeeld, moet je dan een nieuwe link sturen zodat diegene de wijzigingen kan zien.
 
 --- task ---
 
-Inspire the Raspberry Pi Foundation community with your project!
+Inspireer de Raspberry Pi Foundation-gemeenschap met jouw project!
 
-To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+Om je project toe te voegen aan onze ['Niet botsen - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, graag [dit formulier](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"} invullen.
 
 --- /task ---
