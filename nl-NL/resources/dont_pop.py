@@ -1,14 +1,14 @@
 #!/bin/python3
 
-# Import library code
+# Bibliotheekcode importeren
 from p5 import *
 from random import randint, seed
 
 level = 1
 score = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
+# De teken_obstakel functie komt hier
+def teken_obstakels():
   
   global level
   
@@ -16,64 +16,64 @@ def draw_obstacles():
   
   if frame_count % height == height - 1 and level < 5:
     level += 1
-    print('You reached level', level)
+    print('Je hebt level', level, 'bereikt')
     
   for i in range(6 + level):
-    ob_x = randint(0, height)
-    ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height # wrap around
-    text('🌵', ob_x, ob_y)
+    obstakel_x = randint(0, height)
+    obstakel_y = randint(0, height) + (frame_count * level)
+    obstakel_y %= height # omwikkelen
+    text('🌵', obstakel_x, obstakel_y)
 
     
-# The draw_player function goes here
-def draw_player():
+# De teken_speler functie komt hier
+def teken_speler():
   
   global score, level
   
-  player_y = int(height * 0.8)
+  speler_y = int(height * 0,8)
   
   no_fill()
-  #ellipse(mouse_x, player_y, 10, 10) # draw collision point
-  #ellipse(mouse_x, player_y + 40, 10, 10)
-  #ellipse(mouse_x - 12, player_y + 20, 10, 10)
-  #ellipse(mouse_x + 12, player_y + 20, 10, 10)
+  #ellipse(muis_x, speler_y, 10, 10) # teken botsingspunt
+  #ellipse(muis_x, speler_y + 40, 10, 10)
+  #ellipse(muis_x - 12, speler_y + 20, 10, 10)
+  #ellipse(muis_x + 12, speler_y + 20, 10, 10)
 
-  collide = get(mouse_x, player_y)
-  collide2 = get(mouse_x - 12, player_y + 20)
-  collide3 = get(mouse_x + 12, player_y + 20)
-  collide4 = get(mouse_x, player_y + 40)
+  botsen = get(muis_x, speler_y)
+  botsen2 = get(muis_x - 12, speler_y + 20)
+  botsen3 = get(muis_x + 12, speler_y + 20)
+  botsen4 = get(muis_x, speler_y + 40)
   
-  if mouse_x < width: # off the left of the screen
-    collide2 = safe
+  if muis_x < width: # voorbij de linkerkant van het scherm
+    botsen2 = veilig
   
-  if mouse_x > width: # off the right of the screen
-    collide3 = safe
+  if muis_x > width: # voorbij de rechterkant van het scherm
+    botsen3 = veilig
     
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    text('🎈', mouse_x, player_y)
+  if botsen == veilig and botsen2 == veilig and botsen3 == veilig and botsen4 == veilig:
+    text('🎈', muis_x, speler_y)
     score += level
   else:
-    text('💥', mouse_x, player_y)
+    text('💥', muis_x, speler_y)
     level = 0
     
   
 def setup():
-  # Setup your animation here
+  # Stel hier je animatie in
   text_size(40)
-  text_align(CENTER, TOP) # position around the centre, top
+  text_align(CENTER, TOP) # positie rond het midden, bovenaan
   size(400, 400)
   
   
 def draw():
-  # Things to do in every frame
-  global score, safe, level
-  safe = color(200, 150, 0)
+  # Dingen om te doen in elk frame
+  global score, veilig, level
+  veilig = color(200, 150, 0)
   
   if level > 0:
-    background(safe) 
+    background(veilig) 
     fill(255)
     text('Score: ' + str(score), width/2, 20)
-    draw_obstacles()
-    draw_player()
+    teken_obstakels()
+    teken_speler()
   
 run()
