@@ -1,32 +1,32 @@
-## Set the theme
+## Het opzetten van het thema
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Set the theme of your game and create a player character that follows the mouse pointer.
+Stel het thema van je spel in en maak een spelerspersonage dat de muisaanwijzer volgt.
 
 </div>
 <div>
 
-![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+![Afbeelding van schildpad formaat 100x100 tegen een blauwe achtergrond met schermformaat 400x400.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
-- A sport or hobby
-- A movie, show, or game
-- Science or nature
-- Anything else!
+Wat is het thema van je spel? Je kunt alles kiezen wat je maar wilt. Hier zijn enkele ideeën:
+- Een sport of hobby
+- Een film, show of game
+- Wetenschap of natuur
+- Iets anders!
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
+Open het [startproject](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket wordt geopend in een ander browsertabblad.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Set the size of your canvas.
+**Kies:** Stel de grootte van je canvas in.
 
 --- code ---
 ---
@@ -43,9 +43,9 @@ size(400, 400)
 
 --- task ---
 
-Create a variable called `safe` to store the background colour based on the theme you want for your game.
+Maak een variabele met de naam `veilig` om de achtergrondkleur op te slaan op basis van het thema dat je voor jouw spel wilt.
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+Dit is de kleur waarop de speler veilig kan staan en je zult deze variabele later opnieuw gebruiken.
 
 --- code ---
 ---
@@ -54,8 +54,8 @@ filename: main.py - draw()
 ---
 
 def draw():    
-safe = color(200, 100, 0) #Add the colour of your theme   
-background(safe)
+veilig = color(200, 100, 0) #Voeg de kleur van je thema toe   
+background(veilig)
 
 --- /code ---
 
@@ -65,19 +65,19 @@ background(safe)
 
 --- task ---
 
-**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+**Test:** Voer je code uit om de achtergrondkleur te zien. Verander het totdat je tevreden bent met de kleur en de grootte van het scherm.
 
 --- /task ---
 
-Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
+Kies nu het personage dat het spel speelt en de obstakels ontwijkt. Is het een object, persoon, dier of iets anders?
 
-The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
+De speler verschijnt op een vaste `y` positie en dezelfde `x` positie als de muisaanwijzer, die is opgeslagen in de `p5` variabele `muis_x`.
 
 --- task ---
 
-It's a good idea to organise the code for drawing the player character into a function.
+Het is een goed idee om de code voor het personage van de speler in een functie op te nemen.
 
-Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
+Definieer een `teken_speler()` functie en creëer een `speler_y` positie voor de vaste `y` positie van de speler:
 
 --- code ---
 ---
@@ -85,12 +85,12 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+def teken_speler():    
+speler_y = int(height * 0.8) #Gepositioneerd naar de onderkant van het scherm
 
 --- /code ---
 
-Add code to `draw()` to call `draw_player()` each frame.
+Voeg code toe aan `draw()` om `teken_speler()` voor elk frame aan te roepen.
 
 --- code ---
 ---
@@ -99,39 +99,39 @@ filename: main.py - draw()
 ---
 
 def draw():    
-safe = color(200, 100, 0) #Your chosen colour    
-background(safe)    
-draw_player()
+veilig = color(200, 100, 0) #Jouw gekozen kleur    
+background(veilig)    
+teken_speler()
 
 --- /code ---
 
 --- /task ---
 
-Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
+Vervolgens voeg je code toe aan de functie `teken_speler()` om je vorm te tekenen. Mogelijk moet je ook `setup()` code toevoegen.
 
 --- task ---
 
-**Choose:** What does your player look like? Your player could be:
-+ An image provided in the starter project
-+ An emoji 🎈 or text
-+ Drawn using a series of shapes
+**Kies:** Hoe ziet je speler eruit? Je speler kan zijn:
++ Een afbeelding in het startproject
++ Een emoji 🎈 of tekst
++ Getekend met een reeks vormen
 
 --- collapse ---
 ---
-title: Use a starter image
+title: Gebruik een startafbeelding
 ---
 
-Click on the **manage images** icon.
+Klik op het pictogram **manage images** (afbeeldingen beheren).
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![Het afbeeldingspictogram in de rechterbovenhoek van het codegebied.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+Afbeeldingen die in het startersproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
 
-![The Image library with list of included images.](images/starter-images.png)
+![De afbeeldingenbibliotheek met een lijst met opgenomen afbeeldingen.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Noteer de naam van de afbeelding die je wilt gebruiken.
 
-Load the image into the `setup()` function
+Laad de afbeelding in de `setup()` functie
 
 --- code ---
 ---
@@ -141,11 +141,11 @@ filename: main.py - setup()
 
 def setup():   
 size(400, 400)    
-player = load_image('skiing.png') #Load your image
+speler = load_image('skiing.png') #Laad je afbeelding
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_player()` function.
+Roep de `image()` aan en stel deze in als global in de `teken_speler()` functie.
 
 --- code ---
 ---
@@ -153,12 +153,12 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+def teken_speler():    
+speler_y = int(height * 0.8) #Gepositioneerd naar de onderkant van het scherm
 
-  global player
+  global speler
 
-  image(player, mouse_x, player_y, 30, 30)
+  image(speler, muis_x, speler_y, 30, 30)
 
 --- /code ---
 
@@ -166,12 +166,12 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Emoji-tekens gebruiken
 ---
 
-You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
+Je kunt emoji-tekens gebruiken in de p5-functie `text()` om een emoji als speler te gebruiken.
 
-Here's an example:
+Hier is een voorbeeld:
 
 --- code ---
 ---
@@ -181,8 +181,8 @@ filename: main.py - setup()
 
 def setup():    
 size(400, 400)     
-text_size(40) #Controls the size of the emoji     
-text_align(CENTER, TOP) #Position around the centre
+text_size(40) #Bepaalt de grootte van de emoji     
+text_align(CENTER, TOP) #Positie rond het midden
 
 --- /code ---
 
@@ -192,9 +192,9 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():     
-player_y = int(height * 0.8)    
-text('🎈', mouse_x, player_y)
+def teken_speler():     
+speler_y = int(height * 0.8)    
+text('🎈', muis_x, speler_y)
 
 --- /code ---
 
@@ -214,14 +214,14 @@ text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex player.
+**Tip:** Je kunt meerdere eenvoudige vormen in dezelfde functie gebruiken om een complexere speler te maken.
 
 --- collapse ---
 ---
-title: Draw a player using multiple shapes
+title: Teken een speler met meerdere vormen
 ---
 
-![desc](images/face_player.png)
+![beschrijving](images/face_player.png)
 
 --- code ---
 ---
@@ -229,23 +229,23 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8)    
+def teken_speler():    
+speler_y = int(height * 0.8)    
 noStroke()    
-#Face    
+#Gezicht    
 fill(0, 200, 100)    
-ellipse(mouse_x, player_y, 60, 60)
+ellipse(muis_x, speler_y, 60, 60)
 
-  #Eyes    
+  #Ogen    
 fill(0, 100, 200)    
-ellipse(mouse_x - 10, player_y - 10, 20, 20)    
-ellipse(mouse_x + 10, player_y - 10, 20, 20)    
+ellipse(muis_x - 10, speler_y - 10, 20, 20)    
+ellipse(muis_x + 10, speler_y - 10, 20, 20)    
 fill(0)    
-ellipse(mouse_x - 10, player_y - 10, 10, 10)     
-ellipse(mouse_x + 10, player_y - 10, 10, 10)     
+ellipse(muis_x - 10, speler_y - 10, 10, 10)     
+ellipse(muis_x + 10, speler_y - 10, 10, 10)     
 fill(255)    
-ellipse(mouse_x - 12, player_y - 12, 5, 5)    
-ellipse(mouse_x + 12, player_y - 12, 5, 5)
+ellipse(muis_x - 12, speler_y - 12, 5, 5)    
+ellipse(muis_x + 12, speler_y - 12, 5, 5)
 
 --- /code ---
 
@@ -255,53 +255,53 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player.
+**Test:** Voer je code uit en beweeg de muis om de speler te besturen.
 
-Does it move like you expect?
+Beweegt het zoals verwacht?
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** Mogelijk vindt je enkele fouten in jouw project die je moet oplossen. Hier zijn enkele veelvoorkomende fouten.
 
 --- task ---
 
 --- collapse ---
 ---
-title: I can't see the player
+title: Ik zie de speler niet
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+Probeer over te schakelen naar volledig scherm. Controleer ook de `x` en `y` coördinaten die je hebt gebruikt om de speler te tekenen — zorg ervoor dat ze binnen het canvas staan dat je hebt gemaakt met `size()`.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image isn't loading
+title: Een afbeelding wordt niet geladen
 ---
 
-First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+Controleer eerst of de afbeelding in de `Afbeeldingenbibliotheek`staat. Controleer vervolgens de bestandsnaam heel zorgvuldig - onthoud dat hoofdletters anders zijn dan kleine letters en interpunctie is belangrijk.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image is the wrong size
+title: Een afbeelding heeft de verkeerde afmeting
 ---
 
-Check the inputs that control the width and height of the image:
+Controleer de invoer die de breedte en hoogte van de afbeelding bepaalt:
 
 ```python
-image(image_file, x_coord, y_coord, width, height)
+image(afbeelding_bestand, x_coord, y_coord, breedte, hoogte)
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An emoji is the wrong size
+title: Een emoji heeft de verkeerde afmeting
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+Als je emoji te groot of te klein is, verander je de invoer in `text_size()`.
 
 --- /collapse ---
 
