@@ -3,18 +3,18 @@
 from p5 import *
 from random import randint, seed
 
-level = 1
+المستوى = 1
 score = 0
 
-def safe_player():
+def safe_player ():
   
   global player_y
   
   # Face
-  fill(200, 134, 145)
-  ellipse(mouse_x, player_y, 60, 60)
+  ملء (200 ، 134 ، 145)
+  القطع الناقص (mouse_x، player_y، 60، 60)
 
-  # Eyes
+  # عيون
   fill(178, 200, 145)
   ellipse(mouse_x - 10, player_y - 10, 20, 20)
   ellipse(mouse_x + 10, player_y - 10, 20, 20)
@@ -25,7 +25,7 @@ def safe_player():
   ellipse(mouse_x - 12, player_y - 12, 5, 5)
   ellipse(mouse_x + 12, player_y - 12, 5, 5)
   
-  # Mouth
+  # فم
   fill(0)
   ellipse(mouse_x, player_y + 10, 15, 10)
   fill(200, 134, 145)
