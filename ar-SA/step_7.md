@@ -1,43 +1,43 @@
-## Upgrade your project
+## قم بترقية مشروعك
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-If you have time you can upgrade your project.
+إذا كان لديك الوقت ، يمكنك تطوير مشروعك.
 </div>
 <div>
 
-![Example sace project with lives.](images/example1.png){:width="300px"}
+! [مثال مشروع sace مع حيوات.] (images / example1.png) {: width = "300px"}
 
 </div>
 </div>
 
-Here are some ideas you could try:
+إليك بعض الأفكار لمساعدتك:
 
-### Include a variety of obstacles
-You can add variety to your obstacles in a few ways:
- - Randomly choose between multiple images, emojis, or obstacle drawing functions
- - Randomly adjust the colour, shape, or size of obstacles by changing the parameters that draw them
- - Animate the obstacle by adding rotation, a colour change, or some other visual difference controlled by `frame_count`
+### قم بتضمين مجموعة متنوعة من العقبات
+يمكنك إضافة مجموعة متنوعة إلى عقباتك بعدة طرق:
+ - اختر عشوائيًا بين العديد من الصور أو الرموز التعبيرية أو دوال رسم العوائق
+ - اضبط لون العوائق أو شكلها أو حجمها عشوائيًا عن طريق تغيير المتغيرات التي ترسمها
+ - حرك العائق عن طريق إضافة دوران ، أو تغيير اللون ، أو بعض الاختلافات المرئية الأخرى التي يتم التحكم فيها بواسطة `frame_count`
 
-### Add a win condition
-You can have players win the game in a few ways:
- - Achieving a winning score
- - Reaching a certain level of the game
+### أضف شرط الفوز
+يمكنك جعل اللاعبين يفوزون باللعبة بعدة طرق:
+ - تحقيق نتيجة الفوز
+ - الوصول إلى مستوى معين من اللعبة
 
-Once they have won, you should tell them somehow — maybe using `print()` or `text()` and then stop the game.
+بمجرد فوزهم ، يجب أن تخبرهم بطريقة ما - ربما باستخدام `طباعة ()` أو `نص ()` ثم إيقاف اللعبة.
 
-### Give players more than one life
-Add lives to your game, to allow players to survive a few collisions. This is a little trickier than just doing `lives =- 1` every time they collide with something:
- - The player may spend multiple frames in contact with an object, and so lose more than one life for a single collision — you'll need to prevent that from happening
- - You will also need a way for players to know how many lives they have left, and maybe some sort of warning that tells them when they're on their last life
- - You could add an object that, when the player collides with it, gives them an extra life. Remember that you'll need to modify your regular collision code so as it doesn't subtract a life at the same time!
+### امنح اللاعبين أكثر من حياة واحدة
+أضف الأرواح إلى لعبتك ، للسماح للاعبين بالنجاة من بعض الاصطدامات. هذا أصعب قليلاً من مجرد القيام بحياة `= - 1` في كل مرة يصطدمون بشيء ما:
+ - قد يقضي اللاعب إطارات متعددة على اتصال بجسم ما ، وبالتالي يفقد أكثر من حياة لتصادم واحد - ستحتاج إلى منع حدوث ذلك
+ - ستحتاج أيضًا إلى وسيلة للاعبين لمعرفة عدد الأرواح المتبقية لديهم ، وربما نوعًا من التحذير يخبرهم عندما يكونون في حياتهم الأخيرة
+ - يمكنك إضافة كائن ، عندما يصطدم به اللاعب ، يمنحه حياة إضافية. تذكر أنك ستحتاج إلى تعديل الشفرة البرمجية للاصطدام العادي بحيث لا يطرح الحياة في نفس الوقت!
 
-Each example project in the [Introduction](./) has a **See Inside** link for you to open the project and look at the code to get ideas and see how they work. The "Dodge Asteroids" project below has all of these features:
+يحتوي كل مشروع مثال في [مقدمة](./) على رابط **انظر داخل** لكي تفتح المشروع وتنظر إلى الشفرة البرمجية للحصول على أفكار ومعرفة كيفية عملها. يحتوي مشروع "Dodge Asteroids" أدناه على كل هذه الميزات:
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
+** دودج كويكبات **: [راجع الداخل] (https://trinket.io/python/d156014e67) {: target = "_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -45,6 +45,6 @@ Each example project in the [Introduction](./) has a **See Inside** link for you
 </div>
 </div>
 
-Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
+ألقِ نظرة على بعض مشاريع "لا تصطدم" التي أنشأها أعضاء المجتمع في [لا تتعارض مع مؤسسة Raspberry Pi Foundation - مكتبة المجتمع](https://wke.lt/w/s/KobNfx){: target = "_ blank"}.
 
 --- save ---
