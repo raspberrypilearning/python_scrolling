@@ -1,32 +1,32 @@
-## Set the theme
+## عيّن الموضوع
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Set the theme of your game and create a player character that follows the mouse pointer.
+عيّن موضوع لعبتك وأنشئ شخصية لاعب تتبع مؤشر الماوس.
 
 </div>
 <div>
 
-![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+! [صورة سلحفاة بحجم 100 × 100 مقابل خلفية زرقاء وشاشة بحجم 400 × 400.] (images / theme-turtle.png) {: width = "300px"}
 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
-- A sport or hobby
-- A movie, show, or game
-- Science or nature
-- Anything else!
+ما هو موضوع لعبتك؟ يمكنك اختيار أي شيء تريده. إليك بعض الأفكار:
+- رياضة أو هواية
+- فيلم أو عرض أو لعبة
+- العلم أو الطبيعة
+- أي شيء آخر!
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
+افتح مشروع البدء [](https://trinket.io/python/cda05e5911){: target = "_ blank"}. سيتم فتح Trinket في علامة تبويب متصفح أخرى.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Set the size of your canvas.
+**اختر:** اضبط حجم اللوحة القماشية.
 
 --- code ---
 ---
@@ -45,7 +45,7 @@ filename: main.py - setup()
 
 قم بإنشاء متغير يسمى `خزن` لتخزين لون الخلفية بناءً على المظهر الذي تريده للعبتك.
 
-هذا هو اللون الذي خزن أن يكون عليه اللاعب وستستخدم هذا المتغير مرة أخرى لاحقًا.
+This is the colour that it is safe for the player to be on and you will use this variable again later.
 
 --- code ---
 ---
@@ -53,9 +53,9 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw ():    
-safe = color (200، 100، 0) # أضف لون الخلفية الخاصة بك   
-(خزن)
+def draw():    
+safe = color(200, 100, 0) #Add the colour of your theme   
+background(safe)
 
 --- /code ---
 
@@ -65,7 +65,7 @@ safe = color (200، 100، 0) # أضف لون الخلفية الخاصة بك
 
 --- task ---
 
-**اختبار:** قم بتشغيل الكود الخاص بك لمعرفة لون الخلفية. قم بتغييره حتى تصبح راضيًا عن لون وحجم الشاشة.
+**Test:** Run your code to see the background colour. قم بتغييره حتى تصبح راضيًا عن لون وحجم الشاشة.
 
 --- /task ---
 
@@ -123,7 +123,7 @@ draw_player ()
 
 انقر على **إدارة الصور** أيقونة.
 
-![رمز الصورة في الجزء العلوي الأيمن من منطقة الرمز.](images/manage-images.png)
+![The picture icon in the top right of the code area.](images/manage-images.png)
 
 سيتم عرض الصور المضمنة في مشروع البداية في قائمة `مكتبة الصور`.
 
@@ -153,12 +153,12 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player ():    
-player_y = int (height * 0.8) # يتم وضعه باتجاه أسفل الشاشة
+def draw_player():    
+player_y = int(height * 0.8) #Positioned towards the screen bottom
 
-  لاعب عالمي
+  global player
 
-  image (player، mouse_x، player_y، 30، 30)
+  image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -166,7 +166,7 @@ player_y = int (height * 0.8) # يتم وضعه باتجاه أسفل الشاش
 
 --- collapse ---
 ---
-العنوان: استخدم أحرف الرموز التعبيرية
+title: Use emoji characters
 ---
 
 يمكنك استخدام أحرف الرموز التعبيرية في دالة النص p5 `()` لاستخدام رمز تعبيري لتمثيل المشغل الخاص بك.
@@ -301,7 +301,7 @@ image(ملف الصورة ,تنسيق x, تنسيق y, العرض ,الارتف�
 العنوان: حجم الرموز التعبيرية خاطئ
 ---
 
-إذا كان رمزك التعبيري كبيرًا جدًا أو صغيرًا جدًا ، فغيّر الإدخال إلى `text_size ()`.
+If your emoji is too big or too small, change the input to `text_size()`.
 
 --- /collapse ---
 
