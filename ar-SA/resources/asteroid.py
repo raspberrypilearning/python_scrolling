@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Import library code
+# استيراد مكتبة الشفرات البرمجية
 from p5 import *
 from random import randint, seed
 
@@ -105,8 +105,8 @@ def setup():
   global rocket, rock, random_seed
   
   text_size(40)
-  text_align(CENTER, TOP) # position around the centre, top
-  الحجم (400 ، 400)
+  text_align (CENTER ، TOP) # موضع حول المركز ، أعلى
+  size(400, 400)
   
   rocket = load_image('rocket.png')
   rock = load_image('moon.png')
