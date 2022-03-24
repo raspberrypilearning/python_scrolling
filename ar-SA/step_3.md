@@ -1,19 +1,19 @@
-## Create obstacles
+## اصنع عقبات
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Create the obstacles that you will have to avoid to keep playing the game.
+قم بإنشاء العقبات التي سيتعين عليك تجنبها لمواصلة لعب اللعبة.
 </div>
 <div>
 
-![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
+! [مثال لمشروع تزلج بعوائق شجرية] (images / brothers.png) {: width = "300px"}
 
 </div>
 </div>
 
-### Start with one obstacle
+### ابدأ بعائق واحد
 
-You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
+يمكنك صنع العوائق بنفس الطرق التي صنعت بها لاعبك. كيف تتناسب العقبات مع موضوعك؟
 
 ستستخدم حلقة `مقابل` لعمل الكثير من النسخ لذا ما عليك سوى عمل أو اختيار عقبة واحدة.
 
@@ -61,11 +61,11 @@ draw_obstacles () # قبل رسم اللاعب draw_player ()
 
 انقر على **إدارة الصور** أيقونة.
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![رمز الصورة في الجزء العلوي الأيمن من منطقة الرمز.](images/manage-images.png)
 
 سيتم عرض الصور المضمنة في مشروع البداية في قائمة `مكتبة الصور`.
 
-![The Image library with a list of included images.](images/starter-images.png)
+![مكتبة الصور مع قائمة الصور المضمنة.](images/starter-images.png)
 
 قم بتدوين اسم الصورة التي تريد استخدامها.
 
@@ -151,7 +151,7 @@ def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2 نص ('
 العنوان: ارسم لاعبًا باستخدام أشكال متعددة
 ---
 
-![desc](images/tree_obstacle.png)
+![الوصف](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -207,16 +207,16 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles():
+def draw_obstacles ():
 
-  seed(12345678) #Any number is fine
+  البذور (12345678) # أي رقم جيد
 
-  for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Replace with your obstacle
+  بالنسبة لـ i في النطاق (6):  
+ob_x = randint (0 ، الارتفاع) ob_y = randint (0 ، الارتفاع) + frame_count ob_y٪ = height text ('🌵'، ob_x، ob_y) # استبدل العقبة الخاصة بك
 
 --- /code ---
 
-Useful information:
+معلومات مفيدة:
 
 [[[using-seed-in-python]]]
 
@@ -226,46 +226,46 @@ Useful information:
 
 --- collapse ---
 ---
-title: Epilepsy warning
+العنوان: تحذير الصرع
 ---
 
-Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
-- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
-- Ask somebody to run it for you
-- Move on and complete the project, asking someone to run the project for you at the end so you can debug
-- Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
+اختبار البرنامج الخاص بك لديه القدرة على إحداث نوبات للأشخاص الذين يعانون من صرع حساس للضوء. إذا كنت تعاني من صرع حساس للضوء أو تشعر أنك قد تكون عرضة لنوبة ، فلا تقم بتشغيل البرنامج. بدلاً من ذلك ، يمكنك:
+- تأكد من أنك أضفت سطر التعليمات البرمجية ` () ` للتأكد من أن العوائق الخاصة بك لا تقفز
+- اطلب من شخص ما تشغيله لك
+- تابع المشروع وأكمله ، واطلب من شخص ما تشغيل المشروع نيابة عنك في النهاية حتى تتمكن من التصحيح
+- قم بتغيير معدل الإطارات قبل تشغيل البرنامج عن طريق إضافة `frame_rate (1)` في بداية الإعداد `()` - يمكنك إزالة هذا بمجرد التأكد من عدم وجود خطأ
 
 --- /collapse ---
 
 --- task ---
 
-**Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom.
+**اختبار:** قم بتشغيل البرنامج وسترى كائنات متعددة على الشاشة ، تلتف حولها عندما تصل إلى الأسفل.
 
-Change your code until you are happy with the obstacles you have. You can:
+قم بتغيير الكود الخاص بك حتى تشعر بالرضا عن العقبات التي تواجهك. تستطيع:
 
-+ Change the seed to get obstacles in different starting positions
-+ Change the number of times to loop repeats to get a different number of obstacles
-+ Adjust the size of the obstacles
++ قم بتغيير البذرة للحصول على عقبات في أوضاع بداية مختلفة
++ قم بتغيير عدد مرات تكرار التكرار للحصول على عدد مختلف من العوائق
++ اضبط حجم العوائق
 
-**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
+**نصيحة:** تأكد من أنه من الممكن تجنب العقبات الخاصة بك ولكن لا يوجد طريق سهل خلال لعبتك.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**تصحيح:** قد تجد بعض الأخطاء في مشروعك والتي تحتاج إلى إصلاحها. فيما يلي بعض الأخطاء الشائعة.
 
 --- collapse ---
 ---
-title: Only one obstacle is being drawn
+العنوان: يتم رسم عقبة واحدة فقط
 ---
 
-Check your function that draws multiple obstacles:
- + Make sure it uses a `for` loop to call the obstacle drawing function more than once
- + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
- + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
+تحقق من دالتك التي ترسم عوائق متعددة:
+ + تأكد من أنه يستخدم حلقة `لـ` لاستدعاء وظيفة رسم العوائق أكثر من مرة
+ + تأكد من أنه يستخدم `randint ()` لتغيير إحداثيات (س ، ص) التي يمر بها إلى دالة رسم العوائق
+ + تأكد من أنك استخدمت `ob_x` و `ob_y` كإحداثيات لعائقك
 
-For example:
+مثال:
 
 --- code ---
 ---
@@ -273,12 +273,12 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles():
+def draw_obstacles ():
 
-  seed(12345678)
+  البذور (12345678)
 
-  for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Replace with your obstacle
+  بالنسبة لـ i في النطاق (6):  
+ob_x = randint (0 ، الارتفاع) ob_y = randint (0 ، الارتفاع) + frame_count ob_y٪ = height text ('🌵'، ob_x، ob_y) # استبدل العقبة الخاصة بك
 
 --- /code ---
 
@@ -286,16 +286,16 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 
 --- collapse ---
 ---
-title: The obstacles are changing position every time a frame is drawn
+العنوان: تقوم العوائق بتغيير موضعها في كل مرة يتم فيها رسم إطار
 ---
 
-Make sure that you have used `seed()` inside the function that draws multiple obstacles.
+تأكد من أنك استخدمت `بذرة ()` داخل الدالة التي ترسم عوائق متعددة.
 
 --- /collapse ---
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
+يستخدم المبرمجون الكثير من الحيل الأنيقة مثل استخدام عامل التشغيل ``٪ '' لجعل الكائنات تلتف حول الشاشة و دالة 'seed () `لتوليد نفس الأرقام العشوائية. كلما قمت بعمل المزيد من الترميز ، ستتعلم حيلًا أكثر دقة.</p>
 
 --- save ---
