@@ -34,8 +34,8 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup():    
-size(400, 400)
+إعداد def ():    
+الحجم (400 ، 400)
 
 --- /code ---
 
@@ -43,9 +43,9 @@ size(400, 400)
 
 --- task ---
 
-Create a variable called `safe` to store the background colour based on the theme you want for your game.
+قم بإنشاء متغير يسمى `خزن` لتخزين لون الخلفية بناءً على المظهر الذي تريده للعبتك.
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+هذا هو اللون الذي خزن أن يكون عليه اللاعب وستستخدم هذا المتغير مرة أخرى لاحقًا.
 
 --- code ---
 ---
@@ -53,9 +53,9 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw():    
-safe = color(200, 100, 0) #Add the colour of your theme   
-background(safe)
+def draw ():    
+safe = color (200، 100، 0) # أضف لون الخلفية الخاصة بك   
+(خزن)
 
 --- /code ---
 
@@ -65,19 +65,19 @@ background(safe)
 
 --- task ---
 
-**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+**اختبار:** قم بتشغيل الكود الخاص بك لمعرفة لون الخلفية. قم بتغييره حتى تصبح راضيًا عن لون وحجم الشاشة.
 
 --- /task ---
 
-Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
+اختر الآن الشخصية التي تلعب اللعبة وتجنب العقبات. هل هو شيء أم شخص أم حيوان أم شيء آخر؟
 
-The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
+سيظهر المشغل في موضع ثابت `y` ونفس موضع `×` مثل مؤشر الماوس ، والذي يتم تخزينه في `p5` متغير `mouse_x`.
 
 --- task ---
 
-It's a good idea to organise the code for drawing the player character into a function.
+من الجيد تنظيم الكود لرسم شخصية اللاعب في دالة.
 
-Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
+حدد `دالة draw_player ()` وأنشئ موضع `player_y` للوضع `y` الثابت للاعب:
 
 --- code ---
 ---
@@ -85,12 +85,12 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+def draw_player ():    
+player_y = int (height * 0.8) # يتم وضعه باتجاه أسفل الشاشة
 
 --- /code ---
 
-Add code to `draw()` to call `draw_player()` each frame.
+أضف الكود إلى `draw ()` لاستدعاء `draw_player ()` لكل إطار.
 
 --- code ---
 ---
@@ -98,40 +98,40 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw():    
-safe = color(200, 100, 0) #Your chosen colour    
-background(safe)    
-draw_player()
+def draw ():    
+safe = color (200، 100، 0) # اللون الذي اخترته    
+الخلفية (خزن)    
+draw_player ()
 
 --- /code ---
 
 --- /task ---
 
-Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
+بعد ذلك ستضيف رمزًا إلى الوظيفة `draw_player ()` لرسم الشكل الخاص بك. قد تحتاج أيضًا إلى إضافة رمز `setup ()`.
 
 --- task ---
 
-**Choose:** What does your player look like? Your player could be:
-+ An image provided in the starter project
-+ An emoji 🎈 or text
-+ Drawn using a series of shapes
+**اختر:** كيف يبدو لاعبك؟ يمكن أن يكون لاعبك:
++ صورة مقدمة في مشروع البداية
++ رمز تعبيري 🎈 أو نص
++ مرسومة باستخدام سلسلة من الأشكال
 
 --- collapse ---
 ---
-title: Use a starter image
+العنوان: استخدم صورة أولية
 ---
 
-Click on the **manage images** icon.
+انقر على **إدارة الصور** أيقونة.
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![رمز الصورة في الجزء العلوي الأيمن من منطقة الرمز.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+سيتم عرض الصور المضمنة في مشروع البداية في قائمة `مكتبة الصور`.
 
-![The Image library with list of included images.](images/starter-images.png)
+![مكتبة الصور مع قائمة الصور المضمنة.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+قم بتدوين اسم الصورة التي تريد استخدامها.
 
-Load the image into the `setup()` function
+قم بتحميل الصورة في دالة `setup ()`
 
 --- code ---
 ---
@@ -139,13 +139,13 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup():   
-size(400, 400)    
-player = load_image('skiing.png') #Load your image
+إعداد def ():   
+size (400، 400)    
+player = load_image ('skiing.png') # تحميل صورتك
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_player()` function.
+استدع الصورة `()` واضبطها على أنها عامة في دالة `draw_player ()`.
 
 --- code ---
 ---
@@ -153,12 +153,12 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+def draw_player ():    
+player_y = int (height * 0.8) # يتم وضعه باتجاه أسفل الشاشة
 
-  global player
+  لاعب عالمي
 
-  image(player, mouse_x, player_y, 30, 30)
+  image (player، mouse_x، player_y، 30، 30)
 
 --- /code ---
 
@@ -166,12 +166,12 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- collapse ---
 ---
-title: Use emoji characters
+العنوان: استخدم أحرف الرموز التعبيرية
 ---
 
-You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
+يمكنك استخدام أحرف الرموز التعبيرية في دالة النص p5 `()` لاستخدام رمز تعبيري لتمثيل المشغل الخاص بك.
 
-Here's an example:
+إليك مثالاً:
 
 --- code ---
 ---
@@ -179,10 +179,10 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup():    
-size(400, 400)     
-text_size(40) #Controls the size of the emoji     
-text_align(CENTER, TOP) #Position around the centre
+إعداد def ():    
+size (400، 400)     
+text_size (40) # يتحكم في حجم الرموز التعبيرية     
+text_align (CENTER، TOP) # الموضع حول المركز
 
 --- /code ---
 
@@ -192,9 +192,9 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():     
-player_y = int(height * 0.8)    
-text('🎈', mouse_x, player_y)
+def draw_player ():     
+player_y = int (height * 0.8)    
+text ('🎈'، mouse_x، player_y)
 
 --- /code ---
 
@@ -214,14 +214,14 @@ text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex player.
+**نصيحة:** يمكنك استخدام عدة أشكال بسيطة في نفس الدالة لإنشاء مشغل أكثر تعقيدًا.
 
 --- collapse ---
 ---
-title: Draw a player using multiple shapes
+العنوان: ارسم لاعبًا باستخدام أشكال متعددة
 ---
 
-![desc](images/face_player.png)
+![الوصف](images/face_player.png)
 
 --- code ---
 ---
@@ -229,23 +229,23 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8)    
-noStroke()    
+def draw_player ():    
+player_y = int (height * 0.8)    
+noStroke ()    
 #Face    
-fill(0, 200, 100)    
-ellipse(mouse_x, player_y, 60, 60)
+ملء (0 ، 200 ، 100)    
+قطع ناقص (mouse_x، player_y، 60، 60)
 
-  #Eyes    
-fill(0, 100, 200)    
-ellipse(mouse_x - 10, player_y - 10, 20, 20)    
-ellipse(mouse_x + 10, player_y - 10, 20, 20)    
-fill(0)    
-ellipse(mouse_x - 10, player_y - 10, 10, 10)     
-ellipse(mouse_x + 10, player_y - 10, 10, 10)     
-fill(255)    
-ellipse(mouse_x - 12, player_y - 12, 5, 5)    
-ellipse(mouse_x + 12, player_y - 12, 5, 5)
+  # عيون    
+ملء (0 ، 100 ، 200)    
+القطع الناقص (mouse_x - 10، player_y - 10، 20، 20)    
+القطع الناقص (mouse_x + 10، player_y - 10، 20، 20)    
+ملء (0)    
+القطع الناقص (mouse_x - 10، player_y - 10، 10، 10)     
+القطع الناقص (mouse_x + 10، player_y - 10، 10، 10)     
+ملء (255)    
+القطع الناقص (mouse_x - 12، player_y - 12، 5، 5)    
+القطع الناقص (mouse_x + 12، player_y - 12، 5، 5)
 
 --- /code ---
 
@@ -255,53 +255,53 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player.
+**اختبار:** قم بتشغيل التعليمات البرمجية الخاصة بك وحرك الماوس للتحكم في المشغل.
 
-Does it move like you expect?
+هل تتحرك كما تتوقع؟
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**تصحيح:** قد تجد بعض الأخطاء في مشروعك والتي تحتاج إلى إصلاحها. فيما يلي بعض الأخطاء الشائعة.
 
 --- task ---
 
 --- collapse ---
 ---
-title: I can't see the player
+العنوان: لا أستطيع رؤية اللاعب
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+حاول التبديل إلى ملء الشاشة. تحقق أيضًا من إحداثيات ` x ` و ` y ` التي استخدمتها لرسم المشغل - تأكد من وجودهما داخل اللوحة القماشية التي أنشأتها بحجم ` () `.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image isn't loading
+العنوان: الصورة لا يتم تحميلها
 ---
 
-First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+أولاً ، تحقق من وجود الصورة في `مكتبة الصور`. بعد ذلك ، تحقق من اسم الملف بعناية - تذكر أن الأحرف الكبيرة تختلف عن الأحرف الصغيرة وأن علامات الترقيم مهمة.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image is the wrong size
+العنوان: حجم الصورة غير صحيح
 ---
 
-Check the inputs that control the width and height of the image:
+تحقق من المدخلات التي تتحكم في عرض الصورة وارتفاعها:
 
 ```python
-image(image_file, x_coord, y_coord, width, height)
+image(ملف الصورة ,تنسيق x, تنسيق y, العرض ,الارتفاع)
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An emoji is the wrong size
+العنوان: حجم الرموز التعبيرية خاطئ
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+إذا كان رمزك التعبيري كبيرًا جدًا أو صغيرًا جدًا ، فغيّر الإدخال إلى `text_size ()`.
 
 --- /collapse ---
 
