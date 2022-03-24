@@ -64,7 +64,7 @@
 
 سوف تتخذ بعض قرارات التصميم بشأن نوع اللعبة التي ستقوم بها وكيف ستستخدم الكود للحصول على التأثيرات التي تريدها.
 
-![Dodge asteroids project example](images/example1.png){: width = "300px"}
+![مثال على مشروع دودج الكويكبات](images/example1.png){: width = "300px"}
 ![Skiing cat project example](images/example2.png){: width = "300px"}
 ![Avoid the germs project example](images/example3.png){: width = "300px"}
 ![Don't pop project example](images/example4.png){: width = "300px"}
