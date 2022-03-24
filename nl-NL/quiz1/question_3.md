@@ -1,43 +1,43 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Vraag 3 van 3
 ---
 
-You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
+Je hebt een game gemaakt waar je erg blij mee bent en deze gedeeld. Een speler heeft het beoordeeld en heeft wat goed doordachte feedback gedeeld met enkele wijzigingen die hij graag zou zien.
 
-What would be the best way to react to their suggestions?
+Wat zou de beste manier zijn om op zijn suggesties te reageren?
 
 --- choices ---
 
-- ( ) Immediately make all the changes they have suggested.
+- ( ) Breng onmiddellijk alle wijzigingen aan die zijn voorgesteld.
 
   --- feedback ---
 
-It's great to get feedback, but you shouldn't change your game just to keep one player happy, maybe other players might give different feedback.
+Het is geweldig om feedback te krijgen, maar je moet je spel niet veranderen om één speler tevreden te houden, misschien geven andere spelers andere feedback.
 
   --- /feedback ---
 
-- ( ) Ignore the suggestions because you know best.
+- ( ) Negeer de suggesties, want jij weet het het beste.
 
   --- feedback ---
 
-Not quite. It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
+Niet helemaal. Het is meestal de moeite waard om te luisteren naar wat gebruikers over je werk te zeggen hebben. Als een speler constructieve feedback heeft gegeven, moet je daar rekening mee houden.
 
   --- /feedback ---
 
-- (x) Consider their feedback with other feedback and decide how to improve your game.
+- (x) Overweeg hun feedback met andere feedback en beslis hoe je je spel kunt verbeteren.
 
   --- feedback ---
 
-Correct! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
+Correct! Je moet rekening houden met alle feedback die je krijgt - terwijl je altijd probeert om meer dan één standpunt te krijgen - en beslissingen nemen om het spel voor alle spelers te verbeteren.
 
   --- /feedback ---
 
-- ( ) Feel really sad that the player didn't think your game was perfect.
+- ( ) Vind het erg jammer dat de speler je spel niet perfect vond.
 
   --- feedback ---
 
-No! You shouldn't feel sad if someone suggests improvements to your game. Constructive feedback is really useful and can help improve your game. You should be pleased that they were interested enough in your game to give feedback.
+Nee! Je moet niet verdrietig zijn als iemand verbeteringen aan je spel voorstelt. Constructieve feedback is erg nuttig en kan je spel helpen verbeteren. Je zou blij moeten zijn dat ze voldoende geïnteresseerd waren in je spel om feedback te geven.
 
   --- /feedback ---
 
