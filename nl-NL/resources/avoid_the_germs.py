@@ -6,83 +6,83 @@ from random import randint, seed
 level = 1
 score = 0
 
-def safe_player():
+def speler_veilig():
   
-  global player_y
+  global speler_y
   
-  # Face
+  # Gezicht
   fill(200, 134, 145)
-  ellipse(mouse_x, player_y, 60, 60)
+  ellipse(muis_x, speler_y, 60, 60)
 
-  # Eyes
+  # Ogen
   fill(178, 200, 145)
-  ellipse(mouse_x - 10, player_y - 10, 20, 20)
-  ellipse(mouse_x + 10, player_y - 10, 20, 20)
+  ellipse(muis_x - 10, speler_y - 10, 20, 20)
+  ellipse(muis_x + 10, speler_y - 10, 20, 20)
   fill(0)
-  ellipse(mouse_x - 10, player_y - 10, 10, 10)
-  ellipse(mouse_x + 10, player_y - 10, 10, 10)
+  ellipse(muis_x - 10, speler_y - 10, 10, 10)
+  ellipse(muis_x +10, speler_y - 10, 10, 10)
   fill(255)
-  ellipse(mouse_x - 12, player_y - 12, 5, 5)
-  ellipse(mouse_x + 12, player_y - 12, 5, 5)
+  ellipse(muis_x - 12, speler_y - 12, 5, 5)
+  ellipse(muis_x + 12, speler_y - 12, 5, 5)
   
-  # Mouth
+  # Mond
   fill(0)
-  ellipse(mouse_x, player_y + 10, 15, 10)
+  ellipse(muis_x, speler_y + 10, 15, 10)
   fill(200, 134, 145)
-  ellipse(mouse_x, player_y + 5, 10, 10)
+  ellipse(muis_x, speler_y + 5, 10, 10)
 
-def crashed_player():
+def speler_gebotst():
   
-  global player_y
+  global speler_y
   
-  # Face
+  # Gezicht
   fill(178, 200, 145)
-  ellipse(mouse_x, player_y, 60, 60)
+  ellipse(muis_x, speler_y, 60, 60)
 
-  # Eyes
+  # Ogen
   fill(149, 161, 195)
-  ellipse(mouse_x - 10, player_y - 10, 20, 20)
-  ellipse(mouse_x + 10, player_y - 10, 20, 20)
+  ellipse(muis_x - 10, speler_y - 10, 20, 20)
+  ellipse(muis_x + 10, speler_y - 10, 20, 20)
   fill(0)
-  ellipse(mouse_x - 10, player_y - 10, 10, 10)
-  ellipse(mouse_x + 10, player_y - 10, 10, 10)
+  ellipse(muis_x - 10, speler_y - 10, 10, 10)
+  ellipse(muis_x + 10, speler_y - 10, 10, 10)
   fill(255)
-  ellipse(mouse_x - 12, player_y - 12, 5, 5)
-  ellipse(mouse_x + 12, player_y - 12, 5, 5)
+  ellipse(muis_x - 12, speler_y - 12, 5, 5)
+  ellipse(muis_x + 12, speler_y - 12, 5, 5)
   
-  # Mouth
+  # Mond
   fill(0)
-  ellipse(mouse_x, player_y + 15, 15, 10)
+  ellipse(muis_x, speler_y + 15, 15, 10)
   fill(178, 200, 145)
-  ellipse(mouse_x, player_y + 20, 10, 10)
+  ellips(muis_x, speler_y + 20, 10, 10)
   
-def draw_player():
+def teken_speler():
   
-  global player_y, safe, score, level
+  global speler_y, veilig, score, level
   
-  player_y = int(height * 0.8)
+  speler_y = int(height * 0,8)
   
-  collide = get(mouse_x, player_y)
-  collide2 = get(mouse_x, player_y + 30)
-  collide3 = get(mouse_x + 30, player_y)
-  collide4 = get(mouse_x, player_y - 30)
+  botsen = get(speler_x, speler_y)
+  botsen2 = get(muis_x, speler_y + 30)
+  botsen3 = get(muis_x + 30, speler_y)
+  botsen4 = get(muis_x, speler_y - 30)
   
-  if mouse_x < width: # off the left of the screen
-    collide2 = safe
+  if speler_x < width: # voorbij de linkerkant van het scherm
+    botsen2 = veilig
   
-  if mouse_x > width: # off the right of the screen
-    collide3 = safe
+  if muis_x > width: # voorbij de rechterkant van het scherm
+    botsen3 = veilig
     
-  #print(collide, collide2, collide3, collide4)
+  #print(botsen, botsen2, botsen3, botsen4)
     
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    safe_player()
+  if botsen == veilig and botsen2 == veilig and botsen3 == veilig and botsen4 == veilig:
+    speler_veilig()
     score += level
-  else: # Collided
-    crashed_player()
+  else: # Gebotst
+    speler_gebotst()
     level = 0
   
-def draw_obstacles():
+def teken_obstakels():
   
   global level
   
@@ -90,33 +90,33 @@ def draw_obstacles():
   
   if frame_count & height == height - 1 and level < 5:
     level += 1
-    print('You reached level', level)
+    print('Je hebt level', level, 'bereikt')
   
   for i in range(9 + level):
-    ob_x = randint(0, width)
-    ob_y = randint(0, height) + frame_count
-    ob_y %= height
-    text('🦠', ob_x, ob_y)
+    obstakel_x = randint(0, width)
+    obstakel_y = randint(0, height) + frame_count
+    obstakel_y %= height
+    text('🦠', obstakel_x, obstakel_y)
 
 def setup():
-# Put code to run once here
-  size(400, 400) # width and height
+# Zet de code om eenmalig uit te voeren hier onder
+  size(400, 400) # breedte en hoogte
   noStroke()
   text_size(40)
   text_align(CENTER, TOP)
 
 def draw():
-# Put code to run every frame here
-  global safe, score, level
+# Zet hier code om bij elk frame uit te voeren
+  global veilig, score, level
   
-  safe = color(149, 161, 195)
+  veilig = color(149, 161, 195)
   
   if level > 0:
-    background(safe)
+    background(veilig)
     fill(145, 134, 126)
     text('Score: ' + str(score), width/2, 20)
-    draw_obstacles()
-    draw_player()
+    def teken_obstakels()
+    teken_speler()
   
-# Keep this to run your code
+# Houdt dit om je code uit te voeren
 run()
