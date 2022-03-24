@@ -1,19 +1,19 @@
-## اصنع عقبات
+## Create obstacles
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-قم بإنشاء العقبات التي سيتعين عليك تجنبها لمواصلة لعب اللعبة.
+Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
 
-! [مثال لمشروع تزلج بعوائق شجرية] (images / brothers.png) {: width = "300px"}
+![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
 
 </div>
 </div>
 
-### ابدأ بعائق واحد
+### Start with one obstacle
 
-يمكنك صنع العوائق بنفس الطرق التي صنعت بها لاعبك. كيف تتناسب العقبات مع موضوعك؟
+You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
 
 ستستخدم حلقة `مقابل` لعمل الكثير من النسخ لذا ما عليك سوى عمل أو اختيار عقبة واحدة.
 
