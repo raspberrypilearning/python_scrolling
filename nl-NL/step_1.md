@@ -1,54 +1,54 @@
-## Introduction
+## Inleiding
 
-Build a scrolling endless runner game where your character has to avoid obstacles.
+Bouw een eindeloos rollend renspel waarin je personage obstakels moet ontwijken.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Endless runners**</span> are a type of game where you have to avoid obstacles and the game only ends when you hit an obstacle. You score points by staying alive for as long as you can.</p>
+<span style="color: #0faeb0">**Eindeloze renners**</span> is een soort spel waarbij je obstakels moet ontwijken en het spel pas eindigt als je een obstakel raakt. Je scoort punten door zo lang mogelijk in leven te blijven.</p>
 
-You will:
-+ Use game **conditions** to control what happens
-+ Learn about procedural generation and collision detection
-+ Personalise a game to your interests
+Je gaat:
++ Spel-**voorwaarden** gebruiken om te bepalen wat er gebeurt
++ Leren over over procedureel genereren en botsingsdetectie
++ Een game naar jouw interesses personaliseren
 
-![Images of different project examples.](images/showcase_projects.png)
+![Afbeeldingen van verschillende projectvoorbeelden.](images/showcase_projects.png)
 
-### Get inspiration
+### Doe inspiratie op
 
-You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
+Je gaat een aantal ontwerpbeslissingen nemen over het soort spel dat je gaat maken en hoe je code gaat gebruiken om de gewenste effecten te krijgen.
 
 --- no-print ---
 
 --- task ---
 
-Look at these examples. Think about how the players and obstacles have been made.
+Kijk naar deze voorbeelden. Denk na over hoe de spelers en obstakels zijn gemaakt.
 
-What happens if you hit an obstacle? Does it get harder as you play?
+Wat gebeurt er als je een obstakel raakt? Wordt het moeilijker terwijl je speelt?
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**Skiing cat**: [See inside](https://trinket.io/python/76e628bff2){:target="_blank"}
+**Skiënde kat**: [See inside](https://trinket.io/python/76e628bff2){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/76e628bff2?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Don't pop**: [See inside](https://trinket.io/python/974800f4ef){:target="_blank"}
+**Plof niet**: [See inside](https://trinket.io/python/974800f4ef){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/974800f4ef?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Avoid the germs**: [See inside](https://trinket.io/python/88e108c819){:target="_blank"}
+**Vermijd de bacterieën**: [See inside](https://trinket.io/python/88e108c819){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/88e108c819?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 
-**Clean car**: [See inside](https://trinket.io/python/70da6c454d){:target="_blank"}
+**Schone auot**: [See inside](https://trinket.io/python/70da6c454d){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/70da6c454d?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
+**Vermijd asteroiden**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -62,9 +62,9 @@ What happens if you hit an obstacle? Does it get harder as you play?
 
 --- print-only ---
 
-You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
+Je gaat een aantal ontwerpbeslissingen nemen over het soort spel dat je gaat maken en hoe je code gaat gebruiken om de gewenste effecten te krijgen.
 
-![Dodge asteroids project example](images/example1.png){:width="300px"}
+![Voorbeeldproject voor het ontwijken van asteroïden](images/example1.png){:width="300px"}
 ![Skiing cat project example](images/example2.png){:width="300px"}
 ![Avoid the germs project example](images/example3.png){:width="300px"}
 ![Don't pop project example](images/example4.png){:width="300px"}
