@@ -1,23 +1,23 @@
-## Speed up!
+## Versnellen!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
+De meeste eindeloze runner-games verhogen de moeilijkheidsgraad van het spel naarmate de speler vordert en geven een score.
 </div>
 <div>
 
-![Example project with a text score on the screen.](images/score.png){:width="300px"}
+![Voorbeeldproject met tekstscore op het scherm.](images/score.png){:width="300px"}
 
 </div>
 </div>
 
-### Add difficulty levels
+### Moeilijkheidsgraden toevoegen
 
-Creating clear difficulty levels will make it easier for your player to understand what is happening.
+Door duidelijke moeilijkheidsgraden te creëren, wordt het voor je speler gemakkelijker om te begrijpen wat er gebeurt.
 
 --- task ---
 
-Create a `global` `level` variable to track the level the player is currently on. Set it to `1` so players start a new game on the first level.
+Maak een `global` `level` variabele om het niveau van de speler bij te houden. Stel het in op `1` zodat spelers een nieuw spel beginnen op het eerste niveau.
 
 --- code ---
 ---
@@ -25,7 +25,7 @@ language: python filename: main.py
 line_numbers: false
 ---
 
-# Include global variables here
+# Voeg hier global variabelen toe
 level = 1
 
 --- /code ---
