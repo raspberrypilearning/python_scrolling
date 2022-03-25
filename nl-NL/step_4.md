@@ -118,7 +118,7 @@ def teken_speler(): if botsen == veilig: #Gelijk aan chtergrondkleur text('🎈'
 
 --- task ---
 
-**Debug:** Mogelijk vindt je enkele fouten in jouw project die je moet oplossen. Here are some common bugs.
+**Debug:** Mogelijk vindt je enkele fouten in jouw project die je moet oplossen. Hier zijn enkele veelvoorkomende fouten.
 
 --- collapse ---
 ---
