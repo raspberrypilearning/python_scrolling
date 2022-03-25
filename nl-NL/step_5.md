@@ -34,9 +34,9 @@ level = 1
 
 --- task ---
 
-This code uses the `height` and the `frame_count` to increase the `level` variable every time the player finishes a screen, then prints out the new level for the player.
+Deze code gebruikt de `height` en de `frame_count` om de variabele `level` te verhogen elke keer als de speler een scherm voltooit, en drukt vervolgens het nieuwe niveau voor de speler af.
 
-**Choose:** This code limits the levels to five, so it doesn't get too hard to play. There's no reason your game has to use five, but you should choose a limit. Humans can only move so fast!
+**Kies:** Deze code beperkt de niveaus tot vijf, dus het wordt niet al te moeilijk om te spelen. Er is geen reden waarom je spel er vijf moet gebruiken, maar je moet wel een limiet kiezen. Mensen kunnen beperkt snel bewegen!
 
 --- code ---
 ---
@@ -44,11 +44,11 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-def draw_obstacles():
+def teken_obstakels():
 
-  global level #Use the global level
+  global level #Gebruik het global level
 
-  if frame_count % height == height - 1 and level < 5: level += 1 print('You have reached level', level)
+  if frame_count % height == height - 1 and level < 5: level += 1 print('Je hebt level', level, 'bereikt')
 
 --- /code ---
 
@@ -57,18 +57,18 @@ def draw_obstacles():
 --- task ---
 
 
-The two main options for increasing difficulty are to make the game move faster, and to increase the number of obstacles.
+De twee belangrijkste opties voor het verhogen van de moeilijkheidsgraad zijn om het spel sneller te laten gaan en om het aantal obstakels te vergroten.
 
 --- collapse ---
 ---
-title: Speed your game up
+title: Versnel je spel
 ---
 
-The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
+De snelheid van het spel wordt bepaald door hoe snel obstakels naar de speler lijken te bewegen. Deze code versnelt dit door `frame_count * level` toe te voegen aan de `y` coördinaat tijdens het genereren van obstakels.
 
-Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead.
+In plaats van je obstakels met één pixel in elk frame te verplaatsen, verplaatst deze code deze in plaats daarvan met het `level` aantal pixels.
 
-Looking at the code, you might expect the speed to increase by more than `level` pixels. For example, at the point just before your `level` increases, the `frame_count` is `799` — as the `level` increases one frame before the `frame_count` is an even multiple of `height` (set at `400` pixels) — and `799 * 3` is notably bigger than `799 * 2`. However, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are hidden by `ob_y %= height`. This leaves only the `level` extra pixels in each step.
+Als je naar de code kijkt, zou je kunnen verwachten dat de snelheid met meer dan het `level` aantal pixels zal toenemen. Bijvoorbeeld, op het punt net voordat je `level` toeneemt, is de `frame_count` `799` — aangezien het `level` één frame toeneemt voordat de `frame_count` een even veelvoud is van de `height` (ingesteld op `400` pixels) — en `799 * 3` is aanzienlijk groter dan `799 * 2`. De extra pixels die worden gecreëerd door het geheel van `frame_count` te vermenigvuldigen met een groter getal, worden echter verborgen door `obstakel_y %= height`. Hierdoor resteert alleen het `level` aantal extra pixels in elke stap.
 
 
 --- code ---
@@ -77,7 +77,7 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+  for i in range(6): obstakel_x = randint(0, height) obstakel_y = randint(0, height) + (frame_count * level) obstakel_y %= height #Omwentelen text('🌵', obstakel_x, obstakel_y)
 
 --- /code ---
 
@@ -85,24 +85,24 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: Add more obstacles
+title: Meer obstakels toevoegen
 ---
 
-Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
+Het toevoegen van extra obstakels is gewoon een kwestie van het aantal keren verhogen van de `for` lus die ze creëert. Je kunt dit doen door het getal dat je doorgeeft aan de functie `range()` te verhogen met `level`.
 
-**Tip:** Of course, you can always use `level * 2`, or even larger multiples, if you want to make your game harder.
+**Tip:** Natuurlijk kun je altijd `level * 2`gebruiken, of zelfs grotere veelvouden, als je je spel moeilijker wilt maken.
 
 --- /collapse ---
 
 --- /task ---
 
-### Keep score
+### Score bijhouden
 
-The longer a player lasts without colliding with an obstacle, the better they're playing your game. Adding a score will let them see how well they're doing.
+Hoe langer een speler het volhoudt zonder tegen een obstakel te botsen, hoe beter hij jouw spel speelt. Door een score toe te voegen, kunnen ze zien hoe goed ze het doen.
 
 --- task ---
 
-Create a global `score` variable to track the player's score. Set it to `0` so players start a new game without any points.
+Maak een global `score`-variabele om de score van de speler bij te houden. Stel het in op `0` zodat spelers een nieuw spel beginnen zonder punten.
 
 --- code ---
 ---
@@ -110,7 +110,7 @@ language: python filename: main.py
 line_numbers: false
 ---
 
-# Include global variables here
+# Voeg hier global variabelen toe
 score = 0
 
 --- /code ---
@@ -119,9 +119,9 @@ score = 0
 
 --- task ---
 
-You can increase your player's score for every frame where they have not collided with an obstacle by increasing their score when you check for collision in `draw_player()`.
+Je kunt de score van je speler verhogen voor elk frame waar ze niet tegen een obstakel zijn gebotst door hun score te verhogen wanneer je controleert op een botsing in `teken_speler()`.
 
-**Choose:** You can decide how many points each frame is worth, but increasing the player's score by `level` rewards players who can survive at higher difficulty levels.
+**Kies:** Je kunt beslissen hoeveel punten elk frame waard is, maar het verhogen van de score van de speler met `level` beloont spelers die kunnen overleven op hogere moeilijkheidsgraden.
 
 --- code ---
 ---
@@ -131,7 +131,7 @@ filename: main.py — draw_player()
 
 global score
 
-  if collide == safe: text('🎈', mouse_x, player_y) score += level else: text('💥', mouse_x, player_y)
+  if botsen == veilig: text('🎈', muis_x, speler_y) score += level else: text('💥', muis_x, speler_y)
 
 --- /code ---
 
@@ -139,48 +139,48 @@ global score
 
 --- task ---
 
-Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Use the p5 `text()` function inside your `draw()` function, to display it as text on the game screen instead.
+Spelers moeten hun score kunnen zien. Omdat het zo snel toeneemt, zou het gebruik van `print()` niet erg goed werken. Gebruik de p5-functie `text()` in je `draw()`-functie om deze in plaats daarvan als tekst op het spelscherm weer te geven.
 
 [[[processing-python-text]]]
 
-You can use the `+` operator to combine two or more strings if you want to give a heading like 'score' or 'points'. Because `score` is a number, you will need to convert it to a string before you can join it with another string. You can do this with `str()`:
+Je kunt de operator `+` gebruiken om twee of meer tekenreeksen te combineren als je een koptekst wilt geven zoals 'score' of 'punten'. Omdat `score` een getal is, moet je het naar een tekenreeks converteren voordat je het kunt samenvoegen met een andere tekenreeks. Je kunt dit doen met `str()`:
 
-`message = 'Score: ' + str(score)`
+`boodschap = 'Score: ' + str(score)`
 
-**Tip:** `str()` is short for 'string' — programmers often remove letters like this, so they don't have to type as much!
+**Tip:** `str()` is een afkorting voor 'string' — programmeurs verwijderen vaak letters op deze manier, zodat ze niet zoveel hoeven te typen!
 
 --- /task ---
 
 ### Game over!
 
-When a player has collided with an obstacle, the game should stop moving and their score should stop increasing.
+Wanneer een speler tegen een obstakel is gebotst, moet het spel stoppen met bewegen en zou de score niet meer moeten toenemen.
 
 --- task ---
 
-You can use the `level` variable to signal 'Game over' by setting it to 0 — a value it will never reach any other way. Do this in the `else` step of your colision detection code.
+Je kunt de `level`-variabele gebruiken om 'Game over' te signaleren door deze op 0 in te stellen — een waarde die hij op geen enkele andere manier zal bereiken. Doe dit in de stap `else` van je botsingsdetectie code.
 
 --- /task ---
 
 --- task ---
 
-Create an `if` statement in `draw()` that tests whether `level > 0` before calling any of the functions — like `background()`, `draw_obstacles()`, and `draw_player()` — that update the game. Because these functions are not called, the entire game seems to end, even though your program is still running.
+Maak een `if` statement in `draw()` dat test of `level > 0` voordat een van de functies — zoals `background()`, `teken_obstakels()`, en `teken_speler()` wordt aangeroepen — die het spel updaten. Omdat deze functies niet worden aangeroepen, lijkt het hele spel te eindigen, ook al draait je programma nog.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** Mogelijk vindt je enkele fouten in jouw project die je moet oplossen. Hier zijn enkele veelvoorkomende fouten.
 
 --- collapse ---
 ---
-title: The score doesn't display
+title: De score wordt niet weergegeven
 ---
 
-Make sure that you've included the `text()` function that draws the player's score at the appropriate point in your `draw()` function, and that you've passed it the correct values:
+Zorg ervoor dat je de functie `text()` hebt opgenomen die de score van de speler op het juiste punt tekent in je functie `draw()`, en dat je deze de juiste waarden hebt doorgegeven:
 
-`text('Text to display', x, y)`
+`text('Te tonen tekst', x, y)`
 
-It should look something like this:
+Het zou er ongeveer zo uit moeten zien:
 
 --- code ---
 ---
@@ -188,7 +188,7 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0: background(safe) fill(255) text('Score: ' + str(score), width/2, 20) draw_obstacles() draw_player()
+  if level > 0: background(veilig) fill(255) text('Score: ' + str(score), width/2, 20) teken_obstakels() teken_speler()
 
 --- /code ---
 
@@ -196,13 +196,13 @@ filename: main.py — draw()
 
 --- collapse ---
 ---
-title: The game doesn't stop after a collision
+title: Het spel stopt niet na een botsing
 ---
 
-If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
+Als je denkt dat je game botsingen totaal niet correct detecteert, probeer dan eerst de foutopsporingsinstructies in de vorige stap, onder 'Er is geen botsing wanneer de speler een obstakel bereikt'.
 
 
-If your game is correctly detecting collisons, then check that you have properly indented the code that draws your game inside the `if level > 0` satement, to make sure it only runs if that statement is true. For example:
+Als je spel botsingen correct detecteert, controleer dan of je de code binnen het `if level > 0` statement correct is ingesprongen, om er zeker van te zijn dat het alleen wordt uitgevoerd als dat statement waar is. Bijvoorbeeld:
 
 --- code ---
 ---
@@ -210,11 +210,11 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0: background(safe) fill(255) text('Score: ' + str(score), width/2, 20) draw_obstacles() draw_player()
+  if level > 0: background(veilig) fill(255) text('Score: ' + str(score), width/2, 20) teken_obstakels() teken_speler()
 
 --- /code ---
 
-Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. For example:
+Ten slotte, als beide correct werken, is het mogelijk dat je spel de `level = 0` niet correct instelt wanneer er een botsing plaatsvindt. Bijvoorbeeld:
 
 --- code ---
 ---
@@ -222,7 +222,7 @@ language: python
 filename: main.py — draw_player()
 ---
 
-  if collide == safe: text('🎈', mouse_x, player_y) score += level else: text('💥', mouse_x, player_y) level = 0
+  if botsen == veilig: text('🎈', muis_x, speler_y) score += level else: text('💥', muis_x, speler_y) level = 0
 
 --- /code ---
 
@@ -230,12 +230,12 @@ filename: main.py — draw_player()
 
 --- collapse ---
 ---
-title: The game doesn't get faster
+title: Het spel gaat niet sneller
 ---
 
-First, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
+Controleer eerst of `level` correct ophoogt wordt. Je zou een bericht moeten zien worden afgedrukt elke keer dat het omhoog gaat. Als dit niet gebeurt, controleer dan zowel de code voor het afdrukken van het bericht als de code voor het verhogen van het level.
 
-If level is increasing correctly, check your `draw_obstacles()` function. In particular, check that you have `ob_y = randint(0, height) + (frame_count * level)`. It should look something like this:
+Als het level correct stijgt, controleer dan je `teken_obstakels()` functie. Controleer in het bijzonder of je `obstakel_y = randint(0, height) + (frame_count * level)` goed hebt. Het zou er ongeveer zo uit moeten zien:
 
 --- code ---
 ---
@@ -243,7 +243,7 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + level): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+  for i in range(6 + level): obstakel_x = randint(0, height) obstakel_y = randint(0, height) + (frame_count * level) obstaklel_y %= height #Omkeren text('🌵', obstakel_x, obstakel_y)
 
 --- /code ---
 
@@ -251,12 +251,12 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: New obstacles don't appear
+title: Nieuwe obstakels verschijnen niet
 ---
 
-There are a few reasons this could be happening. And there are some more reasons why it might appear to be happening, when it isn't. First, because new obstacles are added based on `level`, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
+Er zijn een paar redenen waarom dit kan gebeuren. En er zijn nog enkele redenen waarom het lijkt te gebeuren, terwijl dat niet zo is. Ten eerste, omdat er nieuwe obstakels worden toegevoegd op basis van `level`, moet je controleren of `level` correct toeneemt. Je zou een bericht moeten zien worden afgedrukt elke keer dat het omhoog gaat. Als dit niet gebeurt, controleer dan zowel de code voor het afdrukken van het bericht als de code voor het verhogen van het level.
 
-If level is increasing correctly, check your `draw_obstacles()` function to ensure that you have `level` used in the `range()` function of the `for` loop that draws the obstacles. It should look something like this:
+Als het niveau correct stijgt, controleer dan je functie `teken_obstakels()` om er zeker van te zijn dat je `level` gebruikt in de `range()`-functie van de `for`-lus die de obstakels tekent. Het zou er ongeveer zo uit moeten zien:
 
 --- code ---
 ---
@@ -264,15 +264,15 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + level): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+  for i in range(6 + level): obstakel_x = randint(0, height) obstakel_y = randint(0, height) + (frame_count * level) obstakel_y %= height #Omkeren text('🌵', obstakel_x, obstakel_y)
 
 --- /code ---
 
-If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
-  - Slow the game down by using `frame_rate()` in your `setup()` function to give you more time to count
-  - Change the seed you're using for your random numbers. It's unlikely, but it is possible that some obstacles are randomly appearing directly on top of each other
-  - Add a `print()` to the `for` loop in `draw_obstacles()` that prints out the value of `i` in each pass of the loop, so you can verify whether it's running the number of times it should
-  - Just for testing purposes, change `range(6 + level)` to `range(6 * level)` — that increase should be easier to spot!
+Als je al deze controles hebt gedaan en het lijkt er nog steeds niet op dat het aantal obstakels toeneemt, is het mogelijk dat dat wel zo is, maar dat je ze niet ziet. Je moet enkele van deze stappen proberen om dit te testen:
+  - Vertraag het spel door `frame_rate()` te gebruiken in je `setup()` functie om je meer tijd te geven om te tellen
+  - Verander de seed die je gebruikt voor je willekeurige getallen. Het is onwaarschijnlijk, maar het is mogelijk dat sommige obstakels willekeurig direct boven elkaar verschijnen
+  - Voeg een `print()` toe aan de `for`-lus in `teken_obstakels()` die de waarde van `i` in elke passage van de lus afdrukt, zodat je kunt controleren of deze het juiste aantal keren wordt uitgevoerd
+  - Verander, alleen voor testdoeleinden, `range(6 + level)` in `range(6 * level)` - die toename moet gemakkelijker te herkennen zijn!
 
 
 --- /collapse ---
