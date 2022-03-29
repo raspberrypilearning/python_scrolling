@@ -13,6 +13,7 @@ def draw_obstacles ():
   المستوى العالمي
   
   seed(12345678)
+
   
   if frame_count % height == height - 1 and level < 5:
     level += 1
