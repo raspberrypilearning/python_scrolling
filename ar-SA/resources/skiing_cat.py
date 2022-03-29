@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Import library code
+# استيراد مكتبة الشفرات البرمجية
 from p5 import *
 from random import randint, seed
 
@@ -30,7 +30,7 @@ def draw_obstacles():
     fill(150,100,100)
     rect(ob_x + 15, ob_y + 70, 10, 10)
     
-# The draw_player function goes here
+# تذهب دالة draw_player هنا
 def draw_player():
   
   global score, speed, skiing, crashed
@@ -53,15 +53,15 @@ def setup():
   
   global skiing, crashed
   
-  # Setup your animation here
+  # قم بإعداد الرسوم المتحركة الخاصة بك هنا
   text_size(40)
-  text_align(CENTER, TOP) # position around the centre
+  text_align (CENTER ، TOP) # موضع حول المركز
   size(400, 400)
   skiing = load_image('skiing.png')
   crashed = load_image('fallenover.png')
   
 def draw():
-  # Things to do in every frame
+  # أشياء للقيام بها في كل إطار
   global score, safe, speed, skiing, crashed
   safe = color(255)
 
