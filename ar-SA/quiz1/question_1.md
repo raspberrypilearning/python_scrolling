@@ -55,7 +55,7 @@ Great flying!
 ```
   --- feedback ---
 
-هذا صحيح - `الدرجة >= 5000` صحيحة ، وكذلك `يعيش > 1` على جملة `if` المتداخلة.
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
 
   --- /feedback ---
 
