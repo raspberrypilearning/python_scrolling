@@ -4,7 +4,7 @@
 
 أجب عن الأسئلة الثلاثة أدناه للتفكر فيما تعلمته.
 
-بعد كل سؤال ، اضغط على**submit**. سيتم توجيهك نحو الإجابة الصحيحة. يمكنك القيام بهذا النشاط عدة مرات كما تريد.
+بعد كل سؤال ، اضغط على **إرسال**. سيتم توجيهك نحو الإجابة الصحيحة. يمكنك القيام بهذا النشاط عدة مرات كما تريد.
 
 إستمتع!
 
@@ -44,38 +44,38 @@ Great flying!
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+بينما `الدرجة >= 5000` صحيحة ، يجب أن يكون كلا الجزأين صحيحين للشرط `و` ، و `يعيش >= 3` خطأ.
 
   --- /feedback ---
 
 - (x)
 ```
-أحسنت صنعاً!
-واصل التقدم!
+!Doing well
+!Keep going
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+هذا صحيح - `الدرجة >= 5000` صحيحة ، وكذلك `يعيش > 1` على جملة `if` المتداخلة.
 
   --- /feedback ---
 
 - ( )
 ```
-أحسنت صنعاً!
+!Doing well
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+أغلق ، لكن `الدرجة >= 5000` ليس الشرط الوحيد الذي سيجده البرنامج صحيحًا أثناء تشغيله.
 
   --- /feedback ---
 
 - ( )
 ```
-Push harder!
+!Push harder
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+بينما `يعيش > 1` هو صحيح ، فقط الكود داخل الشرط الحقيقي الأول في `إذا تم تنفيذ`elif`else<code>، و`يعيش</code> &gt; `ليس الشرط` الذي يكون صحيحًا.
 
   --- /feedback ---
 
