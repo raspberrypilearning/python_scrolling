@@ -77,7 +77,8 @@ Als je naar de code kijkt, zou je kunnen verwachten dat de snelheid met meer dan
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+language: python 
+filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
