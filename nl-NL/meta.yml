@@ -9,7 +9,7 @@ last_tested: "2021-10-06"
 steps:
   - title: Inleiding
   - title: Het opzetten van het thema
-  - title: Creëer obstakels
+  - title: Maak obstakels
     completion: engaged
   - title: Botsingsdetectie
   - title: Versnellen!

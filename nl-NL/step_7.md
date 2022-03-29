@@ -45,6 +45,6 @@ Elk voorbeeldproject in de [Inleiding](./) heeft een **Kijk van binnen** link wa
 </div>
 </div>
 
-Bekijk enkele Niet botsen-projecten die zijn gemaakt door communityleden in [Don't Collide - Communitybibliotheek](https://wke.lt/w/s/KobNfx)van de Raspberry Pi Foundation{:target="_blank"}.
+Bekijk enkele Niet botsen-projecten die zijn gemaakt door communityleden in [Don't Collide - Communitybibliotheek](https://wke.lt/w/s/KobNfx){:target="_blank"}van de Raspberry Pi Foundation.
 
 --- save ---

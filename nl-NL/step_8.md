@@ -1,4 +1,4 @@
-## Delen
+## Deel
 
 Als je lid bent van een club, waarom zou je je project dan niet delen met vrienden?
 
