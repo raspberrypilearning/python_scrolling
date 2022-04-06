@@ -4,7 +4,7 @@ score
 
 draw_obstacles
 
-You reached level
+You reached speed
 
 ob_x
 
