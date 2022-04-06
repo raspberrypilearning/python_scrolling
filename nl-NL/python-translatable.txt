@@ -1,69 +1,69 @@
-speed
+snelheid
 
 score
 
-draw_obstacles
+teken_obstakels
 
-You reached speed
+Je hebt snelheid
 
-ob_x
+obstakel_x
 
-ob_y
+obstakel_y
 
-skiing
+skien
 
-crashed
+gecrasht
 
-player_y
+speler_y
 
-collide
+botsen
 
-safe
+veilig
 
 level
 
-collide2
+botsen2
 
-collide3
+botsen3
 
-collide4
+botsen4
 
-safe_player
+speler_veilig
 
-crashed_player
+speler_gebotst
 
-player_x
+speler_x
 
-car
+auto
 
-lives
+levens
 
-invulnerability
+onkwetsbaar
 
-display_score
+toon_score
 
-🎉🎉 You win! 🎉🎉
+🎉🎉 Jij wint! 🎉🎉
 
-display_lives
+toon_levens
 
-rocket
+raket
 
-rock
+rots
 
 random_seed
 
-player
+speler
 
-obstacle
+obstakel
 
-Great flying!
+Dat vliegt geweldig!
 
-Doing well!
+Je doet het goed!
 
-Keep going!
+Ga door!
 
-But be careful!
+Maar wees voorzichtig!
 
-Push harder!
+Harder werken!
 
-Head for base!
+Ga naar de basis!
