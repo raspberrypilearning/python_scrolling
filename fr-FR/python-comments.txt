@@ -1,97 +1,95 @@
-Import library code
+Importer le code de la bibliothèque
 
-Wrap around
+Enveloppant
 
-The draw_player function goes here
+La fonction dessine_joueur vient ici
 
-Setup your animation here
+Configure ton animation ici
 
-Position around the centre
+Choses à faire dans chaque image
 
-Things to do in every frame
+Définitions pour la compatibilité avec la bibliothèque de traitement p5py
 
-Definitions for compatibility with the p5py processing library
+Forme
 
-Shape
+Polices
 
-Fonts
+Texte
 
-Text
-
-Colour
+Couleur
 
 Images
 
-Environment
+Environnement
 
-Transform
+Transformer
 
-Keyboard
+Clavier
 
-Draw collision point
+Dessine le point de collision
 
-Off the left of the screen
+Sur la gauche de l'écran
 
-Off the right of the screen
+À droite de l'écran
 
-Position around the centre, top
+Position près du centre, en haut
 
-Face
+Le visage
 
-Eyes
+Les yeux
 
-Mouth
+La bouche
 
-Collided
+Collision
 
-Put code to run once here
+Mettre le code à exécuter ci-dessous
 
-Width and height
+Largeur et hauteur
 
-Put code to run every frame here
+Mettre le code pour exécuter chaque image ici
 
-Keep this to run your code
+Garde ceci pour exécuter ton code
 
-The draw_obstacle function goes here
+La fonction dessine_obstacle vient ici
 
-Off the bottom of the screen
+Hors dessous de l'écran
 
-Off the top of the screen
+Hors dessus écran
 
-Add the colour of your theme
+Ajouter la couleur de ton thème
 
-Positioned towards the screen bottom
+Positionné vers le bas de l'écran
 
-Your chosen colour
+Ta couleur choisie
 
-Load your image
+Charger ton image
 
-Controls the size of the emoji
+Contrôle la taille de l'emoji
 
-Position around the centre
+Position près du centre
 
-Replace with your obstacle
+Remplacer par ton obstacle
 
-Before drawing the player
+Avant de dessiner le joueur
 
-Resize to fit your theme
+Redimensionner pour s'adapter à ton thème
 
-Draw a fir tree
+Dessine un sapin
 
-Green for needles
+Vert pour les aiguilles
 
-Brown for trunk
+Brun pour le tronc
 
-Increases each frame
+Augmente chaque image
 
-Any number is fine
+N'importe quel nombre convient
 
-On background
+Sur l'arrière plan
 
-Useful for debugging
+Utile pour le débogage
 
-Draw circles around the pixels to check for collisions
+Dessiner des cercles autour des pixels pour vérifier les collisions
 
-Include global variables here
+Inclure les variables globales ici
 
-Use the global level
+Utiliser global niveau
