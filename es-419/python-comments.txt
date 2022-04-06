@@ -1,97 +1,95 @@
-Import library code
+Importar el código de la Biblioteca p5
 
-Wrap around
+Recircular
 
-The draw_player function goes here
+Aquí va la función dibujar_jugador
 
-Setup your animation here
+Configura tu animación aquí
 
-Position around the centre
+Cosas que hacer en cada cuadro (frame)
 
-Things to do in every frame
+Definiciones de compatibilidad con la biblioteca de procesamiento p5py
 
-Definitions for compatibility with the p5py processing library
+Formas
 
-Shape
+Tipos de letra
 
-Fonts
+Texto
 
-Text
+Color
 
-Colour
+Imágenes
 
-Images
+Entorno informático
 
-Environment
+Transformar
 
-Transform
+Teclado
 
-Keyboard
+Dibuja el punto de colisión
 
-Draw collision point
+A la izquierda de la pantalla
 
-Off the left of the screen
+A la derecha de la pantalla
 
-Off the right of the screen
+Ubicado al centro y arriba
 
-Position around the centre, top
+Cara
 
-Face
+Ojos
 
-Eyes
+Boca
 
-Mouth
+Estrellado
 
-Collided
+Ejecuta tu código una vez llegues aquí
 
-Put code to run once here
+Ancho y alto
 
-Width and height
+Ejecuta tu código cada cuadro (frame) aquí
 
-Put code to run every frame here
+Mantén lo siguiente para ejecutar tu código
 
-Keep this to run your code
+Aquí va la función dibujar_obstaculos
 
-The draw_obstacle function goes here
+A la parte inferior de la pantalla
 
-Off the bottom of the screen
+A la parte superior de la pantalla
 
-Off the top of the screen
+Agrega el color de tu tema
 
-Add the colour of your theme
+Ubicado en la parte inferior de la pantalla
 
-Positioned towards the screen bottom
+Tu color elegido
 
-Your chosen colour
+Carga tu imagen
 
-Load your image
+Controla el tamaño del emoji
 
-Controls the size of the emoji
+Ubicado alrededor del centro
 
-Position around the centre
+Reemplázalo con tu obstáculo
 
-Replace with your obstacle
+Antes de dibujar tu jugador
 
-Before drawing the player
+Cambia el tamaño para que se adapte a tu tema
 
-Resize to fit your theme
+Dibuja un árbol de pino
 
-Draw a fir tree
+Verde para la hojas
 
-Green for needles
+Marrón para el tronco
 
-Brown for trunk
+Aumenta cada frame
 
-Increases each frame
+Cualquier número funcionará
 
-Any number is fine
+En el fondo
 
-On background
+Útil para depurar
 
-Useful for debugging
+Dibuja círculos alrededor de los píxeles para verificar colisiones
 
-Draw circles around the pixels to check for collisions
+Incluye variables globales aquí
 
-Include global variables here
-
-Use the global level
+Usa el nivel global
