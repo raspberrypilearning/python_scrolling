@@ -1,69 +1,69 @@
-speed
+velocidad
 
-score
+puntaje
 
-draw_obstacles
+dibujar_obstaculos
 
-You reached speed
+Llegaste a la velocidad
 
-ob_x
+obstaculo_x
 
-ob_y
+obstaculo_y
 
-skiing
+esquiador
 
-crashed
+estrellado
 
-player_y
+jugador_y
 
-collide
+colision
 
-safe
+a_salvo
 
-level
+nivel
 
-collide2
+colision2
 
-collide3
+colision3
 
-collide4
+colision4
 
-safe_player
+jugador_a_salvo
 
-crashed_player
+jugador_estrellado
 
-player_x
+jugador_x
 
-car
+carro
 
-lives
+vidas
 
-invulnerability
+invulnerabilidad
 
-display_score
+mostrar_puntaje
 
-🎉🎉 You win! 🎉🎉
+🎉🎉 ¡Ganaste! 🎉🎉
 
-display_lives
+mostrar_vidas
 
-rocket
+cohete
 
-rock
+asteroide
 
-random_seed
+semilla_aleatoria
 
-player
+jugador
 
-obstacle
+obstaculo
 
-Great flying!
+¡Excelente vuelo!
 
-Doing well!
+¡Vas bien!
 
-Keep going!
+¡Sigue así!
 
-But be careful!
+Pero ve con cuidado!
 
-Push harder!
+¡Ponle más ganas!
 
-Head for base!
+Regresa a la base!
