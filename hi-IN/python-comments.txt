@@ -1,7 +1,5 @@
 Import library code
 
-The draw_background function goes here
-
 Wrap around
 
 The draw_player function goes here
