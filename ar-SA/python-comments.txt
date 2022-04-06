@@ -1,99 +1,97 @@
-Import library code
+استيراد مكتبة الشفرات البرمجية
 
-The draw_background function goes here
+الالتفاف
 
-Wrap around
+تذهب دالة draw_player هنا
 
-The draw_player function goes here
+قم بإعداد الرسوم المتحركة الخاصة بك هنا
 
-Setup your animation here
+موضع حول المركز
 
-Position around the centre
+أشياء للقيام بها في كل إطار
 
-Things to do in every frame
+تعاريف للتوافق مع مكتبة معالجة p5py
 
-Definitions for compatibility with the p5py processing library
+شكل
 
-Shape
+الخطوط
 
-Fonts
+نص
 
-Text
+اللون
 
-Colour
+صور
 
-Images
+بيئة
 
-Environment
+تحول
 
-Transform
+لوحة المفاتيح
 
-Keyboard
+رسم نقطة الاصطدام
 
-Draw collision point
+من يسار الشاشة
 
-Off the left of the screen
+من يمين الشاشة
 
-Off the right of the screen
+موضع حول المركز ، أعلى
 
-Position around the centre, top
+وجه
 
-Face
+عيون
 
-Eyes
+فم
 
-Mouth
+اصطدمت
 
-Collided
+ضع الشفرة البرمجية للتشغيل مرة واحدة هنا
 
-Put code to run once here
+العرض والارتفاع
 
-Width and height
+ضع الشفرة البرمجية لتشغيل كل إطار هنا
 
-Put code to run every frame here
+احتفظ بهذا لتشغيل التعليمات البرمجية الخاصة بك
 
-Keep this to run your code
+تظهر دالة draw_obstacle هنا
 
-The draw_obstacle function goes here
+إيقاف الجزء السفلي من الشاشة
 
-Off the bottom of the screen
+خارج الجزء العلوي من الشاشة
 
-Off the top of the screen
+أضف لون الخلفية الخاصة بك
 
-Add the colour of your theme
+يتم وضعه باتجاه أسفل الشاشة
 
-Positioned towards the screen bottom
+اللون الذي اخترته
 
-Your chosen colour
+تحميل صورتك
 
-Load your image
+يتحكم في حجم الرموز التعبيرية
 
-Controls the size of the emoji
+الموضع حول المركز
 
-Position around the centre
+استبدل بعقبتك
 
-Replace with your obstacle
+قبل رسم اللاعب
 
-Before drawing the player
+Resize لتناسب موضوعك
 
-Resize to fit your theme
+رسم شجرة الصنوبر
 
-Draw a fir tree
+اخضر للاوراق الإبرية
 
-Green for needles
+بني للساق
 
-Brown for trunk
+زيادة كل إطار
 
-Increases each frame
-
-Any number is fine
+الالتفاف حول
 
 On background
 
-Useful for debugging
+مفيد لتصحيح الأخطاء
 
-Draw circles around the pixels to check for collisions
+ارسم دوائر حول البكسل للتحقق من الاصطدامات
 
-Include global variables here
+قم بتضمين المتغيرات العالمية هنا
 
-Use the global level
+استخدم المستوى العالمي
