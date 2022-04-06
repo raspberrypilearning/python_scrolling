@@ -8,7 +8,9 @@ Als je de [Inleiding tot Python](https://projects.raspberrypi.org/en/pathways/py
 
 --- /print-only ---
 
---- no-print --- <iframe src="https://trinket.io/embed/python/81be7eb895?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen mark="crwd-mark"> </iframe>
+--- no-print ---
+
+<iframe src="https://trinket.io/embed/python/81be7eb895?outputOnly=true&start=result" width="600" height="500" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen> </iframe>
 
 
 --- /no-print ---
