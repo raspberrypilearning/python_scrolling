@@ -1,97 +1,95 @@
-Import library code
+Bibliotheekcode importeren
 
-Wrap around
+Blijf binnen het speelveld
 
-The draw_player function goes here
+De teken_speler functie komt hier
 
-Setup your animation here
+Stel hier je animatie in
 
-Position around the centre
+Dingen om te doen in elk frame
 
-Things to do in every frame
+Definities voor de p5py-bibliotheek
 
-Definitions for compatibility with the p5py processing library
+Vormgeving
 
-Shape
+Lettertypen
 
-Fonts
+Tekst
 
-Text
+Kleur
 
-Colour
+Afbeeldingen
 
-Images
+Omgeving
 
-Environment
+Omzetten
 
-Transform
+Toetsenbord
 
-Keyboard
+Teken botsingspunt
 
-Draw collision point
+Voorbij de linkerkant van het scherm
 
-Off the left of the screen
+Voorbij de rechterkant van het scherm
 
-Off the right of the screen
+Positie rond het midden, bovenaan
 
-Position around the centre, top
+Gezicht
 
-Face
+Ogen
 
-Eyes
+Mond
 
-Mouth
+Gebotst
 
-Collided
+Zet de code om eenmalig uit te voeren hier onder
 
-Put code to run once here
+Breedte en hoogte
 
-Width and height
+Zet hier code om bij elk frame uit te voeren
 
-Put code to run every frame here
+Houdt dit om je code uit te voeren
 
-Keep this to run your code
+De teken_obstakel functie komt hier
 
-The draw_obstacle function goes here
+Voorbij de onderkant van het scherm
 
-Off the bottom of the screen
+Voorbij de bovenkant van het scherm
 
-Off the top of the screen
+Voeg de kleur van je thema toe
 
-Add the colour of your theme
+Gepositioneerd naar de onderkant van het scherm
 
-Positioned towards the screen bottom
+Jouw gekozen kleur
 
-Your chosen colour
+Laad je afbeelding
 
-Load your image
+Bepaalt de grootte van de emoji
 
-Controls the size of the emoji
+Positie rond het midden, bovenaan
 
-Position around the centre
+Vervang je obstakel
 
-Replace with your obstacle
+Voordat je de speler tekent
 
-Before drawing the player
+Pas de afmeting aan om bij jouw thema te passen
 
-Resize to fit your theme
+Teken een dennenboom
 
-Draw a fir tree
+Groen voor naalden
 
-Green for needles
+Bruin voor stam
 
-Brown for trunk
+Verhoogt elk frame
 
-Increases each frame
+Ieder getal is prima
 
-Any number is fine
+Gelijk aan achtergrondkleur
 
-On background
+Nuttig voor het opsporen van fouten
 
-Useful for debugging
+Teken cirkels rond de pixels om te controleren op botsingen
 
-Draw circles around the pixels to check for collisions
+Voeg hier global variabelen toe
 
-Include global variables here
-
-Use the global level
+Gebruik het global level
