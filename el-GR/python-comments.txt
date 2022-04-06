@@ -1,95 +1,95 @@
-Import library code
+Εισαγωγή του κώδικα της βιβλιοθήκης
 
-Wrap around
+Επανεμφάνιση στην αντίθετη πλευρά
 
-The draw_player function goes here
+Η συνάρτηση draw_player πηγαίνει εδώ
 
-Setup your animation here
+Ορισμός της κινούμενης εικόνας σου εδώ
 
-Things to do in every frame
+Ενέργειες που πρέπει να γίνονται σε κάθε καρέ
 
-Definitions for compatibility with the p5py processing library
+Ορισμοί για συμβατότητα με τη βιβλιοθήκη επεξεργασίας p5py
 
-Shape
+Σχήμα
 
-Fonts
+Γραμματοσειρές
 
-Text
+Κείμενο
 
-Colour
+Χρώμα
 
-Images
+Εικόνες
 
-Environment
+Περιβάλλον
 
-Transform
+Μετασχηματισμός
 
-Keyboard
+Πληκτρολόγιο
 
-Draw collision point
+Σχεδίαση του σημείου σύγκρουσης
 
-Off the left of the screen
+Εκτός της αριστερής πλευράς της οθόνης
 
-Off the right of the screen
+Εκτός της δεξιάς πλευράς της οθόνης
 
-Position around the centre, top
+Θέση γύρω από το κέντρο, επάνω
 
-Face
+Πρόσωπο
 
-Eyes
+Μάτια
 
-Mouth
+Στόμα
 
-Collided
+Σύγκρουση
 
-Put code to run once here
+Βάλε εδώ κώδικα που θα εκτελεστεί μια φορά
 
-Width and height
+Πλάτος και ύψος
 
-Put code to run every frame here
+Βάλε εδώ κώδικα που θα εκτελείται σε κάθε καρέ
 
-Keep this to run your code
+Από εδώ εκτελείς τον κώδικά σου
 
-The draw_obstacle function goes here
+Η συνάρτηση draw_obstacle πηγαίνει εδώ
 
-Off the bottom of the screen
+Εκτός της κάτω πλευράς της οθόνης
 
-Off the top of the screen
+Εκτός της πάνω πλευράς της οθόνης
 
-Add the colour of your theme
+Πρόσθεσε το χρώμα του θέματός σου
 
-Positioned towards the screen bottom
+Τοποθέτηση στο κάτω μέρος της οθόνης
 
-Your chosen colour
+Το επιλεγμένο σου χρώμα
 
-Load your image
+Φόρτωσε την εικόνα
 
-Controls the size of the emoji
+Ελέγχει το μέγεθος του emoji
 
-Position around the centre
+Τοποθετημένο γύρω από το κέντρο
 
-Replace with your obstacle
+Αντικατάστησέ το με το εμπόδιό σου
 
-Before drawing the player
+Πριν σχεδιάσεις τον παίκτη
 
-Resize to fit your theme
+Αλλαγή μεγέθους για να ταιριάζει με το θέμα σου
 
 Draw a fir tree
 
-Green for needles
+Πράσινο για τις βελόνες
 
-Brown for trunk
+Καφέ για τον κορμό
 
-Increases each frame
+Αυξάνει κάθε καρέ
 
-Any number is fine
+Οποιοσδήποτε αριθμός είναι εντάξει
 
-On background
+Στο φόντο
 
-Useful for debugging
+Χρήσιμο για εντοπισμό σφαλμάτων
 
-Draw circles around the pixels to check for collisions
+Σχεδίαση κύκλων γύρω από τα εικονοστοιχεία για έλεγχο συγκρούσεων
 
-Include global variables here
+Δήλωση των καθολικών μεταβλητών εδώ
 
-Use the global level
+Χρησιμοποίησε την καθολική μεταβλητή level
