@@ -4,7 +4,7 @@ score
 
 draw_obstacles
 
-You reached speed
+Έφτασες στο επίπεδο
 
 ob_x
 
@@ -42,7 +42,7 @@ invulnerability
 
 display_score
 
-🎉🎉 You win! 🎉🎉
+🎉🎉 Νίκησες! 🎉🎉
 
 display_lives
 
@@ -56,14 +56,14 @@ player
 
 obstacle
 
-Great flying!
+Υπέροχη πτήση!
 
-Doing well!
+Καλά τα πας!
 
-Keep going!
+Συνέχισε!
 
-But be careful!
+Αλλά πρόσεχε!
 
-Push harder!
+Προσπάθησε πιο πολύ!
 
-Head for base!
+Κατευθύνσου προς τη βάση!
