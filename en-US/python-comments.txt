@@ -6,8 +6,6 @@ The draw_player function goes here
 
 Setup your animation here
 
-Position around the centre
-
 Things to do in every frame
 
 Definitions for compatibility with the p5py processing library
