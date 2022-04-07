@@ -95,7 +95,7 @@ def setup(): size(400, 400) text_size(40) #Controla el tamaño del emoji text_al
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - draw_player()
 ---
 
 def dibujar_jugador(): if colision == a_salvo: #En el fondo text('🎈', mouse_x, jugador_y) else: #Estrellado text('💥', mouse_x, jugador_y)
