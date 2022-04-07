@@ -21,6 +21,7 @@ steps:
     completion: internal
   - 
     title: Reflectie
+    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -28,7 +29,6 @@ steps:
       passing_score: 3
   - 
     title: Verbeter je project
-    completion: external
   - 
     title: Deel
   - 
