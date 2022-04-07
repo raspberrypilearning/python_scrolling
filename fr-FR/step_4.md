@@ -95,7 +95,7 @@ def configuration(): size(400, 400) text_size(40) #Contrôle la taille de l'emoj
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - draw_player()
 ---
 
 def dessine_joueur(): if collision == sur: #sur l'arrière-plan text('🎈', mouse_x, joueur_y) else: #collision text('💥', mouse_x, joueur_y)
