@@ -42,7 +42,7 @@ Deze code gebruikt de `height` en de `frame_count` om de variabele `level` te ve
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — teken_obstakels()
 line_numbers: false
 ---
 
@@ -78,7 +78,7 @@ Als je naar de code kijkt, zou je kunnen verwachten dat de snelheid met meer dan
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — teken_obstakels()
 line_numbers: false
 ---
 
@@ -136,7 +136,7 @@ Je kunt de score van je speler verhogen voor elk frame waar ze niet tegen een ob
 --- code ---
 ---
 language: python
-filename: main.py — draw_player()
+filename: main.py — teken_speler()
 ---
 
 global score
@@ -243,7 +243,7 @@ Ten slotte, als beide correct werken, is het mogelijk dat je spel de `level = 0`
 --- code ---
 ---
 language: python
-filename: main.py — draw_player()
+filename: main.py — teken_speler()
 ---
 
   if botsen == veilig: 
@@ -269,7 +269,7 @@ Als het level correct stijgt, controleer dan je `teken_obstakels()` functie. Con
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — teken_obstakels()
 line_numbers: false
 ---
 
@@ -295,7 +295,7 @@ Als het niveau correct stijgt, controleer dan je functie `teken_obstakels()` om 
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — teken_obstakels()
 line_numbers: false
 ---
 

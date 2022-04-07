@@ -24,7 +24,7 @@ Define una función `dibujar_obstaculos()`:
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dibujar_obstaculos()
 ---
 
 def dibujar_obstaculos(): 
@@ -95,7 +95,7 @@ Llama a tu imagen con `image()` y configúralo como global en la función `dibuj
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dibujar_obstaculos()
 ---
 
 def dibujar_obstaculos(): 
@@ -132,7 +132,7 @@ def setup(): size(400, 400) text_size(40) #Controla el tamaño del emoji text_al
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dibujar_obstaculos()
 ---
 
 def dibujar_obstaculos(): 
@@ -170,7 +170,7 @@ title: Dibuja un obstáculo usando múltiples formas
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dibujar_obstaculos()
 ---
 
 def dibujar_obstaculos(): 
@@ -203,7 +203,7 @@ La variable `frame_count` de la biblioteca p5 comienza a contar los cuadros (fra
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dibujar_obstaculos()
 ---
 
 def dibujar_obstaculos(): 
@@ -231,7 +231,7 @@ Este código usa un bucle `for` con `randint()` para elegir las posiciones de lo
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dibujar_obstaculos()
 ---
 
 def dibujar_obstaculos():
@@ -300,7 +300,7 @@ Por ejemplo:
 --- code ---
 ---
 language: python
-filename: main.py — draw_obstacles()
+filename: main.py — dibujar_obstaculos()
 ---
 
 def dibujar_obstaculos():

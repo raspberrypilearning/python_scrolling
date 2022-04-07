@@ -24,7 +24,7 @@ Définis une fonction `dessine_obstacles()`:
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dessine_obstacles()
 ---
 
 def dessine_obstacles(): 
@@ -94,7 +94,7 @@ Appelle `image()` et définis-la comme global dans la fonction `dessine_obstacle
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dessine_obstacles()
 ---
 
 def dessine_obstacles(): 
@@ -134,7 +134,7 @@ def setup():
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dessine_obstacles()
 ---
 
 def dessine_obstacles(): 
@@ -172,7 +172,7 @@ title: Dessiner un obstacle à l'aide de plusieurs formes
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dessine_obstacles()
 ---
 
 def dessine_obstacles(): 
@@ -206,7 +206,7 @@ La variable p5 `frame_count` commence à compter les images lorsque tu cliques s
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dessine_obstacles()
 ---
 
 def dessine_obstacles(): 
@@ -234,7 +234,7 @@ Ce code utilise une boucle `for` avec `randint()` pour choisir les positions des
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dessine_obstacles()
 ---
 
 def dessine_obstacles():
@@ -303,7 +303,7 @@ Par exemple :
 --- code ---
 ---
 language: python
-filename: main.py — draw_obstacles()
+filename: main.py — dessine_obstacles()
 ---
 
 def dessine_obstacles():

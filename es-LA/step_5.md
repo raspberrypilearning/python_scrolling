@@ -42,7 +42,7 @@ Este código usa `height` (altura) y `frame_count` (recuento de cuadros o fotogr
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — dibujar_obstaculos()
 line_numbers: false
 ---
 
@@ -78,7 +78,7 @@ Al observar este código, es posible que esperes que la velocidad aumente más q
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — dibujar_obstaculos()
 line_numbers: false
 ---
 
@@ -136,7 +136,7 @@ Puedes aumentar el puntaje de tu jugador por cada cuadro (frame) en el que no ha
 --- code ---
 ---
 language: python
-filename: main.py — draw_player()
+filename: main.py — dibujar_jugador()
 ---
 
 global puntaje
@@ -243,7 +243,7 @@ Finalmente, si ambos funcionan correctamente, es posible que tu juego no esté c
 --- code ---
 ---
 language: python
-filename: main.py — draw_player()
+filename: main.py — dibujar_jugador()
 ---
 
   if colision == a_salvo: 
@@ -269,7 +269,7 @@ Si el nivel aumenta correctamente, verifica tu función `dibujar_obstaculos()`. 
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — dibujar_obstaculos()
 line_numbers: false
 ---
 
@@ -295,7 +295,7 @@ Si el nivel aumenta correctamente, verifica tu función `dibujar_obtaculos()` pa
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — dibujar_obstaculos()
 line_numbers: false
 ---
 

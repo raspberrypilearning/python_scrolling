@@ -103,7 +103,7 @@ def setup():
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - draw_player()
 ---
 
 def draw_player():

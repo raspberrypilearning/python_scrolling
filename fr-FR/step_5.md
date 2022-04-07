@@ -42,7 +42,7 @@ Ce code utilise le `height` et le `frame_count` pour augmenter la variable `nive
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — dessine_obstacles()
 line_numbers: false
 ---
 
@@ -78,7 +78,7 @@ En regardant le code, tu peux t'attendre à ce que la vitesse augmente de plus d
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — dessine_obstacles()
 line_numbers: false
 ---
 
@@ -136,7 +136,7 @@ Tu peux augmenter le score de ton joueur pour chaque image où il n'est pas entr
 --- code ---
 ---
 language: python
-filename: main.py — draw_player()
+filename: main.py — dessine_joueur()
 ---
 
 global score
@@ -242,7 +242,7 @@ Enfin, si les deux fonctionnent correctement, ton jeu peut ne pas définir corre
 --- code ---
 ---
 language: python
-filename: main.py — draw_player()
+filename: main.py — dessine_joueur()
 ---
 
   if collision == sur: 
@@ -266,7 +266,7 @@ Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()`. 
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — dessine_obstacles()
 line_numbers: false
 ---
 
@@ -292,7 +292,7 @@ Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()` p
 --- code ---
 ---
 language: python 
-filename: main.py — draw_obstacles()
+filename: main.py — dessine_obstacles()
 line_numbers: false
 ---
 
