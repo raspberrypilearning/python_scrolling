@@ -95,7 +95,7 @@ def setup(): size(400, 400) text_size(40) #Ελέγχει το μέγεθος τ
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - draw_player()
 ---
 
 def draw_player(): if collide == safe: #Στο φόντο text('🎈', mouse_x, player_y) else: #Συγκρούστηκαν text('💥', mouse_x, player_y)
