@@ -95,7 +95,7 @@ def setup(): size(400, 400) text_size(40) #Controleert de grootte van de emoji t
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - draw_player()
 ---
 
 def teken_speler(): if botsen == veilig: #Gelijk aan chtergrondkleur text('🎈', muis_x, speler_y) else: #Gebotst text('💥', muis_x, speler_y)
