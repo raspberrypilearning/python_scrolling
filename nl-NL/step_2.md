@@ -82,7 +82,7 @@ Definieer een `teken_speler()` functie en creëer een `speler_y` positie voor de
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - teken_speler()
 ---
 
 def teken_speler():    
@@ -150,7 +150,7 @@ Roep de `image()` aan en stel deze in als global in de `teken_speler()` functie.
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - teken_speler()
 ---
 
 def teken_speler():    
@@ -189,7 +189,7 @@ def setup():
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - teken_speler()
 ---
 
 def teken_speler():     
@@ -226,7 +226,7 @@ title: Teken een speler met meerdere vormen
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - teken_speler()
 ---
 
 def teken_speler():    

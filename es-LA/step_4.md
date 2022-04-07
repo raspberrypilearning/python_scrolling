@@ -28,7 +28,7 @@ En tu función `dibujar_jugador()`, crea una variable llamada `colision` y confi
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dibujar_jugador()
 ---
 
 colision = get(mouse_x, jugador_y)
@@ -60,7 +60,7 @@ Aquí tienes un ejemplo:
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dibujar_jugador()
 ---
 
 def dibujar_jugador(): 
@@ -102,7 +102,7 @@ def setup():
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dibujar_jugador()
 ---
 
 def dibujar_jugador(): 

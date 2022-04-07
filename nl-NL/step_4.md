@@ -28,7 +28,7 @@ Maak in je `teken_speler()`-functie een variabele met de naam `botsen` en stel d
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - teken_speler()
 ---
 
 botsen = get(muis_x, speler_y)
@@ -60,7 +60,7 @@ Hier is een voorbeeld:
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - teken_speler()
 ---
 
 def teken_speler(): 
@@ -102,7 +102,7 @@ def setup():
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - teken_speler()
 ---
 
 def teken_speler(): 

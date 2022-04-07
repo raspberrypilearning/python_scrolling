@@ -82,7 +82,7 @@ Define una función `dibujar_jugador()` y crea una posición `jugador_y` para la
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dibujar_jugador()
 ---
 
 def dibujar_jugador():    
@@ -150,7 +150,7 @@ Llama a tu imagen con `image()` y configúralo como global en la función `dibuj
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dibujar_jugador()
 ---
 
 def dibujar_jugador():    
@@ -189,7 +189,7 @@ def setup():
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dibujar_jugador()
 ---
 
 def dibujar_jugador():     
@@ -226,7 +226,7 @@ title: Dibuja un personaje usando múltiples formas
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dibujar_jugador()
 ---
 
 def dibujar_jugador():    

@@ -82,7 +82,7 @@ Définis une fonction `dessine_joueur()` et crée une position `joueur_y` pour l
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dessine_joueur()
 ---
 
 def dessine_joueur():    
@@ -150,7 +150,7 @@ Appelle `image()` et définis-la comme global dans la fonction `dessine_joueur()
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dessine_joueur()
 ---
 
 def dessine_joueur():    
@@ -189,7 +189,7 @@ def configuration():
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dessine_joueur()
 ---
 
 def dessine_joueur():     
@@ -226,7 +226,7 @@ title: Dessiner un joueur à l'aide de plusieurs formes
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dessine_joueur()
 ---
 
 def dessine_joueur():    

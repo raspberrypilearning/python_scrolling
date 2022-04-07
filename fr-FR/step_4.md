@@ -28,7 +28,7 @@ Dans ta fonction `dessine_joueur()`, crée une variable appelée `collision` et 
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dessine_joueur()
 ---
 
 collision = get(mouse_x, joueur_y)
@@ -60,10 +60,11 @@ Voici un exemple :
 --- code ---
 ---
 language: python
-filename: main.py - draw_player()
+filename: main.py - dessine_joueur()
 ---
 
-def dessine_joueur(): joueur_y = int(height * 0.8)
+def dessine_joueur(): 
+  joueur_y = int(height * 0.8)
 
   collision = get(mouse_x, joueur_y)
 
@@ -101,7 +102,7 @@ def setup():
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dessine_joueur()
 ---
 
 def dessine_joueur(): 

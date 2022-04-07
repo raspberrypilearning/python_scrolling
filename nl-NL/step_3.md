@@ -24,7 +24,7 @@ Definieer een `teken_obstakels()` functie:
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - teken_obstakels()
 ---
 
 def teken_obstakels(): 
@@ -95,7 +95,7 @@ Roep `image()` aan en stel deze in als global in de `teken_obstakels()` functie.
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - teken_obstakels()
 ---
 
 def teken_obstakels(): 
@@ -135,7 +135,7 @@ def setup():
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - teken_obstakels()
 ---
 
 def teken_obstakels(): 
@@ -173,10 +173,10 @@ title: Teken een speler met gebruikmaking van meerdere vormen
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - teken_obstakels()
 ---
 
-def draw_obstacles():
+def teken_obstakels():
     ob_x = width/2
     ob_y = height/2
     #Teken een dennenboom
@@ -207,7 +207,7 @@ De p5-variabele `frame_count` begint de frames te tellen wanneer je op uitvoeren
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - teken_obstakels()
 ---
 
 def teken_obstakels():
@@ -236,7 +236,7 @@ Deze code gebruikt een `for` lus met `randint()` om obstakelposities voor je te 
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - teken_obstakels()
 ---
 
 def teken_obstakels():
@@ -305,7 +305,7 @@ Bijvoorbeeld:
 --- code ---
 ---
 language: python
-filename: main.py — draw_obstacles()
+filename: main.py — teken_obstakels()
 ---
 
 def teken_obstakels():
