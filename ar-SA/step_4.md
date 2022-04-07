@@ -95,7 +95,7 @@ filename: main.py - setup()
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - draw_player()
 ---
 
 def draw_player (): إذا اصطدمت == آمن: #On background text ('🎈'، mouse_x، player_y) else: #Collided text ('💥'، mouse_x، player_y)
