@@ -95,7 +95,7 @@ def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_a
 --- code ---
 ---
 language: python
-filename: main.py - draw_obstacles()
+filename: main.py - draw_player()
 ---
 
 def draw_player(): if collide == safe: #On background text('🎈', mouse_x, player_y) else: #Collided text('💥', mouse_x, player_y)
