@@ -1,6 +1,6 @@
 #!/bin/python3
 
-#Εισαγωγή του κώδικα της βιβλιοθήκης
+# Import library code
 from p5 import *
 from random import randint, seed
 
@@ -16,12 +16,12 @@ def draw_obstacles():
   
   if frame_count % height == height - 1 and speed < 5:
     speed += 1
-    print('Έφτασες στο επίπεδο', level)
+    print('You reached level', speed)
     
   for i in range(6):
     ob_x = randint(0, height)
     ob_y = randint(0, height) + (frame_count * speed)
-    ob_y %= height # επανεμφάνιση στην αντίθετη πλευρά
+    ob_y %= height # wrap around
     no_stroke()
     fill(0,255,0)
     triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
@@ -30,7 +30,7 @@ def draw_obstacles():
     fill(150,100,100)
     rect(ob_x + 15, ob_y + 70, 10, 10)
     
-# Η συνάρτηση draw_player πηγαίνει εδώ
+# The draw_player function goes here
 def draw_player():
   
   global score, speed, skiing, crashed
@@ -53,22 +53,22 @@ def setup():
   
   global skiing, crashed
   
-  # Ορισμός της κινούμενης εικόνας σου εδώ
+  # Setup your animation here
   text_size(40)
-  text_align(CENTER, TOP) # θέση γύρω από το κέντρο, επάνω
+  text_align(CENTER, TOP) # position around the centre
   size(400, 400)
   skiing = load_image('skiing.png')
   crashed = load_image('fallenover.png')
   
 def draw():
-  # Ενέργειες που πρέπει να γίνονται σε κάθε καρέ
+  # Things to do in every frame
   global score, safe, speed, skiing, crashed
   safe = color(255)
 
   if speed > 0:
     background(safe) 
     fill(0)
-    text('Σκορ: ' + str(score), width/2, 20)
+    text('Score: ' + str(score), width/2, 20)
     draw_obstacles()
     draw_player()
   
