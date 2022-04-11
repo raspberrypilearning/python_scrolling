@@ -1,13 +1,13 @@
 #!/bin/python3
 
-# Εισαγωγή του κώδικα της βιβλιοθήκης
+# Import library code
 from p5 import *
 from random import randint, seed
 
 level = 1
 score = 0
 
-# Η συνάρτηση draw_obstacle πηγαίνει εδώ
+# The draw_obstacle function goes here
 def draw_obstacles():
   
   global level
@@ -16,16 +16,16 @@ def draw_obstacles():
   
   if frame_count % height == height - 1 and level < 5:
     level += 1
-    print('Έφτασες στο επίπεδο', level)
+    print('You reached level', level)
     
   for i in range(6 + level):
     ob_x = randint(0, height)
     ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height # επανεμφάνιση στην αντίθετη πλευρά
+    ob_y %= height # wrap around
     text('🌵', ob_x, ob_y)
 
     
-# Η συνάρτηση draw_player πηγαίνει εδώ
+# The draw_player function goes here
 def draw_player():
   
   global score, level
@@ -33,7 +33,7 @@ def draw_player():
   player_y = int(height * 0.8)
   
   no_fill()
-  #ellipse(mouse_x, player_y, 10, 10) # σχεδίαση του σημείου σύγκρουσης
+  #ellipse(mouse_x, player_y, 10, 10) # draw collision point
   #ellipse(mouse_x, player_y + 40, 10, 10)
   #ellipse(mouse_x - 12, player_y + 20, 10, 10)
   #ellipse(mouse_x + 12, player_y + 20, 10, 10)
@@ -43,10 +43,10 @@ def draw_player():
   collide3 = get(mouse_x + 12, player_y + 20)
   collide4 = get(mouse_x, player_y + 40)
   
-  if mouse_x < width: # Εκτός της αριστερής πλευράς της οθόνης
+  if mouse_x < width: # off the left of the screen
     collide2 = safe
   
-  if mouse_x > width: # Εκτός της δεξιάς πλευράς της οθόνης
+  if mouse_x > width: # off the right of the screen
     collide3 = safe
     
   if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
@@ -58,21 +58,21 @@ def draw_player():
     
   
 def setup():
-  # Ορισμός της κινούμενης εικόνας σου εδώ
+  # Setup your animation here
   text_size(40)
-  text_align(CENTER, TOP) # θέση γύρω από το κέντρο, επάνω
+  text_align(CENTER, TOP) # position around the centre, top
   size(400, 400)
   
   
 def draw():
-  # Ενέργειες που πρέπει να γίνονται σε κάθε καρέ
+  # Things to do in every frame
   global score, safe, level
   safe = color(200, 150, 0)
   
   if level > 0:
     background(safe) 
     fill(255)
-    text('Σκορ: ' + str(score), width/2, 20)
+    text('Score: ' + str(score), width/2, 20)
     draw_obstacles()
     draw_player()
   
