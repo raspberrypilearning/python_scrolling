@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# استيراد مكتبة الشفرات البرمجية
+# Import library code
 from p5 import *
 from random import randint, seed
 
@@ -9,8 +9,8 @@ score = 0
 lives = 3
 invun = 0
 
-# تظهر دالة draw_obstacle هنا
-def draw_obstacles ():
+# The draw_obstacle function goes here
+def draw_obstacles():
   
   global level
   
@@ -18,21 +18,21 @@ def draw_obstacles ():
   
   if frame_count % height == height - 1 and level < 8:
     level += 1
-    طباعة ("لقد وصلت إلى المستوى" ، المستوى)
+    print('You reached level', level)
     
   for i in range(6 + level):
     ob_x = randint(0, width)
     ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height # الالتفاف
+    ob_y %= height # wrap around
     push_matrix()
     translate(ob_x, ob_y)
     rotate(degrees(randint(1, 359)+frame_count / 1000))
-    image (rock، 0، 0، randint (18،24)، randint (18،24))
-    pop_matrix ()
+    image(rock, 0, 0, randint(18,24), randint(18,24))
+    pop_matrix()
 
     
-# تذهب دالة draw_player هنا
-def draw_player ():
+# The draw_player function goes here
+def draw_player():
   
   global score, level, lives, invun
   
@@ -40,14 +40,14 @@ def draw_player ():
   player_x = mouse_x
   
   collide = get(player_x, player_y)
-  collide = get(player_x, player_y)
-  collide = get(player_x, player_y)
+  collide2 = get(player_x - 18, player_y + 17)
+  collide3 = get(player_x + 18, player_y + 17)
   collide4 = get(player_x, player_y + 25)
   
-  if player_x < width: # من يسار الشاشة
+  if player_x < width: # off the left of the screen
     collide2 = safe
   
-  if player_x > width: # من يمين الشاشة
+  if player_x > width: # off the right of the screen
     collide3 = safe
     
   if (collide == safe and collide2 == safe and collide3 == safe and collide4 == safe) or invun > 0:
@@ -57,7 +57,7 @@ def draw_player ():
     image(rocket, player_x, player_y + 25, 64, 64)
     score += level
     invun -= 1
-    no_tint ()
+    no_tint()
     
     if invun > 0:
       stroke(220)
@@ -76,7 +76,7 @@ def draw_player ():
     level = 0
     
 
-def display_score ():
+def display_score():
   global level
   
   fill(255)
@@ -87,7 +87,7 @@ def display_score ():
   
   if score > 10000:
     level = 0
-    print('🎉🎉 You win! 🎉🎉 ')
+    print('🎉🎉 You win! 🎉🎉')
 
   
 def display_lives():
@@ -101,29 +101,29 @@ def display_lives():
   
 
 def setup():
-  # قم بإعداد الرسوم المتحركة الخاصة بك هنا
+  # Setup your animation here
   global rocket, rock, random_seed
   
   text_size(40)
-  text_align (CENTER ، TOP) # موضع حول المركز ، أعلى
+  text_align(CENTER, TOP) # position around the centre, top
   size(400, 400)
   
   rocket = load_image('rocket.png')
   rock = load_image('moon.png')
-  random_seed = randint (0 ، 1000000)
+  random_seed = randint(0, 1000000)
   
 def draw():
-  # أشياء للقيام بها في كل إطار
+  # Things to do in every frame
   global score, safe, level
   safe = color(0)
   
   if level > 0:
     background(safe) 
     fill(255)
-    image_mode (CENTER)
+    image_mode(CENTER)
     draw_obstacles()
-    draw_player ()
-    display_score ()
-    display_lives ()
+    draw_player()
+    display_score()
+    display_lives()
   
 run()
