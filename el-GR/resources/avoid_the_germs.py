@@ -10,11 +10,11 @@ def safe_player():
   
   global player_y
   
-  # Πρόσωπο
+  # Face
   fill(200, 134, 145)
   ellipse(mouse_x, player_y, 60, 60)
 
-  #Μάτια
+  # Eyes
   fill(178, 200, 145)
   ellipse(mouse_x - 10, player_y - 10, 20, 20)
   ellipse(mouse_x + 10, player_y - 10, 20, 20)
@@ -25,7 +25,7 @@ def safe_player():
   ellipse(mouse_x - 12, player_y - 12, 5, 5)
   ellipse(mouse_x + 12, player_y - 12, 5, 5)
   
-  # Στόμα
+  # Mouth
   fill(0)
   ellipse(mouse_x, player_y + 10, 15, 10)
   fill(200, 134, 145)
@@ -35,11 +35,11 @@ def crashed_player():
   
   global player_y
   
-  # Πρόσωπο
+  # Face
   fill(178, 200, 145)
   ellipse(mouse_x, player_y, 60, 60)
 
-  # Μάτια
+  # Eyes
   fill(149, 161, 195)
   ellipse(mouse_x - 10, player_y - 10, 20, 20)
   ellipse(mouse_x + 10, player_y - 10, 20, 20)
@@ -50,7 +50,7 @@ def crashed_player():
   ellipse(mouse_x - 12, player_y - 12, 5, 5)
   ellipse(mouse_x + 12, player_y - 12, 5, 5)
   
-  # Στόμα
+  # Mouth
   fill(0)
   ellipse(mouse_x, player_y + 15, 15, 10)
   fill(178, 200, 145)
@@ -67,10 +67,10 @@ def draw_player():
   collide3 = get(mouse_x + 30, player_y)
   collide4 = get(mouse_x, player_y - 30)
   
-  if mouse_x < width: # Εκτός της αριστερής πλευράς της οθόνης
+  if mouse_x < width: # off the left of the screen
     collide2 = safe
   
-  if mouse_x > width: # Εκτός της δεξιάς πλευράς της οθόνης
+  if mouse_x > width: # off the right of the screen
     collide3 = safe
     
   #print(collide, collide2, collide3, collide4)
@@ -78,7 +78,7 @@ def draw_player():
   if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
     safe_player()
     score += level
-  else: # Σύγκρουση
+  else: # Collided
     crashed_player()
     level = 0
   
@@ -90,7 +90,7 @@ def draw_obstacles():
   
   if frame_count & height == height - 1 and level < 5:
     level += 1
-    print('Έφτασες στο επίπεδο', level)
+    print('You reached level', level)
   
   for i in range(9 + level):
     ob_x = randint(0, width)
@@ -99,14 +99,14 @@ def draw_obstacles():
     text('🦠', ob_x, ob_y)
 
 def setup():
-# Βάλε εδώ κώδικα που θα εκτελεστεί μια φορά
-  size(400, 400) # πλάτος και ύψος
-  no Stroke()
+# Put code to run once here
+  size(400, 400) # width and height
+  noStroke()
   text_size(40)
   text_align(CENTER, TOP)
 
 def draw():
-# Βάλε εδώ κώδικα που θα εκτελείται σε κάθε καρέ
+# Put code to run every frame here
   global safe, score, level
   
   safe = color(149, 161, 195)
@@ -114,9 +114,9 @@ def draw():
   if level > 0:
     background(safe)
     fill(145, 134, 126)
-    text('Σκορ: ' + str(score), width/2, 20)
+    text('Score: ' + str(score), width/2, 20)
     draw_obstacles()
     draw_player()
   
-# Από εδώ εκτελείς τον κώδικά σου
+# Keep this to run your code
 run()
