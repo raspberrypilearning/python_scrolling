@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# Εισαγωγή του κώδικα της βιβλιοθήκης
+# Import library code
 from p5 import *
 from random import randint, seed
 
@@ -9,7 +9,7 @@ score = 0
 lives = 3
 invun = 0
 
-# Η συνάρτηση draw_obstacle πηγαίνει εδώ
+# The draw_obstacle function goes here
 def draw_obstacles():
   
   global level
@@ -18,12 +18,12 @@ def draw_obstacles():
   
   if frame_count % height == height - 1 and level < 8:
     level += 1
-    print('Έφτασες στο επίπεδο', level)
+    print('You reached level', level)
     
   for i in range(6 + level):
     ob_x = randint(0, width)
     ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height # επανεμφάνιση στην αντίθετη πλευρά
+    ob_y %= height # wrap around
     push_matrix()
     translate(ob_x, ob_y)
     rotate(degrees(randint(1, 359)+frame_count / 1000))
@@ -31,7 +31,7 @@ def draw_obstacles():
     pop_matrix()
 
     
-# Η συνάρτηση draw_player πηγαίνει εδώ
+# The draw_player function goes here
 def draw_player():
   
   global score, level, lives, invun
@@ -44,10 +44,10 @@ def draw_player():
   collide3 = get(player_x + 18, player_y + 17)
   collide4 = get(player_x, player_y + 25)
   
-  if player_x < width: # εκτός της αριστερής πλευράς της οθόνης
+  if player_x < width: # off the left of the screen
     collide2 = safe
   
-  if player_x > width: # εκτός της δεξιάς πλευράς της οθόνης
+  if player_x > width: # off the right of the screen
     collide3 = safe
     
   if (collide == safe and collide2 == safe and collide3 == safe and collide4 == safe) or invun > 0:
@@ -82,30 +82,30 @@ def display_score():
   fill(255)
   text_size(16)
   text_align(RIGHT, TOP)
-  text('Σκορ', width * 0.45, 10, width * 0.5, 20)
+  text('Score', width * 0.45, 10, width * 0.5, 20)
   text(str(score), width * 0.45, 25, width * 0.5, 20)
   
   if score > 10000:
     level = 0
-    print('🎉🎉 Νίκησες! 🎉🎉')
+    print('🎉🎉 You win! 🎉🎉')
 
   
 def display_lives():
   fill(255)
   text_size(16)
   text_align(LEFT, TOP)
-  text('Ζωές', width * 0.05, 10, 30, 20)
+  text('Lives', width * 0.05, 10, 30, 20)
   
   for i in range(lives):
     image(rocket, width * 0.05 + i * 25, 40, 20, 20)
   
 
 def setup():
-  # Ορισμός της κινούμενης εικόνας σου εδώ
+  # Setup your animation here
   global rocket, rock, random_seed
   
   text_size(40)
-  text_align(CENTER, TOP) # θέση γύρω από το κέντρο, επάνω
+  text_align(CENTER, TOP) # position around the centre, top
   size(400, 400)
   
   rocket = load_image('rocket.png')
@@ -113,7 +113,7 @@ def setup():
   random_seed = randint(0, 1000000)
   
 def draw():
-  # Ενέργειες που πρέπει να γίνονται σε κάθε καρέ
+  # Things to do in every frame
   global score, safe, level
   safe = color(0)
   
