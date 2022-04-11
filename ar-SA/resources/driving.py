@@ -1,13 +1,13 @@
 #!/bin/python3
 
-# استيراد مكتبة الشفرات البرمجية
+# Import library code
 from p5 import *
 from random import randint, seed
 
 level = 1
 score = 0
 
-# تظهر دالة draw_obstacle هنا
+# The draw_obstacle function goes here
 def draw_obstacles():
   
   global level
@@ -24,7 +24,7 @@ def draw_obstacles():
     ob_x %= width # wrap around
     text('💩', ob_x, ob_y)
     
-# تذهب دالة draw_player هنا
+# The draw_player function goes here
 def draw_player():
   
   global score, level
@@ -39,12 +39,12 @@ def draw_player():
   collide5 = get(player_x - 50, player_y + 15)
   collide6 = get(player_x - 50, player_y - 15)
   
-  if player_y> height - 18: # إيقاف الجزء السفلي من الشاشة
+  if player_y > height - 18: # Off the bottom of the screen
     collide = safe
     collide3 = safe
     collide5 = safe
     
-  elif player_y <18: # خارج الجزء العلوي من الشاشة
+  elif player_y < 18: # Off the top of the screen
     collide2 = safe
     collide4 = safe
     collide6 = safe
@@ -58,7 +58,7 @@ def draw_player():
     
   
 def setup():
-  # قم بإعداد الرسوم المتحركة الخاصة بك هنا
+  # Setup your animation here
   global car
   
   size(400, 400)
@@ -67,7 +67,7 @@ def setup():
   
   
 def draw():
-  # أشياء للقيام بها في كل إطار
+  # Things to do in every frame
   global score, safe, level
   safe = color(128)
   
