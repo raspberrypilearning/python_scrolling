@@ -1,13 +1,13 @@
 #!/bin/python3
 
-# Εισαγωγή του κώδικα της βιβλιοθήκης
+# Import library code
 from p5 import *
 from random import randint, seed
 
 level = 1
 score = 0
 
-# Η συνάρτηση draw_obstacle πηγαίνει εδώ
+# The draw_obstacle function goes here
 def draw_obstacles():
   
   global level
@@ -16,15 +16,15 @@ def draw_obstacles():
   
   if frame_count % width == width - 1 and level < 10:
     level += 1
-    print('Έφτασες στο επίπεδο', level)
+    print('You reached level', level)
     
   for i in range(6 + level):
     ob_x = randint(0, width) - (frame_count * level)
     ob_y = randint(0, height) 
-    ob_x %= width # επανεμφάνιση στην αντίθετη πλευρά
+    ob_x %= width # wrap around
     text('💩', ob_x, ob_y)
     
-# Η συνάρτηση draw_player πηγαίνει εδώ
+# The draw_player function goes here
 def draw_player():
   
   global score, level
@@ -39,12 +39,12 @@ def draw_player():
   collide5 = get(player_x - 50, player_y + 15)
   collide6 = get(player_x - 50, player_y - 15)
   
-  if player_y > height - 18: # εκτός της κάτω πλευράς της οθόνης
+  if player_y > height - 18: # Off the bottom of the screen
     collide = safe
     collide3 = safe
     collide5 = safe
     
-  elif player_y < 18: # εκτός της πάνω πλευράς της οθόνης
+  elif player_y < 18: # Off the top of the screen
     collide2 = safe
     collide4 = safe
     collide6 = safe
@@ -58,7 +58,7 @@ def draw_player():
     
   
 def setup():
-  # Ορισμός της κινούμενης εικόνας σου εδώ
+  # Setup your animation here
   global car
   
   size(400, 400)
@@ -67,7 +67,7 @@ def setup():
   
   
 def draw():
-  # Ενέργειες που πρέπει να γίνονται σε κάθε καρέ
+  # Things to do in every frame
   global score, safe, level
   safe = color(128)
   
@@ -76,10 +76,10 @@ def draw():
     fill(255)
     text_size(16)
     text_align(RIGHT, TOP)
-    text('Σκορ', width * 0.45, 10, width * 0.5, 20)
+    text('Score', width * 0.45, 10, width * 0.5, 20)
     text(str(score), width * 0.45, 25, width * 0.5, 20)
     text_size(20)
-    text_align(CENTER, TOP) # θέση γύρω από το κέντρο, επάνω
+    text_align(CENTER, TOP) # position around the centre, top
     draw_obstacles()
     draw_player()
   
