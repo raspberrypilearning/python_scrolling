@@ -1,19 +1,18 @@
 #!/bin/python3
 
-# استيراد مكتبة الشفرات البرمجية
+# Import library code
 from p5 import *
 from random import randint, seed
 
 level = 1
 score = 0
 
-# تظهر دالة draw_obstacle هنا
-def draw_obstacles ():
+# The draw_obstacle function goes here
+def draw_obstacles():
   
-  المستوى العالمي
+  global level
   
   seed(12345678)
-
   
   if frame_count % height == height - 1 and level < 5:
     level += 1
@@ -26,7 +25,7 @@ def draw_obstacles ():
     text('🌵', ob_x, ob_y)
 
     
-# تذهب دالة draw_player هنا
+# The draw_player function goes here
 def draw_player():
   
   global score, level
@@ -34,7 +33,7 @@ def draw_player():
   player_y = int(height * 0.8)
   
   no_fill()
-  #ellipse (mouse_x، player_y، 10، 10) # رسم نقطة الاصطدام
+  #ellipse(mouse_x, player_y, 10, 10) # draw collision point
   #ellipse(mouse_x, player_y + 40, 10, 10)
   #ellipse(mouse_x - 12, player_y + 20, 10, 10)
   #ellipse(mouse_x + 12, player_y + 20, 10, 10)
@@ -44,10 +43,10 @@ def draw_player():
   collide3 = get(mouse_x + 12, player_y + 20)
   collide4 = get(mouse_x, player_y + 40)
   
-  if mouse_x <العرض: # من يسار الشاشة
+  if mouse_x < width: # off the left of the screen
     collide2 = safe
   
-  if mouse_x> width: # من يمين الشاشة
+  if mouse_x > width: # off the right of the screen
     collide3 = safe
     
   if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
@@ -59,14 +58,14 @@ def draw_player():
     
   
 def setup():
-  # قم بإعداد الرسوم المتحركة الخاصة بك هنا
+  # Setup your animation here
   text_size(40)
-  text_align (CENTER ، TOP) # موضع حول المركز ، أعلى
+  text_align(CENTER, TOP) # position around the centre, top
   size(400, 400)
   
   
 def draw():
-  # أشياء للقيام بها في كل إطار
+  # Things to do in every frame
   global score, safe, level
   safe = color(200, 150, 0)
   
