@@ -11,7 +11,7 @@ Eindeloze runner-games eindigen vaak wanneer de speler tegen een obstakel botst.
 </div>
 </div>
 
-Nu kunt je je speler instellen om te reageren op een botsing met een obstakel.
+Nu kun je je speler instellen om te reageren op een botsing met een obstakel.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**Botsingsdetectie**</span> bepaalt wanneer twee objecten die in een computersimulatie zijn gemaakt elkaar raken, of dat nu een game is, een animatie of iets anders. Er zijn verschillende manieren om dit te doen, bijvoorbeeld: 
