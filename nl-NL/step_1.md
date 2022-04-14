@@ -27,28 +27,28 @@ Wat gebeurt er als je een obstakel raakt? Wordt het moeilijker terwijl je speelt
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**Skiënde kat**: [Bekijk van binnen](https://trinket.io/python/76e628bff2){:target="_blank"}
+**Skiing cat**: [See inside](https://trinket.io/python/76e628bff2){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/76e628bff2?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Plof niet**: [Bekijk van binnen](https://trinket.io/python/974800f4ef){:target="_blank"}
+**Don't pop**: [See inside](https://trinket.io/python/974800f4ef){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/974800f4ef?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Vermijd de bacterieën**: [Bekijk van binnen](https://trinket.io/python/88e108c819){:target="_blank"}
+**Avoid the germs**: [See inside](https://trinket.io/python/88e108c819){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/88e108c819?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 
-**Schone auot**: [Bekijk van binnen](https://trinket.io/python/70da6c454d){:target="_blank"}
+**Clean car**: [See inside](https://trinket.io/python/70da6c454d){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/70da6c454d?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**Vermijd asteroiden**: [Bekijk van binnen](https://trinket.io/python/d156014e67){:target="_blank"}
+**Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
