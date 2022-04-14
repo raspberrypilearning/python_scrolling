@@ -233,7 +233,7 @@ filename: main.py — draw_player()
 title: Het spel gaat niet sneller
 ---
 
-Controleer eerst of `level` correct ophoogt wordt. Je zou een bericht moeten zien worden afgedrukt elke keer dat het omhoog gaat. Als dit niet gebeurt, controleer dan zowel de code voor het afdrukken van het bericht als de code voor het verhogen van het level.
+Controleer eerst of `level` correct opgehoogd wordt. Je zou een bericht moeten zien worden afgedrukt elke keer dat het omhoog gaat. Als dit niet gebeurt, controleer dan zowel de code voor het afdrukken van het bericht als de code voor het verhogen van het level.
 
 Als het level correct stijgt, controleer dan je `teken_obstakels()` functie. Controleer in het bijzonder of je `obstakel_y = randint(0, height) + (frame_count * level)` goed hebt. Het zou er ongeveer zo uit moeten zien:
 
