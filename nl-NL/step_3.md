@@ -144,11 +144,11 @@ def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2 text('🌵', o
 
 [[[processing-stroke]]]
 
-**Tip:** Je kunt meerdere eenvoudige vormen in dezelfde functie gebruiken om een complexere speler te maken.
+**Tip:** Je kunt meerdere eenvoudige vormen in dezelfde functie gebruiken om een complexer object te maken.
 
 --- collapse ---
 ---
-title: Teken een speler met gebruikmaking van meerdere vormen
+titel: Teken een object door meerdere vormen te gebruiken
 ---
 
 ![beschrijving](images/tree_obstacle.png)
