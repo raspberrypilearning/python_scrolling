@@ -1,19 +1,19 @@
-## Share
+## Rhannu
 
-If you are in a club, why not share your project with friends?
+Os ydych chi mewn clwb, beth am rannu eich prosiect â'ch ffrindiau?
 
-You could also show your family how your project works by sending them a link.
+Fe allech chi hefyd ddangos i'ch teulu sut mae eich prosiect yn gweithio drwy anfon dolen atyn nhw.
 
-To get a link, go to the **Share** menu button in the upper-right of your Trinket's edit page and select **Link**.
+I gael dolen, ewch i'r botwm dewislen **Share** yng nghornel dde uchaf tudalen olygu Trinket a dewis **Link**.
 
-![The 'Share' menu button extended, with 'Link' highlighted.](images/share-button.png)
+![Y botwm dewislen 'Share' wedi'i ehangu a 'Link' wedi'i amlygu.](images/share-button.png)
 
-**Tip:** You can share a link to your project even if you don't have a Trinket account; however, without an account, the link to your project will change each time you update it. If you have shared the link with someone, you will need to send a new link for them to see the changes.
+**Cyngor:** Fe allwch chi rannu dolen i'ch prosiect hyd yn oed os nad oes gennych chi gyfrif Trinket; ond heb gyfrif, bydd y ddolen i'ch prosiect yn newid bob tro byddwch chi'n ei ddiweddaru. Os ydych chi wedi rhannu'r ddolen â rhywun, bydd angen i chi anfon dolen newydd iddyn nhw allu gweld y newidiadau.
 
 --- task ---
 
-Inspire the Raspberry Pi Foundation community with your project!
+Rhowch ysbrydoliaeth i gymuned y Raspberry Pi Foundation gyda'ch prosiect!
 
-To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+I gyflwyno eich prosiect i'n stiwdio [Osgoi'r rhwystrau - Cymuned](https://wke.lt/w/s/KobNfx){:target="_blank"}, llenwch y [ffurflen hon](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
 --- /task ---
