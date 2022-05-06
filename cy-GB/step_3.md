@@ -1,25 +1,25 @@
-## Create obstacles
+## Creu rhwystrau
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Create the obstacles that you will have to avoid to keep playing the game.
+Ewch ati i greu'r rhwystrau bydd angen eu hosgoi i barhau i chwarae'r gêm.
 </div>
 <div>
 
-![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
+![Enghraifft o brosiect sgïo gyda choed fel rhwystrau](images/obstacles.png){:width="300px"}
 
 </div>
 </div>
 
-### Start with one obstacle
+### Dechreuwch gydag un rhwystr
 
-You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
+Fe allwch chi wneud rhwystrau yn yr un modd ag y gwnaethoch chi eich chwaraewr. Sut mae'r rhwystrau'n cyd-fynd â'ch thema?
 
-You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
+Byddwch chi'n defnyddio dolen `for` i wneud llawer o gopïau felly dim ond un rhwystr mae angen i chi ei wneud neu ei ddewis.
 
 --- task ---
 
-Define a `draw_obstacles()` function:
+Diffiniwch swyddogaeth `llunio_rhwystrau()`:
 
 --- code ---
 ---
@@ -32,7 +32,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #R
 
 --- /code ---
 
-Add code to `draw()` to call `draw_obstacles()` each frame.
+Ychwanegwch god at `draw()` i alw `llunio_rhwystrau()` bob ffrâm.
 
 --- code ---
 ---
@@ -49,27 +49,27 @@ draw_obstacles() #Before drawing the player draw_player()
 
 --- task ---
 
-**Choose:** What does your obstacle look like? Your obstacle could be:
-+ An image provided in the starter project
-+ An emoji 🌵 or text
-+ Drawn using a series of shapes
+**Dewis:** Sut mae eich rhwystr yn edrych? Fe allai eich rhwystr fod:
++ Yn ddelwedd wedi'i darparu yn y prosiect dechreuol
++ Yn emoji 🌵 neu'n destun
++ Wedi'i lunio gan ddefnyddio cyfres o siapiau
 
 --- collapse ---
 ---
-title: Use a starter image
+title: Defnyddio delwedd ddechreuol
 ---
 
-Click on the **manage images** icon.
+Cliciwch yr eicon **manage images**.
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![Yr eicon delweddau yng nghornel dde uchaf yr ardal cod.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+Bydd delweddau yn y prosiect dechreuol wedi'u dangos yn y rhestr `Image library`.
 
-![The Image library with a list of included images.](images/starter-images.png)
+![Y llyfrgell ddelweddau gyda rhestr o'r delweddau wedi'u cynnwys.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Gwnewch nodyn o enw'r ddelwedd rydych chi am ei defnyddio.
 
-Load the image into the `setup()` function.
+Llwythwch y ddelwedd i'r swyddogaeth `setup()`.
 
 --- code ---
 ---
@@ -81,7 +81,7 @@ def setup(): size(400, 400) player = load_image('skiing.png') #Load your image o
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_obstacles()` function.
+Galwch `image()` a'i osod fel un gyffredinol (global) yn y swyddogaeth `llunio_rhwystrau()`.
 
 --- code ---
 ---
@@ -101,12 +101,12 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Defnyddio cymeriadau emoji
 ---
 
-You can use emoji characters in the p5 `text()` function to represent your obstacles.
+Fe allwch chi ddefnyddio cymeriadau emoji yn y swyddogaeth p5 `text()` i gynrychioli eich rhwystrau.
 
-Here's an example:
+Dyma enghraifft:
 
 --- code ---
 ---
@@ -144,11 +144,11 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
+**Cyngor:** Fe allwch chi ddefnyddio nifer o siapiau syml yn yr un swyddogaeth i greu rhwystr mwy cymhleth.
 
 --- collapse ---
 ---
-title: Draw an obstacle using multiple shapes
+title: Llunio rhwystr gan ddefnyddio nifer o siapiau
 ---
 
 ![desc](images/tree_obstacle.png)
@@ -167,15 +167,15 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 --- /task ---
 
-### Get your obstacle moving
+### Gwneud i'ch rhwystr symud
 
 --- task ---
 
-Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
+Nawr, ychwanegwch god i gynyddu safle `y` y rhwystr ym mhob ffrâm, a'i gael i amlapio pan fydd yn cyrraedd y gwaelod i greu effaith rhwystr arall.
 
-The p5 `frame_count` variable starts counting the frames when you click run.
+Mae'r newidyn p5 `frame_count` yn dechrau cyfri'r fframiau pan fyddwch chi'n clicio rhedeg.
 
-`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
+Mae `ob_y %= height` yn gosod y safle `y` ar gyfer y gweddill pan gaiff ei rannu â `height`. Gyda `height` o '400', bydd hyn yn troi `401` yn `1` felly pan fydd y rhwystrau'n diflannu oddi ar waelod y sgrin, mae'n ailymddangos ar y brig.
 
 --- code ---
 ---
@@ -189,17 +189,17 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Increases ea
 
 --- /task ---
 
-### Lots of obstacles
+### Rhwystrau di-ri
 
-You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
+Fe allech chi lunio llawer o gopïau o'ch rhwystr mewn gwahanol safleoedd dechreuol ond mae hynny'n gryn dipyn o waith. Dewch i ni ddefnyddio llwybr byr.
 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
+Mae <span style="color: #0faeb0">**cynhyrchu gweithdrefnol**</span> yn cael ei ddefnyddio wrth greu bydoedd mewn gemau, rhwystrau a golygfeydd ffilmiau i greu natur ar hap ond gyda rheolau penodol ar waith hefyd. Mae <span style="color: #0faeb0">seed</span> yn golygu eich bod yn gallu cynhyrchu'r un canlyniadau bob tro rydych chi'n defnyddio'r un dosbarthiad.</p>
 
 --- task ---
 
-This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
+Mae'r cod hwn yn defnyddio dolen `for` gyda `randint()` i ddewis safleoedd rhwystrau i chi. Mae galw'r swyddogaeth `seed()` ar hap yn gyntaf yn golygu byddwch chi'n cael yr un rhifau ar hap bob amser. Mae hyn yn golygu na fydd y rhwystrau'n neidio o gwmpas bob ffrâm a'ch bod yn gallu newid y dosbarthiad nes eich bod yn cael un sy'n lleoli'r rhwystrau'n deg.
 
 --- code ---
 ---
@@ -216,7 +216,7 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 
 --- /code ---
 
-Useful information:
+Gwybodaeth ddefnyddiol:
 
 [[[using-seed-in-python]]]
 
@@ -226,46 +226,46 @@ Useful information:
 
 --- collapse ---
 ---
-title: Epilepsy warning
+title: Rhybudd epilepsi
 ---
 
-Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
-- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
-- Ask somebody to run it for you
-- Move on and complete the project, asking someone to run the project for you at the end so you can debug
-- Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
+Mae profi eich rhaglen yn gallu achosi ffit i bobl ag epilepsi ffotosensitif. Os oes gennych chi epilepsi ffotosensitif neu'n teimlo gallech chi fod yn dueddol i gael ffit, peidiwch â rhedeg eich rhaglen. Yn hytrach, fe allwch chi wneud y canlynol:
+- Gwneud yn siŵr eich bod wedi ychwanegu'r llinell cod `seed()` i sicrhau nad yw eich rhwystrau'n neidio o gwmpas
+- Gofyn i rywun ei rhedeg ar eich rhan
+- Symud ymlaen a chwblhau'r prosiect, gan ofyn i rywun redeg y prosiect i chi ar y diwedd er mwyn i chi allu difa chwilod
+- Newid y gyfradd fframiau cyn rhedeg eich rhaglen drwy ychwanegu `frame_rate(1)` ar ddechrau `setup()` — fe allwch chi dynnu hwn ar ôl cadarnhau nad oes chwilen
 
 --- /collapse ---
 
 --- task ---
 
-**Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom.
+**Profi:** Rhedwch eich rhaglen ac fe ddylech chi weld nifer o wrthrychau ar y sgrin, yn amlapio pan fyddan nhw'n cyrraedd y gwaelod.
 
-Change your code until you are happy with the obstacles you have. You can:
+Newidiwch eich cod nes eich bod yn fodlon ar y rhwystrau sydd gennych chi. Fe allwch chi:
 
-+ Change the seed to get obstacles in different starting positions
-+ Change the number of times to loop repeats to get a different number of obstacles
-+ Adjust the size of the obstacles
++ Newid y dosbarthiad i roi rhwystrau mewn gwahanol safleoedd dechreuol
++ Newid sawl gwaith mae'r ddolen yn ailadrodd i gael nifer gwahanol o rwsytrau
++ Addasu maint y rhwystrau
 
-**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
+**Cyngor:** Gwnewch yn siŵr ei bod yn bosib osgoi eich rhwystrau ond nad oes llwybr hawdd drwy eich gêm.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Difa chwilod:** Efallai bydd angen i chi drwsio chwilod yn eich prosiect. Dyma rai chwilod cyffredin.
 
 --- collapse ---
 ---
-title: Only one obstacle is being drawn
+title: Dim ond un rhwystr sy'n cael ei lunio
 ---
 
-Check your function that draws multiple obstacles:
- + Make sure it uses a `for` loop to call the obstacle drawing function more than once
- + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
- + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
+Tarwch olwg ar eich swyddogaeth sy'n llunio nifer o rwystrau:
+ + Gwnewch yn siŵr ei bod yn defnyddio dolen `for` i alw'r swyddogaeth llunio rhwystrau fwy nag unwaith
+ + Gwnewch yn siŵr ei bod yn defnyddio `randint()` i newid y cyfesurynnau (x, y) mae'n eu pasio i'r swyddogaeth llunio rhwystrau
+ + Gwnewch yn siŵr eich bod wedi defnyddio `rh_x` a `rh_y` fel cyfesurynnau eich rhwystr
 
-For example:
+Er enghraifft:
 
 --- code ---
 ---
@@ -286,16 +286,16 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 
 --- collapse ---
 ---
-title: The obstacles are changing position every time a frame is drawn
+title: Mae'r rhwystrau'n newid safle bob tro mae ffrâm yn cael ei llunio
 ---
 
-Make sure that you have used `seed()` inside the function that draws multiple obstacles.
+Gwnewch yn siŵr eich bod wedi defnyddio `seed()` tu mewn i'r swyddogaeth sy'n llunio nifer o rwystrau.
 
 --- /collapse ---
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
+Mae rhaglenwyr yn defnyddio nifer o driciau clyfar fel defnyddio'r gweithredwr `%` i wneud i wrthrychau lapio o amgylch y sgrin a'r swyddogaeth `seed()` i gynhyrchu'r un rhifau ar hap. Po fwyaf o godio rydych chi'n ei wneud, y mwyaf o driciau clyfar byddwch chi'n eu dysgu.</p>
 
 --- save ---
