@@ -1,95 +1,95 @@
-Import library code
+Mewngludo cod llyfrgell
 
-Wrap around
+Amlapio
 
-The draw_player function goes here
+Mae'r swyddogaeth llunio_chwaraewr yn mynd fan hyn
 
-Setup your animation here
+Gosodwch eich animeiddiad yma
 
-Things to do in every frame
+Pethau i'w gwneud ym mhob ffrâm
 
-Definitions for compatibility with the p5py processing library
+Diffiniadau ar gyfer cydnawsedd â'r llyfrgell brosesu p5py
 
-Shape
+Siâp
 
-Fonts
+Ffontiau
 
-Text
+Testun
 
-Colour
+Lliw
 
-Images
+Delweddau
 
-Environment
+Amgylchedd
 
-Transform
+Trawsnewid
 
-Keyboard
+Bysellfwrdd
 
-Draw collision point
+Llunio pwynt gwrthdaro
 
-Off the left of the screen
+Oddi ar ochr chwith y sgrin
 
-Off the right of the screen
+Oddi ar ochr dde'r sgrin
 
-Position around the centre, top
+Lleoli o amgylch y canol, brig
 
-Face
+Wyneb
 
-Eyes
+Llygaid
 
-Mouth
+Ceg
 
-Collided
+Wedi_taro
 
-Put code to run once here
+Rhowch god i redeg unwaith yma
 
-Width and height
+Lled ac uchder
 
-Put code to run every frame here
+Rhowch god i redeg ym mhob ffrâm yma
 
-Keep this to run your code
+Cadwch hwn i redeg eich cod
 
-The draw_obstacle function goes here
+Mae'r swyddogaeth llunio_rhwystrau yn mynd fan hyn
 
-Off the bottom of the screen
+Oddi ar waelod y sgrin
 
-Off the top of the screen
+Oddi ar frig y sgrin
 
-Add the colour of your theme
+Ychwanegwch liw eich thema
 
-Positioned towards the screen bottom
+Lleoli tua gwaelod y sgrin
 
-Your chosen colour
+Y lliw o'ch dewis
 
-Load your image
+Llwytho eich delwedd
 
-Controls the size of the emoji
+Rheoli maint yr emoji
 
-Position around the centre
+Lleoli o amgylch y canol
 
-Replace with your obstacle
+Disodli gyda'ch rhwystr
 
-Before drawing the player
+Cyn llunio'r chwaraewr
 
-Resize to fit your theme
+Newidiwch y maint i gyd-fynd â'ch thema
 
-Draw a fir tree
+Llunio coeden bîn
 
-Green for needles
+Gwyrdd i'r nodwyddau
 
-Brown for trunk
+Brown i'r boncyff
 
-Increases each frame
+Cynyddu bob ffrâm
 
-Any number is fine
+Unrhyw rif yn iawn
 
-On background
+Ar y cefndir
 
-Useful for debugging
+Defnyddiol ar gyfer difa chwilod
 
-Draw circles around the pixels to check for collisions
+Llunio cylchoedd o amgylch y picseli i wirio am wrthdrawiad
 
-Include global variables here
+Rhowch newidynnau cyffredinol yma
 
-Use the global level
+Defnyddio'r lefel gyffredinol
