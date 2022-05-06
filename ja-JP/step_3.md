@@ -1,25 +1,25 @@
-## Create obstacles
+## 障害物を作る
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Create the obstacles that you will have to avoid to keep playing the game.
+ゲームに出てくる障害物を作成します。この障害物を避け続けることでゲームを続けられます。
 </div>
 <div>
 
-![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
+![木の障害物があるスキープロジェクトの例](images/obstacles.png){:width="300px"}
 
 </div>
 </div>
 
-### Start with one obstacle
+### 1つの障害物から始める
 
-You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
+プレイヤーを作ったのと同じ方法で障害物を作ることができます。 障害物はあなたのテーマにふさわしいですか？
 
-You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
+コピーをたくさん作るのに `for` ループを使うので、障害物は1つ作るか選ぶだけで済みます。
 
 --- task ---
 
-Define a `draw_obstacles()` function:
+`draw_obstacles()` 関数を定義します。
 
 --- code ---
 ---
@@ -32,7 +32,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #R
 
 --- /code ---
 
-Add code to `draw()` to call `draw_obstacles()` each frame.
+`draw()`にコードを追加して、フレームごとに`draw_obstacles()`を呼び出すようにします。
 
 --- code ---
 ---
@@ -49,27 +49,27 @@ draw_obstacles() #Before drawing the player draw_player()
 
 --- task ---
 
-**Choose:** What does your obstacle look like? Your obstacle could be:
-+ An image provided in the starter project
-+ An emoji 🌵 or text
-+ Drawn using a series of shapes
+**選択：** 障害物はどのように見えますか？ 障害物は次のどれかです。
++ スタータープロジェクトで用意された画像
++ 絵文字🌵またはテキスト
++ さまざまな形を使って描いたもの
 
 --- collapse ---
 ---
-title: Use a starter image
+title: スタータープロジェクトの画像を使う
 ---
 
-Click on the **manage images** icon.
+**View and Add Images**アイコンをクリックします。
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![コード領域の右上にある画像アイコン。](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+スタータープロジェクトで用意された画像は、 `Image Library` のリストに出て来ます。
 
-![The Image library with a list of included images.](images/starter-images.png)
+![含まれている画像のリストを含む画像ライブラリ。](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+使いたい画像の名前をメモします。
 
-Load the image into the `setup()` function.
+`setup()` 関数で画像を読み込みます.
 
 --- code ---
 ---
@@ -81,7 +81,7 @@ def setup(): size(400, 400) player = load_image('skiing.png') #Load your image o
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_obstacles()` function.
+`draw_obstacle()` 関数で`image()` を呼び出し、 obstacle変数をグローバルに設定します。
 
 --- code ---
 ---
@@ -101,12 +101,12 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: 絵文字を使用する
 ---
 
-You can use emoji characters in the p5 `text()` function to represent your obstacles.
+p5の `text()` 関数で絵文字を使うことができるので、障害物を絵文字で表現することができます。
 
-Here's an example:
+次に例を示します：
 
 --- code ---
 ---
@@ -144,14 +144,14 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
+**ヒント：** 一つの関数の中で、いくつかの単純な図形を使用して、より複雑な障害物を作ることができます。
 
 --- collapse ---
 ---
-title: Draw an obstacle using multiple shapes
+title: いくつかの図形を使って障害物を描く
 ---
 
-![desc](images/tree_obstacle.png)
+![説明](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -167,15 +167,15 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 --- /task ---
 
-### Get your obstacle moving
+### 障害物を動かす
 
 --- task ---
 
-Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
+次に、フレームごとに障害物の `y` の位置を増やすコードを追加します。障害物が一番下に達したとき、上に回り込んで別の障害物が出て来たように見せます。
 
-The p5 `frame_count` variable starts counting the frames when you click run.
+p5の`frame_count`変数は、実行ボタンをクリックするとフレームのカウントを始めます。
 
-`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
+`ob_y ％= height` は `ob_y`を`height`(画面の高さ) で割った余りが<0>y</0>方向の位置となるようにします。 `height`が「400 」の場合、この計算は`401`を`1`に変えるため、障害物が画面の下部から外れると、上部に再び表示されます。
 
 --- code ---
 ---
@@ -189,17 +189,17 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Increases ea
 
 --- /task ---
 
-### Lots of obstacles
+### たくさんの障害物
 
-You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
+さまざまな場所に障害物のコピーをたくさん描くことができますが、それはかなりの作業です。 手っ取り早い方法でやりましょう。
 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
+<span style="color: #0faeb0">**手続き型生成**</span>とは、ゲームワールド、障害物、および映画のシーンを作り出す使われる手法で、ランダムであるが、ある一定のルールに基づいてそれらを作り出すものです。 <span style="color: #0faeb0">seed(シード)</span> は、同じseed(シード) を使用するたびに同じ結果を生成できることを意味します。</p>
 
 --- task ---
 
-This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
+このコードでは、`for`ループと `randint()` を使って、障害物の位置を決めています。 最初にランダムの`seed()` 関数を呼び出すことで、何度やっても同じ乱数が得られます。 これによって、障害物がフレームごとにあちこちに現れることがなくなり、障害物がうまく出てくるタネを見つけるまでいくらでもタネを変更できるようになります。
 
 --- code ---
 ---
@@ -216,7 +216,7 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 
 --- /code ---
 
-Useful information:
+役立つ情報：
 
 [[[using-seed-in-python]]]
 
@@ -226,46 +226,46 @@ Useful information:
 
 --- collapse ---
 ---
-title: Epilepsy warning
+title: てんかんの警告
 ---
 
-Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
-- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
-- Ask somebody to run it for you
-- Move on and complete the project, asking someone to run the project for you at the end so you can debug
-- Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
+プログラムをテストすると、光過敏性てんかんのある人に発作を引き起こす可能性があります。 光過敏性てんかんを患っている方や発作を起こしやすいと感じている方は、プログラムを実行しないでください。 代わりに、次のことができます。
+- 障害物があちこちに現れないように `seed ()` のコード行追加したことを確認してください
+- プログラムの実行を誰かに頼んでください
+- 先に進めてプロジェクトを完了し、最後に誰かにプロジェクトを実行してもらい、デバッグできるようにしてください
+- プログラムを実行する前に、`setup()` の最初のところに `frame_rate(1)` を追加して、フレームレートを変更します。バグがないことを確認したら、この行は削除できます。
 
 --- /collapse ---
 
 --- task ---
 
-**Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom.
+**テスト：** プログラムを実行すると、画面にたくさんの障害物が表示され、一番下に到達すると上に回り込んでまた現れます。
 
-Change your code until you are happy with the obstacles you have. You can:
+障害の出来具合に満足するまでコードの変更を繰り返します。 やり方は以下のとおりです。
 
-+ Change the seed to get obstacles in different starting positions
-+ Change the number of times to loop repeats to get a different number of obstacles
-+ Adjust the size of the obstacles
++ 乱数のタネを変更して、色々な所から障害物が現れるようにします
++ 障害物の数が変わるまでのループ回数を変更します
++ 障害物のサイズを調整します
 
-**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
+**ヒント：** 障害物を避けることができて、簡単には通り抜けられないことを確認してください。
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**デバッグ：** プロジェクトに修正が必要なバグが見つかる場合があります。 一般的なバグは次のとおりです。
 
 --- collapse ---
 ---
-title: Only one obstacle is being drawn
+title: 障害物が1つしか現れない
 ---
 
-Check your function that draws multiple obstacles:
- + Make sure it uses a `for` loop to call the obstacle drawing function more than once
- + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
- + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
+障害物をたくさん描く関数を確認してください。
+ + 障害物を描く関数を2回以上呼び出すために、 `for` ループを使っていることを確認してください
+ + 障害物を描く関数に渡す(x, y) 座標を変えるのに、`randint()` を使っていることを確認してください
+ + 障害物の座標として `ob_x` と `ob_y` を使っていることを確認してください
 
-For example:
+例えば:
 
 --- code ---
 ---
@@ -286,16 +286,16 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 
 --- collapse ---
 ---
-title: The obstacles are changing position every time a frame is drawn
+title: フレームが描かれるたびに障害物の位置が変わります
 ---
 
-Make sure that you have used `seed()` inside the function that draws multiple obstacles.
+`seed()`が、たくさんの障害物を描く関数の中に入っていることを確認してください。
 
 --- /collapse ---
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
+プログラマーは、 `%`演算子を使ってオブジェクトを画面から出てすぐにまた現れるようにしたり、 `seed ()`関数を使って同じ乱数を生成したりするなど、多くの巧みなトリックを使っています。 コーディングをすればするほど、より巧みなトリックを身につけることができます。</p>
 
 --- save ---
