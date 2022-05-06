@@ -1,19 +1,19 @@
-## Reflection
+## Beth nesaf?
 
-Well done, you made a game!  Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+Da iawn, rydych chi wedi gwneud gêm!  Amser myfyrio nawr — mae myfyrio'n rhan bwysig o ddysgu oherwydd mae'n helpu i wneud cysylltiadau newydd yn eich ymennydd.
 
-Answer the three questions below to reflect on what you've learnt.
+Atebwch y tri chwestiwn isod i fyfyrio ar yr hyn rydych chi wedi'i ddysgu.
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+Ar ôl bob cwestiwn, pwyswch **cyflwyno**. Byddi di'n cael dy dywys i'r ateb cywir. Galli di wneud hyn gymaint ag y mynni.
 
-Have fun!
+Mwynha!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Cwestiwn 1 o 3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+Rydych chi wedi defnyddio llawer o ddatganiadau `if` i reoli ymddygiad eich gêm. Mae'n bosib bod gan rai ohonyn nhw amodau mwy cymhleth, gan ddefnyddio `and` i wneud mwy nag un prawf ar unwaith. Pe baech chi'n rhedeg y darn canlynol o god amodol, pa allbwn fyddech chi'n ei ddisgwyl?
 
 ```python
 score = 5000
@@ -40,42 +40,42 @@ else:
 
 - ( )
 ```
-Great flying!
+Hedfan heb ei ail!
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+Er bod `sgor >= 5000` yn wir, ar gyfer amod `and` mae'n rhaid i'r ddwy ran fod yn wir, ac nid yw `bywydau >= 3` yn wir.
 
   --- /feedback ---
 
 - (x)
 ```
-Doing well!
-Keep going!
+Ti'n gwneud yn dda!
+Dal ati!
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+Cywir — Mae `sgor >= 5000` yn wir fel y mae `bywydau > 1` ar y datganiad `if` wedi'i nythu.
 
   --- /feedback ---
 
 - ( )
 ```
-Doing well!
+Ti'n gwneud yn dda!
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+Agos, ond nid `sgor >= 5000` yw'r unig amod byddai'r rhaglen yn ei ganfod yn wir wrth redeg.
 
   --- /feedback ---
 
 - ( )
 ```
-Push harder!
+Gwthia'n galetach!
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+Er bod `bywydau > 1` yn wir, dim ond y cod tu mewn i'r amod gwir cyntaf mewn datganiad `if`/`elif`/`else` sy'n cael ei weithredu, ac nid `bywydau > 1` yw'r amod cyntaf sy'n wir.
 
   --- /feedback ---
 
