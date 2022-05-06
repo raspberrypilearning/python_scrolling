@@ -1,32 +1,32 @@
-## Set the theme
+## Gosod y thema
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Set the theme of your game and create a player character that follows the mouse pointer.
+Gosodwch thema eich gêm a chreu cymeriad chwarae sy'n dilyn pwyntydd y llygoden.
 
 </div>
 <div>
 
-![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+![Delwedd o grwban maint 100x100 yn erbyn cefndir glas gyda maint sgrin o 400x400.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
-- A sport or hobby
-- A movie, show, or game
-- Science or nature
-- Anything else!
+Beth yw thema eich gêm? Fe allech chi ddewis unrhyw beth. Dyma rai syniadau:
+- Camp neu hobi
+- Ffilm, sioe deledu neu gêm
+- Gwyddoniaeth neu fyd natur
+- Neu unrhyw beth arall!
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
+Agorwch y [prosiect dechreuol](https://trinket.io/python/cda05e5911){:target="_blank"}. Bydd Trinket yn agor mewn tab arall yn y porwr.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Set the size of your canvas.
+**Dewis:** Gosodwch faint eich canfas.
 
 --- code ---
 ---
@@ -43,9 +43,9 @@ size(400, 400)
 
 --- task ---
 
-Create a variable called `safe` to store the background colour based on the theme you want for your game.
+Ewch ati i greu newidyn o'r enw `diogel` i osod y lliw cefndir ar sail thema eich gêm.
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+Dyma'r lliw mae'n ddiogel i'r chwaraewr fod arno a byddwch chi'n defnyddio'r newidyn hwn eto nes 'mlaen.
 
 --- code ---
 ---
@@ -65,19 +65,19 @@ background(safe)
 
 --- task ---
 
-**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+**Profi:** Rhedwch eich cod i weld y lliw cefndir. Fe allwch chi ei newid nes eich bod yn fodlon ar y lliw ac ar faint y sgrin.
 
 --- /task ---
 
-Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
+Nawr dewiswch pa gymeriad sy'n chwarae'r gêm ac yn gorfod osgoi'r rhwystrau. A fydd yn wrthrych, person, anifail, neu rywbeth arall?
 
-The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
+Bydd y chwaraewr yn ymddangos mewn safle `y` sefydlog a'r un safle `x` â phwyntydd y llygoden, sy'n cael ei storio yn y newidyn `p5` variable `mouse_x`.
 
 --- task ---
 
-It's a good idea to organise the code for drawing the player character into a function.
+Mae'n syniad da rhoi trefn ar y cod ar gyfer llunio'r cymeriad chwarae mewn swyddogaeth.
 
-Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
+Diffiniwch swyddogaeth `llunio_chwaraewr()` a chreu safle `chwaraewr_y` ar gyfer safle `y` sefydlog y chwaraewr:
 
 --- code ---
 ---
@@ -90,7 +90,7 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- /code ---
 
-Add code to `draw()` to call `draw_player()` each frame.
+Ychwanegwch god at `draw()` i alw `llunio_chwaraewr()` bob ffrâm.
 
 --- code ---
 ---
@@ -107,31 +107,31 @@ draw_player()
 
 --- /task ---
 
-Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
+Nesaf byddwch chi'n ychwanegu cod at y swyddogaeth `llunio_chwaraewr()` i lunio eich siâp. Mae'n bosib bydd angen i chi ychwanegu cod `setup()` hefyd.
 
 --- task ---
 
-**Choose:** What does your player look like? Your player could be:
-+ An image provided in the starter project
-+ An emoji 🎈 or text
-+ Drawn using a series of shapes
+**Dewis:** Sut mae eich chwaraewr yn edrych? Fe allai eich chwaraewr fod:
++ Yn ddelwedd wedi'i darparu yn y prosiect dechreuol
++ Yn emoji 🎈 neu'n destun
++ Wedi'i lunio gan ddefnyddio cyfres o siapiau
 
 --- collapse ---
 ---
-title: Use a starter image
+title: Defnyddio delwedd ddechreuol
 ---
 
-Click on the **manage images** icon.
+Cliciwch yr eicon **manage images**.
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![Yr eicon delweddau yng nghornel dde uchaf yr ardal cod.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+Bydd delweddau yn y prosiect dechreuol wedi'u dangos yn y rhestr `Image library`.
 
-![The Image library with list of included images.](images/starter-images.png)
+![Y llyfrgell ddelweddau gyda rhestr o'r delweddau wedi'u cynnwys.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Gwnewch nodyn o enw'r ddelwedd rydych chi am ei defnyddio.
 
-Load the image into the `setup()` function
+Llwythwch y ddelwedd i'r swyddogaeth `setup()`
 
 --- code ---
 ---
@@ -145,7 +145,7 @@ player = load_image('skiing.png') #Load your image
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_player()` function.
+Galwch `image()` a'i osod fel un gyffredinol (global) yn y swyddogaeth `llunio_chwaraewr()`.
 
 --- code ---
 ---
@@ -166,12 +166,12 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Defnyddio cymeriadau emoji
 ---
 
-You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
+Fe allwch chi ddefnyddio cymeriadau emoji yn y swyddogaeth p5 `text()` i ddefnyddio emoji i gynrychioli eich chwaraewr.
 
-Here's an example:
+Dyma enghraifft:
 
 --- code ---
 ---
@@ -214,11 +214,11 @@ text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex player.
+**Cyngor:** Fe allwch chi ddefnyddio nifer o siapiau syml yn yr un swyddogaeth i greu chwaraewr mwy cymhleth.
 
 --- collapse ---
 ---
-title: Draw a player using multiple shapes
+title: Llunio chwaraewr gan ddefnyddio nifer o siapiau
 ---
 
 ![desc](images/face_player.png)
@@ -255,40 +255,40 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player.
+**Profi:** Rhedwch eich cod a symud y llygoden i reoli'r chwaraewr.
 
-Does it move like you expect?
+A yw'n symud fel oeddech chi'n ei ddisgwyl?
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Difa chwilod:** Efallai bydd angen i chi drwsio chwilod yn eich prosiect. Dyma rai chwilod cyffredin.
 
 --- task ---
 
 --- collapse ---
 ---
-title: I can't see the player
+title: Wela' i ddim y chwaraewr
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+Rhowch gynnig ar newid i sgrin lawn. Hefyd, tarwch olwg ar y cyfesurynnau `x` ac `y` rydych chi wedi'u defnyddio i lunio'r chwaraewr — gwnewch yn siŵr eu bod tu mewn i'r canfas rydych chi wedi'i greu â `size()`.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image isn't loading
+title: Dyw delwedd ddim yn llwytho
 ---
 
-First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+Yn gyntaf, gwnewch yn siŵr bod y ddelwedd yn yr `Image library`. Wedyn gwnewch yn fanwl siŵr bod enw'r ffeil yn gywir — cofiwch fod priflythrennau'n wahanol i lythrennau bach a bod atalnodi'n bwysig.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image is the wrong size
+title: Mae yna ddelwedd o'r maint anghywir
 ---
 
-Check the inputs that control the width and height of the image:
+Gwiriwch y mewnbynnau sy'n rheoli lled ac uchder y ddelwedd:
 
 ```python
 image(image_file, x_coord, y_coord, width, height)
@@ -298,10 +298,10 @@ image(image_file, x_coord, y_coord, width, height)
 
 --- collapse ---
 ---
-title: An emoji is the wrong size
+title: Mae yna emoji o'r maint anghywir
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+Os yw eich emoji yn rhy fawr neu fach, newidiwch y mewnbwn i `text_size()`.
 
 --- /collapse ---
 
