@@ -1,95 +1,95 @@
-Import library code
+ライブラリコードをインポートする
 
-Wrap around
+下に外れたら上から出てくるように
 
-The draw_player function goes here
+draw_player関数の定義をこの下に書く
 
-Setup your animation here
+アニメーションの設定を行う
 
-Things to do in every frame
+フレームごとに行うこと
 
-Definitions for compatibility with the p5py processing library
+p5py処理ライブラリとの互換性のための定義
 
-Shape
+形
 
-Fonts
+フォント
 
-Text
+テキスト
 
-Colour
+色
 
-Images
+画像
 
-Environment
+環境
 
-Transform
+トランスフォーム
 
-Keyboard
+キーボード
 
-Draw collision point
+衝突点の描画
 
-Off the left of the screen
+スクリーンの左に外れた
 
-Off the right of the screen
+スクリーンの右に外れた
 
-Position around the centre, top
+中央の上部に置く
 
-Face
+顔
 
-Eyes
+目
 
-Mouth
+口
 
-Collided
+ぶつかった
 
-Put code to run once here
+一度だけ動かしたいコードをこの下に書く
 
-Width and height
+幅と高さ
 
-Put code to run every frame here
+フレームごとに動かしたいコードをこの下に書く
 
-Keep this to run your code
+コードを実行するのに必要
 
-The draw_obstacle function goes here
+draw_obstacle関数の定義をこの下に書く
 
-Off the bottom of the screen
+スクリーンの下に外れた
 
-Off the top of the screen
+スクリーンの上に外れた
 
-Add the colour of your theme
+テーマの色
 
-Positioned towards the screen bottom
+画面の下の方に置く
 
-Your chosen colour
+選んだ色
 
-Load your image
+選んだ画像
 
-Controls the size of the emoji
+絵文字の大きさ
 
-Position around the centre
+真ん中に置く
 
-Replace with your obstacle
+作ったか選んだ障害物にしてください
 
-Before drawing the player
+プレーヤーを描く前に
 
-Resize to fit your theme
+テーマに合わせてサイズを変更
 
-Draw a fir tree
+モミの木を描く
 
-Green for needles
+葉の部分は緑
 
-Brown for trunk
+幹は茶色
 
-Increases each frame
+フレームごとに増やす
 
-Any number is fine
+どんな数でもよい
 
-On background
+背景上
 
-Useful for debugging
+デバッグに有効
 
-Draw circles around the pixels to check for collisions
+衝突をチェックするピクセルの周りに円を描く
 
-Include global variables here
+グローバル変数をここに書く
 
-Use the global level
+グローバル変数
