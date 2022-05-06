@@ -1,10 +1,10 @@
-## What next?
+## Beth nesaf?
 
-If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/pathways/python-intro) pathway, you can move on to the [Powerful patterns](https://projects.raspberrypi.org/en/projects/powerful-patterns) project. In this project, you will create inspirational art that can be scaled using repeated patterns.
+Os ydych chi'n dilyn y llwybr [Cyflwyniad i Python](https://projects.raspberrypi.org/en/pathways/python-intro), fe allwch chi symud ymlaen i'r prosiect [Patrymau pwerus](https://projects.raspberrypi.org/en/projects/powerful-patterns). Yn y prosiect hwn, byddwch chi'n creu celf ysbrydoledig mae modd ei chwyddo gan ddefnyddio patrymau wedi'u hailadrodd.
 
 --- print-only ---
 
-![One of the examples from the Powerful patterns project using rotated geometric shapes.](images/kek-project.png)
+![Enghraifft o'r prosiect Patrymau pwerus sy'n defnyddio siapiau geometrig sy'n cylchdroi.](images/kek-project.png)
 
 --- /print-only ---
 
@@ -15,5 +15,5 @@ If you are following the [Introduction to Python](https://projects.raspberrypi.o
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+Os hoffech chi gael mwy o hwyl yn archwilio Python, gallech chi roi cynnig ar unrhyw rai o'r [prosiectau hyn](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
 
