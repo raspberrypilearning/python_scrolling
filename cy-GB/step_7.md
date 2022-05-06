@@ -1,43 +1,43 @@
-## Upgrade your project
+## Uwchraddio eich prosiect
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-If you have time you can upgrade your project.
+Os oes gennych chi amser, fe allwch chi uwchraddio eich prosiect.
 </div>
 <div>
 
-![Example sace project with lives.](images/example1.png){:width="300px"}
+![Enghraifft o brosiect gofod gyda bywydau.](images/example1.png){:width="300px"}
 
 </div>
 </div>
 
-Here are some ideas you could try:
+Dyma rai syniadau gallech chi roi cynnig arnyn nhw:
 
-### Include a variety of obstacles
-You can add variety to your obstacles in a few ways:
- - Randomly choose between multiple images, emojis, or obstacle drawing functions
- - Randomly adjust the colour, shape, or size of obstacles by changing the parameters that draw them
- - Animate the obstacle by adding rotation, a colour change, or some other visual difference controlled by `frame_count`
+### Cynnwys amrywiaeth o rwystrau
+Fe allwch chi amrywio eich rhwystrau mewn ambell ffordd:
+ - Dewis ar hap rhwng nifer o swyddogaethau llunio delweddau, emojis neu rwystrau
+ - Newid lliw, siâp neu faint rhwystrau ar hap drwy newid y paramedrau sy'n eu llunio
+ - Animeiddio'r rhwystr drwy wneud iddo gylchdroi, newid lliw, neu ryw wahaniaeth gweledol arall wedi'i reoli gan `frame_count`
 
-### Add a win condition
-You can have players win the game in a few ways:
- - Achieving a winning score
- - Reaching a certain level of the game
+### Ychwanegu amod ennill
+Fe allwch chi alluogi chwaraewyr i ennill mewn ambell ffordd:
+ - Cyrraedd sgôr buddugol
+ - Cyrraedd lefel benodol
 
-Once they have won, you should tell them somehow — maybe using `print()` or `text()` and then stop the game.
+Pan fyddant yn ennill, fe ddylech chi ddweud wrthyn nhw rywsut — efallai drwy ddefnyddio `print()` neu `text()` a dod â'r gêm i ben.
 
-### Give players more than one life
-Add lives to your game, to allow players to survive a few collisions. This is a little trickier than just doing `lives =- 1` every time they collide with something:
- - The player may spend multiple frames in contact with an object, and so lose more than one life for a single collision — you'll need to prevent that from happening
- - You will also need a way for players to know how many lives they have left, and maybe some sort of warning that tells them when they're on their last life
- - You could add an object that, when the player collides with it, gives them an extra life. Remember that you'll need to modify your regular collision code so as it doesn't subtract a life at the same time!
+### Rhoi mwy nag un bywyd i chwaraewyr
+Ychwanegwch fywydau at eich gêm i adael i chwaraewyr oroesi gwrthdrawiad neu ddau. Mae hyn ychydig yn fwy cymhleth na gwneud `lives =- 1` bob tro maen nhw'n taro rhywbeth:
+ - Efallai bydd y chwaraewr yn cyffwrdd gwrthrych dros fwy nag un ffrâm, ac felly'n colli mwy nag un bywyd am un gwrthdrawiad — bydd angen i chi atal hynny rhag digwydd
+ - Hefyd bydd angen i chwaraewyr allu gwybod sawl bywyd sydd ganddyn nhw'n weddill, ac efallai rhyw fath o rybudd sy'n rhoi gwybod iddyn nhw mai dim ond un bywyd sydd ganddyn nhw'n weddill
+ - Fe allech chi ychwanegu gwrthrych sy'n rhoi bywyd ychwanegol i chwaraewyr os byddan nhw'n ei daro. Cofiwch y bydd angen i chi addasu eich cod gwrthdaro rheolaidd i'w atal rhag tynnu bywyd ar yr un pryd!
 
-Each example project in the [Introduction](./) has a **See Inside** link for you to open the project and look at the code to get ideas and see how they work. The "Dodge Asteroids" project below has all of these features:
+Mae gan bob prosiect enghreifftiol yn [Cyflwyniad](./) ddolen **Gweld tu mewn** i chi allu agor y prosiect ac edrych ar y cod i gael syniadau, a gweld sut maen nhw'n gweithio. Mae gan y prosiect "Osgoi'r asteroidau" isod yr holl nodweddion hyn:
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
+**Osgoi'r asteroidau**: [Gweld tu mewn](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -45,6 +45,6 @@ Each example project in the [Introduction](./) has a **See Inside** link for you
 </div>
 </div>
 
-Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
+Tarwch olwg ar rai prosiectau Osgoi'r rhwystrau wedi'u creu gan aelodau o'r gymuned yn [Osgoi'r rhwystrau - Llyfrgell gymunedol](https://wke.lt/w/s/KobNfx){:target="_blank"} y Raspberry Pi Foundation.
 
 --- save ---
