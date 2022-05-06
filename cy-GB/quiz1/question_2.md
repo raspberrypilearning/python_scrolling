@@ -1,50 +1,50 @@
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Cwestiwn 2 o 3
 ---
 
-In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
+Yn y prosiect hwn, rydych chi wedi defnyddio cynhyrchu gweithdrefnol — sef bod y cyfrifiadur yn creu ac yn lleoli rhannau o'ch byd i chi. Er bod hyn yn arbed amser yn sylweddol, yn enwedig os ydych chi'n creu lefelau mawr iawn, mae'n gallu creu rhai problemau. Am ba rai o'r problemau hyn dylech chi gadw llygad wrth brofi eich cynhyrchu gweithrefndol?
 
 --- choices ---
 
-- (x) All of them
+- (x) Pob un
 
   --- feedback ---
 
-Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+Cywir! Mae pob un o'r rhain yn gallu digwydd wrth ddefnyddio cynhyrchu gweithdrefnol. Gallwch naill ai ychwanegu mwy o god i wirio a gweithio o gwmpas y materion hyn, neu roi cynnig ar wahanol hadau nes i chi ddod o hyd i un sy'n gweithio.
 
   --- /feedback ---
 
-- ( ) Obstacles could be generated that leave the player with no route forward.
+- ( ) Byddai modd cynhyrchu rhwystrau sy'n golygu nad oes llwybr ymlaen i'r chwaraewr.
 
   --- feedback ---
 
-Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
+Ddim yn hollol. Mae hyn yn gallu digwydd gyda rhwystrau wedi'u cynhyrchu'n weithdrefnol, yn enwedig pan fydd y gêm yn dechrau am y tro cyntaf.
 
 
-**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
+**Cyngor:** Fe allech chi weithio o gwmpas y broblem hon drwy atal rhwystrau rhag ymddangos yn rhy agos i safle dechrau'r chwaraewr. Allwch chi feddwl am atebion eraill?
 
   --- /feedback ---
 
-- ( ) Obstacles appear directly underneath the player.
+- ( ) Mae rhwystrau'n ymddangos yn union o dan y chwaraewr.
 
   --- feedback ---
 
-Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
+Ddim yn hollol. Mae hyn yn gallu digwydd naill ai ar ddechrau'r gêm neu pan fydd rhwystrau newydd yn cael eu hychwanegu oherwydd bod y lefel anhawster wedi'i chodi, os ydyn nhw'n digwydd dewis safle sy'n agos i safle'r chwaraewr.
 
 
-**Tip:** A potential solution might be to make the player temporarially immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
+**Cyngor:** Ateb posib fyddai gwneud y chwaraewr yn ddiogel rhag taro pob rhwystr dros dro, neu ddim ond rhwystrau newydd eu creu hyd yn oed, am gyfnod byr ar ôl codi'r lefel. Pa broblemau allai godi pe bai'r rhwystr yn dewis safle newydd a bod hwnnw'n rhy agos i'r chwaraewr?
 
   --- /feedback ---
 
-- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
+- ( ) Mae'r rhwystrau i gyd wedi'u grwpio gyda'i gilydd, gan adael gormod o wagle mewn mannau eraill.
 
   --- feedback ---
 
-Not quite. Because random generation can choose groups of numebers that are close together, this can be a problem.
+Ddim yn hollol. Oherwydd bod cynhyrchu ar hap yn gallu dewis grwpiau o rifau sy'n agos i'w gilydd, mae hyn yn gallu bod yn broblem.
 
 
-**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
+**Cyngor:** Un ateb fyddai newid i gynhyrchu ar hap yn rhannol — rhannu'r sgrin yn ddarnau a defnyddio rhifau ar hap i gynhyrchu rhwystrau yn yr holl ddarnau hynny. Allwch chi feddwl sut byddech chi'n gallu defnyddio'r math hwn o gynhyrchu gweithdrefnol i wneud eich gêm yn fwy didddorol neu'n fwy heriol?
 
   --- /feedback ---
 
