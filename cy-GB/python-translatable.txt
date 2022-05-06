@@ -1,69 +1,69 @@
-speed
+cyflymder
 
-score
+sgor
 
-draw_obstacles
+llunio_rhwystrau
 
-You reached speed
+Wedi cyrraedd cyflymder
 
-ob_x
+rh_x
 
-ob_y
+rh_y
 
-skiing
+sgio
 
-crashed
+wedi_taro
 
-player_y
+chwaraewr_y
 
-collide
+taro
 
-safe
+diogel
 
-level
+lefel
 
-collide2
+taro2
 
-collide3
+taro3
 
-collide4
+taro4
 
-safe_player
+chwaraewr_diogel
 
-crashed_player
+chwaraewr_wedi_taro
 
-player_x
+chwaraewr_x
 
 car
 
-lives
+bywydau
 
-invulnerability
+anorchfygol
 
-display_score
+dangos_sgor
 
-🎉🎉 You win! 🎉🎉
+🎉🎉 Wedi ennill! 🎉🎉
 
-display_lives
+dangos_bywydau
 
-rocket
+roced
 
-rock
+craig
 
-random_seed
+dosbarthiad_ar_hap
 
-player
+chwaraewr
 
-obstacle
+rhwystr
 
-Great flying!
+Hedfan heb ei ail!
 
-Doing well!
+Ti'n gwneud yn dda!
 
-Keep going!
+Dal ati!
 
-But be careful!
+Ond bydd yn ofalus!
 
-Push harder!
+Gwthia'n galetach!
 
-Head for base!
+Am adre!
