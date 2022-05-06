@@ -42,7 +42,7 @@ invulnerability
 
 display_score
 
-🎉🎉 You win! 🎉🎉
+🎉🎉あなたが勝ちます！ 🎉🎉
 
 display_lives
 
@@ -56,14 +56,14 @@ player
 
 obstacle
 
-Great flying!
+素晴らしい飛行です!
 
-Doing well!
+よくできました!
 
-Keep going!
+どんどん行きましょう!
 
-But be careful!
+でも気をつけてください!
 
-Push harder!
+がんばりましょう!
 
-Head for base!
+基地に向かいましょう!
