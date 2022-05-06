@@ -1,32 +1,32 @@
-## Set the theme
+## テーマを設定する
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Set the theme of your game and create a player character that follows the mouse pointer.
+ゲームのテーマを設定し、マウスポインタを追いかけるプレイヤーキャラクターを作成します。
 
 </div>
 <div>
 
-![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+![画面サイズ400x400の青い背景とサイズ100x100のタートル](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
-- A sport or hobby
-- A movie, show, or game
-- Science or nature
-- Anything else!
+あなたのゲームのテーマは何ですか？ あなたが望むものを何でも選ぶことができます。 たとえば、こんなアイデアがあります。
+- スポーツや趣味
+- 映画、ショー、またはゲーム
+- 科学や自然
+- そのほか何でも！
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
+[スタータープロジェクト](https://trinket.io/python/cda05e5911){:target="_blank"}を開きます。 Trinketは別のブラウザタブで開きます。
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Set the size of your canvas.
+**選択：** キャンバスのサイズを設定します。
 
 --- code ---
 ---
@@ -43,9 +43,9 @@ size(400, 400)
 
 --- task ---
 
-Create a variable called `safe` to store the background colour based on the theme you want for your game.
+ゲームのテーマに基づい背景の色を保存するために、 `safe` という変数を作成します。
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+これは、プレーヤーが安全に過ごせる場所の色です。この変数は、あとでまた使います。
 
 --- code ---
 ---
@@ -65,19 +65,19 @@ background(safe)
 
 --- task ---
 
-**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+**テスト：**コードを実行して、背景の色を確認します。 画面の色とサイズを満足するまで変更します。
 
 --- /task ---
 
-Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
+次に、ゲームをプレイして障害物を避けるキャラクターを選びます。 物、人、動物、または何か他のものを選びますか？
 
-The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
+プレーヤーは、固定の `y` 位置とマウスポインターと同じ `x`の位置に表示されます。この位置は、 `p5`の変数 `mouse_x` に格納されています。
 
 --- task ---
 
-It's a good idea to organise the code for drawing the player character into a function.
+プレイヤーキャラクターを描くためのコードを関数にまとめるのは良いアイデアです。
 
-Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
+`draw_player()` 関数を定義し、プレーヤーの固定の`y` 位置用に`player_y`変数を作成し作成します。
 
 --- code ---
 ---
@@ -90,7 +90,7 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- /code ---
 
-Add code to `draw()` to call `draw_player()` each frame.
+`draw()` にコードを追加して、フレームごとに `draw_player()` を呼び出すようにします。
 
 --- code ---
 ---
@@ -107,31 +107,31 @@ draw_player()
 
 --- /task ---
 
-Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
+次に、 `draw_player()` 関数にコードを追加して、キャラクターの形を描きます。 また、 `setup()` コードを追加する必要がある場合もあります。
 
 --- task ---
 
-**Choose:** What does your player look like? Your player could be:
-+ An image provided in the starter project
-+ An emoji 🎈 or text
-+ Drawn using a series of shapes
+**選択：** プレーヤーはどのように見えますか？ プレーヤーは次のいずれかです。
++ スタータープロジェクトで用意された画像
++ 絵文字🎈またはテキスト
++ さまざまな形を使って描いたもの
 
 --- collapse ---
 ---
-title: Use a starter image
+title: スタータープロジェクトの画像を使う
 ---
 
-Click on the **manage images** icon.
+**View and Add Images**アイコンをクリックします。
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![コード領域の右上にある画像アイコン。](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+スタータープロジェクトで用意された画像は、 `Image Library` のリストに出て来ます。
 
-![The Image library with list of included images.](images/starter-images.png)
+![含まれている画像のリストを含む画像ライブラリ。](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+使いたい画像の名前をメモします。
 
-Load the image into the `setup()` function
+`setup()` 関数で画像を読み込みます
 
 --- code ---
 ---
@@ -145,7 +145,7 @@ player = load_image('skiing.png') #Load your image
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_player()` function.
+`draw_player()` 関数内でplayer変数をグローバルに設定し、`image()` を呼び出します。
 
 --- code ---
 ---
@@ -166,12 +166,12 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: 絵文字を使用する
 ---
 
-You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
+P5の `text()` 関数で絵文字を使えるので、プレーヤーを絵文字で表現できます。
 
-Here's an example:
+次に例を示します：
 
 --- code ---
 ---
@@ -214,14 +214,14 @@ text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex player.
+**ヒント：** 一つの関数の中で、いくつかの単純な図形を使用して、より複雑なプレーヤーを作ることができます。
 
 --- collapse ---
 ---
-title: Draw a player using multiple shapes
+title: いくつかの図形を使ってプレーヤーを描く
 ---
 
-![desc](images/face_player.png)
+![説明](images/face_player.png)
 
 --- code ---
 ---
@@ -255,53 +255,53 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player.
+**テスト：** コードを実行し、マウスを動かしてプレーヤーを制御します。
 
-Does it move like you expect?
+思った通りに動きますか？
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**デバッグ：** プロジェクトに修正が必要なバグが見つかる場合があります。 一般的なバグは次のとおりです。
 
 --- task ---
 
 --- collapse ---
 ---
-title: I can't see the player
+title: プレーヤーが表示されません
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+フルスクリーンに切り替えてみてください。 また、プレーヤーを描くのに指定した`x`1および`y`の座標を確認します。指定した座標が、`size()`で指定したキャンバス内にありますか。
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image isn't loading
+title: 画像が読み込まれていません
 ---
 
-First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+まず、画像が `Image Library`にあることを確認します。 次に、ファイル名をよく確認します。大文字と小文字は違うものであること、ピリオドやハイフンなどが重要であることを忘れないでください。
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image is the wrong size
+title: 画像のサイズが違っています
 ---
 
-Check the inputs that control the width and height of the image:
+画像の幅と高さを指定する値を確認します。
 
 ```python
-image(image_file, x_coord, y_coord, width, height)
+image(画像ファイル名, x座標, y座標, 幅, 高さ)
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An emoji is the wrong size
+title: 絵文字のサイズが違っています
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+絵文字が大きすぎるか小さすぎる場合は、`text_size()`の指定値を変えます。
 
 --- /collapse ---
 
