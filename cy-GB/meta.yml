@@ -1,26 +1,26 @@
 ---
-title: Don't collide!
+title: Osgoi'r rhwystrau!
 hero_image: images/banner.png
-description: Build an endless runner game where your character must avoid colliding with obstacles
+description: Adeiladwch gêm redeg ddiddiwedd lle mae'n rhaid i'ch cymeriad osgoi rhwystrau
 version: 4
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Introduction
+    title: Cyflwyniad
   - 
-    title: Set the theme
+    title: Gosod y thema
   - 
-    title: Create obstacles
+    title: Creu rhwystrau
     completion: engaged
   - 
-    title: Collision detection
+    title: Canfod gwrthdrawiad
   - 
-    title: Speed up!
+    title: Cyflymu pethau!
     completion: internal
   - 
-    title: Reflection
+    title: Myfyrio
     completion: external
     knowledge_quiz:
       path: quiz1
@@ -28,8 +28,8 @@ steps:
       questions: 3
       passing_score: 3
   - 
-    title: Upgrade your project
+    title: Uwchraddio dy brosiect
   - 
-    title: Share
+    title: Rhannu
   - 
-    title: What next?
+    title: Beth nesaf?
