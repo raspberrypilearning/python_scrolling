@@ -1,0 +1,26 @@
+---
+title: Osgoi'r rhwystrau!
+hero_image: images/banner.png
+description: Adeiladwch gêm redeg ddiddiwedd lle mae'n rhaid i'ch cymeriad osgoi rhwystrau
+version: 4
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Cyflwyniad
+  - title: Gosod y thema
+  - title: Creu rhwystrau
+    completion: engaged
+  - title: Canfod gwrthdrawiad
+  - title: Cyflymu pethau!
+    completion: internal
+  - title: Myfyrio
+    completion: external
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+  - title: Uwchraddio eich brosiect
+  - title: Rhannu
+  - title: Beth nesaf?
