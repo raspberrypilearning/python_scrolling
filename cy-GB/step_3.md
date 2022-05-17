@@ -6,7 +6,7 @@ Ewch ati i greu'r rhwystrau bydd angen eu hosgoi i barhau i chwarae'r gêm.
 </div>
 <div>
 
-![Enghraifft o brosiect sgïo gyda choed fel rhwystrau](images/rhwystrs.png){:width="300px"}
+![Enghraifft o brosiect sgïo gyda choed fel rhwystrau](images/obstacles.png){:width="300px"}
 
 </div>
 </div>
