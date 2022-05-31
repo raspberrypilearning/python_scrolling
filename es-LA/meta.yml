@@ -1,26 +1,30 @@
 ---
-title: '¡No choques!'
+title: "¡No choques!"
 hero_image: images/banner.png
-description: Construye un juego de desplazamiento tipo endless runner (corredor infinito) donde tu personaje tiene que evitar obstáculos
+description: Construye un juego de desplazamiento tipo endless runner (corredor infinito)
+  donde tu personaje tiene que evitar obstáculos
 version: 4
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
-  - title: Introducción
-  - title: Elige el tema
-  - title: Crea los obstáculos
-    completion: engaged
-  - title: Detección de choques
-  - title: '¡Acelera!'
-    completion: internal
-  - title: Reflexión
-    completion: external
-    knowledge_quiz:
-      path: quiz1
-      version: 1
-      questions: 3
-      passing_score: 3
-  - title: Mejora tu proyecto
-  - title: Comparte
-  - title: '¿Qué sigue?'
+- title: Introducción
+- title: Elige el tema
+- title: Crea los obstáculos
+  completion:
+  - engaged
+- title: Detección de choques
+- title: "¡Acelera!"
+  completion:
+  - internal
+- title: Reflexión
+  knowledge_quiz:
+    path: quiz1
+    version: 1
+    questions: 3
+    passing_score: 3
+  completion:
+  - external
+- title: Mejora tu proyecto
+- title: Comparte
+- title: "¿Qué sigue?"
