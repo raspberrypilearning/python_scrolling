@@ -5,7 +5,7 @@ description: Δημιούργησε ένα ατελείωτο παιχνίδι �
 version: 4
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
   - 
     title: Εισαγωγή
@@ -13,20 +13,23 @@ steps:
     title: Ορίζοντας το θέμα
   - 
     title: Δημιούργησε τα εμπόδια
-    completion: engaged
+    completion:
+      - engaged
   - 
     title: Ανίχνευση σύγκρουσης
   - 
     title: Επιτάχυνε!
-    completion: internal
+    completion:
+      - internal
   - 
     title: Αναστοχασμός
-    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
+    completion:
+      - external
   - 
     title: Αναβάθμιση του έργου σου
   - 
