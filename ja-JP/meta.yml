@@ -5,7 +5,7 @@ description: キャラクターが障害物との衝突を避けて走り続け�
 version: 4
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
   - 
     title: はじめに
@@ -13,20 +13,23 @@ steps:
     title: テーマを設定する
   - 
     title: 障害物を作る
-    completion: engaged
+    completion:
+      - engaged
   - 
     title: 衝突を検出する
   - 
     title: スピードアップ！
-    completion: internal
+    completion:
+      - internal
   - 
     title: ふりかえり
-    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
+    completion:
+      - external
   - 
     title: プロジェクトをアップグレードする
   - 
