@@ -5,7 +5,7 @@ description: قم ببناء لعبة عداء لا نهاية لها حيث ي�
 version: 4
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
   - 
     title: المقدمة
@@ -13,20 +13,23 @@ steps:
     title: عيّن الموضوع
   - 
     title: اصنع عقبات
-    completion: engaged
+    completion:
+      - engaged
   - 
     title: كشف الاصطدام
   - 
     title: اسرع!
-    completion: internal
+    completion:
+      - internal
   - 
     title: انعكاس
-    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
+    completion:
+      - external
   - 
     title: قم بتطوير مشروعك
   - 
