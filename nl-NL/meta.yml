@@ -5,7 +5,7 @@ description: Bouw een 'runner game' waarin je personage moet voorkomen dat hij t
 version: 4
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
   - 
     title: Inleiding
@@ -13,20 +13,23 @@ steps:
     title: Het opzetten van het thema
   - 
     title: Creëer obstakels
-    completion: engaged
+    completion:
+      - engaged
   - 
     title: Botsingsdetectie
   - 
     title: Versnellen!
-    completion: internal
+    completion:
+      - internal
   - 
     title: Reflectie
-    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
+    completion:
+      - external
   - 
     title: Verbeter je project
   - 
