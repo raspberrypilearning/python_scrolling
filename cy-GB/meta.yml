@@ -5,7 +5,7 @@ description: Adeiladwch gêm redeg ddiddiwedd lle mae'n rhaid i'ch cymeriad osgo
 version: 4
 listed: true
 copyedit: true
-last_tested: "2021-10-06"
+last_tested: '2021-10-06'
 steps:
   - 
     title: Cyflwyniad
@@ -13,20 +13,23 @@ steps:
     title: Gosod y thema
   - 
     title: Creu rhwystrau
-    completion: engaged
+    completion:
+      - engaged
   - 
     title: Canfod gwrthdrawiad
   - 
     title: Cyflymu pethau!
-    completion: internal
+    completion:
+      - internal
   - 
     title: Myfyrio
-    completion: external
     knowledge_quiz:
       path: quiz1
       version: 1
       questions: 3
       passing_score: 3
+    completion:
+      - external
   - 
     title: Uwchraddio dy brosiect
   - 
