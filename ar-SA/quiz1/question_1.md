@@ -55,7 +55,7 @@ Great flying!
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+هذا صحيح - `الدرجة >= 5000` صحيحة ، وكذلك `يعيش > 1` على جملة `if` المتداخلة.
 
   --- /feedback ---
 
@@ -75,7 +75,7 @@ This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested
 ```
   --- feedback ---
 
-بينما `يعيش > 1` هو صحيح ، فقط الكود داخل الشرط الحقيقي الأول في `إذا تم تنفيذ`elif`else<code>، و`يعيش</code> &gt; `ليس الشرط` الذي يكون صحيحًا.
+بينما `lives > 1`هو صحيح ، فقط التعليمات البرمجية داخل الشرط الحقيقي الأول في `if`/`elif`/`else` إذا تم تنفيذ و`lives > 1` ليس الشرط الاول يكون صحيحًا.
 
   --- /feedback ---
 
