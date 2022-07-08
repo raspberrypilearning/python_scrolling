@@ -20,7 +20,7 @@
 
 --- task ---
 
-[افتح مشروع البدء](https://trinket.io/python/cda05e5911){:target="_blank"}. سيتم فتح Trinket في علامة تبويب متصفح أخرى.
+[افتح مشروع البدء](https://trinket.io/python/387bfba922){:target="_blank"}. سيتم فتح Trinket في علامة تبويب متصفح أخرى.
 
 --- /task ---
 

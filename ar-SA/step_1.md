@@ -27,30 +27,30 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**قطة التزلج**: [انظر في الداخل](https://trinket.io/python/76e628bff2){:target="_blank"}
+**قطة التزلج**: [انظر في الداخل](https://trinket.io/python/71ff7e46c6){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/76e628bff2?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/71ff7e46c6?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**لا تنبثق**: [ انظر في الداخل](https://trinket.io/python/974800f4ef){:target="_blank"}
+**لا تنبثق**: [ انظر في الداخل](https://trinket.io/python/00db7d3333){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/974800f4ef?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/00db7d3333?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**تجنب الجراثيم**: [انظر في الداخل](https://trinket.io/python/88e108c819){:target="_blank"}
+**تجنب الجراثيم**: [انظر في الداخل](https://trinket.io/python/e7ba7031af){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/88e108c819?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/e7ba7031af?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 
-**سيارة نظيفة**: [راجع الداخل](https://trinket.io/python/70da6c454d){:target="_blank"}
+**سيارة نظيفة**: [راجع الداخل](https://trinket.io/python/1a0a7ff419){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/70da6c454d?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/1a0a7ff419?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**مراوغة الكويكبات**: [راجع الداخل](https://trinket.io/python/d156014e67){:target="_blank"}
+**مراوغة الكويكبات**: [راجع الداخل](https://trinket.io/python/e2993a6a3c){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/e2993a6a3c?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 </div>
