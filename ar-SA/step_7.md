@@ -37,7 +37,7 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**دودج كويكبات**: [راجع الداخل] (https://trinket.io/python/d156014e67){:target="_blank"}
+**دودج كويكبات**: [راجع الداخل](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>

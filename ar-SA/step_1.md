@@ -6,7 +6,7 @@
 <span style="color: #0faeb0">**ركض لا نهاية له**</span> هي نوع من الألعاب حيث يتعين عليك تجنب العقبات ولا تنتهي اللعبة إلا عندما تصطدم بعقبة. يمكنك تسجيل نقاط من خلال البقاء على قيد الحياة لأطول فترة ممكنة.</p>
 
 سوف تفعلها:
-+ استخدم شروط اللعبة **** للتحكم في ما يحدث
++ استخدم شروط اللعبة للتحكم في ما يحدث
 + تعرف على إنشاء الإجراءات واكتشاف الاصطدام
 + قم بإضفاء الطابع الشخصي على لعبة حسب اهتماماتك
 
@@ -27,28 +27,28 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**قطة التزلج**: [انظر في الداخل] (https://trinket.io/python/76e628bff2){:target="_blank"}
+**قطة التزلج**: [انظر في الداخل](https://trinket.io/python/76e628bff2){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/76e628bff2?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**لا تنبثق**: [ انظر في الداخل] (https://trinket.io/python/974800f4ef){:target="_blank"}
+**لا تنبثق**: [ انظر في الداخل](https://trinket.io/python/974800f4ef){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/974800f4ef?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**تجنب الجراثيم**: [انظر في الداخل] (https: // trinket.io / python / 88e108c819){:target="_blank"}
+**تجنب الجراثيم**: [انظر في الداخل](https://trinket.io/python/88e108c819){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/88e108c819?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 
-**سيارة نظيفة**: [راجع الداخل] (https://trinket.io/python/70da6c454d){:target="_blank"}
+**سيارة نظيفة**: [راجع الداخل](https://trinket.io/python/70da6c454d){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/70da6c454d?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**مراوغة الكويكبات**: [راجع الداخل] (https://trinket.io/python/d156014e67){:target="_blank"}
+**مراوغة الكويكبات**: [راجع الداخل](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
