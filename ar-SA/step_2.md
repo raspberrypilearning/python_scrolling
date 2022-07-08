@@ -34,8 +34,8 @@ language: python
 filename: main.py - setup()
 ---
 
-إعداد def ():    
-الحجم (400 ، 400)
+def setup():    
+    size(400, 400)
 
 --- /code ---
 
@@ -53,9 +53,9 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw ():    
-safe = color (200، 100، 0) # أضف لون الخلفية الخاصة بك   
-(خزن)
+def draw():    
+    safe = color(200, 100, 0) #أضف لون الخلفية الخاصة بك   
+    background(safe)
 
 --- /code ---
 
@@ -85,8 +85,8 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player ():    
-player_y = int (height * 0.8) # يتم وضعه باتجاه أسفل الشاشة
+def draw_player():    
+  player_y = int(height * 0.8) #يتم وضعه باتجاه أسفل الشاشة
 
 --- /code ---
 
@@ -98,10 +98,10 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw ():    
-safe = color (200، 100، 0) # اللون الذي اخترته    
-الخلفية (خزن)    
-draw_player ()
+def draw():    
+    safe = color(200, 100, 0) #اللون الذي اخترته    
+    background(safe)    
+    draw_player() 
 
 --- /code ---
 
@@ -139,9 +139,9 @@ language: python
 filename: main.py - setup()
 ---
 
-إعداد def ():   
-size (400، 400)    
-player = load_image ('skiing.png') # تحميل صورتك
+def setup():   
+    size(400, 400)    
+    player = load_image('skiing.png') #تحميل صورتك
 
 --- /code ---
 
@@ -153,12 +153,12 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player ():    
-player_y = int (height * 0.8) # يتم وضعه باتجاه أسفل الشاشة
+def draw_player():    
+  player_y = int(height * 0.8) #يتم وضعه باتجاه أسفل الشاشة    
+  
+  global player    
 
-  لاعب عالمي
-
-  image (player، mouse_x، player_y، 30، 30)
+  image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -179,10 +179,10 @@ language: python
 filename: main.py - setup()
 ---
 
-إعداد def ():    
-size (400، 400)     
-text_size (40) # يتحكم في حجم الرموز التعبيرية     
-text_align (CENTER، TOP) # الموضع حول المركز
+def setup():    
+  size(400, 400)     
+  text_size(40) #يتحكم في حجم الرموز التعبيرية     
+  text_align(CENTER, TOP) #موضع حول المركز 
 
 --- /code ---
 
@@ -192,9 +192,9 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player ():     
-player_y = int (height * 0.8)    
-text ('🎈'، mouse_x، player_y)
+def draw_player():     
+  player_y = int(height * 0.8)    
+  text('🎈', mouse_x, player_y)     
 
 --- /code ---
 
@@ -229,23 +229,24 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player ():    
-player_y = int (height * 0.8)    
-noStroke ()    
-#Face    
-ملء (0 ، 200 ، 100)    
-قطع ناقص (mouse_x، player_y، 60، 60)
+def draw_player():    
+  player_y = int(height * 0.8)    
+  noStroke()    
+  #وجه    
+  fill(0, 200, 100)    
+  ellipse(mouse_x, player_y, 60, 60)
+  
+  #عيون    
+  fill(0, 100, 200)    
+  ellipse(mouse_x - 10, player_y - 10, 20, 20)    
+  ellipse(mouse_x + 10, player_y - 10, 20, 20)    
+  fill(0)    
+  ellipse(mouse_x - 10, player_y - 10, 10, 10)     
+  ellipse(mouse_x + 10, player_y - 10, 10, 10)     
+  fill(255)    
+  ellipse(mouse_x - 12, player_y - 12, 5, 5)    
+  ellipse(mouse_x + 12, player_y - 12, 5, 5)    
 
-  # عيون    
-ملء (0 ، 100 ، 200)    
-القطع الناقص (mouse_x - 10، player_y - 10، 20، 20)    
-القطع الناقص (mouse_x + 10، player_y - 10، 20، 20)    
-ملء (0)    
-القطع الناقص (mouse_x - 10، player_y - 10، 10، 10)     
-القطع الناقص (mouse_x + 10، player_y - 10، 10، 10)     
-ملء (255)    
-القطع الناقص (mouse_x - 12، player_y - 12، 5، 5)    
-القطع الناقص (mouse_x + 12، player_y - 12، 5، 5)
 
 --- /code ---
 

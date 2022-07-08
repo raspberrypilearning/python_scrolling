@@ -21,12 +21,13 @@
 
 --- code ---
 ---
-language: python filename: main.py
+language: python 
+filename: main.py
 line_numbers: false
 ---
 
-# قم بتضمين المتغيرات العالمية هنا
-المستوى = 1
+#قم بتضمين المتغيرات العالمية هنا
+level = 1
 
 --- /code ---
 
@@ -40,15 +41,18 @@ line_numbers: false
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+language: python 
+filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-def draw_obstacles ():
-
-  المستوى العالمي # استخدم المستوى العالمي
-
-  إذا كان frame_count٪ height == height - 1 والمستوى < 5: level + = 1 print ('لقد وصلت إلى المستوى' ، المستوى)
+def draw_obstacles():
+  
+  global level #استخدم المستوى العالمي
+  
+  if frame_count % height == height - 1 and level < 5:
+    level += 1
+    print('You have reached level', level)
 
 --- /code ---
 
@@ -73,11 +77,16 @@ title: تسريع اللعبة
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+language: python 
+filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  بالنسبة لـ i في النطاق (6 + المستوى): ob_x = randint (0 ، الارتفاع) ob_y = randint (0 ، الارتفاع) + (frame_count * level) ob_y٪ = height # الالتفاف حول نص ('🌵' ، ob_x ، ob_y)
+  for i in range(6):
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + (frame_count * level)
+    ob_y %= height #الالتفاف
+    text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -106,11 +115,12 @@ line_numbers: false
 
 --- code ---
 ---
-language: python filename: main.py
+language: python 
+filename: main.py
 line_numbers: false
 ---
 
-# قم بتضمين المتغيرات العالمية هنا
+#قم بتضمين المتغيرات العالمية هنا
 score = 0
 
 --- /code ---
@@ -129,9 +139,13 @@ language: python
 filename: main.py — draw_player()
 ---
 
-النتيجة العالمية
+global score
 
-  إذا الاصطدام == آمن: نص ('🎈'، mouse_x، player_y) درجة + = المستوى وإلا: نص ('💥'، mouse_x، player_y)
+  if collide == safe:
+    text('🎈', mouse_x, player_y)
+    score += level
+  else:
+    text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -188,7 +202,12 @@ language: python
 filename: main.py — draw()
 ---
 
-  إذا كان المستوى > 0: خلفية (آمنة) املأ (255) نص ('النتيجة:' + str (النتيجة) ، العرض / 2 ، 20) draw_obstacles () draw_player ()
+  if level > 0:
+    background(safe) 
+    fill(255)
+    text('Score: ' + str(score), width/2, 20)
+    draw_obstacles()
+    draw_player()
 
 --- /code ---
 
@@ -210,7 +229,12 @@ language: python
 filename: main.py — draw()
 ---
 
-  إذا كان المستوى > 0: خلفية (آمنة) املأ (255) نص ('النتيجة:' + str (النتيجة) ، العرض / 2 ، 20) draw_obstacles () draw_player ()
+ if level > 0:
+    background(safe) 
+    fill(255)
+    text('Score: ' + str(score), width/2, 20)
+    draw_obstacles()
+    draw_player()
 
 --- /code ---
 
@@ -222,7 +246,12 @@ language: python
 filename: main.py — draw_player()
 ---
 
-  إذا الاصطدام == آمن: نص ('🎈'، mouse_x، player_y) درجة + = المستوى وإلا: نص ('💥'، mouse_x، player_y) المستوى = 0
+  if collide == safe:
+    text('🎈', mouse_x, player_y)
+    score += level
+  else:
+    text('💥', mouse_x, player_y)
+    level = 0
 
 --- /code ---
 
@@ -239,11 +268,16 @@ title: اللعبة لا تسرع
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+language: python 
+filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  بالنسبة لـ i في النطاق (6 + المستوى): ob_x = randint (0 ، الارتفاع) ob_y = randint (0 ، الارتفاع) + (frame_count * level) ob_y٪ = height # الالتفاف حول نص ('🌵' ، ob_x ، ob_y)
+ for i in range(6 + level):
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + (frame_count * level)
+    ob_y %= height #الالتفاف
+    text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -260,11 +294,16 @@ line_numbers: false
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+language: python 
+filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  بالنسبة لـ i في النطاق (6 + المستوى): ob_x = randint (0 ، الارتفاع) ob_y = randint (0 ، الارتفاع) + (frame_count * level) ob_y٪ = height # الالتفاف حول نص ('🌵' ، ob_x ، ob_y)
+  for i in range(6 + level):
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + (frame_count * level)
+    ob_y %= height #الالتفاف
+    text('🌵', ob_x, ob_y)
 
 --- /code ---
 

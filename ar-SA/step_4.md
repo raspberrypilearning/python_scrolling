@@ -31,7 +31,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-الاصطدام = الحصول على (mouse_x، player_y)
+collide = get(mouse_x, player_y)
 
 --- /code ---
 
@@ -63,11 +63,15 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player (): player_y = int (الارتفاع * 0.8)
+def draw_player():
+  player_y = int(height * 0.8)
 
-  الاصطدام = الحصول على (mouse_x، player_y)
+  collide = get(mouse_x, player_y)
 
-  إذا الاصطدام == آمن: #On background image (skiing، mouse_x، player_y، 30، 30) آخر: #Collided image (تعطل ، mouse_x ، player_y ، 30 ، 30)
+  if collide == safe: #في الخلفية
+    image(skiing, mouse_x, player_y, 30, 30)
+  else: #اصطدمت
+    image(crashed, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -88,7 +92,10 @@ language: python
 filename: main.py - setup()
 ---
 
-إعداد def (): size (400، 400) text_size (40) # يتحكم في حجم الرموز التعبيرية text_align (CENTER، TOP) # الموضع حول المركز
+def setup():
+  size(400, 400)
+  text_size(40) #يتحكم في حجم الرموز التعبيرية 
+  text_align(CENTER, TOP) #موضع حول المركز
 
 --- /code ---
 
@@ -98,7 +105,11 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player (): إذا اصطدمت == آمن: #On background text ('🎈'، mouse_x، player_y) else: #Collided text ('💥'، mouse_x، player_y)
+def draw_player():
+  if collide == safe: #في الخلفية
+    text('🎈', mouse_x, player_y)
+  else: #اصطدمت
+    text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -136,14 +147,14 @@ title: لا يوجد تصادم عندما يصل اللاعب إلى عقبة
 يمكن أن تكون طباعة لون البكسل الذي تقوم بفحصه بحثًا عن تصادم مفيدًا:
 
 ```python
-  طباعة (أحمر (تصادم) ، أخضر (تصادم) ، أزرق (تصادم))
+  print(red(collide), green(collide), blue(collide))
 ```
 
 يمكنك أيضًا طباعة دائرة حول النقطة التي تتحقق منها وضبط النقطة التي تتحقق منها إذا كنت بحاجة إلى:
 
 ```python
-  no_fill ()
-  القطع الناقص (mouse_x، player_y، 10، 10) # رسم نقطة الاصطدام
+  no_fill()
+  ellipse(mouse_x, player_y, 10, 10) #رسم نقطة الاصطدام
 ```
 
 --- /collapse ---
@@ -160,33 +171,33 @@ title: كشف الاصطدام بوحدات بكسل متعددة
 ---
 
 ```python
-def draw_player ():
-
-  player_y = int (الارتفاع * 0.8)
+def draw_player():
+  
+  player_y = int(height * 0.8)
   # مفيد لتصحيح الأخطاء
   # ارسم دوائر حول البكسل للتحقق من الاصطدامات
 
-  no_fill ()
-  القطع الناقص (mouse_x، player_y، 10، 10) # رسم نقطة الاصطدام
-  القطع الناقص (mouse_x، player_y + 40، 10، 10)
-  القطع الناقص (mouse_x - 12، player_y + 20، 10، 10)
-  القطع الناقص (mouse_x + 12، player_y + 20، 10، 10)
+  no_fill()
+  ellipse(mouse_x, player_y, 10, 10) #رسم نقطة الاصطدام
+  ellipse(mouse_x, player_y + 40, 10, 10)
+  ellipse(mouse_x - 12, player_y + 20, 10, 10)
+  ellipse(mouse_x + 12, player_y + 20, 10, 10)
 
-  تصادم = get (mouse_x، player_y)
-  collide2 = get (mouse_x - 12، player_y + 20)
-  collide3 = get (mouse_x + 12، player_y + 20)
-  collide4 = get (mouse_x، player_y + 40)
-
-  if mouse_x < width: # Off the left of the الشاشة
-    الاصطدام 2 = آمن
-
-  إذا الماوس_ × > العرض: # خارج يمين الشاشة
-    تصادم 3 = آمن
-
-  إذا اصطدمت == آمنة وتصطدم 2 == آمنة وتصطدم 3 == آمنة وتصطدم 4 == آمنة:
-    نص ('🎈' ، mouse_x، player_y)
+  collide = get(mouse_x, player_y)
+  collide2 = get(mouse_x - 12, player_y + 20)
+  collide3 = get(mouse_x + 12, player_y + 20)
+  collide4 = get(mouse_x, player_y + 40)
+  
+  if mouse_x < width: #من يسار الشاشة
+    collide2 = safe
+  
+  if mouse_x > width: #من يمين الشاشة
+    collide3 = safe
+    
+  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
+    text('🎈', mouse_x, player_y)
   else:
-    text ('💥'، mouse_x، player_y)
+    text('💥', mouse_x, player_y)
 ```
 
 --- /collapse ---

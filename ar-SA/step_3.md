@@ -27,8 +27,10 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2 نص ('🌵'، ob_x، ob_y) # استبدل بعقبتك
-
+def draw_obstacles():
+   ob_x = width/2
+   ob_y = height/2
+   text('🌵', ob_x, ob_y) #استبدل بعقبتك
 
 --- /code ---
 
@@ -40,8 +42,11 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw (): safe = color (200، 100، 0) # أضف لون السمة الخاصة بك الخلفية (آمنة)  
-draw_obstacles () # قبل رسم اللاعب draw_player ()
+def draw():
+    safe = color(200, 100, 0) #أضف لون الخلفية الخاصة بك
+    background(safe)  
+    draw_obstacles() #قبل رسم اللاعب
+    draw_player()
 
 --- /code ---
 
@@ -77,7 +82,10 @@ language: python
 filename: main.py - setup()
 ---
 
-إعداد def (): الحجم (400 ، 400) لاعب = load_image ('skiing.png') # تحميل صورتك عقبة = تحميل صورتك ('صاروخ. png') # تحميل صورتك
+def setup():
+    size(400, 400)
+    player = load_image('skiing.png') #تحميل صورتك
+    obstacle = load_image('rocket.png') #تحميل صورتك
 
 --- /code ---
 
@@ -89,11 +97,13 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2
-
-   عقبة عالمية
-
-   image (عقبة ، ob_x ، ob_y ، 30 ، 30) #Resize لتناسب موضوعك
+def draw_obstacles():
+   ob_x = width/2
+   ob_y = height/2
+   
+   global obstacle
+   
+   image(obstacle, ob_x, ob_y, 30, 30) #Resize لتناسب موضوعك
 
 --- /code ---
 
@@ -114,7 +124,10 @@ language: python
 filename: main.py - setup()
 ---
 
-إعداد def (): size (400، 400) text_size (40) # يتحكم في حجم الرموز التعبيرية text_align (CENTER، TOP) # الموضع حول المركز
+def setup():
+  size(400, 400)
+  text_size(40) #يتحكم في حجم الرموز التعبيرية 
+  text_align(CENTER, TOP) #موضع حول المركز
 
 --- /code ---
 
@@ -124,7 +137,10 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2 نص ('🌵'، ob_x، ob_y) # استبدل بعقبتك
+def draw_obstacles():
+  ob_x = width/2
+  ob_y = height/2
+  text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -159,7 +175,17 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 #رسم شجرة الصنوبر no_stroke() fill(0,255,0) #اخضر للاوراق الإبرية triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # بني للساق rect(ob_x + 15, ob_y + 70, 10, 10)
+def draw_obstacles():
+    ob_x = width/2
+    ob_y = height/2
+    #رسم شجرة الصنوبر
+    no_stroke()
+    fill(0,255,0) #اخضر للاوراق الإبرية
+    triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
+    triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
+    triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
+    fill(150,100,100) # بني للساق
+    rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
 
@@ -183,7 +209,11 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles (): ob_x = العرض / 2 ob_y = الارتفاع / 2 + frame_count # زيادة كل إطار ob_y٪ = height # الالتفاف حول نص ('🌵'، ob_x، ob_y) # استبدل العقبة الخاصة بك
+def draw_obstacles():
+   ob_x = width/2
+   ob_y = height/2 + frame_count #زيادة كل إطار
+   ob_y %= height #الالتفاف
+   text('🌵', ob_x, ob_y) #استبدل بعقبتك
 
 --- /code ---
 
@@ -207,12 +237,16 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles ():
+def draw_obstacles():
+  
+  seed(12345678) #الالتفاف حول
+  
+  for i in range(6):  
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + frame_count
+    ob_y %= height
+    text('🌵', ob_x, ob_y) #استبدل بعقبتك
 
-  البذور (12345678) # أي رقم جيد
-
-  بالنسبة لـ i في النطاق (6):  
-ob_x = randint (0 ، الارتفاع) ob_y = randint (0 ، الارتفاع) + frame_count ob_y٪ = height text ('🌵'، ob_x، ob_y) # استبدل العقبة الخاصة بك
 
 --- /code ---
 
@@ -273,12 +307,15 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles ():
+def draw_obstacles():
 
-  البذور (12345678)
-
-  بالنسبة لـ i في النطاق (6):  
-ob_x = randint (0 ، الارتفاع) ob_y = randint (0 ، الارتفاع) + frame_count ob_y٪ = height text ('🌵'، ob_x، ob_y) # استبدل العقبة الخاصة بك
+  seed(12345678)
+  
+  for i in range(6):  
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + frame_count
+    ob_y %= height
+    text('🌵', ob_x, ob_y) #استبدل بعقبتك
 
 --- /code ---
 
