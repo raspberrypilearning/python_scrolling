@@ -1,19 +1,19 @@
-## Share
+## 共有する
 
-If you are in a club, why not share your project with friends?
+クラブにいる場合は、プロジェクトを友人と共有してみませんか？
 
-You could also show your family how your project works by sending them a link.
+プロジェクトがどのように機能するかを家族にリンクを送って示すこともできます。
 
-To get a link, go to the **Share** menu button in the upper-right of your Trinket's edit page and select **Link**.
+リンクを取得するには、Trinketの編集ページの右上にある[**Share**] メニューボタンに移動し、[**Link**] を選択します。
 
-![The 'Share' menu button extended, with 'Link' highlighted.](images/share-button.png)
+![[Share] メニューボタンが拡張され、[Link] が強調表示されています。](images/share-button.png)
 
-**Tip:** You can share a link to your project even if you don't have a Trinket account; however, without an account, the link to your project will change each time you update it. If you have shared the link with someone, you will need to send a new link for them to see the changes.
+**ヒント：** Trinketアカウントを持っていない場合でも、プロジェクトへのリンクを共有できます。ただし、アカウントがないと、プロジェクトを更新するたびにリンクは変更されます。 リンクを誰かと共有している場合は、変更のたびに新しいリンクを送らなければなりません。
 
 --- task ---
 
-Inspire the Raspberry Pi Foundation community with your project!
+あなたのプロジェクトでRaspberry Pi Foundationコミュニティに刺激を与えてください！
 
-To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+他の人が見ることができるよう、あなたのプロジェクトを私たちの ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"}スタジオに送るには、 [このフォーム](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}を使ってください。
 
 --- /task ---
