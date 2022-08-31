@@ -1,50 +1,50 @@
 --- question ---
 ---
-legend: Question 2 of 3
+legend: 質問2/3
 ---
 
-In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
+このプロジェクトでは、手続き型生成を使いました。コンピューターにゲームなどの世界に部品を作って置かせる方法です。 この方法は時間の大幅な節約になりますが、特に非常に大きなレベルの世界を作る場合は、いくつかの問題が発生する可能性があります。 手続き型生成をテストするときに注意すべき問題はどれですか？
 
 --- choices ---
 
-- (x) All of them
+- (x) これら全部
 
   --- feedback ---
 
-Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+正解！ これらはすべて、手続き型生成を使うときに起こる可能性があります。 これらの問題をチェックして避けるためにコードを追加するか、うまく行く乱数のタネが見つかるまで別のいろいろ試すことで問題に対処するかが必要です。
 
   --- /feedback ---
 
-- ( ) Obstacles could be generated that leave the player with no route forward.
+- ( ) プレーヤーが前に進めるルートがないように障害物が生成される。
 
   --- feedback ---
 
-Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
+これだけではありません。 これは、特にゲームが最初にスタートしたとき、手続き的に生成された障害物で発生する可能性があります。
 
 
-**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
+**ヒント：** 障害物がプレーヤーのスタート位置に近づきすぎないようにすることで、この問題を避けることができます。 他の解決策を考えられますか？
 
   --- /feedback ---
 
-- ( ) Obstacles appear directly underneath the player.
+- ( ) プレイヤーの真下に障害物が現れる。
 
   --- feedback ---
 
-Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
+これだけではありません。 これは、ゲームのスタート時、または難易度を上げた結果で新しい障害物が追加されたときに、たまたまプレイヤーの近くの位置であった場合に発生する可能性があります。
 
 
-**Tip:** A potential solution might be to make the player temporarially immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
+**ヒント：** 考えられる解決策は、レベルが上がった後しばらくの間、すべての障害物（または新しく生成された障害物だけでも）とぶつかってもプレーヤーは助かるようにすることです。 障害物がプレーヤーに近すぎる場所に障害物が新しい位置を選んだ場合、どのような問題が発生する可能性がありますか？
 
   --- /feedback ---
 
-- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
+- ( ) 障害物はすべてグループ化され、何もない場所がたくさんできる。
 
   --- feedback ---
 
-Not quite. Because random generation can choose groups of numebers that are close together, this can be a problem.
+これだけではありません。 乱数発生では、互いに近い数がひとかたまりになることがあるため、この問題が発生する可能性はあります。
 
 
-**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
+**ヒント：** ひとつの解決策は、セミランダム生成に切り替えることです。画面を細かく分け、それらの各部分の内部に乱数を使用して障害物を生成します。 この種の手続き型生成を使用して、ゲームをより面白く、またはより挑戦的にする方法を考えられますか？
 
   --- /feedback ---
 
