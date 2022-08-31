@@ -1,43 +1,43 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: 質問3/3
 ---
 
-You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
+あなたはゲームを作り、それはとても満足なもので、共有しました。 ゲームをプレイした人がそれをレビューし、見てみたいと思ういくつかの変更について心のこもったフィードバックを共有しました。
 
-What would be the best way to react to their suggestions?
+その提案に対応する一番の方法はどれでしょうか？
 
 --- choices ---
 
-- ( ) Immediately make all the changes they have suggested.
+- ( ) 提案されたすべての変更をすぐに行う。
 
   --- feedback ---
 
-It's great to get feedback, but you shouldn't change your game just to keep one player happy, maybe other players might give different feedback.
+フィードバックをもらうのは素晴らしいことですが、1人の人を満足させるためだけにゲームを変更するべきではありません。おそらく、他の人が違ったフィードバックをくれるかもしれません。
 
   --- /feedback ---
 
-- ( ) Ignore the suggestions because you know best.
+- ( ) あなたが最もよく分かっているので、提案を無視する。
 
   --- feedback ---
 
-Not quite. It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
+あまりよくありません。 ふつうは、ユーザーがあなたのゲームについて何を言っているかを聞く価値があります。 ゲームをプレイした人が建設的なフィードバックをくれた場合は、それを検討するべきです。
 
   --- /feedback ---
 
-- (x) Consider their feedback with other feedback and decide how to improve your game.
+- (x) 他のフィードバックと一緒にそのフィードバックを検討し、ゲームをどう改善するかを決めます。
 
   --- feedback ---
 
-Correct! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
+正解！ 常にいくつかの視点で見てみることを心掛けながら、もらったフィードバックを検討し、すべての人のためにゲームを改善する方法を決める必要があります。
 
   --- /feedback ---
 
-- ( ) Feel really sad that the player didn't think your game was perfect.
+- ( ) ゲームをプレイした人があなたのゲームが完璧だと思わなかったことを本当に悲しく思う。
 
   --- feedback ---
 
-No! You shouldn't feel sad if someone suggests improvements to your game. Constructive feedback is really useful and can help improve your game. You should be pleased that they were interested enough in your game to give feedback.
+いいえ! 誰かがあなたのゲームの改善案を提案してくれたことを、悲しむ必要はありません。 建設的なフィードバックは非常に価値があり、ゲームを改善するのに役立ちます。 あなたはゲームをプレイした人が、フィードバックをくれるほど興味を持ってくれたことを喜ぶべきです。
 
   --- /feedback ---
 
