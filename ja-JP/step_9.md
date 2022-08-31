@@ -1,10 +1,10 @@
-## What next?
+## 次は何をしますか？
 
-If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/pathways/python-intro) pathway, you can move on to the [Powerful patterns](https://projects.raspberrypi.org/en/projects/powerful-patterns) project. In this project, you will create inspirational art that can be scaled using repeated patterns.
+[Python入門](https://projects.raspberrypi.org/en/pathways/python-intro)パスに沿って進めている方は、[力強い模様](https://projects.raspberrypi.org/en/projects/powerful-patterns)プロジェクトに進みましょう。 このプロジェクトでは、パターンを繰り返し使って大きくできる感動のアートを作り出します。
 
 --- print-only ---
 
-![One of the examples from the Powerful patterns project using rotated geometric shapes.](images/kek-project.png)
+![回転した幾何学的形状を使った、力強い模様プロジェクトの例の1つ。](images/kek-project.png)
 
 --- /print-only ---
 
@@ -15,5 +15,5 @@ If you are following the [Introduction to Python](https://projects.raspberrypi.o
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+Pythonのさまざまな機能を触ってみたい場合は[これらのプロジェクト](https://projects.raspberrypi.org/en/projects?software%5B%5D=python)を試してみてください。
 
