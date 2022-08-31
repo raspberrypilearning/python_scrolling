@@ -1,43 +1,43 @@
-## Upgrade your project
+## プロジェクトをアップグレードする
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-If you have time you can upgrade your project.
+時間があれば、プロジェクトをアップグレードしてみましょう。
 </div>
 <div>
 
-![Example sace project with lives.](images/example1.png){:width="300px"}
+![ライフの表示があるスペースプロジェクト](images/example1.png){:width="300px"}
 
 </div>
 </div>
 
-Here are some ideas you could try:
+たとえばこんなアイデアがあります。
 
-### Include a variety of obstacles
-You can add variety to your obstacles in a few ways:
- - Randomly choose between multiple images, emojis, or obstacle drawing functions
- - Randomly adjust the colour, shape, or size of obstacles by changing the parameters that draw them
- - Animate the obstacle by adding rotation, a colour change, or some other visual difference controlled by `frame_count`
+### 障害物の種類を増やす
+障害物の種類を増やす方法はいくつかあります。
+ - いくつかの画像、絵文字、障害物描画関数からランダムに選ぶ
+ - 障害物を描くパラメータを変更して、色、形、サイズをランダムに変える
+ - `frame_count`を使って、障害物の角度、色、その他の見た目の変化を追加して、障害物をアニメーション化する
 
-### Add a win condition
-You can have players win the game in a few ways:
- - Achieving a winning score
- - Reaching a certain level of the game
+### 勝ちとなる条件を追加する
+プレイヤーがゲームに勝つことができるようにする方法がいくつかあります。
+ - 勝ちとなるスコアに達する
+ - ゲームの決まったレベルに達する
 
-Once they have won, you should tell them somehow — maybe using `print()` or `text()` and then stop the game.
+勝ちになったら、どうにかして伝える必要があります — `print()` や `text()` を使って表示し、ゲームを停止する、などです。
 
-### Give players more than one life
-Add lives to your game, to allow players to survive a few collisions. This is a little trickier than just doing `lives =- 1` every time they collide with something:
- - The player may spend multiple frames in contact with an object, and so lose more than one life for a single collision — you'll need to prevent that from happening
- - You will also need a way for players to know how many lives they have left, and maybe some sort of warning that tells them when they're on their last life
- - You could add an object that, when the player collides with it, gives them an extra life. Remember that you'll need to modify your regular collision code so as it doesn't subtract a life at the same time!
+### プレイヤーに2つ以上のライフを与える
+ゲームにライフを追加して、プレイヤーが何度か障害物にぶつかってもゲームを続けられるようにします。 これは、何かと衝突するたびに `lives -=1` とするよりも少し注意が必要です。
+ - プレイヤーはオブジェクトと接触のが複数のフレームをわたることがあるため、1回の衝突で複数のライフを失う可能性があります。これを防ぐ必要があります。
+ - また、プレイヤーが残されたライフの数を知る方法が必要になります。そして、最後のライフになったことを知らせる警告のようなものも必要になります。
+ - プレイヤーがそれにぶつかったときに、追加のライフがもらえるようなオブジェクトを追加してもいいでしょう。 同時にライフを差し引かないように、通常の衝突コードを変更する必要があることを忘れないでください！
 
-Each example project in the [Introduction](./) has a **See Inside** link for you to open the project and look at the code to get ideas and see how they work. The "Dodge Asteroids" project below has all of these features:
+[はじめに](./) の各サンプルプロジェクトには、プロジェクトを開き、コードを見てアイデアを得て、それらがどのように動くかを確認するできるように **中を見る** リンクがあります。 以下の「小惑星を避ける」プロジェクトには、これらのすべての機能があります。
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
+**小惑星を避ける**: [中を見る](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -45,6 +45,6 @@ Each example project in the [Introduction](./) has a **See Inside** link for you
 </div>
 </div>
 
-Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
+Raspberry Pi Foundationの [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}のコミュニティメンバーが作った「衝突しないで」プロジェクトをいくつか見てみてください。
 
 --- save ---
