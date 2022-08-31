@@ -1,81 +1,81 @@
-## Reflection
+## ふりかえり
 
-Well done, you made a game!  Now it's time to reflect — reflecting is an important part of learning because it helps make new connections in your brain.
+よくできました、ゲームを作りることができましたね！  次はふりかえりの時間です。ふりかえりを行うことで、脳内に新しいつながりを作ることができます。このため、ふりかえりは学習の大事な部分です。
 
-Answer the three questions below to reflect on what you've learnt.
+以下の3つの質問に答えて、学んだことをふりかえってみましょう。
 
-After each question, press **submit**. You will be guided towards the correct answer. You can do this activity as many times as you want to.
+各質問の後、**答えを確認する**を押してください。 正しい答えが表示されます。 このアクティビティは何度でも実行できます。
 
-Have fun!
+お楽しみください!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: 質問1/3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+ゲームの動きを制御するために、多くの `if` ステートメントを使いました。 中には、 `and` を使って一度にいくつもの条件を調べるなど、より複雑な条件を持ったものもありました。 次の条件分岐コードを動かした場合、出力はどのようになると思いますか？
 
 ```python
 score = 5000
 lives = 2
 
 if score >= 5000 and lives >= 3:
-  print('Great flying!')
+  print('素晴らしい飛行です!')
 
 if score >= 5000: 
-  print('Doing well!')
+  print('よくできました!')
   if lives > 1:
-    print('Keep going!')
+    print('どんどん行きましょう!')
   else:
-    print('But be careful!')
+    print('でも気をつけてください!')
 
 elif lives > 1:
-  print('Push harder!')
+  print('がんばりましょう!')
 
 else:
-  print('Head for base!')
+  print('基地に向かいましょう!')
 ```
 
 --- choices ---
 
 - ( )
 ```
-Great flying!
+素晴らしい飛行です！
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+`score >= 5000` は真ですが、 `and` 条件では両方の条件が真でなければならず、 `lives >= 3` は偽です。
 
   --- /feedback ---
 
 - (x)
 ```
-Doing well!
-Keep going!
+よくできました!
+どんどん行きましょう！
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+正解です。 `score >= 5000` が真であり、ネストされた `if` ステートメントの `lives > 1` も真です。
 
   --- /feedback ---
 
 - ( )
 ```
-Doing well!
+よくできました!
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+おしいです。プログラムが実行されたときに真であると判断される条件は `score >= 5000` だけではありません。
 
   --- /feedback ---
 
 - ( )
 ```
-Push harder!
+がんばりましょう！
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+`lives > 1` は真です。 `if`/`elif`/`else` ステートメント内で最初に真と判断された条件のコードだけが実行されます。 `lives > 1` は真と判断される最初の条件ではありません。
 
   --- /feedback ---
 
