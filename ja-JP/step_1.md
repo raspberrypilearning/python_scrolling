@@ -27,30 +27,30 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**ネコのスキー**: [中を見る](https://trinket.io/python/76e628bff2){:target="_blank"}
+**ネコのスキー**: [中を見る](https://trinket.io/python/ee04c6d6e1){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/76e628bff2?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/ee04c6d6e1?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**割れちゃダメ**: [中を見る](https://trinket.io/python/974800f4ef){:target="_blank"}
+**割れちゃダメ**: [中を見る](https://trinket.io/python/31f337454a){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/974800f4ef?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/31f337454a?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**バイキンを避けて**: [中を見る](https://trinket.io/python/88e108c819){:target="_blank"}
+**バイキンを避けて**: [中を見る](https://trinket.io/python/740183c0e0){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/88e108c819?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/740183c0e0?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 
-**きれいなクルマ**: [中を見る](https://trinket.io/python/70da6c454d){:target="_blank"}
+**きれいなクルマ**: [中を見る](https://trinket.io/python/72bca7fbe3){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/70da6c454d?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/72bca7fbe3?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
-**小惑星を避けて**: [中を見る](https://trinket.io/python/d156014e67){:target="_blank"}
+**小惑星を避けて**: [中を見る](https://trinket.io/python/2c077820d3){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/2c077820d3?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 </div>

@@ -37,9 +37,9 @@
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**小惑星を避ける**: [中を見る](https://trinket.io/python/d156014e67){:target="_blank"}
+**小惑星を避ける**: [中を見る](https://trinket.io/python/2c077820d3){:target="_blank"}
 <div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+<iframe src="https://trinket.io/embed/python/2c077820d3?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
 
 </div>

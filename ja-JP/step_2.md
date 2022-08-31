@@ -20,7 +20,7 @@
 
 --- task ---
 
-[スタータープロジェクト](https://trinket.io/python/cda05e5911){:target="_blank"}を開きます。 Trinketは別のブラウザタブで開きます。
+[スタータープロジェクト](https://trinket.io/python/50df5072b1){:target="_blank"}を開きます。 Trinketは別のブラウザタブで開きます。
 
 --- /task ---
 
