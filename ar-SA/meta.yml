@@ -5,10 +5,10 @@ description: قم ببناء لعبة عداء لا نهاية لها حيث ي�
 version: 4
 listed: true
 copyedit: true
-last_tested: '2021-10-06'
+last_tested: "2021-10-06"
 steps:
   - 
-    title: المقدمة
+    title: You will make
   - 
     title: عيّن الموضوع
   - 
@@ -22,7 +22,7 @@ steps:
     completion:
       - internal
   - 
-    title: انعكاس
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
