@@ -1,4 +1,4 @@
-## Introducción
+## You will make
 
 Construye un juego de desplazamiento tipo endless runner (corredor infinito) donde tu personaje tiene que evitar obstáculos.
 
@@ -12,7 +12,7 @@ Vas a:
 
 ![Imágenes de diferentes ejemplos de proyectos.](images/showcase_projects.png)
 
-### Inspírate
+### Get ideas 💭
 
 Vas a tener que tomar algunas decisiones de diseño sobre el tipo de juego que quieres crear y sobre cómo vas a usar código para obtener los efectos que deseas.
 
