@@ -1,19 +1,17 @@
-## ふりかえり
+## Quick quiz
 
-よくできました、ゲームを作りることができましたね！  次はふりかえりの時間です。ふりかえりを行うことで、脳内に新しいつながりを作ることができます。このため、ふりかえりは学習の大事な部分です。
+Answer the three questions. There are hints to guide you to the correct answer.
 
-以下の3つの質問に答えて、学んだことをふりかえってみましょう。
+When you have answered each question, click on **Check my answer**.
 
-各質問の後、**答えを確認する**を押してください。 正しい答えが表示されます。 このアクティビティは何度でも実行できます。
-
-お楽しみください!
+Have fun!
 
 --- question ---
 ---
 legend: 質問1/3
 ---
 
-ゲームの動きを制御するために、多くの `if` ステートメントを使いました。 中には、 `and` を使って一度にいくつもの条件を調べるなど、より複雑な条件を持ったものもありました。 次の条件分岐コードを動かした場合、出力はどのようになると思いますか？
+You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
 
 ```python
 score = 5000
@@ -44,7 +42,7 @@ else:
 ```
   --- feedback ---
 
-`score >= 5000` は真ですが、 `and` 条件では両方の条件が真でなければならず、 `lives >= 3` は偽です。
+While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
 
   --- /feedback ---
 
@@ -55,7 +53,7 @@ else:
 ```
   --- feedback ---
 
-正解です。 `score >= 5000` が真であり、ネストされた `if` ステートメントの `lives > 1` も真です。
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
 
   --- /feedback ---
 
@@ -65,7 +63,7 @@ else:
 ```
   --- feedback ---
 
-おしいです。プログラムが実行されたときに真であると判断される条件は `score >= 5000` だけではありません。
+Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
 
   --- /feedback ---
 
@@ -75,7 +73,7 @@ else:
 ```
   --- feedback ---
 
-`lives > 1` は真です。 `if`/`elif`/`else` ステートメント内で最初に真と判断された条件のコードだけが実行されます。 `lives > 1` は真と判断される最初の条件ではありません。
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
 
   --- /feedback ---
 
