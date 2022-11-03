@@ -5,10 +5,10 @@ description: Bouw een 'runner game' waarin je personage moet voorkomen dat hij t
 version: 4
 listed: true
 copyedit: true
-last_tested: '2021-10-06'
+last_tested: "2021-10-06"
 steps:
   - 
-    title: Inleiding
+    title: You will make
   - 
     title: Het opzetten van het thema
   - 
@@ -22,7 +22,7 @@ steps:
     completion:
       - internal
   - 
-    title: Reflectie
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
