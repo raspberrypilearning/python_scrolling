@@ -1,19 +1,17 @@
-## Réflexion
+## Quick quiz
 
-Bravo, tu as créé un jeu !  Maintenant, il est temps de réfléchir - la réflexion est une partie importante de l'apprentissage, car elle aide à établir de nouvelles connexions dans ton cerveau.
+Answer the three questions. There are hints to guide you to the correct answer.
 
-Réponds aux trois questions ci-dessous pour réfléchir à ce que tu as appris.
+When you have answered each question, click on **Check my answer**.
 
-Après chaque question, appuie sur **soumettre**. Tu seras guidé vers la bonne réponse. Tu peux faire cette activité autant de fois que tu le souhaites.
-
-Amuse-toi bien !
+Have fun!
 
 --- question ---
 ---
 legend : Question 1 sur 3
 ---
 
-Tu as utilisé beaucoup d'instructions `if` pour contrôler le comportement de ton jeu. Certains d'entre elles auraient pu avoir des conditions plus complexes, utilisant `and` pour effectuer plusieurs tests à la fois. Si tu exécutais le morceau de code conditionnel suivant, à quoi t'attendrais-tu comme résultat ?
+You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
 
 ```python
 score = 5000
@@ -44,7 +42,7 @@ Superbe vol !
 ```
   --- feedback ---
 
-Tant que `score >= 5000` est vrai, pour une condition `et` les deux parties doivent être vraies, et `vies >= 3` est faux.
+While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
 
   --- /feedback ---
 
@@ -55,7 +53,7 @@ Continue !
 ```
   --- feedback ---
 
-C'est correct - `score >= 5000` est vrai, de même que `vies > 1` sur l'instruction imbriquée `if`.
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
 
   --- /feedback ---
 
@@ -65,7 +63,7 @@ C'est correct - `score >= 5000` est vrai, de même que `vies > 1` sur l'instruct
 ```
   --- feedback ---
 
-Proche, mais `score >= 5000` n'est pas la seule condition que le programme trouverait vraie pendant son exécution.
+Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
 
   --- /feedback ---
 
@@ -75,7 +73,7 @@ Pousse plus fort!
 ```
   --- feedback ---
 
-Tant que `vies > 1` est vrai, seul le code à l'intérieur de la première condition vraie dans une instruction `if`/`elif`/`else` est exécuté, et `vies > 1` n'est pas la première condition qui est vraie.
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
 
   --- /feedback ---
 
