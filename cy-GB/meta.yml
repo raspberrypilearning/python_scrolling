@@ -5,10 +5,10 @@ description: Adeiladwch gêm redeg ddiddiwedd lle mae'n rhaid i'ch cymeriad osgo
 version: 4
 listed: true
 copyedit: true
-last_tested: '2021-10-06'
+last_tested: "2021-10-06"
 steps:
   - 
-    title: Cyflwyniad
+    title: You will make
   - 
     title: Gosod y thema
   - 
@@ -22,7 +22,7 @@ steps:
     completion:
       - internal
   - 
-    title: Myfyrio
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
