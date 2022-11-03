@@ -157,7 +157,7 @@ Wanneer een speler tegen een obstakel is gebotst, moet het spel stoppen met bewe
 
 --- task ---
 
-Je kunt de `level`-variabele gebruiken om 'Game over' te signaleren door deze op 0 in te stellen — een waarde die hij op geen enkele andere manier zal bereiken. Doe dit in de stap `else` van je botsingsdetectie code.
+Je kunt de `level`-variabele gebruiken om 'Game over' te signaleren door deze op 0 in te stellen — een waarde die hij op geen enkele andere manier zal bereiken. Do this in the `else` step of your collision detection code.
 
 --- /task ---
 
