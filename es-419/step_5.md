@@ -157,7 +157,7 @@ Cuando un jugador ha chocado con un obstáculo, el juego debería dejar de mover
 
 --- task ---
 
-Puedes usar la variable `nivel` para señalar el 'Fin del juego' estableciendola en 0, un valor que no puede alcanzarse de otra manera. Haz esto en el paso `else` de tu código de detección de colisiones.
+Puedes usar la variable `nivel` para señalar el 'Fin del juego' estableciendola en 0, un valor que no puede alcanzarse de otra manera. Do this in the `else` step of your collision detection code.
 
 --- /task ---
 
