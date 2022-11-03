@@ -1,4 +1,4 @@
-## Introduction
+## You will make
 
 Construis un jeu de coureurs sans fin à défilement où ton personnage doit éviter les obstacles.
 
@@ -12,7 +12,7 @@ Tu vas devoir :
 
 ![Images de différents exemples de projets.](images/showcase_projects.png)
 
-### Trouve l'inspiration
+### Get ideas 💭
 
 Tu vas prendre des décisions de conception concernant le type de jeu que tu feras et la manière dont tu utiliseras le code pour obtenir les effets souhaités.
 
