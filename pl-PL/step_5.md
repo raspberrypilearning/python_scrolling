@@ -157,7 +157,7 @@ When a player has collided with an obstacle, the game should stop moving and the
 
 --- task ---
 
-You can use the `level` variable to signal 'Game over' by setting it to 0 — a value it will never reach any other way. Do this in the `else` step of your colision detection code.
+You can use the `level` variable to signal 'Game over' by setting it to 0 — a value it will never reach any other way. Do this in the `else` step of your collision detection code.
 
 --- /task ---
 
