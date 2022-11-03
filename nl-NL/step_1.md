@@ -1,4 +1,4 @@
-## Inleiding
+## You will make
 
 Bouw een eindeloos rollend renspel waarin je personage obstakels moet ontwijken.
 
@@ -12,7 +12,7 @@ Je gaat:
 
 ![Afbeeldingen van verschillende projectvoorbeelden.](images/showcase_projects.png)
 
-### Doe inspiratie op
+### Get ideas 💭
 
 Je gaat een aantal ontwerpbeslissingen nemen over het soort spel dat je gaat maken en hoe je code gaat gebruiken om de gewenste effecten te krijgen.
 
