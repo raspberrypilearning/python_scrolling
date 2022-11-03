@@ -157,7 +157,7 @@ Lorsqu'un joueur est entré en collision avec un obstacle, le jeu doit cesser de
 
 --- task ---
 
-Tu peux utiliser la variable `niveau` pour signaler « Perdu » en la réglant sur 0 — une valeur qu'elle n'atteindra jamais autrement. Fais cela dans l'étape `else` de ton code de détection de collision.
+Tu peux utiliser la variable `niveau` pour signaler « Perdu » en la réglant sur 0 — une valeur qu'elle n'atteindra jamais autrement. Do this in the `else` step of your collision detection code.
 
 --- /task ---
 
