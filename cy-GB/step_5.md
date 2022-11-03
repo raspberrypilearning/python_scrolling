@@ -157,7 +157,7 @@ Pan fydd chwaraewr wedi taro rhwystr, dylai'r gêm roi'r gorau i symud a dylai e
 
 --- task ---
 
-Fe allwch chi ddefnyddio'r newidyn `level` i ddangos bod y 'Gêm drosodd' drwy ei osod ar 0 —gwerth na fydd yn ei gyrraedd unrhyw ffordd arall. Gwnewch hyn yng ngham `else` eich cod canfod gwrthdrawiad.
+Fe allwch chi ddefnyddio'r newidyn `level` i ddangos bod y 'Gêm drosodd' drwy ei osod ar 0 —gwerth na fydd yn ei gyrraedd unrhyw ffordd arall. Do this in the `else` step of your collision detection code.
 
 --- /task ---
 
