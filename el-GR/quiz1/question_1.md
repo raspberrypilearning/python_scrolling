@@ -1,19 +1,17 @@
-## Αναστοχασμός
+## Quick quiz
 
-Μπράβο, έφτιαξες ένα παιχνίδι!  Τώρα, ήρθε η ώρα να εξετάσεις τις νέες γνώσεις- ο αναστοχασμός είναι σημαντικό μέρος της μάθησης, επειδή βοηθά στη δημιουργία νέων συνδέσεων στον εγκέφαλό σου.
+Answer the three questions. There are hints to guide you to the correct answer.
 
-Απάντησε στις τρεις ερωτήσεις παρακάτω για να διαπιστώσεις τι έμαθες.
+When you have answered each question, click on **Check my answer**.
 
-Μετά από κάθε ερώτηση, πάτα **υποβολή**. Θα οδηγηθείς στη σωστή απάντηση. Μπορείς να επαναλάβεις αυτήν τη δραστηριότητα όσες φορές θέλεις.
-
-Καλή διασκέδαση!
+Have fun!
 
 --- question ---
 ---
 legend: Ερώτηση 1 από 3
 ---
 
-Χρησιμοποίησες πολλές προτάσεις `if` για να ελέγξεις τη συμπεριφορά του παιχνιδιού σου. Μερικές από αυτές μπορεί να είχαν πιο περίπλοκες συνθήκες, χρησιμοποιώντας το `and` για να κάνουν πολλαπλούς ελέγχους ταυτόχρονα. Αν εκτελούσες το ακόλουθο κομμάτι κώδικα υπό συνθήκη, τι περιμένεις να προκύψει στην έξοδο;
+You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
 
 ```python
 score = 5000
@@ -44,7 +42,7 @@ else:
 ```
   --- feedback ---
 
-Ενώ η συνθήκη `score >= 5000` είναι αληθής, σε μια συνθήκη `and` και τα δύο μέρη πρέπει να είναι αληθή, και η συνθήκη `lives >= 3` είναι ψευδής.
+While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
 
   --- /feedback ---
 
@@ -55,7 +53,7 @@ else:
 ```
   --- feedback ---
 
-Αυτό είναι σωστό — η συνθήκη `score >= 5000` είναι αληθής, και αληθής επίσης είναι η `lives > 1` στην εμφωλευμένη εντολή `if`.
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
 
   --- /feedback ---
 
@@ -65,7 +63,7 @@ else:
 ```
   --- feedback ---
 
-Σχεδόν, αλλά η `score >= 5000` δεν είναι η μοναδική συνθήκη που θα έβρισκε αληθή το πρόγραμμα κατά την εκτέλεσή του.
+Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
 
   --- /feedback ---
 
@@ -75,7 +73,7 @@ else:
 ```
   --- feedback ---
 
-Ενώ η συνθήκη `lives > 1` είναι αληθής, μόνο ο κώδικας μέσα στην πρώτη αληθή συνθήκη σε μια εντολή `if`/`elif`/`else` εκτελείται και η `lives > 1` δεν είναι η πρώτη συνθήκη που είναι αληθής.
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
 
   --- /feedback ---
 
