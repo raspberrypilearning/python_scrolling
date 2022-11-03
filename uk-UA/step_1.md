@@ -1,4 +1,4 @@
-## Introduction
+## You will make
 
 Build a scrolling endless runner game where your character has to avoid obstacles.
 
@@ -12,7 +12,7 @@ You will:
 
 ![Images of different project examples.](images/showcase_projects.png)
 
-### Get inspiration
+### Get ideas 💭
 
 You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
