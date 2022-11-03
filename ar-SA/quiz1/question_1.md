@@ -1,19 +1,17 @@
-## تفكير
+## Quick quiz
 
-أحسنت صنع لعبة!  الآن ، حان وقت التفكير - التفكير جزء مهم من التعلم ، لأنه يساعد في إنشاء روابط جديدة في عقلك.
+Answer the three questions. There are hints to guide you to the correct answer.
 
-أجب عن الأسئلة الثلاثة أدناه للتفكر فيما تعلمته.
+When you have answered each question, click on **Check my answer**.
 
-بعد كل سؤال ، اضغط على **إرسال**. سيتم توجيهك نحو الإجابة الصحيحة. يمكنك القيام بهذا النشاط عدة مرات كما تريد.
-
-إستمتع!
+Have fun!
 
 --- question ---
 ---
 القائمة: السؤال 1 من 3
 ---
 
-لقد استخدمت الكثير من عبارات `if`للتحكم في سلوك لعبتك. بعض العبارات قد يتم استخدامها في حالات أكثر تعقيدًا ، مثل استخدام `and` لإجراء اختبارات متعددة في وقت واحد. إذا قمت بتشغيل الجزء التالي من الكود الشرطي، فماذا تتوقع أن يكون الناتج؟
+You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
 
 ```python
 score = 5000
@@ -44,7 +42,7 @@ Great flying!
 ```
   --- feedback ---
 
-بينما `الدرجة >= 5000` صحيحة ، يجب أن يكون كلا الجزأين صحيحين للشرط `و` ، و `يعيش >= 3` خطأ.
+While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
 
   --- /feedback ---
 
@@ -55,7 +53,7 @@ Great flying!
 ```
   --- feedback ---
 
-هذا صحيح - `الدرجة >= 5000` صحيحة ، وكذلك `يعيش > 1` على جملة `if` المتداخلة.
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
 
   --- /feedback ---
 
@@ -65,7 +63,7 @@ Great flying!
 ```
   --- feedback ---
 
-أغلق ، لكن `الدرجة >= 5000` ليس الشرط الوحيد الذي سيجده البرنامج صحيحًا أثناء تشغيله.
+Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
 
   --- /feedback ---
 
@@ -75,7 +73,7 @@ Great flying!
 ```
   --- feedback ---
 
-بينما `lives > 1`هو صحيح ، فقط التعليمات البرمجية داخل الشرط الحقيقي الأول في `if`/`elif`/`else` إذا تم تنفيذ و`lives > 1` ليس الشرط الاول يكون صحيحًا.
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
 
   --- /feedback ---
 
