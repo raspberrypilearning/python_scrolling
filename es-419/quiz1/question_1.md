@@ -1,19 +1,17 @@
-## Reflexión
+## Quick quiz
 
-¡Bien hecho, creaste un juego!  Ahora es el momento de reflexionar: reflexionar es una parte importante del aprendizaje porque ayuda a establecer nuevas conexiones en tu cerebro.
+Answer the three questions. There are hints to guide you to the correct answer.
 
-Responde las tres preguntas siguientes para reflexionar sobre lo que has aprendido.
+When you have answered each question, click on **Check my answer**.
 
-Después de responder cada pregunta, haz clic en **Enviar**. Vamos a guiarte hacia la respuesta correcta. Puedes realizar esta actividad tantas veces como quieras.
-
-¡Qué te diviertas!
+Have fun!
 
 --- question ---
 ---
 legend: Pregunta 1 de 3
 ---
 
-Has utilizado muchas sentencias `if` para controlar el comportamiento de tu juego. Algunas de ellos podrían haber tenido condiciones más complejas, usando `and` para hacer varias pruebas a la vez. Si ejecutaras el siguiente fragmento de código condicional, ¿cuál esperarías que fuera el resultado?
+You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
 
 ```python
 puntaje = 5000
@@ -44,7 +42,7 @@ else:
 ```
   --- feedback ---
 
-Mientras que `puntaje >= 5000` es verdadera, para una condición `and` ambas partes deben ser verdaderas, y `vidas >= 3` debe ser falsa.
+While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
 
   --- /feedback ---
 
@@ -55,7 +53,7 @@ Mientras que `puntaje >= 5000` es verdadera, para una condición `and` ambas par
 ```
   --- feedback ---
 
-Esto es correcto — `puntaje >= 5000` es verdadera, y también lo es `vidas > 1` en la sentencia anidada `if`.
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
 
   --- /feedback ---
 
@@ -65,7 +63,7 @@ Esto es correcto — `puntaje >= 5000` es verdadera, y también lo es `vidas > 1
 ```
   --- feedback ---
 
-Cerca, pero `puntaje >= 5000` no es la única condición que el programa encontraría verdadera mientras se ejecuta.
+Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
 
   --- /feedback ---
 
@@ -75,7 +73,7 @@ Cerca, pero `puntaje >= 5000` no es la única condición que el programa encontr
 ```
   --- feedback ---
 
-Mientras que `vidas > 1` es verdadera, solo se ejecuta el código dentro de la primera condición en una sentencia `if`/`elif`/`else` y `vidas > 1` no es la primera condición verdadera.
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
 
   --- /feedback ---
 
