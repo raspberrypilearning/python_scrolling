@@ -6,6 +6,8 @@ teken_obstakels
 
 Je hebt snelheid
 
+You reached level
+
 obstakel_x
 
 obstakel_y
