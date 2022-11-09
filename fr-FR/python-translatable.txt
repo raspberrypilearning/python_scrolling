@@ -6,6 +6,8 @@ dessine_obstacles
 
 Tu as atteint la vitesse
 
+You reached level
+
 ob_x
 
 ob_y
