@@ -6,6 +6,8 @@ llunio_rhwystrau
 
 Wedi cyrraedd cyflymder
 
+You reached level
+
 rh_x
 
 rh_y
