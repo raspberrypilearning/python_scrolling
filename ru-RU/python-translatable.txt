@@ -6,6 +6,8 @@ draw_obstacles
 
 You reached speed
 
+You reached level
+
 ob_x
 
 ob_y
