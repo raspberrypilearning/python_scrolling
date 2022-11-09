@@ -6,6 +6,8 @@ dibujar_obstaculos
 
 Llegaste a la velocidad
 
+You reached level
+
 obstaculo_x
 
 obstaculo_y
