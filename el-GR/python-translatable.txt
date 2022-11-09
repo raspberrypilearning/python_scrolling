@@ -6,6 +6,8 @@ draw_obstacles
 
 Έφτασες στο επίπεδο
 
+You reached level
+
 ob_x
 
 ob_y
