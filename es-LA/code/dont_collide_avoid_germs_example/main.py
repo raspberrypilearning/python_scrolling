@@ -24,7 +24,7 @@ def safe_player():
   fill(255)
   ellipse(mouse_x - 12, player_y - 12, 5, 5)
   ellipse(mouse_x + 12, player_y - 12, 5, 5)
-  
+
   # Mouth
   fill(0)
   ellipse(mouse_x, player_y + 10, 15, 10)
