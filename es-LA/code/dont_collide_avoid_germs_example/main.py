@@ -7,7 +7,7 @@ level = 1
 score = 0
 
 def safe_player():
-  
+
   global player_y
   
   # Face
