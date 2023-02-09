@@ -55,7 +55,7 @@ def crashed_player():
   ellipse(mouse_x, player_y + 15, 15, 10)
   fill(178, 200, 145)
   ellipse(mouse_x, player_y + 20, 10, 10)
-  
+
 def draw_player():
   
   global player_y, safe, score, level
