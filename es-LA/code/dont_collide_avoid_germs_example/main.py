@@ -13,7 +13,7 @@ def safe_player():
   # Face
   fill(200, 134, 145)
   ellipse(mouse_x, player_y, 60, 60)
-
+  
   # Eyes
   fill(178, 200, 145)
   ellipse(mouse_x - 10, player_y - 10, 20, 20)
@@ -49,7 +49,7 @@ def crashed_player():
   fill(255)
   ellipse(mouse_x - 12, player_y - 12, 5, 5)
   ellipse(mouse_x + 12, player_y - 12, 5, 5)
-  
+
   # Mouth
   fill(0)
   ellipse(mouse_x, player_y + 15, 15, 10)
