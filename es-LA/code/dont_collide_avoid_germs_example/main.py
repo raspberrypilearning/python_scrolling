@@ -57,7 +57,7 @@ def crashed_player():
   ellipse(mouse_x, player_y + 20, 10, 10)
 
 def draw_player():
-  
+
   global player_y, safe, score, level
   
   player_y = int(height * 0.8)
@@ -118,5 +118,5 @@ def draw():
     draw_obstacles()
     draw_player()
   
-# Keep this to run your code
+# Keep this here to run your code
 run()
