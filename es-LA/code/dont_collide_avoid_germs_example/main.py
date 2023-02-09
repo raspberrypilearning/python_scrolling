@@ -117,6 +117,6 @@ def draw():
     text('Score: ' + str(score), width/2, 20)
     draw_obstacles()
     draw_player()
-  
+
 # Keep this here to run your code
 run()
