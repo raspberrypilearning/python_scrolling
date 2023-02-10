@@ -118,5 +118,5 @@ def draw():
     draw_obstacles()
     draw_player()
 
-# Keep this here to run your code
+# Keep this in to run your code
 run()
