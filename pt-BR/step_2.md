@@ -1,32 +1,32 @@
-## Set the theme
+## Defina o tema
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Set the theme of your game and create a player character that follows the mouse pointer.
+Defina o tema do seu jogo e crie um personagem de jogador que siga o ponteiro do mouse.
 
 </div>
 <div>
 
-![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+![Imagem de tartaruga tamanho 100x100 contra um fundo azul com tamanho de tela 400x400.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
-- A sport or hobby
-- A movie, show, or game
-- Science or nature
-- Anything else!
+Qual é o tema do seu jogo? Você pode escolher o que quiser. Aqui estão algumas idéias:
+- Um esporte ou hobby
+- Um filme, programa ou jogo
+- Ciência ou natureza
+- Qualquer outra coisa!
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
+Abra o [projeto inicial](https://trinket.io/python/cda05e5911){:target="_blank"}. O Trinket será aberto em outra aba do navegador.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Set the size of your canvas.
+**Escolha:** Defina o tamanho da sua tela.
 
 --- code ---
 ---
@@ -43,9 +43,9 @@ size(400, 400)
 
 --- task ---
 
-Create a variable called `safe` to store the background colour based on the theme you want for your game.
+Crie uma variável chamada `safe` para armazenar a cor de fundo com base no tema que você quer para o seu jogo.
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+Esta é a cor segura para o jogador e você vai usar esta variável de novo mais tarde.
 
 --- code ---
 ---
@@ -65,7 +65,7 @@ background(safe)
 
 --- task ---
 
-**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+**Teste:** Execute seu código para ver a cor de fundo. Mude-o até ficar satisfeito com a cor e o tamanho da tela.
 
 --- /task ---
 
@@ -123,11 +123,11 @@ title: Use a starter image
 
 Click on the **manage images** icon.
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![O ícone de imagem no canto superior direito da área de código.](images/manage-images.png)
 
 Images included in the starter project will be shown in the `Image library` list.
 
-![The Image library with list of included images.](images/starter-images.png)
+![A biblioteca de imagens com a lista de imagens incluídas.](images/starter-images.png)
 
 Make a note of the name of the image you want to use.
 
@@ -171,7 +171,7 @@ title: Use emoji characters
 
 You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
 
-Here's an example:
+Aqui está um exemplo:
 
 --- code ---
 ---
@@ -218,7 +218,7 @@ text('🎈', mouse_x, player_y)
 
 --- collapse ---
 ---
-title: Draw a player using multiple shapes
+title: Desenhe um jogador usando várias formas
 ---
 
 ![desc](images/face_player.png)
@@ -255,53 +255,53 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player.
+**Teste:** Execute seu código e mova o mouse para controlar o jogador.
 
-Does it move like you expect?
+Ele se move como você espera?
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Depurar:** Você pode encontrar alguns bugs em seu projeto que precisa corrigir. Aqui estão alguns bugs comuns.
 
 --- task ---
 
 --- collapse ---
 ---
-title: I can't see the player
+título: não vejo o jogador
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+Tente mudar para tela cheia. Além disso, verifique as coordenadas `x` e `y` que você usou para desenhar o jogador — certifique-se de que elas estejam dentro da tela que você criou com `size()`.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image isn't loading
+title: Uma imagem não está carregando
 ---
 
-First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+Primeiro, verifique se a imagem está na biblioteca `Image`. Em seguida, verifique o nome do arquivo com muito cuidado - lembre-se de que as letras maiúsculas são diferentes das letras minúsculas e a pontuação é importante.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image is the wrong size
+title: Uma imagem tem o tamanho errado
 ---
 
-Check the inputs that control the width and height of the image:
+Verifique as entradas que controlam a largura e a altura da imagem:
 
 ```python
-image(image_file, x_coord, y_coord, width, height)
+imagem(imagem_arquivo, x_coord, y_coord, largura, altura)
 ```
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An emoji is the wrong size
+title: Uma imagem tem o tamanho errado
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+Se o seu emoji for muito grande ou muito pequeno, altere a entrada para `text_size()`.
 
 --- /collapse ---
 
