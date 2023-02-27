@@ -136,7 +136,7 @@ Si ton personnage joueur touche l'obstacle et que rien ne se passe, il y a quelq
 L'impression de la couleur du pixel dont tu vérifies une collision peut être utile :
 
 ```python
-  print(red(collide), green(collide), blue(collide))
+  impression (red (collision), green (collision), blue (collision))
 ```
 
 Tu peux également imprimer un cercle autour du point que tu vérifies et ajuster le point que tu vérifies si tu dois :
