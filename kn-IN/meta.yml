@@ -1,7 +1,9 @@
 ---
 title: Don't collide!
 hero_image: images/banner.png
-description: Build an endless runner game where your character must avoid colliding with obstacles
+description:
+  - 
+  - 
 version: 4
 listed: true
 copyedit: true
