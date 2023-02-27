@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Вопрос 3 из 3
 ---
 
 You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
@@ -29,7 +29,7 @@ Not quite. It's usually worth listening to what your users have to say about you
 
   --- feedback ---
 
-Correct! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
+Правильно! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
 
   --- /feedback ---
 
