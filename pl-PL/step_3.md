@@ -106,7 +106,7 @@ title: Use emoji characters
 
 You can use emoji characters in the p5 `text()` function to represent your obstacles.
 
-Here's an example:
+Oto przykład:
 
 --- code ---
 ---
@@ -151,7 +151,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 title: Draw an obstacle using multiple shapes
 ---
 
-![desc](images/tree_obstacle.png)
+![opis](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -241,7 +241,7 @@ Testing your program has the potential to induce seizures for people with photos
 
 **Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom.
 
-Change your code until you are happy with the obstacles you have. You can:
+Change your code until you are happy with the obstacles you have. Możesz:
 
 + Change the seed to get obstacles in different starting positions
 + Change the number of times to loop repeats to get a different number of obstacles
@@ -253,7 +253,7 @@ Change your code until you are happy with the obstacles you have. You can:
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debugowanie:** Być może znajdziesz błędy w swoim projekcie, które musisz naprawić. Oto kilka typowych błędów.
 
 --- collapse ---
 ---
@@ -265,7 +265,7 @@ Check your function that draws multiple obstacles:
  + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
  + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
 
-For example:
+Na przykład:
 
 --- code ---
 ---
