@@ -27,7 +27,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Replace with your obstacle
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
 
 
 --- /code ---
@@ -40,8 +40,8 @@ language: python
 filename: main.py - draw()
 ---
 
-def draw(): safe = color(200, 100, 0) #Add the colour of your theme background(safe)  
-draw_obstacles() #Before drawing the player draw_player()
+def draw(): safe = color(200, 100, 0) #テーマの色にしてください background(safe)  
+draw_obstacles() #プレーヤーを描く前に draw_player()
 
 --- /code ---
 
@@ -77,7 +77,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) player = load_image('skiing.png') #Load your image obstacle = load_image('rocket.png') #Load your image
+def setup(): size(400, 400) player = load_image('skiing.png') #画像を読み込む obstacle = load_image('rocket.png') #画像を読み込む
 
 --- /code ---
 
@@ -93,7 +93,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
    global obstacle
 
-   image(obstacle, ob_x, ob_y, 30, 30) #Resize to fit your theme
+   image(obstacle, ob_x, ob_y, 30, 30) #テーマに合わせてサイズを変更
 
 --- /code ---
 
@@ -114,7 +114,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre
+def setup(): size(400, 400) text_size(40) #絵文字の大きさ text_align(CENTER, TOP) #真ん中に置く
 
 --- /code ---
 
@@ -183,7 +183,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Increases each frame ob_y %= height #Wrap around text('🌵', ob_x, ob_y) #Replace with your obstacle
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #フレームごとに増やす ob_y %= height #下に外れたら上から出てくるように text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
 
 --- /code ---
 
@@ -209,10 +209,10 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles():
 
-  seed(12345678) #Any number is fine
+  seed(12345678) #どんな数でもよい
 
   for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Replace with your obstacle
+ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
 
 --- /code ---
 
@@ -278,7 +278,7 @@ def draw_obstacles():
   seed(12345678)
 
   for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Replace with your obstacle
+ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
 
 --- /code ---
 
