@@ -46,9 +46,9 @@ line_numbers: false
 
 def draw_obstacles():
 
-  global level #Use the global level
+  global level #グローバル変数
 
-  if frame_count % height == height - 1 and level < 5: level += 1 print('You have reached level', level)
+  if frame_count % height == height - 1 and level < 5: level += 1 print('レベル ', level, ' になりました')
 
 --- /code ---
 
@@ -77,7 +77,7 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+  for i in range(6): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #下に外れたら上から出てくるように text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -145,7 +145,7 @@ global score
 
 「スコア」や「得点」のような見出しを付けたい場合は、 `+` 演算子を使用して2つ以上の文字列をつなげることができます。 `score` 変数には数値が入っているため、別の文字列とつなぎ合わせる前に、文字列に変換しておく必要があります。 それには、`str()`を使います。
 
-`message = 'Score: ' + str(score)`
+`message = 'スコア: ' + str(score)`
 
 **ヒント：** `str()` は 'string'の略です—プログラマーはこのように文字を飛ばすことが多いです。文字を打つ回数を減らすためです。
 
@@ -157,7 +157,7 @@ global score
 
 --- task ---
 
-`level` 変数を使って、「ゲームオーバー」を示すようにします。変数の値を0（これは、他の方法では決して到達しない値です）に設定します。 Do this in the `else` step of your collision detection code.
+`level` 変数を使って、「ゲームオーバー」を示すようにします。変数の値を0（これは、他の方法では決して到達しない値です）に設定します。 これは、衝突検出コードの `else` ステップで行います。
 
 --- /task ---
 
@@ -188,7 +188,7 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0: background(safe) fill(255) text('Score: ' + str(score), width/2, 20) draw_obstacles() draw_player()
+  if level > 0: background(safe) fill(255) text('スコア: ' + str(score), width/2, 25) draw_obstacles() draw_player()
 
 --- /code ---
 
@@ -210,7 +210,7 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0: background(safe) fill(255) text('Score: ' + str(score), width/2, 20) draw_obstacles() draw_player()
+  if level > 0: background(safe) fill(255) text('スコア: ' + str(score), width/2, 25) draw_obstacles() draw_player()
 
 --- /code ---
 
@@ -243,7 +243,7 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + level): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+  for i in range(6 + level): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #下に外れたら上から出てくるように text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -264,7 +264,7 @@ language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + level): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+  for i in range(6 + level): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #下に外れたら上から出てくるように text('🌵', ob_x, ob_y)
 
 --- /code ---
 
