@@ -12,7 +12,7 @@ Set the theme of your game and create a player character that follows the mouse 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
+What is the theme of your game? You could choose anything you want. ಕೆಲವು ವಿಚಾರಗಳು ಇಲ್ಲಿವೆ:
 - A sport or hobby
 - A movie, show, or game
 - Science or nature
@@ -171,7 +171,7 @@ title: Use emoji characters
 
 You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
 
-Here's an example:
+ಒಂದು ಉದಾಹರಣೆ ಇಲ್ಲಿದೆ:
 
 --- code ---
 ---
@@ -261,7 +261,7 @@ Does it move like you expect?
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ನಲ್ಲಿ ನೀವು ಸರಿಪಡಿಸಬೇಕಾದ ಕೆಲವು ದೋಷಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು. Here are some common bugs.
 
 --- task ---
 
