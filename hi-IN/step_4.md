@@ -43,7 +43,7 @@ Create a condition to check `if` the `collide` variable is the same as the `safe
 
 Move your code to draw your player inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision.
 
-**Choose:** How should your player react? You could:
+**Choose:** How should your player react? आप ऐसा कर सकते हैं:
 + Change the image to a `crashed` version
 + Use a different emoji for the player
 + You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image
@@ -55,7 +55,7 @@ title: Change the image
 
 You can use a different image to represent your player when it collides with an obstacle.
 
-Here's an example:
+यहाँ एक उदाहरण है:
 
 --- code ---
 ---
@@ -80,7 +80,7 @@ title: Use emoji characters
 
 You can use emoji characters in the p5 `text()` function to represent your collided player.
 
-Here's an example:
+यहाँ एक उदाहरण है:
 
 --- code ---
 ---
@@ -118,7 +118,7 @@ def draw_player(): if collide == safe: #On background text('🎈', mouse_x, play
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**डीबग:** आपको अपने प्रोजेक्ट में कुछ बग मिल सकते हैं जिन्हें आपको ठीक करने की आवश्यकता है। Here are some common bugs.
 
 --- collapse ---
 ---
