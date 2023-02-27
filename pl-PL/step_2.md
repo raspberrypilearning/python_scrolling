@@ -12,11 +12,11 @@ Set the theme of your game and create a player character that follows the mouse 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
+What is the theme of your game? You could choose anything you want. Oto kilka pomysłów:
 - A sport or hobby
 - A movie, show, or game
 - Science or nature
-- Anything else!
+- Coś jeszcze!
 
 --- task ---
 
@@ -171,7 +171,7 @@ title: Use emoji characters
 
 You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
 
-Here's an example:
+Oto przykład:
 
 --- code ---
 ---
@@ -221,7 +221,7 @@ text('🎈', mouse_x, player_y)
 title: Draw a player using multiple shapes
 ---
 
-![desc](images/face_player.png)
+![opis](images/face_player.png)
 
 --- code ---
 ---
@@ -261,7 +261,7 @@ Does it move like you expect?
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debugowanie:** Być może znajdziesz błędy w swoim projekcie, które musisz naprawić. Oto kilka typowych błędów.
 
 --- task ---
 
