@@ -1,7 +1,9 @@
 ---
 title: ぶつからないで！
 hero_image: images/banner.png
-description: キャラクターが障害物との衝突を避けて走り続けるゲームを作る
+description:
+  - 
+  - 
 version: 4
 listed: true
 copyedit: true
