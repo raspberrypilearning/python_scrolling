@@ -10,7 +10,7 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: المقدمة
   - 
     title: عيّن الموضوع
   - 
@@ -24,7 +24,7 @@ steps:
     completion:
       - internal
   - 
-    title: Quick quiz
+    title: انعكاس
     knowledge_quiz:
       path: quiz1
       version: 1
