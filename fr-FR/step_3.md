@@ -19,7 +19,7 @@ Tu vas utiliser une boucle `for` pour faire beaucoup de copies, tu n'as donc qu'
 
 --- task ---
 
-Définis une fonction `dessine_obstacles()`:
+Définis une fonction `dessine_obstacles()` :
 
 --- code ---
 ---
@@ -59,11 +59,11 @@ dessine_obstacles() #Avant de dessiner le joueur dessine_joueur()
 title: Utiliser une image de démarrage
 ---
 
-Clique sur l'icône **gérer les images**.
+Clique sur l'icône **View and Add Images**.
 
 ![L'icône d'image en haut à droite de la zone de code.](images/manage-images.png)
 
-Les images incluses dans le projet de démarrage seront affichées dans la liste `Bibliothèque d'images`.
+Les images incluses dans le projet de démarrage seront affichées dans la liste `Image library`.
 
 ![La bibliothèque d'images avec la liste des images incluses.](images/starter-images.png)
 
@@ -167,7 +167,7 @@ def dessine_obstacles(): ob_x = width/2 ob_y = height/2 #Dessine un sapin no_str
 
 --- /task ---
 
-### Fais bouger ton obstacle
+### Déplacement de l'obstacle
 
 --- task ---
 
@@ -175,7 +175,7 @@ Ajoute maintenant du code pour augmenter la position `y` de l'obstacle à chaque
 
 La variable p5 `frame_count` commence à compter les images lorsque tu cliques sur exécuter.
 
-`ob_y %= height` fixe la position `y` au reste lorsqu'elle est divisée par `height`. Avec une `height` de '400', cela transformera `401` en `1` donc lorsque les obstacles disparaissent du bas de l'écran, ils réapparaissent en haut.
+`ob_y %= height` fixe la position `y` au reste lorsqu'elle est divisée par `height`. Avec une `height` de "400", cela transformera `401` en `1` donc lorsque les obstacles disparaissent du bas de l'écran, ils réapparaissent en haut.
 
 --- code ---
 ---
@@ -226,7 +226,7 @@ Informations utiles :
 
 --- collapse ---
 ---
-title: Avertissement d'épilepsie
+title: Mise en garde contre l'épilepsie
 ---
 
 Tester ton programme peut provoquer des crises chez les personnes atteintes d'épilepsie photosensible. Si tu souffres d'épilepsie photosensible ou si tu penses être susceptible de faire une crise, n'exécute pas ton programme. Au lieu de cela, tu peux :
