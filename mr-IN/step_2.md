@@ -12,7 +12,7 @@ Set the theme of your game and create a player character that follows the mouse 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
+What is the theme of your game? You could choose anything you want. येथे काही कल्पना आहेत:
 - A sport or hobby
 - A movie, show, or game
 - Science or nature
@@ -171,7 +171,7 @@ title: Use emoji characters
 
 You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
 
-Here's an example:
+उदाहरणार्थ:
 
 --- code ---
 ---
