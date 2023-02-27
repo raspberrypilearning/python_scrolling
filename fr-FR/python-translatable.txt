@@ -6,7 +6,7 @@ dessine_obstacles
 
 Tu as atteint la vitesse
 
-You reached level
+Tu as atteint le niveau
 
 ob_x
 
