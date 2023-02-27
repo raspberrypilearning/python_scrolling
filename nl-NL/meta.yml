@@ -1,7 +1,9 @@
 ---
 title: Niet botsen!
 hero_image: images/banner.png
-description: Bouw een 'runner game' waarin je personage moet voorkomen dat hij tegen obstakels aanbotst
+description:
+  - 
+  - 
 version: 4
 listed: true
 copyedit: true
