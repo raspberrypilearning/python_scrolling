@@ -1,95 +1,95 @@
-Import library code
+Importar código da biblioteca
 
-Wrap around
+Dar a volta
 
-The draw_player function goes here
+A função desenhar_jogador aparece aqui
 
-Setup your animation here
+Configure sua animação aqui
 
-Things to do in every frame
+Coisas para fazer em cada imagem
 
-Definitions for compatibility with the p5py processing library
+Definições para compatibilidade com a biblioteca de processamento p5py
 
-Shape
+Forma
 
-Fonts
+Fontes
 
-Text
+Texto
 
-Colour
+Cor
 
-Images
+Imagens
 
-Environment
+Ambiente
 
-Transform
+Transformar
 
-Keyboard
+Teclado
 
-Draw collision point
+Desenhar ponto de colisão
 
-Off the left of the screen
+À esquerda da tela
 
-Off the right of the screen
+À direita da tela
 
-Position around the centre, top
+Posicione ao redor do centro, superior
 
-Face
+Enfrentar
 
-Eyes
+Olhos
 
-Mouth
+Boca
 
-Collided
+Bateu
 
-Put code to run once here
+Coloque o código para ser executado uma vez aqui
 
-Width and height
+Largura e altura
 
-Put code to run every frame here
+Coloque o código para executar em cada quadro aqui
 
-Keep this to run your code
+Mantenha isso para executar seu código
 
-The draw_obstacle function goes here
+A função desenhar_obstáculo vai aqui
 
-Off the bottom of the screen
+Na parte inferior da tela
 
-Off the top of the screen
+Na parte superior da tela
 
-Add the colour of your theme
+Adicione a cor do seu tema
 
-Positioned towards the screen bottom
+Posicionado em direção à parte inferior da tela
 
-Your chosen colour
+Sua cor escolhida
 
-Load your image
+Carregue sua imagem
 
-Controls the size of the emoji
+Controla o tamanho do emoji
 
-Position around the centre
+Posicione ao redor do centro
 
-Replace with your obstacle
+Substitua pelo seu obstáculo
 
-Before drawing the player
+Antes de desenhar o jogador
 
-Resize to fit your theme
+Redimensione para se adequar ao seu tema
 
-Draw a fir tree
+Desenhe uma árvore de abeto
 
-Green for needles
+Verde para agulhas
 
-Brown for trunk
+Marrom para o porta-malas
 
-Increases each frame
+Aumenta cada quadro
 
-Any number is fine
+Qualquer número é bom
 
-On background
+Em segundo plano
 
-Useful for debugging
+Útil para depuração
 
-Draw circles around the pixels to check for collisions
+Desenhe círculos ao redor dos pixels para verificar colisões
 
-Include global variables here
+Incluir variáveis globais aqui
 
-Use the global level
+Use o nível global
