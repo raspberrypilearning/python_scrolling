@@ -53,7 +53,7 @@ language: python
 filename: main.py - draw()
 ---
 
-def dessine():    
+def dessin():    
 sur = color(200, 100, 0) #Ajouter la couleur de ton thème   
 background(sur)
 
@@ -107,7 +107,7 @@ dessine_joueur()
 
 --- /task ---
 
-Ensuite, tu ajouteras du code à la fonction `dessine_joueur()` pour dessiner ta forme. Tu devras peut-être également ajouter le code `configuration()`.
+Ensuite, tu ajouteras du code à la fonction `dessine_joueur()` pour dessiner ta forme. Tu devras peut-être également ajouter le code `setup()`.
 
 --- task ---
 
@@ -118,14 +118,14 @@ Ensuite, tu ajouteras du code à la fonction `dessine_joueur()` pour dessiner ta
 
 --- collapse ---
 ---
-title : Utiliser une image de démarrage
+title: Utiliser une image de démarrage
 ---
 
-Clique sur l'icône **gérer les images**.
+Clique sur l'icône **View and Add Images**.
 
 ![L'icône d'image en haut à droite de la zone de code.](images/manage-images.png)
 
-Les images incluses dans le projet de démarrage seront affichées dans la liste `Bibliothèque d'images`.
+Les images incluses dans le projet de démarrage seront affichées dans la liste `Image library`.
 
 ![La bibliothèque d'images avec la liste des images incluses.](images/starter-images.png)
 
@@ -261,7 +261,7 @@ Est-ce que ça bouge comme prévu ?
 
 --- /task ---
 
-**Débogage :** Il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues assez courants .
+**Débogage :** Il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues assez courants.
 
 --- task ---
 
@@ -270,7 +270,7 @@ Est-ce que ça bouge comme prévu ?
 title: Je ne peux pas voir le joueur
 ---
 
-Essaye de passer en plein écran. Vérifie également les coordonnées `x` et `y` que tu as utilisées pour dessiner le joueur - assure-toi qu'elles se trouvent à l'intérieur du canevas que tu as créé avec `size()`.
+Essaie de passer en plein écran. Vérifie également les coordonnées `x` et `y` que tu as utilisées pour dessiner le joueur - assure-toi qu'elles se trouvent à l'intérieur du canevas que tu as créé avec `size()`.
 
 --- /collapse ---
 
