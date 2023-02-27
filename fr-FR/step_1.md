@@ -1,6 +1,6 @@
-## You will make
+## Ce que tu vas faire
 
-Construis un jeu de coureurs sans fin à défilement où ton personnage doit éviter les obstacles.
+Construis un jeu de course sans fin à défilement où ton personnage doit éviter les obstacles.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
 <span style="color: #0faeb0">**Coureurs sans fin**</span> sont un type de jeu où tu dois éviter les obstacles et le jeu ne se termine que lorsque tu rencontres un obstacle. Tu marques des points en restant en vie le plus longtemps possible.</p>
@@ -12,7 +12,7 @@ Tu vas devoir :
 
 ![Images de différents exemples de projets.](images/showcase_projects.png)
 
-### Get ideas 💭
+### Trouve l'inspiration 💭
 
 Tu vas prendre des décisions de conception concernant le type de jeu que tu feras et la manière dont tu utiliseras le code pour obtenir les effets souhaités.
 
