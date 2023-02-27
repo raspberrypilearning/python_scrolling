@@ -169,7 +169,7 @@ Create an `if` statement in `draw()` that tests whether `level > 0` before calli
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** ನಿಮ್ಮ ಪ್ರಾಜೆಕ್ಟ್‌ನಲ್ಲಿ ನೀವು ಸರಿಪಡಿಸಬೇಕಾದ ಕೆಲವು ದೋಷಗಳನ್ನು ನೀವು ಕಾಣಬಹುದು. Here are some common bugs.
 
 --- collapse ---
 ---
@@ -180,7 +180,7 @@ Make sure that you've included the `text()` function that draws the player's sco
 
 `text('Text to display', x, y)`
 
-It should look something like this:
+ಇದು ಬಹುಶಹ ಈ ರೀತಿ ಕಾಣಬೇಕು:
 
 --- code ---
 ---
@@ -202,7 +202,7 @@ title: The game doesn't stop after a collision
 If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
 
 
-If your game is correctly detecting collisons, then check that you have properly indented the code that draws your game inside the `if level > 0` satement, to make sure it only runs if that statement is true. For example:
+If your game is correctly detecting collisons, then check that you have properly indented the code that draws your game inside the `if level > 0` satement, to make sure it only runs if that statement is true. ಉದಾಹರಣೆಗೆ:
 
 --- code ---
 ---
@@ -214,7 +214,7 @@ filename: main.py — draw()
 
 --- /code ---
 
-Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. For example:
+Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. ಉದಾಹರಣೆಗೆ:
 
 --- code ---
 ---
@@ -235,7 +235,7 @@ title: The game doesn't get faster
 
 First, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
 
-If level is increasing correctly, check your `draw_obstacles()` function. In particular, check that you have `ob_y = randint(0, height) + (frame_count * level)`. It should look something like this:
+If level is increasing correctly, check your `draw_obstacles()` function. In particular, check that you have `ob_y = randint(0, height) + (frame_count * level)`. ಇದು ಬಹುಶಹ ಈ ರೀತಿ ಕಾಣಬೇಕು:
 
 --- code ---
 ---
@@ -256,7 +256,7 @@ title: New obstacles don't appear
 
 There are a few reasons this could be happening. And there are some more reasons why it might appear to be happening, when it isn't. First, because new obstacles are added based on `level`, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
 
-If level is increasing correctly, check your `draw_obstacles()` function to ensure that you have `level` used in the `range()` function of the `for` loop that draws the obstacles. It should look something like this:
+If level is increasing correctly, check your `draw_obstacles()` function to ensure that you have `level` used in the `range()` function of the `for` loop that draws the obstacles. ಇದು ಬಹುಶಹ ಈ ರೀತಿ ಕಾಣಬೇಕು:
 
 --- code ---
 ---
