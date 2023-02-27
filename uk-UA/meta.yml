@@ -1,5 +1,5 @@
 ---
-title: Don't collide!
+title: Не зіткнись!
 hero_image: images/banner.png
 description:
   - 
@@ -10,21 +10,21 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: Ти зробиш
   - 
-    title: Set the theme
+    title: Вибір теми
   - 
-    title: Create obstacles
+    title: Створення перешкод
     completion:
       - engaged
   - 
-    title: Collision detection
+    title: Виявлення зіткнень
   - 
-    title: Speed up!
+    title: Швидше!
     completion:
       - internal
   - 
-    title: Quick quiz
+    title: Швидкий тест
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -33,8 +33,8 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: Вдосконалення твого проєкту
   - 
-    title: Share
+    title: Поділитися
   - 
-    title: What next?
+    title: Що далі?
