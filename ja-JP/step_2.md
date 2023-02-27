@@ -54,7 +54,7 @@ filename: main.py - draw()
 ---
 
 def draw():    
-safe = color(200, 100, 0) #Add the colour of your theme   
+safe = color(200, 100, 0) #テーマの色   
 background(safe)
 
 --- /code ---
@@ -86,7 +86,7 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+player_y = int(height * 0.8) #画面の下の方に置く
 
 --- /code ---
 
@@ -99,7 +99,7 @@ filename: main.py - draw()
 ---
 
 def draw():    
-safe = color(200, 100, 0) #Your chosen colour    
+safe = color(200, 100, 0) #選んだ色    
 background(safe)    
 draw_player()
 
@@ -141,7 +141,7 @@ filename: main.py - setup()
 
 def setup():   
 size(400, 400)    
-player = load_image('skiing.png') #Load your image
+player = load_image('skiing.png') #選んだ画像
 
 --- /code ---
 
@@ -154,7 +154,7 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+player_y = int(height * 0.8) #画面の下の方に置く
 
   global player
 
@@ -181,8 +181,8 @@ filename: main.py - setup()
 
 def setup():    
 size(400, 400)     
-text_size(40) #Controls the size of the emoji     
-text_align(CENTER, TOP) #Position around the centre
+text_size(40) #絵文字の大きさ     
+text_align(CENTER, TOP) #真ん中に置く
 
 --- /code ---
 
@@ -232,11 +232,11 @@ filename: main.py - draw_player()
 def draw_player():    
 player_y = int(height * 0.8)    
 noStroke()    
-#Face    
+#顔    
 fill(0, 200, 100)    
 ellipse(mouse_x, player_y, 60, 60)
 
-  #Eyes    
+  #目    
 fill(0, 100, 200)    
 ellipse(mouse_x - 10, player_y - 10, 20, 20)    
 ellipse(mouse_x + 10, player_y - 10, 20, 20)    
