@@ -1,7 +1,9 @@
 ---
 title: '¡No choques!'
 hero_image: images/banner.png
-description: Construye un juego de desplazamiento tipo endless runner (corredor infinito) donde tu personaje tiene que evitar obstáculos
+description:
+  - 
+  - 
 version: 4
 listed: true
 copyedit: true
