@@ -1,19 +1,19 @@
-## Share
+## Поділитися
 
-If you are in a club, why not share your project with friends?
+Якщо ти перебуваєш у клубі, чому б не поділитися своїм проєктом з друзями?
 
-You could also show your family how your project works by sending them a link.
+Ти також можеш показати своїй родині, як працює твій проєкт, надіславши їм посилання.
 
-To get a link, go to the **Share** menu button in the upper-right of your Trinket's edit page and select **Link**.
+Щоб отримати посилання, натисни на кнопку **Share** у правому верхньому куті сторінки твого редактора Trinket та вибери **Link**.
 
-![The 'Share' menu button extended, with 'Link' highlighted.](images/share-button.png)
+![Кнопка меню "Поділитися" збільшена, з підсвічуванням "Посилання".](images/share-button.png)
 
-**Tip:** You can share a link to your project even if you don't have a Trinket account; however, without an account, the link to your project will change each time you update it. If you have shared the link with someone, you will need to send a new link for them to see the changes.
+**Порада:** Ти можеш поділитися посиланням на свій проєкт, навіть якщо у тебе немає облікового запису в Trinket; однак без облікового запису посилання на твій проєкт буде змінюватися щоразу, коли ти його будеш оновлювати. Якщо ти вже поділився посиланням з кимось, тобі потрібно буде надіслати нове посилання, щоб вони побачили внесені зміни.
 
 --- task ---
 
-Inspire the Raspberry Pi Foundation community with your project!
+Надихай спільноту Raspberry Pi Foundation своїм проєктом!
 
-To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+Для того, щоб твій проєкт був доданий до студії ['Не зіткнись! - Бібліотека спільноти'](https://wke.lt/w/s/KobNfx){:target="_blank"}, будь ласка, заповни [цю форму](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
 --- /task ---
