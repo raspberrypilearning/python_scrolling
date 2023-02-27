@@ -1,43 +1,43 @@
-## Upgrade your project
+## Вдосконалення твого проєкту
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-If you have time you can upgrade your project.
+Якщо у тебе є час, ти можеш вдосконалити свій проєкт.
 </div>
 <div>
 
-![Example sace project with lives.](images/example1.png){:width="300px"}
+![Приклад космічного проєкту з життям.](images/example1.png){:width="300px"}
 
 </div>
 </div>
 
-Here are some ideas you could try:
+Ось декілька ідей, які ти можеш спробувати:
 
-### Include a variety of obstacles
-You can add variety to your obstacles in a few ways:
- - Randomly choose between multiple images, emojis, or obstacle drawing functions
- - Randomly adjust the colour, shape, or size of obstacles by changing the parameters that draw them
- - Animate the obstacle by adding rotation, a colour change, or some other visual difference controlled by `frame_count`
+### Додай різноманітні перешкоди
+Ти можеш урізноманітнити свої перешкоди кількома способами:
+ - Випадковим чином вибирати зображення, емодзі або функції для малювання перешкод
+ - Випадковим чином налаштовувати колір, форму або розмір перешкод, змінюючи параметри, які їх малюють
+ - Анімуй перешкоду, додавши обертання, зміну кольору або іншу візуальну дію, яка контролюється за допомогою `frame_count`
 
-### Add a win condition
-You can have players win the game in a few ways:
- - Achieving a winning score
- - Reaching a certain level of the game
+### Додай умову перемоги
+Додати можливість перемоги у грі можна кількома способами:
+ - Досягнення переможного рахунку
+ - Досягнення певного рівня гри
 
-Once they have won, you should tell them somehow — maybe using `print()` or `text()` and then stop the game.
+Тобі потрібно повідомити гравця про його перемогу - можливо, використовуючи `print()` або `text()`, а потім зупинити гру.
 
-### Give players more than one life
-Add lives to your game, to allow players to survive a few collisions. This is a little trickier than just doing `lives =- 1` every time they collide with something:
- - The player may spend multiple frames in contact with an object, and so lose more than one life for a single collision — you'll need to prevent that from happening
- - You will also need a way for players to know how many lives they have left, and maybe some sort of warning that tells them when they're on their last life
- - You could add an object that, when the player collides with it, gives them an extra life. Remember that you'll need to modify your regular collision code so as it doesn't subtract a life at the same time!
+### Дай гравцям більше одного життя
+Додай у гру "життя", щоб дозволити гравцям пережити декілька зіткнень. Це трохи складніше, ніж просто зробити `lives =- 1` кожного разу, коли відбувається зіткнення:
+ - Гравець може провести декілька кадрів в контакті з об'єктом - таким чином можна більше одного життя за одне зіткнення. Тобі потрібно не допустити цього
+ - Тобі також треба зробити, щоб гравці знали, скільки життів у них залишилося, і, можливо, якесь попередження, щоб повідомити їх, якщо залишилось останнє життя
+ - Можна додати об'єкт, який при зіткненні з гравцем подарує йому додаткове життя. Пам'ятай, що тобі потрібно буде внести зміни до твого звичайного коду для зіткнень, щоб він водночас не віднімав життя!
 
-Each example project in the [Introduction](./) has a **See Inside** link for you to open the project and look at the code to get ideas and see how they work. The "Dodge Asteroids" project below has all of these features:
+Кожен з прикладів проєктів в [Знайомство з Python](./) мають посилання **Подивитись код**, щоб відкрити проєкт та подивитися на код, щоб отримати ідеї та побачити, як вони працюють. Нижче наведений проєкт "Ухиляйся від астероїдів" має всі ці особливості:
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 175px; flex-grow: 1">  
 
-**Dodge asteroids**: [See inside](https://trinket.io/python/d156014e67){:target="_blank"}
+**Ухиляйся від астероїдів**: [Подивитись код](https://trinket.io/python/d156014e67){:target="_blank"}
 <div class="trinket">
 <iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </div>
@@ -45,6 +45,6 @@ Each example project in the [Introduction](./) has a **See Inside** link for you
 </div>
 </div>
 
-Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
+Переглянь деякі проєкти 'Не зіткнись!', створені членами спільноти Raspberry Pi Foundation [Не зіткнись! - Бібліотека спільноти](https://wke.lt/w/s/KobNfx){:target="_blank"}.
 
 --- save ---
