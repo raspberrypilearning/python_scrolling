@@ -1,4 +1,4 @@
-## Share
+## साझा करना
 
 If you are in a club, why not share your project with friends?
 
@@ -12,7 +12,7 @@ To get a link, go to the **Share** menu button in the upper-right of your Trinke
 
 --- task ---
 
-Inspire the Raspberry Pi Foundation community with your project!
+अपने प्रोजेक्ट से रास्पबेरी पाई फाउंडेशन समुदाय को प्रेरित करें!
 
 To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
