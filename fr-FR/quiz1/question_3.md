@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend : Question 3 sur 3
+legend: Question 3 sur 3
 ---
 
 Tu as créé un jeu qui te plaît vraiment et tu l'as partagé. Un joueur l'a examiné et a partagé des commentaires réfléchis avec certains changements qu'il aimerait voir.
@@ -33,7 +33,7 @@ Correct ! Tu dois tenir compte de tous les commentaires que tu reçois - tout en
 
   --- /feedback ---
 
-- ( ) Etre vraiment triste que le joueur n'ait pas pensé que ton jeu était parfait.
+- ( ) Être vraiment triste que le joueur n'ait pas pensé que ton jeu était parfait.
 
   --- feedback ---
 
