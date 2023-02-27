@@ -1,14 +1,16 @@
 ---
 title: Pas de collision !
 hero_image: images/banner.png
-description: Construis un jeu de course sans fin où ton personnage doit éviter d'entrer en collision avec des obstacles
+description:
+  - 
+  - 
 version: 4
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: Ce que tu vas faire
   - 
     title: Définir le thème
   - 
@@ -22,7 +24,7 @@ steps:
     completion:
       - internal
   - 
-    title: Quick quiz
+    title: Questionnaire rapide
     knowledge_quiz:
       path: quiz1
       version: 1
