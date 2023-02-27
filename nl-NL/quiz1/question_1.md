@@ -2,16 +2,16 @@
 
 Answer the three questions. There are hints to guide you to the correct answer.
 
-When you have answered each question, click on **Check my answer**.
+Druk na elke vraag op **indienen**. Je wordt naar het juiste antwoord geleid.
 
-Have fun!
+Veel plezier!
 
 --- question ---
 ---
 legend: Vraag 1 van 3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+Je hebt veel `if` commando's gebruikt om het gedrag van je spel te sturen. Sommigen van hen hadden mogelijk complexere voorwaarden, waarbij ze `and` gebruikten om meerdere tests tegelijk uit te voeren. Als je het volgende stukje voorwaardelijke code zou uitvoeren, wat zou je dan verwachten als uitvoer?
 
 ```python
 score = 5000
@@ -42,7 +42,7 @@ Dat vliegt geweldig!
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+Hoewel `score >= 5000` waar is, moeten voor een `and` voorwaarde beide delen waar zijn, en `levens >= 3` is onwaar.
 
   --- /feedback ---
 
@@ -53,7 +53,7 @@ Ga door!
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+Dit is correct — `score >= 5000` is waar, en dat geldt ook voor `levens > 1` in de geneste `if` -conditie.
 
   --- /feedback ---
 
@@ -63,7 +63,7 @@ Je doet het goed!
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+Bijna, maar `score >= 5000` is niet de enige voorwaarde die het programma "waar" zou vinden terwijl het werd uitgevoerd.
 
   --- /feedback ---
 
@@ -73,7 +73,7 @@ Harder werken!
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+Terwijl `levens > 1` waar is, wordt alleen de code binnen de eerste ware voorwaarde in een `if`/`elif`/`else` instructie uitgevoerd, en `levens > 1` is niet de eerste voorwaarde die waar is.
 
   --- /feedback ---
 
