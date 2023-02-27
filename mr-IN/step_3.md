@@ -106,7 +106,7 @@ title: Use emoji characters
 
 You can use emoji characters in the p5 `text()` function to represent your obstacles.
 
-Here's an example:
+उदाहरणार्थ:
 
 --- code ---
 ---
@@ -265,7 +265,7 @@ Check your function that draws multiple obstacles:
  + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
  + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
 
-For example:
+उदाहरणार्थ:
 
 --- code ---
 ---
