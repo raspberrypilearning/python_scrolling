@@ -1,17 +1,17 @@
 ## Quick quiz
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Answer the three questions. 正しい答えが表示されます。
 
-When you have answered each question, click on **Check my answer**.
+各質問の後、**答えを確認する**を押してください。
 
-Have fun!
+お楽しみください!
 
 --- question ---
 ---
 legend: 質問1/3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+ゲームの動きを制御するために、多くの `if` ステートメントを使いました。 中には、 `and` を使って一度にいくつもの条件を調べるなど、より複雑な条件を持ったものもありました。 次の条件分岐コードを動かした場合、出力はどのようになると思いますか？
 
 ```python
 score = 5000
@@ -42,7 +42,7 @@ else:
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+`score >= 5000` は真ですが、 `and` 条件では両方の条件が真でなければならず、 `lives >= 3` は偽です。
 
   --- /feedback ---
 
@@ -53,7 +53,7 @@ While `score >= 5000` is true, for an `and` condtion both parts must be true, an
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+ふりかえり
 
   --- /feedback ---
 
@@ -63,7 +63,7 @@ This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+がんばりましょう！
 
   --- /feedback ---
 
@@ -73,7 +73,7 @@ Close, but `score >= 5000` isn't the only condition the program would find true 
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+以下の3つの質問に答えて、学んだことをふりかえってみましょう。
 
   --- /feedback ---
 
