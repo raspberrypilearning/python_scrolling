@@ -26,7 +26,7 @@ line_numbers: false
 ---
 
 # Include global variables here
-level = 1
+nível = 1
 
 --- /code ---
 
@@ -111,7 +111,7 @@ line_numbers: false
 ---
 
 # Include global variables here
-score = 0
+pontos = 0
 
 --- /code ---
 
@@ -151,7 +151,7 @@ You can use the `+` operator to combine two or more strings if you want to give 
 
 --- /task ---
 
-### Game over!
+### Fim do jogo!
 
 When a player has collided with an obstacle, the game should stop moving and their score should stop increasing.
 
@@ -169,7 +169,7 @@ Create an `if` statement in `draw()` that tests whether `level > 0` before calli
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Depurar:** Você pode encontrar alguns bugs em seu projeto que precisa corrigir. Aqui estão alguns bugs comuns.
 
 --- collapse ---
 ---
@@ -202,7 +202,7 @@ title: The game doesn't stop after a collision
 If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
 
 
-If your game is correctly detecting collisons, then check that you have properly indented the code that draws your game inside the `if level > 0` satement, to make sure it only runs if that statement is true. For example:
+If your game is correctly detecting collisons, then check that you have properly indented the code that draws your game inside the `if level > 0` satement, to make sure it only runs if that statement is true. Por exemplo:
 
 --- code ---
 ---
@@ -214,7 +214,7 @@ filename: main.py — draw()
 
 --- /code ---
 
-Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. For example:
+Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. Por exemplo:
 
 --- code ---
 ---
