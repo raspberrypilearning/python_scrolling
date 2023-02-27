@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend : Question 2 sur 3
+legend: Question 2 sur 3
 ---
 
 Dans ce projet, tu as utilisé la génération procédurale, c'est-à-dire que l'ordinateur crée et place des parties de ton monde pour toi. Bien que cela permette de gagner beaucoup de temps, en particulier si tu crées des niveaux très volumineux, cela peut créer des problèmes. Lequel de ces problèmes dois tu rechercher lorsque tu testes ta génération procédurale ?
@@ -15,7 +15,7 @@ Correct ! Tout cela peut se produire lors de l'utilisation de la génération pr
 
   --- /feedback ---
 
-- ( ) Des obstacles peuvent être générés qui ne laissent au joueur aucune route vers l'avant.
+- ( ) Des obstacles pourraient être générés, laissant le joueur sans possibilité d'avancer.
 
   --- feedback ---
 
