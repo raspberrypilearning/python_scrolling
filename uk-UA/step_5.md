@@ -1,23 +1,23 @@
-## Speed up!
+## Швидше!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
+Більшість нескінченних ігор раннерів збільшують складність проходження гри відповідно до прогресу гравця, а також дають йому очки.
 </div>
 <div>
 
-![Example project with a text score on the screen.](images/score.png){:width="300px"}
+![Приклад проєкту з виведенням балів на екрані.](images/score.png){:width="300px"}
 
 </div>
 </div>
 
-### Add difficulty levels
+### Додавання рівнів складності
 
-Creating clear difficulty levels will make it easier for your player to understand what is happening.
+Створення зрозумілих рівнів складності дозволить гравцеві легше розібратися в тому, що відбувається.
 
 --- task ---
 
-Create a `global` `level` variable to track the level the player is currently on. Set it to `1` so players start a new game on the first level.
+Створи `global` змінну `level`, щоб відстежувати рівень, на якому гравець перебуває в даний момент. Встанови його на `1`, щоб гравці починали нову гру на першому рівні.
 
 --- code ---
 ---
@@ -25,7 +25,7 @@ language: python filename: main.py
 line_numbers: false
 ---
 
-# Include global variables here
+# Сюди додавай глобальні змінні
 level = 1
 
 --- /code ---
@@ -34,9 +34,9 @@ level = 1
 
 --- task ---
 
-This code uses the `height` and the `frame_count` to increase the `level` variable every time the player finishes a screen, then prints out the new level for the player.
+У цьому коді використовується `height` та `frame_count`, щоб збільшувати змінну `level`. Щоразу, коли гравець закінчує етап, програма створить новий рівень.
 
-**Choose:** This code limits the levels to five, so it doesn't get too hard to play. There's no reason your game has to use five, but you should choose a limit. Humans can only move so fast!
+**Обирай:** Цей код обмежує кількість рівнів до п'яти, щоб не було занадто складно грати. Звичайно, не обов'язково робити п'ять рівнів у своїй грі, але все ж таки варто встановити певний ліміт. Тільки так люди можуть рухатися швидко!
 
 --- code ---
 ---
@@ -57,18 +57,18 @@ def draw_obstacles():
 --- task ---
 
 
-The two main options for increasing difficulty are to make the game move faster, and to increase the number of obstacles.
+Два основних варіанти, як можна підвищити складність - збільшити швидкість проходження гри та кількість перешкод.
 
 --- collapse ---
 ---
-title: Speed your game up
+title: Прискорення гри
 ---
 
-The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
+Швидкість гри контролюється тим, наскільки швидко перешкоди рухаються назустріч гравцеві. Цей код прискорить цей процес, додавши `frame_count * level` до координати `y`, під час створення перешкод.
 
-Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead.
+Замість того, щоб переміщувати перешкоди на один піксель на кожному кадрі, цей код ефективно переміщує їх на `level` пікселів.
 
-Looking at the code, you might expect the speed to increase by more than `level` pixels. For example, at the point just before your `level` increases, the `frame_count` is `799` — as the `level` increases one frame before the `frame_count` is an even multiple of `height` (set at `400` pixels) — and `799 * 3` is notably bigger than `799 * 2`. However, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are hidden by `ob_y %= height`. This leaves only the `level` extra pixels in each step.
+Дивлячись на код, ти можеш подумати, що швидкість збільшиться більш ніж на `level` пікселів. Наприклад, в точці прямо перед збільшенням рівня `level`, `frame_count` дорівнює `799`, оскільки рівень `level` збільшується за один кадр до того, як `frame_count` стає парним числом, кратним висоті `height` (встановленому на рівні `400` пікселів) - та `799 * 3` - значно більше, ніж `799 * 2`. Але, додаткові пікселі, створені шляхом множення всього `frame_count` на більшу кількість, приховуються за допомогою `ob_y %= height`. Таким чином, залишаються лише `level` додаткові пікселі на кожному етапі.
 
 
 --- code ---
@@ -85,24 +85,24 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: Add more obstacles
+title: Більше перешкод
 ---
 
-Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
+Додавання додаткових перешкод відбувається просто за рахунок збільшення кількості повторень циклу `for`, який їх створює. Це можна зробити, збільшивши число, яке передається у функцію `range()` від `level`.
 
-**Tip:** Of course, you can always use `level * 2`, or even larger multiples, if you want to make your game harder.
+**Порада:** Звичайно, ти завжди можеш використати `level * 2`, або навіть більше число, якщо хочеш зробити свою гру складнішою.
 
 --- /collapse ---
 
 --- /task ---
 
-### Keep score
+### Очки
 
-The longer a player lasts without colliding with an obstacle, the better they're playing your game. Adding a score will let them see how well they're doing.
+Чим довше гравець протримається без зіткнення з перешкодою, тим краще він грає у твою гру. Додавання очок дозволить йому побачити, наскільки добре він грає.
 
 --- task ---
 
-Create a global `score` variable to track the player's score. Set it to `0` so players start a new game without any points.
+Створи глобальну змінну `score`, яка буде відстежувати результат гравця. Встанови її на `0`, щоб гра починалася без очок.
 
 --- code ---
 ---
@@ -110,7 +110,7 @@ language: python filename: main.py
 line_numbers: false
 ---
 
-# Include global variables here
+# Сюди додавай глобальні змінні
 score = 0
 
 --- /code ---
@@ -119,9 +119,9 @@ score = 0
 
 --- task ---
 
-You can increase your player's score for every frame where they have not collided with an obstacle by increasing their score when you check for collision in `draw_player()`.
+Ти можеш збільшувати рахунок гравця за кожен кадр, де він не зіткнувся з перешкодою, збільшуючи рахунок при перевірці на зіткнення в `draw_player()`.
 
-**Choose:** You can decide how many points each frame is worth, but increasing the player's score by `level` rewards players who can survive at higher difficulty levels.
+**Обирай:**Ти можеш самостійно визначати кількість балів для кожного кадру, але збільшення балів гравця на `level` буде давати гравцю винагороду, щоб допомогти вистояти на більш складних рівнях.
 
 --- code ---
 ---
@@ -139,48 +139,48 @@ global score
 
 --- task ---
 
-Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Use the p5 `text()` function inside your `draw()` function, to display it as text on the game screen instead.
+Гравці повинні бачити свій рахунок. Оскільки він збільшується дуже швидко, використання `print()` не буде добре працювати. Використовуй функцію p5 `text()` всередині функції `draw()`, щоб вивести результат у вигляді тексту на екран.
 
 [[[processing-python-text]]]
 
-You can use the `+` operator to combine two or more strings if you want to give a heading like 'score' or 'points'. Because `score` is a number, you will need to convert it to a string before you can join it with another string. You can do this with `str()`:
+Ти можеш скористатися оператором `+`, щоб об'єднати два або більше текстів, якщо ти хочеш створити заголовок, наприклад, "результат" або "очки". Оскільки `score` є числом, тобі потрібно буде перетворити його в текстовий рядок, перш ніж ти зможеш з'єднати його з іншим рядком. Зробити це можна за допомогою `str()`:
 
 `message = 'Score: ' + str(score)`
 
-**Tip:** `str()` is short for 'string' — programmers often remove letters like this, so they don't have to type as much!
+**Порада:** `str()` - це скорочення від "string" - програмісти часто видаляють останні букви, щоб менше друкувати тексту!
 
 --- /task ---
 
-### Game over!
+### Кінець гри!
 
-When a player has collided with an obstacle, the game should stop moving and their score should stop increasing.
-
---- task ---
-
-You can use the `level` variable to signal 'Game over' by setting it to 0 — a value it will never reach any other way. Do this in the `else` step of your collision detection code.
-
---- /task ---
+Коли персонаж зіткнувся з перешкодою, він повинен припинити рух, а його рахунок повинен зупинитися.
 
 --- task ---
 
-Create an `if` statement in `draw()` that tests whether `level > 0` before calling any of the functions — like `background()`, `draw_obstacles()`, and `draw_player()` — that update the game. Because these functions are not called, the entire game seems to end, even though your program is still running.
+Можна використати змінну `level`, щоб дати сигнал "Гра закінчена", встановивши її на 0 - значення, якого вона ніколи не досягне ніяким іншим чином. Зроби це на етапі твого коду для виявлення зіткнення `else`.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+Створи оператор `if` у `draw()`, щоб перевіряти, чи рівень `level > 0` перед викликом будь-якої з функцій, які оновлюють гру, наприклад: `background()`, `draw_obstacles()`, або `draw_player()`. Оскільки ці функції не викликаються, гра ніби закінчилася, але твоя програма продовжує працювати.
+
+--- /task ---
+
+--- task ---
+
+**Налагодження:** Можливо, у твоєму проєкті знайдуться помилки, які потрібно буде виправити. Ось деякі поширені помилки.
 
 --- collapse ---
 ---
-title: The score doesn't display
+title: Рахунок не відображається
 ---
 
-Make sure that you've included the `text()` function that draws the player's score at the appropriate point in your `draw()` function, and that you've passed it the correct values:
+Переконайся, що ти додав(-ла) функцію `text()`, яка виводить результат гравця у відповідну точку твоєї функції `draw()`, і що значення, які передаються - правильні:
 
-`text('Text to display', x, y)`
+`text('Текст для виведення', x, y)`
 
-It should look something like this:
+Виглядати це має приблизно так:
 
 --- code ---
 ---
@@ -196,13 +196,13 @@ filename: main.py — draw()
 
 --- collapse ---
 ---
-title: The game doesn't stop after a collision
+title: Гра не зупиняється після зіткнення
 ---
 
-If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
+Якщо ти думаєш, що твоя гра може взагалі неправильно виявляти зіткнення, спробуй спочатку скористатися інструкціями з налагодження в попередньому кроці, в розділі "При досягненні перешкоди не відбувається зіткнення".
 
 
-If your game is correctly detecting collisons, then check that you have properly indented the code that draws your game inside the `if level > 0` satement, to make sure it only runs if that statement is true. For example:
+Якщо твоя гра правильно виявляє зіткнення, то перевір, чи правильно вставлено відступи для коду, який малює твою гру, всередині оператора `if level > 0`. Переконайся, що він запускається тільки у випадку, коли це твердження є істиною. Наприклад:
 
 --- code ---
 ---
@@ -214,7 +214,7 @@ filename: main.py — draw()
 
 --- /code ---
 
-Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. For example:
+Зрештою, якщо обидва ці параметри працюють правильно, твоя гра може неправильно встановити код `level = 0`, коли відбувається зіткнення. Наприклад:
 
 --- code ---
 ---
@@ -230,12 +230,12 @@ filename: main.py — draw_player()
 
 --- collapse ---
 ---
-title: The game doesn't get faster
+title: Гра не прискорюється
 ---
 
-First, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
+Спочатку перевір, чи правильно збільшується `level`. Ти маєш побачити на екрані повідомлення кожного разу, коли він піднімається. Якщо це не відбувається, необхідно перевірити як код для друкування повідомлення, так і код для підвищення рівня.
 
-If level is increasing correctly, check your `draw_obstacles()` function. In particular, check that you have `ob_y = randint(0, height) + (frame_count * level)`. It should look something like this:
+Якщо рівень збільшується правильно, перевір функцію `draw_obstacles()`. Особливо перевір, чи є у тебе такий код: `ob_y = randint(0, height) + (frame_count * level)`. Виглядати це має приблизно так:
 
 --- code ---
 ---
@@ -251,12 +251,12 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: New obstacles don't appear
+title: Нові перешкоди не з'являються
 ---
 
-There are a few reasons this could be happening. And there are some more reasons why it might appear to be happening, when it isn't. First, because new obstacles are added based on `level`, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
+Є декілька причин, чому це може відбуватися. А також є ще декілька причин, чому може здаватися, що це відбувається, хоча це не так. По-перше, оскільки нові перешкоди додаються на основі рівня `level`, перевірте, чи правильно збільшується `level`. Ти маєш побачити на екрані повідомлення кожного разу, коли він піднімається. Якщо це не відбувається, необхідно перевірити як код для друкування повідомлення, так і код для підвищення рівня.
 
-If level is increasing correctly, check your `draw_obstacles()` function to ensure that you have `level` used in the `range()` function of the `for` loop that draws the obstacles. It should look something like this:
+Якщо рівень збільшується правильно, перевір функцію `draw_obstacles()`, яка створює перешкоди, та переконайся, що ти використовуєш `level` у функції `range()` циклу `for`. Виглядати це має приблизно так:
 
 --- code ---
 ---
@@ -268,11 +268,11 @@ line_numbers: false
 
 --- /code ---
 
-If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
-  - Slow the game down by using `frame_rate()` in your `setup()` function to give you more time to count
-  - Change the seed you're using for your random numbers. It's unlikely, but it is possible that some obstacles are randomly appearing directly on top of each other
-  - Add a `print()` to the `for` loop in `draw_obstacles()` that prints out the value of `i` in each pass of the loop, so you can verify whether it's running the number of times it should
-  - Just for testing purposes, change `range(6 + level)` to `range(6 * level)` — that increase should be easier to spot!
+Якщо всі ці перевірки були проведені, але тобі здається, що кількість перешкод не збільшується, ймовірно, що вони збільшуються, але ти цього не бачиш. Спробуй виконати деякі з цих кроків, щоб перевірити це:
+  - Зроби гру більш повільною, використовуючи `frame_rate()` у функції `setup()`, щоб отримати більше часу для підрахунку
+  - Зміни seed, який ти використовуєш для отримання випадкових чисел. Навряд чи, але не виключено, що якісь перешкоди випадково з'являються прямо одна на одній
+  - Додай `print()` у цикл `for` функції `draw_obstacles()`, яка виводить значення `i` на кожному етапі циклу, щоб можна було перевірити, чи виконується цикл необхідну кількість разів
+  - Виключно в цілях тестування, зміни `range(6 + level)` на `range(6 * level)` - це збільшення має бути легше помітити!
 
 
 --- /collapse ---
