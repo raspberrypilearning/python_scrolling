@@ -1,12 +1,12 @@
-speed
+швидкість
 
-score
+рахунок
 
 draw_obstacles
 
-You reached speed
+Досягнута швидкість
 
-You reached level
+Досягнуто рівня
 
 ob_x
 
@@ -38,13 +38,13 @@ player_x
 
 car
 
-lives
+життя
 
 invulnerability
 
 display_score
 
-🎉🎉 You win! 🎉🎉
+🎉🎉 Перемога! 🎉🎉
 
 display_lives
 
@@ -54,18 +54,18 @@ rock
 
 random_seed
 
-player
+гравець
 
 obstacle
 
-Great flying!
+Чудовий політ!
 
-Doing well!
+Все добре!
 
-Keep going!
+Не зупиняйся!
 
-But be careful!
+Але будь обережним!
 
-Push harder!
+Сильніше!
 
-Head for base!
+Прямуй на базу!
