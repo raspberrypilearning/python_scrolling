@@ -1,32 +1,32 @@
-## Set the theme
+## Вибір теми
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Set the theme of your game and create a player character that follows the mouse pointer.
+Встанови тему своєї гри та створи персонажа, який буде слідувати за курсором миші.
 
 </div>
 <div>
 
-![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+![Зображення черепахи розміром 100х100 на синьому фоні з розміром екрана 400х400.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
-- A sport or hobby
-- A movie, show, or game
-- Science or nature
-- Anything else!
+Яка тематика твоєї гри? Ти можеш вибрати все, що завгодно. Ось деякі ідеї:
+- Спорт або хобі
+- Фільм, шоу або гра
+- Наука або природа
+- Або що-небудь інше!
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
+Відкрий [стартовий проєкт](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket відкриється в окремій вкладці браузера.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Set the size of your canvas.
+**Обирай:** Встанови розмір свого полотна.
 
 --- code ---
 ---
@@ -43,9 +43,9 @@ size(400, 400)
 
 --- task ---
 
-Create a variable called `safe` to store the background colour based on the theme you want for your game.
+Створи змінну з назвою `safe`, щоб зберегти колір фону, який був обраний тобою для своєї гри.
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+Це колір, на якому гравець може безпечно перебувати, і ти будеш використовувати цю змінну пізніше.
 
 --- code ---
 ---
@@ -65,19 +65,19 @@ background(safe)
 
 --- task ---
 
-**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+**Тест:** Запусти свій код, щоб побачити колір фону. Змінюй його до тих пір, поки колір та розмір екрана тебе влаштує.
 
 --- /task ---
 
-Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
+Тепер вибери персонажа, який буде вести гру та уникати перешкод. Це буде предмет, людина, тварина чи щось інше?
 
-The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
+Гравець з'явиться на фіксованій позиції `y` та на тій самій позиції `x`, що і курсор миші, яка зберігається у змінній `p5` `mouse_x`.
 
 --- task ---
 
-It's a good idea to organise the code for drawing the player character into a function.
+Хороша ідея - оформити код для малювання персонажа у функцію.
 
-Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
+Визнач функцію `draw_player()` та створи позицію `player_y`, для фіксації позиції гравця `y`:
 
 --- code ---
 ---
@@ -90,7 +90,7 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- /code ---
 
-Add code to `draw()` to call `draw_player()` each frame.
+Додай до `draw()` код для виклику `draw_player()` на кожному кадрі.
 
 --- code ---
 ---
@@ -107,31 +107,31 @@ draw_player()
 
 --- /task ---
 
-Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
+Далі треба додати код у функцію `draw_player()`, щоб намалювати твою фігуру. Також, може знадобитися додати код `setup()`.
 
 --- task ---
 
-**Choose:** What does your player look like? Your player could be:
-+ An image provided in the starter project
-+ An emoji 🎈 or text
-+ Drawn using a series of shapes
+**Обирай:** Як виглядатиме твій персонаж? Це може бути:
++ Зображення, які наведені у стартовому проєкті
++ Емодзі 🎈 або текст
++ Малюнок, виконаний за допомогою декількох фігур
 
 --- collapse ---
 ---
-title: Use a starter image
+title: Використання стартового зображення
 ---
 
-Click on the **manage images** icon.
+Натисни на значок **manage images**.
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![Піктограма у верхньому правому куті області коду.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+Зображення, включені в стартовий проєкт, будуть відображені в списку `Image library`.
 
-![The Image library with list of included images.](images/starter-images.png)
+![Список зображень в Image library.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Запиши назву зображення, яке ти хочеш використати.
 
-Load the image into the `setup()` function
+Завантажуємо зображення у функцію `setup()`
 
 --- code ---
 ---
@@ -145,7 +145,7 @@ player = load_image('skiing.png') #Load your image
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_player()` function.
+Зроби виклик `image()` та встанови її, як глобальну, у функції `draw_player()`.
 
 --- code ---
 ---
@@ -166,12 +166,12 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Використання символів емодзі
 ---
 
-You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
+Ти можеш використовувати символи емодзі у функції p5 `text()`, щоб зобразити свого персонажа у вигляді емодзі.
 
-Here's an example:
+Ось приклад:
 
 --- code ---
 ---
@@ -214,14 +214,14 @@ text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex player.
+**Tip:** Ти можеш використати декілька простих фігур в одній функції, щоб створити більш різноманітного персонажа.
 
 --- collapse ---
 ---
-title: Draw a player using multiple shapes
+title: Малювання персонажа за допомогою декількох фігур
 ---
 
-![desc](images/face_player.png)
+![опис](images/face_player.png)
 
 --- code ---
 ---
@@ -255,40 +255,40 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player.
+**Тест:** Запусти свій код та переміщуй курсор миші, щоб керувати гравцем.
 
-Does it move like you expect?
+Чи рухається він так, як ти очікуєш?
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Налагодження:** Можливо, у твоєму проєкті знайдуться помилки, які потрібно буде виправити. Ось деякі поширені помилки.
 
 --- task ---
 
 --- collapse ---
 ---
-title: I can't see the player
+title: Я не бачу персонажа
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+Спробуй перейти до повноекранного режиму. Також, перевір координати `x` та `y`, які були використані для малювання персонажа. Переконайся, що вони знаходяться всередині полотна, яке було створено за допомогою `size()`.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image isn't loading
+title: Зображення не завантажується
 ---
 
-First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+Спочатку переконайся, що зображення знаходиться в `Image library`. Потім дуже уважно перевір назву файлу. Пам'ятай, що великі літери відрізняються від малих. Також важлива пунктуація.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image is the wrong size
+title: Зображення має неправильний розмір
 ---
 
-Check the inputs that control the width and height of the image:
+Слід перевірити код, який визначає ширину та висоту зображення:
 
 ```python
 image(image_file, x_coord, y_coord, width, height)
@@ -298,10 +298,10 @@ image(image_file, x_coord, y_coord, width, height)
 
 --- collapse ---
 ---
-title: An emoji is the wrong size
+title: Емодзі має неправильний розмір
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+Якщо емодзі занадто великі або занадто маленькі, зміни введені значення у `text_size()`.
 
 --- /collapse ---
 
