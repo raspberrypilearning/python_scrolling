@@ -1,25 +1,25 @@
-## Create obstacles
+## Створення перешкод
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Create the obstacles that you will have to avoid to keep playing the game.
+Створи перешкоди, яких потрібно буде уникати, щоб гра не закінчилася.
 </div>
 <div>
 
-![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
+![Приклад проєкту Кіт на лижах з перешкодами із дерев](images/obstacles.png){:width="300px"}
 
 </div>
 </div>
 
-### Start with one obstacle
+### Почни з однієї перешкоди
 
-You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
+Ти можеш створити перешкоди тим самим способом, як і свого персонажа. Які перешкоди підходять до твоєї теми?
 
-You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
+Ти будеш використовувати цикл `for`, щоб зробити багато копій, тому тобі потрібно зробити або обрати лише одну перешкоду.
 
 --- task ---
 
-Define a `draw_obstacles()` function:
+Визнач функцію `draw_obstacles()`:
 
 --- code ---
 ---
@@ -32,7 +32,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #R
 
 --- /code ---
 
-Add code to `draw()` to call `draw_obstacles()` each frame.
+Додай в `draw()` код для виклику `draw_obstacles()` на кожному кадрі.
 
 --- code ---
 ---
@@ -49,27 +49,27 @@ draw_obstacles() #Before drawing the player draw_player()
 
 --- task ---
 
-**Choose:** What does your obstacle look like? Your obstacle could be:
-+ An image provided in the starter project
-+ An emoji 🌵 or text
-+ Drawn using a series of shapes
+**Обирай:** Як буде виглядати твоя перешкода? Перешкодою може бути:
++ Зображення, які наведені у стартовому проєкті
++ Емодзі 🌵 або текст
++ Малюнок, виконаний за допомогою декількох фігур
 
 --- collapse ---
 ---
-title: Use a starter image
+title: Використання стартового зображення
 ---
 
-Click on the **manage images** icon.
+Натисни на значок **manage images**.
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+![Піктограма у верхньому правому куті області коду.](images/manage-images.png)
 
-Images included in the starter project will be shown in the `Image library` list.
+Зображення, включені в стартовий проєкт, будуть відображені в списку `Image library`.
 
-![The Image library with a list of included images.](images/starter-images.png)
+![Бібліотека зображень Image library зі списком включених зображень.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Запиши назву зображення, яке ти хочеш використати.
 
-Load the image into the `setup()` function.
+Завантаж зображення у функцію `setup()`.
 
 --- code ---
 ---
@@ -81,7 +81,7 @@ def setup(): size(400, 400) player = load_image('skiing.png') #Load your image o
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_obstacles()` function.
+Зроби виклик `image()` та встанови її, як глобальну, у функції `draw_obstacles()`.
 
 --- code ---
 ---
@@ -101,12 +101,12 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Використання символів емодзі
 ---
 
-You can use emoji characters in the p5 `text()` function to represent your obstacles.
+Ти можеш використовувати символи емодзі у функції p5 `text()`, щоб зобразити перешкоди.
 
-Here's an example:
+Ось приклад:
 
 --- code ---
 ---
@@ -144,14 +144,14 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
+**Порада:** Ти можеш використати декілька простих фігур в одній функції, щоб створити більш складну перешкоду.
 
 --- collapse ---
 ---
-title: Draw an obstacle using multiple shapes
+title: Малювання перешкоди за допомогою декількох фігур
 ---
 
-![desc](images/tree_obstacle.png)
+![опис](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -167,15 +167,15 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 --- /task ---
 
-### Get your obstacle moving
+### Зроби так, щоб перешкода рухалась
 
 --- task ---
 
-Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
+Тепер, додай код для позиції перешкоди по осі `y` на кожному кадрі, та зроби так, щоб вона оберталася при досягненні дна, щоб створити ефект ще однієї перешкоди.
 
-The p5 `frame_count` variable starts counting the frames when you click run.
+Змінна p5 `frame_count` починає підрахунок кадрів при натисканні кнопки запуску.
 
-`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
+`ob_y %= height` встановлює позицію `y`, як залишок від ділення на `height`. Якщо `height` буде '400', це перетворить `401` у `1`. Тобто, коли перешкода зникне з нижньої частини екрана, вона знову з'явиться у верхній.
 
 --- code ---
 ---
@@ -189,17 +189,17 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Increases ea
 
 --- /task ---
 
-### Lots of obstacles
+### Більше перешкод
 
-You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
+Ти можеш зробити багато копій своєї перешкоди для різних стартових позицій, але це занадто довго та складно. Скористаємося коротким шляхом.
 
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
+За допомогою <span style="color: #0faeb0">**Процедурної генерації**</span> можна створювати випадкові явища та декорації в ігрових світах та кіносценах, а також створювати перешкоди, але з дотриманням певних правил. A <span style="color: #0faeb0">seed</span> - це означає, що ти можеш отримувати однакові результати кожного разу, якщо використовуєш той самий seed.</p>
 
 --- task ---
 
-This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
+У цьому коді використовується цикл `for` разом з `randint()`, щоб підбирати позиції для перешкод. Виклик випадкової функції `seed()` спочатку означає, що ти завжди будеш отримувати однакові випадкові числа. Це означає, що перешкоди не будуть перестрибувати на наступний кадр, і ти можеш змінювати seed до тих пір, поки не отримаєш такий seed, який розташує перешкоди рівномірно.
 
 --- code ---
 ---
@@ -216,7 +216,7 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 
 --- /code ---
 
-Useful information:
+Корисна інформація:
 
 [[[using-seed-in-python]]]
 
@@ -226,46 +226,46 @@ Useful information:
 
 --- collapse ---
 ---
-title: Epilepsy warning
+title: Попередження щодо епілепсії
 ---
 
-Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
-- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
-- Ask somebody to run it for you
-- Move on and complete the project, asking someone to run the project for you at the end so you can debug
-- Change the frame rate before you run your program by adding `frame_rate(1)` at the start of `setup()` — you can remove this once you have confirmed there is no bug
+Тестування твоєї програми може викликати напади епілепсії у людей, які страждають від світлочутливості. Якщо у тебе світлочутлива епілепсія або ти відчуваєш, що може статися напад, не запускай програму. Натомість ти можеш:
+- Переконатися, що ти додав(-ла) рядок коду `seed()`, щоб переконатися, що перешкоди будуть перестрибувати
+- Попросити когось запустити його для тебе
+- Рухайся далі та завершуй проєкт, а в кінці попроси когось запустити проєкт для тебе, а потім приступай до його налагодження
+- Зміни частоту кадрів перед запуском програми, додавши `frame_rate(1)` на початку `setup()`. Ти зможеш видалити його після того, як переконаєшся, що помилки немає
 
 --- /collapse ---
 
 --- task ---
 
-**Test:** Run your program and you should see mutliple objects on the screen, wrapping around when they get to the bottom.
+**Тест:** Запустивши свою програму, ти побачиш на екрані безліч об'єктів, які обертаються, потрапляючи на дно.
 
-Change your code until you are happy with the obstacles you have. You can:
+Змінюй свій код до тих пір, поки перешкоди будуть тобі до вподоби. Ти можеш:
 
-+ Change the seed to get obstacles in different starting positions
-+ Change the number of times to loop repeats to get a different number of obstacles
-+ Adjust the size of the obstacles
++ Змінювати seed, щоб отримати перешкоди в різних стартових позиціях
++ Змінювати кількість повторень циклу, щоб отримати різну кількість перешкод
++ Регулювати розмір перешкод
 
-**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
+**Порада:** Переконайся, що перешкоди можливо обійти, але це має бути не занадто легко.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Налагодження:** Можливо, у твоєму проєкті знайдуться помилки, які потрібно буде виправити. Ось деякі поширені помилки.
 
 --- collapse ---
 ---
-title: Only one obstacle is being drawn
+title: Малюється лише одна перешкода
 ---
 
-Check your function that draws multiple obstacles:
- + Make sure it uses a `for` loop to call the obstacle drawing function more than once
- + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
- + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
+Перевір свою функцію, яка створює багато перешкод:
+ + Переконайся, що використовується цикл `for` для виклику функцію малювання перешкод більше одного разу
+ + Переконайся, що використовується `randint()`, щоб змінити координати (x, y), які передаються у функцію малювання перешкод
+ + Переконайся, що ти використовував(-ла)`ob_x` та `ob_y` в якості координат для перешкоди
 
-For example:
+Наприклад:
 
 --- code ---
 ---
@@ -286,16 +286,16 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 
 --- collapse ---
 ---
-title: The obstacles are changing position every time a frame is drawn
+title: Перешкоди змінюють свою позицію кожного разу, коли малюється кадр
 ---
 
-Make sure that you have used `seed()` inside the function that draws multiple obstacles.
+Переконайся, що ти використовував(-ла) `seed()` всередині функції, яка малює багато перешкод.
 
 --- /collapse ---
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
+Програмісти використовують багато хитрих прийомів, наприклад, оператор `%`, щоб змусити об'єкти обертатися навколо екрану, та `seed()`, для генерації однакових випадкових чисел. Чим більше ти будеш кодити, тим більше хитрих трюків ти освоїш.</p>
 
 --- save ---
