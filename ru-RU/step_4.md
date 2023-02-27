@@ -55,7 +55,7 @@ title: Change the image
 
 You can use a different image to represent your player when it collides with an obstacle.
 
-Here's an example:
+Вот пример:
 
 --- code ---
 ---
@@ -80,7 +80,7 @@ title: Use emoji characters
 
 You can use emoji characters in the p5 `text()` function to represent your collided player.
 
-Here's an example:
+Вот пример:
 
 --- code ---
 ---
