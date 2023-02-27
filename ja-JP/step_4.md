@@ -65,7 +65,7 @@ def draw_player(): player_y = int(height * 0.8)
 
   collide = get(mouse_x, player_y)
 
-  if collide == safe: #On background image(skiing, mouse_x, player_y, 30, 30) else: #Collided image(crashed, mouse_x, player_y, 30, 30)
+  if collide == safe: #背景上 image(skiing, mouse_x, player_y, 30, 30) else: #ぶつかった image(crashed, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -86,7 +86,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre
+def setup(): size(400, 400) text_size(40) #絵文字の大きさ text_align(CENTER, TOP) #真ん中に置く
 
 --- /code ---
 
@@ -96,7 +96,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player(): if collide == safe: #On background text('🎈', mouse_x, player_y) else: #Collided text('💥', mouse_x, player_y)
+def draw_player(): if collide == safe: #背景上 text('🎈', mouse_x, player_y) else: #ぶつかった text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -141,7 +141,7 @@ title: プレイヤーが障害物に達しても衝突が起きない
 
 ```python
   no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #Draw collision point
+  ellipse(mouse_x, player_y, 10, 10) #衝突点を示す
 ```
 
 --- /collapse ---
@@ -161,11 +161,11 @@ title: いくつかのピクセルでの衝突検出
 def draw_player():
 
   player_y = int(height * 0.8)
-  #Useful for debugging
-  #Draw circles around the pixels to check for collisions
+  #デバッグに有効
+  #衝突をチェックするピクセルの周りに円を描く
 
   no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #Draw collision point
+  ellipse(mouse_x, player_y, 10, 10) #衝突点
   ellipse(mouse_x, player_y + 40, 10, 10)
   ellipse(mouse_x - 12, player_y + 20, 10, 10)
   ellipse(mouse_x + 12, player_y + 20, 10, 10)
@@ -175,10 +175,10 @@ def draw_player():
   collide3 = get(mouse_x + 12, player_y + 20)
   collide4 = get(mouse_x, player_y + 40)
 
-  if mouse_x < width: #Off the left of the screen
+  if mouse_x < width: #スクリーンの左に外れた
     collide2 = safe
 
-  if mouse_x > width: #Off the right of the screen
+  if mouse_x > width: #スクリーンの右に外れた
     collide3 = safe
 
   if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
