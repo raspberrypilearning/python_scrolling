@@ -157,13 +157,13 @@ Lorsqu'un joueur est entré en collision avec un obstacle, le jeu doit cesser de
 
 --- task ---
 
-Tu peux utiliser la variable `niveau` pour signaler « Perdu » en la réglant sur 0 — une valeur qu'elle n'atteindra jamais autrement. Do this in the `else` step of your collision detection code.
+Tu peux utiliser la variable `niveau` pour signaler « Perdu » en la réglant sur 0 — une valeur qu'elle n'atteindra jamais autrement. Fais cela dans l'étape `else` de ton code de détection de collision.
 
 --- /task ---
 
 --- task ---
 
-Crée une instruction `if` dans `dessin()` qui teste si `niveau > 0` avant d'appeler l'une des fonctions — comme `background()`, `dessine_obstacles()`et `dessine_joueur()` — qui mettent à jour le jeu. Étant donné que ces fonctions ne sont pas appelées, le jeu entier semble se terminer, même si ton programme est toujours en cours d'exécution.
+Crée une instruction `if` dans `draw()` qui teste si `niveau > 0` avant d'appeler l'une des fonctions — comme `background()`, `dessine_obstacles()`et `dessine_joueur()` — qui mettent à jour le jeu. Étant donné que ces fonctions ne sont pas appelées, le jeu entier semble se terminer, même si ton programme est toujours en cours d'exécution.
 
 --- /task ---
 
@@ -176,7 +176,7 @@ Crée une instruction `if` dans `dessin()` qui teste si `niveau > 0` avant d'app
 title: Le score ne s'affiche pas
 ---
 
-Assure-toi que tu as inclus la fonction `text()` qui dessine le score du joueur au point approprié dans ta fonction `dessin()` et que tu lui as transmis les valeurs correctes :
+Assure-toi que tu as inclus la fonction `text()` qui dessine le score du joueur au point approprié dans ta fonction `draw()` et que tu lui as transmis les valeurs correctes :
 
 `text('Texte à afficher', x, y)`
 
@@ -199,7 +199,7 @@ filename: main.py — draw()
 title: Le jeu ne s'arrête pas après une collision
 ---
 
-Si tu penses que ton jeu ne détecte pas du tout correctement les collisions, essaye d'abord les instructions de débogage de l'étape précédente, sous « Il n'y a pas de collision lorsque le joueur atteint un obstacle ».
+Si tu penses que ton jeu ne détecte pas du tout correctement les collisions, essaie d'abord les instructions de débogage de l'étape précédente, sous « Il n'y a pas de collision lorsque le joueur atteint un obstacle ».
 
 
 Si ton jeu détecte correctement les collisions, vérifie que tu as correctement indenté le code qui dessine ton jeu à l'intérieur de l'énoncé `if niveau > 0`, pour t'assurer qu'il ne s'exécute que si cet énoncé est vrai. Par exemple :
@@ -214,7 +214,7 @@ filename: main.py — draw()
 
 --- /code ---
 
-Enfin, si les deux fonctionnent correctement, ton jeu peut ne pas définir correctement le `niveau= 0` lorsqu'une collision se produit. Par exemple :
+Enfin, si les deux fonctionnent correctement, ton jeu peut ne pas définir correctement le `niveau = 0` lorsqu'une collision se produit. Par exemple :
 
 --- code ---
 ---
@@ -269,7 +269,7 @@ line_numbers: false
 --- /code ---
 
 Si tu as effectué toutes ces vérifications et qu'il ne semble toujours pas que le nombre d'obstacles augmente, il est possible qu'ils le soient, mais tu ne le vois pas. Tu devrais essayer certaines de ces étapes pour tester ceci :
-  - Ralentis le jeu en utilisant `frame_rate()` dans ta fonction `configuration()` pour te donner plus de temps pour compter
+  - Ralentis le jeu en utilisant `frame_rate()` dans ta fonction `setup()` pour te donner plus de temps pour compter
   - Change la seed que tu utilises pour tes nombres aléatoires. C'est peu probable, mais il est possible que certains obstacles apparaissent au hasard directement les uns sur les autres
   - Ajoute un `print()` à la boucle `for` dans `dessine_obstacles()` qui imprime la valeur de `i` à chaque passage de la boucle, afin que tu puisses vérifier si elle s'exécute le nombre de fois qu'elle devrait
   - Juste à des fins de test, change `range (6 + niveau)` en `range (6 * niveau)` - cette augmentation devrait être plus facile à repérer !
