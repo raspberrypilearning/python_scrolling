@@ -1,95 +1,95 @@
-Import library code
+Імпорт коду бібліотеки
 
-Wrap around
+Обернутися навколо
 
-The draw_player function goes here
+Функція draw_player викликається тут
 
-Setup your animation here
+Налаштувати анімацію можна тут
 
-Things to do in every frame
+Що відбувається на кожному кадрі
 
-Definitions for compatibility with the p5py processing library
+Визначення для сумісності з бібліотекою p5py
 
-Shape
+Фігура
 
-Fonts
+Шрифти
 
-Text
+Текст
 
-Colour
+Колір
 
-Images
+Зображення
 
-Environment
+Довкілля
 
-Transform
+Перетворення
 
-Keyboard
+Клавіатура
 
-Draw collision point
+Малювання точки зіткнення
 
-Off the left of the screen
+Від лівого краю екрану
 
-Off the right of the screen
+Від правого краю екрану
 
-Position around the centre, top
+Позиція навколо центра, зверху
 
-Face
+Обличчя
 
-Eyes
+Очі
 
-Mouth
+Рот
 
-Collided
+Зіткнення
 
-Put code to run once here
+Розмісти тут код для одноразового запуску
 
-Width and height
+Ширина та висота
 
-Put code to run every frame here
+Помісти тут код для запуску на кожному кадрі
 
-Keep this to run your code
+За допомогою цього ти зможеш запустити свій код
 
-The draw_obstacle function goes here
+Функція draw_obstacle викликається тут
 
-Off the bottom of the screen
+Від нижньої частини екрану
 
-Off the top of the screen
+Від верхньої частини екрану
 
-Add the colour of your theme
+Додай колір, відповідно до твоєї теми
 
-Positioned towards the screen bottom
+Розташування в напрямку до нижньої частини екрана
 
-Your chosen colour
+Обраний тобою колір
 
-Load your image
+Завантаж своє зображення
 
-Controls the size of the emoji
+Керування розміром емодзі
 
-Position around the centre
+Розташування навколо центру
 
-Replace with your obstacle
+Заміни на свою перешкоду
 
-Before drawing the player
+Перед малюванням персонажа
 
-Resize to fit your theme
+Зміни розмір відповідно до твоєї теми
 
-Draw a fir tree
+Малювання ялинки
 
-Green for needles
+Зелений для хвої
 
-Brown for trunk
+Коричневий для стовбура
 
-Increases each frame
+Збільшення кожного кадру
 
-Any number is fine
+Підійде будь-яке число
 
-On background
+Для фону
 
-Useful for debugging
+Корисно для налагодження
 
-Draw circles around the pixels to check for collisions
+Намалюй кола навколо пікселів, щоб перевірити наявність зіткнень
 
-Include global variables here
+Сюди додавай глобальні змінні
 
-Use the global level
+Використовувати глобальний рівень
