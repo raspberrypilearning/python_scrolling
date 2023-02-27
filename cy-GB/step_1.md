@@ -1,4 +1,4 @@
-## You will make
+## Cyflwyniad
 
 Adeiladwch gêm redeg ddiddiwedd lle mae'n rhaid i'ch cymeriad osgoi rhwystrau.
 
@@ -12,7 +12,7 @@ Byddwch chi'n:
 
 ![Delweddau o wahanol enghreifftiau o brosiectau.](images/showcase_projects.png)
 
-### Get ideas 💭
+### Cael ysbrydoliaeth
 
 Byddwch chi'n gwneud penderfyniadau dylunio am y math o gêm i'w gwneud, a sut byddwch chi'n defnyddio cod i gael yr effeithiau rydych chi'n eu dymuno.
 
