@@ -1,4 +1,4 @@
-## Upgrade your project
+## प्रोजेक्ट को अपग्रेड करें
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
@@ -11,7 +11,7 @@ If you have time you can upgrade your project.
 </div>
 </div>
 
-Here are some ideas you could try:
+यहां कुछ विचार दिए गए हैं जिन्हें आप आजमा सकते हैं:
 
 ### Include a variety of obstacles
 You can add variety to your obstacles in a few ways:
