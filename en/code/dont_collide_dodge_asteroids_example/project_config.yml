@@ -1,5 +1,5 @@
-NAME: "Don't Collide: Dodge Asteroids"
-IDENTIFIER: "dodge-asteroids-example"
+name: "Don't Collide: Dodge Asteroids"
+identifier: "dodge-asteroids-example"
 COMPONENTS:
   - name: "main"
     extension: "py"
