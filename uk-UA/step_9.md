@@ -1,4 +1,4 @@
-## Challenge: створіть власну групу
+## Що далі?
 
 Якщо ти йдеш по мануалу [Знайомство з Python](https://projects.raspberrypi.org/en/pathways/python-intro), можеш перейти до проєкту [Потужні візерунки](https://projects.raspberrypi.org/en/projects/powerful-patterns). У цьому проєкті ти будеш створювати мистецтво, яке буде надихати та зможеш масштабувати його, використовуючи повторення візерунків.
 
