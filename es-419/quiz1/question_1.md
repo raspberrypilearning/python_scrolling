@@ -1,6 +1,6 @@
-## Quick quiz
+## Prueba Rapida
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Contesta las tres preguntas. Hay pistas que te guiaran a la respuesta correcta.
 
 When you have answered each question, click on **Check my answer**.
 
