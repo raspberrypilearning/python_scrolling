@@ -2,16 +2,16 @@
 
 Contesta las tres preguntas. Hay pistas que te guiaran a la respuesta correcta.
 
-When you have answered each question, click on **Check my answer**.
+Cuando hayas respondido cada pregunta, haz click en **Verificar mi respuesta**.
 
-Have fun!
+¡Que te diviertas!
 
 --- question ---
 ---
 legend: Pregunta 1 de 3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+Ha utilizado muchas declaraciones `si` para controlar el comportamiento de su juego. Algunos de ellos podrían haber tenido condiciones más complejas, usando `y` para hacer múltiples pruebas a la vez. Si ejecutaras el siguiente fragmento de código condicional, ¿cuál esperarías que fuera el resultado?
 
 ```python
 puntaje = 5000
@@ -42,7 +42,7 @@ else:
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+Mientras que `puntaje >= 5000` es verdadera, para una condición de `y` ambas partes deben ser verdaderas, y `vidas >= 3` es falsa.
 
   --- /feedback ---
 
@@ -53,7 +53,7 @@ While `score >= 5000` is true, for an `and` condtion both parts must be true, an
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+Esto es correcto: `puntaje >= 5000` es verdadero, y también lo es `vidas > 1` en la declaración anidada `si`.
 
   --- /feedback ---
 
@@ -61,9 +61,9 @@ This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested
 ```
 ¡Vas bien!
 ```
-  --- feedback ---
+  --- retroalimentación ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+Cerca, pero `puntaje >= 5000` no es la única condición que el programa encontraría verdadera mientras se ejecuta.
 
   --- /feedback ---
 
@@ -73,7 +73,7 @@ Close, but `score >= 5000` isn't the only condition the program would find true 
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+Mientras que `vidas > 1` es verdadera, solo se ejecuta el código dentro de la primera condición en una sentencia `if`/`elif`/`else` y `vidas > 1` no es la primera condición verdadera.
 
   --- /feedback ---
 
