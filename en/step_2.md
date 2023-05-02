@@ -140,8 +140,9 @@ filename: main.py - setup()
 ---
 
 def setup():   
-    size(400, 400)    
-    player = load_image('skiing.png') #Load your image
+    size(400, 400)
+    global player    
+    player = load_image('turtle.png') #Load your image
 
 --- /code ---
 
@@ -155,8 +156,6 @@ filename: main.py - draw_player()
 
 def draw_player():    
   player_y = int(height * 0.8) #Positioned towards the screen bottom    
-  
-  global player    
 
   image(player, mouse_x, player_y, 30, 30)
 
