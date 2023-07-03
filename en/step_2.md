@@ -7,20 +7,22 @@ Set the theme of your game and create a player character that follows the mouse 
 </div>
 <div>
 
-![Image of turtle size 100x100 against a blue background with screen size 400x400.](images/theme-turtle.png){:width="300px"}
+![Image of cartoon turtle viewed from above set against a blue background.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-What is the theme of your game? You could choose anything you want. Here are some ideas:
-- A sport or hobby
-- A movie, show, or game
-- Science or nature
-- Anything else!
+What is the theme of your game? Here are some ideas:
+- Sports
+- Hobbies
+- Science
+- Nature
 
 --- task ---
 
-Open the [starter project](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket will open in another browser tab.
+Open the [Don't Collide! starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"} project. The code editor will open in another browser tab.
+
+If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
 
 --- /task ---
 
@@ -54,7 +56,7 @@ filename: main.py - draw()
 ---
 
 def draw():    
-    safe = color(200, 100, 0) #Add the colour of your theme   
+    safe = Color(200, 100, 0)  # Add the colour of your theme   
     background(safe)  
 
 --- /code ---
@@ -86,7 +88,7 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():    
-  player_y = int(height * 0.8) #Positioned towards the screen bottom
+  player_y = int(height * 0.8)  # Positioned towards the screen bottom
 
 --- /code ---
 
@@ -99,7 +101,7 @@ filename: main.py - draw()
 ---
 
 def draw():    
-    safe = color(200, 100, 0) #Your chosen colour    
+    safe = Color(200, 100, 0)  # Your chosen colour    
     background(safe)    
     draw_player()    
     
@@ -121,13 +123,11 @@ Next you will add code to the `draw_player()` function to draw your shape. You m
 title: Use a starter image
 ---
 
-Click on the **manage images** icon. 
+![The picture icon in the top right of the code area.](images/manage-images.png) #TODO
 
-![The picture icon in the top right of the code area.](images/manage-images.png)
+Images included in the starter project will be shown in the `Image gallery`.
 
-Images included in the starter project will be shown in the `Image library` list. 
-
-![The Image library with list of included images.](images/starter-images.png)
+![The Image gallery with list of included images.](images/starter-images.png) #TODO
 
 Make a note of the name of the image you want to use.
 
@@ -142,7 +142,7 @@ filename: main.py - setup()
 def setup():   
     size(400, 400)
     global player    
-    player = load_image('turtle.png') #Load your image
+    player = load_image('turtle.png')  # Load your image
 
 --- /code ---
 
@@ -155,8 +155,7 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():    
-  player_y = int(height * 0.8) #Positioned towards the screen bottom    
-
+  player_y = int(height * 0.8)  # Positioned towards the screen bottom
   image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
@@ -180,8 +179,8 @@ filename: main.py - setup()
 
 def setup():    
   size(400, 400)     
-  text_size(40) #Controls the size of the emoji     
-  text_align(CENTER, TOP) #Position around the centre 
+  text_size(40)  # Controls the size of the emoji     
+  text_align(CENTER, TOP)  # Position around the centre 
 
 --- /code ---
 
@@ -220,7 +219,7 @@ def draw_player():
 title: Draw a player using multiple shapes
 ---
 
-![desc](images/face_player.png)
+![A face shape made from a green circle as a background and two eyes drawn from blue circles, with black circles within and a glint within those using a white circle.](images/face_player.png)
 
 --- code ---
 ---
@@ -278,7 +277,7 @@ Try switching to full screen. Also, check the `x` and `y` coordinates that you u
 title: An image isn't loading
 ---
 
-First, check that the image is in the `Image library`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+First, check that the image is in the `Image gallery`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
 
 --- /collapse ---
 
