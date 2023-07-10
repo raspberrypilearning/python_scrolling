@@ -34,9 +34,12 @@ If you have a Raspberry Pi account, you can click on the **Save** button to save
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 10
 ---
 
-def setup():    
+def setup():
     size(400, 400)
 
 --- /code ---
@@ -53,11 +56,14 @@ This is the colour that it is safe for the player to be on and you will use this
 ---
 language: python
 filename: main.py - draw()
+line_numbers: true
+line_number_start: 13
+line_highlights: 14-15
 ---
 
 def draw():    
-    safe = Color(200, 100, 0)  # Add the colour of your theme   
-    background(safe)  
+    safe = Color(200, 100, 0)  # Add the colour of your theme
+    background(safe)
 
 --- /code ---
 
@@ -85,10 +91,13 @@ Define a `draw_player()` function and create a `player_y` position for the fixed
 ---
 language: python
 filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 12
+line_highlights: 12-14
 ---
 
-def draw_player():    
-  player_y = int(height * 0.8)  # Positioned towards the screen bottom
+def draw_player():
+    player_y = int(height * 0.8)  # Positioned towards the screen bottom
 
 --- /code ---
 
@@ -98,12 +107,15 @@ Add code to `draw()` to call `draw_player()` each frame.
 ---
 language: python
 filename: main.py - draw()
+line_numbers: true
+line_number_start: 15
+line_highlights: 18
 ---
 
 def draw():    
-    safe = Color(200, 100, 0)  # Your chosen colour    
-    background(safe)    
-    draw_player()    
+    safe = Color(200, 100, 0)  # Your chosen colour
+    background(safe)
+    draw_player()
     
 --- /code ---
 
@@ -123,11 +135,9 @@ Next you will add code to the `draw_player()` function to draw your shape. You m
 title: Use a starter image
 ---
 
-![The picture icon in the top right of the code area.](images/manage-images.png) #TODO
-
 Images included in the starter project will be shown in the `Image gallery`.
 
-![The Image gallery with list of included images.](images/starter-images.png) #TODO
+![The Image gallery displaying the included images.](images/starter-images.png)
 
 Make a note of the name of the image you want to use.
 
@@ -137,11 +147,14 @@ Load the image into the `setup()` function
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 11-12
 ---
 
-def setup():   
+def setup():
     size(400, 400)
-    global player    
+    global player
     player = load_image('turtle.png')  # Load your image
 
 --- /code ---
@@ -152,11 +165,14 @@ Call the `image()` and set it as global in the `draw_player()` function.
 ---
 language: python
 filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 14
+line_highlights: 16
 ---
 
-def draw_player():    
-  player_y = int(height * 0.8)  # Positioned towards the screen bottom
-  image(player, mouse_x, player_y, 30, 30)
+def draw_player():
+    player_y = int(height * 0.8)  # Positioned towards the screen bottom
+    image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -175,24 +191,32 @@ Here's an example:
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 11-13
 ---
 
-def setup():    
-  size(400, 400)     
-  text_size(40)  # Controls the size of the emoji     
-  text_align(CENTER, TOP)  # Position around the centre 
+def setup():
+    size(400, 400)
+    text_size(40)  # Controls the size of the emoji
+    text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
+
+Call the `text()` and set it as global in the `draw_player()` function.
 
 --- code ---
 ---
 language: python
 filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 14
+line_highlights: 16-17
 ---
 
-def draw_player():     
-  player_y = int(height * 0.8)    
-  text('🎈', mouse_x, player_y)     
+def draw_player():
+    player_y = int(height * 0.8)
+    text('🎈', mouse_x, player_y)
 
 --- /code ---
 
@@ -227,23 +251,23 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-  player_y = int(height * 0.8)    
-  noStroke()    
-  #Face    
-  fill(0, 200, 100)    
-  ellipse(mouse_x, player_y, 60, 60)
-  
-  #Eyes    
-  fill(0, 100, 200)    
-  ellipse(mouse_x - 10, player_y - 10, 20, 20)    
-  ellipse(mouse_x + 10, player_y - 10, 20, 20)    
-  fill(0)    
-  ellipse(mouse_x - 10, player_y - 10, 10, 10)     
-  ellipse(mouse_x + 10, player_y - 10, 10, 10)     
-  fill(255)    
-  ellipse(mouse_x - 12, player_y - 12, 5, 5)    
-  ellipse(mouse_x + 12, player_y - 12, 5, 5)    
+def draw_player():
+    player_y = int(height * 0.8)
+    noStroke()
+    # Face
+    fill(0, 200, 100)
+    ellipse(mouse_x, player_y, 60, 60)
+    
+    # Eyes
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, player_y - 10, 20, 20)
+    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, player_y - 10, 10, 10)
+    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, player_y - 12, 5, 5)
+    ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
@@ -253,7 +277,7 @@ def draw_player():
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player. 
+**Test:** Run your code and move the mouse to control the player.
 
 Does it move like you expect?
 
@@ -299,7 +323,7 @@ image(image_file, x_coord, y_coord, width, height)
 title: An emoji is the wrong size
 ---
 
-If your emoji is too big or too small, change the input to `text_size()`.
+If your emoji is too big or too small, change the value in `text_size()`.
 
 --- /collapse ---
 

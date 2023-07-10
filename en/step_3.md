@@ -19,7 +19,7 @@ You are going to use a `for` loop to make lots of copies so you only need to mak
 
 --- task ---
 
-Define a `draw_obstacles()` function: 
+Define a `draw_obstacles()` function:
 
 --- code ---
 ---
@@ -28,11 +28,10 @@ filename: main.py - draw_obstacles()
 ---
 
 def draw_obstacles():
-   ob_x = width/2
-   ob_y = height/2
-   text('🌵', ob_x, ob_y)  # Replace with your obstacle
+    ob_x = width/2
+    ob_y = height/2
+    text('🌵', ob_x, ob_y)  # Replace with your obstacle
     
-
 --- /code ---
 
 Add code to `draw()` to call `draw_obstacles()` each frame.
@@ -45,7 +44,7 @@ filename: main.py - draw()
 
 def draw():
     safe = Color(200, 100, 0)  # Add the colour of your theme
-    background(safe)  
+    background(safe)
     draw_obstacles()  # Before drawing the player
     draw_player()
     
@@ -65,11 +64,9 @@ def draw():
 title: Use a starter image
 ---
 
-![The picture icon in the top right of the code area.](images/manage-images.png) #TODO
-
 Images included in the starter project will be shown in the `Image gallery`.
 
-![The Image gallery with list of included images.](images/starter-images.png) #TODO
+![The Image gallery displaying the included images.](images/starter-images.png)
 
 Make a note of the name of the image you want to use.
 
@@ -79,16 +76,20 @@ Load the image into the `setup()` function
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 12
 ---
 
 def setup():
     size(400, 400)
-    player = load_image('skiing.png')  # Load your image
-    obstacle = load_image('rocket.png')  # Load your image
+    global player
+    player = load_image('skiing.png')  # Load your player image
+    obstacle = load_image('rocket.png')  # Load your obstacle image
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_obstacles()` function.
+Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function, call `obstacle` as a global variable and use it in the call to `image()`.
 
 --- code ---
 ---
@@ -97,12 +98,12 @@ filename: main.py - draw_obstacles()
 ---
 
 def draw_obstacles():
-   ob_x = width/2
-   ob_y = height/2
+    ob_x = width/2
+    ob_y = height/2
    
-   global obstacle
+    global obstacle
    
-   image(obstacle, ob_x, ob_y, 30, 30)  # Resize to fit your theme
+    image(obstacle, ob_x, ob_y, 30, 30)  # Resize to fit your theme
 
 --- /code ---
 
@@ -124,11 +125,13 @@ filename: main.py - setup()
 ---
 
 def setup():
-  size(400, 400)
-  text_size(40)  # Controls the size of the emoji 
-  text_align(CENTER, TOP)  # Position around the centre
+    size(400, 400)
+    text_size(40)  # Controls the size of the emoji 
+    text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
+
+Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function.
 
 --- code ---
 ---
@@ -137,9 +140,9 @@ filename: main.py - draw_obstacles()
 ---
 
 def draw_obstacles():
-  ob_x = width/2
-  ob_y = height/2
-  text('🌵', ob_x, ob_y)
+    ob_x = width/2
+    ob_y = height/2
+    text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -177,7 +180,7 @@ filename: main.py - draw_obstacles()
 def draw_obstacles():
     ob_x = width/2
     ob_y = height/2
-    #Draw a fir tree
+    # Draw a fir tree
     no_stroke()
     fill(0,255,0)  # Green for needles
     triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
@@ -209,10 +212,10 @@ filename: main.py - draw_obstacles()
 ---
 
 def draw_obstacles():
-   ob_x = width/2
-   ob_y = height/2 + frame_count  # Increases each frame
-   ob_y %= height  # Wrap around
-   text('🌵', ob_x, ob_y)  # Replace with your obstacle
+    ob_x = width/2
+    ob_y = height/2 + frame_count  # Increases each frame
+    ob_y %= height  # Wrap around
+    text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -221,7 +224,6 @@ def draw_obstacles():
 ### Lots of obstacles
 
 You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
-
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
 <span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
@@ -238,13 +240,13 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles():
   
-  seed(12345678) #Any number is fine
-  
-  for i in range(6):  
-    ob_x = randint(0, height)
-    ob_y = randint(0, height) + frame_count
-    ob_y %= height
-    text('🌵', ob_x, ob_y)  # Replace with your obstacle
+    seed(12345678)  # Any number is fine
+    
+    for i in range(6):  
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -312,13 +314,13 @@ filename: main.py — draw_obstacles()
 
 def draw_obstacles():
 
-  seed(12345678)
+    seed(12345678)
   
-  for i in range(6):  
-    ob_x = randint(0, height)
-    ob_y = randint(0, height) + frame_count
-    ob_y %= height
-    text('🌵', ob_x, ob_y)  # Replace with your obstacle
+    for i in range(6):  
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 

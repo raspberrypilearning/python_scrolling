@@ -32,7 +32,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-collide = get(mouse_x, player_y)
+    collide = get(mouse_x, player_y)
 
 --- /code ---
 
@@ -64,9 +64,9 @@ filename: main.py - setup()
 ---
 
 def setup():
-  size(400, 400)
-  text_size(40)  # Controls the size of the emoji 
-  text_align(CENTER, TOP)  # Position around the centre
+    size(400, 400)
+    text_size(40)  # Controls the size of the emoji 
+    text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -77,10 +77,10 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():
-  if collide == safe:  # On background
-    text('🎈', mouse_x, player_y)
-  else:  # Collided
-    text('💥', mouse_x, player_y)
+    if collide == safe:  # On background
+      text('🎈', mouse_x, player_y)
+    else:  # Collided
+      text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -109,7 +109,7 @@ title: There is no collision when the player reaches an obstacle
 
 If your player character touches the obstacle and nothing happens, there are a few things you should check:
 
- - Make sure you call `draw_obstacles()` before `draw_players()`. If you check for collisions before drawing the obstacles in a frame, then there won't be any obstacles to collide with!
+ - Make sure you call `draw_obstacles()` before `draw_player()`. If you check for collisions before drawing the obstacles in a frame, then there won't be any obstacles to collide with!
  - Make sure you are using the exact same colour when drawing the object and in the `if` statement checking for the collision. You can make sure of this by using the same `global` variable in both places.
  - Are you drawing the player character before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the player. You need to check the colour first and **then** draw the player.
  - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
@@ -144,31 +144,31 @@ title: Collision detection with multiple pixels
 ```python
 def draw_player():
   
-  player_y = int(height * 0.8)
-  # Useful for debugging
-  # Draw circles around the pixels to check for collisions
-  
-  no_fill()
-  ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
-  ellipse(mouse_x, player_y + 40, 10, 10)
-  ellipse(mouse_x - 12, player_y + 20, 10, 10)
-  ellipse(mouse_x + 12, player_y + 20, 10, 10)
-
-  collide = get(mouse_x, player_y)
-  collide2 = get(mouse_x - 12, player_y + 20)
-  collide3 = get(mouse_x + 12, player_y + 20)
-  collide4 = get(mouse_x, player_y + 40)
-  
-  if mouse_x < width:  # Off the left of the screen
-    collide2 = safe
-  
-  if mouse_x > width:  # Off the right of the screen
-    collide3 = safe
+    player_y = int(height * 0.8)
+    # Useful for debugging
+    # Draw circles around the pixels to check for collisions
     
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    text('🎈', mouse_x, player_y)
-  else:
-    text('💥', mouse_x, player_y)
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
+    ellipse(mouse_x, player_y + 40, 10, 10)
+    ellipse(mouse_x - 12, player_y + 20, 10, 10)
+    ellipse(mouse_x + 12, player_y + 20, 10, 10)
+
+    collide = get(mouse_x, player_y)
+    collide2 = get(mouse_x - 12, player_y + 20)
+    collide3 = get(mouse_x + 12, player_y + 20)
+    collide4 = get(mouse_x, player_y + 40)
+    
+    if mouse_x < width:  # Off the left of the screen
+        collide2 = safe
+    
+    if mouse_x > width:  # Off the right of the screen
+        collide3 = safe
+      
+    if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
+        text('🎈', mouse_x, player_y)
+    else:
+        text('💥', mouse_x, player_y)
 ```
 
 --- /collapse ---
