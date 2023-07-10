@@ -40,7 +40,7 @@ line_highlights: 10
 ---
 
 def setup():
-    size(400, 400)
+  size(400, 400)
 
 --- /code ---
 
@@ -61,9 +61,9 @@ line_number_start: 13
 line_highlights: 14-15
 ---
 
-def draw():    
-    safe = Color(200, 100, 0)  # Add the colour of your theme
-    background(safe)
+def draw():
+  safe = Color(200, 100, 0)  # Add the colour of your theme
+  background(safe)
 
 --- /code ---
 
@@ -97,7 +97,7 @@ line_highlights: 12-14
 ---
 
 def draw_player():
-    player_y = int(height * 0.8)  # Positioned towards the screen bottom
+  player_y = int(height * 0.8)  # Positioned towards the screen bottom
 
 --- /code ---
 
@@ -112,11 +112,11 @@ line_number_start: 15
 line_highlights: 18
 ---
 
-def draw():    
-    safe = Color(200, 100, 0)  # Your chosen colour
-    background(safe)
-    draw_player()
-    
+def draw():
+  safe = Color(200, 100, 0)  # Your chosen colour
+  background(safe)
+  draw_player()
+  
 --- /code ---
 
 --- /task ---
@@ -153,9 +153,9 @@ line_highlights: 11-12
 ---
 
 def setup():
-    size(400, 400)
-    global player
-    player = load_image('turtle.png')  # Load your image
+  size(400, 400)
+  global player
+  player = load_image('turtle.png')  # Load your image
 
 --- /code ---
 
@@ -171,8 +171,8 @@ line_highlights: 16
 ---
 
 def draw_player():
-    player_y = int(height * 0.8)  # Positioned towards the screen bottom
-    image(player, mouse_x, player_y, 30, 30)
+  player_y = int(height * 0.8)  # Positioned towards the screen bottom
+  image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -197,9 +197,9 @@ line_highlights: 11-13
 ---
 
 def setup():
-    size(400, 400)
-    text_size(40)  # Controls the size of the emoji
-    text_align(CENTER, TOP)  # Position around the centre
+  size(400, 400)
+  text_size(40)  # Controls the size of the emoji
+  text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -215,8 +215,8 @@ line_highlights: 16-17
 ---
 
 def draw_player():
-    player_y = int(height * 0.8)
-    text('🎈', mouse_x, player_y)
+  player_y = int(height * 0.8)
+  text('🎈', mouse_x, player_y)
 
 --- /code ---
 
@@ -252,22 +252,22 @@ filename: main.py - draw_player()
 ---
 
 def draw_player():
-    player_y = int(height * 0.8)
-    noStroke()
-    # Face
-    fill(0, 200, 100)
-    ellipse(mouse_x, player_y, 60, 60)
-    
-    # Eyes
-    fill(0, 100, 200)
-    ellipse(mouse_x - 10, player_y - 10, 20, 20)
-    ellipse(mouse_x + 10, player_y - 10, 20, 20)
-    fill(0)
-    ellipse(mouse_x - 10, player_y - 10, 10, 10)
-    ellipse(mouse_x + 10, player_y - 10, 10, 10)
-    fill(255)
-    ellipse(mouse_x - 12, player_y - 12, 5, 5)
-    ellipse(mouse_x + 12, player_y - 12, 5, 5)
+  player_y = int(height * 0.8)
+  noStroke()
+  # Face
+  fill(0, 200, 100)
+  ellipse(mouse_x, player_y, 60, 60)
+  
+  # Eyes
+  fill(0, 100, 200)
+  ellipse(mouse_x - 10, player_y - 10, 20, 20)
+  ellipse(mouse_x + 10, player_y - 10, 20, 20)
+  fill(0)
+  ellipse(mouse_x - 10, player_y - 10, 10, 10)
+  ellipse(mouse_x + 10, player_y - 10, 10, 10)
+  fill(255)
+  ellipse(mouse_x - 12, player_y - 12, 5, 5)
+  ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 

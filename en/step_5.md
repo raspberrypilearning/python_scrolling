@@ -49,11 +49,11 @@ filename: main.py — draw_obstacles()
 
 def draw_obstacles():
   
-    global level  # Use the global level
+  global level  # Use the global level
   
-    if frame_count % height == height - 1 and level < 5:
-        level += 1
-        print('You have reached level', level)
+  if frame_count % height == height - 1 and level < 5:
+    level += 1
+    print('You have reached level', level)
 
 --- /code ---
 
@@ -82,11 +82,11 @@ filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6):
-        ob_x = randint(0, height)
-        ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height  # Wrap around
-        text('🌵', ob_x, ob_y)
+  for i in range(6):
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + (frame_count * level)
+    ob_y %= height  # Wrap around
+    text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -139,13 +139,13 @@ language: python
 filename: main.py — draw_player()
 ---
 
-    global score
+  global score
 
-    if collide == safe:
-        text('🎈', mouse_x, player_y)
-        score += level
-    else:
-        text('💥', mouse_x, player_y)
+  if collide == safe:
+    text('🎈', mouse_x, player_y)
+    score += level
+  else:
+    text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -206,12 +206,12 @@ language: python
 filename: main.py — draw()
 ---
 
-    if level > 0:
-        background(safe) 
-        fill(255)
-        text('Score: ' + str(score), width/2, 20)
-        draw_obstacles()
-        draw_player()
+  if level > 0:
+    background(safe) 
+    fill(255)
+    text('Score: ' + str(score), width/2, 20)
+    draw_obstacles()
+    draw_player()
 
 --- /code ---
 
@@ -232,12 +232,12 @@ language: python
 filename: main.py — draw()
 ---
 
-    if level > 0:
-        background(safe) 
-        fill(255)
-        text('Score: ' + str(score), width/2, 20)
-        draw_obstacles()
-        draw_player()
+  if level > 0:
+    background(safe) 
+    fill(255)
+    text('Score: ' + str(score), width/2, 20)
+    draw_obstacles()
+    draw_player()
 
 --- /code ---
 
@@ -249,12 +249,12 @@ language: python
 filename: main.py — draw_player()
 ---
 
-    if collide == safe:
-        text('🎈', mouse_x, player_y)
-        score += level
-    else:
-        text('💥', mouse_x, player_y)
-        level = 0
+  if collide == safe:
+    text('🎈', mouse_x, player_y)
+    score += level
+  else:
+    text('💥', mouse_x, player_y)
+    level = 0
 
 --- /code ---
 
@@ -276,11 +276,11 @@ filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6 + level):
-        ob_x = randint(0, height)
-        ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height  # Wrap around
-        text('🌵', ob_x, ob_y)
+  for i in range(6 + level):
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + (frame_count * level)
+    ob_y %= height  # Wrap around
+    text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -302,12 +302,12 @@ filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6 + level):
-        ob_x = randint(0, height)
-        ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height  # Wrap around
-        text('🌵', ob_x, ob_y)
-    
+  for i in range(6 + level):
+    ob_x = randint(0, height)
+    ob_y = randint(0, height) + (frame_count * level)
+    ob_y %= height  # Wrap around
+    text('🌵', ob_x, ob_y)
+  
 --- /code ---
 
 If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
