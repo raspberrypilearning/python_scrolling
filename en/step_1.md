@@ -67,4 +67,5 @@ You can find the Avoid the germs project here https://editor.raspberrypi.org/en/
 You can find the Clean car project here https://editor.raspberrypi.org/en/projects/clean-car-example
 ![Dodge asteroids project example](images/example1.png){:width="300px"}
 You can find the Dodge asteroids project here https://editor.raspberrypi.org/en/projects/dodge-asteroids-example
+
 --- /print-only ---
