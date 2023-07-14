@@ -48,12 +48,11 @@ filename: main.py — draw_obstacles()
 ---
 
 def draw_obstacles():
-  
-  global level  # Use the global level
-  
-  if frame_count % height == height - 1 and level < 5:
-    level += 1
-    print('You have reached level', level)
+    global level  # Use the global level
+    
+    if frame_count % height == height - 1 and level < 5:
+        level += 1
+        print('You have reached level', level)
 
 --- /code ---
 
@@ -82,11 +81,11 @@ filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6):
-    ob_x = randint(0, height)
-    ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height  # Wrap around
-    text('🌵', ob_x, ob_y)
+    for i in range(6):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -139,13 +138,13 @@ language: python
 filename: main.py — draw_player()
 ---
 
-  global score
+    global score
 
-  if collide == safe:
-    text('🎈', mouse_x, player_y)
-    score += level
-  else:
-    text('💥', mouse_x, player_y)
+    if collide == safe.hex:
+        text('🎈', mouse_x, player_y)
+        score += level
+    else:
+        text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -162,7 +161,6 @@ You can use the `+` operator to combine two or more strings if you want to give 
 ```python
 message = 'Score: ' + str(score)
 ```
-
 **Tip:** `str()` is short for 'string' — programmers often remove letters like this, so they don't have to type as much!
 
 --- /task ---
@@ -206,12 +204,12 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0:
-    background(safe) 
-    fill(255)
-    text('Score: ' + str(score), width/2, 20)
-    draw_obstacles()
-    draw_player()
+    if level > 0:
+        background(safe) 
+        fill(255)
+        text('Score: ' + str(score), width/2, 20)
+        draw_obstacles()
+        draw_player()
 
 --- /code ---
 
@@ -232,12 +230,12 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0:
-    background(safe) 
-    fill(255)
-    text('Score: ' + str(score), width/2, 20)
-    draw_obstacles()
-    draw_player()
+    if level > 0:
+        background(safe)
+        fill(255)
+        text('Score: ' + str(score), width/2, 20)
+        draw_obstacles()
+        draw_player()
 
 --- /code ---
 
@@ -249,12 +247,12 @@ language: python
 filename: main.py — draw_player()
 ---
 
-  if collide == safe:
-    text('🎈', mouse_x, player_y)
-    score += level
-  else:
-    text('💥', mouse_x, player_y)
-    level = 0
+    if collide == safe.hex:
+        text('🎈', mouse_x, player_y)
+        score += level
+    else:
+        text('💥', mouse_x, player_y)
+        level = 0
 
 --- /code ---
 
@@ -276,11 +274,11 @@ filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + level):
-    ob_x = randint(0, height)
-    ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height  # Wrap around
-    text('🌵', ob_x, ob_y)
+    for i in range(6 + level):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -302,11 +300,11 @@ filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + level):
-    ob_x = randint(0, height)
-    ob_y = randint(0, height) + (frame_count * level)
-    ob_y %= height  # Wrap around
-    text('🌵', ob_x, ob_y)
+    for i in range(6 + level):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
   
 --- /code ---
 
