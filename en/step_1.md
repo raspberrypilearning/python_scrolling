@@ -25,7 +25,7 @@ Run these examples. Think about how the players and obstacles have been made.
 What happens if you hit an obstacle? Does it get harder as you play?
 
 **Skiing cat**: 
-<iframe src="https://editor.raspberrypi.org/en/embed/viewer/skiing-cat-example" width="600" height="800" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/skiing-cat-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 You can find the Skiing cat project [here](https://editor.raspberrypi.org/en/projects/skiing-cat-example){:target="_blank"}
 
