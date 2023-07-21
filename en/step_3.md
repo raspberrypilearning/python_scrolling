@@ -25,6 +25,9 @@ Define a `draw_obstacles()` function:
 ---
 language: python
 filename: main.py - draw_obstacles()
+line_numbers: false
+line_number_start:
+line_highlights: 4
 ---
 
 def draw_obstacles():
@@ -40,6 +43,9 @@ Add code to `draw()` to call `draw_obstacles()` each frame.
 ---
 language: python
 filename: main.py - draw()
+line_numbers: false
+line_number_start:
+line_highlights: 4
 ---
 
 def draw():
