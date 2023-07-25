@@ -42,7 +42,7 @@ Great flying!
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condtion both parts must be true, and `lives >= 3` is false.
+While `score >= 5000` is true, for an `and` condition both parts must be true, and `lives >= 3` is false.
   
   --- /feedback ---
 
