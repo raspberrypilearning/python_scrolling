@@ -45,10 +45,11 @@ language: python
 filename: main.py - draw()
 line_numbers: false
 line_number_start:
-line_highlights: 4
+line_highlights: 5
 ---
 
 def draw():
+    global safe
     safe = Color(200, 100, 0)  # Add the colour of your theme
     background(safe)
     draw_obstacles()  # Before drawing the player
