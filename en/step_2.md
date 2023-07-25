@@ -58,10 +58,11 @@ language: python
 filename: main.py - draw()
 line_numbers: true
 line_number_start: 13
-line_highlights: 14-15
+line_highlights: 14, 15, 16
 ---
 
 def draw():
+    global safe
     safe = Color(200, 100, 0)  # Add the colour of your theme
     background(safe)
 
@@ -109,10 +110,11 @@ language: python
 filename: main.py - draw()
 line_numbers: true
 line_number_start: 15
-line_highlights: 18
+line_highlights: 19
 ---
 
 def draw():
+    global safe
     safe = Color(200, 100, 0)  # Your chosen colour
     background(safe)
     draw_player()
