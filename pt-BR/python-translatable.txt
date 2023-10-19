@@ -18,11 +18,11 @@ bateu
 
 jogador_y
 
-bateu
+colidir
 
 seguro
 
-nível
+nivel
 
 colidir2
 
@@ -42,7 +42,7 @@ vidas
 
 invulnerabilidade
 
-display_score
+exibir_pontos
 
 🎉🎉 Você venceu! 🎉🎉
 
@@ -52,11 +52,11 @@ foguete
 
 rocha
 
-random_seed
+semente_aleatoria
 
 jogador
 
-obstáculo
+obstaculo
 
 Ótimo vôo!
 
@@ -66,6 +66,6 @@ Continue!
 
 Mas tenha cuidado!
 
-Empurre com mais força!
+Se esforce mais!
 
 Volte para a base!
