@@ -22,7 +22,7 @@ Ewch ati i greu newidyn `level` `global` i gadw golwg ar ba lefel mae'r chwaraew
 --- code ---
 ---
 language: python filename: main.py
-line_numbers: false
+line_highlights: 7
 ---
 
 # Rhowch newidynnau cyffredinol yma
@@ -40,15 +40,15 @@ Mae'r cod yn defnyddio `height` a `frame_count` i gynyddu'r newidyn `level` bob 
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
-line_numbers: false
+language: python
+filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles():
+def llunio_rhwystrau():
 
-  global level #Use the global level
-
-  if frame_count % height == height - 1 and level < 5: level += 1 print('You have reached level', level)
+    if frame_count % height == height - 1 and level < 5:
+        level += 1
+        print('You have reached level', level)
 
 --- /code ---
 
@@ -56,28 +56,30 @@ def draw_obstacles():
 
 --- task ---
 
-
-Y ddau brif ddewis ar gyfer gwneud y gêm yn anoddach yw gwneud iddi symud yn gyflymach, a chynyddu nifer y rhwystrau.
+The two main options for increasing difficulty are to make the game move faster, and to increase the number of obstacles.
 
 --- collapse ---
 ---
 title: Cyflymu eich gêm
 ---
 
-Mae cyflymder eich gêm yn cael ei reoli gan ba mor gyflym mae rhwystrau i weld yn symud tuag at y chwaraewr. Mae'r cod yn cyflymu hyn drwy ychwanegu `frame_count * level` at y cyfesuryn `y` wrth gynhyrchu rhwystrau.
+The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
 
-Yn lle symud eich rhwystrau un picsel bob ffrâm, mae'r cod hwn, i bob pwrpas, yn ei symud fesul y picseli `level` yn lle.
+Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead.
 
-Gan edrych ar y cod, efallai byddech chi'n disgwyl i'r cyflymder gynyddu mwy na'r picseli `level`. Er enghraifft, ar y pwynt cyn i'ch `level` gynyddu, mae'r `frame_count` yn `799` — gan fod y `level` yn cynyddu un ffrâm cyn bod `frame_count` yn eil-luosrif o `height` (wedi'i osod ar `400` picsel) — ac mae `799 * 3` yn sylweddol fwy na `799 * 2`. Ond mae'r picseli ychwanegol sy'n cael eu creu drwy luosi `frame_count` yn ei gyfanrwydd â rhif uwch wedi'u cuddio gan `ob_y %= height`. Mae hyn yn gadael dim ond y picseli `level` ychwanegol ym mhob cam.
-
+Looking at the code, you might expect the speed to increase by more than `level` pixels. For example, at the point just before your `level` increases, the `frame_count` is `799` — as the `level` increases one frame before the `frame_count` is an even multiple of `height` (set at `400` pixels) — and `799 * 3` is notably bigger than `799 * 2`. However, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are hidden by `ob_y %= height`. This leaves only the `level` extra pixels in each step.
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+Gan edrych ar y cod, efallai byddech chi'n disgwyl i'r cyflymder gynyddu mwy na'r picseli `lefel`. Er enghraifft, ar y pwynt cyn i'ch `lefel` gynyddu, mae'r `frame_count` yn `799` — gan fod y `lefel` yn cynyddu un ffrâm cyn bod `frame_count` yn eil-luosrif o `height` (wedi'i osod ar `400` picsel) — ac mae `799 * 3` yn sylweddol fwy na `799 * 2`. Ond mae'r picseli ychwanegol sy'n cael eu creu drwy luosi `frame_count` yn ei gyfanrwydd â rhif uwch wedi'u cuddio gan `rh_y %= height`. Mae hyn yn gadael dim ond y picseli `lefel` ychwanegol ym mhob cam.
 line_numbers: false
 ---
 
-  for i in range(6): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+    for i in range(6):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -88,9 +90,9 @@ line_numbers: false
 title: Ychwanegu mwy o rwystrau
 ---
 
-Mae ychwanegu rhwystrau ychwanegol yn fater syml o gynyddu sawl gwaith mae'r ddolen `for` sy'n eu creu yn rhedeg. Fe allwch chi wneud hyn drwy gynyddu'r rhif rydych chi'n ei basio i'r swyddogaeth `range()` fesul `level`.
+Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
 
-**Cyngor:** Wrth gwrs, fe allwch chi ddefnyddio `level * 2` neu luosrifau mwy byth os ydych chi am wneud eich gêm yn anoddach.
+**Tip:** Of course, you can always use `level * 2`, or even larger multiples, if you want to make your game harder.
 
 --- /collapse ---
 
@@ -98,11 +100,11 @@ Mae ychwanegu rhwystrau ychwanegol yn fater syml o gynyddu sawl gwaith mae'r ddo
 
 ### Cadw sgôr
 
-Po hiraf mae eich chwaraewr yn para heb daro rhwystr, y gorau mae'n chwarae eich gêm. Bydd ychwanegu sgôr yn gadael iddyn nhw weld pa mor dda maen nhw'n ei wneud.
+The longer a player lasts without colliding with an obstacle, the better they're playing your game. Adding a score will let them see how well they're doing.
 
 --- task ---
 
-Ewch ati i greu newidyn `sgor` cyffredinol i gadw golwg ar sgôr y chwaraewr. Gosodwch hwn ar `0` er mwyn i chwaraewyr ddechrau gêm newydd heb bwyntiau.
+Create a global `score` variable to track the player's score. Set it to `0` so players start a new game without any points.
 
 --- code ---
 ---
@@ -111,7 +113,7 @@ line_numbers: false
 ---
 
 # Rhowch newidynnau cyffredinol yma
-sgor = 0
+Ewch ati i greu newidyn `sgor` cyffredinol i gadw golwg ar sgôr y chwaraewr. Gosodwch hwn ar `0` er mwyn i chwaraewyr ddechrau gêm newydd heb bwyntiau.
 
 --- /code ---
 
@@ -119,9 +121,9 @@ sgor = 0
 
 --- task ---
 
-Fe allwch chi gynyddu sgôr eich chwaraewr bob ffrâm lle nad yw wedi taro rhwystr drwy gynyddu ei sgôr pan fyddwch yn gwirio am wrthdrawiad yn `llunio_chwaraewr()`.
+You can increase your player's score for every frame where they have not collided with an obstacle by increasing their score when you check for collision in `draw_player()`.
 
-**Dewis:** Fe allwch chi benderfynu sawl pwynt mae bob ffrâm werth, ond mae cynyddu sgôr y chwaraewr fesul `level` yn gwobrwyo chwaraewyr sy'n gallu goroesi lefelau anoddach.
+**Choose:** You can decide how many points each frame is worth, but increasing the player's score by `level` rewards players who can survive at higher difficulty levels.
 
 --- code ---
 ---
@@ -129,9 +131,13 @@ language: python
 filename: main.py — draw_player()
 ---
 
-global score
-
-  if collide == safe: text('🎈', mouse_x, player_y) score += level else: text('💥', mouse_x, player_y)
+    global score
+    
+    if collide == safe.hex:
+        text('🎈', mouse_x, player_y)
+        score += level
+    else:
+        text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -139,48 +145,51 @@ global score
 
 --- task ---
 
-Fe ddylai chwaraewyr allu gweld eu sgôr. Oherwydd ei fod yn cynyddu mor gyflym, fyddai defnyddio `print()` ddim yn gweithio cystal. Defnyddiwch y swyddogaeth p5 `text()` tu mewn i'ch swyddogaeth `draw()` i'w ddangos fel testun ar sgrin y gêm yn lle.
+Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Use the p5 `text()` function inside your `draw()` function, to display it as text on the game screen instead.
 
 [[[processing-python-text]]]
 
-Fe allwch chi ddefnyddio'r gweithredwr `+` i gyfuno dau linyn neu fwy os hoffech chi roi pennawd fel 'sgôr' neu 'pwyntiau'. Oherwydd mai rhif yw `sgor`, bydd angen i chi ei drosi'n llinyn cyn gallu ei uno â llinyn arall. Fe allwch chi wneud hyn gyda `str()`:
+You can use the `+` operator to combine two or more strings if you want to give a heading like 'score' or 'points'. Because `score` is a number, you will need to convert it to a string before you can join it with another string. You can do this with `str()`:
 
-`message = 'Score: ' + str(score)`
-
-**Cyngor:** Ystyr `str()` yw llinyn — 'string'. Mae rhaglenwyr yn tynnu llythrennau fel hyn yn aml er mwyn gallu teipio llai!
+```python
+message = 'Score: ' + str(score)
+```
+**Tip:** `str()` is short for 'string' — programmers often remove letters like this, so they don't have to type as much!
 
 --- /task ---
 
 ### Gêm drosodd!
 
-Pan fydd chwaraewr wedi taro rhwystr, dylai'r gêm roi'r gorau i symud a dylai ei sgôr aros fel y mae.
+Fe ddylai chwaraewyr allu gweld eu sgôr. Oherwydd ei fod yn cynyddu mor gyflym, fyddai defnyddio `print()` ddim yn gweithio cystal. Defnyddiwch y swyddogaeth p5 `text()` tu mewn i'ch swyddogaeth `draw()` i'w ddangos fel testun ar sgrin y gêm yn lle.
 
 --- task ---
 
-Fe allwch chi ddefnyddio'r newidyn `level` i ddangos bod y 'Gêm drosodd' drwy ei osod ar 0 —gwerth na fydd yn ei gyrraedd unrhyw ffordd arall. Do this in the `else` step of your collision detection code.
+You can use the `level` variable to signal 'Game over' by setting it to 0 — a value it will never reach any other way. Do this in the `else` step of your collision detection code.
 
 --- /task ---
 
 --- task ---
 
-Ewch ati i greu datganiad `if` yn `draw()` sy'n profi a yw `level > 0` cyn galw unrhyw swyddogaeth — fel `background()`, `llunio_rhwystrau()`, a `llunio_chwaraewr()` — sy'n diweddaru'r gêm. Oherwydd nad yw'r swyddogaethau hyn yn cael eu galw, mae'n ymddangos bod y gêm wedi dod i ben, er bod eich rhaglen yn dal yn rhedeg.
+Create an `if` statement in `draw()` that tests whether `level > 0` before calling any of the functions — like `background()`, `draw_obstacles()`, and `draw_player()` — that update the game. Because these functions are not called, the entire game seems to end, even though your program is still running.
 
 --- /task ---
 
 --- task ---
 
-**Difa chwilod:** Efallai bydd angen i chi drwsio chwilod yn eich prosiect. Dyma rai chwilod cyffredin.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
 title: Dydy'r sgôr ddim i'w weld
 ---
 
-Gwnewch yn siŵr eich bod wedi cynnwys y swyddogaeth `text()` sy'n llunio sgôr y chwaraewr ar y pwynt priodol yn eich swyddogaeth `draw()`, a'ch bod wedi pasio'r gwerthoedd cywir iddi:
+Make sure that you've included the `text()` function that draws the player's score at the appropriate point in your `draw()` function, and that you've passed it the correct values:
 
-`text('Text to display', x, y)`
+```python
+text('Text to display', x, y)`
+```
 
-Fe ddylai edrych rhywbeth yn debyg i hyn:
+Ewch ati i greu datganiad `if` yn `draw()` sy'n profi a yw `lefel > 0` cyn galw unrhyw swyddogaeth — fel `background()`, `llunio_rhwystrau()`, a `llunio_chwaraewr()` — sy'n diweddaru'r gêm. Oherwydd nad yw'r swyddogaethau hyn yn cael eu galw, mae'n ymddangos bod y gêm wedi dod i ben, er bod eich rhaglen yn dal yn rhedeg.
 
 --- code ---
 ---
@@ -188,7 +197,12 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0: background(safe) fill(255) text('Score: ' + str(score), width/2, 20) draw_obstacles() draw_player()
+    if level > 0:
+        background(safe) 
+        fill(255)
+        text('Score: ' + str(score), width/2, 20)
+        draw_obstacles()
+        draw_player()
 
 --- /code ---
 
@@ -199,10 +213,9 @@ filename: main.py — draw()
 title: Dydy'r gêm ddim yn dod i ben ar ôl gwrthdrawiad
 ---
 
-Os ydych chi'n credu nad yw eich gêm yn canfod gwrthdrawiadau'n gywir o gwbl, rhowch gynnig yn gyntaf ar y cyfarwyddiadau difa chwilod yn y cam blaenorol o dan 'Does dim gwrthdrawiad pan fydd y chwaraewr yn cyrraedd rhwystr'.
+If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
 
-
-Os yw eich gêm yn canfod gwrthdrawiadau'n gywir, gwnewch yn siŵr eich bod wedi mewnoli'r cod sy'n llunio eich gêm yn y datganiad `if level > 0` yn gywir, i wneud yn siŵr ei fod ddim ond yn rhedeg os yw'r datganiad hwnnw'n wir. Er enghraifft:
+If your game is correctly detecting collisions, then check that you have properly indented the code that draws your game inside the `if level > 0` statement, to make sure it only runs if that statement is true. For example:
 
 --- code ---
 ---
@@ -210,11 +223,16 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0: background(safe) fill(255) text('Score: ' + str(score), width/2, 20) draw_obstacles() draw_player()
+    if level > 0:
+        background(safe)
+        fill(255)
+        text('Score: ' + str(score), width/2, 20)
+        draw_obstacles()
+        draw_player()
 
 --- /code ---
 
-Yn olaf, os yw'r ddau beth hynny'n gywir, efallai nad yw eich gêm yn gosod `level = 0` yn gywir pan fydd gwrthdrawiad. Er enghraifft:
+Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. For example:
 
 --- code ---
 ---
@@ -222,7 +240,12 @@ language: python
 filename: main.py — draw_player()
 ---
 
-  if collide == safe: text('🎈', mouse_x, player_y) score += level else: text('💥', mouse_x, player_y) level = 0
+    if collide == safe.hex:
+        text('🎈', mouse_x, player_y)
+        score += level
+    else:
+        text('💥', mouse_x, player_y)
+        level = 0
 
 --- /code ---
 
@@ -233,17 +256,21 @@ filename: main.py — draw_player()
 title: Dydy'r gêm ddim yn cyflymu
 ---
 
-Yn gyntaf, gwnewch yn siŵr bod `level` yn cynyddu'n gywir. Fe ddylech chi weld neges yn cael ei phrintio bob tro mae'n cynyddu. Os nad yw hyn yn digwydd, gwiriwch y cod ar gyfer printio'r neges a'r cod ar gyfer cynyddu'r lefel.
+First, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
 
-Os yw'r lefel yn cynyddu'n gywir, gwiriwch eich swyddogaeth `llunio_rhwystrau()`. Yn benodol, gwiriwch bod gennych chi `ob_y = randint(0, height) + (frame_count * level)`. Fe ddylai edrych rhywbeth yn debyg i hyn:
+If level is increasing correctly, check your `draw_obstacles()` function. In particular, check that you have `ob_y = randint(0, height) + (frame_count * level)`. It should look something like this:
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+Yn olaf, os yw'r ddau beth hynny'n gywir, efallai nad yw eich gêm yn gosod `lefel = 0` yn gywir pan fydd gwrthdrawiad. Er enghraifft:
 line_numbers: false
 ---
 
-  for i in range(6 + level): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+    for i in range(6 + level):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -254,26 +281,36 @@ line_numbers: false
 title: Does dim rhwystrau newydd yn ymddangos
 ---
 
-Mae ambell reswm posib am hyn. Ac mae yna resymau eraill ei fod yn edrych fel bod hynny'n digwydd, er nad yw'n digwydd go iawn. Yn gyntaf, oherwydd bod rhwystrau newydd yn cael eu hychwanegu ar sail `level`, gwnewch yn siŵr bod `level` yn cynyddu'n gywir. Fe ddylech chi weld neges yn cael ei phrintio bob tro mae'n cynyddu. Os nad yw hyn yn digwydd, gwiriwch y cod ar gyfer printio'r neges a'r cod ar gyfer cynyddu'r lefel.
+There are a few reasons this could be happening. And there are some more reasons why it might appear to be happening, when it isn't. First, because new obstacles are added based on `level`, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
 
-Os yw'r lefel yn cynyddu'n gywir, gwiriwch eich swyddogaeth `llunio_rhwystrau()` i sicrhau bod `level` yn cael ei defnyddio yn swyddogaeth `range()` y ddolen `for` sy'n llunio'r rhwystrau. Fe ddylai edrych rhywbeth yn debyg i hyn:
+If level is increasing correctly, check your `draw_obstacles()` function to ensure that you have `level` used in the `range()` function of the `for` loop that draws the obstacles. It should look something like this:
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+Yn gyntaf, gwnewch yn siŵr bod `lefel` yn cynyddu'n gywir. Fe ddylech chi weld neges yn cael ei phrintio bob tro mae'n cynyddu. Os nad yw hyn yn digwydd, gwiriwch y cod ar gyfer printio'r neges a'r cod ar gyfer cynyddu'r lefel.
 line_numbers: false
 ---
 
-  for i in range(6 + level): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * level) ob_y %= height #Wrap around text('🌵', ob_x, ob_y)
+    for i in range(6 + level):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
-Os ydych chi wedi gwirio hyn i gyd a bod nifer y rhwystrau'n dal ddim yn edrych fel ei fod yn cynyddu, mae'n bosib ei fod ond nad ydych chi'n gallu ei weld. Fe ddylech chi roi cynnig ar rai o'r camau hyn i brofi hyn:
+If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
   - Arafu'r gêm gan ddefnyddio `frame_rate()` yn eich swyddogaeth `setup()` i roi mwy o amser i chi gyfri
-  - Newid y dosbarthiad rydych chi'n ei ddefnyddio ar gyfer eich rhifau ar hap. Mae'n annhebygol, ond efallai fod rhai rhwystrau'n ymddangos ar ben ei gilydd ar hap
-  - Ychwanegu `print()` at y ddolen `for` yn `llunio_rhwystrau()` sy'n printio gwerth `i` bob tro mae'r ddolen yn troi, er mwyn i chi allu gwneud yn siŵr ei bod yn rhedeg sawl gwaith y dylai redeg
-  - Dim ond er mwyn profi, newidiwch `range(6 + level)` i `range(6 * level)` — fe ddylai fod yn haws sylwi ar y cynnydd wedyn!
 
+```python
+run(frame_rate = 10)
+```
+
+language: python filename: main.py — llunio_rhwystrau()
+
+  - Change the seed you're using for your random numbers. It's unlikely, but it is possible that some obstacles are randomly appearing directly on top of each other
+  - Add a `print()` to the `for` loop in `draw_obstacles()` that prints out the value of `i` in each pass of the loop, so you can verify whether it's running the number of times it should
+  - Just for testing purposes, change `range(6 + level)` to `range(6 * level)` — that increase should be easier to spot!
 
 --- /collapse ---
 
