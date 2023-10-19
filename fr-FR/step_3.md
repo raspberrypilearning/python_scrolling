@@ -23,12 +23,11 @@ Définis une fonction `dessine_obstacles()` :
 
 --- code ---
 ---
-language: python
-filename: main.py - draw_obstacles()
+filename: main.py - dessine_obstacles()
+line_highlights: 4
 ---
 
 def dessine_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Remplacer par ton obstacle
-
 
 --- /code ---
 
@@ -36,11 +35,11 @@ Ajoute du code à `dessin()` pour appeler `dessine_obstacles()` à chaque image.
 
 --- code ---
 ---
-language: python
 filename: main.py - draw()
+line_highlights: 5
 ---
 
-def dessin(): sur = color(200, 100, 0) #Ajouter la couleur de ton thème background(sur)  
+def dessin(): ur = color(200, 100, 0) #Ajouter la couleur de ton thème background(sur)  
 dessine_obstacles() #Avant de dessiner le joueur dessine_joueur()
 
 --- /code ---
@@ -59,29 +58,25 @@ dessine_obstacles() #Avant de dessiner le joueur dessine_joueur()
 title: Utiliser une image de démarrage
 ---
 
-Clique sur l'icône **View and Add Images**.
-
-![L'icône d'image en haut à droite de la zone de code.](images/manage-images.png)
-
-Les images incluses dans le projet de démarrage seront affichées dans la liste `Image library`.
+Les images incluses dans le projet de démarrage seront affichées dans la liste `Bibliothèque d'images`.
 
 ![La bibliothèque d'images avec la liste des images incluses.](images/starter-images.png)
 
 Note le nom de l'image que tu souhaites utiliser.
 
-Charge l'image dans la fonction `configuration()`.
+Charge l'image dans la fonction `setup()`.
 
 --- code ---
 ---
-language: python
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
+line_highlights: 12
 ---
 
-def configuration(): size(400, 400) joueur = load_image('skiing.png') #Charger ton image obstacle = load_image('rocket.png') #Charger ton image
+def setup(): size(400, 400) joueur = load_image('skiing.png') #Charger ton image obstacle = load_image('rocket.png') #Charger ton image
 
 --- /code ---
 
-Appelle `image()` et définis-la comme global dans la fonction `dessine_obstacles()`.
+Find the line `# Keep this to run your code`. Appelle `image()` et définis-la comme global dans la fonction `dessine_obstacles()`.
 
 --- code ---
 ---
@@ -91,9 +86,7 @@ filename: main.py - draw_obstacles()
 
 def dessine_obstacles(): ob_x = width/2 ob_y = height/2
 
-   global obstacle
-
-   image(obstacle, ob_x, ob_y, 30, 30) #Redimensionner pour s'adapter à ton thème
+    image(obstacle, ob_x, ob_y, 30, 30) #Redimensionner pour s'adapter à ton thème
 
 --- /code ---
 
@@ -114,9 +107,11 @@ language: python
 filename: main.py - setup()
 ---
 
-def configuration(): size(400, 400) text_size(40) #Contrôle la taille de l'emoji text_align(CENTER, TOP) #Position autour du centre
+def setup(): size(400, 400) text_size(40) #Contrôle la taille de l'emoji text_align(CENTER, TOP) #Position autour du centre
 
 --- /code ---
+
+Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function.
 
 --- code ---
 ---
@@ -151,7 +146,7 @@ def dessine_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 title: Dessiner un obstacle à l'aide de plusieurs formes
 ---
 
-![desc](images/tree_obstacle.png)
+![A tree drawn with green triangles for the body and a brown rectangle for the trunk](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -175,7 +170,7 @@ Ajoute maintenant du code pour augmenter la position `y` de l'obstacle à chaque
 
 La variable p5 `frame_count` commence à compter les images lorsque tu cliques sur exécuter.
 
-`ob_y %= height` fixe la position `y` au reste lorsqu'elle est divisée par `height`. Avec une `height` de "400", cela transformera `401` en `1` donc lorsque les obstacles disparaissent du bas de l'écran, ils réapparaissent en haut.
+`ob_y %= height` fixe la position `y` au reste lorsqu'elle est divisée par `height`. Avec une `height` de '400', cela transformera `401` en `1` donc lorsque les obstacles disparaissent du bas de l'écran, ils réapparaissent en haut.
 
 --- code ---
 ---
@@ -193,7 +188,6 @@ def dessine_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Augmente 
 
 Tu peux dessiner de nombreuses copies de ton obstacle à différents points de départ, mais c'est beaucoup de travail. Utilisons un raccourci.
 
-
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
 <span style="color: #0faeb0">**La génération procédurale**</span> est utilisée dans la création de mondes de jeu, d'obstacles et de scènes de film pour créer un caractère aléatoire, mais avec certaines règles appliquées. Une <span style="color: #0faeb0">seed</span> signifie que tu peux générer les mêmes résultats chaque fois que vous utilisez le même seed.</p>
 
@@ -207,12 +201,13 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def dessine_obstacles():
+seed(12345678) #N'importe quel nombre convient
 
-  seed(12345678) #N'importe quel nombre convient
-
-  for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Remplacer par ton obstacle
+    for i in range(6):<br x-id="2" />
+        ob_x = randint(0, height) 
+        ob_y = randint(0, height) + frame_count 
+        ob_y %= height 
+        text('🌵', ob_x, ob_y) #Remplacer par ton obstacle
 
 --- /code ---
 
@@ -233,7 +228,12 @@ Tester ton programme peut provoquer des crises chez les personnes atteintes d'é
 - T'assurer d'avoir ajouté la ligne de code `seed()` pour être sûr que tes obstacles ne sautent pas
 - Demander à quelqu'un de l'exécuter pour toi
 - Continuer et terminer le projet, en demandant à quelqu'un d'exécuter le projet pour toi à la fin afin que tu puisses déboguer
-- Modifier la fréquence d'images avant d'exécuter ton programme en ajoutant `frame_rate(1)` au début de `configuration()` — tu peux supprimer ceci une fois que tu as confirmé qu'il n'y a pas de bogue
+- Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
+
+```python
+run(frame_rate = 10)
+```
+You can alter the speed of the game by changing `10` to a higher or lower value.
 
 --- /collapse ---
 
@@ -275,10 +275,11 @@ filename: main.py — draw_obstacles()
 
 def dessine_obstacles():
 
-  seed(12345678)
-
-  for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Remplacer par ton obstacle
+    for i in range(6):<br x-id="2" />
+        ob_x = randint(0, height) 
+        ob_y = randint(0, height) + frame_count 
+        ob_y %= height 
+        text('🌵', ob_x, ob_y) #Remplacer par ton obstacle
 
 --- /code ---
 
