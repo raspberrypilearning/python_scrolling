@@ -12,15 +12,17 @@
 </div>
 </div>
 
-あなたのゲームのテーマは何ですか？ あなたが望むものを何でも選ぶことができます。 たとえば、こんなアイデアがあります。
+あなたのゲームのテーマは何ですか？ Here are some ideas:
 - スポーツや趣味
-- 映画、ショー、またはゲーム
+- Hobbies
 - 科学や自然
-- そのほか何でも！
+- Nature
 
 --- task ---
 
-[スタータープロジェクト](https://trinket.io/python/cda05e5911){:target="_blank"}を開きます。 Trinketは別のブラウザタブで開きます。
+Open the [Don't Collide! starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"} project. The code editor will open in another browser tab.
+
+If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
 
 --- /task ---
 
@@ -30,8 +32,8 @@
 
 --- code ---
 ---
-language: python
 filename: main.py - setup()
+line_highlights: 10
 ---
 
 def setup():    
@@ -45,12 +47,12 @@ size(400, 400)
 
 ゲームのテーマに基づい背景の色を保存するために、 `safe` という変数を作成します。
 
-これは、プレーヤーが安全に過ごせる場所の色です。この変数は、あとでまた使います。
+これは、プレーヤーが安全に過ごせる場所の色です。 この変数は、あとでまた使います。
 
 --- code ---
 ---
-language: python
 filename: main.py - draw()
+line_highlights: 14, 15, 16
 ---
 
 def draw():    
@@ -71,7 +73,7 @@ background(safe)
 
 次に、ゲームをプレイして障害物を避けるキャラクターを選びます。 物、人、動物、または何か他のものを選びますか？
 
-プレーヤーは、固定の `y` 位置とマウスポインターと同じ `x`の位置に表示されます。この位置は、 `p5`の変数 `mouse_x` に格納されています。
+プレーヤーは、固定の `y` 位置とマウスポインターと同じ `x`の位置に表示されます。 この位置は、 `p5`の変数 `mouse_x` に格納されています。
 
 --- task ---
 
@@ -81,8 +83,8 @@ background(safe)
 
 --- code ---
 ---
-language: python
-filename: main.py - draw_player()
+含まれている画像のリストを含む画像ライブラリ。
+line_highlights: 12-14
 ---
 
 def draw_player():    
@@ -94,8 +96,8 @@ player_y = int(height * 0.8) #画面の下の方に置く
 
 --- code ---
 ---
-language: python
 filename: main.py - draw()
+line_highlights: 19
 ---
 
 def draw():    
@@ -121,13 +123,9 @@ draw_player()
 title: スタータープロジェクトの画像を使う
 ---
 
-**View and Add Images**アイコンをクリックします。
-
-![コード領域の右上にある画像アイコン。](images/manage-images.png)
-
 スタータープロジェクトで用意された画像は、 `Image Library` のリストに出て来ます。
 
-![含まれている画像のリストを含む画像ライブラリ。](images/starter-images.png)
+![The Image gallery displaying the included images.](images/starter-images.png)
 
 使いたい画像の名前をメモします。
 
@@ -135,8 +133,8 @@ title: スタータープロジェクトの画像を使う
 
 --- code ---
 ---
-language: python
 filename: main.py - setup()
+line_highlights: 11-12
 ---
 
 def setup():   
@@ -149,16 +147,12 @@ player = load_image('skiing.png') #選んだ画像
 
 --- code ---
 ---
-language: python
-filename: main.py - draw_player()
+image(player, mouse_x, player_y, 30, 30)
+line_highlights: 16
 ---
 
 def draw_player():    
 player_y = int(height * 0.8) #画面の下の方に置く
-
-  global player
-
-  image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -175,21 +169,23 @@ P5の `text()` 関数で絵文字を使えるので、プレーヤーを絵文�
 
 --- code ---
 ---
-language: python
 filename: main.py - setup()
+line_highlights: 11-13
 ---
 
 def setup():    
 size(400, 400)     
-text_size(40) #絵文字の大きさ     
+text_size(40) #絵文字の大きさi     
 text_align(CENTER, TOP) #真ん中に置く
 
 --- /code ---
 
+global player
+
 --- code ---
 ---
-language: python
-filename: main.py - draw_player()
+コード領域の右上にある画像アイコン。
+line_highlights: 16-17
 ---
 
 def draw_player():     
@@ -221,7 +217,7 @@ text('🎈', mouse_x, player_y)
 title: いくつかの図形を使ってプレーヤーを描く
 ---
 
-![説明](images/face_player.png)
+![A face shape made from a green circle as a background and two eyes drawn from blue circles, with black circles within and a glint within those using a white circle.](images/face_player.png)
 
 --- code ---
 ---
@@ -236,16 +232,16 @@ noStroke()
 fill(0, 200, 100)    
 ellipse(mouse_x, player_y, 60, 60)
 
-  #目    
-fill(0, 100, 200)    
-ellipse(mouse_x - 10, player_y - 10, 20, 20)    
-ellipse(mouse_x + 10, player_y - 10, 20, 20)    
-fill(0)    
-ellipse(mouse_x - 10, player_y - 10, 10, 10)     
-ellipse(mouse_x + 10, player_y - 10, 10, 10)     
-fill(255)    
-ellipse(mouse_x - 12, player_y - 12, 5, 5)    
-ellipse(mouse_x + 12, player_y - 12, 5, 5)
+    #目<br x-id="4" />
+      fill(0, 100, 200)<br x-id="4" />
+      ellipse(mouse_x - 10, player_y - 10, 20, 20)<br x-id="4" />
+      ellipse(mouse_x + 10, player_y - 10, 20, 20)<br x-id="4" />
+      fill(0)<br x-id="4" />
+      ellipse(mouse_x - 10, player_y - 10, 10, 10)<br x-id="5" />
+      ellipse(mouse_x + 10, player_y - 10, 10, 10)<br x-id="5" />
+      fill(255)<br x-id="4" />
+      ellipse(mouse_x - 12, player_y - 12, 5, 5)<br x-id="4" />
+      ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
@@ -270,7 +266,7 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 title: プレーヤーが表示されません
 ---
 
-フルスクリーンに切り替えてみてください。 また、プレーヤーを描くのに指定した`x`1および`y`の座標を確認します。指定した座標が、`size()`で指定したキャンバス内にありますか。
+フルスクリーンに切り替えてみてください。 また、プレーヤーを描くのに指定した`x`1および`y`の座標を確認します。
 
 --- /collapse ---
 
@@ -279,7 +275,7 @@ title: プレーヤーが表示されません
 title: 画像が読み込まれていません
 ---
 
-まず、画像が `Image Library`にあることを確認します。 次に、ファイル名をよく確認します。大文字と小文字は違うものであること、ピリオドやハイフンなどが重要であることを忘れないでください。
+まず、画像が `Image Library`にあることを確認します。 次に、ファイル名をよく確認します。 大文字と小文字は違うものであること、ピリオドやハイフンなどが重要であることを忘れないでください。
 
 --- /collapse ---
 
