@@ -32,19 +32,16 @@ Voeg levens toe aan je spel, zodat spelers een paar botsingen kunnen overleven. 
  - Je hebt ook een manier nodig waarop spelers kunnen zien hoeveel levens ze nog hebben, en misschien een soort waarschuwing die hen vertelt wanneer ze met hun laatste leven spelen
  - Je zou een object kunnen toevoegen dat, wanneer de speler ermee in botsing komt, hij een extra leven krijgt. Onthoud dat je je normale botsingscode moet wijzigen, zodat er niet tegelijkertijd een leven wordt afgetrokken!
 
-Elk voorbeeldproject in de [Inleiding](./) heeft een **Kijk van binnen** link waarmee je het project kunt openen en de code kunt bekijken om ideeën op te doen en te zien hoe ze werken. Het onderstaande project "Ontwijk asteroiden" heeft al deze functies:
+Elk voorbeeldproject in de [Inleiding](./) heeft een **Kijk van binnen** link waarmee je het project kunt openen en de code kunt bekijken om ideeën op te doen en te zien hoe ze werken.
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
+Het onderstaande project "Ontwijk asteroiden" heeft al deze functies:
 
-**Ontwijk asteroiden**: [Bekijk van binnen](https://trinket.io/python/d156014e67){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Dodge asteroids**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 
-</div>
-</div>
+You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
-Bekijk enkele Niet botsen-projecten die zijn gemaakt door communityleden in [Don't Collide - Communitybibliotheek](https://wke.lt/w/s/KobNfx)van de Raspberry Pi Foundation {:target="_blank"}.
+Bekijk enkele Niet botsen-projecten die zijn gemaakt door communityleden in [Don't Collide - Communitybibliotheek](https://wke.lt/w/s/KobNfx){:target="_blank"} van de Raspberry Pi Foundation.
 
 --- save ---
