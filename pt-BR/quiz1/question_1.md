@@ -1,14 +1,14 @@
 ## Teste rápido
 
-Responda as três perguntas. Há dicas para guiá-lo para a resposta correta.
+Responda às três perguntas. Existem dicas para guiá-lo para a resposta correta.
 
-Depois de responder a cada pergunta, clique em **Verificar resposta**.
+Após responder cada pergunta, clique em **Ver minha resposta**.
 
 Divirta-se!
 
---- questão ---
+--- question ---
 ---
-legenda: Pergunta 1 de 3
+legend: Pergunta 1 de 3
 ---
 
 Você usou muitas declarações `if` para controlar o comportamento do seu jogo. Algumas delas podem ter condições mais complexas, usando `and` para fazer vários testes de uma vez. Se você executasse o seguinte trecho de código condicional, que resultado você esperaria?
@@ -34,7 +34,7 @@ else:
   print('Direto para a base!')
 ```
 
--- opções --
+--- choices ---
 
 - ( )
 ```
@@ -42,7 +42,7 @@ else:
 ```
   --- feedback ---
 
-Enquanto `score >= 5000` for verdadeiro, para uma condição `and` as duas partes tem de ser verdade, e `lives>= 3` é falso.
+While `score >= 5000` is true, for an `and` condition both parts must be true, and `lives >= 3` is false.
 
   --- /feedback ---
 
@@ -51,9 +51,9 @@ Enquanto `score >= 5000` for verdadeiro, para uma condição `and` as duas parte
 Indo bem!
 Continue!
 ```
-  --- /feedback ---
+  --- feedback ---
 
-Isso está correto — `score >= 5000` é verdadeiro, assim como `lives > 1` na instrução aninhada `if`.
+Isso está correto — `pontos >= 5000` é verdadeiro, assim como `vidas > 1` na instrução aninhada `if`.
 
   --- /feedback ---
 
@@ -63,20 +63,20 @@ Indo bem!
 ```
   --- feedback ---
 
-Quase, mas `score >= 5.000` não é a única condição que o programa consideraria verdadeira durante a execução.
+Quase, mas `pontos >= 5.000` não é a única condição que o programa consideraria verdadeira durante a execução.
 
   --- /feedback ---
 
 - ( )
 ```
-Força!
+Se esforce mais!
 ```
   --- feedback ---
 
-Enquanto `lives > 1` for verdadeiro, somente o código na primeira condição verdadeira de uma instrução `if`/`elif`/`else` é executado, e `lives > 1` não é a primeira condição que é verdadeira.
+Enquanto `vidas > 1` for verdadeiro, somente o código na primeira condição verdadeira de uma instrução `if`/`elif`/`else` é executado, e `vidas > 1` não é a primeira condição que é verdadeira.
 
   --- /feedback ---
 
--- /opções --
+--- /choices ---
 
---- /questão ---
+--- /question ---
