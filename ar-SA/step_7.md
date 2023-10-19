@@ -6,7 +6,7 @@
 </div>
 <div>
 
-! [مثال مشروع sace مع حيوات.] (images / example1.png) {: width = "300px"}
+![مثال مشروع sace مع حيوات.](images/example1.png){:width="300px"}
 
 </div>
 </div>
@@ -32,19 +32,16 @@
  - ستحتاج أيضًا إلى وسيلة للاعبين لمعرفة عدد الأرواح المتبقية لديهم ، وربما نوعًا من التحذير يخبرهم عندما يكونون في حياتهم الأخيرة
  - يمكنك إضافة كائن ، عندما يصطدم به اللاعب ، يمنحه حياة إضافية. تذكر أنك ستحتاج إلى تعديل الشفرة البرمجية للاصطدام العادي بحيث لا يطرح الحياة في نفس الوقت!
 
-يحتوي كل مشروع مثال في [مقدمة](./) على رابط **انظر داخل** لكي تفتح المشروع وتنظر إلى الشفرة البرمجية للحصول على أفكار ومعرفة كيفية عملها. يحتوي مشروع "Dodge Asteroids" أدناه على كل هذه الميزات:
+يحتوي كل مشروع مثال في [مقدمة](./) على رابط **انظر داخل** لكي تفتح المشروع وتنظر إلى الشفرة البرمجية للحصول على أفكار ومعرفة كيفية عملها.
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
+يحتوي مشروع "دودج كويكبات" أدناه على كل هذه الميزات:
 
-** دودج كويكبات **: [راجع الداخل] (https://trinket.io/python/d156014e67) {: target = "_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Dodge asteroids**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 
-</div>
-</div>
+You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
-ألقِ نظرة على بعض مشاريع "لا تصطدم" التي أنشأها أعضاء المجتمع في [لا تتعارض مع مؤسسة Raspberry Pi Foundation - مكتبة المجتمع](https://wke.lt/w/s/KobNfx){: target = "_ blank"}.
+ألقِ نظرة على بعض مشاريع "لا تصطدم" التي أنشأها أعضاء المجتمع في [لا تتعارض مع مؤسسة Raspberry Pi Foundation - مكتبة المجتمع](https://wke.lt/w/s/KobNfx){:target="_blank"}.
 
 --- save ---
