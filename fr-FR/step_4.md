@@ -31,7 +31,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-collision = get(mouse_x, joueur_y)
+    collision = get(mouse_x, joueur_y)
 
 --- /code ---
 
@@ -39,39 +39,13 @@ collision = get(mouse_x, joueur_y)
 
 --- task ---
 
+Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
+
 Crée une condition pour vérifier `if` la variable `collision` est la même que la variable `sur` — si c'est le cas, alors ton joueur touche l'arrière-plan en toute sécurité et n'a pas heurté un obstacle.
 
-Déplace ton code pour dessiner ton joueur à l'intérieur de ta condition `if collision == sur` et ajoute du code dans l'instruction `else` pour que le joueur réagisse à la collision.
-
 **Choisir :** Comment ton joueur doit-il réagir ? Tu pourrais :
-+ Remplacer l'image par une version `chute`
 + Utiliser un emoji différent pour le joueur
 + Tu peux utiliser `tint()` pour changer l'apparence d'une image, n'oublie pas d'appeler `no_tint()` après avoir dessiné l'image
-
---- collapse ---
----
-title: Changer l'image
----
-
-Tu peux utiliser une image différente pour représenter ton joueur lorsqu'il entre en collision avec un obstacle.
-
-Voici un exemple :
-
---- code ---
----
-language: python
-filename: main.py - draw_player()
----
-
-def dessine_joueur(): joueur_y = int(height * 0.8)
-
-  collision = get(mouse_x, joueur_y)
-
-  if collision == sur: #sur l'arrière plan image(ski, mouse_x, joueur_y, 30, 30) else: #collision image(chute, mouse_x, joueur_y, 30, 30)
-
---- /code ---
-
---- /collapse ---
 
 --- collapse ---
 ---
@@ -88,7 +62,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def configuration(): size(400, 400) text_size(40) #Contrôle la taille de l'emoji text_align(CENTER, TOP) #Position autour du centre
+def setup(): size(400, 400) text_size(40) #Contrôle la taille de l'emoji text_align(CENTER, TOP) #Position autour du centre
 
 --- /code ---
 
@@ -136,31 +110,13 @@ Si ton personnage joueur touche l'obstacle et que rien ne se passe, il y a quelq
 L'impression de la couleur du pixel dont tu vérifies une collision peut être utile :
 
 ```python
-  impression (red (collision), green (collision), blue (collision))
+    print(red(collide), green(collide), blue(collide))
 ```
 
 Tu peux également imprimer un cercle autour du point que tu vérifies et ajuster le point que tu vérifies si tu dois :
 
 ```python
-  no_fill()
-  ellipse(mouse_x, joueur_y, 10, 10) #Dessiner un point de collision
-```
-
---- /collapse ---
-
---- /task ---
-
---- task ---
-
-**Facultatif :** Pour le moment, tu ne détectes que des collisions sur un pixel de ton joueur. Tu peux également détecter des collisions au niveau d'autres pixels au bord de ton joueur, tels que les bords inférieur ou les plus à gauche et à droite.
-
---- collapse ---
----
-title: Détection de collision avec plusieurs pixels
----
-
-```python
-def dessine_joueur():
+    def dessine_joueur():
 
   joueur_y = int(height * 0.8)
   #Utile pour le débogage
@@ -177,7 +133,7 @@ def dessine_joueur():
   collision3 = get(mouse_x + 12, joueur_y + 20)
   collision4 = get(mouse_x, joueur_y + 40)
 
-  if mouse_x < width : #À gauche de l'écran
+  if mouse_x < width: #À gauche de l'écran
     collision2 = sur
 
   if mouse_x > width: #à droite de l'écran
@@ -187,6 +143,24 @@ def dessine_joueur():
     text('🎈' , mouse_x, joueur_y)
   else :
     text('💥', mouse_x, joueur_y)
+```
+
+--- /collapse ---
+
+--- /task ---
+
+--- task ---
+
+**Facultatif :** Pour le moment, tu ne détectes que des collisions sur un pixel de ton joueur. Tu peux également détecter des collisions au niveau d'autres pixels au bord de ton joueur, tels que les bords inférieur ou les plus à gauche et à droite.
+
+--- collapse ---
+---
+title: Détection de collision avec plusieurs pixels
+---
+
+```python
+no_fill()
+  ellipse(mouse_x, joueur_y, 10, 10) #Dessiner un point de collision
 ```
 
 --- /collapse ---
