@@ -32,18 +32,15 @@ Ajoute des vies à ton jeu pour permettre aux joueurs de survivre à quelques co
  - Tu auras également besoin d'un moyen pour les joueurs de savoir combien de vies il leur reste, et peut-être d'une sorte d'avertissement leur indiquant quand ils sont sur leur dernière vie
  - Tu peux ajouter un objet qui, lorsque le joueur entre en collision avec lui, leur donne une vie supplémentaire. N'oublie pas que tu devras modifier ton code de collision habituel afin qu'il ne soustrait pas une vie en même temps !
 
-Chaque exemple de projet dans [l'introduction](./) a un lien **Voir à l'intérieur** pour te permettre d'ouvrir le projet et de regarder le code pour avoir des idées et voir comment ils fonctionnent. Le projet « Eviter les astéroides » ci-dessous possède toutes ces fonctionnalités :
+Chaque exemple de projet dans [l'introduction](./) a un lien **Voir à l'intérieur** pour te permettre d'ouvrir le projet et de regarder le code pour avoir des idées et voir comment ils fonctionnent.
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
+Le projet « Eviter les astéroides » ci-dessous possède toutes ces fonctionnalités :
 
-**Éviter les astéroïdes** : [Voir à l'intérieur](https://trinket.io/python/d156014e67){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Dodge asteroids**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 
-</div>
-</div>
+You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
 Jette un œil à certains projets Pas de collision créés par des membres de la communauté dans la bibliothèque [Don't collide - Community](https://wke.lt/w/s/KobNfx){:target="_blank"} de Raspberry Pi Foundation.
 
