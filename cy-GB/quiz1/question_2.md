@@ -33,7 +33,7 @@ Ddim yn hollol. Mae hyn yn gallu digwydd gyda rhwystrau wedi'u cynhyrchu'n weith
 Ddim yn hollol. Mae hyn yn gallu digwydd naill ai ar ddechrau'r gêm neu pan fydd rhwystrau newydd yn cael eu hychwanegu oherwydd bod y lefel anhawster wedi'i chodi, os ydyn nhw'n digwydd dewis safle sy'n agos i safle'r chwaraewr.
 
 
-**Cyngor:** Ateb posib fyddai gwneud y chwaraewr yn ddiogel rhag taro pob rhwystr dros dro, neu ddim ond rhwystrau newydd eu creu hyd yn oed, am gyfnod byr ar ôl codi'r lefel. Pa broblemau allai godi pe bai'r rhwystr yn dewis safle newydd a bod hwnnw'n rhy agos i'r chwaraewr?
+**Tip:** A potential solution might be to make the player temporarily immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. Pa broblemau allai godi pe bai'r rhwystr yn dewis safle newydd a bod hwnnw'n rhy agos i'r chwaraewr?
 
   --- /feedback ---
 
@@ -41,7 +41,7 @@ Ddim yn hollol. Mae hyn yn gallu digwydd naill ai ar ddechrau'r gêm neu pan fyd
 
   --- feedback ---
 
-Ddim yn hollol. Oherwydd bod cynhyrchu ar hap yn gallu dewis grwpiau o rifau sy'n agos i'w gilydd, mae hyn yn gallu bod yn broblem.
+Ddim yn hollol. Because random generation can choose groups of numbers that are close together, this can be a problem.
 
 
 **Cyngor:** Un ateb fyddai newid i gynhyrchu ar hap yn rhannol — rhannu'r sgrin yn ddarnau a defnyddio rhifau ar hap i gynhyrchu rhwystrau yn yr holl ddarnau hynny. Allwch chi feddwl sut byddech chi'n gallu defnyddio'r math hwn o gynhyrchu gweithdrefnol i wneud eich gêm yn fwy didddorol neu'n fwy heriol?
