@@ -1,6 +1,6 @@
 --- question ---
 ---
-legenda: Pergunta 3 de 3
+legend: Pergunta 3 de 3
 ---
 
 Você fez um jogo com o qual está muito satisfeito e o compartilhou. Um jogador o revisou e compartilhou alguns comentários atenciosos com algumas mudanças que gostaria de ver.
