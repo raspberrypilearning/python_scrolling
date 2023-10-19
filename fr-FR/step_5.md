@@ -22,7 +22,7 @@ Crée une variable `global` `niveau` pour suivre le niveau actuel du joueur. Ré
 --- code ---
 ---
 language: python filename: main.py
-line_numbers: false
+line_highlights: 7
 ---
 
 # Inclure les variables globales ici
@@ -40,22 +40,21 @@ Ce code utilise le `height` et le `frame_count` pour augmenter la variable `nive
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
-line_numbers: false
+language: python
+language: python filename: main.py — dessine_obstacles()
 ---
 
 def dessine_obstacles():
 
-  global niveau #Utiliser global niveau
-
-  if frame_count % height == height - 1 and niveau < 5: niveau += 1 print('Tu as atteint le niveau', niveau)
+    if frame_count % height == height - 1 and niveau &#060; 5: 
+        niveau += 1 
+        print('Tu as atteint le niveau', niveau)
 
 --- /code ---
 
 --- /task ---
 
 --- task ---
-
 
 Les deux principales options pour augmenter la difficulté sont d'accélérer le jeu et d'augmenter le nombre d'obstacles.
 
@@ -68,16 +67,19 @@ La vitesse du jeu est contrôlée par la vitesse à laquelle les obstacles sembl
 
 Au lieu de déplacer tes obstacles d'un pixel dans chaque image, ce code les déplace effectivement par `niveau` de pixels à la place.
 
-En regardant le code, tu peux t'attendre à ce que la vitesse augmente de plus de `niveau` de pixels. Par exemple, juste avant que ton `niveau` n'augmente, le `frame_count` est `799` — comme le `niveau` augmente d'une image avant le `frame_count` est un multiple pair de `height` (fixé à `400` pixels) — et `799 * 3` est nettement plus grand que `799 * 2`. Cependant, les pixels supplémentaires créés en multipliant l'ensemble de `frame_count` par un nombre plus grand sont cachés par `ob_y %= height`. Cela ne laisse que les pixels supplémentaires de` niveau` à chaque étape.
-
+En regardant le code, tu peux t'attendre à ce que la vitesse augmente de plus de `niveau` de pixels. Par exemple, juste avant que ton `niveau` n'augmente, le `frame_count` est `799` — comme le `niveau` augmente d'une image avant le `frame_count` est un multiple pair de `height` (fixé à `400` pixels) — et `799 * 3` est nettement plus grand que `799 * 2`. Cependant, les pixels supplémentaires créés en multipliant l'ensemble de `frame_count` par un nombre plus grand sont cachés par `ob_y %= height`. Cela ne laisse que les pixels supplémentaires de `niveau` à chaque étape.
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+language: python filename: main.py — dessine_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * niveau) ob_y %= height #enroulement text('🌵', ob_x, ob_y )
+    for i in range(6): 
+        ob_x = randint(0, height) 
+        ob_y = randint(0, height) + (frame_count * niveau) 
+        ob_y %= height #enroulement 
+        text('🌵', ob_x, ob_y )
 
 --- /code ---
 
@@ -90,7 +92,7 @@ title: Ajouter plus d'obstacles
 
 L'ajout d'obstacles supplémentaires consiste simplement à augmenter le nombre de fois que la boucle `for` qui les crée s'exécute. Tu peux le faire en augmentant le nombre que tu passes à la fonction `range()` par `niveau`.
 
-**Astuce :** Bien sûr, tu peux toujours utiliser `niveau * 2`, ou des multiples encore plus grands, si tu veux rendre ton jeu plus difficile.
+**Astuce :**Bien sûr, tu peux toujours utiliser `niveau* 2`, ou des multiples encore plus grands, si tu veux rendre ton jeu plus difficile.
 
 --- /collapse ---
 
@@ -129,9 +131,10 @@ language: python
 filename: main.py — draw_player()
 ---
 
-global score
-
-  if collision == sur: text('🎈', mouse_x, joueur_y) score += niveau else: text('💥', mouse_x, joueur_y)
+    if collision == sur: 
+        text('🎈', mouse_x, joueur_y) score += niveau 
+      else: 
+        text('💥', mouse_x, joueur_y)
 
 --- /code ---
 
@@ -139,14 +142,15 @@ global score
 
 --- task ---
 
-Les joueurs devraient pouvoir voir leur score. Parce qu'il augmente si rapidement, utiliser `print()` ne fonctionnerait pas très bien. Utilise la fonction p5 `text()` dans ta fonction `dessin()` pour l'afficher sous forme de texte sur l'écran de jeu à la place.
+Les joueurs devraient pouvoir voir leur score. Parce qu'il augmente si rapidement, utiliser `print()` ne fonctionnerait pas très bien. Utilise la fonction p5 `text()` dans ta fonction `draw()` pour l'afficher sous forme de texte sur l'écran de jeu à la place.
 
 [[[processing-python-text]]]
 
 Tu peux utiliser l'opérateur `+` pour combiner deux ou plusieurs chaînes si tu souhaites donner un titre comme « score » ou « points ». Étant donné que `score` est un nombre, tu devras le convertir en chaîne avant de pouvoir le joindre à une autre chaîne. Tu peux le faire avec `str()`:
 
-`message = 'Score : ' + str(score)`
-
+```python
+message = 'Score : ' + str(score)
+```
 **Astuce :** `str()` est l'abréviation de « string » — les programmeurs suppriment souvent des lettres comme celle-ci, donc ils n'ont pas à taper autant !
 
 --- /task ---
@@ -178,7 +182,9 @@ title: Le score ne s'affiche pas
 
 Assure-toi que tu as inclus la fonction `text()` qui dessine le score du joueur au point approprié dans ta fonction `draw()` et que tu lui as transmis les valeurs correctes :
 
-`text('Texte à afficher', x, y)`
+```python
+text('Texte à afficher', x, y)
+```
 
 Ça devrait ressembler a quelque chose comme çà :
 
@@ -188,7 +194,12 @@ language: python
 filename: main.py — draw()
 ---
 
-  if niveau > 0: background(sur) fill(255) text('Score: ' + str(score), width/2, 20) dessine_obstacles() dessine_joueur()
+    if niveau &#062; 0: 
+        background(sur) 
+        fill(255) 
+        text('Score: ' + str(score), width/2, 20) 
+        dessine_obstacles() 
+        dessine_joueur()
 
 --- /code ---
 
@@ -199,8 +210,7 @@ filename: main.py — draw()
 title: Le jeu ne s'arrête pas après une collision
 ---
 
-Si tu penses que ton jeu ne détecte pas du tout correctement les collisions, essaie d'abord les instructions de débogage de l'étape précédente, sous « Il n'y a pas de collision lorsque le joueur atteint un obstacle ».
-
+Si tu penses que ton jeu ne détecte pas du tout correctement les collisions, essaye d'abord les instructions de débogage de l'étape précédente, sous « Il n'y a pas de collision lorsque le joueur atteint un obstacle ».
 
 Si ton jeu détecte correctement les collisions, vérifie que tu as correctement indenté le code qui dessine ton jeu à l'intérieur de l'énoncé `if niveau > 0`, pour t'assurer qu'il ne s'exécute que si cet énoncé est vrai. Par exemple :
 
@@ -210,11 +220,16 @@ language: python
 filename: main.py — draw()
 ---
 
-  if niveau > 0: background(sur) fill(255) text('Score: ' + str(score), width/2, 20) dessine_obstacles() dessine_joueur()
+    if niveau &#062; 0: 
+        background(sur) 
+        fill(255) 
+        text('Score: ' + str(score), width/2, 20) 
+        dessine_obstacles() 
+        dessine_joueur()
 
 --- /code ---
 
-Enfin, si les deux fonctionnent correctement, ton jeu peut ne pas définir correctement le `niveau = 0` lorsqu'une collision se produit. Par exemple :
+Enfin, si les deux fonctionnent correctement, ton jeu peut ne pas définir correctement le `niveau= 0` lorsqu'une collision se produit. Par exemple :
 
 --- code ---
 ---
@@ -222,7 +237,10 @@ language: python
 filename: main.py — draw_player()
 ---
 
-  if collision == sur: text('🎈', mouse_x, joueur_y) score += niveau else: text('💥', mouse_x, joueur_y) niveau = 0
+    if collision == sur: 
+        text('🎈', mouse_x, joueur_y) score += niveau 
+      else: 
+        text('💥', mouse_x, joueur_y) niveau = 0
 
 --- /code ---
 
@@ -239,11 +257,15 @@ Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()`. 
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+language: python filename: main.py — dessine_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + niveau): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * niveau) ob_y %= height #enroulement text('🌵', ob_x, ob_y)
+    for i in range(6 + niveau): 
+        ob_x = randint(0, height) 
+        ob_y = randint(0, height) + (frame_count * niveau) 
+        ob_y %= height #enroulement 
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -260,20 +282,30 @@ Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()` p
 
 --- code ---
 ---
-language: python filename: main.py — draw_obstacles()
+language: python filename: main.py — dessine_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + niveau): ob_x = randint(0, height) ob_y = randint(0, height) + (frame_count * niveau) ob_y %= height #enroulement text('🌵', ob_x, ob_y)
+    for i in range(6 + niveau): 
+        ob_x = randint(0, height) 
+        ob_y = randint(0, height) + (frame_count * niveau) 
+        ob_y %= height #enroulement 
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
 Si tu as effectué toutes ces vérifications et qu'il ne semble toujours pas que le nombre d'obstacles augmente, il est possible qu'ils le soient, mais tu ne le vois pas. Tu devrais essayer certaines de ces étapes pour tester ceci :
   - Ralentis le jeu en utilisant `frame_rate()` dans ta fonction `setup()` pour te donner plus de temps pour compter
+
+```python
+run(frame_rate = 10)
+```
+
+You can alter the speed of the game by changing `10` to a higher or lower value.
+
   - Change la seed que tu utilises pour tes nombres aléatoires. C'est peu probable, mais il est possible que certains obstacles apparaissent au hasard directement les uns sur les autres
   - Ajoute un `print()` à la boucle `for` dans `dessine_obstacles()` qui imprime la valeur de `i` à chaque passage de la boucle, afin que tu puisses vérifier si elle s'exécute le nombre de fois qu'elle devrait
   - Juste à des fins de test, change `range (6 + niveau)` en `range (6 * niveau)` - cette augmentation devrait être plus facile à repérer !
-
 
 --- /collapse ---
 
