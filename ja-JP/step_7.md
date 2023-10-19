@@ -32,18 +32,15 @@
  - また、プレイヤーが残されたライフの数を知る方法が必要になります。そして、最後のライフになったことを知らせる警告のようなものも必要になります。
  - プレイヤーがそれにぶつかったときに、追加のライフがもらえるようなオブジェクトを追加してもいいでしょう。 同時にライフを差し引かないように、通常の衝突コードを変更する必要があることを忘れないでください！
 
-[はじめに](./) の各サンプルプロジェクトには、プロジェクトを開き、コードを見てアイデアを得て、それらがどのように動くかを確認するできるように **中を見る** リンクがあります。 以下の「小惑星を避ける」プロジェクトには、これらのすべての機能があります。
+Each example project in the Introduction allows you to look at the code, get ideas, and see how they work.
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
+以下の「小惑星を避ける」プロジェクトには、これらのすべての機能があります。
 
-**小惑星を避ける**: [中を見る](https://trinket.io/python/d156014e67){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Dodge asteroids**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 
-</div>
-</div>
+You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
 Raspberry Pi Foundationの [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}のコミュニティメンバーが作った「衝突しないで」プロジェクトをいくつか見てみてください。
 
