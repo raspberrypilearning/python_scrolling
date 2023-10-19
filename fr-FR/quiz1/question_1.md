@@ -42,7 +42,7 @@ Superbe vol !
 ```
   --- feedback ---
 
-Tant que `score >= 5000` est vrai, pour une condition `and` les deux parties doivent être vraies, et `vies >= 3` est faux.
+Tant que `score >= 5000` est vrai, pour une condition `et` les deux parties doivent être vraies, et `vies >= 3` est faux.
 
   --- /feedback ---
 
