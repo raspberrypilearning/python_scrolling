@@ -12,15 +12,19 @@ Stel het thema van je spel in en maak een spelerspersonage dat de muisaanwijzer 
 </div>
 </div>
 
-Wat is het thema van je spel? Je kunt alles kiezen wat je maar wilt. Hier zijn enkele ideeën:
+Wat is het thema van je spel? Hier zijn enkele ideeën:
 - Een sport of hobby
-- Een film, show of game
+- Hobbies
 - Wetenschap of natuur
-- Iets anders!
+- Nature
 
 --- task ---
 
-Open het [startproject](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket wordt geopend in een ander browsertabblad.
+Open the
+
+Don't Collide! Open het [startproject](https://trinket.io/python/74be1029c0){:target="_blank"}. Trinket wordt geopend in een ander browsertabblad.</p> 
+
+If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
 
 --- /task ---
 
@@ -29,9 +33,15 @@ Open het [startproject](https://trinket.io/python/cda05e5911){:target="_blank"}.
 **Kies:** Stel de grootte van je canvas in.
 
 --- code ---
+
+
 ---
-language: python
+
 filename: main.py - setup()
+
+
+
+line_highlights: 10
 ---
 
 def setup():    
@@ -43,14 +53,20 @@ size(400, 400)
 
 --- task ---
 
-Maak een variabele met de naam `veilig` om de achtergrondkleur op te slaan op basis van het thema dat je voor jouw spel wilt.
+Maak een variabele met de naam `veilig` om de achtergrondkleur op te slaan op basis van het thema dat je voor jouw spel wilt. 
 
 Dit is de kleur waarop de speler veilig kan staan en je zult deze variabele later opnieuw gebruiken.
 
 --- code ---
+
+
 ---
-language: python
+
 filename: main.py - draw()
+
+
+
+line_highlights: 14, 15, 16
 ---
 
 def draw():    
@@ -71,18 +87,24 @@ background(veilig)
 
 Kies nu het personage dat het spel speelt en de obstakels ontwijkt. Is het een object, persoon, dier of iets anders?
 
-De speler verschijnt op een vaste `y` positie en dezelfde `x` positie als de muisaanwijzer, die is opgeslagen in de `p5` variabele `muis_x`.
+De speler verschijnt op een vaste `y` positie en dezelfde `x` positie als de muisaanwijzer, die is opgeslagen in de `p5` variabele `muis_x`. 
 
 --- task ---
 
 Het is een goed idee om de code voor het personage van de speler in een functie op te nemen.
 
-Definieer een `teken_speler()` functie en creëer een `speler_y` positie voor de vaste `y` positie van de speler:
+Definieer een `teken_speler()` functie en creëer een `speler_y` positie voor de vaste `y` positie van de speler: 
 
 --- code ---
+
+
 ---
-language: python
-filename: main.py - draw_player()
+
+filename: main.py - teken_speler()
+
+
+
+line_highlights: 12-14
 ---
 
 def teken_speler():    
@@ -93,9 +115,15 @@ speler_y = int(height * 0.8) #Gepositioneerd naar de onderkant van het scherm
 Voeg code toe aan `draw()` om `teken_speler()` voor elk frame aan te roepen.
 
 --- code ---
+
+
 ---
-language: python
+
 filename: main.py - draw()
+
+
+
+line_highlights: 19
 ---
 
 def draw():    
@@ -112,31 +140,39 @@ Vervolgens voeg je code toe aan de functie `teken_speler()` om je vorm te tekene
 --- task ---
 
 **Kies:** Hoe ziet je speler eruit? Je speler kan zijn:
+
 + Een afbeelding in het startproject
 + Een emoji 🎈 of tekst
 + Getekend met een reeks vormen
 
 --- collapse ---
+
+
 ---
+
+
+
 title: Gebruik een startafbeelding
 ---
 
-Klik op het pictogram **manage images** (afbeeldingen beheren).
-
-![Het afbeeldingspictogram in de rechterbovenhoek van het codegebied.](images/manage-images.png)
-
 Afbeeldingen die in het startersproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
 
-![De afbeeldingenbibliotheek met een lijst met opgenomen afbeeldingen.](images/starter-images.png)
+![The Image gallery displaying the included images.](images/starter-images.png)
 
 Noteer de naam van de afbeelding die je wilt gebruiken.
 
-Laad de afbeelding in de `setup()` functie
+Laad de afbeelding in de `setup()` functie 
 
 --- code ---
+
+
 ---
-language: python
+
 filename: main.py - setup()
+
+
+
+line_highlights: 11-12
 ---
 
 def setup():   
@@ -148,35 +184,48 @@ speler = load_image('skiing.png') #Laad je afbeelding
 Roep de `image()` aan en stel deze in als global in de `teken_speler()` functie.
 
 --- code ---
+
+
 ---
-language: python
-filename: main.py - draw_player()
+
+filename: main.py - teken_speler()
+
+
+
+line_highlights: 16
 ---
 
 def teken_speler():    
 speler_y = int(height * 0.8) #Gepositioneerd naar de onderkant van het scherm
-
-  global speler
-
-  image(speler, muis_x, speler_y, 30, 30)
 
 --- /code ---
 
 --- /collapse ---
 
 --- collapse ---
+
+
 ---
+
+
+
 title: Emoji-tekens gebruiken
 ---
 
-Je kunt emoji-tekens gebruiken in de p5-functie `text()` om een emoji als speler te gebruiken.
+Je kunt emoji-tekens gebruiken in de p5-functie `text()` om een emoji als speler te gebruiken. 
 
 Hier is een voorbeeld:
 
 --- code ---
+
+
 ---
-language: python
+
 filename: main.py - setup()
+
+
+
+line_highlights: 11-13
 ---
 
 def setup():    
@@ -186,10 +235,18 @@ text_align(CENTER, TOP) #Positie rond het midden
 
 --- /code ---
 
+global speler
+
 --- code ---
+
+
 ---
-language: python
-filename: main.py - draw_player()
+
+filename: main.py - teken_speler()
+
+
+
+line_highlights: 16-17
 ---
 
 def teken_speler():     
@@ -217,15 +274,26 @@ text('🎈', muis_x, speler_y)
 **Tip:** Je kunt meerdere eenvoudige vormen in dezelfde functie gebruiken om een complexere speler te maken.
 
 --- collapse ---
+
+
 ---
+
+
+
 title: Teken een speler met meerdere vormen
 ---
 
-![beschrijving](images/face_player.png)
+![A face shape made from a green circle as a background and two eyes drawn from blue circles, with black circles within and a glint within those using a white circle.](images/face_player.png)
 
 --- code ---
+
+
 ---
+
 language: python
+
+
+
 filename: main.py - draw_player()
 ---
 
@@ -236,16 +304,17 @@ noStroke()
 fill(0, 200, 100)    
 ellipse(muis_x, speler_y, 60, 60)
 
-  #Ogen    
-fill(0, 100, 200)    
-ellipse(muis_x - 10, speler_y - 10, 20, 20)    
-ellipse(muis_x + 10, speler_y - 10, 20, 20)    
-fill(0)    
-ellipse(muis_x - 10, speler_y - 10, 10, 10)     
-ellipse(muis_x + 10, speler_y - 10, 10, 10)     
-fill(255)    
-ellipse(muis_x - 12, speler_y - 12, 5, 5)    
-ellipse(muis_x + 12, speler_y - 12, 5, 5)
+    #Ogen<br x-id="4" />
+      fill(0, 100, 200)<br x-id="4" />
+      ellipse(muis_x - 10, speler_y - 10, 20, 20)<br x-id="4" />
+      ellipse(muis_x + 10, speler_y - 10, 20, 20)<br x-id="4" />
+      fill(0)<br x-id="4" />
+      ellipse(muis_x - 10, speler_y - 10, 10, 10)<br x-id="5" />
+      ellipse(muis_x + 10, speler_y - 10, 10, 10)<br x-id="5" />
+      fill(255)<br x-id="4" />
+      ellipse(muis_x - 12, speler_y - 12, 5, 5)<br x-id="4" />
+      ellipse(muis_x + 12, speler_y - 12, 5, 5)
+    
 
 --- /code ---
 
@@ -266,7 +335,12 @@ Beweegt het zoals verwacht?
 --- task ---
 
 --- collapse ---
+
+
 ---
+
+
+
 titel: Ik zie de speler niet
 ---
 
@@ -275,7 +349,12 @@ Probeer over te schakelen naar volledig scherm. Controleer ook de `x` en `y` co�
 --- /collapse ---
 
 --- collapse ---
+
+
 ---
+
+
+
 title: Een afbeelding wordt niet geladen
 ---
 
@@ -284,20 +363,33 @@ Controleer eerst of de afbeelding in de `Afbeeldingenbibliotheek`staat. Controle
 --- /collapse ---
 
 --- collapse ---
+
+
 ---
+
+
+
 title: Een afbeelding heeft de verkeerde afmeting
 ---
 
 Controleer de invoer die de breedte en hoogte van de afbeelding bepaalt:
 
+
+
 ```python
 image(afbeelding_bestand, x_coord, y_coord, breedte, hoogte)
 ```
 
+
 --- /collapse ---
 
 --- collapse ---
+
+
 ---
+
+
+
 title: Een emoji heeft de verkeerde afmeting
 ---
 
