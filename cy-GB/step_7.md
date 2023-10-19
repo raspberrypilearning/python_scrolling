@@ -27,24 +27,21 @@ Fe allwch chi alluogi chwaraewyr i ennill mewn ambell ffordd:
 Pan fyddant yn ennill, fe ddylech chi ddweud wrthyn nhw rywsut — efallai drwy ddefnyddio `print()` neu `text()` a dod â'r gêm i ben.
 
 ### Rhoi mwy nag un bywyd i chwaraewyr
-Ychwanegwch fywydau at eich gêm i adael i chwaraewyr oroesi gwrthdrawiad neu ddau. Mae hyn ychydig yn fwy cymhleth na gwneud `lives =- 1` bob tro maen nhw'n taro rhywbeth:
+Ychwanegwch fywydau at eich gêm i adael i chwaraewyr oroesi gwrthdrawiad neu ddau. This is a little trickier than just doing `lives -= 1` every time they collide with something:
  - Efallai bydd y chwaraewr yn cyffwrdd gwrthrych dros fwy nag un ffrâm, ac felly'n colli mwy nag un bywyd am un gwrthdrawiad — bydd angen i chi atal hynny rhag digwydd
  - Hefyd bydd angen i chwaraewyr allu gwybod sawl bywyd sydd ganddyn nhw'n weddill, ac efallai rhyw fath o rybudd sy'n rhoi gwybod iddyn nhw mai dim ond un bywyd sydd ganddyn nhw'n weddill
  - Fe allech chi ychwanegu gwrthrych sy'n rhoi bywyd ychwanegol i chwaraewyr os byddan nhw'n ei daro. Cofiwch y bydd angen i chi addasu eich cod gwrthdaro rheolaidd i'w atal rhag tynnu bywyd ar yr un pryd!
 
 Mae gan bob prosiect enghreifftiol yn [Cyflwyniad](./) ddolen **Gweld tu mewn** i chi allu agor y prosiect ac edrych ar y cod i gael syniadau, a gweld sut maen nhw'n gweithio. Mae gan y prosiect "Osgoi'r asteroidau" isod yr holl nodweddion hyn:
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
-
-**Osgoi'r asteroidau**: [Gweld tu mewn](https://trinket.io/python/d156014e67){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-
-</div>
-</div>
-
 Tarwch olwg ar rai prosiectau Osgoi'r rhwystrau wedi'u creu gan aelodau o'r gymuned yn [Osgoi'r rhwystrau - Llyfrgell gymunedol](https://wke.lt/w/s/KobNfx){:target="_blank"} y Raspberry Pi Foundation.
+
+**Dodge asteroids**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
+
+You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
+
+Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
 
 --- save ---
