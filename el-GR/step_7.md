@@ -27,24 +27,21 @@
 Μόλις κερδίσουν, θα πρέπει να τους το πεις με κάποιο τρόπο — ίσως χρησιμοποιώντας `print()` ή `text()` και μετά να σταματήσεις το παιχνίδι.
 
 ### Δώσε στους παίκτες περισσότερες από μία ζωές
-Πρόσθεσε ζωές στο παιχνίδι σου, για να επιτρέψεις στους παίκτες να επιβιώσουν σε μερικές συγκρούσεις. Αυτό είναι λίγο πιο δύσκολο από το να κάνεις `lives =- 1` κάθε φορά που συγκρούονται με κάτι:
+Πρόσθεσε ζωές στο παιχνίδι σου, για να επιτρέψεις στους παίκτες να επιβιώσουν σε μερικές συγκρούσεις. This is a little trickier than just doing `lives -= 1` every time they collide with something:
  - Ο παίκτης μπορεί να περάσει πολλά καρέ σε επαφή με ένα αντικείμενο, και έτσι να χάσει περισσότερες από μία ζωές σε μία μόνο σύγκρουση — αυτό φρόντισε να μην συμβεί
  - Θα χρειαστείς επίσης έναν τρόπο για να γνωρίζουν οι παίκτες πόσες ζωές τους έχουν απομείνει και ίσως κάποιο είδος προειδοποίησης που θα τους λέει πότε βρίσκονται στην τελευταία τους ζωή
  - Θα μπορούσες να προσθέσεις ένα αντικείμενο που, όταν ο παίκτης συγκρούεται με αυτό, του δίνει μια επιπλέον ζωή. Θυμήσου ότι θα χρειαστεί να τροποποιήσεις τον κανονικό κώδικα σύγκρουσης, ώστε να μην αφαιρεί μια ζωή ταυτόχρονα!
 
-Κάθε παράδειγμα έργου στην [Εισαγωγή](./) έχει έναν σύνδεσμο **Δες μέσα** για να ανοίξεις το έργο και να δεις τον κώδικα για να πάρεις ιδέες και να δεις πώς λειτουργούν. Το παρακάτω έργο "Απόφυγε τους αστεροειδείς" έχει όλα αυτά τα χαρακτηριστικά:
-
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
-
-**Απόφυγε τους αστεροειδείς**: [Δες μέσα](https://trinket.io/python/d156014e67){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/d156014e67?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-
-</div>
-</div>
+Each example project in the Introduction allows you to look at the code, get ideas, and see how they work.
 
 Ρίξε μια ματιά σε μερικά έργα Don't collide που δημιουργήθηκαν από μέλη της κοινότητας στο [Don't collide - Community Library](https://wke.lt/w/s/KobNfx){:target="_blank"} του Raspberry Pi Foundation.
+
+**Dodge asteroids**:
+<iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
+
+You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
+
+Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
 
 --- save ---
