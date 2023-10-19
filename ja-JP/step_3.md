@@ -23,12 +23,11 @@
 
 --- code ---
 ---
-language: python
-filename: main.py - draw_obstacles()
+def draw_obstacles():
+line_highlights: 4
 ---
 
 def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
-
 
 --- /code ---
 
@@ -36,12 +35,12 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #�
 
 --- code ---
 ---
-language: python
 filename: main.py - draw()
+line_highlights: 5
 ---
 
-def draw(): safe = color(200, 100, 0) #テーマの色にしてください background(safe)  
-draw_obstacles() #プレーヤーを描く前に draw_player()
+def draw(): safe = color(200, 100, 0) #テーマの色 background(safe)  
+draw_obstacles() #プレーヤーを描く前に draw_player() --- /code ---
 
 --- /code ---
 
@@ -59,13 +58,9 @@ draw_obstacles() #プレーヤーを描く前に draw_player()
 title: スタータープロジェクトの画像を使う
 ---
 
-**View and Add Images**アイコンをクリックします。
-
-![コード領域の右上にある画像アイコン。](images/manage-images.png)
-
 スタータープロジェクトで用意された画像は、 `Image Library` のリストに出て来ます。
 
-![含まれている画像のリストを含む画像ライブラリ。](images/starter-images.png)
+![The Image gallery displaying the included images.](images/starter-images.png)
 
 使いたい画像の名前をメモします。
 
@@ -73,15 +68,15 @@ title: スタータープロジェクトの画像を使う
 
 --- code ---
 ---
-language: python
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
+line_highlights: 12
 ---
 
-def setup(): size(400, 400) player = load_image('skiing.png') #画像を読み込む obstacle = load_image('rocket.png') #画像を読み込む
+def setup(): size(400, 400) player = load_image('skiing.png') #選んだ画像 obstacle = load_image('rocket.png') #選んだ画像
 
 --- /code ---
 
-`draw_obstacle()` 関数で`image()` を呼び出し、 obstacle変数をグローバルに設定します。
+Find the line `# Keep this to run your code`. `draw_obstacle()` 関数で`image()` を呼び出し、 obstacle変数をグローバルに設定します。
 
 --- code ---
 ---
@@ -91,9 +86,7 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
-   global obstacle
-
-   image(obstacle, ob_x, ob_y, 30, 30) #テーマに合わせてサイズを変更
+    image(obstacle, ob_x, ob_y, 30, 30) #テーマに合わせてサイズを変更
 
 --- /code ---
 
@@ -117,6 +110,8 @@ filename: main.py - setup()
 def setup(): size(400, 400) text_size(40) #絵文字の大きさ text_align(CENTER, TOP) #真ん中に置く
 
 --- /code ---
+
+Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function.
 
 --- code ---
 ---
@@ -151,7 +146,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 title: いくつかの図形を使って障害物を描く
 ---
 
-![説明](images/tree_obstacle.png)
+![A tree drawn with green triangles for the body and a brown rectangle for the trunk](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -159,7 +154,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke() fill(0,255,0) #Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 #モミの木を描く no_stroke() fill(0,255,0) #葉の部分は緑 triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # 幹は茶色 rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
 
@@ -171,11 +166,11 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 --- task ---
 
-次に、フレームごとに障害物の `y` の位置を増やすコードを追加します。障害物が一番下に達したとき、上に回り込んで別の障害物が出て来たように見せます。
+次に、フレームごとに障害物の `y` の位置を増やすコードを追加します。
 
 p5の`frame_count`変数は、実行ボタンをクリックするとフレームのカウントを始めます。
 
-`ob_y ％= height` は `ob_y`を`height`(画面の高さ) で割った余りが<0>y</0>方向の位置となるようにします。 `height`が「400 」の場合、この計算は`401`を`1`に変えるため、障害物が画面の下部から外れると、上部に再び表示されます。
+`ob_y ％= height` は `ob_y`を`height`(画面の高さ) で割った余りが `height`が「400 」の場合、この計算は`401`を`1`に変えるため、障害物が画面の下部から外れると、上部に再び表示されます。
 
 --- code ---
 ---
@@ -193,7 +188,6 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #フレーム
 
 さまざまな場所に障害物のコピーをたくさん描くことができますが、それはかなりの作業です。 手っ取り早い方法でやりましょう。
 
-
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
 <span style="color: #0faeb0">**手続き型生成**</span>とは、ゲームワールド、障害物、および映画のシーンを作り出す使われる手法で、ランダムであるが、ある一定のルールに基づいてそれらを作り出すものです。 <span style="color: #0faeb0">seed(シード)</span> は、同じseed(シード) を使用するたびに同じ結果を生成できることを意味します。</p>
 
@@ -207,12 +201,13 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles():
+seed(12345678) #どんな数でもよい
 
-  seed(12345678) #どんな数でもよい
-
-  for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
+    for i in range(6):<br x-id="2" />
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
 
 --- /code ---
 
@@ -233,7 +228,12 @@ title: てんかんの警告
 - 障害物があちこちに現れないように `seed ()` のコード行追加したことを確認してください
 - プログラムの実行を誰かに頼んでください
 - 先に進めてプロジェクトを完了し、最後に誰かにプロジェクトを実行してもらい、デバッグできるようにしてください
-- プログラムを実行する前に、`setup()` の最初のところに `frame_rate(1)` を追加して、フレームレートを変更します。バグがないことを確認したら、この行は削除できます。
+- プログラムを実行する前に、`setup()` の最初のところに `frame_rate(1)` を追加して、フレームレートを変更します。
+
+```python
+run(frame_rate = 10)
+```
+You can alter the speed of the game by changing `10` to a higher or lower value.
 
 --- /collapse ---
 
@@ -275,10 +275,11 @@ filename: main.py — draw_obstacles()
 
 def draw_obstacles():
 
-  seed(12345678)
-
-  for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
+    for i in range(6):<br x-id="2" />
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
 
 --- /code ---
 
@@ -296,6 +297,6 @@ title: フレームが描かれるたびに障害物の位置が変わります
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-プログラマーは、 `%`演算子を使ってオブジェクトを画面から出てすぐにまた現れるようにしたり、 `seed ()`関数を使って同じ乱数を生成したりするなど、多くの巧みなトリックを使っています。 コーディングをすればするほど、より巧みなトリックを身につけることができます。</p>
+プログラマーは、 `%`演算子を使ってオブジェクトを画面から出てすぐにまた現れるようにしたり、 `seed()`関数を使って同じ乱数を生成したりするなど、多くの巧みなトリックを使っています。 コーディングをすればするほど、より巧みなトリックを身につけることができます。</p>
 
 --- save ---
