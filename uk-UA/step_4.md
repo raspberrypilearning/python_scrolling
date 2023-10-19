@@ -18,7 +18,7 @@
   - перевірити, якщо колір, який з'являється в місці розташування об'єкта, є кольором безпосередньо цього об'єкта, або є іншим кольором
   - відстежувати фігуру кожного об'єкта та перевіряти, чи не перетинаються ці фігури
   - створити навколо об'єкта сукупність межових точок, або ліній, та перевіряти, чи не контактують вони з будь-якими іншими об'єктами для 'зіткнення'
-При виявленні такого зіткнення, програма може на це певним чином відреагувати. У відеоіграх це зазвичай використовується для нанесення шкоди (якщо гравець стикається з ворогом або небезпекою) або для надання користі (якщо гравець стикається з бонусом).
+При виявленні такого зіткнення, програма може на це певним чином відреагувати. In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a power up).
 </p>
 
 --- task ---
@@ -31,7 +31,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-collide = get(mouse_x, player_y)
+    collide = get(mouse_x, player_y).hex
 
 --- /code ---
 
@@ -39,48 +39,22 @@ collide = get(mouse_x, player_y)
 
 --- task ---
 
+Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
+
 Створи умову для перевірки, `if`змінна `collide` збігається зі змінною `safe` - якщо це так, тоді твій персонаж буде безпечно торкатися фону та не зіткнеться з перешкодою.
 
-Перемісти код для малювання персонажа всередину своєї умови `if collide == safe` та додай код в оператор `else`, щоб змусити персонажа реагувати на зіткнення.
-
-**Обирай:** Як буде реагувати твій персонаж? Ти можеш:
+**Choose:** How should your player react? You could:
 + Змінити зображення на варіант `crashed`
 + Використовувати інші емодзі для персонажа
-+ Використати `tint()` дня зміни зовнішнього вигляду зображення. Не забудь викликати `no_tint()` після малювання зображення
 
 --- collapse ---
 ---
 title: Зміна зображення
 ---
 
+You can use emoji characters in the p5 `text()` function to represent your collided player.
+
 Ти можеш вибрати інше зображення для твого персонажа при зіткненні з перешкодою.
-
-Ось приклад:
-
---- code ---
----
-language: python
-filename: main.py - draw_player()
----
-
-def draw_player(): player_y = int(height * 0.8)
-
-  collide = get(mouse_x, player_y)
-
-  if collide == safe: #On background image(skiing, mouse_x, player_y, 30, 30) else: #Collided image(crashed, mouse_x, player_y, 30, 30)
-
---- /code ---
-
---- /collapse ---
-
---- collapse ---
----
-title: Використання символів емодзі
----
-
-Ти можеш використовувати символи емодзі у функції p5 `text()`, щоб зобразити свого персонажа, який зіткнувся з перешкодою.
-
-Ось приклад:
 
 --- code ---
 ---
@@ -88,7 +62,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Controls the size of the emoji text_align(CENTER, TOP) #Position around the centre
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -98,7 +72,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player(): if collide == safe: #On background text('🎈', mouse_x, player_y) else: #Collided text('💥', mouse_x, player_y)
+def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x, player_y) else:  # Collided text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -112,62 +86,44 @@ def draw_player(): if collide == safe: #On background text('🎈', mouse_x, play
 
 --- task ---
 
-**Тест:** Перевір, чи визначається зіткнення та чи здійснюється реагування кожного разу, коли відбувається зіткнення.
+def setup(): size(400, 400) text_size(40) #Керування розміром емодзі text_align(CENTER, TOP) #Розташування навколо центру
 
 --- /task ---
 
 --- task ---
 
-**Налагодження:** Можливо, у твоєму проєкті знайдуться помилки, які потрібно буде виправити. Ось деякі поширені помилки.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
-title: При досягненні перешкоди не відбувається зіткнення
+title: There is no collision when the player reaches an obstacle
 ---
 
-Якщо твій персонаж торкається перешкоди та нічого не відбувається, є декілька моментів, які тобі варто перевірити:
+If your player character touches the obstacle and nothing happens, there are a few things you should check:
 
- - Переконайся, що ти викликаєш `draw_obstacles()` перед `draw_players()`. Якщо перевіряти наявність зіткнень перед тим, як малювати перешкоди - не буде ніяких перешкод, з якими можна зіткнутися!
+ - Make sure you call `draw_obstacles()` before `draw_player()`. Якщо перевіряти наявність зіткнень перед тим, як малювати перешкоди - не буде ніяких перешкод, з якими можна зіткнутися!
  - Переконайся, що ти використовуєш той самий колір при малюванні об'єкта та в операторі `if`, який перевіряє наявність зіткнення. Щоб переконатися в цьому, використовуй в обох місцях однакову змінну `global`.
  - Ти малюєш персонажа перед тим, як перевірити колір координат курсора миші? Якщо так, то ти завжди будеш отримувати тільки колір від гравця. Спочатку потрібно перевірити колір, а вже **потім** намалювати персонажа.
  - Чи є у тебе код в частині `else`, який буде робити інші дії при виявленні зіткнення, наприклад, зміна кольору або використання іншого зображення?
  - Чи правильно були розставлені відступи в коді для оператора `if`, щоб він виконувався при виконанні умови?
 
-Виведення кольору пікселя, який перевіряється на наявність зіткнень - може бути корисним:
+Printing the colour of the pixel you are checking for a collision can be useful:
 
 ```python
-  print(red(collide), green(collide), blue(collide))
+    print(red(collide), green(collide), blue(collide))
 ```
 
-Ти також можеш створити коло навколо точки, яку ти перевіряєш, та відрегулювати цю точку, якщо це необхідно:
+You can also print a circle around the point you are checking and adjust the point you check if you need to:
 
 ```python
-  no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #Draw collision point
-```
-
---- /collapse ---
-
---- /task ---
-
---- task ---
-
-**За бажанням:** Наразі ти виявляєш зіткнення лише на одному пікселі свого персонажа. Ти також можеш виявити зіткнення на інших пікселях на краю персонажа, наприклад, внизу або на лівому та правому краях персонажа.
-
---- collapse ---
----
-title: Виявлення зіткнень на декількох пікселях
----
-
-```python
-def draw_player():
+    def draw_player():
 
   player_y = int(height * 0.8)
-  #Useful for debugging
-  #Draw circles around the pixels to check for collisions
+  #Корисно для налагодження
+  #Намалюй кола навколо пікселів, щоб перевірити наявність зіткнень
 
   no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #Draw collision point
+  ellipse(mouse_x, player_y, 10, 10) #Малювання точки зіткнення
   ellipse(mouse_x, player_y + 40, 10, 10)
   ellipse(mouse_x - 12, player_y + 20, 10, 10)
   ellipse(mouse_x + 12, player_y + 20, 10, 10)
@@ -177,10 +133,10 @@ def draw_player():
   collide3 = get(mouse_x + 12, player_y + 20)
   collide4 = get(mouse_x, player_y + 40)
 
-  if mouse_x < width: #Off the left of the screen
+  if mouse_x < width: #Від лівого краю екрану
     collide2 = safe
 
-  if mouse_x > width: #Off the right of the screen
+  if mouse_x > width: #Від правого краю екрану
     collide3 = safe
 
   if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
@@ -191,7 +147,50 @@ def draw_player():
 
 --- /collapse ---
 
-Ти навіть можеш використати цикл та перевірити багато різних пікселів. Саме так працює виявлення зіткнень в іграх.
+--- /task ---
+
+--- task ---
+
+**Optional:** At the moment, you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom or left- and right-most edges.
+
+--- collapse ---
+---
+title: Collision detection with multiple pixels
+---
+
+```python
+def draw_player():
+
+    player_y = int(height * 0.8)
+    # Useful for debugging
+    # Draw circles around the pixels to check for collisions
+
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
+    ellipse(mouse_x, player_y + 40, 10, 10)
+    ellipse(mouse_x - 12, player_y + 20, 10, 10)
+    ellipse(mouse_x + 12, player_y + 20, 10, 10)
+
+    collide = get(mouse_x, player_y).hex
+    collide2 = get(mouse_x - 12, player_y + 20).hex
+    collide3 = get(mouse_x + 12, player_y + 20).hex
+    collide4 = get(mouse_x, player_y + 40).hex
+
+    if mouse_x < width:  # Off the left of the screen
+        collide2 = safe.hex
+
+    if mouse_x > width:  # Off the right of the screen
+        collide3 = safe.hex
+
+    if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
+        text('🎈', mouse_x, player_y)
+    else:
+        text('💥', mouse_x, player_y)
+```
+
+--- /collapse ---
+
+You could even use a loop and check lots of different pixels. This is how collision detection works in games.
 
 --- /task ---
 
