@@ -12,7 +12,7 @@
 </div>
 </div>
 
-Яка тематика твоєї гри? Ти можеш вибрати все, що завгодно. Ось деякі ідеї:
+Яка тематика твоєї гри? Here are some ideas:
 - Спорт або хобі
 - Фільм, шоу або гра
 - Наука або природа
@@ -20,22 +20,24 @@
 
 --- task ---
 
-Відкрий [стартовий проєкт](https://trinket.io/python/cda05e5911){:target="_blank"}. Trinket відкриється в окремій вкладці браузера.
+Open the [Don't Collide! starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"} project. The code editor will open in another browser tab.
+
+If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
 
 --- /task ---
 
 --- task ---
 
-**Обирай:** Встанови розмір свого полотна.
+**Choose:** Set the size of your canvas.
 
 --- code ---
 ---
-language: python
+def setup():    
+size(400, 400)
 filename: main.py - setup()
 ---
 
-def setup():    
-size(400, 400)
+def setup(): size(400, 400)
 
 --- /code ---
 
@@ -43,19 +45,19 @@ size(400, 400)
 
 --- task ---
 
-Створи змінну з назвою `safe`, щоб зберегти колір фону, який був обраний тобою для своєї гри.
-
 Це колір, на якому гравець може безпечно перебувати, і ти будеш використовувати цю змінну пізніше.
+
+This is the colour that it is safe for the player to be on and you will use this variable again later.
 
 --- code ---
 ---
-language: python
+def draw():    
+safe = color(200, 100, 0) #Додай колір, відповідно до твоєї теми   
+background(safe)
 filename: main.py - draw()
 ---
 
-def draw():    
-safe = color(200, 100, 0) #Add the colour of your theme   
-background(safe)
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
 
 --- /code ---
 
@@ -65,53 +67,53 @@ background(safe)
 
 --- task ---
 
-**Тест:** Запусти свій код, щоб побачити колір фону. Змінюй його до тих пір, поки колір та розмір екрана тебе влаштує.
+**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
 
 --- /task ---
 
-Тепер вибери персонажа, який буде вести гру та уникати перешкод. Це буде предмет, людина, тварина чи щось інше?
+Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
 
-Гравець з'явиться на фіксованій позиції `y` та на тій самій позиції `x`, що і курсор миші, яка зберігається у змінній `p5` `mouse_x`.
+The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
 
 --- task ---
-
-Хороша ідея - оформити код для малювання персонажа у функцію.
 
 Визнач функцію `draw_player()` та створи позицію `player_y`, для фіксації позиції гравця `y`:
 
+Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
+
 --- code ---
 ---
-language: python
-filename: main.py - draw_player()
+def draw_player():    
+player_y = int(height * 0.8) #Розташування в напрямку до нижньої частини екрана
+line_highlights: 12-14
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
+def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom
 
 --- /code ---
 
-Додай до `draw()` код для виклику `draw_player()` на кожному кадрі.
+Add code to `draw()` to call `draw_player()` each frame.
 
 --- code ---
 ---
-language: python
+def draw():    
+safe = color(200, 100, 0) #Обраний тобою колір    
+background(safe)    
+draw_player()
 filename: main.py - draw()
 ---
 
-def draw():    
-safe = color(200, 100, 0) #Your chosen colour    
-background(safe)    
-draw_player()
+def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
 
 --- /code ---
 
 --- /task ---
 
-Далі треба додати код у функцію `draw_player()`, щоб намалювати твою фігуру. Також, може знадобитися додати код `setup()`.
+Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
 
 --- task ---
 
-**Обирай:** Як виглядатиме твій персонаж? Це може бути:
+**Choose:** What does your player look like? Your player could be:
 + Зображення, які наведені у стартовому проєкті
 + Емодзі 🎈 або текст
 + Малюнок, виконаний за допомогою декількох фігур
@@ -121,44 +123,33 @@ draw_player()
 title: Використання стартового зображення
 ---
 
-Натисни на значок **manage images**.
+Images included in the starter project will be shown in the `Image gallery`.
 
-![Піктограма у верхньому правому куті області коду.](images/manage-images.png)
+![The Image gallery displaying the included images.](images/starter-images.png)
 
-Зображення, включені в стартовий проєкт, будуть відображені в списку `Image library`.
-
-![Список зображень в Image library.](images/starter-images.png)
+Make a note of the name of the image you want to use.
 
 Запиши назву зображення, яке ти хочеш використати.
 
-Завантажуємо зображення у функцію `setup()`
-
 --- code ---
 ---
-language: python
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 filename: main.py - setup()
 ---
 
-def setup():   
-size(400, 400)    
-player = load_image('skiing.png') #Load your image
+def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
 
 --- /code ---
 
-Зроби виклик `image()` та встанови її, як глобальну, у функції `draw_player()`.
+Call the `image()` and set it as global in the `draw_player()` function.
 
 --- code ---
 ---
-language: python
-filename: main.py - draw_player()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
+line_highlights: 16
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #Positioned towards the screen bottom
-
-  global player
-
-  image(player, mouse_x, player_y, 30, 30)
+def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -169,32 +160,29 @@ player_y = int(height * 0.8) #Positioned towards the screen bottom
 title: Використання символів емодзі
 ---
 
-Ти можеш використовувати символи емодзі у функції p5 `text()`, щоб зобразити свого персонажа у вигляді емодзі.
+You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
 
-Ось приклад:
+Here's an example:
 
 --- code ---
 ---
-language: python
+Ти можеш використовувати символи емодзі у функції p5 `text()`, щоб зобразити свого персонажа у вигляді емодзі.
 filename: main.py - setup()
 ---
 
-def setup():    
-size(400, 400)     
-text_size(40) #Controls the size of the emoji     
-text_align(CENTER, TOP) #Position around the centre
+Ось приклад:
 
 --- /code ---
 
+Call the `text()` and set it as global in the `draw_player()` function.
+
 --- code ---
 ---
-language: python
-filename: main.py - draw_player()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
+line_highlights: 16-17
 ---
 
-def draw_player():     
-player_y = int(height * 0.8)    
-text('🎈', mouse_x, player_y)
+def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
 
 --- /code ---
 
@@ -214,14 +202,14 @@ text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**Tip:** Ти можеш використати декілька простих фігур в одній функції, щоб створити більш різноманітного персонажа.
+**Tip:** You can use several simple shapes in the same function to create a more complex player.
 
 --- collapse ---
 ---
 title: Малювання персонажа за допомогою декількох фігур
 ---
 
-![опис](images/face_player.png)
+![A face shape made from a green circle as a background and two eyes drawn from blue circles, with black circles within and a glint within those using a white circle.](images/face_player.png)
 
 --- code ---
 ---
@@ -229,23 +217,18 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8)    
-noStroke()    
-#Face    
-fill(0, 200, 100)    
-ellipse(mouse_x, player_y, 60, 60)
+def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 100) ellipse(mouse_x, player_y, 60, 60)
 
-  #Eyes    
-fill(0, 100, 200)    
-ellipse(mouse_x - 10, player_y - 10, 20, 20)    
-ellipse(mouse_x + 10, player_y - 10, 20, 20)    
-fill(0)    
-ellipse(mouse_x - 10, player_y - 10, 10, 10)     
-ellipse(mouse_x + 10, player_y - 10, 10, 10)     
-fill(255)    
-ellipse(mouse_x - 12, player_y - 12, 5, 5)    
-ellipse(mouse_x + 12, player_y - 12, 5, 5)
+    # Eyes
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, player_y - 10, 20, 20)
+    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, player_y - 10, 10, 10)
+    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, player_y - 12, 5, 5)
+    ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
@@ -255,13 +238,13 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- task ---
 
-**Тест:** Запусти свій код та переміщуй курсор миші, щоб керувати гравцем.
+**Test:** Run your code and move the mouse to control the player.
 
-Чи рухається він так, як ти очікуєш?
+Does it move like you expect?
 
 --- /task ---
 
-**Налагодження:** Можливо, у твоєму проєкті знайдуться помилки, які потрібно буде виправити. Ось деякі поширені помилки.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- task ---
 
@@ -270,7 +253,7 @@ ellipse(mouse_x + 12, player_y - 12, 5, 5)
 title: Я не бачу персонажа
 ---
 
-Спробуй перейти до повноекранного режиму. Також, перевір координати `x` та `y`, які були використані для малювання персонажа. Переконайся, що вони знаходяться всередині полотна, яке було створено за допомогою `size()`.
+Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
 
 --- /collapse ---
 
@@ -279,7 +262,7 @@ title: Я не бачу персонажа
 title: Зображення не завантажується
 ---
 
-Спочатку переконайся, що зображення знаходиться в `Image library`. Потім дуже уважно перевір назву файлу. Пам'ятай, що великі літери відрізняються від малих. Також важлива пунктуація.
+First, check that the image is in the `Image gallery`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
 
 --- /collapse ---
 
@@ -288,7 +271,7 @@ title: Зображення не завантажується
 title: Зображення має неправильний розмір
 ---
 
-Слід перевірити код, який визначає ширину та висоту зображення:
+Check the inputs that control the width and height of the image:
 
 ```python
 image(image_file, x_coord, y_coord, width, height)
@@ -301,7 +284,7 @@ image(image_file, x_coord, y_coord, width, height)
 title: Емодзі має неправильний розмір
 ---
 
-Якщо емодзі занадто великі або занадто маленькі, зміни введені значення у `text_size()`.
+Слід перевірити код, який визначає ширину та висоту зображення:
 
 --- /collapse ---
 
