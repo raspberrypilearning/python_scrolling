@@ -31,7 +31,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-botsen = get(muis_x, speler_y)
+    collide = get(mouse_x, player_y).hex
 
 --- /code ---
 
@@ -44,34 +44,8 @@ Creëer een voorwaarde om te controleren `of` de `botsen` variabele gelijk is aa
 Verplaats je code om je speler te tekenen binnen jouw `if botsen == veilig` voorwaarde en voeg code toe aan de `else` voorwaarde om de speler te laten reageren op de botsing.
 
 **Kies:** Hoe moet je speler reageren? Je zou:
-+ De afbeelding kunnen veranderen in een `gecrashte` versie
 + Een andere emoji voor de speler gebruiken
 + Je zou `tint()` kunnen gebruiken om het uiterlijk van een afbeelding te veranderen, vergeet niet om `no_tint()` aan te roepen na het tekenen van de afbeelding
-
---- collapse ---
----
-title: Verander de afbeelding
----
-
-Je kunt een andere afbeelding gebruiken om je speler weer te geven wanneer deze tegen een obstakel botst.
-
-Hier is een voorbeeld:
-
---- code ---
----
-language: python
-filename: main.py - draw_player()
----
-
-def teken_speler(): speler_y = int(height * 0,8)
-
-  botsen = get(muis_x, speler_y)
-
-  if botsen == veilig: #Gelijk aan achtergrondkleur image(skien, muis_x, speler_y, 30, 30) else: #Gebotst image(gecrasht, muis_x, speler_y, 30, 30)
-
---- /code ---
-
---- /collapse ---
 
 --- collapse ---
 ---
@@ -130,19 +104,19 @@ Als je speler een obstakel raakt en er gebeurt niets, zijn er een paar dingen di
  - Zorg ervoor dat je `teken_obstakels()` aanroept voor `teken_speler()`. Als je op botsingen controleert voordat je de obstakels in een frame tekent, zijn er geen obstakels om tegen te botsen!
  - Zorg ervoor dat je exact dezelfde kleur gebruikt bij het tekenen van het object en in de `if` functie om te controleren op de botsing. Je kunt hiervoor zorgen door op beide plaatsen dezelfde `global`-variabele te gebruiken.
  - Teken je het personage van de speler voordat je de kleur bij de muiscoördinaten controleert? Als dat zo is, krijg je alleen de kleuren van de speler. Je moet eerst de kleur controleren en **dan** de speler tekenen.
- - Heb je code in het `else`-gedeelte staan om iets anders te doen wanneer een botsing wordt gedetecteerd, zoals het aanbrengen van een kleur of het gebruik van een andere afbeelding?
+ - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
  - Heb je de code voor je `if`-commando correct ingesprongen, zodat het wordt uitgevoerd wanneer aan de voorwaarde is voldaan?
 
 Het kan handig zijn om de kleur af te drukken van de pixel waarop je controleert op een botsing:
 
 ```python
-  print(red(botsen), green(botsen), blue(botsen))
+    print(red(botsen), green(botsen), blue(botsen))
 ```
 
 Je kunt ook een cirkel afdrukken rond het punt dat je aan het controleren bent en dat punt aanpassen als dat nodig is:
 
 ```python
-  no_fill()
+    no_fill()
   ellipse(muis_x, speler_y, 10, 10) #Teken botsingspunt
 ```
 
@@ -160,7 +134,8 @@ title: Botsingsdetectie met meerdere pixels
 ---
 
 ```python
-teken_speler():
+def teken_speler():
+
   speler_y = int(height * 0.8)
   #Nuttig voor het opsporen van fouten
   #Teken cirkels rond de pixels om te controleren op botsingen
