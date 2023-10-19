@@ -23,12 +23,11 @@
 
 --- code ---
 ---
-language: python
-filename: main.py - draw_obstacles()
+language: python filename: main.py - draw_obstacles() line_numbers: false line_number_start:
+line_highlights: 4
 ---
 
 def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Αντικατάστησέ το με το εμπόδιό σου
-
 
 --- /code ---
 
@@ -36,7 +35,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #�
 
 --- code ---
 ---
-language: python
+language: python filename: main.py - draw() line_numbers: false line_number_start:
 filename: main.py - draw()
 ---
 
@@ -61,27 +60,23 @@ title: Χρησιμοποίησε την αρχική εικόνα
 
 Κάνε κλικ στο εικονίδιο **View and Add Images**.
 
-![Το εικονίδιο της εικόνας στην επάνω δεξιά γωνία της περιοχής κώδικα.](images/manage-images.png)
+![Το εικονίδιο της εικόνας στην επάνω δεξιά γωνία της περιοχής κώδικα.](images/starter-images.png)
 
 Οι εικόνες που περιλαμβάνονται στο αρχικό έργο θα εμφανίζονται στη λίστα `Image Library`.
 
-![Η Image library (βιβλιοθήκη εικόνων) με τη λίστα εικόνων που περιλαμβάνει.](images/starter-images.png)
-
-Σημείωσε το όνομα της εικόνας που θέλεις να χρησιμοποιήσεις.
-
-Φόρτωσε την εικόνα στη συνάρτηση `setup()`.
+Load the image into the `setup()` function
 
 --- code ---
 ---
-language: python
-filename: main.py - setup()
+Φόρτωσε την εικόνα στη συνάρτηση `setup()`.
+line_highlights: 12
 ---
 
-def setup(): size(400, 400) player = load_image('skiing.png') #Φόρτωσε την εικόνα σου obstacle = load_image('rocket.png') #Φόρτωσε την εικόνα σου
+def setup(): size(400, 400) global player player = load_image('skiing.png')  # Load your player image obstacle = load_image('rocket.png')  # Load your obstacle image
 
 --- /code ---
 
-Κάλεσε τη συνάρτηση `image()` και όρισε την ως global στη συνάρτηση `draw_obstacles()`.
+Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function, call `obstacle` as a global variable and use it in the call to `image()`.
 
 --- code ---
 ---
@@ -91,9 +86,9 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
-   global obstacle
-
-   image(obstacle, ob_x, ob_y, 30, 30) #Αλλαγή μεγέθους για να ταιριάζει με το θέμα σου
+    global obstacle
+    
+    image(obstacle, ob_x, ob_y, 30, 30)  # Resize to fit your theme
 
 --- /code ---
 
@@ -104,9 +99,9 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 title: Χρησιμοποίησε χαρακτήρες emoji
 ---
 
-Μπορείς να χρησιμοποιήσεις χαρακτήρες emoji στη συνάρτηση p5 `text()` για να αναπαραστήσεις τα εμπόδιά σου.
+image(obstacle, ob_x, ob_y, 30, 30) #Αλλαγή μεγέθους για να ταιριάζει με το θέμα σου
 
-Ακολουθεί ένα παράδειγμα:
+Here's an example:
 
 --- code ---
 ---
@@ -114,9 +109,11 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Ελέγχει το μέγεθος του emoji text_align(CENTER, TOP) #Τοποθετημένο γύρω από το κέντρο
+Μπορείς να χρησιμοποιήσεις χαρακτήρες emoji στη συνάρτηση p5 `text()` για να αναπαραστήσεις τα εμπόδιά σου.
 
 --- /code ---
+
+Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function.
 
 --- code ---
 ---
@@ -144,14 +141,14 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**Συμβουλή:** Μπορείς να χρησιμοποιήσεις πολλά απλά σχήματα στην ίδια συνάρτηση για να δημιουργήσεις ένα πιο σύνθετο εμπόδιο.
+**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
 
 --- collapse ---
 ---
 title: Σχεδίασε ένα εμπόδιο χρησιμοποιώντας πολλά σχήματα
 ---
 
-![desc](images/tree_obstacle.png)
+![A tree drawn with green triangles for the body and a brown rectangle for the trunk](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -159,7 +156,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke() fill(0,255,0) #Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 # Draw a fir tree no_stroke() fill(0,255,0)  # Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100)  # Brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
 
@@ -171,11 +168,11 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #Draw a fir tree no_stroke(
 
 --- task ---
 
-Τώρα πρόσθεσε κώδικα για να αυξήσεις τη θέση `y` του εμποδίου σε κάθε καρέ και κάντο να επανεμφανίζεται στην αντίθετη πλευρά όταν φτάνει στο κάτω μέρος για να δημιουργήσεις το εφέ ενός άλλου εμποδίου.
+Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
 
-Η μεταβλητή p5 `frame_count` αρχίζει να μετράει τα καρέ όταν κάνεις κλικ στην εκτέλεση.
+The p5 `frame_count` variable starts counting the frames when you click run.
 
-`ob_y %= height` ορίζει τη θέση `y` ως το υπόλοιπο του ob_y όταν διαιρείται με το `height`. Με μια τιμή `height` στο '400', αυτό θα μετατρέψει το `401` σε `1`, οπότε όταν τα εμπόδια εξαφανιστούν στο κάτω μέρος της οθόνης, θα επανεμφανίζονται ξανά στην κορυφή.
+`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
 
 --- code ---
 ---
@@ -183,7 +180,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Αυξάνει κάθε καρέ ob_y %= height #Ξεκίνημα από την απέναντι πλευρά text('🌵', ob_x, ob_y) #Αντικατάστησέ το με το εμπόδιό σου
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count  # Increases each frame ob_y %= height  # Wrap around text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -191,15 +188,14 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Αυξάνε
 
 ### Πολλά εμπόδια
 
-Θα μπορούσες να σχεδιάσεις πολλά αντίγραφα του εμποδίου σου σε διαφορετικές τοποθεσίες εκκίνησης, αλλά αυτό είναι πολλή δουλειά. Ας κάνουμε μια συντόμευση.
-
+You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Η διαδικαστική παραγωγή (procedural generation)**</span> χρησιμοποιείται για τη δημιουργία κόσμων στα παιχνίδια, εμποδίων και σκηνών ταινιών με σκοπό τη δημιουργία τυχαιότητας αλλά με την εφαρμογή ορισμένων κανόνων. Το <span style="color: #0faeb0">seed</span> σημαίνει ότι μπορείς να δημιουργήσεις τα ίδια αποτελέσματα κάθε φορά που χρησιμοποιείς τον ίδιο seed (σπόρο).</p>
+<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
 
 --- task ---
 
-Αυτός ο κώδικας χρησιμοποιεί έναν βρόχο `for` με `randint()` για να επιλέξει θέσεις εμποδίων για σένα. Η κλήση της συνάρτησης τυχαίων αριθμών `seed()` σημαίνει ότι θα λαμβάνεις πάντα τους ίδιους τυχαίους αριθμούς. Αυτό σημαίνει ότι τα εμπόδια δεν θα χοροπηδούν σε κάθε καρέ και μπορείς να αλλάξεις το seed μέχρι να καταλήξεις στη σωστή τοποθέτηση των εμποδίων.
+This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
 
 --- code ---
 ---
@@ -207,16 +203,17 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles():
+def draw_obstacles(): seed(12345678)  # Any number is fine
 
-  seed(12345678) #Οποιοσδήποτε αριθμός είναι εντάξει
-
-  for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Αντικατάστησέ το με το δικό σου εμπόδιο
+    for i in range(6):  
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
-Χρήσιμες πληροφορίες:
+Useful information:
 
 [[[using-seed-in-python]]]
 
@@ -229,43 +226,48 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 title: Προειδοποίηση για επιληψία
 ---
 
-Η δοκιμή του προγράμματός σου πιθανόν να προκαλέσει επιληπτικές κρίσεις σε άτομα με επιληψία προκαλούμενη από φωτοευαισθησία. Εάν έχεις επιληψία προκαλούμενη από φωτοευαισθησία ή αισθάνεσαι ότι μπορεί να είσαι επιρρεπής σε επιληπτικές κρίσεις, μην εκτελέσεις το πρόγραμμά σου. Αντίθετα, μπορείς:
+Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
 - Βεβαιώσου ότι έχεις προσθέσει τη γραμμή κώδικα `seed()` για να βεβαιωθείς ότι τα εμπόδιά σου δεν χοροπηδάνε
 - Ζήτησε από κάποιον να το εκτελέσει για σένα
 - Προχώρησε και ολοκλήρωσε το έργο, ζητώντας από κάποιον να εκτελέσει το έργο για σένα, ώστε να μπορείς να κάνεις εντοπισμό σφαλμάτων
 - Άλλαξε τον ρυθμό καρέ πριν εκτελέσεις το πρόγραμμά σου προσθέτοντας `frame_rate(1)` στην αρχή της συνάρτησης `setup()` — μπορείς να το αφαιρέσεις αφού επιβεβαιώσεις ότι δεν υπάρχει σφάλμα
 
+```python
+run(frame_rate = 10)
+```
+You can alter the speed of the game by changing `10` to a higher or lower value.
+
 --- /collapse ---
 
 --- task ---
 
-**Δοκιμή:** Εκτέλεσε το πρόγραμμά σου και θα δεις πολλά αντικείμενα στην οθόνη, που επανεμφανίζονται στην αντίθετη πλευρά όταν φτάνουν στο κάτω μέρος.
+**Test:** Run your program and you should see multiple objects on the screen, wrapping around when they get to the bottom.
 
-Άλλαξε τον κώδικά σου μέχρι να είσαι ευχαριστημένος/η με τα εμπόδια που έχεις. Μπορείς:
+Change your code until you are happy with the obstacles you have. You can:
 
 + Να αλλάξεις το seed για να βάλεις εμπόδια σε διαφορετικές θέσεις εκκίνησης
 + Να αλλάξεις τον αριθμό των φορών στις επαναλήψεις βρόχου για να λάβεις διαφορετικό αριθμό εμποδίων
 + Να προσαρμόσεις το μέγεθος των εμποδίων
 
-**Συμβουλή:** Βεβαιώσου ότι είναι δυνατό να αποφύγεις τα εμπόδια σου, αλλά ότι δεν υπάρχει εύκολος δρόμος στο παιχνίδι σου.
+**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
 
 --- /task ---
 
 --- task ---
 
-**Εντοπισμός σφαλμάτων:** Ενδέχεται να βρεις κάποια σφάλματα στο έργο σου που πρέπει να διορθώσεις. Εδώ είναι μερικά κοινά σφάλματα.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
 title: Μόνο ένα εμπόδιο έχει σχεδιαστεί
 ---
 
-Έλεγξε τη συνάρτησή σου που σχεδιάζει πολλά εμπόδια:
+Check your function that draws multiple obstacles:
  + Βεβαιώσου ότι χρησιμοποιεί έναν βρόχο `for` για να καλέσει τη συνάρτηση σχεδίασης εμποδίων περισσότερες από μία φορές
  + Βεβαιώσου ότι χρησιμοποιεί `randint()` για να αλλάξει τις συντεταγμένες (x, y) που περνά στη συνάρτηση σχεδίασης εμποδίων
  + Έλεγξε ότι έχεις χρησιμοποιήσει `ob_x` και `ob_y` ως συντεταγμένες για το εμπόδιό σου
 
-Για παράδειγμα:
+For example:
 
 --- code ---
 ---
@@ -273,12 +275,13 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles():
+Έλεγξε τη συνάρτησή σου που σχεδιάζει πολλά εμπόδια:
 
-  seed(12345678)
-
-  for i in range(6):  
-ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height text('🌵', ob_x, ob_y) #Αντικατάστησέ το με το δικό σου εμπόδιο
+    for i in range(6):  
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -289,13 +292,13 @@ ob_x = randint(0, height) ob_y = randint(0, height) + frame_count ob_y %= height
 title: Τα εμπόδια αλλάζουν θέση κάθε φορά που σχεδιάζεται ένα καρέ
 ---
 
-Βεβαιώσου ότι έχεις χρησιμοποιήσει `seed()` μέσα στη συνάρτηση που σχεδιάζει πολλά εμπόδια.
+def draw_obstacles():
 
 --- /collapse ---
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Οι προγραμματιστές/τριες χρησιμοποιούν πολλά κομψά κόλπα, όπως τη χρήση του τελεστή «%» για να κάνουν αντικείμενα να επανεμφανίζονται στην αντίθετη πλευρά της οθόνης και τη συνάρτηση «seed()» για τη δημιουργία των ίδιων τυχαίων αριθμών. Όσο περισσότερο προγραμματίζεις, τόσο πιο κομψά κόλπα θα μαθαίνεις.</p>
+Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
 
 --- save ---
