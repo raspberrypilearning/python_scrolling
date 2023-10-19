@@ -6,7 +6,7 @@ A função desenhar_jogador aparece aqui
 
 Configure sua animação aqui
 
-Coisas para fazer em cada imagem
+Coisas para fazer em cada quadro
 
 Definições para compatibilidade com a biblioteca de processamento p5py
 
@@ -34,23 +34,23 @@ Desenhar ponto de colisão
 
 Posicione ao redor do centro, superior
 
-Enfrentar
+Rosto
 
 Olhos
 
 Boca
 
-Bateu
+Colidiu
 
-Coloque o código para ser executado uma vez aqui
+Coloque aqui o código para ser executado uma vez
 
 Largura e altura
 
-Coloque o código para executar em cada quadro aqui
+Coloque aqui o código para ser executado em cada quadro
 
 Mantenha isso para executar seu código
 
-A função desenhar_obstáculo vai aqui
+A função desenhar_obstaculo vai aqui
 
 Na parte inferior da tela
 
@@ -72,17 +72,17 @@ Substitua pelo seu obstáculo
 
 Antes de desenhar o jogador
 
-Redimensione para se adequar ao seu tema
+Redimensione para adequar ao seu tema
 
-Desenhe uma árvore de abeto
+Desenhe um pinheiro
 
-Verde para agulhas
+Verde para as folhas
 
-Marrom para o porta-malas
+Marrom para o tronco
 
-Aumenta cada quadro
+Aumenta a cada quadro
 
-Qualquer número é bom
+Está bem qualquer número
 
 Em segundo plano
 
