@@ -2,18 +2,10 @@
 
 إذا كنت في نادٍ ، فلماذا لا تشارك مشروعك مع الأصدقاء؟
 
-يمكنك أيضًا إظهار كيفية عمل مشروعك لعائلتك عن طريق إرسال رابط إليهم.
-
-للحصول على رابط ، انتقل إلى زر القائمة **Share** في الجزء العلوي الأيمن من صفحة تحرير Trinket وحدد **Link**.
-
-![تم تمديد زر القائمة "مشاركة" ، مع تمييز "الرابط".](images/share-button.png)
-
-**نصيحة:** يمكنك مشاركة رابط لمشروعك حتى إذا لم يكن لديك حساب Trinket ؛ ومع ذلك ، بدون حساب ، سيتغير الارتباط إلى مشروعك في كل مرة تقوم فيها بتحديثه. إذا قمت بمشاركة الرابط مع شخص ما ، فستحتاج إلى إرسال ارتباط جديد له لمشاهدة التغييرات.
-
 --- task ---
 
 ألهم مجتمع Raspberry Pi Foundation بمشروعك!
 
-لإرسال مشروعك إلى الاستوديو ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){: target = "_ blank"} الاستوديو ، يرجى إكمال [هذا النموذج](https://form.raspberrypi.org/f/community-project-submissions){: target = "_ blank"}.
+لإرسال مشروعك إلى الاستوديو ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} الاستوديو ، يرجى إكمال [هذا النموذج](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
 --- /task ---
