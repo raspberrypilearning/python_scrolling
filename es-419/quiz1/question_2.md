@@ -33,7 +33,7 @@ No exactamente. Esto puede suceder con obstáculos generados por procedimientos,
 No exactamente. Esto puede suceder al comienzo del juego o cuando se agregan nuevos obstáculos como resultado del aumento del nivel de dificultad, si eligen una posición cercana a la del jugador.
 
 
-**Sugerencia:** Una posible solución podría ser hacer que el jugador sea temporalmente invulnerable a la colisión con todos los obstáculos, o incluso solo con los obstáculos recién creados, durante un breve período de tiempo después de un cambio de nivel. ¿Qué problemas se podriar crear eligiendo una nueva posición para el obstáculo, si esta estuviera demasiado cerca del jugador?
+**Tip:** A potential solution might be to make the player temporarily immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. ¿Qué problemas se podriar crear eligiendo una nueva posición para el obstáculo, si esta estuviera demasiado cerca del jugador?
 
   --- /feedback ---
 
@@ -41,7 +41,7 @@ No exactamente. Esto puede suceder al comienzo del juego o cuando se agregan nue
 
   --- feedback ---
 
-No exactamente. Debido a que la generación aleatoria puede elegir grupos de números muy cercanos, esto puede ser un problema.
+No exactamente. Because random generation can choose groups of numbers that are close together, this can be a problem.
 
 
 **Sugerencia:** Una solución podría ser cambiar a la generación semialeatoria: dividir la pantalla en pedazos y usar números aleatorios para generar obstáculos dentro de cada uno de esos pedazos. ¿Puedes pensar en cómo podrías usar este tipo de generación de procedimientos para hacer que tu juego sea más interesante o más desafiante?
