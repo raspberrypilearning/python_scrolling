@@ -1,11 +1,3 @@
-NAME: "Don't Collide: Skiing Cat"
-IDENTIFIER: "skiing-cat-example"
-COMPONENTS:
-  - name: "main"
-    extension: "py"
-    location: "main.py"
-    index: 0
-    default: true
-IMAGES:
-  - "fallenover.png"
-  - "skiing.png"
+name: "Don't Collide: Skiing Cat"
+identifier: "skiing-cat-example"
+type: "python"

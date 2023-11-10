@@ -1,10 +1,5 @@
-NAME: "Don't Collide: Clean Car"
-IDENTIFIER: "clean-car-example"
-COMPONENTS:
-  - name: "main"
-    extension: "py"
-    location: "main.py"
-    index: 0
-    default: true
-IMAGES:
-  - "car.png"
+name: "Don't Collide: Clean Car"
+identifier: "clean-car-example"
+type: "python"
+
+

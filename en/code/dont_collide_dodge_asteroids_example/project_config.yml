@@ -1,11 +1,3 @@
-NAME: "Don't Collide: Dodge Asteroids"
-IDENTIFIER: "dodge-asteroids-example"
-COMPONENTS:
-  - name: "main"
-    extension: "py"
-    location: "main.py"
-    index: 0
-    default: true
-IMAGES:
-  - "moon.png"
-  - "rocket.png"
+name: "Don't Collide: Dodge Asteroids"
+identifier: "dodge-asteroids-example"
+type: "python"
