@@ -1,0 +1,95 @@
+Import library code
+
+Wrap around
+
+The draw_player function goes here
+
+Setup your animation here
+
+Things to do in every frame
+
+Definitions for compatibility with the p5py processing library
+
+Shape
+
+Fonts
+
+Text
+
+Colour
+
+Images
+
+Environment
+
+Transform
+
+Keyboard
+
+Draw collision point
+
+Off the left of the screen
+
+Off the right of the screen
+
+Position around the centre, top
+
+Face
+
+Eyes
+
+Mouth
+
+Collided
+
+Put code to run once here
+
+Width and height
+
+Put code to run every frame here
+
+Keep this to run your code
+
+The draw_obstacle function goes here
+
+Off the bottom of the screen
+
+Off the top of the screen
+
+Add the colour of your theme
+
+Positioned towards the screen bottom
+
+Your chosen colour
+
+Load your image
+
+Controls the size of the emoji
+
+Position around the centre
+
+Replace with your obstacle
+
+Before drawing the player
+
+Resize to fit your theme
+
+Draw a fir tree
+
+Green for needles
+
+Brown for trunk
+
+Increases each frame
+
+Any number is fine
+
+On background
+
+Useful for debugging
+
+Draw circles around the pixels to check for collisions
+
+Include global variables here
+
+Use the global level
