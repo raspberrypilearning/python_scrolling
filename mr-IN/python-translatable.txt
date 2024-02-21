@@ -1,71 +1,38 @@
-speed
+safe
 
-score
+draw_player
+
+player_y
+
+player
+
+draw_player
+
+mouse_x
+
+image_file
+
+x_coord
+
+y_coord
+
+width
+
+height
 
 draw_obstacles
-
-You reached speed
-
-You reached level
 
 ob_x
 
 ob_y
 
-skiing
-
-crashed
-
-player_y
+obstacle
 
 collide
 
-safe
-
 level
 
-collide2
+score
 
-collide3
+message
 
-collide4
-
-safe_player
-
-crashed_player
-
-player_x
-
-car
-
-lives
-
-invulnerability
-
-display_score
-
-🎉🎉 You win! 🎉🎉
-
-display_lives
-
-rocket
-
-rock
-
-random_seed
-
-player
-
-obstacle
-
-Great flying!
-
-Doing well!
-
-Keep going!
-
-But be careful!
-
-Push harder!
-
-Head for base!
