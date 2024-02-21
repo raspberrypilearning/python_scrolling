@@ -1,71 +1,38 @@
-швидкість
+safe
 
-рахунок
+draw_player
+
+player_y
+
+гравець
+
+draw_player
+
+mouse_x
+
+image_file
+
+x_coord
+
+y_coord
+
+width
+
+height
 
 draw_obstacles
-
-Досягнута швидкість
-
-Досягнуто рівня
 
 ob_x
 
 ob_y
 
-skiing
-
-crashed
-
-player_y
+obstacle
 
 collide
 
-safe
-
 level
 
-collide2
+рахунок
 
-collide3
+message
 
-collide4
-
-safe_player
-
-crashed_player
-
-player_x
-
-car
-
-життя
-
-invulnerability
-
-display_score
-
-🎉🎉 Перемога! 🎉🎉
-
-display_lives
-
-rocket
-
-rock
-
-random_seed
-
-гравець
-
-obstacle
-
-Чудовий політ!
-
-Все добре!
-
-Не зупиняйся!
-
-Але будь обережним!
-
-Сильніше!
-
-Прямуй на базу!
