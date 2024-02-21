@@ -1,71 +1,38 @@
-vitesse
+sur
 
-score
+draw_player
+
+joueur_y
+
+joueur
+
+draw_player
+
+mouse_x
+
+image_file
+
+x_coord
+
+y_coord
+
+width
+
+height
 
 dessine_obstacles
-
-Tu as atteint la vitesse
-
-Tu as atteint le niveau
 
 ob_x
 
 ob_y
 
-ski
-
-chute
-
-joueur_y
+obstacle
 
 collision
 
-sur
-
 niveau
 
-collision2
+score
 
-collision3
+message
 
-collision4
-
-joueur_sur
-
-joueur_ecrase
-
-joueur_x
-
-voiture
-
-vies
-
-invun
-
-affichage_score
-
-🎉🎉 Tu as gagné ! 🎉🎉
-
-affichage_vies
-
-fusee
-
-roche
-
-seed_aleatoire
-
-joueur
-
-obstacle
-
-Superbe vol !
-
-Ça va bien !
-
-Continue !
-
-Mais attention !
-
-Pousse plus fort!
-
-Va à la base !
