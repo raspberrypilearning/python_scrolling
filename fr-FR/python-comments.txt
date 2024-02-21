@@ -1,61 +1,3 @@
-Importer le code de la bibliothèque
-
-Enveloppant
-
-La fonction dessine_joueur vient ici
-
-Configure ton animation ici
-
-Choses à faire dans chaque image
-
-Définitions pour la compatibilité avec la bibliothèque de traitement p5py
-
-Forme
-
-Polices
-
-Texte
-
-Couleur
-
-Images
-
-Environnement
-
-Transformer
-
-Clavier
-
-Dessine le point de collision
-
-Sur la gauche de l'écran
-
-À droite de l'écran
-
-Position près du centre, en haut
-
-Le visage
-
-Les yeux
-
-La bouche
-
-Collision
-
-Mettre le code à exécuter ci-dessous
-
-Largeur et hauteur
-
-Mettre le code pour exécuter chaque image ici
-
-Garde ceci pour exécuter ton code
-
-La fonction dessine_obstacle vient ici
-
-Hors dessous de l'écran
-
-Hors dessus écran
-
 Ajouter la couleur de ton thème
 
 Positionné vers le bas de l'écran
@@ -68,9 +10,17 @@ Contrôle la taille de l'emoji
 
 Position près du centre
 
+Le visage
+
+Les yeux
+
 Remplacer par ton obstacle
 
 Avant de dessiner le joueur
+
+Load your player image
+
+Load your obstacle image
 
 Redimensionner pour s'adapter à ton thème
 
@@ -82,14 +32,41 @@ Brun pour le tronc
 
 Augmente chaque image
 
+Enveloppant
+
+Replace with your obstacle
+
 N'importe quel nombre convient
 
-Sur l'arrière plan
+Dessine le point de collision
 
 Utile pour le débogage
 
 Dessiner des cercles autour des pixels pour vérifier les collisions
 
+Sur la gauche de l'écran
+
+À droite de l'écran
+
 Inclure les variables globales ici
 
 Utiliser global niveau
+
+You have reached level
+
+Score: 
+
+Text to display
+
+Great flying!
+
+Doing well!
+
+Keep going!
+
+But be careful!
+
+Push harder!
+
+Head for base!
+
