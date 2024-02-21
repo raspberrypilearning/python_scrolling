@@ -1,71 +1,38 @@
-snelheid
+veilig
 
-score
+draw_player
+
+speler_y
+
+speler
+
+draw_player
+
+mouse_x
+
+image_file
+
+x_coord
+
+y_coord
+
+width
+
+height
 
 teken_obstakels
-
-Je hebt snelheid
-
-You reached level
 
 obstakel_x
 
 obstakel_y
 
-skien
-
-gecrasht
-
-speler_y
+obstakel
 
 botsen
 
-veilig
-
 level
 
-botsen2
+score
 
-botsen3
+message
 
-botsen4
-
-speler_veilig
-
-speler_gebotst
-
-speler_x
-
-auto
-
-levens
-
-onkwetsbaar
-
-toon_score
-
-🎉🎉 Jij wint! 🎉🎉
-
-toon_levens
-
-raket
-
-rots
-
-random_seed
-
-speler
-
-obstakel
-
-Dat vliegt geweldig!
-
-Je doet het goed!
-
-Ga door!
-
-Maar wees voorzichtig!
-
-Harder werken!
-
-Ga naar de basis!
