@@ -18,9 +18,9 @@ Vervang je obstakel
 
 Voordat je de speler tekent
 
-Load your player image
+Laad je speler afbeelding
 
-Load your obstacle image
+Laad je obstakel afbeelding
 
 Pas de afmeting aan om bij jouw thema te passen
 
@@ -34,7 +34,7 @@ Verhoogt elk frame
 
 Blijf binnen het speelveld
 
-Replace with your obstacle
+Vervang door je obstakel
 
 Ieder getal is prima
 
@@ -52,21 +52,21 @@ Voeg hier global variabelen toe
 
 Gebruik het global level
 
-You have reached level
+Je hebt niveau bereikt
 
 Score: 
 
-Text to display
+Tekst om weer te geven
 
-Great flying!
+Geweldig gevlogen!
 
-Doing well!
+Je doet het goed!
 
-Keep going!
+Ga door!
 
-But be careful!
+Maar wees voorzichtig!
 
-Push harder!
+Harder werken!
 
-Head for base!
+Ga naar de basis!
 
