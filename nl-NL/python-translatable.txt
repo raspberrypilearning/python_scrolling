@@ -16,9 +16,9 @@ x_coord
 
 y_coord
 
-width
+breedte
 
-height
+hoogte
 
 teken_obstakels
 
@@ -34,5 +34,5 @@ level
 
 score
 
-message
+bericht
 
