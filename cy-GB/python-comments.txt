@@ -1,61 +1,3 @@
-Mewngludo cod llyfrgell
-
-Amlapio
-
-Mae'r swyddogaeth llunio_chwaraewr yn mynd fan hyn
-
-Gosodwch eich animeiddiad yma
-
-Pethau i'w gwneud ym mhob ffrâm
-
-Diffiniadau ar gyfer cydnawsedd â'r llyfrgell brosesu p5py
-
-Siâp
-
-Ffontiau
-
-Testun
-
-Lliw
-
-Delweddau
-
-Amgylchedd
-
-Trawsnewid
-
-Bysellfwrdd
-
-Llunio pwynt gwrthdaro
-
-Oddi ar ochr chwith y sgrin
-
-Oddi ar ochr dde'r sgrin
-
-Lleoli o amgylch y canol, brig
-
-Wyneb
-
-Llygaid
-
-Ceg
-
-Wedi_taro
-
-Rhowch god i redeg unwaith yma
-
-Lled ac uchder
-
-Rhowch god i redeg ym mhob ffrâm yma
-
-Cadwch hwn i redeg eich cod
-
-Mae'r swyddogaeth llunio_rhwystrau yn mynd fan hyn
-
-Oddi ar waelod y sgrin
-
-Oddi ar frig y sgrin
-
 Ychwanegwch liw eich thema
 
 Lleoli tua gwaelod y sgrin
@@ -68,9 +10,17 @@ Rheoli maint yr emoji
 
 Lleoli o amgylch y canol
 
+Wyneb
+
+Llygaid
+
 Disodli gyda'ch rhwystr
 
 Cyn llunio'r chwaraewr
+
+Load your player image
+
+Load your obstacle image
 
 Newidiwch y maint i gyd-fynd â'ch thema
 
@@ -82,14 +32,41 @@ Brown i'r boncyff
 
 Cynyddu bob ffrâm
 
+Amlapio
+
+Replace with your obstacle
+
 Unrhyw rif yn iawn
 
-Ar y cefndir
+Llunio pwynt gwrthdaro
 
 Defnyddiol ar gyfer difa chwilod
 
 Llunio cylchoedd o amgylch y picseli i wirio am wrthdrawiad
 
+Oddi ar ochr chwith y sgrin
+
+Oddi ar ochr dde'r sgrin
+
 Rhowch newidynnau cyffredinol yma
 
 Defnyddio'r lefel gyffredinol
+
+You have reached level
+
+Score: 
+
+Text to display
+
+Great flying!
+
+Doing well!
+
+Keep going!
+
+But be careful!
+
+Push harder!
+
+Head for base!
+
