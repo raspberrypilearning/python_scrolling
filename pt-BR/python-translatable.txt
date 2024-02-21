@@ -1,71 +1,38 @@
-velocidade
+seguro
 
-pontos
+draw_player
+
+jogador_y
+
+jogador
+
+draw_player
+
+mouse_x
+
+image_file
+
+x_coord
+
+y_coord
+
+width
+
+height
 
 desenhar_obstaculos
-
-Você atingiu a velocidade
-
-Você atingiu o nível
 
 ob_x
 
 ob_y
 
-esquiando
-
-bateu
-
-jogador_y
+obstaculo
 
 colidir
 
-seguro
-
 nivel
 
-colidir2
+pontos
 
-colidir3
+message
 
-colidir4
-
-jogador_seguro
-
-jogador_batido
-
-jogador_x
-
-carro
-
-vidas
-
-invulnerabilidade
-
-exibir_pontos
-
-🎉🎉 Você venceu! 🎉🎉
-
-exibir_vidas
-
-foguete
-
-rocha
-
-semente_aleatoria
-
-jogador
-
-obstaculo
-
-Ótimo vôo!
-
-Indo bem!
-
-Continue!
-
-Mas tenha cuidado!
-
-Se esforce mais!
-
-Volte para a base!
