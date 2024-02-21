@@ -1,71 +1,38 @@
-cyflymder
+diogel
 
-sgor
+draw_player
+
+chwaraewr_y
+
+chwaraewr
+
+draw_player
+
+mouse_x
+
+image_file
+
+x_coord
+
+y_coord
+
+width
+
+height
 
 llunio_rhwystrau
-
-Wedi cyrraedd cyflymder
-
-You reached level
 
 rh_x
 
 rh_y
 
-sgio
-
-wedi_taro
-
-chwaraewr_y
+rhwystr
 
 taro
 
-diogel
-
 lefel
 
-taro2
+sgor
 
-taro3
+message
 
-taro4
-
-chwaraewr_diogel
-
-chwaraewr_wedi_taro
-
-chwaraewr_x
-
-car
-
-bywydau
-
-anorchfygol
-
-dangos_sgor
-
-🎉🎉 Wedi ennill! 🎉🎉
-
-dangos_bywydau
-
-roced
-
-craig
-
-dosbarthiad_ar_hap
-
-chwaraewr
-
-rhwystr
-
-Hedfan heb ei ail!
-
-Ti'n gwneud yn dda!
-
-Dal ati!
-
-Ond bydd yn ofalus!
-
-Gwthia'n galetach!
-
-Am adre!
