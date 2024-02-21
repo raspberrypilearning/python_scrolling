@@ -1,61 +1,3 @@
-Bibliotheekcode importeren
-
-Blijf binnen het speelveld
-
-De teken_speler functie komt hier
-
-Stel hier je animatie in
-
-Dingen om te doen in elk frame
-
-Definities voor de p5py-bibliotheek
-
-Vormgeving
-
-Lettertypen
-
-Tekst
-
-Kleur
-
-Afbeeldingen
-
-Omgeving
-
-Omzetten
-
-Toetsenbord
-
-Teken botsingspunt
-
-Voorbij de linkerkant van het scherm
-
-Voorbij de rechterkant van het scherm
-
-Positie rond het midden, bovenaan
-
-Gezicht
-
-Ogen
-
-Mond
-
-Gebotst
-
-Zet de code om eenmalig uit te voeren hier onder
-
-Breedte en hoogte
-
-Zet hier code om bij elk frame uit te voeren
-
-Houdt dit om je code uit te voeren
-
-De teken_obstakel functie komt hier
-
-Voorbij de onderkant van het scherm
-
-Voorbij de bovenkant van het scherm
-
 Voeg de kleur van je thema toe
 
 Gepositioneerd naar de onderkant van het scherm
@@ -68,9 +10,17 @@ Bepaalt de grootte van de emoji
 
 Positie rond het midden, bovenaan
 
+Gezicht
+
+Ogen
+
 Vervang je obstakel
 
 Voordat je de speler tekent
+
+Load your player image
+
+Load your obstacle image
 
 Pas de afmeting aan om bij jouw thema te passen
 
@@ -82,14 +32,41 @@ Bruin voor stam
 
 Verhoogt elk frame
 
+Blijf binnen het speelveld
+
+Replace with your obstacle
+
 Ieder getal is prima
 
-Gelijk aan achtergrondkleur
+Teken botsingspunt
 
 Nuttig voor het opsporen van fouten
 
 Teken cirkels rond de pixels om te controleren op botsingen
 
+Voorbij de linkerkant van het scherm
+
+Voorbij de rechterkant van het scherm
+
 Voeg hier global variabelen toe
 
 Gebruik het global level
+
+You have reached level
+
+Score: 
+
+Text to display
+
+Great flying!
+
+Doing well!
+
+Keep going!
+
+But be careful!
+
+Push harder!
+
+Head for base!
+
