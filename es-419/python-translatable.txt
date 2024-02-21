@@ -1,71 +1,38 @@
-velocidad
+a_salvo
 
-puntaje
+draw_player
+
+jugador_y
+
+jugador
+
+draw_player
+
+mouse_x
+
+image_file
+
+x_coord
+
+y_coord
+
+width
+
+height
 
 dibujar_obstaculos
-
-Llegaste a la velocidad
-
-Alcanzaste el nivel
 
 obstaculo_x
 
 obstaculo_y
 
-esquiador
-
-estrellado
-
-jugador_y
+obstaculo
 
 colision
 
-a_salvo
-
 nivel
 
-colision2
+puntaje
 
-colision3
+message
 
-colision4
-
-jugador_a_salvo
-
-jugador_estrellado
-
-jugador_x
-
-carro
-
-vidas
-
-invulnerabilidad
-
-mostrar_puntaje
-
-🎉🎉 ¡Ganaste! 🎉🎉
-
-mostrar_vidas
-
-cohete
-
-asteroide
-
-semilla_aleatoria
-
-jugador
-
-obstaculo
-
-¡Excelente vuelo!
-
-¡Vas bien!
-
-¡Sigue así!
-
-Pero ve con cuidado!
-
-¡Ponle más ganas!
-
-Regresa a la base!
