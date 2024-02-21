@@ -1,71 +1,38 @@
-speed
+safe
 
-score
-
-draw_obstacles
-
-You reached speed
-
-You reached level
-
-ob_x
-
-ob_y
-
-skiing
-
-crashed
+safe_player
 
 player_y
 
-collide
-
-safe
-
-level
-
-collide2
-
-collide3
-
-collide4
-
-safe_player
+player
 
 crashed_player
 
 player_x
 
-car
+image_file
 
-lives
+x_coord
 
-invulnerability
+y_coord
 
-display_score
+width
 
-🎉🎉あなたが勝ちます！ 🎉🎉
+height
 
-display_lives
+draw_obstacles
 
-rocket
+ob_x
 
-rock
-
-random_seed
-
-player
+ob_y
 
 obstacle
 
-素晴らしい飛行です!
+collide
 
-よくできました!
+level
 
-どんどん行きましょう!
+score
 
-でも気をつけてください!
+message
 
-がんばりましょう!
-
-基地に向かいましょう!
