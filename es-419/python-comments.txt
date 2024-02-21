@@ -1,61 +1,3 @@
-Importar el código de la Biblioteca p5
-
-Recircular
-
-Aquí va la función dibujar_jugador
-
-Configura tu animación aquí
-
-Cosas que hacer en cada cuadro (frame)
-
-Definiciones de compatibilidad con la biblioteca de procesamiento p5py
-
-Formas
-
-Tipos de letra
-
-Texto
-
-Color
-
-Imágenes
-
-Entorno informático
-
-Transformar
-
-Teclado
-
-Dibuja el punto de colisión
-
-A la izquierda de la pantalla
-
-A la derecha de la pantalla
-
-Ubicado al centro y arriba
-
-Cara
-
-Ojos
-
-Boca
-
-Estrellado
-
-Ejecuta tu código una vez llegues aquí
-
-Ancho y alto
-
-Ejecuta tu código cada cuadro (frame) aquí
-
-Mantén lo siguiente para ejecutar tu código
-
-Aquí va la función dibujar_obstaculos
-
-A la parte inferior de la pantalla
-
-A la parte superior de la pantalla
-
 Agrega el color de tu tema
 
 Ubicado en la parte inferior de la pantalla
@@ -68,9 +10,17 @@ Controla el tamaño del emoji
 
 Ubicado alrededor del centro
 
+Cara
+
+Ojos
+
 Reemplázalo con tu obstáculo
 
 Antes de dibujar tu jugador
+
+Load your player image
+
+Load your obstacle image
 
 Cambia el tamaño para que se adapte a tu tema
 
@@ -82,14 +32,41 @@ Marrón para el tronco
 
 Aumenta cada frame
 
+Recircular
+
+Replace with your obstacle
+
 Cualquier número funcionará
 
-En el fondo
+Dibuja el punto de colisión
 
 Útil para depurar
 
 Dibuja círculos alrededor de los píxeles para verificar colisiones
 
+A la izquierda de la pantalla
+
+A la derecha de la pantalla
+
 Incluye variables globales aquí
 
 Usa el nivel global
+
+You have reached level
+
+Score: 
+
+Text to display
+
+Great flying!
+
+Doing well!
+
+Keep going!
+
+But be careful!
+
+Push harder!
+
+Head for base!
+
