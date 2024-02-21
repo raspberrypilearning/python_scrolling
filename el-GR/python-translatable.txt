@@ -1,71 +1,38 @@
-speed
+safe
 
-score
+draw_player
+
+player_y
+
+player
+
+draw_player
+
+mouse_x
+
+image_file
+
+x_coord
+
+y_coord
+
+width
+
+height
 
 draw_obstacles
-
-Έφτασες στο επίπεδο
-
-You reached level
 
 ob_x
 
 ob_y
 
-skiing
-
-crashed
-
-player_y
+obstacle
 
 collide
 
-safe
-
 level
 
-collide2
+score
 
-collide3
+message
 
-collide4
-
-safe_player
-
-crashed_player
-
-player_x
-
-car
-
-lives
-
-invulnerability
-
-display_score
-
-🎉🎉 Νίκησες! 🎉🎉
-
-display_lives
-
-rocket
-
-rock
-
-random_seed
-
-player
-
-obstacle
-
-Υπέροχη πτήση!
-
-Καλά τα πας!
-
-Συνέχισε!
-
-Αλλά πρόσεχε!
-
-Προσπάθησε πιο πολύ!
-
-Κατευθύνσου προς τη βάση!
