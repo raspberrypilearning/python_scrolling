@@ -1,61 +1,3 @@
-Import library code
-
-Wrap around
-
-The draw_player function goes here
-
-Setup your animation here
-
-Things to do in every frame
-
-Definitions for compatibility with the p5py processing library
-
-Shape
-
-Fonts
-
-Text
-
-Colour
-
-Images
-
-Environment
-
-Transform
-
-Keyboard
-
-Draw collision point
-
-Off the left of the screen
-
-Off the right of the screen
-
-Position around the centre, top
-
-Face
-
-Eyes
-
-Mouth
-
-Collided
-
-Put code to run once here
-
-Width and height
-
-Put code to run every frame here
-
-Keep this to run your code
-
-The draw_obstacle function goes here
-
-Off the bottom of the screen
-
-Off the top of the screen
-
 Add the colour of your theme
 
 Positioned towards the screen bottom
@@ -68,9 +10,17 @@ Controls the size of the emoji
 
 Position around the centre
 
+Face
+
+Eyes
+
 Replace with your obstacle
 
 Before drawing the player
+
+Load your player image
+
+Load your obstacle image
 
 Resize to fit your theme
 
@@ -82,14 +32,41 @@ Brown for trunk
 
 Increases each frame
 
+Wrap around
+
+Replace with your obstacle
+
 Any number is fine
 
-On background
+Draw collision point
 
 Useful for debugging
 
 Draw circles around the pixels to check for collisions
 
+Off the left of the screen
+
+Off the right of the screen
+
 Include global variables here
 
 Use the global level
+
+You have reached level
+
+Score: 
+
+Text to display
+
+Great flying!
+
+Doing well!
+
+Keep going!
+
+But be careful!
+
+Push harder!
+
+Head for base!
+
