@@ -1,25 +1,25 @@
-## Створення перешкод
+## Create obstacles
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Створи перешкоди, яких потрібно буде уникати, щоб гра не закінчилася.
+Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
 
-![Приклад проєкту Кіт на лижах з перешкодами із дерев](images/obstacles.png){:width="300px"}
+![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
 
 </div>
 </div>
 
-### Почни з однієї перешкоди
+### Start with one obstacle
 
-Ти можеш створити перешкоди тим самим способом, як і свого персонажа. Які перешкоди підходять до твоєї теми?
+You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
 
-Ти будеш використовувати цикл `for`, щоб зробити багато копій, тому тобі потрібно зробити або обрати лише одну перешкоду.
+You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
 
 --- task ---
 
-Визнач функцію `draw_obstacles()`:
+Define a `draw_obstacles()` function:
 
 --- code ---
 ---
@@ -27,20 +27,19 @@ language: python filename: main.py - draw_obstacles() line_numbers: false line_n
 line_highlights: 4
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Заміни на свою перешкоду
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
-Додай в `draw()` код для виклику `draw_obstacles()` на кожному кадрі.
+Add code to `draw()` to call `draw_obstacles()` each frame.
 
 --- code ---
 ---
 language: python filename: main.py - draw() line_numbers: false line_number_start:
-filename: main.py - draw()
+line_highlights: 5
 ---
 
-def draw(): safe = color(200, 100, 0) #Додай колір, відповідно до твоєї теми background(safe)  
-draw_obstacles() #Перед малюванням персонажа draw_player()
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe) draw_obstacles()  # Before drawing the player draw_player()
 
 --- /code ---
 
@@ -48,27 +47,27 @@ draw_obstacles() #Перед малюванням персонажа draw_player
 
 --- task ---
 
-**Обирай:** Як буде виглядати твоя перешкода? Перешкодою може бути:
-+ Зображення, які наведені у стартовому проєкті
-+ Емодзі 🌵 або текст
-+ Малюнок, виконаний за допомогою декількох фігур
+**Choose:** What does your obstacle look like? Your obstacle could be:
++ An image provided in the starter project
++ An emoji 🌵 or text
++ Drawn using a series of shapes
 
 --- collapse ---
 ---
-title: Використання стартового зображення
+title: Use a starter image
 ---
 
-Натисни на значок **manage images**.
+Images included in the starter project will be shown in the `Image gallery`.
 
-![Піктограма у верхньому правому куті області коду.](images/starter-images.png)
+![The Image gallery displaying the included images.](images/starter-images.png)
 
-Зображення, включені в стартовий проєкт, будуть відображені в списку `Image library`.
+Make a note of the name of the image you want to use.
 
 Load the image into the `setup()` function
 
 --- code ---
 ---
-Завантаж зображення у функцію `setup()`.
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 12
 ---
 
@@ -96,10 +95,10 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
 --- collapse ---
 ---
-title: Використання символів емодзі
+title: Use emoji characters
 ---
 
-image(obstacle, ob_x, ob_y, 30, 30) #Зміни розмір відповідно до твоєї теми
+You can use emoji characters in the p5 `text()` function to represent your obstacles.
 
 Here's an example:
 
@@ -109,7 +108,7 @@ language: python
 filename: main.py - setup()
 ---
 
-Ти можеш використовувати символи емодзі у функції p5 `text()`, щоб зобразити перешкоди.
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -145,7 +144,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 --- collapse ---
 ---
-title: Малювання перешкоди за допомогою декількох фігур
+title: Draw an obstacle using multiple shapes
 ---
 
 ![A tree drawn with green triangles for the body and a brown rectangle for the trunk](images/tree_obstacle.png)
@@ -164,7 +163,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 # Draw a fir tree no_stroke
 
 --- /task ---
 
-### Зроби так, щоб перешкода рухалась
+### Get your obstacle moving
 
 --- task ---
 
@@ -186,7 +185,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count  # Increases 
 
 --- /task ---
 
-### Більше перешкод
+### Lots of obstacles
 
 You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
 
@@ -223,13 +222,13 @@ Useful information:
 
 --- collapse ---
 ---
-title: Попередження щодо епілепсії
+title: Epilepsy warning
 ---
 
 Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
-- Переконатися, що ти додав(-ла) рядок коду `seed()`, щоб переконатися, що перешкоди будуть перестрибувати
-- Попросити когось запустити його для тебе
-- Рухайся далі та завершуй проєкт, а в кінці попроси когось запустити проєкт для тебе, а потім приступай до його налагодження
+- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
+- Ask somebody to run it for you
+- Move on and complete the project, asking someone to run the project for you at the end so you can debug
 - Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
 
 ```python
@@ -245,9 +244,9 @@ You can alter the speed of the game by changing `10` to a higher or lower value.
 
 Change your code until you are happy with the obstacles you have. You can:
 
-+ Змінювати seed, щоб отримати перешкоди в різних стартових позиціях
-+ Змінювати кількість повторень циклу, щоб отримати різну кількість перешкод
-+ Регулювати розмір перешкод
++ Change the seed to get obstacles in different starting positions
++ Change the number of times to loop repeats to get a different number of obstacles
++ Adjust the size of the obstacles
 
 **Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
 
@@ -259,13 +258,13 @@ Change your code until you are happy with the obstacles you have. You can:
 
 --- collapse ---
 ---
-title: Малюється лише одна перешкода
+title: Only one obstacle is being drawn
 ---
 
 Check your function that draws multiple obstacles:
- + Переконайся, що використовується цикл `for` для виклику функцію малювання перешкод більше одного разу
- + Переконайся, що використовується `randint()`, щоб змінити координати (x, y), які передаються у функцію малювання перешкод
- + Переконайся, що ти використовував(-ла)`ob_x` та `ob_y` в якості координат для перешкоди
+ + Make sure it uses a `for` loop to call the obstacle drawing function more than once
+ + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
+ + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
 
 For example:
 
@@ -275,7 +274,7 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-Перевір свою функцію, яка створює багато перешкод:
+def draw_obstacles(): seed(12345678)
 
     for i in range(6):  
         ob_x = randint(0, height)
@@ -289,10 +288,10 @@ filename: main.py — draw_obstacles()
 
 --- collapse ---
 ---
-title: Перешкоди змінюють свою позицію кожного разу, коли малюється кадр
+title: The obstacles are changing position every time a frame is drawn
 ---
 
-def draw_obstacles():
+Make sure that you have used `seed()` inside the function that draws multiple obstacles.
 
 --- /collapse ---
 
