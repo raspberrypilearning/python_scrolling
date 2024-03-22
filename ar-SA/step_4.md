@@ -18,12 +18,12 @@
   - التحقق مما إذا كانت الألوان التي تظهر في موقع كائن ما هي ألوان ذلك الكائن ، أو ألوان مختلفة
   - تتبع شكل كل كائن ، والتحقق مما إذا كانت تلك الألوان تتداخل الأشكال
   - إنشاء مجموعة من النقاط الحدودية ، أو الخطوط ، حول كائن والتحقق مما إذا كانت تتلامس مع أي كائنات أخرى "قابلة للتصادم"
-عند اكتشاف مثل هذا التصادم ، يمكن للبرنامج أن يتفاعل بطريقة ما. في لعبة فيديو ، يكون هذا عادةً لتسبب الضرر (إذا اصطدم اللاعب مع عدو أو خطر) أو لمنح فائدة (إذا اصطدم اللاعب بقوة).
+عند اكتشاف مثل هذا التصادم ، يمكن للبرنامج أن يتفاعل بطريقة ما. In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a power up).
 </p>
 
 --- task ---
 
-في دالة `()draw_player` الخاصة بك ، قم بإنشاء متغير يسمى `collide` وقم بتعيينه للحصول على اللون في موضع المشغل.
+In your `draw_player()` function, create a variable called `collide` and set it to get the hexadecimal (hex) colour value at the position of the player.
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-    collide = get(mouse_x, player_y)
+    collide = get(mouse_x, player_y).hex
 
 --- /code ---
 
@@ -39,22 +39,22 @@ filename: main.py - draw_player()
 
 --- task ---
 
-قم بإنشاء شرط للتحقق `if` اذا كان المتغير `collide` هو نفسه المتغير `safe` - وإذا كان كذلك، فإن لاعبك يلامس الخلفية بأمان ولم يصطدم بأي عائق.
+Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
 
-انقل الكود الخاص بك لرسم لاعبك داخل `if collide == safe`وأضف تعليمات برمجية في عبارة `else` لجعل اللاعب يتفاعل مع التصادم.
+Move your code to draw your player inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision.
 
-**اختر:** كيف يجب أن يتفاعل لاعبك؟ يمكنك:
-+ استخدم رمزًا تعبيريًا مختلفًا للاعب
-+ يمكنك استخدام `()tint` لتغيير مظهر الصورة ، لا تنس الاتصال بـ `()no_tint` بعد رسم الصورة
+**Choose:** How should your player react? You could:
++ Use a different emoji for the player
++ You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image
 
 --- collapse ---
 ---
-title: استخدم أحرف الرموز التعبيرية
+title: Use emoji characters
 ---
 
-يمكنك استخدام أحرف الرموز التعبيرية في دالةp5 `()text` لاستخدام رمز تعبيري لتمثيل المشغل الخاص بك.
+You can use emoji characters in the p5 `text()` function to represent your collided player.
 
-إليك مثالاً:
+Here's an example:
 
 --- code ---
 ---
@@ -62,7 +62,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #يتحكم في حجم الرموز التعبيرية text_align(CENTER, TOP) #موضع حول المركز
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -72,7 +72,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player(): if collide == safe: #في الخلفية text('🎈', mouse_x, player_y) else: #اصطدمت text('💥', mouse_x, player_y)
+def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x, player_y) else:  # Collided text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -86,63 +86,38 @@ def draw_player(): if collide == safe: #في الخلفية text('🎈', mouse_x
 
 --- task ---
 
-**الاختبار:** تحقق مما إذا تم اكتشاف تصادم ويحدث التفاعل في كل مرة يحدث فيها تصادم.
+**Test:** Check if a collision is detected and the reaction takes place each time a collision occurs.
 
 --- /task ---
 
 --- task ---
 
-**تصحيح:** قد تجد بعض الأخطاء في مشروعك والتي تحتاج إلى إصلاحها. فيما يلي بعض الأخطاء الشائعة.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
-title: لا يوجد تصادم عندما يصل اللاعب إلى عقبة
+title: There is no collision when the player reaches an obstacle
 ---
 
-إذا لامست شخصية اللاعب الخاص بك العقبة ولم يحدث شيء ، فهناك بعض الأشياء التي يجب عليك التحقق منها:
+If your player character touches the obstacle and nothing happens, there are a few things you should check:
 
- - تأكد من استدعاء `()draw_obstacles` قبل `()draw_players`. إذا قمت بالتحقق من وجود تصادمات قبل رسم العوائق في إطار ما ، فلن يكون هناك أي عوائق تصطدم بها!
+ - Make sure you call `draw_obstacles()` before `draw_player()`. إذا قمت بالتحقق من وجود تصادمات قبل رسم العوائق في إطار ما ، فلن يكون هناك أي عوائق تصطدم بها!
  - تأكد من أنك تستخدم نفس اللون بالضبط عند رسم الكائن وفي جملة `if` للتحقق من التصادم. يمكنك التأكد من ذلك باستخدام نفس المتغير `العالمي` في كلا المكانين.
  - هل ترسم شخصية اللاعب قبل التحقق من اللون عند إحداثيات الفأرة؟ إذا كان الأمر كذلك ، فستحصل فقط على الألوان من المشغل. تحتاج إلى التحقق من اللون أولاً ثم رسم **ثم** المشغل.
- - هل لديك رمز في الجزء `else` للقيام بشيء مختلف عند اكتشاف تصادم ، مثل تطبيق صبغة أو استخدام صورة مختلفة؟
+ - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
  - هل قمت بوضع مسافة بادئة صحيحة لشفرة برمجية عبارة `if` الخاصة بك بحيث يتم تشغيلها عند استيفاء الشرط؟
 
-يمكن أن تكون طباعة لون البكسل الذي تقوم بفحصه بحثًا عن تصادم مفيدًا:
+Printing the colour of the pixel you are checking for a collision can be useful:
 
 ```python
     print(red(collide), green(collide), blue(collide))
 ```
 
-يمكنك أيضًا طباعة دائرة حول النقطة التي تتحقق منها وضبط النقطة التي تتحقق منها إذا كنت بحاجة إلى:
+You can also print a circle around the point you are checking and adjust the point you check if you need to:
 
 ```python
-    def draw_player():
-
-  player_y = int(height * 0.8)
-  # مفيد لتصحيح الأخطاء
-  # ارسم دوائر حول البكسل للتحقق من الاصطدامات
-
-  no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #رسم نقطة الاصطدام
-  ellipse(mouse_x, player_y + 40, 10, 10)
-  ellipse(mouse_x - 12, player_y + 20, 10, 10)
-  ellipse(mouse_x + 12, player_y + 20, 10, 10)
-
-  collide = get(mouse_x, player_y)
-  collide2 = get(mouse_x - 12, player_y + 20)
-  collide3 = get(mouse_x + 12, player_y + 20)
-  collide4 = get(mouse_x, player_y + 40)
-
-  if mouse_x < width: #من يسار الشاشة
-    collide2 = safe
-
-  if mouse_x > width: #من يمين الشاشة
-    collide3 = safe
-
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    text('🎈', mouse_x, player_y)
-  else:
-    text('💥', mouse_x, player_y)
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
 ```
 
 --- /collapse ---
@@ -151,21 +126,46 @@ title: لا يوجد تصادم عندما يصل اللاعب إلى عقبة
 
 --- task ---
 
-**اختياري:** في الوقت الحالي ، أنت تكتشف فقط تصادمات عند بكسل واحد في المشغل. يمكنك أيضًا اكتشاف التصادمات عند وحدات البكسل الأخرى على حافة المشغل ، مثل الحواف السفلية أو اليسرى واليمنى.
+**Optional:** At the moment, you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom or left- and right-most edges.
 
 --- collapse ---
 ---
-title: كشف الاصطدام بوحدات بكسل متعددة
+title: Collision detection with multiple pixels
 ---
 
 ```python
 def draw_player():
-  player_y = int(height * 0.8)
+
+    player_y = int(height * 0.8)
+    # Useful for debugging
+    # Draw circles around the pixels to check for collisions
+
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
+    ellipse(mouse_x, player_y + 40, 10, 10)
+    ellipse(mouse_x - 12, player_y + 20, 10, 10)
+    ellipse(mouse_x + 12, player_y + 20, 10, 10)
+
+    collide = get(mouse_x, player_y).hex
+    collide2 = get(mouse_x - 12, player_y + 20).hex
+    collide3 = get(mouse_x + 12, player_y + 20).hex
+    collide4 = get(mouse_x, player_y + 40).hex
+
+    if mouse_x < width:  # Off the left of the screen
+        collide2 = safe.hex
+
+    if mouse_x > width:  # Off the right of the screen
+        collide3 = safe.hex
+
+    if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
+        text('🎈', mouse_x, player_y)
+    else:
+        text('💥', mouse_x, player_y)
 ```
 
 --- /collapse ---
 
-يمكنك حتى استخدام حلقة والتحقق من الكثير من وحدات البكسل المختلفة. هذه هي الطريقة التي يعمل بها اكتشاف الاصطدام في الألعاب.
+You could even use a loop and check lots of different pixels. This is how collision detection works in games.
 
 --- /task ---
 
