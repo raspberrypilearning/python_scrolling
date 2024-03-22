@@ -32,19 +32,16 @@ Ajoute des vies à ton jeu pour permettre aux joueurs de survivre à quelques co
  - Tu auras également besoin d'un moyen pour les joueurs de savoir combien de vies il leur reste, et peut-être d'une sorte d'avertissement leur indiquant quand ils sont sur leur dernière vie
  - Tu peux ajouter un objet qui, lorsque le joueur entre en collision avec lui, leur donne une vie supplémentaire. N'oublie pas que tu devras modifier ton code de collision habituel afin qu'il ne soustrait pas une vie en même temps !
 
-Chaque exemple de projet dans [l'introduction](./) a un lien **Voir à l'intérieur** pour te permettre d'ouvrir le projet et de regarder le code pour avoir des idées et voir comment ils fonctionnent. Le projet « Eviter les astéroides » ci-dessous possède toutes ces fonctionnalités :
+Chaque projet d'exemple dans l'introduction te permet de regarder le code, de trouver des idées et de voir comment ils fonctionnent.
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
+Le projet « Esquive les astéroides » ci-dessous possède toutes ces fonctionnalités :
 
-**Éviter les astéroïdes** : [Voir à l'intérieur](https://trinket.io/python/cdc97e3201){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/cdc97e3201?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Esquive les astéroïdes** :
+<iframe src="https://editor.raspberrypi.org/fr-FR/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
 
-</div>
-</div>
+Tu peux trouver le projet Esquive les astéroïdes [ici](https://editor.raspberrypi.org/fr-FR/projects/dodge-asteroids-example){:target="_blank"}
 
-Jette un œil à certains projets Pas de collision créés par des membres de la communauté dans la bibliothèque [Don't collide - Community](https://wke.lt/w/s/KobNfx){:target="_blank"} de Raspberry Pi Foundation.
+Jette un œil à certains projets Pas de collision créés par des membres de la communauté dans la bibliothèque [Don't collide - Community](https://wke.lt/w/s/KobNfx){:target="_blank"} de la Raspberry Pi Foundation.
 
 --- save ---

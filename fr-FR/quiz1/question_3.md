@@ -33,7 +33,7 @@ Correct ! Tu dois tenir compte de tous les commentaires que tu reçois - tout en
 
   --- /feedback ---
 
-- ( ) Etre vraiment triste que le joueur n'ait pas pensé que ton jeu était parfait.
+- ( ) Être vraiment triste que le joueur n'ait pas pensé que ton jeu était parfait.
 
   --- feedback ---
 

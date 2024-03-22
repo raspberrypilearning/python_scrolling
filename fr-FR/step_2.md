@@ -7,31 +7,36 @@ Définis le thème de ton jeu et crée un personnage joueur qui suit le pointeur
 </div>
 <div>
 
-![Image d'une tortue de taille 100 x 100 sur un arrière-plan bleu avec une taille d'écran de 400 x 400.](images/theme-turtle.png){:width="300px"}
+![Image d'une tortue de dessin animé vue de dessus sur un arrière-plan bleu.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-Quel est le thème de ton jeu ? Tu peux choisir tout ce que tu veux. Voici quelques idées:
-- Un sport ou un hobby
-- Un film, une émission ou un jeu
-- Sciences ou nature
-- Autre chose !
+Quel est le thème de ton jeu ? Voici quelques idées :
+- Sports
+- Loisirs
+- Science
+- Nature
 
 --- task ---
 
-Ouvre le [projet de démarrage](https://trinket.io/python/829ed78936){:target="_blank"}. Trinket s'ouvrira dans un autre onglet du navigateur.
+Ouvre le projet de démarrage [Pas de collision ! ](https://editor.raspberrypi.org/fr-FR/projects/dont-collide-starter){:target="_blank"}. Le Code Editor s'ouvrira dans un autre onglet du navigateur.
+
+Si tu as un compte Raspberry Pi, tu peux cliquer sur le bouton **Enregistrer** pour enregistrer une copie dans tes **Projets**.
 
 --- /task ---
 
 --- task ---
 
-**Choisir :** Définis la taille de ton canevas.
+**Choisir :** définis la taille de ton canevas.
 
 --- code ---
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 10
 ---
 
 def setup():    
@@ -51,10 +56,14 @@ Il s'agit de la couleur sur laquelle le joueur peut être en sécurité et tu ut
 ---
 language: python
 filename: main.py - draw()
+line_numbers: true
+line_number_start: 13
+line_highlights: 14, 15, 16
 ---
 
-def draw():    
-    sur = color(200, 100, 0) #Ajouter la couleur de ton thème   
+def draw():
+    global sur
+    sur = Color(200, 100, 0) # Ajouter la couleur de ton thème   
     background(sur)
 
 --- /code ---
@@ -65,7 +74,7 @@ def draw():
 
 --- task ---
 
-**Test :** Exécute ton code pour voir la couleur d'arrière-plan. Modifie-le jusqu'à ce que tu sois satisfait de la couleur et de la taille de l'écran.
+**Test :** exécute ton code pour voir la couleur d'arrière-plan. Modifie-le jusqu'à ce que tu sois satisfait de la couleur et de la taille de l'écran.
 
 --- /task ---
 
@@ -82,11 +91,14 @@ Définis une fonction `dessine_joueur()` et crée une position `joueur_y` pour l
 --- code ---
 ---
 language: python
-filename: main.py - dessine_joueur()
+filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 12
+line_highlights: 12-14
 ---
 
-def dessine_joueur():    
-  joueur_y = int(height * 0.8) #Positionné vers le bas de l'écran
+def dessine_joueur():
+    joueur_y = int(height * 0.8) # Positionné vers le bas de l'écran
 
 --- /code ---
 
@@ -96,10 +108,14 @@ Ajoute du code à `draw()` pour appeler `dessine_joueur()` à chaque image.
 ---
 language: python
 filename: main.py - draw()
+line_numbers: true
+line_number_start: 15
+line_highlights: 19
 ---
 
-def draw():    
-    sur = color(200, 100, 0) #Ta couleur choisie    
+def draw():
+    global sur
+    sur = Color(200, 100, 0) # Ta couleur choisie    
     background(sur)    
     dessine_joueur()
 
@@ -111,7 +127,7 @@ Ensuite, tu ajouteras du code à la fonction `dessine_joueur()` pour dessiner ta
 
 --- task ---
 
-**Choisir :** À quoi ressemble ton joueur ? Ton joueur pourrait être :
+**Choisir :** à quoi ressemble ton joueur ? Ton joueur pourrait être :
 + Une image fournie dans le projet de démarrage
 + Un emoji 🎈 ou un texte
 + Un dessin utilisant une série de formes
@@ -121,27 +137,27 @@ Ensuite, tu ajouteras du code à la fonction `dessine_joueur()` pour dessiner ta
 title: Utiliser une image de démarrage
 ---
 
-Clique sur l'icône **gérer les images**.
-
-![L'icône d'image en haut à droite de la zone de code.](images/manage-images.png)
-
-Les images incluses dans le projet de démarrage seront affichées dans la liste `Bibliothèque d'images`.
+Les images incluses dans le projet de démarrage seront affichées dans la `bibliothèque d'images`.
 
 ![La bibliothèque d'images avec la liste des images incluses.](images/starter-images.png)
 
 Note le nom de l'image que tu souhaites utiliser.
 
-Charger l'image dans la fonction `setup()`
+Charge l'image dans la fonction `setup()`
 
 --- code ---
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 11-12
 ---
 
-def configuration():   
-    size(400, 400)    
-    joueur = load_image('skiing.png') #Charger ton image
+def setup():
+    size(400, 400)
+    global joueur
+    joueur = load_image('turtle.png') # Charger ton image
 
 --- /code ---
 
@@ -150,15 +166,15 @@ Appelle `image()` et définis-la comme global dans la fonction `dessine_joueur()
 --- code ---
 ---
 language: python
-filename: main.py - dessine_joueur()
+filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 14
+line_highlights: 16
 ---
 
-def dessine_joueur():    
-  joueur_y = int(height * 0.8) #Positionné vers le bas de l'écran
-
-  global joueur
-
-  image(joueur, mouse_x, joueur_y, 30, 30)
+def dessine_joueur():
+    joueur_y = int(height * 0.8) # Positionné vers le bas de l'écran
+    image(joueur, mouse_x, joueur_y, 30, 30)
 
 --- /code ---
 
@@ -177,24 +193,32 @@ Voici un exemple :
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 11-13
 ---
 
-def configuration():    
-  size(400, 400)     
-  text_size(40) #Contrôle la taille de l'emoji     
-  text_align(CENTER, TOP) #Position autour du centre
+def setup():    
+    size(400, 400)     
+    text_size(40) # Contrôle la taille de l'emoji     
+    text_align(CENTER, TOP) # Position autour du centre
 
 --- /code ---
+
+Appelle `text()` et définis-la comme global dans la fonction `dessine_joueur()`.
 
 --- code ---
 ---
 language: python
-filename: main.py - dessine_joueur()
+filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 14
+line_highlights: 16-17
 ---
 
 def dessine_joueur():     
-  joueur_y = int(height * 0.8)    
-  text('🎈', mouse_x, joueur_y)
+    joueur_y = int(height * 0.8)    
+    text('🎈', mouse_x, joueur_y)
 
 --- /code ---
 
@@ -214,38 +238,38 @@ def dessine_joueur():
 
 [[[processing-stroke]]]
 
-**Astuce :** Tu peux utiliser plusieurs formes simples dans la même fonction pour créer un joueur plus complexe.
+**Astuce :** tu peux utiliser plusieurs formes simples dans la même fonction pour créer un joueur plus complexe.
 
 --- collapse ---
 ---
 title: Dessiner un joueur à l'aide de plusieurs formes
 ---
 
-![desc](images/face_player.png)
+![Un visage dessiné à partir d'un cercle vert comme fond et deux yeux dessinés en cercles bleus, avec des cercles noirs à l'intérieur et un reflet à l'intérieur de ceux qui utilisent un cercle blanc.](images/face_player.png)
 
 --- code ---
 ---
 language: python
-filename: main.py - dessine_joueur()
+filename: main.py - draw_player()
 ---
 
-def dessine_joueur():    
-  joueur_y = int(height * 0.8)    
-  noStroke()    
-  #Le visage    
-  fill(0, 200, 100)    
-  ellipse(mouse_x, joueur_y, 60, 60)
-
-  #Les yeux    
-  fill(0, 100, 200)    
-  ellipse(mouse_x - 10, joueur_y - 10, 20, 20)    
-  ellipse(mouse_x + 10, joueur_y - 10, 20, 20)    
-  fill(0)    
-  ellipse(mouse_x - 10, joueur_y - 10, 10, 10)     
-  ellipse(mouse_x + 10, joueur_y - 10, 10, 10)     
-  fill(255)    
-  ellipse(mouse_x - 12, joueur_y - 12, 5, 5)    
-  ellipse(souris_x + 12, joueur_y - 12, 5, 5)
+def dessine_joueur():
+    joueur_y = int(height * 0.8)
+    noStroke()
+    # Le visage
+    fill(0, 200, 100)
+    ellipse(mouse_x, joueur_y, 60, 60)
+    
+    # Les yeux
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, joueur_y - 10, 20, 20)
+    ellipse(mouse_x + 10, joueur_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, joueur_y - 10, 10, 10)
+    ellipse(mouse_x + 10, joueur_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, joueur_y - 12, 5, 5)
+    ellipse(mouse_x + 12, joueur_y - 12, 5, 5)
 
 --- /code ---
 
@@ -255,13 +279,13 @@ def dessine_joueur():
 
 --- task ---
 
-**Test :** Exécute ton code et déplace la souris pour contrôler le joueur.
+**Test :** exécute ton code et déplace la souris pour contrôler le joueur.
 
 Est-ce que ça bouge comme prévu ?
 
 --- /task ---
 
-**Débogage :** Il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues assez courants .
+**Débogage :** il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues courants.
 
 --- task ---
 
@@ -270,7 +294,7 @@ Est-ce que ça bouge comme prévu ?
 title: Je ne peux pas voir le joueur
 ---
 
-Essaye de passer en plein écran. Vérifie également les coordonnées `x` et `y` que tu as utilisées pour dessiner le joueur - assure-toi qu'elles se trouvent à l'intérieur du canevas que tu as créé avec `size()`.
+Essaie de passer en plein écran. Vérifie également les coordonnées `x` et `y` que tu as utilisées pour dessiner le joueur. Assure-toi qu'elles se trouvent à l'intérieur du canevas que tu as créé avec `size()`.
 
 --- /collapse ---
 
@@ -279,7 +303,7 @@ Essaye de passer en plein écran. Vérifie également les coordonnées `x` et `y
 title: Une image ne se charge pas
 ---
 
-Vérifie d'abord que l'image se trouve dans la `bibliothèque d'images`. Ensuite, vérifie très attentivement le nom du fichier - rappelle-toi que les majuscules sont différentes des minuscules et que la ponctuation est importante.
+Vérifie d'abord que l'image se trouve dans la `bibliothèque d'images`. Ensuite, vérifie très attentivement le nom du fichier. Rappelle-toi que les majuscules sont différentes des minuscules et que la ponctuation est importante.
 
 --- /collapse ---
 

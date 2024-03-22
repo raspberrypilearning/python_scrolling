@@ -1,4 +1,4 @@
-## Inleiding
+## Wat ga je maken
 
 Bouw een eindeloos rollend renspel waarin je personage obstakels moet ontwijken.
 
@@ -24,37 +24,30 @@ Kijk naar deze voorbeelden. Denk na over hoe de spelers en obstakels zijn gemaak
 
 Wat gebeurt er als je een obstakel raakt? Wordt het moeilijker terwijl je speelt?
 
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex-basis: 175px; flex-grow: 1">  
+**Skiënde kat**:
+<iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/skiing-cat-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
+Je kunt het Skiënde Kat-project [hier vinden](https://editor.raspberrypi.org/nl-NL/projects/skiing-cat-example){:target="_blank"}
 
-**Skiënde kat**: [Bekijk van binnen](https://trinket.io/python/2a3aaa1379){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/2a3aaa1379?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Niet knallen**:
+<iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/dont-pop-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
+Je kunt het Niet knallen-project [hier vinden](https://editor.raspberrypi.org/nl-NL/projects/dont-pop-example){:target="_blank"}
 
-**Plof niet**: [Bekijk van binnen](https://trinket.io/python/301bea4d71){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/301bea4d71?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Vermijd de ziektekiemen**:
+<iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/avoid-germs-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
+Je kunt het Vermijd de ziektekiemen-project [hier vinden](https://editor.raspberrypi.org/nl-NL/projects/avoid-germs-example){:target="_blank"}
 
-**Vermijd de bacterieën**: [Bekijk van binnen](https://trinket.io/python/e65d1b3f9a){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/e65d1b3f9a?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
+**Schone auto**:
+<iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/clean-car-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
+Je kunt het Schone auto-project [hier vinden](https://editor.raspberrypi.org/nl-NL/projects/clean-car-example){:target="_blank"}
 
-
-**Schone auot**: [Bekijk van binnen](https://trinket.io/python/8475dea0c2){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/8475dea0c2?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-
-**Vermijd asteroiden**: [Bekijk van binnen](https://trinket.io/python/ec572bfe38){:target="_blank"}
-<div class="trinket">
-<iframe src="https://trinket.io/embed/python/ec572bfe38?outputOnly=true" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
-</div>
-
-</div>
-</div>
+**Ontwijk asteroïden**:
+<iframe src="https://editor.raspberrypi.org/nl-NL/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
+</iframe>
+Je kunt het Ontwijk-asteroïdenproject [hier vinden](https://editor.raspberrypi.org/nl-NL/projects/dodge-asteroids-example){:target="_blank"}
 
 --- /task ---
 
@@ -64,10 +57,15 @@ Wat gebeurt er als je een obstakel raakt? Wordt het moeilijker terwijl je speelt
 
 Je gaat een aantal ontwerpbeslissingen nemen over het soort spel dat je gaat maken en hoe je code gaat gebruiken om de gewenste effecten te krijgen.
 
-![Voorbeeldproject voor het ontwijken van asteroïden](images/example1.png){:width="300px"}
-![Skiing cat project example](images/example2.png){:width="300px"}
-![Avoid the germs project example](images/example3.png){:width="300px"}
-![Don't pop project example](images/example4.png){:width="300px"}
-![Clean car project example](images/example5.png){:width="300px"}
+![Voorbeeld van een skiënde kat project](images/example2.png){:width="300px"}
+Je kunt het skiende kat project hier vinden https://editor.raspberrypi.org/nl-NL/projects/repeated-patterns-example
+![Voorbeeld van een niet knallen project](images/example4.png){:width="300px"}
+Je kunt het niet knallen project hier vinden https://editor.raspberrypi.org/nl-NL/projects/repeated-patterns-example
+![Voorbeeld van een ontwijk de ziektekiemen project](images/example3.png){:width="300px"}
+Je kunt het ontwijk de ziektekiemen project hier vinden https://editor.raspberrypi.org/nl-NL/projects/repeated-patterns-example
+![Voorbeeld van een schone auto project](images/example5.png){:width="300px"}
+Je kunt het schone auto project hier vinden https://editor.raspberrypi.org/nl-NL/projects/clean-car-example
+![Voorbeeld van een ontwijk de asteroiden project](images/example1.png){:width="300px"}
+Je kunt het ontwijk de asteroiden project hier vinden https://editor.raspberrypi.org/nl-NL/projects/dodge-asteroids-example
 
 --- /print-only ---

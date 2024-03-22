@@ -1,10 +1,8 @@
-## Reflectie
+## Snelle quiz
 
-Goed gedaan, je hebt een spel gemaakt!  Nu is het tijd om te reflecteren - reflecteren is een belangrijk onderdeel van leren, omdat het helpt om nieuwe verbindingen in je hersenen te maken.
+Beantwoord de drie vragen. Je wordt naar het juiste antwoord geleid.
 
-Beantwoord de drie onderstaande vragen om terug te kijken op wat je hebt geleerd.
-
-Druk na elke vraag op **indienen**. Je wordt naar het juiste antwoord geleid. Je kunt deze activiteit zo vaak doen als je wilt.
+Klik na het beantwoorden van elke vraag op **Controleer mijn antwoord**.
 
 Veel plezier!
 
@@ -55,7 +53,7 @@ Ga door!
 ```
   --- feedback ---
 
-Dit is correct — `score >= 5000` is waar, en dat geldt ook voor `levens > 1` in de geneste `if` -conditie.
+Dit is correct — `score >= 5000` is waar, en dat geldt ook voor `levens > 1` in de geneste `if`-conditie.
 
   --- /feedback ---
 

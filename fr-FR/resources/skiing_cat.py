@@ -1,27 +1,27 @@
 #!/bin/python3
 
-# Importer le code de la bibliothèque
+# Import library code
 from p5 import *
 from random import randint, seed
 
-vitesse = 1
+speed = 1
 score = 0
 
-# La fonction dessine_arriere_plan va ici
-def dessine_obstacles():
+# The draw_obstacles function goes here
+def draw_obstacles():
   
-  global vitesse
+  global speed
   
   seed(12345678)
   
-  if frame_count % height == height - 1 and vitesse < 5:
-    vitesse += 1
-    print('Tu as atteint le niveau', vitesse)
+  if frame_count % height == height - 1 and speed < 5:
+    speed += 1
+    print('You reached level', speed)
     
   for i in range(6):
     ob_x = randint(0, height)
-    ob_y = randint(0, height) + (frame_count * vitesse)
-    ob_y %= height # enveloppant
+    ob_y = randint(0, height) + (frame_count * speed)
+    ob_y %= height # wrap around
     no_stroke()
     fill(0,255,0)
     triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
@@ -30,46 +30,46 @@ def dessine_obstacles():
     fill(150,100,100)
     rect(ob_x + 15, ob_y + 70, 10, 10)
     
-# La fonction dessine_joueur vient ici
-def dessine_joueur():
+# The draw_player function goes here
+def draw_player():
   
-  global score, vitesse, ski, chute
+  global score, speed, skiing, crashed
   
-  joueur_y = int(height * 0.8)
+  player_y = int(height * 0.8)
   
-  fill(sur)
+  fill(safe)
 
-  collision = get(mouse_x, joueur_y)
+  collide = get(mouse_x, player_y)
   
-  if collision == sur:
-    image(ski, mouse_x, joueur_y, 30, 30)
-    score += vitesse
+  if collide == safe:
+    image(skiing, mouse_x, player_y, 30, 30)
+    score += speed
   else:
-    image(chute, mouse_x, joueur_y, 30, 30)
-    vitesse = 0
+    image(crashed, mouse_x, player_y, 30, 30)
+    speed = 0
     
   
 def setup():
   
-  global ski, chute
+  global skiing, crashed
   
-  # Configure ton animation ici
+  # Setup your animation here
   text_size(40)
-  text_align(CENTER, TOP) # position près du centre, en haut
+  text_align(CENTER, TOP) # position around the centre
   size(400, 400)
-  ski = load_image('skiing.png')
-  chute = load_image('fallenover.png')
+  skiing = load_image('skiing.png')
+  crashed = load_image('fallenover.png')
   
 def draw():
-  # Choses à faire dans chaque image
-  global score, sur, vitesse, ski, chute
-  sur = color(255)
+  # Things to do in every frame
+  global score, safe, speed, skiing, crashed
+  safe = color(255)
 
-  if vitesse > 0:
-    background(sur) 
+  if speed > 0:
+    background(safe) 
     fill(0)
     text('Score: ' + str(score), width/2, 20)
-    dessine_obstacles()
-    dessine_joueur()
+    draw_obstacles()
+    draw_player()
   
 run()

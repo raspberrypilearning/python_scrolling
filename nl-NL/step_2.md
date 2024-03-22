@@ -7,20 +7,22 @@ Stel het thema van je spel in en maak een spelerspersonage dat de muisaanwijzer 
 </div>
 <div>
 
-![Afbeelding van schildpad formaat 100x100 tegen een blauwe achtergrond met schermformaat 400x400.](images/theme-turtle.png){:width="300px"}
+![Afbeelding van cartoonschildpad van bovenaf gezien tegen een blauwe achtergrond.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-Wat is het thema van je spel? Je kunt alles kiezen wat je maar wilt. Hier zijn enkele ideeën:
-- Een sport of hobby
-- Een film, show of game
-- Wetenschap of natuur
-- Iets anders!
+Wat is het thema van je spel? Hier zijn enkele ideeën:
+- Sport
+- Hobbies
+- Wetenschap
+- Natuur
 
 --- task ---
 
-Open het [startproject](https://trinket.io/python/74be1029c0){:target="_blank"}. Trinket wordt geopend in een ander browsertabblad.
+Open de [Bots niet! startproject](https://editor.raspberrypi.org/nl-NL/projects/dont-collide-starter){:target="_blank"} project. De code editor wordt geopend in een ander browsertabblad.
+
+Als je een Raspberry Pi-account hebt, kun je op de **Save** knop klikken om een kopie op te slaan in je **Projects**.
 
 --- /task ---
 
@@ -32,6 +34,9 @@ Open het [startproject](https://trinket.io/python/74be1029c0){:target="_blank"}.
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 10
 ---
 
 def setup():    
@@ -51,10 +56,14 @@ Dit is de kleur waarop de speler veilig kan staan en je zult deze variabele late
 ---
 language: python
 filename: main.py - draw()
+line_numbers: true
+line_number_start: 13
+line_highlights: 14, 15, 16
 ---
 
-def draw():    
-    veilig = color(200, 100, 0) #Voeg de kleur van je thema toe   
+def draw():
+    global veilig
+    veilig = Color(200, 100, 0)  # Voeg de kleur van je thema toe
     background(veilig)
 
 --- /code ---
@@ -71,7 +80,7 @@ def draw():
 
 Kies nu het personage dat het spel speelt en de obstakels ontwijkt. Is het een object, persoon, dier of iets anders?
 
-De speler verschijnt op een vaste `y` positie en dezelfde `x` positie als de muisaanwijzer, die is opgeslagen in de `p5` variabele `muis_x`.
+De speler verschijnt op een vaste `y` positie en dezelfde `x` positie als de muisaanwijzer, die is opgeslagen in de `p5` variabele `mouse_x`.
 
 --- task ---
 
@@ -82,11 +91,14 @@ Definieer een `teken_speler()` functie en creëer een `speler_y` positie voor de
 --- code ---
 ---
 language: python
-filename: main.py - teken_speler()
+filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 12
+line_highlights: 12-14
 ---
 
 def teken_speler():    
-  speler_y = int(height * 0.8) #Gepositioneerd naar de onderkant van het scherm
+    speler_y = int(height * 0.8) # Gepositioneerd naar de onderkant van het scherm
 
 --- /code ---
 
@@ -96,11 +108,15 @@ Voeg code toe aan `draw()` om `teken_speler()` voor elk frame aan te roepen.
 ---
 language: python
 filename: main.py - draw()
+line_numbers: true
+line_number_start: 15
+line_highlights: 19
 ---
 
-def draw():    
-    veilig = color(200, 100, 0) #Jouw gekozen kleur    
-    background(veilig)    
+def draw():
+    global veilig
+    veilig = Color(200, 100, 0)  # Jouw gekozen kleur
+    background(veilig)
     teken_speler()
 
 --- /code ---
@@ -121,13 +137,9 @@ Vervolgens voeg je code toe aan de functie `teken_speler()` om je vorm te tekene
 title: Gebruik een startafbeelding
 ---
 
-Klik op het pictogram **manage images** (afbeeldingen beheren).
+Afbeeldingen die in het startproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
 
-![Het afbeeldingspictogram in de rechterbovenhoek van het codegebied.](images/manage-images.png)
-
-Afbeeldingen die in het startersproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
-
-![De afbeeldingenbibliotheek met een lijst met opgenomen afbeeldingen.](images/starter-images.png)
+![De afbeeldingengalerij met de meegeleverde afbeeldingen.](images/starter-images.png)
 
 Noteer de naam van de afbeelding die je wilt gebruiken.
 
@@ -137,11 +149,15 @@ Laad de afbeelding in de `setup()` functie
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 11-12
 ---
 
 def setup():   
-    size(400, 400)    
-    speler = load_image('skiing.png') #Laad je afbeelding
+    size(400, 400) 
+    global speler   
+    speler = load_image('turtle.png') # Laad je afbeelding
 
 --- /code ---
 
@@ -150,15 +166,15 @@ Roep de `image()` aan en stel deze in als global in de `teken_speler()` functie.
 --- code ---
 ---
 language: python
-filename: main.py - teken_speler()
+filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 14
+line_highlights: 16
 ---
 
-def teken_speler():    
-  speler_y = int(height * 0.8) #Gepositioneerd naar de onderkant van het scherm
-
-  global speler
-
-  image(speler, muis_x, speler_y, 30, 30)
+def teken_speler():
+    speler_y = int(height * 0.8)  # Gepositioneerd naar de onderkant van het scherm
+    image(speler, mouse_x, speler_y, 30, 30)
 
 --- /code ---
 
@@ -177,24 +193,32 @@ Hier is een voorbeeld:
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 11-13
 ---
 
 def setup():    
-  size(400, 400)     
-  text_size(40) #Bepaalt de grootte van de emoji     
-  text_align(CENTER, TOP) #Positie rond het midden
+    size(400, 400)     
+    text_size(40) # Bepaalt de grootte van de emoji     
+    text_align(CENTER, TOP) # Positie rond het midden
 
 --- /code ---
+
+Roep de `text()` aan en stel deze in als global in de functie `teken_speler()`.
 
 --- code ---
 ---
 language: python
-filename: main.py - teken_speler()
+filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 14
+line_highlights: 16-17
 ---
 
 def teken_speler():     
-  speler_y = int(height * 0.8)    
-  text('🎈', muis_x, speler_y)
+    speler_y = int(height * 0.8)    
+    text('🎈', mouse_x, speler_y)
 
 --- /code ---
 
@@ -221,31 +245,31 @@ def teken_speler():
 title: Teken een speler met meerdere vormen
 ---
 
-![beschrijving](images/face_player.png)
+![Een gezichtsvorm gemaakt van een groene cirkel als achtergrond en twee ogen getekend uit blauwe cirkels, met zwarte cirkels erin en een glinstering binnenin die met een witte cirkel werd gemaakt.](images/face_player.png)
 
 --- code ---
 ---
 language: python
-filename: main.py - teken_speler()
+filename: main.py - draw_player()
 ---
 
-def teken_speler():    
-  speler_y = int(height * 0.8)    
-  noStroke()    
-  #Gezicht    
-  fill(0, 200, 100)    
-  ellipse(muis_x, speler_y, 60, 60)
-
-  #Ogen    
-  fill(0, 100, 200)    
-  ellipse(muis_x - 10, speler_y - 10, 20, 20)    
-  ellipse(muis_x + 10, speler_y - 10, 20, 20)    
-  fill(0)    
-  ellipse(muis_x - 10, speler_y - 10, 10, 10)     
-  ellipse(muis_x + 10, speler_y - 10, 10, 10)     
-  fill(255)    
-  ellipse(muis_x - 12, speler_y - 12, 5, 5)    
-  ellipse(muis_x + 12, speler_y - 12, 5, 5)
+def teken_speler():
+    speler_y = int(height * 0.8)
+    noStroke()
+    # Gezicht
+    fill(0, 200, 100)
+    ellipse(mouse_x, speler_y, 60, 60)
+    
+    # Ogen
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, speler_y - 10, 20, 20)
+    ellipse(mouse_x + 10, speler_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, speler_y - 10, 10, 10)
+    ellipse(mouse_x + 10, speler_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, speler_y - 12, 5, 5)
+    ellipse(mouse_x + 12, speler_y - 12, 5, 5)
 
 --- /code ---
 

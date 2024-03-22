@@ -3,120 +3,120 @@
 from p5 import *
 from random import randint, seed
 
-niveau = 1
+level = 1
 score = 0
 
-def joueur_sur():
+def safe_player():
   
-  global joueur_y
+  global player_y
   
-  # Le visage
+  # Face
   fill(200, 134, 145)
-  ellipse(mouse_x, joueur_y, 60, 60)
+  ellipse(mouse_x, player_y, 60, 60)
 
-  # Les yeux
+  # Eyes
   fill(178, 200, 145)
-  ellipse(mouse_x - 10, joueur_y - 10, 20, 20)
-  ellipse(mouse_x + 10, joueur_y - 10, 20, 20)
+  ellipse(mouse_x - 10, player_y - 10, 20, 20)
+  ellipse(mouse_x + 10, player_y - 10, 20, 20)
   fill(0)
-  ellipse(mouse_x - 10, joueur_y - 10, 10, 10)
-  ellipse(mouse_x + 10, joueur_y - 10, 10, 10)
+  ellipse(mouse_x - 10, player_y - 10, 10, 10)
+  ellipse(mouse_x + 10, player_y - 10, 10, 10)
   fill(255)
-  ellipse(mouse_x - 12, joueur_y - 12, 5, 5)
-  ellipse(mouse_x + 12, joueur_y - 12, 5, 5)
+  ellipse(mouse_x - 12, player_y - 12, 5, 5)
+  ellipse(mouse_x + 12, player_y - 12, 5, 5)
   
-  # La bouche
+  # Mouth
   fill(0)
-  ellipse(mouse_x, joueur_y + 10, 15, 10)
+  ellipse(mouse_x, player_y + 10, 15, 10)
   fill(200, 134, 145)
-  ellipse(mouse_x, joueur_y + 5, 10, 10)
+  ellipse(mouse_x, player_y + 5, 10, 10)
 
-def joueur_ecrase():
+def crashed_player():
   
-  global joueur_y
+  global player_y
   
-  # Le visage
+  # Face
   fill(178, 200, 145)
-  ellipse(mouse_x, joueur_y, 60, 60)
+  ellipse(mouse_x, player_y, 60, 60)
 
-  # Les yeux
+  # Eyes
   fill(149, 161, 195)
-  ellipse(mouse_x - 10, joueur_y - 10, 20, 20)
-  ellipse(mouse_x + 10, joueur_y - 10, 20, 20)
+  ellipse(mouse_x - 10, player_y - 10, 20, 20)
+  ellipse(mouse_x + 10, player_y - 10, 20, 20)
   fill(0)
-  ellipse(mouse_x - 10, joueur_y - 10, 10, 10)
-  ellipse(mouse_x + 10, joueur_y - 10, 10, 10)
+  ellipse(mouse_x - 10, player_y - 10, 10, 10)
+  ellipse(mouse_x + 10, player_y - 10, 10, 10)
   fill(255)
-  ellipse(mouse_x - 12, joueur_y - 12, 5, 5)
-  ellipse(mouse_x + 12, joueur_y - 12, 5, 5)
+  ellipse(mouse_x - 12, player_y - 12, 5, 5)
+  ellipse(mouse_x + 12, player_y - 12, 5, 5)
   
-  # La bouche
+  # Mouth
   fill(0)
-  ellipse(mouse_x, joueur_y + 15, 15, 10)
+  ellipse(mouse_x, player_y + 15, 15, 10)
   fill(178, 200, 145)
-  ellipse(mouse_x, joueur_y + 20, 10, 10)
+  ellipse(mouse_x, player_y + 20, 10, 10)
   
-def dessine_joueur():
+def draw_player():
   
-  global joueur_y, sur, score, niveau
+  global player_y, safe, score, level
   
-  joueur_y = int(height * 0.8)
+  player_y = int(height * 0.8)
   
-  collision = get(mouse_x, joueur_y)
-  collision2 = get(mouse_x, joueur_y + 30)
-  collision3 = get(mouse_x + 30, joueur_y)
-  collision4 = get(mouse_x, joueur_y - 30)
+  collide = get(mouse_x, player_y)
+  collide2 = get(mouse_x, player_y + 30)
+  collide3 = get(mouse_x + 30, player_y)
+  collide4 = get(mouse_x, player_y - 30)
   
-  if mouse_x < width: # sur la gauche de l'écran
-    collision2 = sur
+  if mouse_x < width: # off the left of the screen
+    collide2 = safe
   
-  if mouse_x > width: # à droite de l'écran
-    collision3 = sur
+  if mouse_x > width: # off the right of the screen
+    collide3 = safe
     
-  #print(collision, collision2, collision3, collision4)
+  #print(collide, collide2, collide3, collide4)
     
-  if collision == sur and collision2 == sur and collision3 == sur and collision4 == sur:
-    joueur_sur()
-    score += niveau
-  else: # Collision
-    joueur_ecrase()
-    niveau = 0
+  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
+    safe_player()
+    score += level
+  else: # Collided
+    crashed_player()
+    level = 0
   
-def dessine_obstacles():
+def draw_obstacles():
   
-  global niveau
+  global level
   
   seed(41143644)
   
-  if frame_count & height == height - 1 and niveau < 5:
-    niveau += 1
-    print('Tu as atteint le niveau', niveau)
+  if frame_count & height == height - 1 and level < 5:
+    level += 1
+    print('You reached level', level)
   
-  for i in range(9 + niveau):
+  for i in range(9 + level):
     ob_x = randint(0, width)
     ob_y = randint(0, height) + frame_count
     ob_y %= height
     text('🦠', ob_x, ob_y)
 
 def setup():
-# Mettre le code à exécuter ci-dessous
-  size(400, 400) # largeur et hauteur
+# Put code to run once here
+  size(400, 400) # width and height
   noStroke()
   text_size(40)
   text_align(CENTER, TOP)
 
 def draw():
-# Mettre le code pour exécuter chaque image ici
-  global sur, score, niveau
+# Put code to run every frame here
+  global safe, score, level
   
-  sur = color(149, 161, 195)
+  safe = color(149, 161, 195)
   
-  if niveau > 0:
-    background(sur)
+  if level > 0:
+    background(safe)
     fill(145, 134, 126)
     text('Score: ' + str(score), width/2, 20)
-    dessine_obstacles()
-    dessine_joueur()
+    draw_obstacles()
+    draw_player()
   
-# Garde ceci pour exécuter ton code
+# Keep this to run your code
 run()

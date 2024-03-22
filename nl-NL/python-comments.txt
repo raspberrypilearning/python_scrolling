@@ -1,0 +1,72 @@
+Voeg de kleur van je thema toe
+
+Gepositioneerd naar de onderkant van het scherm
+
+Jouw gekozen kleur
+
+Laad je afbeelding
+
+Bepaalt de grootte van de emoji
+
+Positie rond het midden, bovenaan
+
+Gezicht
+
+Ogen
+
+Vervang je obstakel
+
+Voordat je de speler tekent
+
+Laad je speler-afbeelding
+
+Laad je obstakel-afbeelding
+
+Pas de afmeting aan om bij jouw thema te passen
+
+Teken een dennenboom
+
+Groen voor naalden
+
+Bruin voor stam
+
+Verhoogt elk frame
+
+Blijf binnen het speelveld
+
+Vervang door je obstakel
+
+Ieder getal is prima
+
+Teken botsingspunt
+
+Nuttig voor het opsporen van fouten
+
+Teken cirkels rond de pixels om te controleren op botsingen
+
+Voorbij de linkerkant van het scherm
+
+Voorbij de rechterkant van het scherm
+
+Voeg hier global variabelen toe
+
+Gebruik het global level
+
+Je hebt niveau bereikt
+
+Score: 
+
+Tekst om weer te geven
+
+Geweldig gevlogen!
+
+Je doet het goed!
+
+Ga door!
+
+Maar wees voorzichtig!
+
+Harder werken!
+
+Ga naar de basis!
+

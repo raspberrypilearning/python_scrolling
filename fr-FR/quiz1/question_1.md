@@ -1,10 +1,8 @@
-## Réflexion
+## Questionnaire rapide
 
-Bravo, tu as créé un jeu !  Maintenant, il est temps de réfléchir - la réflexion est une partie importante de l'apprentissage, car elle aide à établir de nouvelles connexions dans ton cerveau.
+Réponds aux trois questions. Il y a des indices pour te guider vers la bonne réponse.
 
-Réponds aux trois questions ci-dessous pour réfléchir à ce que tu as appris.
-
-Après chaque question, appuie sur **soumettre**. Tu seras guidé vers la bonne réponse. Tu peux faire cette activité autant de fois que tu le souhaites.
+Lorsque tu as répondu à chaque question, clique sur **Vérifier ma réponse**.
 
 Amuse-toi bien !
 
@@ -32,7 +30,7 @@ if score >= 5000:
 elif vies > 1:
   print('Pousse plus fort !')
 
-else :
+else:
   print('Va à la base !')
 ```
 
@@ -71,7 +69,7 @@ Proche, mais `score >= 5000` n'est pas la seule condition que le programme trouv
 
 - ( )
 ```
-Pousse plus fort!
+Encore un petit effort !
 ```
   --- feedback ---
 

@@ -11,7 +11,7 @@ In dit project maakte je gebruik van procedurele generatie waarmee de computer d
 
   --- feedback ---
 
-Correct! Dit kan allemaal gebeuren bij het gebruik van procedurele generatie. Je kunt meer code toevoegen om deze problemen te controleren en te omzeilen, of je kunt verschillende zaden proberen totdat je er een vindt die werkt.
+Correct! Dit kan allemaal gebeuren bij het gebruik van procedurele generatie. Je kunt meer code toevoegen om deze problemen te controleren en te omzeilen, of je kunt verschillende seeds proberen totdat je er een vindt die werkt.
 
   --- /feedback ---
 
