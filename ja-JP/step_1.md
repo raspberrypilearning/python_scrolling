@@ -12,7 +12,7 @@
 
 ![さまざまなプロジェクト例の画像。](images/showcase_projects.png)
 
-### インスピレーションを得る
+### Get ideas 💭
 
 作成するゲームの種類と、必要な効果を得るためにコードをどのように使うかについて、いくつかの設計上の決定を行います。
 
@@ -20,7 +20,7 @@
 
 --- task ---
 
-これらの例を見てください。 プレイヤーと障害物がどのように作られたかを考えてください。
+Run these examples. プレイヤーと障害物がどのように作られたかを考えてください。
 
 障害物にぶつかるとどうなりますか？ ゲームが進むにつれて難しくなりますか？
 
@@ -38,7 +38,7 @@
 
 **Clean car**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/clean-car-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> **きれいなクルマ**: \[中を見る\](https://trinket.io/python/72bca7fbe3){:target="_blank"}
+</iframe> You can find the Clean car project [here](https://editor.raspberrypi.org/en/projects/clean-car-example){:target="_blank"}
 
 **Dodge asteroids**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -50,7 +50,7 @@
 
 --- print-only ---
 
-作成するゲームの種類と、必要な効果を得るためにコードをどのように使うかについて、いくつかの設計上の決定を行います。
+You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
 ![Skiing cat project example](images/example2.png){:width="300px"}
 You can find the Skiing cat project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Don't pop project example](images/example4.png){:width="300px"}
