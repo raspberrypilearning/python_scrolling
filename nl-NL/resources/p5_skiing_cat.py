@@ -1,8 +1,8 @@
-# Definities voor de p5py-bibliotheek 
+# Definitions for compatibility with the p5py processing library 
 from processing import *
 import __main__
 
-# Vormgeving
+# Shape
 from processing import rectMode as rect_mode
 from processing import ellipseMode as ellipse_mode
 from processing import strokeWeight as stroke_weight
@@ -11,36 +11,36 @@ from processing import strokeJoin as stroke_join
 from processing import noStroke as no_stroke
 from processing import noFill as no_fill
 
-# Lettertypen
+# Fonts
 from processing import createFont as create_font
 from processing import loadFont as load_font
 from processing import textFont as text_font
 
-# Tekst
+# Text
 from processing import textAlign as text_align
 from processing import textLeading as text_leading
 from processing import textMode as text_mode
 from processing import textSize as text_size
 from processing import textWidth as text_width
 
-# Kleur
+# Colour
 from processing import blendColor as blend_color
 from processing import lerpColor as lerp_color
 from processing import color as Color
   
-# Afbeeldingen
+# Images
 from processing import createImage as create_image
 from processing import imageMode as image_mode
 from processing import loadImage as load_image
 from processing import noTint as no_tint
 from processing import requestImage as request_image
 
-# Omgeving
+# Environment
 from processing import frameRate as frame_rate
 from processing import noCursor as no_cursor
 from processing import noLoop as no_loop
 
-# Omzetten
+# Transform
 from processing import applyMatrix as apply_matrix
 from processing import popMatrix as pop_matrix
 from processing import printMatrix as print_matrix
@@ -53,7 +53,7 @@ from processing import popStyle as pop_style
 
 from processing import run as main_run
 
-# Toetsenbord
+# Keyboard
 
 def mousePressed():
   if hasattr(__main__, "mouse_pressed"):
@@ -132,4 +132,3 @@ def show_coord(x, y):
   text_align(x_align, y_align)
   text('(' + str(int(x)) + ', ' + str(int(y)) + ')', x, y)
   popStyle()
-  

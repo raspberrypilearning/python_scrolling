@@ -1,0 +1,72 @@
+Ajouter la couleur de ton thème
+
+Positionné vers le bas de l'écran
+
+Ta couleur choisie
+
+Charger ton image
+
+Contrôle la taille de l'emoji
+
+Position près du centre
+
+Le visage
+
+Les yeux
+
+Remplacer par ton obstacle
+
+Avant de dessiner le joueur
+
+Charge l'image de ton joueur
+
+Charge l'image de ton obstacle
+
+Redimensionner pour s'adapter à ton thème
+
+Dessine un sapin
+
+Vert pour les aiguilles
+
+Brun pour le tronc
+
+Augmente chaque image
+
+Enveloppant
+
+Remplace par ton obstacle
+
+N'importe quel nombre convient
+
+Dessine le point de collision
+
+Utile pour le débogage
+
+Dessiner des cercles autour des pixels pour vérifier les collisions
+
+Sur la gauche de l'écran
+
+À droite de l'écran
+
+Inclure les variables globales ici
+
+Utiliser global niveau
+
+Tu as atteint le niveau
+
+Score : 
+
+Texte à afficher
+
+Superbe vol !
+
+Ça va bien !
+
+Continue !
+
+Mais attention !
+
+Encore un petit effort !
+
+Va à la base !
+

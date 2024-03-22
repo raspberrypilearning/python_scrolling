@@ -24,14 +24,16 @@ Definieer een `teken_obstakels()` functie:
 --- code ---
 ---
 language: python
-filename: main.py - teken_obstakels()
+filename: main.py - draw_obstacles()
+line_numbers: false
+line_number_start:
+line_highlights: 4
 ---
 
-def teken_obstakels(): 
-   obstakel_x = width/2 
-   obstakel_y = height/2 
-   text('🌵', obstakel_x, obstakel_y) #Vervang je obstakel
-
+def teken_obstakels():
+    obstakel_x = width/2
+    obstakel_y = height/2
+    text('🌵', obstakel_x, obstakel_y)  # Vervang je obstakel
 
 --- /code ---
 
@@ -41,12 +43,16 @@ Voeg code toe aan `draw()` om `teken_obstakels()` voor elk frame aan te roepen.
 ---
 language: python
 filename: main.py - draw()
+line_numbers: false
+line_number_start:
+line_highlights: 5
 ---
 
-def draw(): 
-    veilig = color(200, 100, 0) #Voeg de kleur van je thema toe 
-    background(veilig)  
-    teken_obstakels() #Voordat je de speler tekent 
+def draw():
+    global veilig
+    veilig = Color(200, 100, 0)  # Voeg de kleur van je thema toe
+    background(veilig)
+    teken_obstakels()  # Voordat je de speler tekent
     teken_speler()
 
 --- /code ---
@@ -65,13 +71,9 @@ def draw():
 title: Gebruik een startafbeelding
 ---
 
-Klik op het pictogram **manage images** (afbeeldingen beheren).
+Afbeeldingen die in het startproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
 
-![Het afbeeldingspictogram in de rechterbovenhoek van het codegebied.](images/manage-images.png)
-
-Afbeeldingen die in het startersproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
-
-![De afbeeldingenbibliotheek met een lijst met opgenomen afbeeldingen.](images/starter-images.png)
+![De afbeeldingengalerij met de meegeleverde afbeeldingen.](images/starter-images.png)
 
 Noteer de naam van de afbeelding die je wilt gebruiken.
 
@@ -81,30 +83,34 @@ Laad de afbeelding in de `setup()` functie.
 ---
 language: python
 filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 12
 ---
 
-def setup(): 
-    size(400, 400) 
-    speler = load_image('skiing.png') #Laad je afbeelding 
-    obstakel = load_image('rocket.png') #Laad je afbeelding
+def setup():
+    size(400, 400)
+    global speler
+    speler = load_image('skiing.png')  # Laad je speler-afbeelding
+    obstakel = load_image('rocket.png')  # Laad je obstakel-afbeelding
 
 --- /code ---
 
-Roep `image()` aan en stel deze in als global in de `teken_obstakels()` functie.
+Zoek de regel `# Bewaar deze regel om je code uit te voeren`. Definieer vóór die regel een nieuwe functie `teken_obstakels()`, roep `obstakel` aan als globale variabele en gebruik deze in de aanroep naar `image()`.
 
 --- code ---
 ---
 language: python
-filename: main.py - teken_obstakels()
+filename: main.py - draw_obstacles()
 ---
 
-def teken_obstakels(): 
-   obstakel_x = width/2 
-   obstakel_y = height/2
-
-   global obstakel
-
-   image(obstakel, obstakel_x, obstakel_y, 30, 30) #Pas de afmeting aan om bij jouw thema te passen
+def teken_obstakels():
+    obstakel_x = width/2
+    obstakel_y = height/2
+    
+    global obstakel
+    
+    image(obstakel, obstakel_x, obstakel_y, 30, 30)  # Pas de afmeting aan om bij jouw thema te passen
 
 --- /code ---
 
@@ -115,7 +121,7 @@ def teken_obstakels():
 title: Emoji-tekens gebruiken
 ---
 
-Je kunt emoji-tekens gebruiken in de p5-functie `text()` om een emoji als speler te gebruiken.
+Je kunt emoji-tekens gebruiken in de p5-functie `text()` om een emoji als obstakel te gebruiken.
 
 Hier is een voorbeeld:
 
@@ -125,23 +131,25 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): 
-  size(400, 400) 
-  text_size(40) #Bepaalt de grootte van de emoji 
-  text_align(CENTER, TOP) #Positie rond het midden
+def setup():
+    size(400, 400)
+    text_size(40)  # Bepaalt de grootte van de emoji
+    text_align(CENTER, TOP)  # Positie rond het midden, bovenaan
 
 --- /code ---
+
+Zoek de regel `# Bewaar deze regel om je code uit te voeren`. Definieer vóór die regel een nieuwe `teken_obstakels()` functie.
 
 --- code ---
 ---
 language: python
-filename: main.py - teken_obstakels()
+filename: main.py - draw_obstacles()
 ---
 
-def teken_obstakels(): 
-  obstakel_x = width/2 
-  obstakel_y = height/2 
-  text('🌵', obstakel_x, obstakel_y)
+def teken_obstakels():
+    obstakel_x = width/2
+    obstakel_y = height/2
+    text('🌵', obstakel_x, obstakel_y)
 
 --- /code ---
 
@@ -165,28 +173,28 @@ def teken_obstakels():
 
 --- collapse ---
 ---
-title: Teken een speler met gebruikmaking van meerdere vormen
+titel: Teken een object door meerdere vormen te gebruiken
 ---
 
-![beschrijving](images/tree_obstacle.png)
+![Een boom getekend met groene driehoeken voor de bladeren en een bruine rechthoek voor de stam](images/tree_obstacle.png)
 
 --- code ---
 ---
 language: python
-filename: main.py - teken_obstakels()
+filename: main.py - draw_obstacles()
 ---
 
 def teken_obstakels():
-    ob_x = width/2
-    ob_y = height/2
-    #Teken een dennenboom
+    obstakel_x = width/2
+    obstakel_y = height/2
+    # Teken een dennenboom
     no_stroke()
-    fill(0,255,0) #Groen voor naalden
-    triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
-    triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
-    triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
-    fill(150,100,100) #bruin voor stam
-    rect(ob_x + 15, ob_y + 70, 10, 10)
+    fill(0,255,0)  # Groen voor naalden
+    triangle(obstakel_x + 20, obstakel_y + 20, obstakel_x + 10, obstakel_y + 40, obstakel_x + 30, obstakel_y + 40)
+    triangle(obstakel_x + 20, obstakel_y + 30, obstakel_x + 5, obstakel_y + 55, obstakel_x + 35, obstakel_y + 55)
+    triangle(obstakel_x + 20, obstakel_y + 40, obstakel_x + 0, obstakel_y + 70, obstakel_x + 40, obstakel_y + 70)
+    fill(150,100,100)  # Bruin voor stam
+    rect(obstakel_x + 15, obstakel_y + 70, 10, 10)
 
 --- /code ---
 
@@ -207,14 +215,14 @@ De p5-variabele `frame_count` begint de frames te tellen wanneer je op uitvoeren
 --- code ---
 ---
 language: python
-filename: main.py - teken_obstakels()
+filename: main.py - draw_obstacles()
 ---
 
 def teken_obstakels():
-   obstakel_x = width/2 
-   obstakel_y = height/2 + frame_count #Verhoogt elk frame 
-   obstakel_y %= height #Omkeren 
-   text('🌵', obstakel_x, obstakel_y) #Vervang je obstakel
+    obstakel_x = width/2
+    obstakel_y = height/2 + frame_count # Verhoogt elk frame
+    obstakel_y %= height # Omkeren
+    text('🌵', obstakel_x, obstakel_y) # Vervang je obstakel
 
 --- /code ---
 
@@ -224,10 +232,8 @@ def teken_obstakels():
 
 Je zou op verschillende startlocaties veel kopieën van je obstakels kunnen maken, maar dat is best veel werk. Laten we een snellere route gebruiken.
 
-
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedurele generatie**</span> wordt gebruikt om game 
-werelden, obstakels en filmscènes te maken op een willekeurige manier, maar wel met bepaalde regels. Een <span style="color: #0faeb0">seed</span> (zaadje) betekent dat je elke keer dat je dezelfde seed gebruikt dezelfde resultaten kunt genereren.</p>
+<span style="color: #0faeb0">**Procedurele generatie**</span> wordt gebruikt om spelwerelden, obstakels en filmscènes te maken op een willekeurige manier, maar wel volgens bepaalde regels. Een <span style="color: #0faeb0">seed</span> (zaadje) betekent dat je elke keer dat je dezelfde seed gebruikt dezelfde resultaten kunt genereren.</p>
 
 --- task ---
 
@@ -236,18 +242,17 @@ Deze code gebruikt een `for` lus met `randint()` om obstakelposities voor je te 
 --- code ---
 ---
 language: python
-filename: main.py - teken_obstakels()
+filename: main.py - draw_obstacles()
 ---
 
 def teken_obstakels():
+    seed(12345678)  # Ieder getal is prima
 
-  seed (12345678) #Ieder getal is prima
-
-  for i in range(6):  
-    obstakel_x = randint(0, height) 
-    obstakel_y = randint(0, height) + frame_count 
-    obstakel_y %= height 
-    text('🌵', obstakel_x, obstakel_y) #Plaats het nieuwe obstakel
+    for i in range(6):
+        obstakel_x = randint(0, height) 
+        obstakel_y = randint(0, height) + frame_count 
+        obstakel_y %= height 
+        text('🌵', obstakel_x, obstakel_y) # Plaats het nieuwe obstakel
 
 --- /code ---
 
@@ -268,7 +273,12 @@ Het testen van je programma kan epileptische aanvallen veroorzaken bij mensen me
 - Ervoor zorgen dat je de `seed()` regel code hebt toegevoegd zodat je obstakels niet rondspringen
 - Iemand anders vragen om het voor je uit te voeren
 - Ga verder en voltooi het project en vraag aan het einde iemand om het project voor jou uit te voeren, zodat je fouten kunt opsporen
-- De framesnelheid wijzigen voordat je jouw programma uitvoert door `frame_rate(1)` toe te voegen aan het begin van `setup()` — je kunt dit verwijderen zodra je hebt bevestigd dat er geen bug is
+- Vertraag het spel door `frame_rate = 10` te gebruiken in je aanroep van `run()` als volgt:
+
+```python
+run(frame_rate = 10)
+```
+Je kunt de snelheid van het spel aanpassen door `10` in een hogere of lagere waarde te veranderen.
 
 --- /collapse ---
 
@@ -305,18 +315,17 @@ Bijvoorbeeld:
 --- code ---
 ---
 language: python
-filename: main.py — teken_obstakels()
+filename: main.py — draw_obstacles()
 ---
 
 def teken_obstakels():
+    seed(12345678)
 
-  seed(12345678)
-
-  for i in range(6):  
-    obstakel_x = randint(0, height) 
-    obstakel_y = randint(0, height) + frame_count 
-    obstakel_y %= height 
-    text('🌵', obstakel_x, obstakel_y) #Plaats het nieuwe obstakel
+    for i in range(6):
+        obstakel_x = randint(0, height) 
+        obstakel_y = randint(0, height) + frame_count 
+        obstakel_y %= height 
+        text('🌵', obstakel_x, obstakel_y) # Plaats het nieuwe obstakel
 
 --- /code ---
 

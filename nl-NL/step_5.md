@@ -21,12 +21,14 @@ Maak een `global` `level` variabele om het niveau van de speler bij te houden. S
 
 --- code ---
 ---
-language: python 
+language: python
 filename: main.py
-line_numbers: false
+line_numbers: true
+line_number_start: 6
+line_highlights: 7
 ---
 
-#Voeg hier global variabelen toe
+# Voeg hier global variabelen toe
 level = 1
 
 --- /code ---
@@ -41,25 +43,22 @@ Deze code gebruikt de `height` en de `frame_count` om de variabele `level` te ve
 
 --- code ---
 ---
-language: python 
-filename: main.py — teken_obstakels()
-line_numbers: false
+language: python
+filename: main.py — draw_obstacles()
 ---
 
-def teken_obstakels():
-
-  global level #Gebruik het global level
-
-  if frame_count % height == height - 1 and level < 5: 
-    level += 1 
-    print('Je hebt level', level, 'bereikt')
+def teken_obstakles():
+    global level  # Gebruik het global level
+    
+    if frame_count % height == height - 1 and level < 5:
+        level += 1
+        print('Je hebt niveau', level, 'bereikt')
 
 --- /code ---
 
 --- /task ---
 
 --- task ---
-
 
 De twee belangrijkste opties voor het verhogen van de moeilijkheidsgraad zijn om het spel sneller te laten gaan en om het aantal obstakels te vergroten.
 
@@ -74,19 +73,18 @@ In plaats van je obstakels met één pixel in elk frame te verplaatsen, verplaat
 
 Als je naar de code kijkt, zou je kunnen verwachten dat de snelheid met meer dan het `level` aantal pixels zal toenemen. Bijvoorbeeld, op het punt net voordat je `level` toeneemt, is de `frame_count` `799` — aangezien het `level` één frame toeneemt voordat de `frame_count` een even veelvoud is van de `height` (ingesteld op `400` pixels) — en `799 * 3` is aanzienlijk groter dan `799 * 2`. De extra pixels die worden gecreëerd door het geheel van `frame_count` te vermenigvuldigen met een groter getal, worden echter verborgen door `obstakel_y %= height`. Hierdoor resteert alleen het `level` aantal extra pixels in elke stap.
 
-
 --- code ---
 ---
-language: python 
-filename: main.py — teken_obstakels()
+language: python
+filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6): 
-    obstakel_x = randint(0, height) 
-    obstakel_y = randint(0, height) + (frame_count * level) 
-    obstakel_y %= height #Omwentelen 
-    text('🌵', obstakel_x, obstakel_y)
+    for i in range(6): 
+        obstakel_x = randint(0, height) 
+        obstakel_y = randint(0, height) + (frame_count * level) 
+        obstakel_y %= height # Omwentelen 
+        text('🌵', obstakel_x, obstakel_y)
 
 --- /code ---
 
@@ -99,7 +97,7 @@ title: Meer obstakels toevoegen
 
 Het toevoegen van extra obstakels is gewoon een kwestie van het aantal keren verhogen van de `for` lus die ze creëert. Je kunt dit doen door het getal dat je doorgeeft aan de functie `range()` te verhogen met `level`.
 
-**Tip:** Natuurlijk kun je altijd `level* 2`gebruiken, of zelfs grotere veelvouden, als je je spel moeilijker wilt maken.
+**Tip:**Natuurlijk kun je altijd `level* 2`gebruiken, of zelfs grotere veelvouden, als je je spel moeilijker wilt maken.
 
 --- /collapse ---
 
@@ -115,12 +113,12 @@ Maak een global `score`-variabele om de score van de speler bij te houden. Stel 
 
 --- code ---
 ---
-language: python 
+language: python
 filename: main.py
 line_numbers: false
 ---
 
-#Voeg hier global variabelen toe
+# Voeg hier global variabelen toe
 score = 0
 
 --- /code ---
@@ -136,16 +134,14 @@ Je kunt de score van je speler verhogen voor elk frame waar ze niet tegen een ob
 --- code ---
 ---
 language: python
-filename: main.py — teken_speler()
+filename: main.py — draw_player()
 ---
 
-global score
-
-  if botsen == veilig: 
-    text('🎈', muis_x, speler_y) 
-    score += level 
-  else: 
-    text('💥', muis_x, speler_y)
+    if botsen == veilig.hex:
+        text('🎈', mouse_x, speler_y) 
+        score += level 
+    else: 
+        text('💥', mouse_x, speler_y)
 
 --- /code ---
 
@@ -159,8 +155,9 @@ Spelers moeten hun score kunnen zien. Omdat het zo snel toeneemt, zou het gebrui
 
 Je kunt de operator `+` gebruiken om twee of meer tekenreeksen te combineren als je een koptekst wilt geven zoals 'score' of 'punten'. Omdat `score` een getal is, moet je het naar een tekenreeks converteren voordat je het kunt samenvoegen met een andere tekenreeks. Je kunt dit doen met `str()`:
 
-`boodschap = 'Score: ' + str(score)`
-
+```python
+boodschap = 'Score: ' + str(score)
+```
 **Tip:** `str()` is een afkorting voor 'string' — programmeurs verwijderen vaak letters op deze manier, zodat ze niet zoveel hoeven te typen!
 
 --- /task ---
@@ -192,7 +189,9 @@ title: De score wordt niet weergegeven
 
 Zorg ervoor dat je de functie `text()` hebt opgenomen die de score van de speler op het juiste punt tekent in je functie `draw()`, en dat je deze de juiste waarden hebt doorgegeven:
 
-`text('Te tonen tekst', x, y)`
+```python
+text('Te tonen tekst', x, y)
+```
 
 Het zou er ongeveer zo uit moeten zien:
 
@@ -202,12 +201,12 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0: 
-    background(veilig) 
-    fill(255) 
-    text('Score: ' + str(score), width/2, 20) 
-    teken_obstakels() 
-    teken_speler()
+    if level > 0: 
+        background(veilig) 
+        fill(255) 
+        text('Score: ' + str(score), width/2, 20) 
+        teken_obstakels() 
+        teken_speler()
 
 --- /code ---
 
@@ -220,7 +219,6 @@ title: Het spel stopt niet na een botsing
 
 Als je denkt dat je game botsingen totaal niet correct detecteert, probeer dan eerst de foutopsporingsinstructies in de vorige stap, onder 'Er is geen botsing wanneer de speler een obstakel bereikt'.
 
-
 Als je spel botsingen correct detecteert, controleer dan of je de code binnen het `if level > 0` statement correct is ingesprongen, om er zeker van te zijn dat het alleen wordt uitgevoerd als dat statement waar is. Bijvoorbeeld:
 
 --- code ---
@@ -229,12 +227,12 @@ language: python
 filename: main.py — draw()
 ---
 
-  if level > 0: 
-    background(veilig) 
-    fill(255) 
-    text('Score: ' + str(score), width/2, 20) 
-    teken_obstakels() 
-    teken_speler()
+    if level > 0: 
+        background(veilig) 
+        fill(255) 
+        text('Score: ' + str(score), width/2, 20) 
+        teken_obstakels() 
+        teken_speler()
 
 --- /code ---
 
@@ -243,15 +241,15 @@ Ten slotte, als beide correct werken, is het mogelijk dat je spel de `level = 0`
 --- code ---
 ---
 language: python
-filename: main.py — teken_speler()
+filename: main.py — draw_player()
 ---
 
-  if botsen == veilig: 
-    text('🎈', muis_x, speler_y) 
-    score += level 
-  else: 
-    text('💥', muis_x, speler_y) 
-    level = 0
+    if botsen == veilig.hex: 
+        text('🎈', mouse_x, speler_y) 
+        score += level 
+    else: 
+        text('💥', mouse_x, speler_y) 
+        level = 0
 
 --- /code ---
 
@@ -268,16 +266,16 @@ Als het level correct stijgt, controleer dan je `teken_obstakels()` functie. Con
 
 --- code ---
 ---
-language: python 
-filename: main.py — teken_obstakels()
+language: python
+filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + level): 
-    obstakel_x = randint(0, height) 
-    obstakel_y = randint(0, height) + (frame_count * level) 
-    obstakel_y %= height #Omkeren 
-    text('🌵', obstakel_x, obstakel_y)
+    for i in range(6 + level): 
+        obstakel_x = randint(0, height) 
+        obstakel_y = randint(0, height) + (frame_count * level) 
+        obstakel_y %= height # Omkeren 
+        text('🌵', obstakel_x, obstakel_y)
 
 --- /code ---
 
@@ -294,25 +292,31 @@ Als het niveau correct stijgt, controleer dan je functie `teken_obstakels()` om 
 
 --- code ---
 ---
-language: python 
-filename: main.py — teken_obstakels()
+language: python
+filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-  for i in range(6 + level): 
-    obstakel_x = randint(0, height) 
-    obstakel_y = randint(0, height) + (frame_count * level) 
-    obstakel_y %= height #Omkeren 
-    text('🌵', obstakel_x, obstakel_y)
+    for i in range(6 + level): 
+        obstakel_x = randint(0, height) 
+        obstakel_y = randint(0, height) + (frame_count * level) 
+        obstakel_y %= height # Omkeren 
+        text('🌵', obstakel_x, obstakel_y)
 
 --- /code ---
 
 Als je al deze controles hebt gedaan en het lijkt er nog steeds niet op dat het aantal obstakels toeneemt, is het mogelijk dat dat wel zo is, maar dat je ze niet ziet. Je moet enkele van deze stappen proberen om dit te testen:
-  - Vertraag het spel door `frame_rate()` te gebruiken in je `setup()` functie om je meer tijd te geven om te tellen
-  - Verander de seed die je gebruikt voor je willekeurige getallen. Het is onwaarschijnlijk, maar het is mogelijk dat sommige obstakels willekeurig direct boven elkaar verschijnen
+  - Vertraag het spel door `frame_rate = 10` te gebruiken in je aanroep naar `run()`, zodat je meer tijd hebt om te tellen:
+
+```python
+run(frame_rate = 10)
+```
+
+Je kunt de snelheid van het spel aanpassen door `10` in een hogere of lagere waarde te veranderen.
+
+  - Verander de seed die je gebruikt voor je willekeurige getallen. Het is onwaarschijnlijk, maar het is mogelijk dat sommige obstakels willekeurig direct bovenop elkaar verschijnen
   - Voeg een `print()` toe aan de `for`-lus in `teken_obstakels()` die de waarde van `i` in elke passage van de lus afdrukt, zodat je kunt controleren of deze het juiste aantal keren wordt uitgevoerd
   - Verander, alleen voor testdoeleinden, `range(6 + level)` in `range(6 * level)` - die toename moet gemakkelijker te herkennen zijn!
-
 
 --- /collapse ---
 
