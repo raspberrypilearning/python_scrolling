@@ -1,6 +1,6 @@
 --- question ---
 ---
-किंवदंती: ३ का प्रश्न ३
+legend: Question 3 of 3
 ---
 
 You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
@@ -21,7 +21,7 @@ It's great to get feedback, but you shouldn't change your game just to keep one 
 
   --- feedback ---
 
-लगभग It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
+Not quite. It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
 
   --- /feedback ---
 
