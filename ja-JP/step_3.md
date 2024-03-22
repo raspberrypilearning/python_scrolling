@@ -23,11 +23,11 @@
 
 --- code ---
 ---
-def draw_obstacles():
+language: python filename: main.py - draw_obstacles() line_numbers: false line_number_start:
 line_highlights: 4
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -35,12 +35,11 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #�
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: false line_number_start:
 line_highlights: 5
 ---
 
-def draw(): safe = color(200, 100, 0) #テーマの色 background(safe)  
-draw_obstacles() #プレーヤーを描く前に draw_player() --- /code ---
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe) draw_obstacles()  # Before drawing the player draw_player()
 
 --- /code ---
 
@@ -58,13 +57,13 @@ draw_obstacles() #プレーヤーを描く前に draw_player() --- /code ---
 title: スタータープロジェクトの画像を使う
 ---
 
-スタータープロジェクトで用意された画像は、 `Image Library` のリストに出て来ます。
+Images included in the starter project will be shown in the `Image gallery`.
 
 ![The Image gallery displaying the included images.](images/starter-images.png)
 
-使いたい画像の名前をメモします。
+Make a note of the name of the image you want to use.
 
-`setup()` 関数で画像を読み込みます.
+Load the image into the `setup()` function
 
 --- code ---
 ---
@@ -72,11 +71,11 @@ language: python filename: main.py - setup() line_numbers: true line_number_star
 line_highlights: 12
 ---
 
-def setup(): size(400, 400) player = load_image('skiing.png') #選んだ画像 obstacle = load_image('rocket.png') #選んだ画像
+def setup(): size(400, 400) global player player = load_image('skiing.png')  # Load your player image obstacle = load_image('rocket.png')  # Load your obstacle image
 
 --- /code ---
 
-Find the line `# Keep this to run your code`. `draw_obstacle()` 関数で`image()` を呼び出し、 obstacle変数をグローバルに設定します。
+Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function, call `obstacle` as a global variable and use it in the call to `image()`.
 
 --- code ---
 ---
@@ -86,7 +85,9 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
-    image(obstacle, ob_x, ob_y, 30, 30) #テーマに合わせてサイズを変更
+    global obstacle
+    
+    image(obstacle, ob_x, ob_y, 30, 30)  # Resize to fit your theme
 
 --- /code ---
 
@@ -97,9 +98,9 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 title: 絵文字を使用する
 ---
 
-p5の `text()` 関数で絵文字を使うことができるので、障害物を絵文字で表現することができます。
+You can use emoji characters in the p5 `text()` function to represent your obstacles.
 
-次に例を示します：
+Here's an example:
 
 --- code ---
 ---
@@ -107,7 +108,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #絵文字の大きさ text_align(CENTER, TOP) #真ん中に置く
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -139,7 +140,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**ヒント：** 一つの関数の中で、いくつかの単純な図形を使用して、より複雑な障害物を作ることができます。
+**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
 
 --- collapse ---
 ---
@@ -154,7 +155,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 #モミの木を描く no_stroke() fill(0,255,0) #葉の部分は緑 triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # 幹は茶色 rect(ob_x + 15, ob_y + 70, 10, 10)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 # Draw a fir tree no_stroke() fill(0,255,0)  # Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100)  # Brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
 
@@ -166,11 +167,11 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 #モミの木を描く no_s
 
 --- task ---
 
-次に、フレームごとに障害物の `y` の位置を増やすコードを追加します。
+Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
 
-p5の`frame_count`変数は、実行ボタンをクリックするとフレームのカウントを始めます。
+The p5 `frame_count` variable starts counting the frames when you click run.
 
-`ob_y ％= height` は `ob_y`を`height`(画面の高さ) で割った余りが `height`が「400 」の場合、この計算は`401`を`1`に変えるため、障害物が画面の下部から外れると、上部に再び表示されます。
+`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
 
 --- code ---
 ---
@@ -178,7 +179,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #フレームごとに増やす ob_y %= height #下に外れたら上から出てくるように text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count  # Increases each frame ob_y %= height  # Wrap around text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -186,14 +187,14 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #フレーム
 
 ### たくさんの障害物
 
-さまざまな場所に障害物のコピーをたくさん描くことができますが、それはかなりの作業です。 手っ取り早い方法でやりましょう。
+You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**手続き型生成**</span>とは、ゲームワールド、障害物、および映画のシーンを作り出す使われる手法で、ランダムであるが、ある一定のルールに基づいてそれらを作り出すものです。 <span style="color: #0faeb0">seed(シード)</span> は、同じseed(シード) を使用するたびに同じ結果を生成できることを意味します。</p>
+<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
 
 --- task ---
 
-このコードでは、`for`ループと `randint()` を使って、障害物の位置を決めています。 最初にランダムの`seed()` 関数を呼び出すことで、何度やっても同じ乱数が得られます。 これによって、障害物がフレームごとにあちこちに現れることがなくなり、障害物がうまく出てくるタネを見つけるまでいくらでもタネを変更できるようになります。
+This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
 
 --- code ---
 ---
@@ -201,17 +202,17 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-seed(12345678) #どんな数でもよい
+def draw_obstacles(): seed(12345678)  # Any number is fine
 
-    for i in range(6):<br x-id="2" />
+    for i in range(6):  
         ob_x = randint(0, height)
         ob_y = randint(0, height) + frame_count
         ob_y %= height
-        text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
-役立つ情報：
+Useful information:
 
 [[[using-seed-in-python]]]
 
@@ -224,11 +225,11 @@ seed(12345678) #どんな数でもよい
 title: てんかんの警告
 ---
 
-プログラムをテストすると、光過敏性てんかんのある人に発作を引き起こす可能性があります。 光過敏性てんかんを患っている方や発作を起こしやすいと感じている方は、プログラムを実行しないでください。 代わりに、次のことができます。
+Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
 - 障害物があちこちに現れないように `seed ()` のコード行追加したことを確認してください
 - プログラムの実行を誰かに頼んでください
 - 先に進めてプロジェクトを完了し、最後に誰かにプロジェクトを実行してもらい、デバッグできるようにしてください
-- プログラムを実行する前に、`setup()` の最初のところに `frame_rate(1)` を追加して、フレームレートを変更します。
+- Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
 
 ```python
 run(frame_rate = 10)
@@ -239,33 +240,33 @@ You can alter the speed of the game by changing `10` to a higher or lower value.
 
 --- task ---
 
-**テスト：** プログラムを実行すると、画面にたくさんの障害物が表示され、一番下に到達すると上に回り込んでまた現れます。
+**Test:** Run your program and you should see multiple objects on the screen, wrapping around when they get to the bottom.
 
-障害の出来具合に満足するまでコードの変更を繰り返します。 やり方は以下のとおりです。
+Change your code until you are happy with the obstacles you have. You can:
 
 + 乱数のタネを変更して、色々な所から障害物が現れるようにします
 + 障害物の数が変わるまでのループ回数を変更します
 + 障害物のサイズを調整します
 
-**ヒント：** 障害物を避けることができて、簡単には通り抜けられないことを確認してください。
+**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
 
 --- /task ---
 
 --- task ---
 
-**デバッグ：** プロジェクトに修正が必要なバグが見つかる場合があります。 一般的なバグは次のとおりです。
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
 title: 障害物が1つしか現れない
 ---
 
-障害物をたくさん描く関数を確認してください。
+Check your function that draws multiple obstacles:
  + 障害物を描く関数を2回以上呼び出すために、 `for` ループを使っていることを確認してください
  + 障害物を描く関数に渡す(x, y) 座標を変えるのに、`randint()` を使っていることを確認してください
  + 障害物の座標として `ob_x` と `ob_y` を使っていることを確認してください
 
-例えば:
+For example:
 
 --- code ---
 ---
@@ -273,13 +274,13 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles():
+def draw_obstacles(): seed(12345678)
 
-    for i in range(6):<br x-id="2" />
+    for i in range(6):  
         ob_x = randint(0, height)
         ob_y = randint(0, height) + frame_count
         ob_y %= height
-        text('🌵', ob_x, ob_y) #作ったか選んだ障害物にしてください
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -290,13 +291,13 @@ def draw_obstacles():
 title: フレームが描かれるたびに障害物の位置が変わります
 ---
 
-`seed()`が、たくさんの障害物を描く関数の中に入っていることを確認してください。
+Make sure that you have used `seed()` inside the function that draws multiple obstacles.
 
 --- /collapse ---
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-プログラマーは、 `%`演算子を使ってオブジェクトを画面から出てすぐにまた現れるようにしたり、 `seed()`関数を使って同じ乱数を生成したりするなど、多くの巧みなトリックを使っています。 コーディングをすればするほど、より巧みなトリックを身につけることができます。</p>
+Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
 
 --- save ---
