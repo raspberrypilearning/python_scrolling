@@ -28,11 +28,11 @@ def teken_speler():
     global score, level
     
     speler_x = int(width * 0.2)
-    speler_y = muis_y
+    speler_y = mouse_y
     
     botsen = get(speler_x + 50, speler_y + 15).hex
     botsen2 = get(speler_x + 50, speler_y - 15).hex
-    botsen3 = get(speler_x, speler_y + 15),hex
+    botsen3 = get(speler_x, speler_y + 15).hex
     botsen4 = get(speler_x, speler_y - 15).hex
     botsen5 = get(speler_x - 50, speler_y + 15).hex
     botsen6 = get(speler_x - 50, speler_y - 15).hex
@@ -42,7 +42,7 @@ def teken_speler():
         botsen3 = veilig.hex
         botsen5 = veilig.hex
       
-    elif player_y < 18: # Buiten de bovenkant van het scherm
+    elif speler_y < 18: # Buiten de bovenkant van het scherm
         botsen2 = veilig.hex
         botsen4 = veilig.hex
         botsen6 = veilig.hex

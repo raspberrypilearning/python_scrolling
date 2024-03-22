@@ -15,7 +15,7 @@ def joueur_sur():
   
     # Les yeux
     fill(178, 200, 145)
-    ellipse(mouse_x - 10, joueurs_y - 10, 20, 20)
+    ellipse(mouse_x - 10, joueur_y - 10, 20, 20)
     ellipse(mouse_x + 10, joueur_y - 10, 20, 20)
     fill(0)
     ellipse(mouse_x - 10, joueur_y - 10, 10, 10)
@@ -68,13 +68,13 @@ def dessine_joueur():
     if mouse_x < width: # dépasse la gauche de l'écran
         collision2 = sur.hex
     
-    if mouse_x > width : # dépasse la droite de l'écran
+    if mouse_x > width: # dépasse la droite de l'écran
         collision3 = sur.hex
       
     #print(collision, collision2, collision3, collision4)
       
     if collision == sur.hex and collision2 == sur.hex and collision3 == sur.hex and collision4 == sur.hex:
-        joueur_sur() 
+        joueur_sur()
         score += niveau
     else: # Collision
         joueur_ecrase()
@@ -113,7 +113,7 @@ def draw():
         fill(145, 134, 126)
         text('Score: ' + str(score), width/2, 20)
         dessine_obstacles()
-        dessine_joueur() 
+        dessine_joueur()
   
 # Garde ceci pour exécuter ton code
 run()

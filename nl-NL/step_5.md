@@ -52,7 +52,7 @@ def teken_obstakles():
     
     if frame_count % height == height - 1 and level < 5:
         level += 1
-        print('Je hebt niveau', level, 'bereikt')
+        print('Je hebt level', level, 'bereikt')
 
 --- /code ---
 

@@ -35,10 +35,10 @@ def dessine_joueur():
     collision3 = get(mouse_x + 12, joueur_y + 20).hex
     collision4 = get(mouse_x, joueur_y + 40).hex
   
-    if mouse_x < width : # hors de la gauche de l'écran
+    if mouse_x < width: # hors de la gauche de l'écran
         collision2 = sur.hex
   
-    if mouse_x > width : # hors de la droite de l'écran
+    if mouse_x > width: # hors de la droite de l'écran
         collision3 = sur.hex
   
     if collision == sur.hex and collision2 == sur.hex and collision3 == sur.hex and collision4 == sur.hex:
@@ -64,7 +64,7 @@ def draw():
     if niveau > 0:
         background(sur)
         fill(255)
-        text('Score: ' + str(score), width/2, 20)
+        text('Score : ' + str(score), width/2, 20)
         dessine_obstacles()
         dessine_joueur()
 

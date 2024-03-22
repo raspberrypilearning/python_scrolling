@@ -120,7 +120,7 @@ def draw():
         fill(255)
         image_mode(CENTER)
         dessine_obstacles()
-        dessine_joueur() 
+        dessine_joueur()
         affichage_score()
         affichage_vies()
   
