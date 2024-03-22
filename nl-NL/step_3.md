@@ -173,7 +173,7 @@ def teken_obstakels():
 
 --- collapse ---
 ---
-titel: Teken een object door meerdere vormen te gebruiken
+title: Teken een object door meerdere vormen te gebruiken
 ---
 
 ![Een boom getekend met groene driehoeken voor de bladeren en een bruine rechthoek voor de stam](images/tree_obstacle.png)

@@ -291,7 +291,7 @@ Beweegt het zoals verwacht?
 
 --- collapse ---
 ---
-titel: Ik zie de speler niet
+title: Ik zie de speler niet
 ---
 
 Probeer over te schakelen naar volledig scherm. Controleer ook de `x` en `y` coördinaten die je hebt gebruikt om de speler te tekenen — zorg ervoor dat ze binnen het canvas staan dat je hebt gemaakt met `size()`.
