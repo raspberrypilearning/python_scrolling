@@ -4,8 +4,8 @@
 
 --- task ---
 
-ألهم مجتمع Raspberry Pi Foundation بمشروعك!
+Inspire the Raspberry Pi Foundation community with your project!
 
-لإرسال مشروعك إلى الاستوديو ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} الاستوديو ، يرجى إكمال [هذا النموذج](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
+To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
 --- /task ---
