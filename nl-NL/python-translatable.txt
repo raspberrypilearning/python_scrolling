@@ -1,24 +1,24 @@
 veilig
 
-draw_player
+teken_speler
 
 speler_y
 
 speler
 
-draw_player
+teken_speler
 
 mouse_x
 
-image_file
+afbeelding_bestand
 
 x_coord
 
 y_coord
 
-breedte
+width
 
-hoogte
+height
 
 teken_obstakels
 
