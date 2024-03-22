@@ -1,56 +1,56 @@
-Додай колір, відповідно до твоєї теми
+Add the colour of your theme
 
-Розташування в напрямку до нижньої частини екрана
+Positioned towards the screen bottom
 
-Обраний тобою колір
+Your chosen colour
 
-Завантаж своє зображення
+Load your image
 
-Керування розміром емодзі
+Controls the size of the emoji
 
-Розташування навколо центру
+Position around the centre
 
-Обличчя
+Face
 
-Очі
+Eyes
 
-Заміни на свою перешкоду
+Replace with your obstacle
 
-Перед малюванням персонажа
+Before drawing the player
 
 Load your player image
 
 Load your obstacle image
 
-Зміни розмір відповідно до твоєї теми
+Resize to fit your theme
 
-Малювання ялинки
+Draw a fir tree
 
-Зелений для хвої
+Green for needles
 
-Коричневий для стовбура
+Brown for trunk
 
-Збільшення кожного кадру
+Increases each frame
 
-Обернутися навколо
+Wrap around
 
 Replace with your obstacle
 
-Підійде будь-яке число
+Any number is fine
 
-Малювання точки зіткнення
+Draw collision point
 
-Корисно для налагодження
+Useful for debugging
 
-Намалюй кола навколо пікселів, щоб перевірити наявність зіткнень
+Draw circles around the pixels to check for collisions
 
-Від лівого краю екрану
+Off the left of the screen
 
-Від правого краю екрану
+Off the right of the screen
 
-Сюди додавай глобальні змінні
+Include global variables here
 
-Використовувати глобальний рівень
+Use the global level
 
 You have reached level
 
