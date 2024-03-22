@@ -1,28 +1,28 @@
-## Ти зробиш
+## You will make
 
-Створиш нескінченну гру-раннер, де твій персонаж повинен уникати перешкод.
+Build a scrolling endless runner game where your character has to avoid obstacles.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Нескінченний раннер**</span> це тип гри, де тобі належить уникати перешкоди, а гра закінчується лише тоді, коли ти натрапиш на перешкоду. Ти набираєш очки, залишаючись в живих якомога довше.</p>
+<span style="color: #0faeb0">**Endless runners**</span> are a type of game where you have to avoid obstacles and the game only ends when you hit an obstacle. You score points by staying alive for as long as you can.</p>
 
-Зможеш:
-+ Використовувати ігрові **умови**, щоб контролювати процеси у твоїй грі
-+ Дізнатися про процедурну генерацію та виявлення зіткнень
-+ Персоналізувати гру під власні інтереси
+You will:
++ Use game **conditions** to control what happens
++ Learn about procedural generation and collision detection
++ Personalise a game to your interests
 
-![Персоналізувати гру відповідно до своїх інтересів.](images/showcase_projects.png)
+![Images of different project examples.](images/showcase_projects.png)
 
-### Отримай ідеї 💭
+### Get ideas 💭
 
-Тобі доведеться приймати деякі дизайнерські рішення стосовно того, яку гру ти будеш створювати та як ти будеш використовувати код для отримання потрібних тобі результатів.
+You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
 --- no-print ---
 
 --- task ---
 
-Run these examples. Подумай, як в цих проєктах були створені персонажі та перешкоди.
+Run these examples. Think about how the players and obstacles have been made.
 
-Що станеться, якщо потрапити на перешкоду? Чи буде твоя гра ставати все складнішою?
+What happens if you hit an obstacle? Does it get harder as you play?
 
 **Skiing cat**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/skiing-cat-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
