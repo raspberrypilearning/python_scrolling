@@ -18,9 +18,9 @@
 
 قبل رسم اللاعب
 
-تذهب دالة draw_player هنا
+Load your player image
 
-استبدل بعقبتك
+Load your obstacle image
 
 Resize لتناسب موضوعك
 
@@ -56,7 +56,7 @@ You have reached level
 
 Score: 
 
-نص
+Text to display
 
 Great flying!
 
