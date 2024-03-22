@@ -28,24 +28,24 @@ def teken_obstakels():
 def teken_speler():
     global score, level
   
-    speler_y = int(height * 0,8)
+    speler_y = int(height * 0.8)
   
-    botsen = get(muis_x, speler_y).hex
-    botsen2 = get(muis_x, speler_y + 20).hex
-    botsen3 = get(muis_x + 12, speler_y + 20).hex
-    botsen4 = get(muis_x, speler_y + 40).hex
+    botsen = get(mouse_x, speler_y).hex
+    botsen2 = get(mouse_x, speler_y + 20).hex
+    botsen3 = get(mouse_x + 12, speler_y + 20).hex
+    botsen4 = get(mouse_x, speler_y + 40).hex
   
-    if muis_x < width: # aan de linkerkant van het scherm
+    if mouse_x < width: # aan de linkerkant van het scherm
         botsen2 = veilig.hex
   
-    if muis_x > width: # voorbij de rechterkant van het scherm
+    if mouse_x > width: # voorbij de rechterkant van het scherm
         botsen3 = veilig.hex
   
     if botsen == veilig.hex and botsen2 == veilig.hex and botsen3 == veilig.hex and botsen4 == veilig.hex:
-        text('🎈', muis_x, speler_y)
+        text('🎈', mouse_x, speler_y)
         score += level
     else:
-        text('💥', muis_x, speler_y)
+        text('💥', mouse_x, speler_y)
         level = 0
 
 

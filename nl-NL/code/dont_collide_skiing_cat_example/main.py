@@ -33,17 +33,17 @@ def teken_obstakels():
 def teken_speler():
     global score, snelheid, skien, gecrasht
     
-    speler_y = int(height * 0,8)
+    speler_y = int(height * 0.8)
     
     fill(veilig)
   
-    botsen = get(muis_x, speler_y).hex
+    botsen = get(mouse_x, speler_y).hex
     
     if botsen == veilig.hex:
-        image(skien, muis_x, speler_y, 30, 30)
+        image(skien, mouse_x, speler_y, 30, 30)
         score += snelheid
     else:
-        afbeelding(gecrasht, muis_x, speler_y, 30, 30)
+        image(gecrasht, mouse_x, speler_y, 30, 30)
         snelheid = 0
     
   
