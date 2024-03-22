@@ -7,16 +7,16 @@
 </div>
 <div>
 
-![Εικόνα χελώνας μεγέθους 100x100 σε μπλε φόντο με μέγεθος οθόνης 400x400.](images/theme-turtle.png){:width="300px"}
+![Image of cartoon turtle viewed from above set against a blue background.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
 Ποιο είναι το θέμα του παιχνιδιού σου; Here are some ideas:
-- Ένα άθλημα ή ένα χόμπι
-- Μια ταινία, μια εκπομπή ή ένα παιχνίδι
-- Επιστήμη ή φύση
-- Οτιδήποτε άλλο!
+- Sports
+- Hobbies
+- Science
+- Nature
 
 --- task ---
 
@@ -32,9 +32,8 @@ If you have a Raspberry Pi account, you can click on the **Save** button to save
 
 --- code ---
 ---
-def setup():    
-size(400, 400)
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
+line_highlights: 10
 ---
 
 def setup(): size(400, 400)
@@ -45,16 +44,14 @@ def setup(): size(400, 400)
 
 --- task ---
 
-Αυτό είναι το χρώμα πάνω στο οποίο θα είναι ασφαλής ο παίκτης και θα χρησιμοποιήσεις αυτήν τη μεταβλητή ξανά αργότερα.
+Create a variable called `safe` to store the background colour based on the theme you want for your game.
 
 This is the colour that it is safe for the player to be on and you will use this variable again later.
 
 --- code ---
 ---
-def draw():    
-safe = color(200, 100, 0) #Πρόσθεσε το χρώμα του θέματός σου   
-background(safe)
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 13
+line_highlights: 14, 15, 16
 ---
 
 def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
@@ -77,14 +74,13 @@ The player will appear at a fixed `y` position and same `x` position as the mous
 
 --- task ---
 
-Όρισε τη συνάρτηση `draw_player()` και δημιούργησε μια θέση `player_y` για τη σταθερή θέση του παίκτη `y`:
+It's a good idea to organise the code for drawing the player character into a function.
 
 Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
 
 --- code ---
 ---
-def draw_player():    
-player_y = int(ύψος * 0,8) #Τοποθέτηση στο κάτω μέρος της οθόνης
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 12
 line_highlights: 12-14
 ---
 
@@ -96,11 +92,8 @@ Add code to `draw()` to call `draw_player()` each frame.
 
 --- code ---
 ---
-def draw():    
-safe = color(200, 100, 0) #Το επιλεγμένο σου χρώμα    
-background(safe)    
-draw_player()
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 15
+line_highlights: 19
 ---
 
 def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
@@ -129,12 +122,12 @@ Images included in the starter project will be shown in the `Image gallery`.
 
 Make a note of the name of the image you want to use.
 
-Σημείωσε το όνομα της εικόνας που θέλεις να χρησιμοποιήσεις.
+Load the image into the `setup()` function
 
 --- code ---
 ---
 language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-filename: main.py - setup()
+line_highlights: 11-12
 ---
 
 def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
@@ -166,11 +159,11 @@ Here's an example:
 
 --- code ---
 ---
-Μπορείς να χρησιμοποιήσεις χαρακτήρες emoji στη συνάρτηση p5 `text()` για να χρησιμοποιήσεις ένα emoji για να αναπαραστήσεις τον παίκτη σου.
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
+line_highlights: 11-13
 ---
 
-Ακολουθεί ένα παράδειγμα:
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -219,7 +212,16 @@ filename: main.py - draw_player()
 
 def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 100) ellipse(mouse_x, player_y, 60, 60)
 
-    image(αρχείο εικόνας, τετμημένη, τεταγμένη, πλάτος, ύψος)
+    # Eyes
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, player_y - 10, 20, 20)
+    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, player_y - 10, 10, 10)
+    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, player_y - 12, 5, 5)
+    ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
@@ -275,7 +277,7 @@ image(image_file, x_coord, y_coord, width, height)
 title: Ένα emoji έχει λανθασμένο μέγεθος
 ---
 
-Έλεγξε τις τιμές εισόδου που ελέγχουν το πλάτος και το ύψος της εικόνας:
+If your emoji is too big or too small, change the value in `text_size()`.
 
 --- /collapse ---
 
