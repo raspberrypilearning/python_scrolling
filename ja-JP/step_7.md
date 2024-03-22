@@ -6,7 +6,7 @@
 </div>
 <div>
 
-![ライフの表示があるスペースプロジェクト](images/example1.png){:width="300px"}
+![Example space project with lives.](images/example1.png){:width="300px"}
 
 </div>
 </div>
@@ -27,14 +27,14 @@
 勝ちになったら、どうにかして伝える必要があります — `print()` や `text()` を使って表示し、ゲームを停止する、などです。
 
 ### プレイヤーに2つ以上のライフを与える
-ゲームにライフを追加して、プレイヤーが何度か障害物にぶつかってもゲームを続けられるようにします。 これは、何かと衝突するたびに `lives -=1` とするよりも少し注意が必要です。
+ゲームにライフを追加して、プレイヤーが何度か障害物にぶつかってもゲームを続けられるようにします。 This is a little trickier than just doing `lives -= 1` every time they collide with something:
  - プレイヤーはオブジェクトと接触のが複数のフレームをわたることがあるため、1回の衝突で複数のライフを失う可能性があります。これを防ぐ必要があります。
  - また、プレイヤーが残されたライフの数を知る方法が必要になります。そして、最後のライフになったことを知らせる警告のようなものも必要になります。
  - プレイヤーがそれにぶつかったときに、追加のライフがもらえるようなオブジェクトを追加してもいいでしょう。 同時にライフを差し引かないように、通常の衝突コードを変更する必要があることを忘れないでください！
 
 Each example project in the Introduction allows you to look at the code, get ideas, and see how they work.
 
-以下の「小惑星を避ける」プロジェクトには、これらのすべての機能があります。
+The "Dodge Asteroids" project below has all of these features:
 
 **Dodge asteroids**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -42,6 +42,6 @@ Each example project in the Introduction allows you to look at the code, get ide
 
 You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
-Raspberry Pi Foundationの [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}のコミュニティメンバーが作った「衝突しないで」プロジェクトをいくつか見てみてください。
+Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
 
 --- save ---
