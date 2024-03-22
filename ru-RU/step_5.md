@@ -158,7 +158,7 @@ message = 'Score: ' + str(score)
 
 --- /task ---
 
-### Конец игры!
+### Game over!
 
 When a player has collided with an obstacle, the game should stop moving and their score should stop increasing.
 
