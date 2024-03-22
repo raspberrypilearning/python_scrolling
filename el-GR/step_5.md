@@ -21,7 +21,7 @@
 
 --- code ---
 ---
-language: python filename: main.py
+language: python filename: main.py line_numbers: true line_number_start: 6
 line_highlights: 7
 ---
 
@@ -44,7 +44,7 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles():
+def draw_obstacles(): global level  # Use the global level
 
     if frame_count % height == height - 1 and level < 5:
         level += 1
@@ -300,13 +300,13 @@ line_numbers: false
 --- /code ---
 
 If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
-  - Επιβράδυνε το παιχνίδι χρησιμοποιώντας `frame_rate()` στη συνάρτηση `setup()` για να σου δώσει περισσότερο χρόνο για να μετρήσεις
+  - Slow the game down by using `frame_rate = 10` in your call to `run()` to give you more time to count:
 
 ```python
 run(frame_rate = 10)
 ```
 
-language: python filename: main.py — draw_obstacles()
+You can alter the speed of the game by changing `10` to a higher or lower value.
 
   - Change the seed you're using for your random numbers. It's unlikely, but it is possible that some obstacles are randomly appearing directly on top of each other
   - Add a `print()` to the `for` loop in `draw_obstacles()` that prints out the value of `i` in each pass of the loop, so you can verify whether it's running the number of times it should
