@@ -27,7 +27,7 @@ language: python filename: main.py - draw_obstacles() line_numbers: false line_n
 line_highlights: 4
 ---
 
-def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Αντικατάστησέ το με το εμπόδιό σου
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -36,11 +36,10 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #�
 --- code ---
 ---
 language: python filename: main.py - draw() line_numbers: false line_number_start:
-filename: main.py - draw()
+line_highlights: 5
 ---
 
-def draw(): safe = color(200, 100, 0) #Πρόσθεσε το χρώμα του θέματός σου background(safe)  
-draw_obstacles() #Πριν σχεδιάσεις τον παίκτη draw_player()
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe) draw_obstacles()  # Before drawing the player draw_player()
 
 --- /code ---
 
@@ -58,17 +57,17 @@ draw_obstacles() #Πριν σχεδιάσεις τον παίκτη draw_player(
 title: Χρησιμοποίησε την αρχική εικόνα
 ---
 
-Κάνε κλικ στο εικονίδιο **View and Add Images**.
+Images included in the starter project will be shown in the `Image gallery`.
 
-![Το εικονίδιο της εικόνας στην επάνω δεξιά γωνία της περιοχής κώδικα.](images/starter-images.png)
+![The Image gallery displaying the included images.](images/starter-images.png)
 
-Οι εικόνες που περιλαμβάνονται στο αρχικό έργο θα εμφανίζονται στη λίστα `Image Library`.
+Make a note of the name of the image you want to use.
 
 Load the image into the `setup()` function
 
 --- code ---
 ---
-Φόρτωσε την εικόνα στη συνάρτηση `setup()`.
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 12
 ---
 
@@ -99,7 +98,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 title: Χρησιμοποίησε χαρακτήρες emoji
 ---
 
-image(obstacle, ob_x, ob_y, 30, 30) #Αλλαγή μεγέθους για να ταιριάζει με το θέμα σου
+You can use emoji characters in the p5 `text()` function to represent your obstacles.
 
 Here's an example:
 
@@ -109,7 +108,7 @@ language: python
 filename: main.py - setup()
 ---
 
-Μπορείς να χρησιμοποιήσεις χαρακτήρες emoji στη συνάρτηση p5 `text()` για να αναπαραστήσεις τα εμπόδιά σου.
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -230,7 +229,7 @@ Testing your program has the potential to induce seizures for people with photos
 - Βεβαιώσου ότι έχεις προσθέσει τη γραμμή κώδικα `seed()` για να βεβαιωθείς ότι τα εμπόδιά σου δεν χοροπηδάνε
 - Ζήτησε από κάποιον να το εκτελέσει για σένα
 - Προχώρησε και ολοκλήρωσε το έργο, ζητώντας από κάποιον να εκτελέσει το έργο για σένα, ώστε να μπορείς να κάνεις εντοπισμό σφαλμάτων
-- Άλλαξε τον ρυθμό καρέ πριν εκτελέσεις το πρόγραμμά σου προσθέτοντας `frame_rate(1)` στην αρχή της συνάρτησης `setup()` — μπορείς να το αφαιρέσεις αφού επιβεβαιώσεις ότι δεν υπάρχει σφάλμα
+- Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
 
 ```python
 run(frame_rate = 10)
@@ -275,7 +274,7 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-Έλεγξε τη συνάρτησή σου που σχεδιάζει πολλά εμπόδια:
+def draw_obstacles(): seed(12345678)
 
     for i in range(6):  
         ob_x = randint(0, height)
@@ -292,7 +291,7 @@ filename: main.py — draw_obstacles()
 title: Τα εμπόδια αλλάζουν θέση κάθε φορά που σχεδιάζεται ένα καρέ
 ---
 
-def draw_obstacles():
+Make sure that you have used `seed()` inside the function that draws multiple obstacles.
 
 --- /collapse ---
 
