@@ -7,16 +7,16 @@ Gosodwch thema eich gêm a chreu cymeriad chwarae sy'n dilyn pwyntydd y llygoden
 </div>
 <div>
 
-![Delwedd o grwban maint 100x100 yn erbyn cefndir glas gyda maint sgrin o 400x400.](images/theme-turtle.png){:width="300px"}
+![Image of cartoon turtle viewed from above set against a blue background.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
 Beth yw thema eich gêm? Here are some ideas:
-- Camp neu hobi
-- Ffilm, sioe deledu neu gêm
-- Gwyddoniaeth neu fyd natur
-- Neu unrhyw beth arall!
+- Sports
+- Hobbies
+- Science
+- Nature
 
 --- task ---
 
@@ -32,9 +32,8 @@ If you have a Raspberry Pi account, you can click on the **Save** button to save
 
 --- code ---
 ---
-def setup():    
-size(400, 400)
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
+line_highlights: 10
 ---
 
 def setup(): size(400, 400)
@@ -45,16 +44,14 @@ def setup(): size(400, 400)
 
 --- task ---
 
-Dyma'r lliw mae'n ddiogel i'r chwaraewr fod arno a byddwch chi'n defnyddio'r newidyn hwn eto nes 'mlaen.
+Create a variable called `safe` to store the background colour based on the theme you want for your game.
 
 This is the colour that it is safe for the player to be on and you will use this variable again later.
 
 --- code ---
 ---
-def draw():    
-diogel = color(200, 100, 0) #Ychwanegwch liw eich thema   
-background(diogel)
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 13
+line_highlights: 14, 15, 16
 ---
 
 def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
@@ -77,15 +74,14 @@ The player will appear at a fixed `y` position and same `x` position as the mous
 
 --- task ---
 
-Diffiniwch swyddogaeth `llunio_chwaraewr()` a chreu safle `chwaraewr_y` ar gyfer safle `y` sefydlog y chwaraewr:
+It's a good idea to organise the code for drawing the player character into a function.
 
 Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
 
 --- code ---
 ---
-def llunio_chwaraewr():    
-llunio_chwaraewr_y = int(height * 0.8) #Lleoli tua gwaelod y sgrin
-filename: main.py - llunio_chwaraewr()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 12
+line_highlights: 12-14
 ---
 
 def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom
@@ -96,11 +92,8 @@ Add code to `draw()` to call `draw_player()` each frame.
 
 --- code ---
 ---
-def draw():    
-diogel = color(200, 100, 0) #Y lliw o'ch dewis    
-background(diogel)    
-llunio_chwaraewr()
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 15
+line_highlights: 19
 ---
 
 def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
@@ -129,12 +122,12 @@ Images included in the starter project will be shown in the `Image gallery`.
 
 Make a note of the name of the image you want to use.
 
-Gwnewch nodyn o enw'r ddelwedd rydych chi am ei defnyddio.
+Load the image into the `setup()` function
 
 --- code ---
 ---
 language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-filename: main.py - setup()
+line_highlights: 11-12
 ---
 
 def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
@@ -146,7 +139,7 @@ Call the `image()` and set it as global in the `draw_player()` function.
 --- code ---
 ---
 language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
-filename: main.py - llunio_chwaraewr()
+line_highlights: 16
 ---
 
 def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom image(player, mouse_x, player_y, 30, 30)
@@ -166,11 +159,11 @@ Here's an example:
 
 --- code ---
 ---
-Fe allwch chi ddefnyddio cymeriadau emoji yn y swyddogaeth p5 `text()` i ddefnyddio emoji i gynrychioli eich chwaraewr.
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
+line_highlights: 11-13
 ---
 
-Dyma enghraifft:
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -179,7 +172,7 @@ Call the `text()` and set it as global in the `draw_player()` function.
 --- code ---
 ---
 language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
-filename: main.py - llunio_chwaraewr()
+line_highlights: 16-17
 ---
 
 def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
@@ -219,7 +212,16 @@ filename: main.py - draw_player()
 
 def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 100) ellipse(mouse_x, player_y, 60, 60)
 
-    image(image_file, x_coord, y_coord, lled, uchder)
+    # Eyes
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, player_y - 10, 20, 20)
+    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, player_y - 10, 10, 10)
+    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, player_y - 12, 5, 5)
+    ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
@@ -262,7 +264,7 @@ First, check that the image is in the `Image gallery`. Then, check the filename 
 title: Mae yna ddelwedd o'r maint anghywir
 ---
 
-Yn gyntaf, gwnewch yn siŵr bod y ddelwedd yn yr `Image library`. Wedyn gwnewch yn fanwl siŵr bod enw'r ffeil yn gywir — cofiwch fod priflythrennau'n wahanol i lythrennau bach a bod atalnodi'n bwysig.
+Check the inputs that control the width and height of the image:
 
 ```python
 image(image_file, x_coord, y_coord, width, height)
@@ -275,7 +277,7 @@ image(image_file, x_coord, y_coord, width, height)
 title: Mae yna emoji o'r maint anghywir
 ---
 
-Gwiriwch y mewnbynnau sy'n rheoli lled ac uchder y ddelwedd:
+If your emoji is too big or too small, change the value in `text_size()`.
 
 --- /collapse ---
 
