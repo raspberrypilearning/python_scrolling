@@ -1,25 +1,25 @@
-## Crie obstáculos
+## Create obstacles
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Crie obstáculos que você terá que evitar para continuar jogando.
+Create the obstacles that you will have to avoid to keep playing the game.
 </div>
 <div>
 
-![Exemplo de projeto de esqui com obstáculos de árvores](images/obstacles.png){:width="300px"}
+![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
 
 </div>
 </div>
 
-### Comece com um obstáculo
+### Start with one obstacle
 
-Você pode criar obstáculos da mesma forma que criou o seu jogador. Como os obstáculos se encaixam no seu tema?
+You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
 
-Você vai usar uma iteração `for` para fazer muitas cópias, então você só precisa fazer ou escolher um obstáculo.
+You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
 
 --- task ---
 
-Defina uma função `desenhar_obstaculos()`:
+Define a `draw_obstacles()` function:
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)  #
 
 --- /code ---
 
-Adicione o código à funcão `draw()` para chamar `desenhar_obstaculos()` em cada quadro.
+Add code to `draw()` to call `draw_obstacles()` each frame.
 
 --- code ---
 ---
@@ -47,14 +47,14 @@ def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your them
 
 --- task ---
 
-**Escolha:** Qual é a aparência do seu obstáculo? Seu obstáculo pode ser:
-+ Uma imagem fornecida no projeto inicial
-+ Um emoji 🎈 ou texto
-+ Desenhe usando uma série de formas
+**Choose:** What does your obstacle look like? Your obstacle could be:
++ An image provided in the starter project
++ An emoji 🌵 or text
++ Drawn using a series of shapes
 
 --- collapse ---
 ---
-título: Use uma imagem inicial
+title: Use a starter image
 ---
 
 Images included in the starter project will be shown in the `Image gallery`.
@@ -95,7 +95,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
 --- collapse ---
 ---
-título: Use caracteres emoji
+title: Use emoji characters
 ---
 
 You can use emoji characters in the p5 `text()` function to represent your obstacles.
@@ -144,7 +144,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 --- collapse ---
 ---
-título: Desenhe um obstáculo usando várias formas
+title: Draw an obstacle using multiple shapes
 ---
 
 ![A tree drawn with green triangles for the body and a brown rectangle for the trunk](images/tree_obstacle.png)
@@ -163,7 +163,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 # Draw a fir tree no_stroke
 
 --- /task ---
 
-### Mova o seu obstáculo
+### Get your obstacle moving
 
 --- task ---
 
@@ -185,7 +185,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count  # Increases 
 
 --- /task ---
 
-### Muitos obstáculos
+### Lots of obstacles
 
 You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
 
@@ -222,13 +222,13 @@ Useful information:
 
 --- collapse ---
 ---
-título: Aviso de epilepsia
+title: Epilepsy warning
 ---
 
 Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
-- Certifique-se de ter adicionado a linha de código `seed()` para garantir que seus obstáculos não pulem
-- Peça a alguém para executá-lo para você
-- Siga em frente e conclua o projeto, pedindo a alguém para executá-lo no final para que você possa depurar
+- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
+- Ask somebody to run it for you
+- Move on and complete the project, asking someone to run the project for you at the end so you can debug
 - Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
 
 ```python
@@ -244,9 +244,9 @@ You can alter the speed of the game by changing `10` to a higher or lower value.
 
 Change your code until you are happy with the obstacles you have. You can:
 
-+ Mude a semente para obter obstáculos em diferentes posições iniciais
-+ Altere o número de vezes para repetir a iteração para obter um número diferente de obstáculos
-+ Ajuste o tamanho dos obstáculos
++ Change the seed to get obstacles in different starting positions
++ Change the number of times to loop repeats to get a different number of obstacles
++ Adjust the size of the obstacles
 
 **Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
 
@@ -258,13 +258,13 @@ Change your code until you are happy with the obstacles you have. You can:
 
 --- collapse ---
 ---
-título: Apenas um obstáculo está sendo desenhado
+title: Only one obstacle is being drawn
 ---
 
 Check your function that draws multiple obstacles:
- + Certifique-se de usar uma iteração `for` para chamar a função de desenho de obstáculo mais de uma vez
- + Certifique-se de usar `randint()` para alterar as coordenadas (x, y) que está passando para a função de desenho de obstáculo
- + Verifique se você usou `ob_x` e `ob_y` como coordenadas para o seu obstáculo
+ + Make sure it uses a `for` loop to call the obstacle drawing function more than once
+ + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
+ + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
 
 For example:
 
@@ -288,7 +288,7 @@ def draw_obstacles(): seed(12345678)
 
 --- collapse ---
 ---
-título: Os obstáculos mudam de posição toda vez que um quadro é desenhado
+title: The obstacles are changing position every time a frame is drawn
 ---
 
 Make sure that you have used `seed()` inside the function that draws multiple obstacles.
