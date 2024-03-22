@@ -1,29 +1,29 @@
-## Create obstacles
+## Tworzenie przeszkód
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Create the obstacles that you will have to avoid to keep playing the game.
+Stwórz przeszkody, których będziesz musiał unikać, aby kontynuować grę.
 </div>
 <div>
 
-![Example skiing project with tree obstacles](images/obstacles.png){:width="300px"}
+![przykład projektu narciarskiego z przeszkodami drzew](images/objects.png){:width="300px"}
 
 </div>
 </div>
 
-### Start with one obstacle
+### Zacznij od jednej przeszkody
 
-You can make obstacles in the same ways that you made your player. How do the obstacles fit with your theme?
+Możesz tworzyć przeszkody w taki sam sposób, w jaki stworzyłeś swojego gracza. Jak przeszkody pasują do Twojego motywu?
 
-You are going to use a `for` loop to make lots of copies so you only need to make or choose one obstacle.
+Użyjesz pętli ` `, aby wykonać wiele kopii, więc musisz tylko wykonać lub wybrać jedną przeszkodę.
 
 --- task ---
 
-Define a `draw_obstacles()` function:
+Zdefiniuj funkcję ` draw_objects()`:
 
 --- code ---
 ---
-language: python filename: main.py - draw_obstacles() line_numbers: false line_number_start:
+język: python nazwa pliku: main.py - draw_objects() line_numbers: false line_number_start:
 line_highlights: 4
 ---
 
@@ -31,7 +31,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)  #
 
 --- /code ---
 
-Add code to `draw()` to call `draw_obstacles()` each frame.
+Dodaj kod do ` draw()`, aby wywołać ` draw_objects()` każdą klatkę.
 
 --- code ---
 ---
@@ -47,23 +47,23 @@ def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your them
 
 --- task ---
 
-**Choose:** What does your obstacle look like? Your obstacle could be:
-+ An image provided in the starter project
-+ An emoji 🌵 or text
-+ Drawn using a series of shapes
+** Wybierz:** jak wygląda Twoja przeszkoda? Twoja przeszkoda może być:
++ Obraz dostarczony w projekcie startowym
++ Emoji? lub tekst
++ Narysowany przy użyciu serii kształtów
 
 --- collapse ---
 ---
-title: Use a starter image
+Title: Użyj obrazu startowego
 ---
 
-Images included in the starter project will be shown in the `Image gallery`.
+Obrazy zawarte w projekcie startowym zostaną pokazane w galerii obrazów `.`.
 
-![The Image gallery displaying the included images.](images/starter-images.png)
+![Galeria obrazów przedstawiająca dołączone obrazy.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Zanotuj nazwę obrazu, którego chcesz użyć.
 
-Load the image into the `setup()` function
+Załaduj obraz do funkcji ` setup()`
 
 --- code ---
 ---
@@ -75,7 +75,7 @@ def setup(): size(400, 400) global player player = load_image('skiing.png')  # L
 
 --- /code ---
 
-Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function, call `obstacle` as a global variable and use it in the call to `image()`.
+Znajdź linię `# Zachowaj to, aby uruchomić swój kod `. Przed tą linią zdefiniuj nową funkcję ` draw_obstancts()`, wywołaj ` ` jako zmienną globalną i użyj jej w wywołaniu do ` image()`.
 
 --- code ---
 ---
@@ -95,12 +95,12 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
 --- collapse ---
 ---
-title: Use emoji characters
+Title: Użyj znaków emoji
 ---
 
-You can use emoji characters in the p5 `text()` function to represent your obstacles.
+Możesz użyć znaków emoji w funkcji p5 ` text()`, aby reprezentować swoje przeszkody.
 
-Here's an example:
+Oto przykład:
 
 --- code ---
 ---
@@ -112,7 +112,7 @@ def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text
 
 --- /code ---
 
-Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function.
+Znajdź linię `# Zachowaj to, aby uruchomić swój kod `. Przed tą linią zdefiniuj nową funkcję ` draw_objects()` .
 
 --- code ---
 ---
@@ -140,14 +140,14 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex obstacle.
+** Wskazówka:** Możesz użyć kilku prostych kształtów w tej samej funkcji, aby stworzyć bardziej złożoną przeszkodę.
 
 --- collapse ---
 ---
-title: Draw an obstacle using multiple shapes
+Title: Narysuj przeszkodę za pomocą wielu kształtów
 ---
 
-![A tree drawn with green triangles for the body and a brown rectangle for the trunk](images/tree_obstacle.png)
+![Drzewo narysowane z zielonymi trójkątami dla ciała i brązowym prostokątem dla pnia](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -163,15 +163,15 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 # Draw a fir tree no_stroke
 
 --- /task ---
 
-### Get your obstacle moving
+### Spraw, aby Twoja przeszkoda się poruszyła
 
 --- task ---
 
-Now add code to increase the `y` position of the obstacle each frame, and have it wrap around when it gets to the bottom to create the effect of another obstacle.
+Teraz dodaj kod, aby zwiększyć pozycję przeszkody `.` każdej klatce i sprawić, aby zawinęła, gdy dotrze do dołu, aby stworzyć efekt innej przeszkody.
 
-The p5 `frame_count` variable starts counting the frames when you click run.
+Zmienna p5 ` frame_` zaczyna odliczać ramki po kliknięciu przycisku uruchom.
 
-`ob_y %= height` sets the `y` position to the remainder when divided by `height`. With a `height` of '400', this will turn `401` into `1` so when the obstacles goes off the bottom of the screen, it reappears at the top.
+` ob_y %= wysokość ` ustawia pozycję `.` na pozostałą po podzieleniu przez ` `. Z ` ` '400' spowoduje to zmianę ` ` w ` `, więc gdy przeszkody zsuną się na dole ekranu, pojawia się ponownie u góry.
 
 --- code ---
 ---
@@ -185,16 +185,16 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count  # Increases 
 
 --- /task ---
 
-### Lots of obstacles
+### Wiele przeszkód
 
-You could draw lots of copies of your obstacle at different starting locations but that's quite a lot of work. Let's use a shortcut.
+Możesz narysować wiele kopii swojej przeszkody w różnych miejscach startowych, ale to całkiem sporo pracy. Użyjmy skrótu.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedural generation**</span> is used in the creation of game worlds, obstacles, and movie scenes to create randomness but with certain rules applied. A <span style="color: #0faeb0">seed</span> means you can generate the same results every time you use the same seed.</p>
+<span style="color: #0faeb0">**Generacja proceduralna**</span> jest używany do tworzenia światów gry, przeszkód i scen filmowych w celu stworzenia losowości, ale z zastosowaniem określonych zasad. <span style="color: #0faeb0"> seed </span> oznacza, że możesz wygenerować te same wyniki za każdym razem, gdy używasz tego samego źródła.</p>
 
 --- task ---
 
-This code uses a `for` loop with `randint()` to choose obstacle positions for you. Calling the random `seed()` function first means that you will always get the same random numbers. This means that the obstacles won't jump around every frame and you can change the seed until you get one that positions the obstacles fairly.
+Ten kod używa pętli ` ` z ` randint()` do wyboru pozycji przeszkód dla Ciebie. Wywołanie funkcji losowej ` seed()` oznacza, że zawsze otrzymasz te same losowe liczby. Oznacza to, że przeszkody nie skaczą po każdej klatce i możesz zmienić ziarno, dopóki nie otrzymasz takiego, które pozycjonuje przeszkody sprawiedliwie.
 
 --- code ---
 ---
@@ -212,7 +212,7 @@ def draw_obstacles(): seed(12345678)  # Any number is fine
 
 --- /code ---
 
-Useful information:
+Przydatne informacje:
 
 [[[using-seed-in-python]]]
 
@@ -222,51 +222,51 @@ Useful information:
 
 --- collapse ---
 ---
-title: Epilepsy warning
+Title: Ostrzeżenie o padaczce
 ---
 
-Testing your program has the potential to induce seizures for people with photosensitive epilepsy. If you have photosensitive epilepsy or feel you may be susceptible to a seizure, do not run your program. Instead, you can:
-- Make sure you have added the `seed()` line of code to make sure your obstacles don't jump around
-- Ask somebody to run it for you
-- Move on and complete the project, asking someone to run the project for you at the end so you can debug
-- Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
+Testowanie twojego programu może wywołać drgawki u osób z padaczką światłoczułą. Jeśli masz padaczkę światłoczułą lub czujesz, że możesz być podatny na atak, nie uruchamiaj programu. Zamiast tego możesz:
+- Upewnij się, że dodałeś linię kodu ` seed()`, aby upewnić się, że przeszkody nie skaczą
+- Poproś kogoś, aby uruchomił go za Ciebie
+- Przejdź do i ukończ projekt, prosząc kogoś o uruchomienie projektu za Ciebie na końcu, abyś mógł debugować
+- Zwolnij grę, używając ` frame_rate = 10 ` w swoim połączeniu z ` run()` w następujący sposób:
 
 ```python
 run(frame_rate = 10)
 ```
-You can alter the speed of the game by changing `10` to a higher or lower value.
+Możesz zmienić prędkość gry, zmieniając ` ` na wyższą lub niższą wartość.
 
 --- /collapse ---
 
 --- task ---
 
-**Test:** Run your program and you should see multiple objects on the screen, wrapping around when they get to the bottom.
+Test **:** Uruchom swój program i powinieneś zobaczyć wiele obiektów na ekranie, owijając się, gdy dotrą do dołu.
 
-Change your code until you are happy with the obstacles you have. You can:
+Zmień swój kod, aż będziesz zadowolony z przeszkód, które masz. Możesz:
 
-+ Change the seed to get obstacles in different starting positions
-+ Change the number of times to loop repeats to get a different number of obstacles
-+ Adjust the size of the obstacles
++ Zmień ziarno, aby uzyskać przeszkody w różnych pozycjach startowych
++ Zmień liczbę powtórzeń pętli, aby uzyskać inną liczbę przeszkód
++ Dostosuj rozmiar przeszkód
 
-**Tip:** Make sure it is possible to avoid your obstacles but that there is no easy path through your game.
+** Wskazówka:** Upewnij się, że możliwe jest uniknięcie przeszkód, ale nie ma łatwej ścieżki przez twoją grę.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+** Debug:** Możesz znaleźć kilka błędów w swoim projekcie, które musisz naprawić. Oto kilka typowych robaków.
 
 --- collapse ---
 ---
-title: Only one obstacle is being drawn
+Title: Rysowana jest tylko jedna przeszkoda
 ---
 
-Check your function that draws multiple obstacles:
- + Make sure it uses a `for` loop to call the obstacle drawing function more than once
- + Make sure it uses `randint()` to change the (x, y) coordinates it is passing to the obstacle drawing function
- + Check that you have used `ob_x` and `ob_y` as the coordinates for your obstacle
+Sprawdź swoją funkcję, która rysuje wiele przeszkód:
+ + Upewnij się, że używa pętli ` ` do wywołania funkcji rysowania przeszkód więcej niż raz
+ + Upewnij się, że używa ` randint()` do zmiany współrzędnych (x, y), które przechodzi do funkcji rysowania przeszkód
+ + Sprawdź, czy użyłeś współrzędnych ` ob_` i ` ob_` jako współrzędnych przeszkody
 
-For example:
+Na przykład:
 
 --- code ---
 ---
@@ -288,16 +288,16 @@ def draw_obstacles(): seed(12345678)
 
 --- collapse ---
 ---
-title: The obstacles are changing position every time a frame is drawn
+Title: Przeszkody zmieniają pozycję za każdym razem, gdy ramka jest rysowana
 ---
 
-Make sure that you have used `seed()` inside the function that draws multiple obstacles.
+Upewnij się, że użyłeś ` seed()` wewnątrz funkcji, która rysuje wiele przeszkód.
 
 --- /collapse ---
 
 --- /task ---
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-Programmers use lots of neat tricks like using the `%` operator to make objects wrap around the screen and the `seed()` function to generate the same random numbers. The more coding you do, the more neat tricks you will learn.</p>
+Programiści używają wielu zgrabnych sztuczek, takich jak użycie operatora "%", aby obiekty owijały się po ekranie, a funkcja "seed()" generująca te same losowe liczby. Im więcej zrobisz kodowanie, tym bardziej schludne sztuczki się nauczysz.</p>
 
 --- save ---
