@@ -31,7 +31,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-    collision = get(mouse_x, joueur_y)
+    collide = get(mouse_x, player_y).hex
 
 --- /code ---
 
@@ -62,17 +62,17 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Contrôle la taille de l'emoji text_align(CENTER, TOP) #Position autour du centre
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
 --- code ---
 ---
 language: python
-filename: main.py - dessine_joueur()
+filename: main.py - draw_player()
 ---
 
-def dessine_joueur(): if collision == sur: #sur l'arrière-plan text('🎈', mouse_x, joueur_y) else: #collision text('💥', mouse_x, joueur_y)
+def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x, player_y) else:  # Collided text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -116,33 +116,8 @@ L'impression de la couleur du pixel dont tu vérifies une collision peut être u
 Tu peux également imprimer un cercle autour du point que tu vérifies et ajuster le point que tu vérifies si tu dois :
 
 ```python
-    def dessine_joueur():
-
-  joueur_y = int(height * 0.8)
-  #Utile pour le débogage
-  #Dessiner des cercles autour des pixels pour vérifier les collisions
-
-  no_fill()
-  ellipse(mouse_x, joueur_y, 10, 10) #Dessiner le point de collision
-  ellipse(mouse_x, joueur_y + 40, 10, 10)
-  ellipse(mouse_x - 12, joueur_y + 20, 10, 10)
-  ellipse(mouse_x + 12, joueur_y + 20, 10, 10)
-
-  collision = get(mouse_x, joueur_y )
-  collision2 = get(mouse_x - 12, joueur_y + 20)
-  collision3 = get(mouse_x + 12, joueur_y + 20)
-  collision4 = get(mouse_x, joueur_y + 40)
-
-  if mouse_x < width: #À gauche de l'écran
-    collision2 = sur
-
-  if mouse_x > width: #à droite de l'écran
-    collision3 = sur
-
-  if collision == sur and collision2 == sur and collision3 == sur and collision4 == sur:
-    text('🎈' , mouse_x, joueur_y)
-  else :
-    text('💥', mouse_x, joueur_y)
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
 ```
 
 --- /collapse ---
@@ -159,8 +134,33 @@ title: Détection de collision avec plusieurs pixels
 ---
 
 ```python
-no_fill()
-  ellipse(mouse_x, joueur_y, 10, 10) #Dessiner un point de collision
+def draw_player():
+
+    player_y = int(height * 0.8)
+    # Useful for debugging
+    # Draw circles around the pixels to check for collisions
+
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
+    ellipse(mouse_x, player_y + 40, 10, 10)
+    ellipse(mouse_x - 12, player_y + 20, 10, 10)
+    ellipse(mouse_x + 12, player_y + 20, 10, 10)
+
+    collide = get(mouse_x, player_y).hex
+    collide2 = get(mouse_x - 12, player_y + 20).hex
+    collide3 = get(mouse_x + 12, player_y + 20).hex
+    collide4 = get(mouse_x, player_y + 40).hex
+
+    if mouse_x < width:  # Off the left of the screen
+        collide2 = safe.hex
+
+    if mouse_x > width:  # Off the right of the screen
+        collide3 = safe.hex
+
+    if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
+        text('🎈', mouse_x, player_y)
+    else:
+        text('💥', mouse_x, player_y)
 ```
 
 --- /collapse ---
