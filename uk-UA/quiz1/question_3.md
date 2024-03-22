@@ -1,43 +1,43 @@
 --- question ---
 ---
-legend: Питання 3 з 3
+legend: Question 3 of 3
 ---
 
-Ти зробив(-ла) гру, яка тобі дуже подобається, та поділився(-лася) нею з іншими. Один з гравців ознайомився з нею та поділився вдумливим відгуком з деякими змінами, які він хотів би бачити.
+You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
 
-Як найкраще відреагувати на ці пропозиції?
+What would be the best way to react to their suggestions?
 
 --- choices ---
 
-- ( ) Негайно внести всі зміни, які були запропоновані.
+- ( ) Immediately make all the changes they have suggested.
 
   --- feedback ---
 
-Отримувати відгуки - це чудово, але не варто змінювати свою гру лише для того, щоб догодити одному гравцеві, можливо, інші гравці дадуть інший відгук.
+It's great to get feedback, but you shouldn't change your game just to keep one player happy, maybe other players might give different feedback.
 
   --- /feedback ---
 
-- ( ) Ігнорувати пропозиції, тому, що ти знаєш, як краще.
+- ( ) Ignore the suggestions because you know best.
 
   --- feedback ---
 
-Не зовсім так. Зазвичай, варто прислухатися до відгуків користувачів щодо твоєї роботи. Якщо відгук конструктивний - варто його врахувати.
+Not quite. It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
 
   --- /feedback ---
 
-- (x) Врахувати його відгук разом з іншими відгуками та вирішити, на що варто звернути увагу, щоб покращити свою гру.
+- (x) Consider their feedback with other feedback and decide how to improve your game.
 
   --- feedback ---
 
-Правильно! Ти маєш розглядати будь-який отриманий відгук та завжди намагатися отримати декілька точок зору та приймати рішення, щоб покращити гру для всіх гравців.
+Correct! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
 
   --- /feedback ---
 
-- ( ) Почуватися дуже засмучено через те, що гравець не вважає мою гру ідеальною.
+- ( ) Feel really sad that the player didn't think your game was perfect.
 
   --- feedback ---
 
-Ні! Не варто ображатися, якщо хтось запропонує покращити твою гру. Конструктивний відгук насправді є дуже корисним та може допомогти покращити твою гру. Тобі повинно бути приємно, оскільки твоя гра зацікавила гравця настільки, що він залишив свій відгук.
+No! You shouldn't feel sad if someone suggests improvements to your game. Constructive feedback is really useful and can help improve your game. You should be pleased that they were interested enough in your game to give feedback.
 
   --- /feedback ---
 
