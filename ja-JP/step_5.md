@@ -44,11 +44,11 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles():
+def draw_obstacles(): global level  # Use the global level
 
-    if frame_count % height == height - 1 and level &#060; 5:
+    if frame_count % height == height - 1 and level < 5:
         level += 1
-        print('レベル', level, ' になりました')
+        print('You have reached level', level)
 
 --- /code ---
 
@@ -56,18 +56,18 @@ def draw_obstacles():
 
 --- task ---
 
-難易度を上げる方法は主に2つあります。 ゲームの動きを速くすることと、障害物の数を増やすことです。
+The two main options for increasing difficulty are to make the game move faster, and to increase the number of obstacles.
 
 --- collapse ---
 ---
 title: ゲームをスピードアップする
 ---
 
-ゲームのスピードは、障害物がプレイヤーに向かってどれくらいのスピードで移動しているように見えるかによって決まります。 このコードでは、障害物を出現させるときに障害物の `y` 座標に `frame_count * level` を加えることで障害物のスピードを上げています。
+The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
 
-このコードでは、フレームごとに障害物を1ピクセルずつ動かすのではなく、`level` ピクセルずつ効果的に動かしています。
+Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead.
 
-コードを見ると、毎回`level` ピクセル以上増加するように思われます。 たとえば、 `level` が増加する直前の時点では、 `frame_count` は `799` です。 なぜなら `level` は、 `frame_count` が `height`（ `400` ピクセルに設定）の倍数ちょうどになる1フレーム前に増加するからです。 そして、 `799 * 3`は`799 * 2`よりも著しく大きいです。 ですが、 `frame_count` 全体に大きな数値を掛けて作られたピクセル値のうちheightを超える部分は、 `ob_y %= height`によって隠されてしまいます。 これにより、ステップごとに `level` ピクセル分だけ増えていくのです。
+Looking at the code, you might expect the speed to increase by more than `level` pixels. For example, at the point just before your `level` increases, the `frame_count` is `799` — as the `level` increases one frame before the `frame_count` is an even multiple of `height` (set at `400` pixels) — and `799 * 3` is notably bigger than `799 * 2`. However, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are hidden by `ob_y %= height`. This leaves only the `level` extra pixels in each step.
 
 --- code ---
 ---
@@ -78,7 +78,7 @@ line_numbers: false
     for i in range(6):
         ob_x = randint(0, height)
         ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height #下に外れたら上から出てくるように
+        ob_y %= height  # Wrap around
         text('🌵', ob_x, ob_y)
 
 --- /code ---
@@ -90,9 +90,9 @@ line_numbers: false
 title: 障害物を追加する
 ---
 
-障害物を追加するには、障害物を作っている `for` ループの実行回数を増やすだけです。 これは、 `range()` 関数に渡す数値を `level`だけ増やすことで行えます。
+Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
 
-**ヒント：**もちろん、ゲームを難しくしたければ、いつでも `level* 2`、またはそれ以上の何倍でも使うことができます。
+**Tip:** Of course, you can always use `level * 2`, or even larger multiples, if you want to make your game harder.
 
 --- /collapse ---
 
@@ -100,11 +100,11 @@ title: 障害物を追加する
 
 ### スコアを付ける
 
-プレイヤーが障害物にぶつからずに長くプレイしているのは、ゲームを上手にプレイしているということです。 スコアを付けると、どれだけうまくやっているかを目で見ることができます。
+The longer a player lasts without colliding with an obstacle, the better they're playing your game. Adding a score will let them see how well they're doing.
 
 --- task ---
 
-プレーヤーのスコアを見続けるために、`score` グローバル変数を作成します。 得点なしから始めるよう、その変数に`0` を設定します。
+Create a global `score` variable to track the player's score. Set it to `0` so players start a new game without any points.
 
 --- code ---
 ---
@@ -121,9 +121,9 @@ score = 0
 
 --- task ---
 
-`draw_player()`で衝突をチェックするときにスコアを上げることで、障害物とぶつからなかったフレームごとにプレーヤーのスコアを上げることができます。
+You can increase your player's score for every frame where they have not collided with an obstacle by increasing their score when you check for collision in `draw_player()`.
 
-**選択：** フレームごとのポイントは自由に決めることができますが、プレーヤーのスコアを `level` ポイント増やすようにすれば、より高い難しいレベルゲームを続けることに対するご褒美になります。
+**Choose:** You can decide how many points each frame is worth, but increasing the player's score by `level` rewards players who can survive at higher difficulty levels.
 
 --- code ---
 ---
@@ -131,10 +131,12 @@ language: python
 filename: main.py — draw_player()
 ---
 
-    if collide == safe:
+    global score
+    
+    if collide == safe.hex:
         text('🎈', mouse_x, player_y)
         score += level
-      else:
+    else:
         text('💥', mouse_x, player_y)
 
 --- /code ---
@@ -143,16 +145,16 @@ filename: main.py — draw_player()
 
 --- task ---
 
-スコアはプレイヤーが見られるようにしなければなりません。 すごい速さでスコアが増えていくので、 `print()` を使ってもうまく行きません。 その代わりに、`draw()` 関数内でp5の `text()` 関数を使って、ゲーム画面上にテキストとして表示します。
+Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Use the p5 `text()` function inside your `draw()` function, to display it as text on the game screen instead.
 
 [[[processing-python-text]]]
 
-「スコア」や「得点」のような見出しを付けたい場合は、 `+` 演算子を使用して2つ以上の文字列をつなげることができます。 `score` 変数には数値が入っているため、別の文字列とつなぎ合わせる前に、文字列に変換しておく必要があります。 それには、`str()`を使います。
+You can use the `+` operator to combine two or more strings if you want to give a heading like 'score' or 'points'. Because `score` is a number, you will need to convert it to a string before you can join it with another string. You can do this with `str()`:
 
 ```python
 message = 'Score: ' + str(score)
 ```
-**ヒント：** `str()` は 'string'の略です—プログラマーはこのように文字を飛ばすことが多いです。
+**Tip:** `str()` is short for 'string' — programmers often remove letters like this, so they don't have to type as much!
 
 --- /task ---
 
@@ -162,29 +164,29 @@ When a player has collided with an obstacle, the game should stop moving and the
 
 --- task ---
 
-`level` 変数を使って、「ゲームオーバー」を示すようにします。 変数の値を0（これは、他の方法では決して到達しない値です）に設定します。 これは、衝突検出コードの `else` ステップで行います。
+You can use the `level` variable to signal 'Game over' by setting it to 0 — a value it will never reach any other way. Do this in the `else` step of your collision detection code.
 
 --- /task ---
 
 --- task ---
 
-`draw()` 内に `if` ステートメントを作成します。 このステートメントで、 `background()`、`draw_obstacles()`、`draw_player()` などのゲームを進める関数を呼び出す前に `level > 0` かどうかをテストします。 これらの関数が呼び出されない場合、プログラムがまだ動き続けていても、ゲームが全て終わったように見えます。
+Create an `if` statement in `draw()` that tests whether `level > 0` before calling any of the functions — like `background()`, `draw_obstacles()`, and `draw_player()` — that update the game. Because these functions are not called, the entire game seems to end, even though your program is still running.
 
 --- /task ---
 
 --- task ---
 
-**デバッグ：** プロジェクトに修正が必要なバグが見つかる場合があります。 一般的なバグは次のとおりです。
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
 title: スコアが表示されない
 ---
 
-`draw()` 関数の適切な場所に、プレーヤーのスコアを表示させる `text()` 関数が置かれていることと、正しい値を渡していることを確認してください。
+Make sure that you've included the `text()` function that draws the player's score at the appropriate point in your `draw()` function, and that you've passed it the correct values:
 
 ```python
-text('表示するテキスト', x, y)
+text('Text to display', x, y)`
 ```
 
 It should look something like this:
@@ -195,7 +197,7 @@ language: python
 filename: main.py — draw()
 ---
 
-    if level &#062; 0:
+    if level > 0:
         background(safe) 
         fill(255)
         text('Score: ' + str(score), width/2, 20)
@@ -211,9 +213,9 @@ filename: main.py — draw()
 title: 障害物にぶつかってもゲームが終わらない
 ---
 
-ゲームが衝突をまったく検出していないと思われる場合は、最初に前のステップの「プレイヤーが障害物に達しても衝突が起きない」のデバッグ手順を試してください。
+If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
 
-最後に、これらの両方が正しく動作している場合、衝突が発生したときにゲームが `level = 0` を正しく設定していない可能性があります。 例えばこのようにします:
+If your game is correctly detecting collisions, then check that you have properly indented the code that draws your game inside the `if level > 0` statement, to make sure it only runs if that statement is true. For example:
 
 --- code ---
 ---
@@ -221,8 +223,8 @@ language: python
 filename: main.py — draw()
 ---
 
-    if level &#062; 0:
-        background(safe) 
+    if level > 0:
+        background(safe)
         fill(255)
         text('Score: ' + str(score), width/2, 20)
         draw_obstacles()
@@ -230,7 +232,7 @@ filename: main.py — draw()
 
 --- /code ---
 
-ゲームが衝突を正しく検出している場合は、`if level > 0` ステートメントでゲーム画面を描くコードが適切にインデントされていることを確認してください。 例えばこのようにします:
+Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. For example:
 
 --- code ---
 ---
@@ -238,10 +240,10 @@ language: python
 filename: main.py — draw_player()
 ---
 
-    if collide == safe:
+    if collide == safe.hex:
         text('🎈', mouse_x, player_y)
         score += level
-      else:
+    else:
         text('💥', mouse_x, player_y)
         level = 0
 
@@ -254,9 +256,9 @@ filename: main.py — draw_player()
 title: ゲームが速くならない
 ---
 
-まず、 `level` が正しく増えていることを確認します。 レベルが上がるたびに、メッセージが表示されます。 表示されない場合は、メッセージを表示するためのコードと、レベルを上げるためのコードの両方を確認してください。
+First, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
 
-レベルが正しく増えている場合は、 `draw_obstacles()` 関数を確認してください。 特に、`ob_y = randint(0, height) + (frame_count * level)`があることを確認してください。 こんな感じです。
+If level is increasing correctly, check your `draw_obstacles()` function. In particular, check that you have `ob_y = randint(0, height) + (frame_count * level)`. It should look something like this:
 
 --- code ---
 ---
@@ -267,7 +269,7 @@ line_numbers: false
     for i in range(6 + level):
         ob_x = randint(0, height)
         ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height #下に外れたら上から出てくるように
+        ob_y %= height  # Wrap around
         text('🌵', ob_x, ob_y)
 
 --- /code ---
@@ -279,9 +281,9 @@ line_numbers: false
 title: 新しい障害物が出てこない
 ---
 
-これが発生する理由はいくつかあります。 そして、そうではないのに、そのように見える理由もいくつかあります。 まず、新しい 障害物は`level`に基づいて追加されるので、 `level` が正しく増えていることを確認します。 レベルが上がるたびに、メッセージが表示されます。 表示されない場合は、メッセージを表示するためのコードと、レベルを上げるためのコードの両方を確認してください。
+There are a few reasons this could be happening. And there are some more reasons why it might appear to be happening, when it isn't. First, because new obstacles are added based on `level`, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
 
-レベルが正しく増えている場合は、 `draw_obstacles()` 関数をチェックして、障害物を描画する `for` ループの `range()` 関数で `level` が使われていることを確認します。 こんな感じです。
+If level is increasing correctly, check your `draw_obstacles()` function to ensure that you have `level` used in the `range()` function of the `for` loop that draws the obstacles. It should look something like this:
 
 --- code ---
 ---
@@ -292,13 +294,13 @@ line_numbers: false
     for i in range(6 + level):
         ob_x = randint(0, height)
         ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height #下に外れたら上から出てくるように
+        ob_y %= height  # Wrap around
         text('🌵', ob_x, ob_y)
 
 --- /code ---
 
-これらすべてのチェックを行っても、障害物の数が増えない場合は、障害物が増えているのに見えていない可能性があります。 これをテストするには、次の手順のいくつかを試す必要があります。
-  - `setup()` 関数で `frame_rate()` を使ってゲームのスピードを落とし、障害物を数える時間を増やす
+If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
+  - Slow the game down by using `frame_rate = 10` in your call to `run()` to give you more time to count:
 
 ```python
 run(frame_rate = 10)
@@ -306,9 +308,9 @@ run(frame_rate = 10)
 
 You can alter the speed of the game by changing `10` to a higher or lower value.
 
-  - 乱数に使用しているタネを変更する。 可能性は低いですが、いくつかの障害物がランダムに表示されるとき、他の障害物の上にちょうど重なり合っていることは考えられます
-  - `draw_obstacles()` の `for` ループに `print()` を追加します。 これにより、ループ1回ごとに `i` の値が表示されるため、必要回数だけ実行されているか確認できます。
-  - テストのためだけに、 `range(6 + level)` を `range(6 * level)` に変更します—増え方が大きいのですぐにわかります！
+  - Change the seed you're using for your random numbers. It's unlikely, but it is possible that some obstacles are randomly appearing directly on top of each other
+  - Add a `print()` to the `for` loop in `draw_obstacles()` that prints out the value of `i` in each pass of the loop, so you can verify whether it's running the number of times it should
+  - Just for testing purposes, change `range(6 + level)` to `range(6 * level)` — that increase should be easier to spot!
 
 --- /collapse ---
 
