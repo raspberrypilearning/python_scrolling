@@ -1,31 +1,31 @@
-## Швидше!
+## Speed up!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Більшість нескінченних ігор раннерів збільшують складність проходження гри відповідно до прогресу гравця, а також дають йому очки.
+Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
 </div>
 <div>
 
-![Приклад проєкту з виведенням балів на екрані.](images/score.png){:width="300px"}
+![Example project with a text score on the screen.](images/score.png){:width="300px"}
 
 </div>
 </div>
 
-### Додавання рівнів складності
+### Add difficulty levels
 
-Створення зрозумілих рівнів складності дозволить гравцеві легше розібратися в тому, що відбувається.
+Creating clear difficulty levels will make it easier for your player to understand what is happening.
 
 --- task ---
 
-Створи `global` змінну `level`, щоб відстежувати рівень, на якому гравець перебуває в даний момент. Встанови його на `1`, щоб гравці починали нову гру на першому рівні.
+Create a `global` `level` variable to track the level the player is currently on. Set it to `1` so players start a new game on the first level.
 
 --- code ---
 ---
-language: python filename: main.py
+language: python filename: main.py line_numbers: true line_number_start: 6
 line_highlights: 7
 ---
 
-# Сюди додавай глобальні змінні
+# Include global variables here
 level = 1
 
 --- /code ---
@@ -34,9 +34,9 @@ level = 1
 
 --- task ---
 
-У цьому коді використовується `height` та `frame_count`, щоб збільшувати змінну `level`. Щоразу, коли гравець закінчує етап, програма створить новий рівень.
+This code uses the `height` and the `frame_count` to increase the `level` variable every time the player finishes a screen, then prints out the new level for the player.
 
-**Обирай:** Цей код обмежує кількість рівнів до п'яти, щоб не було занадто складно грати. Звичайно, не обов'язково робити п'ять рівнів у своїй грі, але все ж таки варто встановити певний ліміт. Тільки так люди можуть рухатися швидко!
+**Choose:** This code limits the levels to five, so it doesn't get too hard to play. There's no reason your game has to use five, but you should choose a limit. Humans can only move so fast!
 
 --- code ---
 ---
@@ -44,7 +44,7 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def draw_obstacles():
+def draw_obstacles(): global level  # Use the global level
 
     if frame_count % height == height - 1 and level < 5:
         level += 1
@@ -60,7 +60,7 @@ The two main options for increasing difficulty are to make the game move faster,
 
 --- collapse ---
 ---
-title: Прискорення гри
+title: Speed your game up
 ---
 
 The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
@@ -87,7 +87,7 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: Більше перешкод
+title: Add more obstacles
 ---
 
 Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
@@ -98,7 +98,7 @@ Adding extra obstacles is just a matter of increasing the number of times the `f
 
 --- /task ---
 
-### Очки
+### Keep score
 
 The longer a player lasts without colliding with an obstacle, the better they're playing your game. Adding a score will let them see how well they're doing.
 
@@ -112,7 +112,7 @@ language: python filename: main.py
 line_numbers: false
 ---
 
-# Сюди додавай глобальні змінні
+# Include global variables here
 score = 0
 
 --- /code ---
@@ -158,7 +158,7 @@ message = 'Score: ' + str(score)
 
 --- /task ---
 
-### Кінець гри!
+### Game over!
 
 When a player has collided with an obstacle, the game should stop moving and their score should stop increasing.
 
@@ -180,7 +180,7 @@ Create an `if` statement in `draw()` that tests whether `level > 0` before calli
 
 --- collapse ---
 ---
-title: Рахунок не відображається
+title: The score doesn't display
 ---
 
 Make sure that you've included the `text()` function that draws the player's score at the appropriate point in your `draw()` function, and that you've passed it the correct values:
@@ -210,7 +210,7 @@ filename: main.py — draw()
 
 --- collapse ---
 ---
-title: Гра не зупиняється після зіткнення
+title: The game doesn't stop after a collision
 ---
 
 If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
@@ -253,7 +253,7 @@ filename: main.py — draw_player()
 
 --- collapse ---
 ---
-title: Гра не прискорюється
+title: The game doesn't get faster
 ---
 
 First, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
@@ -278,7 +278,7 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: Нові перешкоди не з'являються
+title: New obstacles don't appear
 ---
 
 There are a few reasons this could be happening. And there are some more reasons why it might appear to be happening, when it isn't. First, because new obstacles are added based on `level`, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
@@ -300,13 +300,13 @@ line_numbers: false
 --- /code ---
 
 If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
-  - Зроби гру більш повільною, використовуючи `frame_rate()` у функції `setup()`, щоб отримати більше часу для підрахунку
+  - Slow the game down by using `frame_rate = 10` in your call to `run()` to give you more time to count:
 
 ```python
 run(frame_rate = 10)
 ```
 
-language: python filename: main.py — draw_obstacles()
+You can alter the speed of the game by changing `10` to a higher or lower value.
 
   - Change the seed you're using for your random numbers. It's unlikely, but it is possible that some obstacles are randomly appearing directly on top of each other
   - Add a `print()` to the `for` loop in `draw_obstacles()` that prints out the value of `i` in each pass of the loop, so you can verify whether it's running the number of times it should
