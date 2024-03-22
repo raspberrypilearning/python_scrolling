@@ -3,48 +3,48 @@
 legend: Pytanie 2 z 3
 ---
 
-In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
+W tym projekcie użyłeś generowania proceduralnego - aby komputer tworzył i umieszczał dla siebie części swojego świata. Podczas gdy robi to świetny czas, zwłaszcza jeśli tworzysz bardzo duże poziomy, może to spowodować pewne problemy. Na które z tych problemów powinieneś zwrócić uwagę podczas testowania generacji procedur?
 
 --- choices ---
 
-- (x) All of them
+- (X) Wszystkie
 
   --- feedback ---
 
-Poprawna odpowiedź! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+Poprawna odpowiedź! Wszystko to może się zdarzyć podczas korzystania z generowania proceduralnego. Możesz albo dodać więcej kodu, aby sprawdzić i obejść te problemy, albo wypróbować różne nasiona, aż znajdziesz taki, który działa.
 
   --- /feedback ---
 
-- ( ) Obstacles could be generated that leave the player with no route forward.
+- ( ) Mogą zostać wygenerowane przeszkody, które pozostawiają gracza bez trasy do przodu.
 
   --- feedback ---
 
-Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
+Nie do końca. Może się to zdarzyć z przeszkodami generowanymi proceduralnie, zwłaszcza gdy gra się rozpoczyna.
 
 
-**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
+** Wskazówka:** Możesz obejść ten problem, zapobiegając pojawieniu się przeszkód zbyt blisko pozycji startowej gracza. Czy potrafisz wymyślić inne rozwiązania?
 
   --- /feedback ---
 
-- ( ) Obstacles appear directly underneath the player.
+- ( ) Przeszkody pojawiają się bezpośrednio pod graczem.
 
   --- feedback ---
 
-Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
+Nie do końca. Może się to zdarzyć albo na początku gry, albo gdy nowe przeszkody zostaną dodane w wyniku zwiększenia poziomu trudności, jeśli zdarzy się wybrać pozycję zbliżoną do pozycji gracza.
 
 
-**Tip:** A potential solution might be to make the player temporarily immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
+** Wskazówka:** potencjalnym rozwiązaniem może być tymczasowe uodpornienie gracza na kolizje ze wszystkimi przeszkodami, a nawet tylko nowo utworzonymi przeszkodami, przez krótki czas po podniesieniu poziomu. Jakie problemy może sprawić, że przeszkoda wybierze nową pozycję, jeśli znajdzie się zbyt blisko gracza?
 
   --- /feedback ---
 
-- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
+- ( ) Wszystkie przeszkody są zgrupowane razem, pozostawiając zbyt dużo wolnej przestrzeni w innym miejscu.
 
   --- feedback ---
 
-Not quite. Because random generation can choose groups of numbers that are close together, this can be a problem.
+Nie do końca. Ponieważ generowanie losowe może wybierać grupy liczb, które są blisko siebie, może to być problem.
 
 
-**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
+** Wskazówka:** jednym z rozwiązań może być przełączenie się na generowanie półlosowe — podziel ekran na kawałki i użyj losowych liczb, aby wygenerować przeszkody wewnątrz każdego z tych elementów. Czy możesz wymyślić, jak możesz użyć tego rodzaju generacji proceduralnej, aby Twoja gra była bardziej interesująca lub bardziej wymagająca?
 
   --- /feedback ---
 
