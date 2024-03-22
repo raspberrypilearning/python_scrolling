@@ -23,7 +23,7 @@ Lorsqu'une telle collision est détectée, le programme peut réagir d'une mani�
 
 --- task ---
 
-Dans ta fonction `dessine_joueur()`, crée une variable appelée `collision` et régle-la pour obtenir la couleur à la position du joueur.
+Dans ta fonction `dessine_joueur()`, crée une variable appelée `collision` et règle-la pour obtenir la valeur hexadécimale (hex) de la couleur à la position du joueur.
 
 --- code ---
 ---
@@ -39,11 +39,11 @@ filename: main.py - draw_player()
 
 --- task ---
 
-Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
-
 Crée une condition pour vérifier `if` la variable `collision` est la même que la variable `sur` — si c'est le cas, alors ton joueur touche l'arrière-plan en toute sécurité et n'a pas heurté un obstacle.
 
-**Choisir :** Comment ton joueur doit-il réagir ? Tu pourrais :
+Déplace ton code pour dessiner ton joueur à l'intérieur de ta condition `if collision == sur` et ajoute du code dans l'instruction `else` pour que le joueur réagisse à la collision.
+
+**Choisir :** comment ton joueur doit-il réagir ? Tu pourrais :
 + Utiliser un emoji différent pour le joueur
 + Tu peux utiliser `tint()` pour changer l'apparence d'une image, n'oublie pas d'appeler `no_tint()` après avoir dessiné l'image
 
@@ -86,13 +86,13 @@ def dessine_joueur(): if collision == sur: #sur l'arrière-plan text('🎈', mou
 
 --- task ---
 
-**Test :** Vérifie si une collision est détectée et si la réaction a lieu à chaque fois qu'une collision se produit.
+**Test :** vérifie si une collision est détectée et si la réaction a lieu à chaque fois qu'une collision se produit.
 
 --- /task ---
 
 --- task ---
 
-**Débogage :** Il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues assez courants.
+**Débogage :** il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues courants.
 
 --- collapse ---
 ---
@@ -104,7 +104,7 @@ Si ton personnage joueur touche l'obstacle et que rien ne se passe, il y a quelq
  - Assure-toi d'appeler `dessine_obstacles()` avant `dessine_joueur()`. Si tu vérifies les collisions avant de dessiner les obstacles dans un cadre, il n'y aura aucun obstacle avec lequel entrer en collision !
  - Assure-toi que tu utilises exactement la même couleur lors du dessin de l'objet et dans l'instruction `if` vérifiant la collision. Tu peux t'en assurer en utilisant la même variable `globale` aux deux endroits.
  - Dessines-tu le personnage du joueur avant de vérifier la couleur aux coordonnées de la souris ? Si c'est le cas, tu n'obtiendras jamais que les couleurs du joueur. Tu dois d'abord vérifier la couleur et **puis** dessiner le joueur.
- - As-tu du code dans la partie `else` pour faire quelque chose de différent lorsqu'une collision est détectée, comme appliquer une teinte ou utiliser une image différente ?
+ - As-tu du code dans la partie `else` pour faire quelque chose de différent lorsqu'une collision est détectée, comme appliquer une teinte ou utiliser un emoji ?
  - As-tu correctement indenté le code de ton instruction `if` afin qu'elle s'exécute lorsque la condition est remplie ?
 
 L'impression de la couleur du pixel dont tu vérifies une collision peut être utile :
@@ -151,7 +151,7 @@ Tu peux également imprimer un cercle autour du point que tu vérifies et ajuste
 
 --- task ---
 
-**Facultatif :** Pour le moment, tu ne détectes que des collisions sur un pixel de ton joueur. Tu peux également détecter des collisions au niveau d'autres pixels au bord de ton joueur, tels que les bords inférieur ou les plus à gauche et à droite.
+**Facultatif :** pour le moment, tu ne détectes que des collisions sur un pixel de ton joueur. Tu peux également détecter des collisions au niveau d'autres pixels au bord de ton joueur, tels que les bords inférieurs ou les plus à gauche et à droite.
 
 --- collapse ---
 ---
