@@ -32,12 +32,11 @@ Si tu as un compte Raspberry Pi, tu peux cliquer sur le bouton **Enregistrer** p
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 10
 ---
 
-def setup():    
-size(400, 400)
+def setup(): size(400, 400)
 
 --- /code ---
 
@@ -51,13 +50,11 @@ Il s'agit de la couleur sur laquelle le joueur peut être en sécurité et tu ut
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 13
 line_highlights: 14, 15, 16
 ---
 
-def draw():    
-sur = color(200, 100, 0) #Ajouter la couleur de ton thème   
-background(sur)
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
 
 --- /code ---
 
@@ -83,12 +80,11 @@ Définis une fonction `dessine_joueur()` et crée une position `joueur_y` pour l
 
 --- code ---
 ---
-filename: main.py - dessine_joueur()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 12
 line_highlights: 12-14
 ---
 
-def dessine_joueur():    
-joueur_y = int(height * 0.8) #Positionné vers le bas de l'écran
+def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom
 
 --- /code ---
 
@@ -96,14 +92,11 @@ Ajoute du code à `draw()` pour appeler `dessine_joueur()` à chaque image.
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 15
 line_highlights: 19
 ---
 
-def draw():    
-sur = color(200, 100, 0) #Ta couleur choisie    
-background(sur)    
-dessine_joueur()
+def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
 
 --- /code ---
 
@@ -133,13 +126,11 @@ Charge l'image dans la fonction `setup()`
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 11-12
 ---
 
-def configuration():   
-size(400, 400)    
-joueur = load_image('skiing.png') #Charger ton image
+def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
 
 --- /code ---
 
@@ -147,12 +138,11 @@ Appelle `image()` et définis-la comme global dans la fonction `dessine_joueur()
 
 --- code ---
 ---
-filename: main.py - dessine_joueur()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
 line_highlights: 16
 ---
 
-def dessine_joueur():    
-joueur_y = int(height * 0.8) #Positionné vers le bas de l'écran
+def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -169,14 +159,11 @@ Voici un exemple :
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 11-13
 ---
 
-def configuration():    
-size(400, 400)     
-text_size(40) #Contrôle la taille de l'emoji     
-text_align(CENTER, TOP) #Position autour du centre
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -184,13 +171,11 @@ Appelle `text()` et définis-la comme global dans la fonction `dessine_joueur()`
 
 --- code ---
 ---
-filename: main.py - dessine_joueur()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
 line_highlights: 16-17
 ---
 
-def dessine_joueur():     
-joueur_y = int(height * 0.8)    
-text('🎈', mouse_x, joueur_y)
+def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
 
 --- /code ---
 
@@ -225,23 +210,18 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def dessine_joueur():    
-joueur_y = int(height * 0.8)    
-noStroke()    
-#Le visage    
-fill(0, 200, 100)    
-ellipse(mouse_x, joueur_y, 60, 60)
+def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 100) ellipse(mouse_x, player_y, 60, 60)
 
-    #Les yeux<br x-id="4" />
-      fill(0, 100, 200)<br x-id="4" />
-      ellipse(mouse_x - 10, joueur_y - 10, 20, 20)<br x-id="4" />
-      ellipse(mouse_x + 10, joueur_y - 10, 20, 20)<br x-id="4" />
-      fill(0)<br x-id="4" />
-      ellipse(mouse_x - 10, joueur_y - 10, 10, 10)<br x-id="5" />
-      ellipse(mouse_x + 10, joueur_y - 10, 10, 10)<br x-id="5" />
-      fill(255)<br x-id="4" />
-      ellipse(mouse_x - 12, joueur_y - 12, 5, 5)<br x-id="4" />
-      ellipse(souris_x + 12, joueur_y - 12, 5, 5)
+    # Eyes
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, player_y - 10, 20, 20)
+    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, player_y - 10, 10, 10)
+    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, player_y - 12, 5, 5)
+    ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
@@ -287,7 +267,7 @@ title: Une image n'a pas la bonne taille
 Vérifie les entrées qui contrôlent la largeur et la hauteur de l'image :
 
 ```python
-image(nom du fichier image, coordonnée x, coordonnée y, largeur, hauteur)
+image(image_file, x_coord, y_coord, width, height)
 ```
 
 --- /collapse ---
