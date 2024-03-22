@@ -1,6 +1,6 @@
 ## Et ensuite ?
 
-Si tu suis le parcours [Introduction à Python](https://projects.raspberrypi.org/en/pathways/python-intro) , tu peux passer au projet [Modèles puissants](https://projects.raspberrypi.org/en/projects/powerful-patterns). Dans ce projet, tu vas créer des œuvres d'art inspirantes qui peuvent être mises à l'échelle grâce à des motifs répétés.
+Si tu suis le parcours [Introduction à Python](https://projects.raspberrypi.org/en/pathways/python-intro), tu peux passer au projet [Modèles puissants](https://projects.raspberrypi.org/en/projects/powerful-patterns). Dans ce projet, tu vas créer des œuvres d'art inspirantes qui peuvent être mises à l'échelle grâce à des motifs répétés.
 
 --- print-only ---
 
