@@ -1,71 +1,71 @@
 #!/bin/python3
 
-# Import library code
+# Bibliotheekcode importeren
 from p5 import *
 from random import randint, seed
 
 level = 1
 score = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
+# De teken_obstakel functie komt hier
+def teken_obstakels():
     global level
   
     seed(12345678)
   
     if frame_count % height == height - 1 and level < 5:
         level += 1
-        print('You reached level', level)
+        print('Je hebt level', level, 'bereikt')
   
     for i in range(6 + level):
-        ob_x = randint(0, height)
-        ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height  # wrap around
-        text('🌵', ob_x, ob_y)
+        obstakel_x = randint(0, height)
+        obstakel_y = randint(0, height) + (frame_count * level)
+        obstakel_y %= height # omwikkelen
+        text('🌵', obstakel_x, obstakel_y)
 
 
-# The draw_player function goes here
-def draw_player():
+# De teken_speler functie komt hier
+def teken_speler():
     global score, level
   
-    player_y = int(height * 0.8)
+    speler_y = int(height * 0,8)
   
-    collide = get(mouse_x, player_y).hex
-    collide2 = get(mouse_x - 12, player_y + 20).hex
-    collide3 = get(mouse_x + 12, player_y + 20).hex
-    collide4 = get(mouse_x, player_y + 40).hex
+    botsen = get(muis_x, speler_y).hex
+    botsen2 = get(muis_x, speler_y + 20).hex
+    botsen3 = get(muis_x + 12, speler_y + 20).hex
+    botsen4 = get(muis_x, speler_y + 40).hex
   
-    if mouse_x < width:  # off the left of the screen
-        collide2 = safe.hex
+    if muis_x < width: # aan de linkerkant van het scherm
+        botsen2 = veilig.hex
   
-    if mouse_x > width:  # off the right of the screen
-        collide3 = safe.hex
+    if muis_x > width: # voorbij de rechterkant van het scherm
+        botsen3 = veilig.hex
   
-    if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
-        text('🎈', mouse_x, player_y)
+    if botsen == veilig.hex and botsen2 == veilig.hex and botsen3 == veilig.hex and botsen4 == veilig.hex:
+        text('🎈', muis_x, speler_y)
         score += level
     else:
-        text('💥', mouse_x, player_y)
+        text('💥', muis_x, speler_y)
         level = 0
 
 
 def setup():
-    # Setup your animation here
+    # Stel hier je animatie in
     size(400, 400)
     text_size(40)
-    text_align(CENTER, TOP)  # position around the centre, top
+    text_align(CENTER, TOP) # positie rond het midden, bovenaan
 
 
 def draw():
-    # Things to do in every frame
-    global score, safe, level
-    safe = Color(200, 150, 0)
+    # Dingen om te doen in elk frame
+    global score, veilig, level
+    veilig = Color(200, 150, 0)
 
     if level > 0:
-        background(safe)
+        background(veilig)
         fill(255)
         text('Score: ' + str(score), width/2, 20)
-        draw_obstacles()
-        draw_player()
+        teken_obstakels()
+        teken_speler()
 
 run()
