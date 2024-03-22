@@ -27,7 +27,7 @@ language: python filename: main.py - draw_obstacles() line_numbers: false line_n
 line_highlights: 4
 ---
 
-def dessine_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y) #Remplacer par ton obstacle
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -35,12 +35,11 @@ Ajoute du code à `draw()` pour appeler `dessine_obstacles()` à chaque image.
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: false line_number_start:
 line_highlights: 5
 ---
 
-def dessin(): ur = color(200, 100, 0) #Ajouter la couleur de ton thème background(sur)  
-dessine_obstacles() #Avant de dessiner le joueur dessine_joueur()
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe) draw_obstacles()  # Before drawing the player draw_player()
 
 --- /code ---
 
@@ -72,7 +71,7 @@ language: python filename: main.py - setup() line_numbers: true line_number_star
 line_highlights: 12
 ---
 
-def setup(): size(400, 400) joueur = load_image('skiing.png') #Charger ton image obstacle = load_image('rocket.png') #Charger ton image
+def setup(): size(400, 400) global player player = load_image('skiing.png')  # Load your player image obstacle = load_image('rocket.png')  # Load your obstacle image
 
 --- /code ---
 
@@ -84,9 +83,11 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def dessine_obstacles(): ob_x = width/2 ob_y = height/2
+def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
-    image(obstacle, ob_x, ob_y, 30, 30) #Redimensionner pour s'adapter à ton thème
+    global obstacle
+    
+    image(obstacle, ob_x, ob_y, 30, 30)  # Resize to fit your theme
 
 --- /code ---
 
@@ -107,7 +108,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Contrôle la taille de l'emoji text_align(CENTER, TOP) #Position autour du centre
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -119,7 +120,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def dessine_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -154,7 +155,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def dessine_obstacles(): ob_x = width/2 ob_y = height/2 #Dessine un sapin no_stroke() fill(0,255,0) #vert pour les aiguilles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) # brun pour le tronc rect(ob_x + 15, ob_y + 70, 10, 10)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 # Draw a fir tree no_stroke() fill(0,255,0)  # Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100)  # Brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
 
@@ -178,7 +179,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def dessine_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count #Augmente chaque image ob_y %= height #Enroule autour text('🌵', ob_x, ob_y) #Remplace par ton obstacle
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count  # Increases each frame ob_y %= height  # Wrap around text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -201,13 +202,13 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-seed(12345678) #N'importe quel nombre convient
+def draw_obstacles(): seed(12345678)  # Any number is fine
 
-    for i in range(6):<br x-id="2" />
-        ob_x = randint(0, height) 
-        ob_y = randint(0, height) + frame_count 
-        ob_y %= height 
-        text('🌵', ob_x, ob_y) #Remplacer par ton obstacle
+    for i in range(6):  
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -273,13 +274,13 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def dessine_obstacles():
+def draw_obstacles(): seed(12345678)
 
-    for i in range(6):<br x-id="2" />
-        ob_x = randint(0, height) 
-        ob_y = randint(0, height) + frame_count 
-        ob_y %= height 
-        text('🌵', ob_x, ob_y) #Remplacer par ton obstacle
+    for i in range(6):  
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
