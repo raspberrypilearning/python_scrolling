@@ -1,10 +1,10 @@
-## Що далі?
+## What next?
 
-Якщо ти йдеш по мануалу [Знайомство з Python](https://projects.raspberrypi.org/en/pathways/python-intro), можеш перейти до проєкту [Потужні візерунки](https://projects.raspberrypi.org/en/projects/powerful-patterns). У цьому проєкті ти будеш створювати мистецтво, яке буде надихати та зможеш масштабувати його, використовуючи повторення візерунків.
+If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/pathways/python-intro) pathway, you can move on to the [Powerful patterns](https://projects.raspberrypi.org/en/projects/powerful-patterns) project. In this project, you will create inspirational art that can be scaled using repeated patterns.
 
 --- print-only ---
 
-![Один з прикладів з проєкту "Потужні візерунки" з використанням обернених геометричних фігур.](images/kek-project.png)
+![One of the examples from the Powerful patterns project using rotated geometric shapes.](images/kek-project.png)
 
 --- /print-only ---
 
@@ -15,5 +15,5 @@
 
 --- /no-print ---
 
-Якщо ти хочеш отримати більше задоволення від вивчення Python, спробуй один з [цих проєктів](https://projects.raspberrypi.org/uk-UA/projects?software%5B%5D=python).
+If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
 
