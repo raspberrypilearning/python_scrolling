@@ -1,29 +1,29 @@
-## Wykrywanie kolizji
+## Collision detection
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Niekończące się gry biegaczy często kończą się, gdy gracz zderzy się z przeszkodą.
+Endless runner games often end when the player collides with an obstacle.
 </div>
 <div>
 
-![Obraz ukończonego kroku.](images/collision.png){:width="300px"}
+![Image of finished step.](images/collision.png){:width="300px"}
 
 </div>
 </div>
 
-Teraz możesz skonfigurować gracza tak, aby reagował na kolizję z przeszkodami.
+Now you can set up your player to react to an obstacle collision.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Wykrywanie kolizji**</span> określa, kiedy dwa obiekty utworzone wewnątrz symulacji komputerowej — czy to gra, animacja, czy coś innego — stykają się. Istnieje kilka sposobów, aby to zrobić, na przykład:
-- Sprawdzanie, czy kolory pojawiające się w miejscu obiektu są kolorami tego obiektu
-, czy innym - śledzenie kształtu każdego obiektu, i sprawdzanie, czy te kształty nakładają się na siebie
-- tworzenie zestawu punktów granicznych lub linii wokół obiektu i sprawdzanie, czy wchodzą w kontakt z innymi "
-kolidującymi" obiektami, gdy taka kolizja zostanie wykryta, program może zareagować w jakiś sposób. W grze wideo zwykle ma to na celu zadawanie obrażeń (jeśli gracz zderzy się z wrogiem lub zagrożeniem) lub dawanie korzyści (jeśli gracz zderzy się z zasilaniem).
+<span style="color: #0faeb0">**Collision detection**</span> is determining when two objects created inside a computer simulation — whether that's a game, and animation, or something else — are touching. There are several ways to do this, for example: 
+  - checking if the colours appearing at the location of an object are the colours of that object, or a different one
+  - keeping track of the shape of every object, and checking if those shapes overlap
+  - creating a set of boundary points, or lines, around an object and checking if they come into contact with any other 'collidable' objects
+When such a collision is detected, the program can react in some way. In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a power up).
 </p>
 
 --- task ---
 
-W funkcji ` draw_player()` utwórz zmienną o nazwie ` ` i ustaw ją tak, aby uzyskać wartość koloru szesnastkowego (heksadecymalnego) w pozycji gracza.
+In your `draw_player()` function, create a variable called `collide` and set it to get the hexadecimal (hex) colour value at the position of the player.
 
 --- code ---
 ---
@@ -39,22 +39,22 @@ filename: main.py - draw_player()
 
 --- task ---
 
-Utwórz warunek, aby sprawdzić ` ` Zmienna ` ` jest taka sama jak zmienna ` ` — jeśli tak, to Twój gracz bezpiecznie dotyka tła i nie zderzył się z żadną przeszkodą.
+Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
 
-Przenieś swój kod, aby narysować gracza wewnątrz swojego ` jeśli zderzenie == warunek ` i dodaj kod w instrukcji ` `, aby gracz zareagował na kolizję.
+Move your code to draw your player inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision.
 
-** Wybierz:** jak powinien zareagować Twój gracz? Możesz:
-+ Użyj innego emoji dla gracza
-+ Możesz użyć ` tint()`, aby zmienić wygląd obrazu, nie zapomnij zadzwonić do ` no_tint()` po narysowaniu obrazu
+**Choose:** How should your player react? You could:
++ Use a different emoji for the player
++ You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image
 
 --- collapse ---
 ---
-Title: Użyj znaków emoji
+title: Use emoji characters
 ---
 
-Możesz użyć znaków emoji w funkcji p5 ` text()`, aby reprezentować swojego zderzonego gracza.
+You can use emoji characters in the p5 `text()` function to represent your collided player.
 
-Oto przykład:
+Here's an example:
 
 --- code ---
 ---
@@ -86,34 +86,34 @@ def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x
 
 --- task ---
 
-Test **:** Sprawdź, czy kolizja została wykryta i reakcja ma miejsce za każdym razem, gdy wystąpi kolizja.
+**Test:** Check if a collision is detected and the reaction takes place each time a collision occurs.
 
 --- /task ---
 
 --- task ---
 
-** Debug:** Możesz znaleźć kilka błędów w swoim projekcie, które musisz naprawić. Oto kilka typowych robaków.
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
-Title: Nie ma kolizji, gdy gracz dotrze do przeszkody
+title: There is no collision when the player reaches an obstacle
 ---
 
-Jeśli Twoja postać gracza dotknie przeszkody i nic się nie stanie, musisz sprawdzić kilka rzeczy:
+If your player character touches the obstacle and nothing happens, there are a few things you should check:
 
- - Upewnij się, że wywołasz ` draw_obstancts()` przed ` draw_player()`. Jeśli przed rysowaniem przeszkód w ramce sprawdzisz, czy nie ma żadnych przeszkód, z którymi można się zderzyć!
- - Upewnij się, że używasz dokładnie tego samego koloru podczas rysowania obiektu i w instrukcji ` ` sprawdzając obecność kolizji. Możesz to zrobić, używając tej samej zmiennej ` global ` w obu miejscach.
- - Czy rysujesz postać gracza przed sprawdzeniem koloru za pomocą współrzędnych myszy? Jeśli tak, to zawsze będziesz otrzymywać kolory od gracza. Musisz najpierw sprawdzić kolor, a następnie **, a następnie ** narysuj gracza.
- - Czy masz kod w części ` `, aby zrobić coś innego po wykryciu kolizji, na przykład zastosowanie odcienia lub użycie emoji?
- - Czy poprawnie wcięłeś kod instrukcji ` `, aby działał, gdy warunek jest spełniony?
+ - Make sure you call `draw_obstacles()` before `draw_player()`. If you check for collisions before drawing the obstacles in a frame, then there won't be any obstacles to collide with!
+ - Make sure you are using the exact same colour when drawing the object and in the `if` statement checking for the collision. You can make sure of this by using the same `global` variable in both places.
+ - Are you drawing the player character before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the player. You need to check the colour first and **then** draw the player.
+ - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
+ - Have you correctly indented the code for your `if` statement so it runs when the condition is met?
 
-Drukowanie koloru sprawdzanego piksela pod kątem kolizji może być przydatne:
+Printing the colour of the pixel you are checking for a collision can be useful:
 
 ```python
     print(red(collide), green(collide), blue(collide))
 ```
 
-Możesz również wydrukować okrąg wokół sprawdzanego punktu i dostosować sprawdzany punkt, jeśli musisz:
+You can also print a circle around the point you are checking and adjust the point you check if you need to:
 
 ```python
     no_fill()
@@ -126,11 +126,11 @@ Możesz również wydrukować okrąg wokół sprawdzanego punktu i dostosować s
 
 --- task ---
 
-** Opcjonalnie:** w tej chwili wykrywasz tylko kolizje o jednym pikselu na swoim odtwarzaczu. Możesz również wykryć kolizje w innych pikselach na krawędzi odtwarzacza, takich jak dolna lub lewa i prawa krawędź.
+**Optional:** At the moment, you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom or left- and right-most edges.
 
 --- collapse ---
 ---
-Title: Wykrywanie kolizji z wieloma pikselami
+title: Collision detection with multiple pixels
 ---
 
 ```python
@@ -165,7 +165,7 @@ def draw_player():
 
 --- /collapse ---
 
-Możesz nawet użyć pętli i sprawdzić wiele różnych pikseli. Tak działa wykrywanie kolizji w grach.
+You could even use a loop and check lots of different pixels. This is how collision detection works in games.
 
 --- /task ---
 
