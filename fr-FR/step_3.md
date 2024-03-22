@@ -23,7 +23,7 @@ Définis une fonction `dessine_obstacles()` :
 
 --- code ---
 ---
-filename: main.py - dessine_obstacles()
+language: python filename: main.py - draw_obstacles() line_numbers: false line_number_start:
 line_highlights: 4
 ---
 
@@ -31,7 +31,7 @@ def dessine_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 --- /code ---
 
-Ajoute du code à `dessin()` pour appeler `dessine_obstacles()` à chaque image.
+Ajoute du code à `draw()` pour appeler `dessine_obstacles()` à chaque image.
 
 --- code ---
 ---
@@ -58,13 +58,13 @@ dessine_obstacles() #Avant de dessiner le joueur dessine_joueur()
 title: Utiliser une image de démarrage
 ---
 
-Les images incluses dans le projet de démarrage seront affichées dans la liste `Bibliothèque d'images`.
+Les images incluses dans le projet de démarrage seront affichées dans la liste `bibliothèque d'images`.
 
 ![La bibliothèque d'images avec la liste des images incluses.](images/starter-images.png)
 
 Note le nom de l'image que tu souhaites utiliser.
 
-Charge l'image dans la fonction `setup()`.
+Charge l'image dans la fonction `setup()`
 
 --- code ---
 ---
@@ -76,7 +76,7 @@ def setup(): size(400, 400) joueur = load_image('skiing.png') #Charger ton image
 
 --- /code ---
 
-Find the line `# Keep this to run your code`. Appelle `image()` et définis-la comme global dans la fonction `dessine_obstacles()`.
+Trouve la ligne `# Garde ceci pour exécuter ton code`. Avant cette ligne, définis une nouvelle fonction `dessine_obstacles()`, définis `obstacle` comme variable globale et utilise-la dans l'appel à `image()`.
 
 --- code ---
 ---
@@ -111,7 +111,7 @@ def setup(): size(400, 400) text_size(40) #Contrôle la taille de l'emoji text_a
 
 --- /code ---
 
-Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function.
+Trouve la ligne `# Garde ceci pour exécuter ton code`. Avant cette ligne, définis une nouvelle fonction `dessine_obstacles()`.
 
 --- code ---
 ---
@@ -139,14 +139,14 @@ def dessine_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 [[[processing-stroke]]]
 
-**Astuce :** Tu peux utiliser plusieurs formes simples dans la même fonction pour créer un obstacle plus complexe.
+**Astuce :** tu peux utiliser plusieurs formes simples dans la même fonction pour créer un obstacle plus complexe.
 
 --- collapse ---
 ---
 title: Dessiner un obstacle à l'aide de plusieurs formes
 ---
 
-![A tree drawn with green triangles for the body and a brown rectangle for the trunk](images/tree_obstacle.png)
+![Un arbre dessiné avec des triangles verts pour le corps et un rectangle marron pour le tronc](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -193,7 +193,7 @@ Tu peux dessiner de nombreuses copies de ton obstacle à différents points de d
 
 --- task ---
 
-Ce code utilise une boucle `for` avec `randint()` pour choisir les positions des obstacles pour toi. Appeler d'abord la fonction random `seed()` signifie que tu obtiendras toujours les mêmes nombres aléatoires. Cela signifie que les obstacles ne sauteront pas autour de chaque image et que tu peux changer la seed jusqu'à ce que tu en obtennes une qui positionne les obstacles équitablement.
+Ce code utilise une boucle `for` avec `randint()` pour choisir les positions des obstacles pour toi. Appeler d'abord la fonction random `seed()` signifie que tu obtiendras toujours les mêmes nombres aléatoires. Cela signifie que les obstacles ne sauteront pas autour de chaque image et que tu peux changer la seed jusqu'à ce que tu en obtiennes une qui positionne les obstacles équitablement.
 
 --- code ---
 ---
@@ -211,7 +211,7 @@ seed(12345678) #N'importe quel nombre convient
 
 --- /code ---
 
-Informations utiles :
+Informations utiles :
 
 [[[using-seed-in-python]]]
 
@@ -228,18 +228,18 @@ Tester ton programme peut provoquer des crises chez les personnes atteintes d'é
 - T'assurer d'avoir ajouté la ligne de code `seed()` pour être sûr que tes obstacles ne sautent pas
 - Demander à quelqu'un de l'exécuter pour toi
 - Continuer et terminer le projet, en demandant à quelqu'un d'exécuter le projet pour toi à la fin afin que tu puisses déboguer
-- Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
+- Ralentis le jeu en utilisant `frame_rate = 10` dans ton appel à `run()` comme ceci :
 
 ```python
 run(frame_rate = 10)
 ```
-You can alter the speed of the game by changing `10` to a higher or lower value.
+Tu peux modifier la vitesse du jeu en changeant `10` en une valeur supérieure ou inférieure.
 
 --- /collapse ---
 
 --- task ---
 
-**Test :** Exécute ton programme et tu devrais voir plusieurs objets à l'écran, s'enroulant lorsqu'ils arrivent en bas.
+**Test :** exécute ton programme et tu devrais voir plusieurs objets à l'écran, s'enroulant lorsqu'ils arrivent en bas.
 
 Modifie ton code jusqu'à ce que tu sois satisfait des obstacles que tu rencontres. Tu peux :
 
@@ -247,13 +247,13 @@ Modifie ton code jusqu'à ce que tu sois satisfait des obstacles que tu rencontr
 + Modifier le nombre de répétitions en boucle pour obtenir un nombre différent d'obstacles
 + Ajuster la taille des obstacles
 
-**Astuce :** Assure-toi qu'il est possible d'éviter tes obstacles mais qu'il n'y a pas de chemin facile à travers ton jeu.
+**Astuce :** assure-toi qu'il est possible d'éviter tes obstacles mais qu'il n'y a pas de chemin facile à travers ton jeu.
 
 --- /task ---
 
 --- task ---
 
-**Débogage :** Il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues assez courants.
+**Débogage :** il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues courants.
 
 --- collapse ---
 ---
