@@ -32,16 +32,16 @@ Ajoute des vies à ton jeu pour permettre aux joueurs de survivre à quelques co
  - Tu auras également besoin d'un moyen pour les joueurs de savoir combien de vies il leur reste, et peut-être d'une sorte d'avertissement leur indiquant quand ils sont sur leur dernière vie
  - Tu peux ajouter un objet qui, lorsque le joueur entre en collision avec lui, leur donne une vie supplémentaire. N'oublie pas que tu devras modifier ton code de collision habituel afin qu'il ne soustrait pas une vie en même temps !
 
-Chaque exemple de projet dans [l'introduction](./) a un lien **Voir à l'intérieur** pour te permettre d'ouvrir le projet et de regarder le code pour avoir des idées et voir comment ils fonctionnent.
+Chaque projet d'exemple dans l'introduction te permet de regarder le code, de trouver des idées et de voir comment ils fonctionnent.
 
-Le projet « Eviter les astéroides » ci-dessous possède toutes ces fonctionnalités :
+Le projet « Esquive les astéroides » ci-dessous possède toutes ces fonctionnalités :
 
-**Dodge asteroids**:
+**Esquive les astéroïdes** :
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
+Tu peux trouver le projet Esquive les astéroïdes [ici](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
-Jette un œil à certains projets Pas de collision créés par des membres de la communauté dans la bibliothèque [Don't collide - Community](https://wke.lt/w/s/KobNfx){:target="_blank"} de Raspberry Pi Foundation.
+Jette un œil à certains projets Pas de collision créés par des membres de la communauté dans la bibliothèque [Don't collide - Community](https://wke.lt/w/s/KobNfx){:target="_blank"} de la Raspberry Pi Foundation.
 
 --- save ---
