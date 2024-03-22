@@ -1,8 +1,8 @@
 ---
-title: Не зіткнись!
+title: Don't collide!
 hero_image: images/banner.png
 description:
-  - Створи нескінченну гру-раннер, де твій персонаж повинен уникнути зіткнення з перешкодами
+  - Build an endless runner game where your character must avoid colliding
   - with obstacles
 meta_title: Python coding projects for kids and teens | Don't collide!
 meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Build a scrolling runner game in Python and avoid obstacles.
@@ -12,21 +12,21 @@ copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Ти зробиш
+    title: You will make
   - 
-    title: Вибір теми
+    title: Set the theme
   - 
-    title: Створення перешкод
+    title: Create obstacles
     completion:
       - engaged
   - 
-    title: Виявлення зіткнень
+    title: Collision detection
   - 
-    title: Швидше!
+    title: Speed up!
     completion:
       - internal
   - 
-    title: Швидкий тест
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,8 +35,8 @@ steps:
     completion:
       - external
   - 
-    title: Вдосконалення твого проєкту
+    title: Upgrade your project
   - 
-    title: Поділитися
+    title: Share
   - 
-    title: Що далі?
+    title: What next?
