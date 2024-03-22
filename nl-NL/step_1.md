@@ -1,4 +1,4 @@
-## You will make
+## Wat ga je maken
 
 Bouw een eindeloos rollend renspel waarin je personage obstakels moet ontwijken.
 
@@ -24,25 +24,25 @@ Kijk naar deze voorbeelden. Denk na over hoe de spelers en obstakels zijn gemaak
 
 Wat gebeurt er als je een obstakel raakt? Wordt het moeilijker terwijl je speelt?
 
-**Skiing cat**:
+**Skiënde kat**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/skiing-cat-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Skiing cat project [here](https://editor.raspberrypi.org/en/projects/skiing-cat-example){:target="_blank"}
+</iframe> Je kunt het Skiënde Kat-project [hier vinden](https://editor.raspberrypi.org/en/projects/skiing-cat-example){:target="_blank"}
 
-**Don't pop**:
+**Niet knallen**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dont-pop-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Don't pop project [here](https://editor.raspberrypi.org/en/projects/dont-pop-example){:target="_blank"}
+</iframe> Je kunt het Niet knallen-project [hier vinden](https://editor.raspberrypi.org/en/projects/dont-pop-example){:target="_blank"}
 
-**Avoid the germs**:
+**Vermijd de ziektekiemen**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/avoid-germs-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Avoid the germs project [here](https://editor.raspberrypi.org/en/projects/avoid-germs-example){:target="_blank"}
+</iframe> Je kunt het Vermijd de ziektekiemen-project [hier vinden](https://editor.raspberrypi.org/en/projects/avoid-germs-example){:target="_blank"}
 
-**Clean car**:
+**Schone auto**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/clean-car-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Clean car project [here](https://editor.raspberrypi.org/en/projects/clean-car-example){:target="_blank"}
+</iframe> Je kunt het Schone auto-project [hier vinden](https://editor.raspberrypi.org/en/projects/clean-car-example){:target="_blank"}
 
-**Dodge asteroids**:
+**Ontwijk asteroïden**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
+</iframe> Je kunt het Ontwijk-asteroïdenproject [hier vinden](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
 --- /task ---
 
@@ -52,11 +52,11 @@ Wat gebeurt er als je een obstakel raakt? Wordt het moeilijker terwijl je speelt
 
 Je gaat een aantal ontwerpbeslissingen nemen over het soort spel dat je gaat maken en hoe je code gaat gebruiken om de gewenste effecten te krijgen.
 
-![Skiing cat project example](images/example2.png){:width="300px"}
-You can find the Skiing cat project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Don't pop project example](images/example4.png){:width="300px"}
-You can find the Don't pop project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Avoid the germs project example](images/example3.png){:width="300px"}
-You can find the Avoid the germs project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Clean car project example](images/example5.png){:width="300px"}
-You can find the Clean car project here https://editor.raspberrypi.org/en/projects/clean-car-example ![Dodge asteroids project example](images/example1.png){:width="300px"}
-You can find the Dodge asteroids project here https://editor.raspberrypi.org/en/projects/dodge-asteroids-example
+![Voorbeeld van een skiënde kat project](images/example2.png){:width="300px"}
+Je kunt het skiende kat project hier vinden https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Don't pop project example](images/example4.png){:width="300px"}
+Je kunt het niet knallen project hier vinden https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Avoid the germs project example](images/example3.png){:width="300px"}
+Je kunt het ontwijk de ziektekiemen project hier vinden https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Clean car project example](images/example5.png){:width="300px"}
+Je kunt het schone auto project hier vinden https://editor.raspberrypi.org/en/projects/clean-car-example ![Dodge asteroids project example](images/example1.png){:width="300px"}
+Je kunt het ontwijk de asteroiden project hier vinden https://editor.raspberrypi.org/en/projects/dodge-asteroids-example
 
 --- /print-only ---
