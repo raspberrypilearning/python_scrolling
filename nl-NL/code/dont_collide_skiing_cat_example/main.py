@@ -1,71 +1,71 @@
 #!/bin/python3
 
-# Import library code
+# Bibliotheekcode importeren
 from p5 import *
 from random import randint, seed
 
-speed = 1
+snelheid = 1
 score = 0
 
-# The draw_background function goes here
-def draw_obstacles():
-    global speed
+# De functie teken_achtergrond komt hier
+def teken_obstakels():
+    global snelheid
     
     seed(12345678)
     
-    if frame_count % height == height - 1 and speed < 5:
-        speed += 1
-        print('You reached level', speed)
+    if frame_count % height == height - 1 and snelheid < 5:
+        snelheid += 1
+        print('Je hebt snelheid', snelheid, 'bereikt')
       
     for i in range(6):
-        ob_x = randint(0, height)
-        ob_y = randint(0, height) + (frame_count * speed)
-        ob_y %= height  # wrap around
+        obstakel_x = randint(0, height)
+        obstakel_y = randint(0, height) + (frame_count * snelheid)
+        obstakel_y %= height # omwikkelen
         no_stroke()
         fill(0,255,0)
-        triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
-        triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
-        triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
+        triangle(obstakel_x + 20, obstakel_y + 20, obstakel_x + 10, obstakel_y + 40, obstakel_x + 30, obstakel_y + 40)
+        triangle(obstakel_x + 20, obstakel_y + 30, obstakel_x + 5, obstakel_y + 55, obstakel_x + 35, obstakel_y + 55)
+        triangle(obstakel_x + 20, obstakel_y + 40, obstakel_x + 0, obstakel_y + 70, obstakel_x + 40, obstakel_y + 70)
         fill(150,100,100)
-        rect(ob_x + 15, ob_y + 70, 10, 10)
+        rect(obstakel_x + 15, obstakel_y + 70, 10, 10)
     
-# The draw_player function goes here
-def draw_player():
-    global score, speed, skiing, crashed
+# De teken_speler functie komt hier
+def teken_speler():
+    global score, snelheid, skien, gecrasht
     
-    player_y = int(height * 0.8)
+    speler_y = int(height * 0,8)
     
-    fill(safe)
+    fill(veilig)
   
-    collide = get(mouse_x, player_y).hex
+    botsen = get(muis_x, speler_y).hex
     
-    if collide == safe.hex:
-        image(skiing, mouse_x, player_y, 30, 30)
-        score += speed
+    if botsen == veilig.hex:
+        image(skien, muis_x, speler_y, 30, 30)
+        score += snelheid
     else:
-        image(crashed, mouse_x, player_y, 30, 30)
-        speed = 0
+        afbeelding(gecrasht, muis_x, speler_y, 30, 30)
+        snelheid = 0
     
   
 def setup(): 
-    # Setup your animation here
+    # Stel hier je animatie in
     size(400, 400)
     text_size(40)
-    text_align(CENTER, TOP)  # position around the centre
-    global skiing, crashed
-    skiing = load_image('skiing.png')
-    crashed = load_image('fallenover.png')
+    text_align(CENTER, TOP) # positie rond het midden, bovenaan
+    global skien, gecrasht
+    skien = load_image('skiing.png')
+    gecrasht = load_image('fallenover.png')
   
 def draw():
-    # Things to do in every frame
-    global score, safe, speed, skiing, crashed
-    safe = Color(255)
+    # Dingen om te doen in elk frame
+    global score, veilig, skien, gecrasht
+    veilig = Color(255)
   
-    if speed > 0:
-        background(safe) 
+    if snelheid > 0:
+        background(veilig) 
         fill(0)
         text('Score: ' + str(score), width/2, 20)
-        draw_obstacles()
-        draw_player()
+        teken_obstakels()
+        teken_speler()
   
 run()
