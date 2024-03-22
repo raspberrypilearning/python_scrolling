@@ -1,80 +1,80 @@
 #!/bin/python3
 
-# Import library code
+# Bibliotheekcode importeren
 from p5 import *
 from random import randint, seed
 
 level = 1
 score = 0
-lives = 3
-invun = 0
+levens = 3
+onkwetsbaar = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
+# De teken_obstakel functie komt hier
+def teken_obstakels():
     global level
     
     seed(random_seed)
     
     if frame_count % height == height - 1 and level < 8:
         level += 1
-        print('You reached level', level)
+        print('Je hebt level', level, 'bereikt')
       
     for i in range(6 + level):
         ob_x = randint(0, width)
-        ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height  # wrap around
+        obstakel_y = randint(0, height) + (frame_count * level)
+        obstakel_y %= height # omwikkelen
         push_matrix()
         translate(ob_x, ob_y)
         rotate(degrees(randint(1, 359)+frame_count / 1000))
-        image(rock, 0, 0, randint(18,24), randint(18,24))
+        image(rots, 0, 0, randint(18,24), randint(18,24))
         pop_matrix()
 
     
-# The draw_player function goes here
-def draw_player():
-    global score, level, lives, invun
+# De teken_speler functie komt hier
+def teken_speler():
+    global score, level, levens, onkwetsbaar
     
-    player_y = int(height * 0.8)
-    player_x = mouse_x
+    speler_y = int(height * 0,8)
+    speler_x = muis_x
     
-    collide = get(player_x, player_y).hex
-    collide2 = get(player_x - 18, player_y + 17).hex
-    collide3 = get(player_x + 18, player_y + 17).hex
-    collide4 = get(player_x, player_y + 25).hex
+    botsen = get(speler_x, speler_y).hex
+    botsen2 = get(speler_x + 18, speler_y - 17).hex
+    botsen3 = get(speler_x + 18, speler_y + 17).hex
+    botsen4 = get(speler_x, speler_y + 25).hex
     
-    if player_x < width:  # off the left of the screen
-        collide2 = safe.hex
+    if player_x < width: # aan de linkerkant van het scherm
+        botsen2 = veilig.hex
     
-    if player_x > width:  # off the right of the screen
-        collide3 = safe.hex
+    als speler_x > width: # aan de rechterkant van het scherm
+        botsen3 = veilig.hex
       
-    if (collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex) or invun > 0:
-        if lives == 0 and frame_count % 12 == 0:
+    if (botsen == veilig.hex and botsen2 == veilig.hex and botsen3 == veilig.hex and botsen4 == veilig.hex) or onkwetsbaar >0:
+        if levens == 0 and frame_count % 12 == 0:
             tint(200, 0, 0)
       
-        image(rocket, player_x, player_y + 25, 64, 64)
+        image(rocket, speler_x, speler_y + 25, 64, 64)
         score += level
-        invun -= 1
+        onkwetsbaar -= 1
         no_tint()
       
-        if invun > 0:
+        if onkwetsbaar > 0:
             stroke(220)
             fill(220, 220, 220, 60)
-            ellipse(player_x, player_y + 18, 47, 47)
+            ellipse(speler_x, speler_y + 18, 47, 47)
         
-    elif lives > 1:
-        lives -= 1
-        invun = 50
+    elif levens > 1:
+        levens -= 1
+        onkwetsbaar = 50
         tint(200, 0, 0)
-        image(rocket, player_x, player_y + 25, 64, 64)
+        image(rocket, speler_x, speler_y + 25, 64, 64)
         no_tint()
         score += level
     else:
-        text('💥', player_x + 10, player_y + 5)
+        text('💥', speler_x + 10, speler_y + 5)
         level = 0
     
 
-def display_score():
+def toon_score():
     global level
     
     fill(255)
@@ -85,43 +85,43 @@ def display_score():
     
     if score > 10000:
         level = 0
-        print('🎉🎉 You win! 🎉🎉')
+        print('🎉🎉 Jij wint! 🎉🎉')
 
   
-def display_lives():
+def toon_levens():
     fill(255)
     text_size(16)
     text_align(LEFT, TOP)
-    text('Lives', width * 0.05, 10, 30, 20)
+    text('Levens', width * 0.05, 10, 30, 20)
     
-    for i in range(lives):
+    for i in range(levens):
         image(rocket, width * 0.05 + i * 25, 40, 20, 20)
   
 
 def setup():
-    # Setup your animation here
+    # Stel hier je animatie in
     size(400, 400)
-    global rocket, rock, random_seed
+    global raket, rots, random_seed
     
     text_size(40)
-    text_align(CENTER, TOP)  # position around the centre, top
+    text_align(CENTER, TOP) # positie rond het midden, bovenaan
     
     rocket = load_image('rocket.png')
     rock = load_image('moon.png')
     random_seed = randint(0, 1000000)
   
 def draw():
-    # Things to do in every frame
-    global score, safe, level
-    safe = Color(0)
+    # Dingen om te doen in elk frame
+    global score, veilig, level
+    veilig = Color(0)
     
     if level > 0:
-        background(safe) 
+        background(veilig) 
         fill(255)
         image_mode(CENTER)
-        draw_obstacles()
-        draw_player()
+        teken_obstakels()
+        teken_speler()
         display_score()
-        display_lives()
+        display_levens()
   
 run()
