@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend: Вопрос 2 из 3
+legend: Question 2 of 3
 ---
 
 In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
@@ -11,7 +11,7 @@ In this project you used procedural generation — having the computer create an
 
   --- feedback ---
 
-Правильно! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
 
   --- /feedback ---
 
