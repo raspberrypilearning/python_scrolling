@@ -6,7 +6,7 @@ Os oes gennych chi amser, fe allwch chi uwchraddio eich prosiect.
 </div>
 <div>
 
-![Enghraifft o brosiect gofod gyda bywydau.](images/example1.png){:width="300px"}
+![Example space project with lives.](images/example1.png){:width="300px"}
 
 </div>
 </div>
@@ -32,9 +32,9 @@ Ychwanegwch fywydau at eich gêm i adael i chwaraewyr oroesi gwrthdrawiad neu dd
  - Hefyd bydd angen i chwaraewyr allu gwybod sawl bywyd sydd ganddyn nhw'n weddill, ac efallai rhyw fath o rybudd sy'n rhoi gwybod iddyn nhw mai dim ond un bywyd sydd ganddyn nhw'n weddill
  - Fe allech chi ychwanegu gwrthrych sy'n rhoi bywyd ychwanegol i chwaraewyr os byddan nhw'n ei daro. Cofiwch y bydd angen i chi addasu eich cod gwrthdaro rheolaidd i'w atal rhag tynnu bywyd ar yr un pryd!
 
-Mae gan bob prosiect enghreifftiol yn [Cyflwyniad](./) ddolen **Gweld tu mewn** i chi allu agor y prosiect ac edrych ar y cod i gael syniadau, a gweld sut maen nhw'n gweithio. Mae gan y prosiect "Osgoi'r asteroidau" isod yr holl nodweddion hyn:
+Each example project in the Introduction allows you to look at the code, get ideas, and see how they work.
 
-Tarwch olwg ar rai prosiectau Osgoi'r rhwystrau wedi'u creu gan aelodau o'r gymuned yn [Osgoi'r rhwystrau - Llyfrgell gymunedol](https://wke.lt/w/s/KobNfx){:target="_blank"} y Raspberry Pi Foundation.
+The "Dodge Asteroids" project below has all of these features:
 
 **Dodge asteroids**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
