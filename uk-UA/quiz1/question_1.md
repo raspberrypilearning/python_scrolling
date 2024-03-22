@@ -1,17 +1,17 @@
-## Швидкий тест
+## Quick quiz
 
-Дай відповідь на три запитання. Підказки допоможуть знайти правильну відповідь.
+Answer the three questions. There are hints to guide you to the correct answer.
 
-Відповівши на кожне питання, натисни на **Перевірити мою відповідь**.
+When you have answered each question, click on **Check my answer**.
 
-Розважайся!
+Have fun!
 
 --- question ---
 ---
-legend: Питання 1 з 3
+legend: Question 1 of 3
 ---
 
-Ти використовував (ла) багато операторів `if`, щоб контролювати процеси у твоїй грі. Деякі з них можуть мати більш складні умови, використовуючи `and`, щоб робити багато процесів водночас. Якщо запустити наступний фрагмент коду з умовами, якого результату слід очікувати?
+You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
 
 ```python
 score = 5000
@@ -38,42 +38,42 @@ else:
 
 - ( )
 ```
-Чудовий політ!
+Great flying!
 ```
   --- feedback ---
 
-Поки `score >= 5000` - це істина, то для умови `and` обидві частини повинні відповідати істині, та `lives >= 3` - хибою.
+While `score >= 5000` is true, for an `and` condition both parts must be true, and `lives >= 3` is false.
 
   --- /feedback ---
 
 - (x)
 ```
-Все добре!
-Не зупиняйся!
+Doing well!
+Keep going!
 ```
   --- feedback ---
 
-Правильно! `score >= 5000` - це істина, так само, як і `lives > 1` у вкладеному операторі `if`.
+This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
 
   --- /feedback ---
 
 - ( )
 ```
-Все добре!
+Doing well!
 ```
   --- feedback ---
 
-Близько, але `score >= 5000` - не єдина умова, яку програма визнає істинною під час виконання.
+Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
 
   --- /feedback ---
 
 - ( )
 ```
-Сильніше!
+Push harder!
 ```
   --- feedback ---
 
-Поки `lives > 1` - це істина, виконується тільки код всередині першої істинної умови в операторі `if`/`elif`/`else`, і `lives > 1` не є першою умовою, яка відповідає істині.
+While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
 
   --- /feedback ---
 
