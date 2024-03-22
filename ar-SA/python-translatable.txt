@@ -1,12 +1,12 @@
 safe
 
-crashed_player
+safe_player
 
 player_y
 
 player
 
-safe_player
+crashed_player
 
 player_x
 
