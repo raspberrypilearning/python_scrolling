@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend: प्रश्न 3 पैकी 3
+legend: Question 3 of 3
 ---
 
 You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
