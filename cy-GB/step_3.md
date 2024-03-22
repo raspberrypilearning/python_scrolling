@@ -24,10 +24,10 @@ Diffiniwch swyddogaeth `llunio_rhwystrau()`:
 --- code ---
 ---
 language: python filename: main.py - draw_obstacles() line_numbers: false line_number_start:
-filename: main.py - llunio_rhwystrau()
+line_highlights: 4
 ---
 
-def llunio_rhwystrau(): rh_x = width/2 rh_y = height/2 text('🌵', rh_x, rh_y) #Disodli gyda'ch rhwystr
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -36,11 +36,10 @@ Ychwanegwch god at `draw()` i alw `llunio_rhwystrau()` bob ffrâm.
 --- code ---
 ---
 language: python filename: main.py - draw() line_numbers: false line_number_start:
-filename: main.py - draw()
+line_highlights: 5
 ---
 
-def draw(): diogel = color(200, 100, 0) #Ychwanegwch liw eich thema background(diogel)  
-llunio_rhwystrau() #Cyn llunio'r chwaraewr llunio_chwaraewr()
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe) draw_obstacles()  # Before drawing the player draw_player()
 
 --- /code ---
 
@@ -58,17 +57,17 @@ llunio_rhwystrau() #Cyn llunio'r chwaraewr llunio_chwaraewr()
 title: Defnyddio delwedd ddechreuol
 ---
 
-Cliciwch yr eicon **manage images**.
+Images included in the starter project will be shown in the `Image gallery`.
 
-![Yr eicon delweddau yng nghornel dde uchaf yr ardal cod.](images/starter-images.png)
+![The Image gallery displaying the included images.](images/starter-images.png)
 
-Bydd delweddau yn y prosiect dechreuol wedi'u dangos yn y rhestr `Image library`.
+Make a note of the name of the image you want to use.
 
 Load the image into the `setup()` function
 
 --- code ---
 ---
-Llwythwch y ddelwedd i'r swyddogaeth `setup()`.
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 12
 ---
 
@@ -99,7 +98,7 @@ def draw_obstacles(): ob_x = width/2 ob_y = height/2
 title: Defnyddio cymeriadau emoji
 ---
 
-image(rhwystr, rh_x, rh_y, 30, 30) #Newidiwch y maint i gyd-fynd â'ch thema
+You can use emoji characters in the p5 `text()` function to represent your obstacles.
 
 Here's an example:
 
@@ -109,7 +108,7 @@ language: python
 filename: main.py - setup()
 ---
 
-Fe allwch chi ddefnyddio cymeriadau emoji yn y swyddogaeth p5 `text()` i gynrychioli eich rhwystrau.
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -180,7 +179,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-Mae `rh_y %= height` yn gosod y safle `y` ar gyfer y gweddill pan gaiff ei rannu â `height`. Gyda `height` o '400', bydd hyn yn troi `401` yn `1` felly pan fydd y rhwystrau'n diflannu oddi ar waelod y sgrin, mae'n ailymddangos ar y brig.
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count  # Increases each frame ob_y %= height  # Wrap around text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -203,7 +202,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-Mae'r cod hwn yn defnyddio dolen `for` gyda `randint()` i ddewis safleoedd rhwystrau i chi. Mae galw'r swyddogaeth `seed()` ar hap yn gyntaf yn golygu byddwch chi'n cael yr un rhifau ar hap bob amser. Mae hyn yn golygu na fydd y rhwystrau'n neidio o gwmpas bob ffrâm a'ch bod yn gallu newid y dosbarthiad nes eich bod yn cael un sy'n lleoli'r rhwystrau'n deg.
+def draw_obstacles(): seed(12345678)  # Any number is fine
 
     for i in range(6):  
         ob_x = randint(0, height)
@@ -230,7 +229,7 @@ Testing your program has the potential to induce seizures for people with photos
 - Gwneud yn siŵr eich bod wedi ychwanegu'r llinell cod `seed()` i sicrhau nad yw eich rhwystrau'n neidio o gwmpas
 - Gofyn i rywun ei rhedeg ar eich rhan
 - Symud ymlaen a chwblhau'r prosiect, gan ofyn i rywun redeg y prosiect i chi ar y diwedd er mwyn i chi allu difa chwilod
-- Newid y gyfradd fframiau cyn rhedeg eich rhaglen drwy ychwanegu `frame_rate(1)` ar ddechrau `setup()` — fe allwch chi dynnu hwn ar ôl cadarnhau nad oes chwilen
+- Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
 
 ```python
 run(frame_rate = 10)
@@ -275,7 +274,7 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-Tarwch olwg ar eich swyddogaeth sy'n llunio nifer o rwystrau:
+def draw_obstacles(): seed(12345678)
 
     for i in range(6):  
         ob_x = randint(0, height)
@@ -292,7 +291,7 @@ Tarwch olwg ar eich swyddogaeth sy'n llunio nifer o rwystrau:
 title: Mae'r rhwystrau'n newid safle bob tro mae ffrâm yn cael ei llunio
 ---
 
-def llunio_rhwystrau():
+Make sure that you have used `seed()` inside the function that draws multiple obstacles.
 
 --- /collapse ---
 
