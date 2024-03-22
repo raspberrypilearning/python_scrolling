@@ -1,24 +1,24 @@
-## Detecção de colisão
+## Collision detection
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Os jogos de corredor sem fim geralmente terminam quando o jogador colide com um obstáculo.
+Endless runner games often end when the player collides with an obstacle.
 </div>
 <div>
 
-![Imagem da etapa concluída.](images/collision.png){:width="300px"}
+![Image of finished step.](images/collision.png){:width="300px"}
 
 </div>
 </div>
 
-Agora você pode configurar seu jogador para reagir à uma colisão de obstáculos.
+Now you can set up your player to react to an obstacle collision.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Detecção de colisão**</span> determina quando dois objetos criados dentro de uma simulação de computador — seja um jogo, uma animação ou qualquer outra coisa — estão se tocando. Existem várias maneiras de fazer isso, por exemplo: 
-  - verificando se as cores que aparecem no local de um objeto são as cores desse objeto ou outras
-  - acompanhando a forma de cada objeto e verificando se essas cores formas se sobrepõem
-  - criando um conjunto de pontos de limite, ou linhas, ao redor de um objeto e verificando se eles entram em contato com quaisquer outros objetos 'colidíveis'
-Quando tal colisão é detectada, o programa pode reagir de alguma forma. In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a power up).
+<span style="color: #0faeb0">**Collision detection**</span> is determining when two objects created inside a computer simulation — whether that's a game, and animation, or something else — are touching. There are several ways to do this, for example: 
+  - checking if the colours appearing at the location of an object are the colours of that object, or a different one
+  - keeping track of the shape of every object, and checking if those shapes overlap
+  - creating a set of boundary points, or lines, around an object and checking if they come into contact with any other 'collidable' objects
+When such a collision is detected, the program can react in some way. In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a power up).
 </p>
 
 --- task ---
@@ -101,11 +101,11 @@ title: There is no collision when the player reaches an obstacle
 
 If your player character touches the obstacle and nothing happens, there are a few things you should check:
 
- - Make sure you call `draw_obstacles()` before `draw_player()`. Se você verificar as colisões antes de desenhar os obstáculos em um quadro, não haverá nenhum obstáculo para colidir!
- - Certifique-se de usar exatamente a mesma cor ao desenhar o objeto e verificar a colisão na instrução `if`. Você pode ter certeza disso usando a mesma variável `global` em ambos os lugares.
- - Você está desenhando o jogador antes de verificar a cor nas coordenadas do mouse? Nesse caso, você só obterá as cores do jogador. Você precisa verificar a cor primeiro e **depois** desenhar o jogador.
+ - Make sure you call `draw_obstacles()` before `draw_player()`. If you check for collisions before drawing the obstacles in a frame, then there won't be any obstacles to collide with!
+ - Make sure you are using the exact same colour when drawing the object and in the `if` statement checking for the collision. You can make sure of this by using the same `global` variable in both places.
+ - Are you drawing the player character before checking the colour at the mouse coordinates? If so, you are only ever going to get the colours from the player. You need to check the colour first and **then** draw the player.
  - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
- - Você identou o código corretamente para sua instrução `if` para que seja executado quando a condição for atendida?
+ - Have you correctly indented the code for your `if` statement so it runs when the condition is met?
 
 Printing the colour of the pixel you are checking for a collision can be useful:
 
