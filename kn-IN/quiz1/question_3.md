@@ -1,6 +1,6 @@
 --- question ---
 ---
-ವಿಷಯಸೂಚಿ: ಪ್ರಶ್ನೆ 3
+legend: Question 3 of 3
 ---
 
 You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
@@ -21,7 +21,7 @@ It's great to get feedback, but you shouldn't change your game just to keep one 
 
   --- feedback ---
 
-ಹಾಗೆನಿಲ್ಲ. It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
+Not quite. It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
 
   --- /feedback ---
 
@@ -29,7 +29,7 @@ It's great to get feedback, but you shouldn't change your game just to keep one 
 
   --- feedback ---
 
-ಸರಿ! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
+Correct! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
 
   --- /feedback ---
 
@@ -37,7 +37,7 @@ It's great to get feedback, but you shouldn't change your game just to keep one 
 
   --- feedback ---
 
-ಇಲ್ಲ! You shouldn't feel sad if someone suggests improvements to your game. Constructive feedback is really useful and can help improve your game. You should be pleased that they were interested enough in your game to give feedback.
+No! You shouldn't feel sad if someone suggests improvements to your game. Constructive feedback is really useful and can help improve your game. You should be pleased that they were interested enough in your game to give feedback.
 
   --- /feedback ---
 
