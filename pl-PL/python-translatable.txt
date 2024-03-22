@@ -1,38 +1,38 @@
-safe
+bezpieczny
 
 draw_player
 
-player_y
+gracz_y
 
-player
+gracz
 
 draw_player
 
-mouse_x
+mysz_x
 
-image_file
+plik_obrazu
 
 x_coord
 
 y_coord
 
-width
+szerokość
 
-height
+wysokość
 
-draw_obstacles
+rysowanie_przeszkód
 
-ob_x
+położnik_x
 
-ob_y
+położnictwo_y
 
-obstacle
+przeszkoda
 
-collide
+zderzenie
 
-level
+poziom
 
-score
+wynik
 
-message
+wiadomość
 
