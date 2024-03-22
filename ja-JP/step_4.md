@@ -16,12 +16,12 @@
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
 <span style="color: #0faeb0">**衝突検出**</span> とは、コンピューターシミュレーション（ゲームであるか、アニメーションであるか、その他のものであるか）内に作られた2つのものがぶつかったかを見つけ出すことです。 これを行うには、いくつかの方法があります。たとえば、 
   - 対象となるものの位置に表示されている色がその対象物の色であるか、別のものの色であるかをチェックする。 - すべてのものの姿を追跡し、それらが重なっているかどうかをチェックする。 - 対象となるものの周囲に境界を示す点または線を作成し、それらが他の「衝突するかもしれない」ものに触れたかどうかをチェックする。
-このような衝突が検出されると、プログラムは何らかの方法で反応することができます。 ビデオゲームでは、これは通常、ダメージを与える（プレイヤーが敵または障害物と衝突する場合）か、利益を与える（プレイヤーがパワーアップアイテムと衝突する場合）ためです。
+このような衝突が検出されると、プログラムは何らかの方法で反応することができます。 In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a power up).
 </p>
 
 --- task ---
 
-`draw_player()` 関数で、 `collide` という変数を作成し、プレーヤーの位置の色を取得するように設定します。
+In your `draw_player()` function, create a variable called `collide` and set it to get the hexadecimal (hex) colour value at the position of the player.
 
 --- code ---
 ---
@@ -29,7 +29,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-    collide = get(mouse_x, player_y)
+    collide = get(mouse_x, player_y).hex
 
 --- /code ---
 
@@ -37,22 +37,22 @@ filename: main.py - draw_player()
 
 --- task ---
 
-if collide == safe: #背景上 image(skiing, mouse_x, player_y, 30, 30) else: #ぶつかった image(crashed, mouse_x, player_y, 30, 30)
+Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
 
-`if colide == safe` 条件の中にプレーヤーを描くコードを移動し、 `else` ステートメントの中に、プレーヤーが衝突に反応するコードを追加します。
+Move your code to draw your player inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision.
 
-**選択：** プレーヤーにどう反応させますか？ こんなことができます:
-+ プレーヤーの絵文字を別のものにする
-+ `tint()` を使用して画像の見た目を変えることができます。 その場合、画像を描いた後に `no_tint()` を呼び出すことを忘れないでください。
+**Choose:** How should your player react? You could:
++ Use a different emoji for the player
++ You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image
 
 --- collapse ---
 ---
-title: 絵文字を使用する
+title: Use emoji characters
 ---
 
-p5の `text()` 関数で絵文字を使えるので、ぶつかったプレーヤーを絵文字で表すことができます。
+You can use emoji characters in the p5 `text()` function to represent your collided player.
 
-次に例を示します：
+Here's an example:
 
 --- code ---
 ---
@@ -60,7 +60,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #絵文字の大きさ text_align(CENTER, TOP) #真ん中に置く
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -70,7 +70,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player(): if collide == safe: #背景上 text('🎈', mouse_x, player_y) else: #ぶつかった text('💥', mouse_x, player_y)
+def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x, player_y) else:  # Collided text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -84,63 +84,38 @@ def draw_player(): if collide == safe: #背景上 text('🎈', mouse_x, player_y
 
 --- task ---
 
-**テスト：** 衝突が検出されること、衝突のたびに反応が起こることを確認します。
+**Test:** Check if a collision is detected and the reaction takes place each time a collision occurs.
 
 --- /task ---
 
 --- task ---
 
-**デバッグ：** プロジェクトに修正が必要なバグが見つかる場合があります。 一般的なバグは次のとおりです。
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- collapse ---
 ---
-title: プレイヤーが障害物に達しても衝突が起きない
+title: There is no collision when the player reaches an obstacle
 ---
 
-プレイヤーキャラクターが障害物に触れても何も起こらない場合、チェックすることがいくつかあります。
+If your player character touches the obstacle and nothing happens, there are a few things you should check:
 
- - `draw_players()`の前に `draw_obstacles()` を呼び出していることを確認してください。 フレームで障害物を描く前に衝突をチェックしても、その時点では衝突する障害物はありません！
+ - Make sure you call `draw_obstacles()` before `draw_player()`. フレームで障害物を描く前に衝突をチェックしても、その時点では衝突する障害物はありません！
  - オブジェクトを描く色と、 `if` ステートメントで衝突をチェックする色が、まったく同じであることを確認してください。 どちらにも、同じ `グローバル` 変数を使用すれば確実です。
  - マウス座標の色を確認する前に、プレイヤーキャラクターを描いていますか？ もしそうなら、あなたはプレイヤーの色を取得しているだけです。 最初に色を確認**してから** プレイヤーを描く必要があります。
- - 衝突が検出されたときに、色合いを変えたり、別の画像を使ったりするなど、なにか別のことを行うコードが `else` の部分にありますか？
+ - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
  - 条件が満たされたときにコードが実行されるように、 `if` ステートメントのコードを正しくインデントしましたか？
 
-衝突をチェックするピクセルの色を出力(print) することも有効です。
+Printing the colour of the pixel you are checking for a collision can be useful:
 
 ```python
     print(red(collide), green(collide), blue(collide))
 ```
 
-チェックするポイントの周りに円を描き、必要に応じてチェックするポイントを調整することもできます。
+You can also print a circle around the point you are checking and adjust the point you check if you need to:
 
 ```python
-    def draw_player():
-
-  player_y = int(height * 0.8)
-  #デバッグに有効
-  #衝突をチェックするピクセルの周りに円を描く
-
-  no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #衝突点の描画
-  ellipse(mouse_x, player_y + 40, 10, 10)
-  ellipse(mouse_x - 12, player_y + 20, 10, 10)
-  ellipse(mouse_x + 12, player_y + 20, 10, 10)
-
-  collide = get(mouse_x, player_y)
-  collide2 = get(mouse_x - 12, player_y + 20)
-  collide3 = get(mouse_x + 12, player_y + 20)
-  collide4 = get(mouse_x, player_y + 40)
-
-  if mouse_x < width: #スクリーンの左に外れた
-    collide2 = safe
-
-  if mouse_x > width: #スクリーンの右に外れた
-    collide3 = safe
-
-  if collide == safe and collide2 == safe and collide3 == safe and collide4 == safe:
-    text('🎈', mouse_x, player_y)
-  else:
-    text('💥', mouse_x, player_y)
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
 ```
 
 --- /collapse ---
@@ -149,21 +124,46 @@ title: プレイヤーが障害物に達しても衝突が起きない
 
 --- task ---
 
-**オプション：** 現時点では、プレーヤーの1つのピクセルで衝突を検出しているだけです。 プレーヤーのエッジにある他のピクセル（下の端、左または右の端など）での衝突を検出することもできます。
+**Optional:** At the moment, you are just detecting collisions at one pixel on your player. You could also detect collisions at other pixels at the edge of your player, such as the bottom or left- and right-most edges.
 
 --- collapse ---
 ---
-title: いくつかのピクセルでの衝突検出
+title: Collision detection with multiple pixels
 ---
 
 ```python
-no_fill()
-  ellipse(mouse_x, player_y, 10, 10) #衝突点の描画
+def draw_player():
+
+    player_y = int(height * 0.8)
+    # Useful for debugging
+    # Draw circles around the pixels to check for collisions
+
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
+    ellipse(mouse_x, player_y + 40, 10, 10)
+    ellipse(mouse_x - 12, player_y + 20, 10, 10)
+    ellipse(mouse_x + 12, player_y + 20, 10, 10)
+
+    collide = get(mouse_x, player_y).hex
+    collide2 = get(mouse_x - 12, player_y + 20).hex
+    collide3 = get(mouse_x + 12, player_y + 20).hex
+    collide4 = get(mouse_x, player_y + 40).hex
+
+    if mouse_x < width:  # Off the left of the screen
+        collide2 = safe.hex
+
+    if mouse_x > width:  # Off the right of the screen
+        collide3 = safe.hex
+
+    if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
+        text('🎈', mouse_x, player_y)
+    else:
+        text('💥', mouse_x, player_y)
 ```
 
 --- /collapse ---
 
-ループを使用して、さまざまなピクセルをチェックすることもできます。 これが、ゲームで衝突を検出する仕組みです。
+You could even use a loop and check lots of different pixels. This is how collision detection works in games.
 
 --- /task ---
 
