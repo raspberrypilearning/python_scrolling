@@ -1,22 +1,22 @@
-## Вибір теми
+## Set the theme
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Встанови тему своєї гри та створи персонажа, який буде слідувати за курсором миші.
+Set the theme of your game and create a player character that follows the mouse pointer.
 
 </div>
 <div>
 
-![Зображення черепахи розміром 100х100 на синьому фоні з розміром екрана 400х400.](images/theme-turtle.png){:width="300px"}
+![Image of cartoon turtle viewed from above set against a blue background.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-Яка тематика твоєї гри? Here are some ideas:
-- Спорт або хобі
-- Фільм, шоу або гра
-- Наука або природа
-- Або що-небудь інше!
+What is the theme of your game? Here are some ideas:
+- Sports
+- Hobbies
+- Science
+- Nature
 
 --- task ---
 
@@ -32,9 +32,8 @@ If you have a Raspberry Pi account, you can click on the **Save** button to save
 
 --- code ---
 ---
-def setup():    
-size(400, 400)
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
+line_highlights: 10
 ---
 
 def setup(): size(400, 400)
@@ -45,16 +44,14 @@ def setup(): size(400, 400)
 
 --- task ---
 
-Це колір, на якому гравець може безпечно перебувати, і ти будеш використовувати цю змінну пізніше.
+Create a variable called `safe` to store the background colour based on the theme you want for your game.
 
 This is the colour that it is safe for the player to be on and you will use this variable again later.
 
 --- code ---
 ---
-def draw():    
-safe = color(200, 100, 0) #Додай колір, відповідно до твоєї теми   
-background(safe)
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 13
+line_highlights: 14, 15, 16
 ---
 
 def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
@@ -77,14 +74,13 @@ The player will appear at a fixed `y` position and same `x` position as the mous
 
 --- task ---
 
-Визнач функцію `draw_player()` та створи позицію `player_y`, для фіксації позиції гравця `y`:
+It's a good idea to organise the code for drawing the player character into a function.
 
 Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
 
 --- code ---
 ---
-def draw_player():    
-player_y = int(height * 0.8) #Розташування в напрямку до нижньої частини екрана
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 12
 line_highlights: 12-14
 ---
 
@@ -96,11 +92,8 @@ Add code to `draw()` to call `draw_player()` each frame.
 
 --- code ---
 ---
-def draw():    
-safe = color(200, 100, 0) #Обраний тобою колір    
-background(safe)    
-draw_player()
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 15
+line_highlights: 19
 ---
 
 def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
@@ -114,13 +107,13 @@ Next you will add code to the `draw_player()` function to draw your shape. You m
 --- task ---
 
 **Choose:** What does your player look like? Your player could be:
-+ Зображення, які наведені у стартовому проєкті
-+ Емодзі 🎈 або текст
-+ Малюнок, виконаний за допомогою декількох фігур
++ An image provided in the starter project
++ An emoji 🎈 or text
++ Drawn using a series of shapes
 
 --- collapse ---
 ---
-title: Використання стартового зображення
+title: Use a starter image
 ---
 
 Images included in the starter project will be shown in the `Image gallery`.
@@ -129,12 +122,12 @@ Images included in the starter project will be shown in the `Image gallery`.
 
 Make a note of the name of the image you want to use.
 
-Запиши назву зображення, яке ти хочеш використати.
+Load the image into the `setup()` function
 
 --- code ---
 ---
 language: python filename: main.py - setup() line_numbers: true line_number_start: 9
-filename: main.py - setup()
+line_highlights: 11-12
 ---
 
 def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
@@ -157,7 +150,7 @@ def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen
 
 --- collapse ---
 ---
-title: Використання символів емодзі
+title: Use emoji characters
 ---
 
 You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
@@ -166,11 +159,11 @@ Here's an example:
 
 --- code ---
 ---
-Ти можеш використовувати символи емодзі у функції p5 `text()`, щоб зобразити свого персонажа у вигляді емодзі.
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
+line_highlights: 11-13
 ---
 
-Ось приклад:
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -206,7 +199,7 @@ def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
 
 --- collapse ---
 ---
-title: Малювання персонажа за допомогою декількох фігур
+title: Draw a player using multiple shapes
 ---
 
 ![A face shape made from a green circle as a background and two eyes drawn from blue circles, with black circles within and a glint within those using a white circle.](images/face_player.png)
@@ -250,7 +243,7 @@ Does it move like you expect?
 
 --- collapse ---
 ---
-title: Я не бачу персонажа
+title: I can't see the player
 ---
 
 Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
@@ -259,7 +252,7 @@ Try switching to full screen. Also, check the `x` and `y` coordinates that you u
 
 --- collapse ---
 ---
-title: Зображення не завантажується
+title: An image isn't loading
 ---
 
 First, check that the image is in the `Image gallery`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
@@ -268,7 +261,7 @@ First, check that the image is in the `Image gallery`. Then, check the filename 
 
 --- collapse ---
 ---
-title: Зображення має неправильний розмір
+title: An image is the wrong size
 ---
 
 Check the inputs that control the width and height of the image:
@@ -281,10 +274,10 @@ image(image_file, x_coord, y_coord, width, height)
 
 --- collapse ---
 ---
-title: Емодзі має неправильний розмір
+title: An emoji is the wrong size
 ---
 
-Слід перевірити код, який визначає ширину та висоту зображення:
+If your emoji is too big or too small, change the value in `text_size()`.
 
 --- /collapse ---
 
