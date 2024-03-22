@@ -21,7 +21,7 @@ Maak een `global` `level` variabele om het niveau van de speler bij te houden. S
 
 --- code ---
 ---
-language: python filename: main.py
+language: python filename: main.py line_numbers: true line_number_start: 6
 line_highlights: 7
 ---
 
@@ -41,14 +41,14 @@ Deze code gebruikt de `height` en de `frame_count` om de variabele `level` te ve
 --- code ---
 ---
 language: python
-language: python filename: main.py — teken_obstakels()
+filename: main.py — draw_obstacles()
 ---
 
-global level #Gebruik het global level
+def draw_obstacles(): global level  # Use the global level
 
-    if frame_count % height == height - 1 and level &#060; 5: 
-        level += 1 
-        print('Je hebt level', level, 'bereikt')
+    if frame_count % height == height - 1 and level < 5:
+        level += 1
+        print('You have reached level', level)
 
 --- /code ---
 
@@ -71,15 +71,15 @@ Als je naar de code kijkt, zou je kunnen verwachten dat de snelheid met meer dan
 
 --- code ---
 ---
-language: python filename: main.py — teken_obstakels()
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6): 
-        obstakel_x = randint(0, height) 
-        obstakel_y = randint(0, height) + (frame_count * level) 
-        obstakel_y %= height #Omwentelen 
-        text('🌵', obstakel_x, obstakel_y)
+    for i in range(6):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -131,11 +131,13 @@ language: python
 filename: main.py — draw_player()
 ---
 
-    if botsen == veilig: 
-        text('🎈', muis_x, speler_y) 
-        score += level 
-      else: 
-        text('💥', muis_x, speler_y)
+    global score
+    
+    if collide == safe.hex:
+        text('🎈', mouse_x, player_y)
+        score += level
+    else:
+        text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -150,7 +152,7 @@ Spelers moeten hun score kunnen zien. Omdat het zo snel toeneemt, zou het gebrui
 Je kunt de operator `+` gebruiken om twee of meer tekenreeksen te combineren als je een koptekst wilt geven zoals 'score' of 'punten'. Omdat `score` een getal is, moet je het naar een tekenreeks converteren voordat je het kunt samenvoegen met een andere tekenreeks. Je kunt dit doen met `str()`:
 
 ```python
-boodschap = 'Score: ' + str(score)
+message = 'Score: ' + str(score)
 ```
 **Tip:** `str()` is een afkorting voor 'string' — programmeurs verwijderen vaak letters op deze manier, zodat ze niet zoveel hoeven te typen!
 
@@ -184,7 +186,7 @@ title: De score wordt niet weergegeven
 Zorg ervoor dat je de functie `text()` hebt opgenomen die de score van de speler op het juiste punt tekent in je functie `draw()`, en dat je deze de juiste waarden hebt doorgegeven:
 
 ```python
-text('Te tonen tekst', x, y)
+text('Text to display', x, y)`
 ```
 
 Het zou er ongeveer zo uit moeten zien:
@@ -195,12 +197,12 @@ language: python
 filename: main.py — draw()
 ---
 
-    if level &#062; 0: 
-        background(veilig) 
-        fill(255) 
-        text('Score: ' + str(score), width/2, 20) 
-        teken_obstakels() 
-        teken_speler()
+    if level > 0:
+        background(safe) 
+        fill(255)
+        text('Score: ' + str(score), width/2, 20)
+        draw_obstacles()
+        draw_player()
 
 --- /code ---
 
@@ -221,12 +223,12 @@ language: python
 filename: main.py — draw()
 ---
 
-    if level &#062; 0: 
-        background(veilig) 
-        fill(255) 
-        text('Score: ' + str(score), width/2, 20) 
-        teken_obstakels() 
-        teken_speler()
+    if level > 0:
+        background(safe)
+        fill(255)
+        text('Score: ' + str(score), width/2, 20)
+        draw_obstacles()
+        draw_player()
 
 --- /code ---
 
@@ -238,11 +240,11 @@ language: python
 filename: main.py — draw_player()
 ---
 
-    if botsen == veilig: 
-        text('🎈', muis_x, speler_y) 
-        score += level 
-      else: 
-        text('💥', muis_x, speler_y) 
+    if collide == safe.hex:
+        text('🎈', mouse_x, player_y)
+        score += level
+    else:
+        text('💥', mouse_x, player_y)
         level = 0
 
 --- /code ---
@@ -260,15 +262,15 @@ Als het level correct stijgt, controleer dan je `teken_obstakels()` functie. Con
 
 --- code ---
 ---
-language: python filename: main.py — teken_obstakels()
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6 + level): 
-        obstakel_x = randint(0, height) 
-        obstakel_y = randint(0, height) + (frame_count * level) 
-        obstakel_y %= height #Omkeren 
-        text('🌵', obstakel_x, obstakel_y)
+    for i in range(6 + level):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -285,15 +287,15 @@ Als het niveau correct stijgt, controleer dan je functie `teken_obstakels()` om 
 
 --- code ---
 ---
-language: python filename: main.py — teken_obstakels()
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6 + level): 
-        obstakel_x = randint(0, height) 
-        obstakel_y = randint(0, height) + (frame_count * level) 
-        obstakel_y %= height #Omkeren 
-        text('🌵', obstakel_x, obstakel_y)
+    for i in range(6 + level):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
