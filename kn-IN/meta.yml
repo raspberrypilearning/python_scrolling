@@ -35,8 +35,8 @@ steps:
     completion:
       - external
   - 
-    title: ನಿಮ್ಮ ಯೋಜನೆಯನ್ನು ಅಪ್‌ಗ್ರೇಡ್ ಮಾಡಿ
+    title: Upgrade your project
   - 
-    title: ಹಂಚಿಕೊಳ್ಳಿ
+    title: Share
   - 
-    title: ಮುಂದೆ ಏನು?
+    title: What next?
