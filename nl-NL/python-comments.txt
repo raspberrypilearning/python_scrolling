@@ -18,9 +18,9 @@ Vervang je obstakel
 
 Voordat je de speler tekent
 
-Laad je speler afbeelding
+Laad je speler-afbeelding
 
-Laad je obstakel afbeelding
+Laad je obstakel-afbeelding
 
 Pas de afmeting aan om bij jouw thema te passen
 
