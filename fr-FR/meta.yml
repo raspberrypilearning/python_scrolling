@@ -2,10 +2,10 @@
 title: Pas de collision !
 hero_image: images/banner.png
 description:
-  - Build an endless runner game where your character must avoid colliding
-  - with obstacles
-meta_title: Python coding projects for kids and teens | Don't collide!
-meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Build a scrolling runner game in Python and avoid obstacles.
+  - Construis un jeu de course sans fin où ton personnage doit éviter d'entrer en collision
+  - avec des obstacles
+meta_title: Projets de codage Python pour enfants et adolescents | Pas de collision !
+meta_description: Apprends le langage Python avec les projets de codage de la Raspberry Pi Foundation pour les enfants et les adolescents. Construis un jeu de course sans fin où ton personnage doit éviter d'entrer en collision avec des obstacles.
 version: 4
 listed: true
 copyedit: true
