@@ -56,7 +56,7 @@ You have reached level
 
 Score: 
 
-テキスト
+Text to display
 
 Great flying!
 
