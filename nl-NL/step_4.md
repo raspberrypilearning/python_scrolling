@@ -62,17 +62,17 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Controleert de grootte van de emoji text_align(CENTER, TOP) #Positie rond het midden
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
 --- code ---
 ---
 language: python
-filename: main.py - teken_speler()
+filename: main.py - draw_player()
 ---
 
-def teken_speler(): if botsen == veilig: #Gelijk aan chtergrondkleur text('🎈', muis_x, speler_y) else: #Gebotst text('💥', muis_x, speler_y)
+def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x, player_y) else:  # Collided text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -110,14 +110,14 @@ Als je speler een obstakel raakt en er gebeurt niets, zijn er een paar dingen di
 Het kan handig zijn om de kleur af te drukken van de pixel waarop je controleert op een botsing:
 
 ```python
-    print(red(botsen), green(botsen), blue(botsen))
+    print(red(collide), green(collide), blue(collide))
 ```
 
 Je kunt ook een cirkel afdrukken rond het punt dat je aan het controleren bent en dat punt aanpassen als dat nodig is:
 
 ```python
     no_fill()
-  ellipse(muis_x, speler_y, 10, 10) #Teken botsingspunt
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
 ```
 
 --- /collapse ---
@@ -134,33 +134,33 @@ title: Botsingsdetectie met meerdere pixels
 ---
 
 ```python
-def teken_speler():
+def draw_player():
 
-  speler_y = int(height * 0.8)
-  #Nuttig voor het opsporen van fouten
-  #Teken cirkels rond de pixels om te controleren op botsingen
+    player_y = int(height * 0.8)
+    # Useful for debugging
+    # Draw circles around the pixels to check for collisions
 
-  no_fill()
-  ellipse(muis_x, speler_y, 10, 10) #Teken botsingspunt
-  ellipse(muis_x, speler_y + 40, 10, 10)
-  ellipse(muis_x - 12, speler_y + 20, 10, 10)
-  ellips(muis_x + 12, speler_y + 20, 10, 10)
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
+    ellipse(mouse_x, player_y + 40, 10, 10)
+    ellipse(mouse_x - 12, player_y + 20, 10, 10)
+    ellipse(mouse_x + 12, player_y + 20, 10, 10)
 
-  botsen = get(muis_x, speler_y)
-  botsen2 = get(muis_x - 12, speler_y + 20)
-  botsen3 = get(muis_x + 12, speler_y + 20)
-  botsen4 = get(muis_x, speler_y + 40)
+    collide = get(mouse_x, player_y).hex
+    collide2 = get(mouse_x - 12, player_y + 20).hex
+    collide3 = get(mouse_x + 12, player_y + 20).hex
+    collide4 = get(mouse_x, player_y + 40).hex
 
-  if muis_x < width: #Voorbij linkerkant van het scherm
-    botsen2 = veilig
+    if mouse_x < width:  # Off the left of the screen
+        collide2 = safe.hex
 
-  if muis_x > width: #Voorbij rechterkant van het scherm
-    botsen3 = veilig
+    if mouse_x > width:  # Off the right of the screen
+        collide3 = safe.hex
 
-  if botsen == veilig and botsen2 == veilig and botsen3 == veilig and botsen4 == veilig:
-    text('🎈', muis_x, speler_y)
-  else:
-    text('💥', muis_x, speler_y)
+    if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
+        text('🎈', mouse_x, player_y)
+    else:
+        text('💥', mouse_x, player_y)
 ```
 
 --- /collapse ---
