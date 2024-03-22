@@ -12,7 +12,7 @@
 
 ![صور لأمثلة مشاريع مختلفة.](images/showcase_projects.png)
 
-### احصل على الإلهام
+### Get ideas 💭
 
 سوف تتخذ بعض قرارات التصميم بشأن نوع اللعبة التي ستقوم بها وكيف ستستخدم الكود للحصول على التأثيرات التي تريدها.
 
@@ -20,7 +20,7 @@
 
 --- task ---
 
-أنظر الى هذه الأمثلة. فكر في كيفية صنع اللاعبين والعقبات.
+Run these examples. فكر في كيفية صنع اللاعبين والعقبات.
 
 ماذا يحدث إذا اصطدمت بعقبة؟ هل تزداد صعوبة كلما لعبت؟
 
@@ -38,7 +38,7 @@
 
 **Clean car**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/clean-car-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> **سيارة نظيفة**: \[راجع الداخل\](https://trinket.io/python/1a0a7ff419){:target="_blank"}
+</iframe> You can find the Clean car project [here](https://editor.raspberrypi.org/en/projects/clean-car-example){:target="_blank"}
 
 **Dodge asteroids**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
@@ -50,7 +50,7 @@
 
 --- print-only ---
 
-سوف تتخذ بعض قرارات التصميم بشأن نوع اللعبة التي ستقوم بها وكيف ستستخدم الكود للحصول على التأثيرات التي تريدها.
+You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
 ![Skiing cat project example](images/example2.png){:width="300px"}
 You can find the Skiing cat project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Don't pop project example](images/example4.png){:width="300px"}
