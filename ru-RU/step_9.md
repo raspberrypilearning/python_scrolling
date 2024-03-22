@@ -1,4 +1,4 @@
-## Что дальше?
+## What next?
 
 If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/pathways/python-intro) pathway, you can move on to the [Powerful patterns](https://projects.raspberrypi.org/en/projects/powerful-patterns) project. In this project, you will create inspirational art that can be scaled using repeated patterns.
 
