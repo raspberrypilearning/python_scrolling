@@ -33,7 +33,7 @@ legend: 質問2/3
 これだけではありません。 これは、ゲームのスタート時、または難易度を上げた結果で新しい障害物が追加されたときに、たまたまプレイヤーの近くの位置であった場合に発生する可能性があります。
 
 
-**ヒント：** 考えられる解決策は、レベルが上がった後しばらくの間、すべての障害物（または新しく生成された障害物だけでも）とぶつかってもプレーヤーは助かるようにすることです。 障害物がプレーヤーに近すぎる場所に障害物が新しい位置を選んだ場合、どのような問題が発生する可能性がありますか？
+**Tip:** A potential solution might be to make the player temporarily immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. 障害物がプレーヤーに近すぎる場所に障害物が新しい位置を選んだ場合、どのような問題が発生する可能性がありますか？
 
   --- /feedback ---
 
@@ -41,7 +41,7 @@ legend: 質問2/3
 
   --- feedback ---
 
-これだけではありません。 乱数発生では、互いに近い数がひとかたまりになることがあるため、この問題が発生する可能性はあります。
+これだけではありません。 Because random generation can choose groups of numbers that are close together, this can be a problem.
 
 
 **ヒント：** ひとつの解決策は、セミランダム生成に切り替えることです。画面を細かく分け、それらの各部分の内部に乱数を使用して障害物を生成します。 この種の手続き型生成を使用して、ゲームをより面白く、またはより挑戦的にする方法を考えられますか？
