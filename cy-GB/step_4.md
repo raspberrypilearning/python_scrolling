@@ -23,7 +23,7 @@ Pan fydd gwrthdrawiad o'r fath yn cael ei ganfod, gall y rhaglen ymateb mewn rhy
 
 --- task ---
 
-Yn eich swyddogaeth `llunio_chwaraewr()`, ewch ati i greu newidyn o'r enw `taro` a'i osod i gael y lliw yn safle'r chwaraewr.
+In your `draw_player()` function, create a variable called `collide` and set it to get the hexadecimal (hex) colour value at the position of the player.
 
 --- code ---
 ---
@@ -31,7 +31,7 @@ language: python
 filename: main.py - draw_player()
 ---
 
-    print(red(taro), green(taro), blue(taro))
+    collide = get(mouse_x, player_y).hex
 
 --- /code ---
 
@@ -41,20 +41,20 @@ filename: main.py - draw_player()
 
 Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
 
-Ewch ati i greu amod i wirio, gan ddefnyddio `if`, a yw'r newidyn `taro` yr un fath â'r newidyn `diogel` — os felly, mae eich chwaraewr yn cyffwrdd y cefndir ac nid yw wedi taro rhwystr.
+Move your code to draw your player inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision.
 
 **Choose:** How should your player react? You could:
-+ Newid y ddelwedd i fersiwn `wedi_taro`
-+ Defnyddio emoji gwahanol i'r chwaraewr
++ Use a different emoji for the player
++ You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image
 
 --- collapse ---
 ---
-title: Newid y ddelwedd
+title: Use emoji characters
 ---
 
 You can use emoji characters in the p5 `text()` function to represent your collided player.
 
-Fe allwch chi ddefnyddio delwedd wahanol i gynrychioli eich chwaraewr pan fydd yn taro rhwystr.
+Here's an example:
 
 --- code ---
 ---
@@ -69,7 +69,7 @@ def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text
 --- code ---
 ---
 language: python
-title: Defnyddio cymeriadau emoji
+filename: main.py - draw_player()
 ---
 
 def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x, player_y) else:  # Collided text('💥', mouse_x, player_y)
@@ -86,7 +86,7 @@ def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x
 
 --- task ---
 
-def setup(): size(400, 400) text_size(40) #Rheoli maint yr emoji text_align(CENTER, TOP) #Lleoli o amgylch y canol
+**Test:** Check if a collision is detected and the reaction takes place each time a collision occurs.
 
 --- /task ---
 
@@ -104,46 +104,20 @@ If your player character touches the obstacle and nothing happens, there are a f
  - Make sure you call `draw_obstacles()` before `draw_player()`. Os byddwch chi'n gwirio am wrthdaro cyn llunio'r rhwystrau mewn ffrâm, ni fydd unrhyw rwystrau i daro mewn iddyn nhw!
  - Gwnewch yn siŵr eich bod yn defnyddio'r union un lliw wrth lunio'r gwrthrych ac yn y datganiad `if` sy'n gwirio am wrthdaro. Fe allwch chi wneud yn siŵr o hyn drwy ddefnyddio'r newidyn `global` mewn dau le.
  - Ydych chi'n llunio'r cymeriad chwarae cyn gwirio'r lliw yng nghyfesurynnau'r llygoden? Os felly, dim ond y lliwiau gan y chwaraewr fyddwch chi'n eu cael bob amser. Rhaid i chi wirio'r lliw yn gyntaf ac **wedyn** llunio'r chwaraewr.
- - Oes gennych chi god yn y rhan `else` i wneud rhywbeth gwahanol pan fydd gwrthdrawiad yn cael ei ganfod, fel rhoi arlliw neu ddefnyddio delwedd wahanol?
+ - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
  - Ydych chi wedi mewnoli'r cod ar gyfer eich datganiad `if` yn gywir fel ei fod yn rhedeg pan fydd yr amod yn cael ei fodloni?
 
 Printing the colour of the pixel you are checking for a collision can be useful:
 
 ```python
-    no_fill()
-  ellipse(mouse_x, chwaraewr_y, 10, 10) #Llunio pwynt gwrthdaro
+    print(red(collide), green(collide), blue(collide))
 ```
 
 You can also print a circle around the point you are checking and adjust the point you check if you need to:
 
 ```python
-    def llunio_chwaraewr():
-
-  chwaraewr_y = int(height * 0.8)
-  #Defnyddiol ar gyfer difa chwilod
-  #Llunio cylchoedd o amgylch y picseli i wirio am wrthdrawiad
-
-  no_fill()
-  ellipse(mouse_x, chwaraewr_y, 10, 10) #Llunio pwynt gwrthdaro
-  ellipse(mouse_x, chwaraewr_y + 40, 10, 10)
-  ellipse(mouse_x - 12, chwaraewr_y + 20, 10, 10)
-  ellipse(mouse_x + 12, chwaraewr_y + 20, 10, 10)
-
-  taro = get(mouse_x, chwaraewr_y)
-  taro2 = get(mouse_x - 12, chwaraewr_y + 20)
-  taro3 = get(mouse_x + 12, chwaraewr_y + 20)
-  taro4 = get(mouse_x, chwaraewr_y + 40)
-
-  if mouse_x < width: #Oddi ar ochr chwith y sgrin
-    taro2 = diogel
-
-  if mouse_x > width: #Oddi ar ochr dde'r sgrin
-    taro3 = diogel
-
-  if taro == diogel and taro2 == diogel and taro3 == diogel and taro4 == diogel:
-    text('🎈', mouse_x, chwaraewr_y)
-  else:
-    text('💥', mouse_x, chwaraewr_y)
+    no_fill()
+    ellipse(mouse_x, player_y, 10, 10)  # Draw collision point
 ```
 
 --- /collapse ---
@@ -156,7 +130,7 @@ You can also print a circle around the point you are checking and adjust the poi
 
 --- collapse ---
 ---
-filename: main.py - llunio_chwaraewr()
+title: Collision detection with multiple pixels
 ---
 
 ```python
