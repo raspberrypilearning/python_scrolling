@@ -35,8 +35,8 @@ steps:
     completion:
       - external
   - 
-    title: तुमचा प्रोजेक्ट अपग्रेड करा
+    title: Upgrade your project
   - 
-    title: शेअर करा
+    title: Share
   - 
-    title: पुढे काय?
+    title: What next?
