@@ -6,7 +6,7 @@ La plupart des jeux de coureurs sans fin augmentent la difficulté du jeu au fur
 </div>
 <div>
 
-![Exemple de projet avec un score textuelle à l'écran.](images/score.png){:width="300px"}
+![Exemple de projet avec un score textuel à l'écran.](images/score.png){:width="300px"}
 
 </div>
 </div>
@@ -92,7 +92,7 @@ title: Ajouter plus d'obstacles
 
 L'ajout d'obstacles supplémentaires consiste simplement à augmenter le nombre de fois que la boucle `for` qui les crée s'exécute. Tu peux le faire en augmentant le nombre que tu passes à la fonction `range()` par `niveau`.
 
-**Astuce :**Bien sûr, tu peux toujours utiliser `niveau* 2`, ou des multiples encore plus grands, si tu veux rendre ton jeu plus difficile.
+**Astuce :** bien sûr, tu peux toujours utiliser `niveau* 2`, ou des multiples encore plus grands, si tu veux rendre ton jeu plus difficile.
 
 --- /collapse ---
 
@@ -123,7 +123,7 @@ score = 0
 
 Tu peux augmenter le score de ton joueur pour chaque image où il n'est pas entré en collision avec un obstacle en augmentant son score lorsque tu vérifies la collision dans `dessine_joueur()`.
 
-**Choisir :** Tu peux décider du nombre de points que vaut chaque image, mais augmenter le score du joueur par `niveau` récompense les joueurs qui peuvent survivre à des niveaux de difficulté plus élevés.
+**Choisir :** tu peux décider du nombre de points que vaut chaque image, mais augmenter le score du joueur par `niveau` récompense les joueurs qui peuvent survivre à des niveaux de difficulté plus élevés.
 
 --- code ---
 ---
@@ -173,7 +173,7 @@ Crée une instruction `if` dans `draw()` qui teste si `niveau > 0` avant d'appel
 
 --- task ---
 
-**Débogage :** Il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues assez courants.
+**Débogage :** il est possible que tu trouves des bogues dans ton projet que tu dois corriger. Voici quelques bogues courants.
 
 --- collapse ---
 ---
@@ -186,7 +186,7 @@ Assure-toi que tu as inclus la fonction `text()` qui dessine le score du joueur 
 text('Texte à afficher', x, y)
 ```
 
-Ça devrait ressembler a quelque chose comme çà :
+Ça devrait ressembler à ceci :
 
 --- code ---
 ---
@@ -253,7 +253,7 @@ title: Le jeu ne va pas plus vite
 
 Vérifie d'abord que `niveau` augmente correctement. Tu devrais voir un message imprimé à chaque fois qu'il monte. Si ce n'est pas le cas, vérifie à la fois le code pour imprimer le message et le code pour augmenter le niveau.
 
-Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()`. En particulier, vérifie que tu as `ob_y = randint(0, height) + (frame_count * niveau)`. Ça devrait ressembler a quelque chose comme çà :
+Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()`. En particulier, vérifie que tu as `ob_y = randint(0, height) + (frame_count * niveau)`. Ça devrait ressembler à ceci :
 
 --- code ---
 ---
@@ -276,9 +276,9 @@ line_numbers: false
 title: Les nouveaux obstacles n'apparaissent pas
 ---
 
-Il y a plusieurs raisons pour lesquelles cela pourrait se produire. Et il y a d'autres raisons pour lesquelles cela peut sembler se produire, alors que ce n'est pas le cas. Tout d'abord, étant donné que de nouveaux obstacles sont ajoutés en fonction de `niveau`, vérifie que `niveau` augmente correctement. Tu devrais voir un message imprimé à chaque fois qu'il monte. Si ce n'est pas le cas, vérifie à la fois le code pour imprimer le message et le code pour augmenter le niveau.
+Il y a plusieurs raisons pour lesquelles cela pourrait se produire. Et il y a d'autres raisons pour lesquelles cela peut sembler se produire, alors que ce n'est pas le cas. Tout d'abord, étant donné que de nouveaux obstacles sont ajoutés en fonction de `niveau`, vérifie que `niveau` augmente correctement. Tu devrais voir un message imprimé chaque fois qu'il monte. Si ce n'est pas le cas, vérifie à la fois le code pour imprimer le message et le code pour augmenter le niveau.
 
-Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()` pour t'assurer que tu as utilisé `niveau` dans la fonction `range()` de la boucle `for` qui dessine les obstacles. Ça devrait ressembler a quelque chose comme çà :
+Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()` pour t'assurer que tu as utilisé `niveau` dans la fonction `range()` de la boucle `for` qui dessine les obstacles. Ça devrait ressembler à ceci :
 
 --- code ---
 ---
@@ -301,7 +301,7 @@ Si tu as effectué toutes ces vérifications et qu'il ne semble toujours pas que
 run(frame_rate = 10)
 ```
 
-You can alter the speed of the game by changing `10` to a higher or lower value.
+Tu peux modifier la vitesse du jeu en changeant `10` en une valeur supérieure ou inférieure.
 
   - Change la seed que tu utilises pour tes nombres aléatoires. C'est peu probable, mais il est possible que certains obstacles apparaissent au hasard directement les uns sur les autres
   - Ajoute un `print()` à la boucle `for` dans `dessine_obstacles()` qui imprime la valeur de `i` à chaque passage de la boucle, afin que tu puisses vérifier si elle s'exécute le nombre de fois qu'elle devrait
