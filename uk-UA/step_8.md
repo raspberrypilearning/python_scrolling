@@ -1,10 +1,10 @@
-## Поділитися
+## Share
 
-Якщо ти перебуваєш у клубі, чому б не поділитися своїм проєктом з друзями?
+If you are in a club, why not share your project with friends?
 
 --- task ---
 
-Щоб отримати посилання, натисни на кнопку **Share** у правому верхньому куті сторінки твого редактора Trinket та вибери **Link**.
+Inspire the Raspberry Pi Foundation community with your project!
 
 To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
