@@ -32,12 +32,11 @@ Als je een Raspberry Pi-account hebt, kun je op de **Save** knop klikken om een 
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 10
 ---
 
-def setup():    
-size(400, 400)
+def setup(): size(400, 400)
 
 --- /code ---
 
@@ -51,13 +50,11 @@ Dit is de kleur waarop de speler veilig kan staan en je zult deze variabele late
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 13
 line_highlights: 14, 15, 16
 ---
 
-def draw():    
-veilig = color(200, 100, 0) #Voeg de kleur van je thema toe   
-background(veilig)
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
 
 --- /code ---
 
@@ -83,12 +80,11 @@ Definieer een `teken_speler()` functie en creëer een `speler_y` positie voor de
 
 --- code ---
 ---
-filename: main.py - teken_speler()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 12
 line_highlights: 12-14
 ---
 
-def teken_speler():    
-speler_y = int(height * 0.8) #Gepositioneerd naar de onderkant van het scherm
+def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom
 
 --- /code ---
 
@@ -96,14 +92,11 @@ Voeg code toe aan `draw()` om `teken_speler()` voor elk frame aan te roepen.
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 15
 line_highlights: 19
 ---
 
-def draw():    
-veilig = color(200, 100, 0) #Jouw gekozen kleur    
-background(veilig)    
-teken_speler()
+def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
 
 --- /code ---
 
@@ -133,13 +126,11 @@ Laad de afbeelding in de `setup()` functie
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 11-12
 ---
 
-def setup():   
-size(400, 400)    
-speler = load_image('skiing.png') #Laad je afbeelding
+def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
 
 --- /code ---
 
@@ -147,12 +138,11 @@ Roep de `image()` aan en stel deze in als global in de `teken_speler()` functie.
 
 --- code ---
 ---
-filename: main.py - teken_speler()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
 line_highlights: 16
 ---
 
-def teken_speler():    
-speler_y = int(height * 0.8) #Gepositioneerd naar de onderkant van het scherm
+def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -169,14 +159,11 @@ Hier is een voorbeeld:
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 11-13
 ---
 
-def setup():    
-size(400, 400)     
-text_size(40) #Bepaalt de grootte van de emoji     
-text_align(CENTER, TOP) #Positie rond het midden
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -184,13 +171,11 @@ Roep de `text()` aan en stel deze in als global in de functie `teken_speler()`.
 
 --- code ---
 ---
-filename: main.py - teken_speler()
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
 line_highlights: 16-17
 ---
 
-def teken_speler():     
-speler_y = int(height * 0.8)    
-text('🎈', muis_x, speler_y)
+def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
 
 --- /code ---
 
@@ -225,23 +210,18 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def teken_speler():    
-speler_y = int(height * 0.8)    
-noStroke()    
-#Gezicht    
-fill(0, 200, 100)    
-ellipse(muis_x, speler_y, 60, 60)
+def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 100) ellipse(mouse_x, player_y, 60, 60)
 
-    #Ogen<br x-id="4" />
-      fill(0, 100, 200)<br x-id="4" />
-      ellipse(muis_x - 10, speler_y - 10, 20, 20)<br x-id="4" />
-      ellipse(muis_x + 10, speler_y - 10, 20, 20)<br x-id="4" />
-      fill(0)<br x-id="4" />
-      ellipse(muis_x - 10, speler_y - 10, 10, 10)<br x-id="5" />
-      ellipse(muis_x + 10, speler_y - 10, 10, 10)<br x-id="5" />
-      fill(255)<br x-id="4" />
-      ellipse(muis_x - 12, speler_y - 12, 5, 5)<br x-id="4" />
-      ellipse(muis_x + 12, speler_y - 12, 5, 5)
+    # Eyes
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, player_y - 10, 20, 20)
+    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, player_y - 10, 10, 10)
+    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, player_y - 12, 5, 5)
+    ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
@@ -263,7 +243,7 @@ Beweegt het zoals verwacht?
 
 --- collapse ---
 ---
-titel: Ik zie de speler niet
+title: Ik zie de speler niet
 ---
 
 Probeer over te schakelen naar volledig scherm. Controleer ook de `x` en `y` coördinaten die je hebt gebruikt om de speler te tekenen — zorg ervoor dat ze binnen het canvas staan dat je hebt gemaakt met `size()`.
@@ -287,7 +267,7 @@ title: Een afbeelding heeft de verkeerde afmeting
 Controleer de invoer die de breedte en hoogte van de afbeelding bepaalt:
 
 ```python
-image(afbeelding_bestand, x_coord, y_coord, breedte, hoogte)
+image(image_file, x_coord, y_coord, width, height)
 ```
 
 --- /collapse ---
