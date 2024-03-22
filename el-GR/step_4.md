@@ -23,7 +23,7 @@
 
 --- task ---
 
-Στη συνάρτηση `draw_player()`, δημιούργησε τη μεταβλητή που ονομάζεται `collide` και όρισέ την ώστε να παίρνει το χρώμα στη θέση του παίκτη.
+In your `draw_player()` function, create a variable called `collide` and set it to get the hexadecimal (hex) colour value at the position of the player.
 
 --- code ---
 ---
@@ -41,20 +41,20 @@ filename: main.py - draw_player()
 
 Create a condition to check `if` the `collide` variable is the same as the `safe` variable — if it is, then your player is safely touching the background and has not collided with an obstacle.
 
-Δημιούργησε μια συνθήκη για να ελέγξεις `εάν` η μεταβλητή `collide` είναι ίδια με τη μεταβλητή `safe` — εάν είναι, τότε ο παίκτης σου αγγίζει με ασφάλεια το φόντο και δεν έχει συγκρουστεί με κάποιο εμπόδιο.
+Move your code to draw your player inside your `if collide == safe` condition and add code in the `else` statement to get the player to react to the collision.
 
 **Choose:** How should your player react? You could:
-+ Αλλάξεις την εικόνα με μια έκδοση `συντριβής (crashed)`
-+ Χρησιμοποιήσεις ένα διαφορετικό emoji για τον παίκτη
++ Use a different emoji for the player
++ You could use `tint()` to change the appearance of an image, don't forget to call `no_tint()` after drawing the image
 
 --- collapse ---
 ---
-title: Άλλαξε την εικόνα
+title: Use emoji characters
 ---
 
 You can use emoji characters in the p5 `text()` function to represent your collided player.
 
-Μπορείς να χρησιμοποιήσεις μια διαφορετική εικόνα για να αναπαραστήσεις τον παίκτη σου όταν συγκρούεται με ένα εμπόδιο.
+Here's an example:
 
 --- code ---
 ---
@@ -86,7 +86,7 @@ def draw_player(): if collide == safe.hex:  # On background text('🎈', mouse_x
 
 --- task ---
 
-def setup(): size(400, 400) text_size(40) #Ελέγχει το μέγεθος του emoji text_align(CENTER, TOP) #Τοποθετημένο γύρω από το κέντρο
+**Test:** Check if a collision is detected and the reaction takes place each time a collision occurs.
 
 --- /task ---
 
@@ -104,7 +104,7 @@ If your player character touches the obstacle and nothing happens, there are a f
  - Make sure you call `draw_obstacles()` before `draw_player()`. Εάν ελέγχεις για συγκρούσεις πριν να σχεδιάσεις τα εμπόδια σε ένα καρέ, τότε δεν θα υπάρχουν εμπόδια για σύγκρουση!
  - Βεβαιώσου ότι χρησιμοποιείς ακριβώς το ίδιο χρώμα όταν σχεδιάζεις το αντικείμενο και στην εντολή `if` που ελέγχει τη σύγκρουση. Μπορείς να βεβαιωθείς για αυτό χρησιμοποιώντας την ίδια `global` μεταβλητή και στα δύο σημεία του κώδικα.
  - Μήπως σχεδίασες τον χαρακτήρα του παίκτη πριν ελέγξεις το χρώμα στις συντεταγμένες του ποντικιού; Αν ναι, θα παίρνεις πάντα τα χρώματα μόνο από τον παίκτη. Πρέπει να ελέγξεις πρώτα το χρώμα και **μετά** να σχεδιάσεις τον παίκτη.
- - Έχεις κώδικα στο τμήμα `else` για να κάνεις κάτι διαφορετικό όταν ανιχνεύεται μια σύγκρουση, όπως το να αλλάξεις μια απόχρωση ή να χρησιμοποιήσεις μια διαφορετική εικόνα;
+ - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
  - Έχεις βάλει σωστά σε εσοχή τον κώδικα για την εντολή `if` ώστε να εκτελείται όταν η συνθήκη είναι αληθής;
 
 Printing the colour of the pixel you are checking for a collision can be useful:
@@ -130,7 +130,7 @@ You can also print a circle around the point you are checking and adjust the poi
 
 --- collapse ---
 ---
-filename: main.py - draw_obstacles()
+title: Collision detection with multiple pixels
 ---
 
 ```python
