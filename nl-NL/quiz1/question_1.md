@@ -1,8 +1,8 @@
-## Quick quiz
+## Snelle quiz
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Beantwoord de drie vragen. Je wordt naar het juiste antwoord geleid.
 
-Druk na elke vraag op **indienen**. Je wordt naar het juiste antwoord geleid.
+Klik na het beantwoorden van elke vraag op **Controleer mijn antwoord**.
 
 Veel plezier!
 
@@ -53,7 +53,7 @@ Ga door!
 ```
   --- feedback ---
 
-Dit is correct — `score >= 5000` is waar, en dat geldt ook voor `levens > 1` in de geneste `if` -conditie.
+Dit is correct — `score >= 5000` is waar, en dat geldt ook voor `levens > 1` in de geneste `if`-conditie.
 
   --- /feedback ---
 
