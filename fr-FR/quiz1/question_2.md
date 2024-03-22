@@ -22,7 +22,7 @@ Correct ! Tout cela peut se produire lors de l'utilisation de la génération pr
 Pas tout à fait. Cela peut se produire avec des obstacles générés de manière procédurale, en particulier lorsque le jeu démarre pour la première fois.
 
 
-**Astuce :** Tu peux contourner ce problème en empêchant les obstacles d'apparaître trop près de la position de départ du joueur. Peux-tu penser à d'autres solutions ?
+**Astuce :** tu peux contourner ce problème en empêchant les obstacles d'apparaître trop près de la position de départ du joueur. Peux-tu penser à d'autres solutions ?
 
   --- /feedback ---
 
@@ -33,7 +33,7 @@ Pas tout à fait. Cela peut se produire avec des obstacles générés de manièr
 Pas tout à fait. Cela peut se produire soit au début du jeu, soit lorsque de nouveaux obstacles sont ajoutés à la suite de l'augmentation du niveau de difficulté, s'ils choisissent une position proche de celle du joueur.
 
 
-**Astuce :** Une solution potentielle pourrait être de rendre le joueur temporairement immunisé contre les collisions avec tous les obstacles, ou même uniquement les obstacles nouvellement créés, pendant une courte période après une augmentation de niveau. Quels problèmes le fait que l'obstacle choisisse une nouvelle position pourrait-il créer s'il était trop proche du joueur ?
+**Astuce :** une solution potentielle pourrait être de rendre le joueur temporairement immunisé contre les collisions avec tous les obstacles, ou même uniquement les obstacles nouvellement créés, pendant une courte période après une augmentation de niveau. Quels problèmes le fait que l'obstacle choisisse une nouvelle position pourrait-il créer s'il était trop proche du joueur ?
 
   --- /feedback ---
 
@@ -44,7 +44,7 @@ Pas tout à fait. Cela peut se produire soit au début du jeu, soit lorsque de n
 Pas tout à fait. Étant donné que la génération aléatoire peut choisir des groupes de nombres proches les uns des autres, cela peut poser problème.
 
 
-**Astuce :** Une solution pourrait consister à passer à la génération semi-aléatoire - divise l'écran en morceaux et utilise des nombres aléatoires pour générer des obstacles à l'intérieur de chacun de ces morceaux. Peux-tu penser à la manière dont tu pourrais utiliser ce type de génération procédurale pour rendre ton jeu plus intéressant ou plus stimulant ?
+**Astuce :** une solution pourrait consister à passer à la génération semi-aléatoire - divise l'écran en morceaux et utilise des nombres aléatoires pour générer des obstacles à l'intérieur de chacun de ces morceaux. Peux-tu penser à la manière dont tu pourrais utiliser ce type de génération procédurale pour rendre ton jeu plus intéressant ou plus stimulant ?
 
   --- /feedback ---
 
