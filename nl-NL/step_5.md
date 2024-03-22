@@ -298,15 +298,15 @@ line_numbers: false
 --- /code ---
 
 Als je al deze controles hebt gedaan en het lijkt er nog steeds niet op dat het aantal obstakels toeneemt, is het mogelijk dat dat wel zo is, maar dat je ze niet ziet. Je moet enkele van deze stappen proberen om dit te testen:
-  - Vertraag het spel door `frame_rate()` te gebruiken in je `setup()` functie om je meer tijd te geven om te tellen
+  - Vertraag het spel door `frame_rate = 10` te gebruiken in je aanroep naar `run()`, zodat je meer tijd hebt om te tellen:
 
 ```python
 run(frame_rate = 10)
 ```
 
-You can alter the speed of the game by changing `10` to a higher or lower value.
+Je kunt de snelheid van het spel aanpassen door `10` in een hogere of lagere waarde te veranderen.
 
-  - Verander de seed die je gebruikt voor je willekeurige getallen. Het is onwaarschijnlijk, maar het is mogelijk dat sommige obstakels willekeurig direct boven elkaar verschijnen
+  - Verander de seed die je gebruikt voor je willekeurige getallen. Het is onwaarschijnlijk, maar het is mogelijk dat sommige obstakels willekeurig direct bovenop elkaar verschijnen
   - Voeg een `print()` toe aan de `for`-lus in `teken_obstakels()` die de waarde van `i` in elke passage van de lus afdrukt, zodat je kunt controleren of deze het juiste aantal keren wordt uitgevoerd
   - Verander, alleen voor testdoeleinden, `range(6 + level)` in `range(6 * level)` - die toename moet gemakkelijker te herkennen zijn!
 
