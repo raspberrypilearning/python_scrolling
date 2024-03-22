@@ -27,7 +27,7 @@ language: python filename: main.py - teken_obstakels() line_numbers: false line_
 line_highlights: 4
 ---
 
-def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2 text('🌵', obstakel_x, obstakel_y) #Vervang je obstakel
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -35,12 +35,11 @@ Voeg code toe aan `draw()` om `teken_obstakels()` voor elk frame aan te roepen.
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: false line_number_start:
 line_highlights: 5
 ---
 
-def draw(): veilig = color(200, 100, 0) #Voeg de kleur van je thema toe background(veilig)  
-teken_obstakels() #Voordat je de speler tekent teken_speler()
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe) draw_obstacles()  # Before drawing the player draw_player()
 
 --- /code ---
 
@@ -72,7 +71,7 @@ language: python filename: main.py - setup() line_numbers: true line_number_star
 line_highlights: 12
 ---
 
-def setup(): size(400, 400) speler = load_image('skiing.png') #Laad je afbeelding obstakel = load_image('rocket.png') #Laad je afbeelding
+def setup(): size(400, 400) global player player = load_image('skiing.png')  # Load your player image obstacle = load_image('rocket.png')  # Load your obstacle image
 
 --- /code ---
 
@@ -84,9 +83,11 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2
+def draw_obstacles(): ob_x = width/2 ob_y = height/2
 
-    image(obstakel, obstakel_x, obstakel_y, 30, 30) #Pas de afmeting aan om bij jouw thema te passen
+    global obstacle
+    
+    image(obstacle, ob_x, ob_y, 30, 30)  # Resize to fit your theme
 
 --- /code ---
 
@@ -107,7 +108,7 @@ language: python
 filename: main.py - setup()
 ---
 
-def setup(): size(400, 400) text_size(40) #Bepaalt de grootte van de emoji text_align(CENTER, TOP) #Positie rond het midden
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
@@ -119,7 +120,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2 text('🌵', obstakel_x, obstakel_y)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -143,7 +144,7 @@ def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2 text('🌵', o
 
 --- collapse ---
 ---
-titel: Teken een object door meerdere vormen te gebruiken
+title: Teken een object door meerdere vormen te gebruiken
 ---
 
 ![Een boom getekend met groene driehoeken voor de bladeren en een bruine rechthoek voor de stam](images/tree_obstacle.png)
@@ -154,7 +155,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def teken_obstakels(): ob_x = width/2 ob_y = height/2 #Teken een dennenboom no_stroke() fill(0,255,0) #Groen voor naalden triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100) #bruin voor stam rect(ob_x + 15, ob_y + 70, 10, 10)
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 # Draw a fir tree no_stroke() fill(0,255,0)  # Green for needles triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40) triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55) triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70) fill(150,100,100)  # Brown for trunk rect(ob_x + 15, ob_y + 70, 10, 10)
 
 --- /code ---
 
@@ -178,7 +179,7 @@ language: python
 filename: main.py - draw_obstacles()
 ---
 
-def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2 + frame_count #Verhoogt elk frame obstakel_y %= height #Omkeren text('🌵', obstakel_x, obstakel_y) #Vervang je obstakel
+def draw_obstacles(): ob_x = width/2 ob_y = height/2 + frame_count  # Increases each frame ob_y %= height  # Wrap around text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -203,11 +204,11 @@ filename: main.py - draw_obstacles()
 
 def draw_obstacles(): seed(12345678)  # Any number is fine
 
-    for i in range(6):<br x-id="2" />
-        obstakel_x = randint(0, height) 
-        obstakel_y = randint(0, height) + frame_count 
-        obstakel_y %= height 
-        text('🌵', obstakel_x, obstakel_y) #Plaats het nieuwe obstakel
+    for i in range(6):  
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
@@ -273,13 +274,13 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-seed(12345678)
+def draw_obstacles(): seed(12345678)
 
-    for i in range(6):<br x-id="2" />
-        obstakel_x = randint(0, height) 
-        obstakel_y = randint(0, height) + frame_count 
-        obstakel_y %= height 
-        text('🌵', obstakel_x, obstakel_y) #Plaats het nieuwe obstakel
+    for i in range(6):  
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🌵', ob_x, ob_y)  # Replace with your obstacle
 
 --- /code ---
 
