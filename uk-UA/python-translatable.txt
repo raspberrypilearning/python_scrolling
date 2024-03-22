@@ -4,7 +4,7 @@ draw_player
 
 player_y
 
-гравець
+player
 
 draw_player
 
@@ -32,7 +32,7 @@ collide
 
 level
 
-рахунок
+score
 
 message
 
