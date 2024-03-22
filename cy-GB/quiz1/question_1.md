@@ -1,10 +1,10 @@
-## Beth nesaf?
+## Quick quiz
 
 Answer the three questions. There are hints to guide you to the correct answer.
 
-Atebwch y tri chwestiwn isod i fyfyrio ar yr hyn rydych chi wedi'i ddysgu.
+When you have answered each question, click on **Check my answer**.
 
-Ar ôl bob cwestiwn, pwyswch **cyflwyno**. Byddi di'n cael dy dywys i'r ateb cywir. Galli di wneud hyn gymaint ag y mynni.
+Have fun!
 
 --- question ---
 ---
