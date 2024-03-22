@@ -21,7 +21,7 @@ Crée une variable `global` `niveau` pour suivre le niveau actuel du joueur. Ré
 
 --- code ---
 ---
-language: python filename: main.py
+language: python filename: main.py line_numbers: true line_number_start: 6
 line_highlights: 7
 ---
 
@@ -41,14 +41,14 @@ Ce code utilise le `height` et le `frame_count` pour augmenter la variable `nive
 --- code ---
 ---
 language: python
-language: python filename: main.py — dessine_obstacles()
+filename: main.py — draw_obstacles()
 ---
 
-def dessine_obstacles():
+def draw_obstacles(): global level  # Use the global level
 
-    if frame_count % height == height - 1 and niveau &#060; 5: 
-        niveau += 1 
-        print('Tu as atteint le niveau', niveau)
+    if frame_count % height == height - 1 and level < 5:
+        level += 1
+        print('You have reached level', level)
 
 --- /code ---
 
@@ -71,15 +71,15 @@ En regardant le code, tu peux t'attendre à ce que la vitesse augmente de plus d
 
 --- code ---
 ---
-language: python filename: main.py — dessine_obstacles()
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6): 
-        ob_x = randint(0, height) 
-        ob_y = randint(0, height) + (frame_count * niveau) 
-        ob_y %= height #enroulement 
-        text('🌵', ob_x, ob_y )
+    for i in range(6):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
+        text('🌵', ob_x, ob_y)
 
 --- /code ---
 
@@ -131,10 +131,13 @@ language: python
 filename: main.py — draw_player()
 ---
 
-    if collision == sur: 
-        text('🎈', mouse_x, joueur_y) score += niveau 
-      else: 
-        text('💥', mouse_x, joueur_y)
+    global score
+    
+    if collide == safe.hex:
+        text('🎈', mouse_x, player_y)
+        score += level
+    else:
+        text('💥', mouse_x, player_y)
 
 --- /code ---
 
@@ -149,7 +152,7 @@ Les joueurs devraient pouvoir voir leur score. Parce qu'il augmente si rapidemen
 Tu peux utiliser l'opérateur `+` pour combiner deux ou plusieurs chaînes si tu souhaites donner un titre comme « score » ou « points ». Étant donné que `score` est un nombre, tu devras le convertir en chaîne avant de pouvoir le joindre à une autre chaîne. Tu peux le faire avec `str()`:
 
 ```python
-message = 'Score : ' + str(score)
+message = 'Score: ' + str(score)
 ```
 **Astuce :** `str()` est l'abréviation de « string » — les programmeurs suppriment souvent des lettres comme celle-ci, donc ils n'ont pas à taper autant !
 
@@ -194,12 +197,12 @@ language: python
 filename: main.py — draw()
 ---
 
-    if niveau &#062; 0: 
-        background(sur) 
-        fill(255) 
-        text('Score: ' + str(score), width/2, 20) 
-        dessine_obstacles() 
-        dessine_joueur()
+    if level > 0:
+        background(safe) 
+        fill(255)
+        text('Score: ' + str(score), width/2, 20)
+        draw_obstacles()
+        draw_player()
 
 --- /code ---
 
@@ -220,12 +223,12 @@ language: python
 filename: main.py — draw()
 ---
 
-    if niveau &#062; 0: 
-        background(sur) 
-        fill(255) 
-        text('Score: ' + str(score), width/2, 20) 
-        dessine_obstacles() 
-        dessine_joueur()
+    if level > 0:
+        background(safe)
+        fill(255)
+        text('Score: ' + str(score), width/2, 20)
+        draw_obstacles()
+        draw_player()
 
 --- /code ---
 
@@ -237,10 +240,12 @@ language: python
 filename: main.py — draw_player()
 ---
 
-    if collision == sur: 
-        text('🎈', mouse_x, joueur_y) score += niveau 
-      else: 
-        text('💥', mouse_x, joueur_y) niveau = 0
+    if collide == safe.hex:
+        text('🎈', mouse_x, player_y)
+        score += level
+    else:
+        text('💥', mouse_x, player_y)
+        level = 0
 
 --- /code ---
 
@@ -257,14 +262,14 @@ Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()`. 
 
 --- code ---
 ---
-language: python filename: main.py — dessine_obstacles()
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6 + niveau): 
-        ob_x = randint(0, height) 
-        ob_y = randint(0, height) + (frame_count * niveau) 
-        ob_y %= height #enroulement 
+    for i in range(6 + level):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
         text('🌵', ob_x, ob_y)
 
 --- /code ---
@@ -282,14 +287,14 @@ Si le niveau augmente correctement, vérifie ta fonction `dessine_obstacles()` p
 
 --- code ---
 ---
-language: python filename: main.py — dessine_obstacles()
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
-    for i in range(6 + niveau): 
-        ob_x = randint(0, height) 
-        ob_y = randint(0, height) + (frame_count * niveau) 
-        ob_y %= height #enroulement 
+    for i in range(6 + level):
+        ob_x = randint(0, height)
+        ob_y = randint(0, height) + (frame_count * level)
+        ob_y %= height  # Wrap around
         text('🌵', ob_x, ob_y)
 
 --- /code ---
