@@ -14,24 +14,24 @@ legend: Pergunta 1 de 3
 Você usou muitas declarações `if` para controlar o comportamento do seu jogo. Algumas delas podem ter condições mais complexas, usando `and` para fazer vários testes de uma vez. Se você executasse o seguinte trecho de código condicional, que resultado você esperaria?
 
 ```python
-pontos = 5.000
-vidas = 2
+score = 5000
+lives = 2
 
-se pontos >= 5.000 e vidas >= 3:
-  print('Ótimo vôo!')
+if score >= 5000 and lives >= 3:
+  print('Great flying!')
 
 if score >= 5000: 
-  print('Indo bem!')
+  print('Doing well!')
   if lives > 1:
-    print('Continue!')
+    print('Keep going!')
   else:
-    print('Mas tenha cuidado!')
+    print('But be careful!')
 
-elif vive > 1:
-  print('Se esforce mais!')
+elif lives > 1:
+  print('Push harder!')
 
 else:
-  print('Direto para a base!')
+  print('Head for base!')
 ```
 
 --- choices ---
