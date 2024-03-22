@@ -7,15 +7,15 @@
 </div>
 <div>
 
-![画面サイズ400x400の青い背景とサイズ100x100のタートル](images/theme-turtle.png){:width="300px"}
+![Image of cartoon turtle viewed from above set against a blue background.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
 あなたのゲームのテーマは何ですか？ Here are some ideas:
-- スポーツや趣味
+- Sports
 - Hobbies
-- 科学や自然
+- Science
 - Nature
 
 --- task ---
@@ -28,16 +28,15 @@ If you have a Raspberry Pi account, you can click on the **Save** button to save
 
 --- task ---
 
-**選択：** キャンバスのサイズを設定します。
+**Choose:** Set the size of your canvas.
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 10
 ---
 
-def setup():    
-size(400, 400)
+def setup(): size(400, 400)
 
 --- /code ---
 
@@ -45,19 +44,17 @@ size(400, 400)
 
 --- task ---
 
-ゲームのテーマに基づい背景の色を保存するために、 `safe` という変数を作成します。
+Create a variable called `safe` to store the background colour based on the theme you want for your game.
 
-これは、プレーヤーが安全に過ごせる場所の色です。 この変数は、あとでまた使います。
+This is the colour that it is safe for the player to be on and you will use this variable again later.
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 13
 line_highlights: 14, 15, 16
 ---
 
-def draw():    
-safe = color(200, 100, 0) #テーマの色   
-background(safe)
+def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your theme background(safe)
 
 --- /code ---
 
@@ -67,53 +64,49 @@ background(safe)
 
 --- task ---
 
-**テスト：**コードを実行して、背景の色を確認します。 画面の色とサイズを満足するまで変更します。
+**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
 
 --- /task ---
 
-次に、ゲームをプレイして障害物を避けるキャラクターを選びます。 物、人、動物、または何か他のものを選びますか？
+Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
 
-プレーヤーは、固定の `y` 位置とマウスポインターと同じ `x`の位置に表示されます。 この位置は、 `p5`の変数 `mouse_x` に格納されています。
+The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
 
 --- task ---
 
-プレイヤーキャラクターを描くためのコードを関数にまとめるのは良いアイデアです。
+It's a good idea to organise the code for drawing the player character into a function.
 
-`draw_player()` 関数を定義し、プレーヤーの固定の`y` 位置用に`player_y`変数を作成し作成します。
+Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
 
 --- code ---
 ---
-含まれている画像のリストを含む画像ライブラリ。
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 12
 line_highlights: 12-14
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #画面の下の方に置く
+def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom
 
 --- /code ---
 
-`draw()` にコードを追加して、フレームごとに `draw_player()` を呼び出すようにします。
+Add code to `draw()` to call `draw_player()` each frame.
 
 --- code ---
 ---
-filename: main.py - draw()
+language: python filename: main.py - draw() line_numbers: true line_number_start: 15
 line_highlights: 19
 ---
 
-def draw():    
-safe = color(200, 100, 0) #選んだ色    
-background(safe)    
-draw_player()
+def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour background(safe) draw_player()
 
 --- /code ---
 
 --- /task ---
 
-次に、 `draw_player()` 関数にコードを追加して、キャラクターの形を描きます。 また、 `setup()` コードを追加する必要がある場合もあります。
+Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
 
 --- task ---
 
-**選択：** プレーヤーはどのように見えますか？ プレーヤーは次のいずれかです。
+**Choose:** What does your player look like? Your player could be:
 + スタータープロジェクトで用意された画像
 + 絵文字🎈またはテキスト
 + さまざまな形を使って描いたもの
@@ -123,36 +116,33 @@ draw_player()
 title: スタータープロジェクトの画像を使う
 ---
 
-スタータープロジェクトで用意された画像は、 `Image Library` のリストに出て来ます。
+Images included in the starter project will be shown in the `Image gallery`.
 
 ![The Image gallery displaying the included images.](images/starter-images.png)
 
-使いたい画像の名前をメモします。
+Make a note of the name of the image you want to use.
 
-`setup()` 関数で画像を読み込みます
+Load the image into the `setup()` function
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 11-12
 ---
 
-def setup():   
-size(400, 400)    
-player = load_image('skiing.png') #選んだ画像
+def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your image
 
 --- /code ---
 
-`draw_player()` 関数内でplayer変数をグローバルに設定し、`image()` を呼び出します。
+Call the `image()` and set it as global in the `draw_player()` function.
 
 --- code ---
 ---
-image(player, mouse_x, player_y, 30, 30)
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
 line_highlights: 16
 ---
 
-def draw_player():    
-player_y = int(height * 0.8) #画面の下の方に置く
+def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen bottom image(player, mouse_x, player_y, 30, 30)
 
 --- /code ---
 
@@ -163,34 +153,29 @@ player_y = int(height * 0.8) #画面の下の方に置く
 title: 絵文字を使用する
 ---
 
-P5の `text()` 関数で絵文字を使えるので、プレーヤーを絵文字で表現できます。
+You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
 
-次に例を示します：
+Here's an example:
 
 --- code ---
 ---
-filename: main.py - setup()
+language: python filename: main.py - setup() line_numbers: true line_number_start: 9
 line_highlights: 11-13
 ---
 
-def setup():    
-size(400, 400)     
-text_size(40) #絵文字の大きさi     
-text_align(CENTER, TOP) #真ん中に置く
+def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text_align(CENTER, TOP)  # Position around the centre
 
 --- /code ---
 
-global player
+Call the `text()` and set it as global in the `draw_player()` function.
 
 --- code ---
 ---
-コード領域の右上にある画像アイコン。
+language: python filename: main.py - draw_player() line_numbers: true line_number_start: 14
 line_highlights: 16-17
 ---
 
-def draw_player():     
-player_y = int(height * 0.8)    
-text('🎈', mouse_x, player_y)
+def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
 
 --- /code ---
 
@@ -210,7 +195,7 @@ text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**ヒント：** 一つの関数の中で、いくつかの単純な図形を使用して、より複雑なプレーヤーを作ることができます。
+**Tip:** You can use several simple shapes in the same function to create a more complex player.
 
 --- collapse ---
 ---
@@ -225,23 +210,18 @@ language: python
 filename: main.py - draw_player()
 ---
 
-def draw_player():    
-player_y = int(height * 0.8)    
-noStroke()    
-#顔    
-fill(0, 200, 100)    
-ellipse(mouse_x, player_y, 60, 60)
+def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 100) ellipse(mouse_x, player_y, 60, 60)
 
-    #目<br x-id="4" />
-      fill(0, 100, 200)<br x-id="4" />
-      ellipse(mouse_x - 10, player_y - 10, 20, 20)<br x-id="4" />
-      ellipse(mouse_x + 10, player_y - 10, 20, 20)<br x-id="4" />
-      fill(0)<br x-id="4" />
-      ellipse(mouse_x - 10, player_y - 10, 10, 10)<br x-id="5" />
-      ellipse(mouse_x + 10, player_y - 10, 10, 10)<br x-id="5" />
-      fill(255)<br x-id="4" />
-      ellipse(mouse_x - 12, player_y - 12, 5, 5)<br x-id="4" />
-      ellipse(mouse_x + 12, player_y - 12, 5, 5)
+    # Eyes
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, player_y - 10, 20, 20)
+    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, player_y - 10, 10, 10)
+    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, player_y - 12, 5, 5)
+    ellipse(mouse_x + 12, player_y - 12, 5, 5)
 
 --- /code ---
 
@@ -251,13 +231,13 @@ ellipse(mouse_x, player_y, 60, 60)
 
 --- task ---
 
-**テスト：** コードを実行し、マウスを動かしてプレーヤーを制御します。
+**Test:** Run your code and move the mouse to control the player.
 
-思った通りに動きますか？
+Does it move like you expect?
 
 --- /task ---
 
-**デバッグ：** プロジェクトに修正が必要なバグが見つかる場合があります。 一般的なバグは次のとおりです。
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
 
 --- task ---
 
@@ -266,7 +246,7 @@ ellipse(mouse_x, player_y, 60, 60)
 title: プレーヤーが表示されません
 ---
 
-フルスクリーンに切り替えてみてください。 また、プレーヤーを描くのに指定した`x`1および`y`の座標を確認します。
+Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
 
 --- /collapse ---
 
@@ -275,7 +255,7 @@ title: プレーヤーが表示されません
 title: 画像が読み込まれていません
 ---
 
-まず、画像が `Image Library`にあることを確認します。 次に、ファイル名をよく確認します。 大文字と小文字は違うものであること、ピリオドやハイフンなどが重要であることを忘れないでください。
+First, check that the image is in the `Image gallery`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
 
 --- /collapse ---
 
@@ -284,10 +264,10 @@ title: 画像が読み込まれていません
 title: 画像のサイズが違っています
 ---
 
-画像の幅と高さを指定する値を確認します。
+Check the inputs that control the width and height of the image:
 
 ```python
-image(画像ファイル名, x座標, y座標, 幅, 高さ)
+image(image_file, x_coord, y_coord, width, height)
 ```
 
 --- /collapse ---
@@ -297,7 +277,7 @@ image(画像ファイル名, x座標, y座標, 幅, 高さ)
 title: 絵文字のサイズが違っています
 ---
 
-絵文字が大きすぎるか小さすぎる場合は、`text_size()`の指定値を変えます。
+If your emoji is too big or too small, change the value in `text_size()`.
 
 --- /collapse ---
 
