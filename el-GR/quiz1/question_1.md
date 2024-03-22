@@ -1,8 +1,8 @@
-## Αναστοχασμός
+## Quick quiz
 
 Answer the three questions. There are hints to guide you to the correct answer.
 
-Απάντησε στις τρεις ερωτήσεις παρακάτω για να διαπιστώσεις τι έμαθες.
+When you have answered each question, click on **Check my answer**.
 
 Have fun!
 
