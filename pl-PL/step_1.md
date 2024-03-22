@@ -1,48 +1,48 @@
-## Zrobisz to
+## You will make
 
-Zbuduj przewijającą się niekończącą się grę dla biegaczy, w której twoja postać musi unikać przeszkód.
+Build a scrolling endless runner game where your character has to avoid obstacles.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Nieskończeni biegacze**</span> to rodzaj gry, w której musisz unikać przeszkód, a gra kończy się tylko wtedy, gdy trafisz na przeszkodę. Zdobywasz punkty, pozostając przy życiu tak długo, jak to możliwe.</p>
+<span style="color: #0faeb0">**Endless runners**</span> are a type of game where you have to avoid obstacles and the game only ends when you hit an obstacle. You score points by staying alive for as long as you can.</p>
 
-Co zrobisz:
-+ Użyj warunków ** gry **, aby kontrolować, co się stanie
-+ Dowiedz się więcej o generowaniu procedur i wykrywaniu kolizji
-+ Dostosuj grę do swoich zainteresowań
+You will:
++ Use game **conditions** to control what happens
++ Learn about procedural generation and collision detection
++ Personalise a game to your interests
 
-![Obrazy różnych przykładów projektów.](images/showcase_projects.png)
+![Images of different project examples.](images/showcase_projects.png)
 
-### Masz pomysły?
+### Get ideas 💭
 
-Podejmiesz kilka decyzji projektowych dotyczących rodzaju gry, którą stworzysz i sposobu użycia kodu, aby uzyskać pożądane efekty.
+You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
 --- no-print ---
 
 --- task ---
 
-Uruchom te przykłady. Pomyśl o tym, jak stworzono graczy i przeszkody.
+Run these examples. Think about how the players and obstacles have been made.
 
-Co się stanie, jeśli trafisz na przeszkodę? Czy gra staje się trudniejsza?
+What happens if you hit an obstacle? Does it get harder as you play?
 
-** Kot narciarski **:
+**Skiing cat**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/skiing-cat-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> Możesz znaleźć projekt Kot narciarski [ ](https://editor.raspberrypi.org/en/projects/skiing-cat-example){:target="_blank"}
+</iframe> You can find the Skiing cat project [here](https://editor.raspberrypi.org/en/projects/skiing-cat-example){:target="_blank"}
 
-** Don't **:
+**Don't pop**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dont-pop-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> Możesz znaleźć projekt nie pop [ ](https://editor.raspberrypi.org/en/projects/dont-pop-example){:target="_blank"}
+</iframe> You can find the Don't pop project [here](https://editor.raspberrypi.org/en/projects/dont-pop-example){:target="_blank"}
 
-** Unikaj **:
+**Avoid the germs**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/avoid-germs-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> Możesz znaleźć projekt Unikaj zarazków [ ](https://editor.raspberrypi.org/en/projects/avoid-germs-example){:target="_blank"}
+</iframe> You can find the Avoid the germs project [here](https://editor.raspberrypi.org/en/projects/avoid-germs-example){:target="_blank"}
 
-** Czyste **:
+**Clean car**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/clean-car-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> Możesz znaleźć projekt „Czysty samochód” [ ](https://editor.raspberrypi.org/en/projects/clean-car-example){:target="_blank"}
+</iframe> You can find the Clean car project [here](https://editor.raspberrypi.org/en/projects/clean-car-example){:target="_blank"}
 
-** Dodge **:
+**Dodge asteroids**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> Możesz znaleźć projekt asteroidy Dodge [ ](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
+</iframe> You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
 --- /task ---
 
@@ -50,13 +50,13 @@ Co się stanie, jeśli trafisz na przeszkodę? Czy gra staje się trudniejsza?
 
 --- print-only ---
 
-Podejmiesz kilka decyzji projektowych dotyczących rodzaju gry, którą stworzysz i sposobu użycia kodu, aby uzyskać pożądane efekty.
+You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
 
-![Przykładowy projekt kota narciarskiego](images/example2.png){:width="300px"}
-Projekt Kot narciarski znajdziesz tutaj https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Don't pop project example](images/example4.png){:width="300px"}
-Możesz znaleźć projekt nie pop tutaj https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Avoid the germs project example](images/example3.png){:width="300px"}
-możesz znaleźć projekt Unikaj zarazków tutaj https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Przykładowy projekt czystego samochodu](images/example5.png){:width="300px"}
-Projekt Czysty samochód znajdziesz tutaj https://editor.raspberrypi.org/en/projects/clean-car-example ![Dodge asteroids project example](images/example1.png){:width="300px"}
-Projekt asteroidy Dodge znajdziesz tutaj https://editor.raspberrypi.org/en/projects/dodge-asteroids-example
+![Skiing cat project example](images/example2.png){:width="300px"}
+You can find the Skiing cat project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Don't pop project example](images/example4.png){:width="300px"}
+You can find the Don't pop project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Avoid the germs project example](images/example3.png){:width="300px"}
+You can find the Avoid the germs project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Clean car project example](images/example5.png){:width="300px"}
+You can find the Clean car project here https://editor.raspberrypi.org/en/projects/clean-car-example ![Dodge asteroids project example](images/example1.png){:width="300px"}
+You can find the Dodge asteroids project here https://editor.raspberrypi.org/en/projects/dodge-asteroids-example
 
 --- /print-only ---
