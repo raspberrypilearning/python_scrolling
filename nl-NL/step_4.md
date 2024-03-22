@@ -39,12 +39,12 @@ filename: main.py - draw_player()
 
 --- task ---
 
-Creëer een voorwaarde om te controleren `of` de `botsen` variabele gelijk is aan de `veilig` variabele — als dat zo is, dan raakt je speler veilig de achtergrond en is hij niet tegen een obstakel gebotst.
+Creëer een voorwaarde om te controleren `if` de `botsen` variabele gelijk is aan de `veilig` variabele — als dat zo is, dan raakt je speler veilig de achtergrond en is hij niet tegen een obstakel gebotst.
 
 Verplaats je code om je speler te tekenen binnen jouw `if botsen == veilig` voorwaarde en voeg code toe aan de `else` voorwaarde om de speler te laten reageren op de botsing.
 
 **Kies:** Hoe moet je speler reageren? Je zou:
-+ Een andere emoji voor de speler gebruiken
++ Een andere emoji voor de speler kunnen gebruiken
 + Je zou `tint()` kunnen gebruiken om het uiterlijk van een afbeelding te veranderen, vergeet niet om `no_tint()` aan te roepen na het tekenen van de afbeelding
 
 --- collapse ---
@@ -104,7 +104,7 @@ Als je speler een obstakel raakt en er gebeurt niets, zijn er een paar dingen di
  - Zorg ervoor dat je `teken_obstakels()` aanroept voor `teken_speler()`. Als je op botsingen controleert voordat je de obstakels in een frame tekent, zijn er geen obstakels om tegen te botsen!
  - Zorg ervoor dat je exact dezelfde kleur gebruikt bij het tekenen van het object en in de `if` functie om te controleren op de botsing. Je kunt hiervoor zorgen door op beide plaatsen dezelfde `global`-variabele te gebruiken.
  - Teken je het personage van de speler voordat je de kleur bij de muiscoördinaten controleert? Als dat zo is, krijg je alleen de kleuren van de speler. Je moet eerst de kleur controleren en **dan** de speler tekenen.
- - Do you have code in the `else` part to do something different when a collision is detected, such as applying a tint or using an emoji?
+ - Heb je code in het `else` gedeelte om iets anders te doen wanneer een botsing wordt gedetecteerd, zoals het toepassen van een tint of het gebruiken van een emoji?
  - Heb je de code voor je `if`-commando correct ingesprongen, zodat het wordt uitgevoerd wanneer aan de voorwaarde is voldaan?
 
 Het kan handig zijn om de kleur af te drukken van de pixel waarop je controleert op een botsing:
