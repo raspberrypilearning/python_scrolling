@@ -1,1 +1,1 @@
-## Szybki quiz
+## Quick quiz
