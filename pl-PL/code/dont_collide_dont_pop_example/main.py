@@ -1,71 +1,71 @@
 #!/bin/python3
 
-# Import library code
+# Importuj kod biblioteki
 from p5 import *
 from random import randint, seed
 
-level = 1
-score = 0
+poziom = 1
+wynik = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
-    global level
+# Funkcja draw_przeszkoda pojawi się tutaj
+def rysowanie_przeszkody():
+    poziom globalny
   
     seed(12345678)
   
     if frame_count % height == height - 1 and level < 5:
-        level += 1
-        print('You reached level', level)
+        poziom += 1
+        Print('osiągnąłeś poziom', poziom)
   
-    for i in range(6 + level):
-        ob_x = randint(0, height)
-        ob_y = randint(0, height) + (frame_count * level)
-        ob_y %= height  # wrap around
-        text('🌵', ob_x, ob_y)
+    for i in range(6 + poziom):
+        ob_x = randint(0, wysokość)
+        ob_y = randint(0, wysokość) + (liczba_klatek * poziom)
+        ob_y %= wysokość # owijanie
+        text('?', ob_x, ob_y)
 
 
-# The draw_player function goes here
+# Funkcja draw_player pojawia się tutaj
 def draw_player():
-    global score, level
+    globalny wynik, poziom
   
-    player_y = int(height * 0.8)
+    player_y = int(wysokość * 0.8)
   
     collide = get(mouse_x, player_y).hex
     collide2 = get(mouse_x - 12, player_y + 20).hex
-    collide3 = get(mouse_x + 12, player_y + 20).hex
+    kolizy3 = get(mouse_x + 12, player_y + 20).hex
     collide4 = get(mouse_x, player_y + 40).hex
   
-    if mouse_x < width:  # off the left of the screen
-        collide2 = safe.hex
+    if mouse_x < width: # off the left of the screen
+        kolizy2 = safe.hex
   
-    if mouse_x > width:  # off the right of the screen
-        collide3 = safe.hex
+    if mouse_x > width: # off the right of the screen
+        kolizy3 = safe.hex
   
     if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
-        text('🎈', mouse_x, player_y)
-        score += level
+        text('?', mouse_x, player_y)
+        wynik += poziom
     else:
-        text('💥', mouse_x, player_y)
-        level = 0
+        text('?', mouse_x, player_y)
+        poziom = 0
 
 
 def setup():
-    # Setup your animation here
+    # Ustaw swoją animację tutaj
     size(400, 400)
     text_size(40)
-    text_align(CENTER, TOP)  # position around the centre, top
+    Text_align(ŚRODEK, GÓRA) # pozycja wokół środka, na górze
 
 
 def draw():
-    # Things to do in every frame
-    global score, safe, level
-    safe = Color(200, 150, 0)
+    # Rzeczy do zrobienia w każdej klatce
+    globalny wynik, bezpieczny, poziom
+    Bezpieczny = Kolor(200, 150, 0)
 
-    if level > 0:
-        background(safe)
+    if poziom > 0:
+        tło(bezpieczne)
         fill(255)
-        text('Score: ' + str(score), width/2, 20)
-        draw_obstacles()
+        Text('Wynik: ' + str(wynik), width/2, 20)
+        rysowanie_przeszkody()
         draw_player()
 
 run()
