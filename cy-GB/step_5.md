@@ -21,7 +21,7 @@ Ewch ati i greu newidyn `level` `global` i gadw golwg ar ba lefel mae'r chwaraew
 
 --- code ---
 ---
-language: python filename: main.py
+language: python filename: main.py line_numbers: true line_number_start: 6
 line_highlights: 7
 ---
 
@@ -44,7 +44,7 @@ language: python
 filename: main.py — draw_obstacles()
 ---
 
-def llunio_rhwystrau():
+def draw_obstacles(): global level  # Use the global level
 
     if frame_count % height == height - 1 and level < 5:
         level += 1
@@ -71,7 +71,7 @@ Looking at the code, you might expect the speed to increase by more than `level`
 
 --- code ---
 ---
-Gan edrych ar y cod, efallai byddech chi'n disgwyl i'r cyflymder gynyddu mwy na'r picseli `lefel`. Er enghraifft, ar y pwynt cyn i'ch `lefel` gynyddu, mae'r `frame_count` yn `799` — gan fod y `lefel` yn cynyddu un ffrâm cyn bod `frame_count` yn eil-luosrif o `height` (wedi'i osod ar `400` picsel) — ac mae `799 * 3` yn sylweddol fwy na `799 * 2`. Ond mae'r picseli ychwanegol sy'n cael eu creu drwy luosi `frame_count` yn ei gyfanrwydd â rhif uwch wedi'u cuddio gan `rh_y %= height`. Mae hyn yn gadael dim ond y picseli `lefel` ychwanegol ym mhob cam.
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
@@ -113,7 +113,7 @@ line_numbers: false
 ---
 
 # Rhowch newidynnau cyffredinol yma
-Ewch ati i greu newidyn `sgor` cyffredinol i gadw golwg ar sgôr y chwaraewr. Gosodwch hwn ar `0` er mwyn i chwaraewyr ddechrau gêm newydd heb bwyntiau.
+score = 0
 
 --- /code ---
 
@@ -160,7 +160,7 @@ message = 'Score: ' + str(score)
 
 ### Gêm drosodd!
 
-Fe ddylai chwaraewyr allu gweld eu sgôr. Oherwydd ei fod yn cynyddu mor gyflym, fyddai defnyddio `print()` ddim yn gweithio cystal. Defnyddiwch y swyddogaeth p5 `text()` tu mewn i'ch swyddogaeth `draw()` i'w ddangos fel testun ar sgrin y gêm yn lle.
+When a player has collided with an obstacle, the game should stop moving and their score should stop increasing.
 
 --- task ---
 
@@ -189,7 +189,7 @@ Make sure that you've included the `text()` function that draws the player's sco
 text('Text to display', x, y)`
 ```
 
-Ewch ati i greu datganiad `if` yn `draw()` sy'n profi a yw `lefel > 0` cyn galw unrhyw swyddogaeth — fel `background()`, `llunio_rhwystrau()`, a `llunio_chwaraewr()` — sy'n diweddaru'r gêm. Oherwydd nad yw'r swyddogaethau hyn yn cael eu galw, mae'n ymddangos bod y gêm wedi dod i ben, er bod eich rhaglen yn dal yn rhedeg.
+It should look something like this:
 
 --- code ---
 ---
@@ -262,7 +262,7 @@ If level is increasing correctly, check your `draw_obstacles()` function. In par
 
 --- code ---
 ---
-Yn olaf, os yw'r ddau beth hynny'n gywir, efallai nad yw eich gêm yn gosod `lefel = 0` yn gywir pan fydd gwrthdrawiad. Er enghraifft:
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
@@ -287,7 +287,7 @@ If level is increasing correctly, check your `draw_obstacles()` function to ensu
 
 --- code ---
 ---
-Yn gyntaf, gwnewch yn siŵr bod `lefel` yn cynyddu'n gywir. Fe ddylech chi weld neges yn cael ei phrintio bob tro mae'n cynyddu. Os nad yw hyn yn digwydd, gwiriwch y cod ar gyfer printio'r neges a'r cod ar gyfer cynyddu'r lefel.
+language: python filename: main.py — draw_obstacles()
 line_numbers: false
 ---
 
@@ -300,13 +300,13 @@ line_numbers: false
 --- /code ---
 
 If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
-  - Arafu'r gêm gan ddefnyddio `frame_rate()` yn eich swyddogaeth `setup()` i roi mwy o amser i chi gyfri
+  - Slow the game down by using `frame_rate = 10` in your call to `run()` to give you more time to count:
 
 ```python
 run(frame_rate = 10)
 ```
 
-language: python filename: main.py — llunio_rhwystrau()
+You can alter the speed of the game by changing `10` to a higher or lower value.
 
   - Change the seed you're using for your random numbers. It's unlikely, but it is possible that some obstacles are randomly appearing directly on top of each other
   - Add a `print()` to the `for` loop in `draw_obstacles()` that prints out the value of `i` in each pass of the loop, so you can verify whether it's running the number of times it should
