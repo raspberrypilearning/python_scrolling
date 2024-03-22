@@ -23,7 +23,7 @@ Definieer een `teken_obstakels()` functie:
 
 --- code ---
 ---
-filename: main.py - teken_obstakels()
+language: python filename: main.py - teken_obstakels() line_numbers: false line_number_start:
 line_highlights: 4
 ---
 
@@ -58,9 +58,9 @@ teken_obstakels() #Voordat je de speler tekent teken_speler()
 title: Gebruik een startafbeelding
 ---
 
-Afbeeldingen die in het startersproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
+Afbeeldingen die in het startproject zijn opgenomen, worden weergegeven in de lijst `Image library` (Afbeeldingenbibliotheek).
 
-![The Image gallery displaying the included images.](images/starter-images.png)
+![De afbeeldingengalerij met de meegeleverde afbeeldingen.](images/starter-images.png)
 
 Noteer de naam van de afbeelding die je wilt gebruiken.
 
@@ -76,7 +76,7 @@ def setup(): size(400, 400) speler = load_image('skiing.png') #Laad je afbeeldin
 
 --- /code ---
 
-Find the line `# Keep this to run your code`. Roep `image()` aan en stel deze in als global in de `teken_obstakels()` functie.
+Zoek de regel `# Bewaar deze regel om je code uit te voeren `. Definieer vóór die regel een nieuwe functie `teken_obstakels()`, roep `obstakel` aan als globale variabele en gebruik deze in de aanroep naar `image()`.
 
 --- code ---
 ---
@@ -97,7 +97,7 @@ def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2
 title: Emoji-tekens gebruiken
 ---
 
-Je kunt emoji-tekens gebruiken in de p5-functie `text()` om een emoji als speler te gebruiken.
+Je kunt emoji-tekens gebruiken in de p5-functie `text()` om een emoji als obstakel te gebruiken.
 
 Hier is een voorbeeld:
 
@@ -111,7 +111,7 @@ def setup(): size(400, 400) text_size(40) #Bepaalt de grootte van de emoji text_
 
 --- /code ---
 
-Find the line `# Keep this to run your code`. Before that line, define a new `draw_obstacles()` function.
+Zoek de regel `# Bewaar deze regel om je code uit te voeren `. Definieer vóór die regel een nieuwe `teken_obstakels()` functie.
 
 --- code ---
 ---
@@ -146,7 +146,7 @@ def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2 text('🌵', o
 titel: Teken een object door meerdere vormen te gebruiken
 ---
 
-![A tree drawn with green triangles for the body and a brown rectangle for the trunk](images/tree_obstacle.png)
+![Een boom getekend met groene driehoeken voor de bladeren en een bruine rechthoek voor de stam](images/tree_obstacle.png)
 
 --- code ---
 ---
@@ -189,8 +189,7 @@ def teken_obstakels(): obstakel_x = width/2 obstakel_y = height/2 + frame_count 
 Je zou op verschillende startlocaties veel kopieën van je obstakels kunnen maken, maar dat is best veel werk. Laten we een snellere route gebruiken.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;"> 
-<span style="color: #0faeb0">**Procedurele generatie**</span> wordt gebruikt om game 
-werelden, obstakels en filmscènes te maken op een willekeurige manier, maar wel met bepaalde regels. Een <span style="color: #0faeb0">seed</span> (zaadje) betekent dat je elke keer dat je dezelfde seed gebruikt dezelfde resultaten kunt genereren.</p>
+<span style="color: #0faeb0">**Procedurele generatie**</span> wordt gebruikt om spelwerelden, obstakels en filmscènes te maken op een willekeurige manier, maar wel volgens bepaalde regels. Een <span style="color: #0faeb0">seed</span> (zaadje) betekent dat je elke keer dat je dezelfde seed gebruikt dezelfde resultaten kunt genereren.</p>
 
 --- task ---
 
@@ -229,12 +228,12 @@ Het testen van je programma kan epileptische aanvallen veroorzaken bij mensen me
 - Ervoor zorgen dat je de `seed()` regel code hebt toegevoegd zodat je obstakels niet rondspringen
 - Iemand anders vragen om het voor je uit te voeren
 - Ga verder en voltooi het project en vraag aan het einde iemand om het project voor jou uit te voeren, zodat je fouten kunt opsporen
-- Slow the game down by using `frame_rate = 10` in your call to `run()` like this:
+- Vertraag het spel door `frame_rate = 10` te gebruiken in je aanroep van `run()` als volgt:
 
 ```python
 run(frame_rate = 10)
 ```
-You can alter the speed of the game by changing `10` to a higher or lower value.
+Je kunt de snelheid van het spel aanpassen door `10` in een hogere of lagere waarde te veranderen.
 
 --- /collapse ---
 
