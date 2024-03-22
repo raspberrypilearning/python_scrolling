@@ -1,14 +1,14 @@
 safe
 
-crashed_player
+draw_player
 
 player_y
 
 player
 
-safe_player
+draw_player
 
-player_x
+mouse_x
 
 image_file
 
