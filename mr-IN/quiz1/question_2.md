@@ -1,6 +1,6 @@
 --- question ---
 ---
-legend: प्रश्न 3 पैकी 2
+legend: Question 2 of 3
 ---
 
 In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
