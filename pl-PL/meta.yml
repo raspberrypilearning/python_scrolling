@@ -1,32 +1,32 @@
 ---
-title: Nie zderzaj się!
+title: Don't collide!
 hero_image: images/banner.png
 description:
-  - Zbuduj niekończącą się grę dla biegaczy, w której twoja postać musi unikać kolizji
-  - z przeszkodami
-meta_title: Python projekty kodowania dla dzieci i młodzieży | nie zderzaj się!
-meta_description: Naucz się języka Python z projektami programistycznymi Fundacji Raspberry Pi dla dzieci i młodzieży. Zbuduj grę z przewijaniem biegacza w Pythonie i unikaj przeszkód.
+  - Build an endless runner game where your character must avoid colliding
+  - with obstacles
+meta_title: Python coding projects for kids and teens | Don't collide!
+meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Build a scrolling runner game in Python and avoid obstacles.
 version: 4
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: Zrobisz to
+    title: You will make
   - 
-    title: Ustaw motyw
+    title: Set the theme
   - 
-    title: Tworzenie przeszkód
+    title: Create obstacles
     completion:
       - engaged
   - 
-    title: Wykrywanie kolizji
+    title: Collision detection
   - 
-    title: Przyspiesz!
+    title: Speed up!
     completion:
       - internal
   - 
-    title: Szybki quiz
+    title: Quick quiz
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,8 +35,8 @@ steps:
     completion:
       - external
   - 
-    title: Ulepsz swój projekt
+    title: Upgrade your project
   - 
-    title: Udostępnij
+    title: Share
   - 
-    title: Co dalej?
+    title: What next?
