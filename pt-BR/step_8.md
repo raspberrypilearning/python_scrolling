@@ -1,6 +1,6 @@
-## Compartilhar
+## Share
 
-Se você faz parte de um clube, por que não compartilhar seu projeto com amigos e colegas?
+If you are in a club, why not share your project with friends?
 
 --- task ---
 
