@@ -1,23 +1,23 @@
-## Acelere!
+## Speed up!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-A maioria dos jogos de corredor sem fim aumenta a dificuldade do jogo conforme o jogador avança e dá a eles uma pontuação.
+Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
 </div>
 <div>
 
-![Exemplo de projeto com um texto contendo os pontos na tela.](images/score.png){:width="300px"}
+![Example project with a text score on the screen.](images/score.png){:width="300px"}
 
 </div>
 </div>
 
-### Adicione níveis de dificuldade
+### Add difficulty levels
 
-Criar níveis de dificuldade claros tornará mais fácil para o jogador entender o que está acontecendo.
+Creating clear difficulty levels will make it easier for your player to understand what is happening.
 
 --- task ---
 
-Crie uma variável `global` `nivel` para rastrear o nível em que o jogador está atualmente. Defina-a como `1` para que os jogadores comecem um novo jogo no primeiro nível.
+Create a `global` `level` variable to track the level the player is currently on. Set it to `1` so players start a new game on the first level.
 
 --- code ---
 ---
@@ -25,8 +25,8 @@ language: python filename: main.py line_numbers: true line_number_start: 6
 line_highlights: 7
 ---
 
-# Inclua variáveis globais aqui
-nível = 1
+# Include global variables here
+level = 1
 
 --- /code ---
 
@@ -34,9 +34,9 @@ nível = 1
 
 --- task ---
 
-Este código usa `altura` e `frame_count` para aumentar a variável `nivel` toda vez que o jogador termina uma tela e, em seguida, imprime o novo nível para o jogador.
+This code uses the `height` and the `frame_count` to increase the `level` variable every time the player finishes a screen, then prints out the new level for the player.
 
-**Escolha:** Este código limita os níveis para cinco, para que não fique muito difícil de jogar. Não há razão para seu jogo usar cinco, mas você deve escolher um limite. Humanos não se movem tão rápido!
+**Choose:** This code limits the levels to five, so it doesn't get too hard to play. There's no reason your game has to use five, but you should choose a limit. Humans can only move so fast!
 
 --- code ---
 ---
@@ -60,7 +60,7 @@ The two main options for increasing difficulty are to make the game move faster,
 
 --- collapse ---
 ---
-título: Acelere seu jogo
+title: Speed your game up
 ---
 
 The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
@@ -87,7 +87,7 @@ line_numbers: false
 
 --- collapse ---
 ---
-título: Adicione mais obstáculos
+title: Add more obstacles
 ---
 
 Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
@@ -98,7 +98,7 @@ Adding extra obstacles is just a matter of increasing the number of times the `f
 
 --- /task ---
 
-### Mantendo a pontuação
+### Keep score
 
 The longer a player lasts without colliding with an obstacle, the better they're playing your game. Adding a score will let them see how well they're doing.
 
@@ -112,7 +112,7 @@ language: python filename: main.py
 line_numbers: false
 ---
 
-# Inclua variáveis globais aqui
+# Include global variables here
 score = 0
 
 --- /code ---
@@ -158,7 +158,7 @@ message = 'Score: ' + str(score)
 
 --- /task ---
 
-### Fim do jogo!
+### Game over!
 
 When a player has collided with an obstacle, the game should stop moving and their score should stop increasing.
 
@@ -180,7 +180,7 @@ Create an `if` statement in `draw()` that tests whether `level > 0` before calli
 
 --- collapse ---
 ---
-title: A pontuação não é exibida
+title: The score doesn't display
 ---
 
 Make sure that you've included the `text()` function that draws the player's score at the appropriate point in your `draw()` function, and that you've passed it the correct values:
@@ -210,7 +210,7 @@ filename: main.py — draw()
 
 --- collapse ---
 ---
-título: O jogo não para após uma colisão
+title: The game doesn't stop after a collision
 ---
 
 If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
@@ -253,7 +253,7 @@ filename: main.py — draw_player()
 
 --- collapse ---
 ---
-título: O jogo não fica mais rápido
+title: The game doesn't get faster
 ---
 
 First, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
@@ -278,7 +278,7 @@ line_numbers: false
 
 --- collapse ---
 ---
-título: Novos obstáculos não aparecem
+title: New obstacles don't appear
 ---
 
 There are a few reasons this could be happening. And there are some more reasons why it might appear to be happening, when it isn't. First, because new obstacles are added based on `level`, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
