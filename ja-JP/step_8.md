@@ -4,8 +4,8 @@
 
 --- task ---
 
-あなたのプロジェクトでRaspberry Pi Foundationコミュニティに刺激を与えてください！
+Inspire the Raspberry Pi Foundation community with your project!
 
-他の人が見ることができるよう、あなたのプロジェクトを私たちの ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"}スタジオに送るには、 [このフォーム](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}を使ってください。
+To submit your project to our ['Don't Collide - Community'](https://wke.lt/w/s/KobNfx){:target="_blank"} studio, please complete [this form](https://form.raspberrypi.org/f/community-project-submissions){:target="_blank"}.
 
 --- /task ---
