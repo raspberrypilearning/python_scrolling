@@ -1,24 +1,24 @@
 sur
 
-draw_player
+dessine_joueur
 
 joueur_y
 
 joueur
 
-draw_player
+dessine_joueur
 
 mouse_x
 
-image_file
+fichier_image
 
 x_coord
 
 y_coord
 
-width
+largeur
 
-height
+hauteur
 
 dessine_obstacles
 
