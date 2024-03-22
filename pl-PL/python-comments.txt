@@ -1,72 +1,72 @@
-Add the colour of your theme
+Dodaj kolor swojego motywu
 
-Positioned towards the screen bottom
+Ustawione w kierunku dolnej części ekranu
 
-Your chosen colour
+Twój wybrany kolor
 
-Load your image
+Wczytaj swój obraz
 
-Controls the size of the emoji
+Kontroluje rozmiar emoji
 
-Position around the centre
+Ustaw się wokół środka
 
-Face
+Ściana
 
-Eyes
+Oczy
 
-Replace with your obstacle
+Zastąp swoją przeszkodą
 
-Before drawing the player
+Przed rysowaniem gracza
 
-Load your player image
+Załaduj obraz gracza
 
-Load your obstacle image
+Załaduj obraz przeszkody
 
-Resize to fit your theme
+Zmień rozmiar, aby pasował do swojego motywu
 
-Draw a fir tree
+Narysuj jodłę
 
-Green for needles
+Zielony dla igieł
 
-Brown for trunk
+Brązowy dla pnia
 
-Increases each frame
+Zwiększa każdą klatkę
 
-Wrap around
+Owiń się
 
-Replace with your obstacle
+Zastąp swoją przeszkodą
 
-Any number is fine
+Każda liczba jest w porządku
 
-Draw collision point
+Narysuj punkt kolizji
 
-Useful for debugging
+Przydatne do debugowania
 
-Draw circles around the pixels to check for collisions
+Narysuj okręgi wokół pikseli, aby sprawdzić, czy nie ma kolizji
 
-Off the left of the screen
+Z lewej strony ekranu
 
-Off the right of the screen
+Z prawej strony ekranu
 
-Include global variables here
+Uwzględnij zmienne globalne tutaj
 
-Use the global level
+Użyj poziomu globalnego
 
-You have reached level
+Osiągnąłeś poziom
 
-Score: 
+Wynik: 
 
-Text to display
+Tekst do wyświetlenia
 
-Great flying!
+Świetne latanie!
 
-Doing well!
+Dobrze sobie radzisz!
 
-Keep going!
+Nie przestawaj!
 
-But be careful!
+Ale uważaj!
 
-Push harder!
+Naciskaj mocniej!
 
-Head for base!
+Głowa do bazy!
 
