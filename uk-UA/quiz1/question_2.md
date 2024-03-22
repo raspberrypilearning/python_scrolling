@@ -1,50 +1,50 @@
 --- question ---
 ---
-legend: Питання 2 з 3
+legend: Question 2 of 3
 ---
 
-У цьому проєкті була використана процедурна генерація - це коли комп'ютер створює та розміщує елементи навколишнього середовища для тебе. Хоча це дозволяє значно зекономити час, особливо, якщо ти створюєш дуже великі рівні, але це може створити певні проблеми. На які з цих проблем слід звернути увагу при тестуванні процедурної генерації?
+In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
 
 --- choices ---
 
-- (x) Всі з них
+- (x) All of them
 
   --- feedback ---
 
-Правильно! Все це може статися при використанні процедурної генерації. Ти можеш або додати більше коду, щоб перевіряти та вирішувати ці проблеми, або спробувати використати інший seed, доки не знайдеш потрібний.
+Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
 
   --- /feedback ---
 
-- ( ) Перешкоди можуть бути згенеровані таким чином, що у гравця не залишиться шляху вперед.
+- ( ) Obstacles could be generated that leave the player with no route forward.
 
   --- feedback ---
 
-Не зовсім так. Це може статися з перешкодами, які створені за допомогою процедурної генерації, особливо на початку гри.
+Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
 
 
-**Порада:** Цю проблему можна вирішити, якщо не допустити створення перешкод занадто близько до стартової позиції гравця. Можливо, ти можеш запропонувати інші рішення?
+**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
 
   --- /feedback ---
 
-- ( ) Перешкоди з'являються прямо під гравцем.
+- ( ) Obstacles appear directly underneath the player.
 
   --- feedback ---
 
-Не зовсім так. Це може статися як на початку гри, так і при додаванні нових перешкод внаслідок підвищення рівня складності, якщо вони випадково опиняться на позиції, близькій до позиції гравця.
+Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
 
 
-**Tip:** A potential solution might be to make the player temporarily immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. Які проблеми можуть виникнути при виборі перешкодою нового положення, якщо вона знаходиться занадто близько до гравця?
+**Tip:** A potential solution might be to make the player temporarily immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
 
   --- /feedback ---
 
-- ( ) Перешкоди розташовані поруч, залишаючи занадто багато відкритого простору в інших місцях.
+- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
 
   --- feedback ---
 
-Не зовсім так. Because random generation can choose groups of numbers that are close together, this can be a problem.
+Not quite. Because random generation can choose groups of numbers that are close together, this can be a problem.
 
 
-**Порада:** Можливим рішенням може бути використання напіввипадкової генерації, тобто розділити екран на частини та за допомогою випадкових чисел генерувати перешкоди всередині кожної з цих частин. Подумай, як можна використати таку процедурну генерацію, щоб зробити гру цікавішою або складнішою?
+**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
 
   --- /feedback ---
 
