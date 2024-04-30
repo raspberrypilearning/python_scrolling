@@ -91,8 +91,8 @@ line_highlights: 12
 def setup():
     size(400, 400)
     global speler
-    speler = load_image('skiing.png')  # Laad je speler-afbeelding
-    obstakel = load_image('rocket.png')  # Laad je obstakel-afbeelding
+    speler = load_image('turtle.png')  # Laad je speler-afbeelding
+    obstakel = load_image('shark.png')  # Laad je obstakel-afbeelding
 
 --- /code ---
 
