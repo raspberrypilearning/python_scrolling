@@ -91,8 +91,8 @@ line_highlights: 12
 def setup():
     size(400, 400)
     global joueur
-    joueur = load_image('skiing.png')  # Charge l'image de ton joueur
-    obstacle = load_image('rocket.png')  # Charge l'image de ton obstacle
+    joueur = load_image('turtle.png')  # Charge l'image de ton joueur
+    obstacle = load_image('shark.png')  # Charge l'image de ton obstacle
 
 --- /code ---
 
