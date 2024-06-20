@@ -19,10 +19,10 @@ def desenhar_obstaculos():
         nivel += 1
         print('Você atingiu o nível', nivel)
       
-    for i in range (6 + nível):
+    for i in range(6 + nivel):
         ob_x = randint(0, width)
         ob_y = randint(0, height) + (frame_count * nivel)
-        ob_x %= height  # Envolve toda a altura
+        ob_y %= height  # Envolve toda a altura
         push_matrix()
         translate(ob_x, ob_y)
         rotate(degrees(randint(1, 359)+frame_count / 1000))
@@ -37,7 +37,7 @@ def desenhar_jogador():
     jogador_y = int(height * 0.8)
     jogador_x = mouse_x
     
-    colide = get(jogador_x +, jogador_y).hex
+    colide = get(jogador_x, jogador_y).hex
     colide2 = get(jogador_x - 18, jogador_y + 17).hex
     colide3 = get(jogador_x + 18, jogador_y + 17).hex
     colide4 = get(jogador_x, jogador_y + 25).hex
@@ -106,8 +106,8 @@ def setup():
     text_size(40)
     text_align(CENTER, TOP) # posição em torno do centro, topo
     
-    rocket = load_image('rocket.png')
-    rock = load_image('moon.png')
+    foguete = load_image('rocket.png')
+    rocha = load_image('moon.png')
     random_seed = randint(0, 1000000)
   
 def draw():
