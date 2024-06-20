@@ -18,9 +18,9 @@ Substitua pelo seu obstáculo
 
 Antes de desenhar o jogador
 
-Load your player image
+Carrega sua imagem de jogador
 
-Load your obstacle image
+Carrega sua imagem de obstáculo
 
 Redimensione para adequar ao seu tema
 
@@ -34,7 +34,7 @@ Aumenta a cada quadro
 
 Dar a volta
 
-Replace with your obstacle
+Substitua pelo seu obstáculo
 
 Está bem qualquer número
 
@@ -52,21 +52,21 @@ Incluir variáveis globais aqui
 
 Use o nível global
 
-You have reached level
+Você atingiu o nível
 
-Score: 
+Pontos: 
 
-Text to display
+Texto a ser exibido
 
-Great flying!
+Ótimo voo!
 
-Doing well!
+Indo bem!
 
-Keep going!
+Continue!
 
-But be careful!
+Mas tenha cuidado!
 
-Push harder!
+Se esforce mais!
 
-Head for base!
+Vá para a base!
 
