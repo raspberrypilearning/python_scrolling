@@ -71,7 +71,7 @@ language: python filename: main.py - setup() line_numbers: true line_number_star
 line_highlights: 12
 ---
 
-def setup(): size(400, 400) global player player = load_image('skiing.png')  # Load your player image obstacle = load_image('rocket.png')  # Load your obstacle image
+def setup(): size(400, 400) global player player = load_image('turtle.png')  # Load your player image obstacle = load_image('shark.png')  # Load your obstacle image
 
 --- /code ---
 
