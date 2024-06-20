@@ -13,13 +13,13 @@ def desenhar_obstaculos():
     
     seed(123456789)
     
-    if frame_count % width == width - 1 e nivel < 10:
+    if frame_count % width == width - 1 and nivel < 10:
         nivel += 1
         print('Você atingiu o nível', nivel)
       
-    for i in range (6 + nível):
+    for i in range (6 + nivel):
         ob_x = randint(0, width) - (frame_count * nivel)
-        ob_x = randint(0, height) 
+        ob_y = randint(0, height) 
         ob_x %= width  # Envolve toda a largura
         text('💩', ob_x, ob_y)
     

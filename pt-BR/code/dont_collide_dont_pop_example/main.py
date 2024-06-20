@@ -17,7 +17,7 @@ def desenhar_obstaculos():
         nivel += 1
         print('Você atingiu o nível', nivel)
   
-    for i in range (6 + nível):
+    for i in range (6 + nivel):
         ob_x = randint(0, height)
         ob_y = randint(0, height) + (frame_count * nivel)
         ob_y %= height  # Envolve toda a altura
