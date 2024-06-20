@@ -3,16 +3,16 @@
 from p5 import *
 from random import randint, seed
 
-# Include global variables here
+# Inclua variáveis globais aqui
 
 
 def setup():
-    # Put code to run once here
+    # Coloque aqui o código para ser executado uma vez
 
 
 def draw():
-    # Put code to run every frame here
+    # Coloque aqui o código para ser executado em cada quadro
 
   
-# Keep this to run your code
+# Mantenha isto para executar seu código
 run()
