@@ -1,10 +1,10 @@
-## What next?
+## E agora?
 
-If you are following the [Introduction to Python](https://projects.raspberrypi.org/en/pathways/python-intro) pathway, you can move on to the [Powerful patterns](https://projects.raspberrypi.org/en/projects/powerful-patterns) project. In this project, you will create inspirational art that can be scaled using repeated patterns.
+Se você estiver seguindo a trilha [Introdução ao Python](https://projects.raspberrypi.org/en/pathways/python-intro), poderá passar para o projeto [Padrões poderosos](https://projects.raspberrypi.org/en/projects/powerful-patterns). Neste projeto, você criará arte inspiradora que pode ser dimensionada usando padrões repetidos.
 
 --- print-only ---
 
-![One of the examples from the Powerful patterns project using rotated geometric shapes.](images/kek-project.png)
+![Um dos exemplos do projeto Padrões poderosos usando formas geométricas rotacionadas.](images/kek-project.png)
 
 --- /print-only ---
 
@@ -15,5 +15,5 @@ If you are following the [Introduction to Python](https://projects.raspberrypi.o
 
 --- /no-print ---
 
-If you want to have more fun exploring Python, then you could try out any of [these projects](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
+Se você quiser se divertir mais explorando Python, então você pode experimentar qualquer um[destes projetos](https://projects.raspberrypi.org/en/projects?software%5B%5D=python).
 
