@@ -182,7 +182,7 @@ def desenhar_jogador():
 
 --- collapse ---
 ---
-título: Use caracteres emoji
+title: Use caracteres emoji
 ---
 
 Você pode usar caracteres emoji na função p5 `text()` para usar um emoji para representar seu jogador.
@@ -291,7 +291,7 @@ Ele se move como você espera?
 
 --- collapse ---
 ---
-título: não vejo o jogador
+title: não vejo o jogador
 ---
 
 Tente mudar para tela cheia. Além disso, verifique as coordenadas `x` e `y` que você usou para desenhar o jogador — certifique-se de que elas estejam dentro da tela que você criou com `size()`.

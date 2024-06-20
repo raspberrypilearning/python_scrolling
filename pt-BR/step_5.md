@@ -6,7 +6,7 @@ A maioria dos jogos de corrida sem fim aumenta a dificuldade do jogo à medida q
 </div>
 <div>
 
-![Exemplo de projeto com um texto contendo os pontos na tela.](images/pontos.png){:width="300px"}
+![Exemplo de projeto com um texto contendo os pontos na tela.](images/score.png){:width="300px"}
 
 </div>
 </div>

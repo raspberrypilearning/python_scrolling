@@ -302,7 +302,7 @@ Mude seu código até ficar satisfeito com os obstáculos que você tem. Você p
 
 --- collapse ---
 ---
-título: Apenas um obstáculo está sendo desenhado
+title: Apenas um obstáculo está sendo desenhado
 ---
 
 Verifique sua função que desenha vários obstáculos:
