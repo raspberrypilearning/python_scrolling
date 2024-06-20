@@ -20,29 +20,29 @@ Você tomará algumas decisões de modelagem sobre o tipo de jogo que fará e co
 
 --- task ---
 
-Run these examples. Pense em como os jogadores e os obstáculos foram feitos.
+Execute estes exemplos. Pense em como os jogadores e os obstáculos foram feitos.
 
 O que acontece se você bater em um obstáculo? Fica mais difícil conforme você joga?
 
-**Skiing cat**:
+**Gato esquiador**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/skiing-cat-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Skiing cat project [here](https://editor.raspberrypi.org/en/projects/skiing-cat-example){:target="_blank"}
+</iframe> Você pode encontrar o projeto Gato esquiador [aqui](https://editor.raspberrypi.org/en/projects/skiing-cat-example){:target="_blank"}
 
-**Don't pop**:
+**Não estoure**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dont-pop-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Don't pop project [here](https://editor.raspberrypi.org/en/projects/dont-pop-example){:target="_blank"}
+</iframe> Você pode encontrar o projeto Não estoure [aqui](https://editor.raspberrypi.org/en/projects/dont-pop-example){:target="_blank"}
 
-**Avoid the germs**:
+**Evite os germes**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/avoid-germs-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Avoid the germs project [here](https://editor.raspberrypi.org/en/projects/avoid-germs-example){:target="_blank"}
+</iframe> Você pode encontrar o projeto Evite os germes [aqui](https://editor.raspberrypi.org/en/projects/avoid-germs-example){:target="_blank"}
 
-**Clean car**:
+**Carro limpo**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/clean-car-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Clean car project [here](https://editor.raspberrypi.org/en/projects/clean-car-example){:target="_blank"}
+</iframe> Você pode encontrar o projeto Carro limpo [aqui](https://editor.raspberrypi.org/en/projects/clean-car-example){:target="_blank"}
 
-**Dodge asteroids**:
+**Desvie de asteroides**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
-</iframe> You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
+</iframe> Você pode encontrar o projeto Desvie de asteroides [aqui](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
 --- /task ---
 
@@ -50,13 +50,13 @@ O que acontece se você bater em um obstáculo? Fica mais difícil conforme voc�
 
 --- print-only ---
 
-You are going to make some design decisions about the kind of game you will make and how you will use code to get the effects you want.
+Você tomará algumas decisões de design sobre o tipo de jogo que fará e como usará o código para obter os efeitos desejados.
 
-![Skiing cat project example](images/example2.png){:width="300px"}
-You can find the Skiing cat project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Don't pop project example](images/example4.png){:width="300px"}
-You can find the Don't pop project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Avoid the germs project example](images/example3.png){:width="300px"}
-You can find the Avoid the germs project here https://editor.raspberrypi.org/en/projects/repeated-patterns-example ![Clean car project example](images/example5.png){:width="300px"}
-You can find the Clean car project here https://editor.raspberrypi.org/en/projects/clean-car-example ![Dodge asteroids project example](images/example1.png){:width="300px"}
-You can find the Dodge asteroids project here https://editor.raspberrypi.org/en/projects/dodge-asteroids-example
+![Exemplo do projeto Gato esquiador](images/example2.png){:width="300px"}
+Você pode encontrar o projeto Gato esquiador aqui https://editor.raspberrypi.org/pt-br/projects/repeated-patterns-example ![Don't pop project example](images/example4.png){:width="300px"}
+Você pode encontrar o projeto Não estoure aqui https://editor.raspberrypi.org/pt-br/projects/repeated-patterns-example ![Avoid the germs project example](images/example3.png){:width="300px"}
+Você pode encontrar o projeto Evite os germes aqui https://editor.raspberrypi.org/pt-br/projects/repeated-patterns-example ![Clean car project example](images/example5.png){:width="300px"}
+Você pode encontrar o projeto Carro limpo aqui https://editor.raspberrypi.org/pt-br/projects/clean-car-example ![Dodge asteroids project example](images/example1.png){:width="300px"}
+Você pode encontrar o projeto Desvie de asteroides aqui https://editor.raspberrypi.org/pt-br/projects/dodge-asteroids-example
 
 --- /print-only ---
