@@ -33,7 +33,7 @@ Não exatamente. Isso pode acontecer com obstáculos gerados proceduralmente, pr
 Não exatamente. Isso pode acontecer tanto no início do jogo, quanto quando novos obstáculos são adicionados como resultado do aumento do nível de dificuldade, caso eles escolham uma posição próxima à do jogador.
 
 
-**Tip:** A potential solution might be to make the player temporarily immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. Que problemas pode criar o obstáculo que escolhe uma nova posição se estiver muito perto do jogador?
+**Dica:** Uma solução potencial pode ser tornar o jogador temporariamente imune à colisão com todos os obstáculos, ou mesmo apenas com obstáculos recém-criados, por um curto período após um aumento de nível. Que problemas pode criar o obstáculo que escolhe uma nova posição se estiver muito perto do jogador?
 
   --- /feedback ---
 
@@ -41,7 +41,7 @@ Não exatamente. Isso pode acontecer tanto no início do jogo, quanto quando nov
 
   --- feedback ---
 
-Não exatamente. Because random generation can choose groups of numbers that are close together, this can be a problem.
+Não exatamente. Como a geração aleatória pode escolher grupos de números próximos, isso pode ser um problema.
 
 
 **Dica:** Uma solução pode ser mudar para geração semi-aleatória — divida a tela em pedaços e use números aleatórios para gerar obstáculos dentro de cada um desses pedaços. Você consegue pensar em como poderia usar esse tipo de geração procedural para tornar seu jogo mais interessante ou mais desafiador?
