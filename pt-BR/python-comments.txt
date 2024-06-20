@@ -1,0 +1,72 @@
+Adicione a cor do seu tema
+
+Posicionado em direção à parte inferior da tela
+
+Sua cor escolhida
+
+Carregue sua imagem
+
+Controla o tamanho do emoji
+
+Posicione ao redor do centro
+
+Rosto
+
+Olhos
+
+Substitua pelo seu obstáculo
+
+Antes de desenhar o jogador
+
+Carrega sua imagem de jogador
+
+Carrega sua imagem de obstáculo
+
+Redimensione para adequar ao seu tema
+
+Desenhe um pinheiro
+
+Verde para as folhas
+
+Marrom para o tronco
+
+Aumenta a cada quadro
+
+Dar a volta
+
+Substitua pelo seu obstáculo
+
+Está bem qualquer número
+
+Desenhar ponto de colisão
+
+Útil para depuração
+
+Desenhe círculos ao redor dos pixels para verificar colisões
+
+À esquerda da tela
+
+À direita da tela
+
+Incluir variáveis globais aqui
+
+Use o nível global
+
+Você atingiu o nível
+
+Pontos: 
+
+Texto a ser exibido
+
+Ótimo voo!
+
+Indo bem!
+
+Continue!
+
+Mas tenha cuidado!
+
+Se esforce mais!
+
+Vá para a base!
+
