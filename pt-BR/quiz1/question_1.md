@@ -42,7 +42,7 @@ else:
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condition both parts must be true, and `lives >= 3` is false.
+Enquanto `pontos >= 5000` for verdadeiro, para uma condição `and` as duas partes devem ser verdadeiras, e `vidas >= 3` é falso.
 
   --- /feedback ---
 
