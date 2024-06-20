@@ -1,24 +1,24 @@
 seguro
 
-draw_player
+desenhar_jogador
 
 jogador_y
 
 jogador
 
-draw_player
+desenhar_jogador
 
 mouse_x
 
-image_file
+arquivo_imagem
 
 x_coord
 
 y_coord
 
-width
+largura
 
-height
+altura
 
 desenhar_obstaculos
 
@@ -28,11 +28,11 @@ ob_y
 
 obstaculo
 
-colidir
+colide
 
 nivel
 
 pontos
 
-message
+mensagem
 
