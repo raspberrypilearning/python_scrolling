@@ -1,0 +1,33 @@
+---
+title: Não colida!
+hero_image: images/banner.png
+description:
+  - Construa um jogo de corrida sem fim onde seu personagem deve evitar colisões
+  - com obstáculos
+meta_title: Projetos de codificação Python para crianças e adolescentes | Não colida!
+meta_description: Aprenda Python com os projetos de codificação da Raspberry Pi Foundation para crianças e adolescentes. Crie um jogo de corrida com rolagem em Python e evite obstáculos.
+version: 4
+listed: true
+copyedit: true
+last_tested: "2021-10-06"
+steps:
+  - title: Você vai fazer
+  - title: Defina o tema
+  - title: Crie obstáculos
+    completion:
+      - engaged
+  - title: Detecção de colisão
+  - title: Acelere!
+    completion:
+      - internal
+  - title: Teste rápido
+    knowledge_quiz:
+      path: quiz1
+      version: 1
+      questions: 3
+      passing_score: 3
+    completion:
+      - external
+  - title: Melhore o seu projeto
+  - title: Compartilhar
+  - title: E agora?
