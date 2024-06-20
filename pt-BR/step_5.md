@@ -1,23 +1,23 @@
-## Speed up!
+## Acelere!
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Most endless runner games increase the difficulty of the game as the player progresses, and give them a score.
+A maioria dos jogos de corrida sem fim aumenta a dificuldade do jogo à medida que o jogador avança e dá-lhes uma pontuação.
 </div>
 <div>
 
-![Example project with a text score on the screen.](images/score.png){:width="300px"}
+![Exemplo de projeto com um texto contendo os pontos na tela.](images/score.png){:width="300px"}
 
 </div>
 </div>
 
-### Add difficulty levels
+### Adicione níveis de dificuldade
 
-Creating clear difficulty levels will make it easier for your player to understand what is happening.
+Criar níveis de dificuldade claros tornará mais fácil para o jogador entender o que está acontecendo.
 
 --- task ---
 
-Create a `global` `level` variable to track the level the player is currently on. Set it to `1` so players start a new game on the first level.
+Crie uma variável `global` `nivel` para rastrear o nível em que o jogador está atualmente. Defina-a como `1` para que os jogadores comecem um novo jogo no primeiro nível.
 
 --- code ---
 ---
@@ -25,7 +25,7 @@ language: python filename: main.py line_numbers: true line_number_start: 6
 line_highlights: 7
 ---
 
-# Include global variables here
+# Inclua variáveis globais aqui
 level = 1
 
 --- /code ---
@@ -34,9 +34,9 @@ level = 1
 
 --- task ---
 
-This code uses the `height` and the `frame_count` to increase the `level` variable every time the player finishes a screen, then prints out the new level for the player.
+Este código usa `altura` e `frame_count` para aumentar a variável `nivel` toda vez que o jogador termina uma tela e, em seguida, imprime o novo nível para o jogador.
 
-**Choose:** This code limits the levels to five, so it doesn't get too hard to play. There's no reason your game has to use five, but you should choose a limit. Humans can only move so fast!
+**Escolha:** Este código limita os níveis para cinco, para que não fique muito difícil de jogar. Não há razão para seu jogo usar cinco, mas você deve escolher um limite. Humanos não se movem tão rápido!
 
 --- code ---
 ---
@@ -56,18 +56,18 @@ def draw_obstacles(): global level  # Use the global level
 
 --- task ---
 
-The two main options for increasing difficulty are to make the game move faster, and to increase the number of obstacles.
+As duas principais opções para aumentar a dificuldade são tornar o jogo mais rápido e aumentar o número de obstáculos.
 
 --- collapse ---
 ---
-title: Speed your game up
+título: Acelere seu jogo
 ---
 
-The speed of the game is controlled by how fast obstacles seem to be moving towards the player. This code speeds this up by adding `frame_count * level` to the `y` coordinate during obstacle generation.
+A velocidade do jogo é controlada pela rapidez com que os obstáculos parecem se mover em direção ao jogador. Este código acelera isso adicionando `frame_count * nivel` à coordenada `y` durante a geração de obstáculos.
 
-Instead of moving your obstacles by one pixel in every frame, this code effectively moves it by `level` pixels instead.
+Em vez de mover seus obstáculos em um píxel em cada quadro, esse código efetivamente os move em píxeis de `nivel`.
 
-Looking at the code, you might expect the speed to increase by more than `level` pixels. For example, at the point just before your `level` increases, the `frame_count` is `799` — as the `level` increases one frame before the `frame_count` is an even multiple of `height` (set at `400` pixels) — and `799 * 3` is notably bigger than `799 * 2`. However, the extra pixels created by multiplying the whole of `frame_count` by a bigger number are hidden by `ob_y %= height`. This leaves only the `level` extra pixels in each step.
+Olhando para o código, você pode esperar que a velocidade aumente mais do que os píxeis de `nivel`. Por exemplo, no ponto imediatamente antes de seu `nivel` aumentar, o `frame_count` é `799` - quando o `nivel` aumenta, um quadro antes do `frame_count` é um múltiplo par de `altura` (definido em `400` píxels) — e `799 * 3` é notavelmente maior que `799 * 2`. No entanto, os píxeis extras criados pela multiplicação de `frame_count` inteiro por um número maior são ocultados por `ob_y %= altura`. Isso deixa apenas os píxeis extras de `nivel` em cada etapa.
 
 --- code ---
 ---
@@ -87,24 +87,24 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: Add more obstacles
+título: Adicione mais obstáculos
 ---
 
-Adding extra obstacles is just a matter of increasing the number of times the `for` loop that creates them runs. You can do this by increasing the number you pass to the `range()` function by `level`.
+Adicionar obstáculos extras é apenas uma questão de aumentar o número de vezes que o laço `for` que os cria é executado. Você pode fazer isso aumentando o número passado para a função `range()` em `nivel`.
 
-**Tip:** Of course, you can always use `level * 2`, or even larger multiples, if you want to make your game harder.
+**Dica:** Claro, você sempre pode usar `level * 2`, ou múltiplos ainda maiores, se quiser tornar seu jogo mais difícil.
 
 --- /collapse ---
 
 --- /task ---
 
-### Keep score
+### Mantendo a pontuação
 
-The longer a player lasts without colliding with an obstacle, the better they're playing your game. Adding a score will let them see how well they're doing.
+Quanto mais tempo um jogador durar sem colidir com um obstáculo, melhor ele é jogando o seu jogo. Adicionar uma pontuação permitirá que eles vejam como estão se saindo.
 
 --- task ---
 
-Create a global `score` variable to track the player's score. Set it to `0` so players start a new game without any points.
+Crie uma variável global `pontos` para rastrear a pontuação do jogador. Defina-o como `0` para que os jogadores comecem um novo jogo sem nenhum ponto.
 
 --- code ---
 ---
@@ -112,7 +112,7 @@ language: python filename: main.py
 line_numbers: false
 ---
 
-# Include global variables here
+# Inclua variáveis globais aqui
 score = 0
 
 --- /code ---
@@ -121,9 +121,9 @@ score = 0
 
 --- task ---
 
-You can increase your player's score for every frame where they have not collided with an obstacle by increasing their score when you check for collision in `draw_player()`.
+Você pode aumentar a pontuação do seu jogador para cada quadro em que ele não colidiu com um obstáculo, aumentando sua pontuação ao verificar a colisão em `desenhar_jogador()`.
 
-**Choose:** You can decide how many points each frame is worth, but increasing the player's score by `level` rewards players who can survive at higher difficulty levels.
+**Escolha:** Você pode decidir quantos pontos cada quadro vale, mas aumentar a pontuação do jogador em `nivel` recompensa os jogadores que podem sobreviver em níveis de dificuldade mais altos.
 
 --- code ---
 ---
@@ -145,51 +145,51 @@ filename: main.py — draw_player()
 
 --- task ---
 
-Players should be able to see their score. Because it increases so quickly, using `print()` wouldn't work very well. Use the p5 `text()` function inside your `draw()` function, to display it as text on the game screen instead.
+Os jogadores devem conseguir ver suas pontuações. Como ela aumenta tão rapidamente, usar `print()` não funcionaria muito bem. Use a função p5 `text()` dentro de sua função `draw()` para exibi-la como texto na tela do jogo.
 
 [[[processing-python-text]]]
 
-You can use the `+` operator to combine two or more strings if you want to give a heading like 'score' or 'points'. Because `score` is a number, you will need to convert it to a string before you can join it with another string. You can do this with `str()`:
+Você pode usar o operador `+` para combinar dois ou mais textos se quiser dar um título como 'pontuação' ou 'pontos'. Como `pontos` é um número, você precisará convertê-lo em um texto antes de uni-lo a outro texto. Você pode fazer isso com `str()`:
 
 ```python
 message = 'Score: ' + str(score)
 ```
-**Tip:** `str()` is short for 'string' — programmers often remove letters like this, so they don't have to type as much!
+**Dica:** `str()` é a abreviação de 'string' — os programadores geralmente removem letras dessa forma, assim não precisam digitar tanto!
 
 --- /task ---
 
-### Game over!
+### Fim do jogo!
 
-When a player has collided with an obstacle, the game should stop moving and their score should stop increasing.
-
---- task ---
-
-You can use the `level` variable to signal 'Game over' by setting it to 0 — a value it will never reach any other way. Do this in the `else` step of your collision detection code.
-
---- /task ---
+Quando um jogador colide com um obstáculo, o jogo deve parar de se mover e sua pontuação deve parar de aumentar.
 
 --- task ---
 
-Create an `if` statement in `draw()` that tests whether `level > 0` before calling any of the functions — like `background()`, `draw_obstacles()`, and `draw_player()` — that update the game. Because these functions are not called, the entire game seems to end, even though your program is still running.
+Você pode usar a variável `nivel` para sinalizar 'Fim de jogo' definindo-a como 0 — um valor que nunca alcançará de outra maneira. Faça isso na etapa `else` do seu código de detecção de colisão.
 
 --- /task ---
 
 --- task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+Crie uma instrução `if` em `draw()` que testa se `nivel > 0` antes de chamar qualquer uma das funções — como `background()`, `desenhar_obstaculos()`e `desenhar_jogador()` — que atualizam o jogo. Como essas funções não são chamadas, o jogo inteiro parece terminar, mesmo que o programa ainda esteja em execução.
+
+--- /task ---
+
+--- task ---
+
+**Depurar:** Talvez você encontre alguns bugs em seu projeto que precisam de correção. Aqui estão alguns bugs comuns.
 
 --- collapse ---
 ---
-title: The score doesn't display
+title: A pontuação não é exibida
 ---
 
-Make sure that you've included the `text()` function that draws the player's score at the appropriate point in your `draw()` function, and that you've passed it the correct values:
+Certifique-se de incluir a função `text()` que desenha a pontuação do jogador no ponto apropriado em sua função `draw()`, e que você passou os valores corretos:
 
 ```python
 text('Text to display', x, y)`
 ```
 
-It should look something like this:
+Deve ficar parecido com isso:
 
 --- code ---
 ---
@@ -210,12 +210,12 @@ filename: main.py — draw()
 
 --- collapse ---
 ---
-title: The game doesn't stop after a collision
+título: O jogo não para após uma colisão
 ---
 
-If you think your game might not be correctly detecting collisions at all, first try the debug instructions in the previous step, under 'There is no collision when the player reaches an obstacle'.
+Se você acha que seu jogo pode não estar detectando colisões corretamente, primeiro tente as instruções de depuração da etapa anterior, em 'Não há colisão quando o jogador atinge um obstáculo'.
 
-If your game is correctly detecting collisions, then check that you have properly indented the code that draws your game inside the `if level > 0` statement, to make sure it only runs if that statement is true. For example:
+Se o seu jogo estiver detectando colisões corretamente, verifique se você recuou corretamente o código que desenha seu jogo dentro da instrução `if nivel > 0`, para ter certeza de que ele só será executado se essa afirmação é verdadeira. Por exemplo:
 
 --- code ---
 ---
@@ -232,7 +232,7 @@ filename: main.py — draw()
 
 --- /code ---
 
-Finally, if both of those are working correctly, your game may not be setting `level = 0` correctly when a collision happens. For example:
+Por fim, se ambos estiverem funcionando corretamente, seu jogo pode não estar definindo `nivel = 0` corretamente quando ocorrer uma colisão. Por exemplo:
 
 --- code ---
 ---
@@ -253,12 +253,12 @@ filename: main.py — draw_player()
 
 --- collapse ---
 ---
-title: The game doesn't get faster
+título: O jogo não fica mais rápido
 ---
 
-First, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
+Primeiro, verifique se o `nivel` está aumentando corretamente. Você deverá ver uma mensagem impressa toda vez que ele aumentar. Se isso não estiver acontecendo, verifique o código para imprimir a mensagem e o código para aumentar o nível.
 
-If level is increasing correctly, check your `draw_obstacles()` function. In particular, check that you have `ob_y = randint(0, height) + (frame_count * level)`. It should look something like this:
+Se o nível estiver aumentando corretamente, verifique sua função `desenhar_obstaculos()`. Em particular, verifique se você tem `ob_y = randint(0, altura) + (frame_count * nivel)`. Deve ficar parecido com isso:
 
 --- code ---
 ---
@@ -278,12 +278,12 @@ line_numbers: false
 
 --- collapse ---
 ---
-title: New obstacles don't appear
+título: Novos obstáculos não aparecem
 ---
 
-There are a few reasons this could be happening. And there are some more reasons why it might appear to be happening, when it isn't. First, because new obstacles are added based on `level`, check that `level` is increasing correctly. You should see a message printed out every time it goes up. If this isn't happening, check both the code for printing the message and the code for increasing the level.
+Existem algumas razões pelas quais isso pode estar acontecendo. E há mais algumas razões pelas quais isso pode parecer estar acontecendo, quando não está. Primeiro, porque novos obstáculos são adicionados com base no `nivel`, verifique se o `nivel` está aumentando corretamente. Você deverá ver uma mensagem impressa toda vez que ele aumentar. Se isso não estiver acontecendo, verifique o código para imprimir a mensagem e o código para aumentar o nível.
 
-If level is increasing correctly, check your `draw_obstacles()` function to ensure that you have `level` used in the `range()` function of the `for` loop that draws the obstacles. It should look something like this:
+Se o nível estiver aumentando corretamente, verifique sua função `desenhar_obstaculos()` para garantir que você tenha `nivel` usado na função `range()` da iteração `for` que desenha os obstáculos. Deve ficar parecido com isso:
 
 --- code ---
 ---
@@ -299,18 +299,18 @@ line_numbers: false
 
 --- /code ---
 
-If you've done all these checks and it still doesn't look like the number of obstacles is increasing, it's possible that they are but you aren't seeing it. You should try some of these steps to test this:
-  - Slow the game down by using `frame_rate = 10` in your call to `run()` to give you more time to count:
+Se você fez todas essas verificações e ainda não parece que o número de obstáculos está aumentando, é possível que estejam, mas você não está vendo. Você deve tentar algumas destas etapas para testar isso:
+  - Desacelere o jogo usando `frame_rate = 10` em sua chamada `run()` para ter mais tempo para contar:
 
 ```python
 run(frame_rate = 10)
 ```
 
-You can alter the speed of the game by changing `10` to a higher or lower value.
+Você pode alterar a velocidade do jogo alterando `10` para um valor maior ou menor.
 
-  - Change the seed you're using for your random numbers. It's unlikely, but it is possible that some obstacles are randomly appearing directly on top of each other
-  - Add a `print()` to the `for` loop in `draw_obstacles()` that prints out the value of `i` in each pass of the loop, so you can verify whether it's running the number of times it should
-  - Just for testing purposes, change `range(6 + level)` to `range(6 * level)` — that increase should be easier to spot!
+  - Altere a semente que você está usando para seus números aleatórios. É improvável, mas é possível que alguns obstáculos apareçam aleatoriamente uns sobre os outros
+  - Adicione um `print()` no laço `for` em `desenhar_obstaculos()` que imprime o valor de `i` em cada passagem da iteração, para que você possa verificar se está executando o número de vezes que deveria
+  - Apenas para fins de teste, altere `range(6 + nivel)` para `range(6 * nivel)` — esse aumento deve ser mais fácil de detectar!
 
 --- /collapse ---
 
