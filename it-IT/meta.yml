@@ -1,32 +1,32 @@
 ---
-title: Don't collide!
+title: Non scontrarti!
 hero_image: images/banner.png
 description:
-  - Build an endless runner game where your character must avoid colliding
-  - with obstacles
-meta_title: Python coding projects for kids and teens | Don't collide!
-meta_description: Learn Python with the Raspberry Pi Foundation's coding projects for kids and teens. Build a scrolling runner game in Python and avoid obstacles.
+  - Costruisci un gioco senza fine in cui il tuo corridore deve evitare di scontrarsi
+  - con ostacoli
+meta_title: Progetti di programmazione Python per bambini e ragazzi | Non scontrarti!
+meta_description: Impara Python con i progetti di programmazione della Raspberry Pi Foundation per bambini e ragazzi. Costruisci un gioco per far scorrere il tuo corridore in Python ed evitare gli ostacoli.
 version: 4
 listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
   - 
-    title: You will make
+    title: Quello che farai
   - 
-    title: Set the theme
+    title: Prepara la scena
   - 
-    title: Create obstacles
+    title: Crea gli ostacoli
     completion:
       - engaged
   - 
-    title: Collision detection
+    title: Rilevamento delle collisioni
   - 
-    title: Speed up!
+    title: Accelera!
     completion:
       - internal
   - 
-    title: Quick quiz
+    title: Quiz veloce
     knowledge_quiz:
       path: quiz1
       version: 1
@@ -35,8 +35,8 @@ steps:
     completion:
       - external
   - 
-    title: Upgrade your project
+    title: Migliora il tuo progetto
   - 
-    title: Share
+    title: Condividi
   - 
-    title: What next?
+    title: E adesso?
