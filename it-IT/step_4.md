@@ -1,8 +1,8 @@
-## Collision detection
+## Rilevamento delle collisioni
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Endless runner games often end when the player collides with an obstacle.
+I giochi dei corridori senza fine spesso finiscono quando il giocatore si scontra con un ostacolo.
 </div>
 <div>
 
@@ -11,14 +11,15 @@ Endless runner games often end when the player collides with an obstacle.
 </div>
 </div>
 
-Now you can set up your player to react to an obstacle collision.
+Ora puoi impostare il tuo giocatore in modo che reagisca alla collisione con un ostacolo.
 
 <p style="border-left: solid; border-width:10px; border-color: #0faeb0; background-color: aliceblue; padding: 10px;">
-<span style="color: #0faeb0">**Collision detection**</span> is determining when two objects created inside a computer simulation — whether that's a game, and animation, or something else — are touching. There are several ways to do this, for example: 
-  - checking if the colours appearing at the location of an object are the colours of that object, or a different one
-  - keeping track of the shape of every object, and checking if those shapes overlap
-  - creating a set of boundary points, or lines, around an object and checking if they come into contact with any other 'collidable' objects
-When such a collision is detected, the program can react in some way. In a video game, this is usually to deal damage (if the player collides with an enemy or hazard) or to give a benefit (if the player collides with a power up).
+<span style="color: #0faeb0">**Rilevamento collisioni**</span> determina quando due oggetti creati in una simulazione al computer —
+che sia un gioco, un'animazione o qualcos'altro — si toccano. Esistono diversi modi per farlo, ad esempio: 
+  - controllare se i colori che appaiono nella posizione di un oggetto sono i colori di quell'oggetto o uno diverso
+  - tenere traccia della forma di ogni oggetto e controllare se quelle forme si sovrappongono
+  - creare una serie di punti di confine, o linee, attorno a un oggetto e controllare se entrano in contatto con altri oggetti 'collidabili'
+Quando tali collisioni vengono rilevate, il programma può reagire in qualche modo. In un videogioco, questo di solito serve per infliggere danni (se il giocatore si scontra con un nemico o un pericolo) o per fornire un vantaggio (se il giocatore collide con un potenziamento).
 </p>
 
 --- task ---
