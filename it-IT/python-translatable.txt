@@ -1,38 +1,38 @@
-safe
 
-draw_player
 
-player_y
+disegna_giocatore
 
-player
+giocatore_y
 
-draw_player
+giocatore
+
+disegna_giocatore
 
 mouse_x
 
-image_file
 
-x_coord
 
-y_coord
 
-width
 
-height
 
-draw_obstacles
+
+larghezza
+
+altezza
+
+disegnare_ostacoli
 
 ob_x
 
 ob_y
 
-obstacle
+ostacolo
 
-collide
+collisione
 
-level
+livello
 
-score
+punteggio
 
-message
+messaggio
 
