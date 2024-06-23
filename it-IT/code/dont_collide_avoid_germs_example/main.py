@@ -3,44 +3,44 @@
 from p5 import *
 from random import randint, seed
 
-level = 1
-score = 0
+livello = 1
+punteggio = 0
 
-def safe_player():
-    global player_y
+def giocatore_salvo():
+    global giocatore_y
     
-    # Face
+    # Volto
     fill(200, 134, 145)
-    ellipse(mouse_x, player_y, 60, 60)
+    ellipse(mouse_x, giocatore_y, 60, 60)
   
-    # Eyes
+    # Occhi
     fill(178, 200, 145)
-    ellipse(mouse_x - 10, player_y - 10, 20, 20)
-    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    ellipse(mouse_x - 10, giocatore_y - 10, 20, 20)
+    ellipse(mouse_x + 10, giocatore_y - 10, 20, 20)
     fill(0)
-    ellipse(mouse_x - 10, player_y - 10, 10, 10)
-    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    ellipse(mouse_x - 10, giocatore_y - 10, 10, 10)
+    ellipse(mouse_x + 10, giocatore_y - 10, 10, 10)
     fill(255)
-    ellipse(mouse_x - 12, player_y - 12, 5, 5)
-    ellipse(mouse_x + 12, player_y - 12, 5, 5)
+    ellipse(mouse_x - 12, giocatore_y - 12, 5, 5)
+    ellipse(mouse_x + 12, giocatore_y - 12, 5, 5)
     
-    # Mouth
+    # Bocca
     fill(0)
-    ellipse(mouse_x, player_y + 10, 15, 10)
+    ellipse(mouse_x, giocatore_y + 10, 15, 10)
     fill(200, 134, 145)
-    ellipse(mouse_x, player_y + 5, 10, 10)
+    ellipse(mouse_x, giocatore_y + 5, 10, 10)
 
-def crashed_player():
-    global player_y
+def giocatore_eliminato():
+    global giocatore_y
     
-    # Face
+    # Volto
     fill(178, 200, 145)
-    ellipse(mouse_x, player_y, 60, 60)
+    ellipse(mouse_x, giocatore_y, 60, 60)
   
-    # Eyes
+    # Occhi
     fill(149, 161, 195)
-    ellipse(mouse_x - 10, player_y - 10, 20, 20)
-    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    ellipse(mouse_x - 10, giocatore_y - 10, 20, 20)
+    ellipse(mouse_x + 10, giocatore_y - 10, 20, 20)
     fill(0)
     ellipse(mouse_x - 10, player_y - 10, 10, 10)
     ellipse(mouse_x + 10, player_y - 10, 10, 10)
