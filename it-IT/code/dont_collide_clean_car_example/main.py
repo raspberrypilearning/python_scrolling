@@ -1,83 +1,83 @@
 #!/bin/python3
 
-# Import library code
+# Importa le librerie di codice
 from p5 import *
 from random import randint, seed
 
-level = 1
-score = 0
+livello = 1
+punteggio = 0
 
-# The draw_obstacle function goes here
-def draw_obstacles():
-    global level
+# La funzione disegnare_ostacoli va qui
+def disegnare_ostacoli():
+    global livello
     
     seed(123456789)
     
-    if frame_count % width == width - 1 and level < 10:
-        level += 1
-        print('You reached level', level)
+    if frame_count % width == width - 1 and livello < 10:
+        livello += 1
+        print('Hai raggiunto il livello:', livello)
       
-    for i in range(6 + level):
-        ob_x = randint(0, width) - (frame_count * level)
-        ob_y = randint(0, height) 
-        ob_x %= width  # wrap around
-        text('💩', ob_x, ob_y)
+    for i in range(6 + livello):
+        ob_y = randint(0, width) + (frame_count * livello)
+         
+        ob_x %= width  # arrotolare
+        
     
-# The draw_player function goes here
-def draw_player():
-    global score, level
+# La funzione disegna_giocatore va qui
+def disegna_giocatore():
+    global punteggio, livello
     
-    player_x = int(width * 0.2)
-    player_y = mouse_y
+    giocatore_x = int(width * 0.2)
+    giocatore_y = mouse_y
     
-    collide = get(player_x + 50, player_y + 15).hex
-    collide2 = get(player_x + 50, player_y - 15).hex
-    collide3 = get(player_x, player_y + 15).hex
-    collide4 = get(player_x, player_y - 15).hex
-    collide5 = get(player_x - 50, player_y + 15).hex
-    collide6 = get(player_x - 50, player_y - 15).hex
+    collisione = get(giocatore_x + 50, giocatore_y + 15).hex
+    collisione2 = get(giocatore_x + 50, giocatore_y - 15).hex
+    collisione3 = get(giocatore_x, giocatore_y + 15).hex
+    collisione4 = get(giocatore_x, giocatore_y - 15).hex
+    collisione5 = get(giocatore_x - 50, giocatore_y + 15).hex
+    collisione6 = get(giocatore_x - 50, giocatore_y - 15).hex
     
-    if player_y > height - 18:  # Off the bottom of the screen
-        collide = safe.hex
-        collide3 = safe.hex
-        collide5 = safe.hex
+    if giocatore_y > height - 18:  # Fuori dalla parte inferiore dello schermo
+        collisione = safe.hex
+        collisione3 = safe.hex
+        collisione5 = safe.hex
       
-    elif player_y < 18:  # Off the top of the screen
-        collide2 = safe.hex
-        collide4 = safe.hex
-        collide6 = safe.hex
+    elif giocatore_y < 18:  # Fuori dalla parte superiore dello schermo
+        collisione2 = safe.hex
+        collisione4 = safe.hex
+        collisione6 = safe.hex
       
-    if collide == safe.hex and collide2 == safe.hex and collide3 == safe.hex and collide4 == safe.hex:
-        image(car, player_x, player_y, 100, 31)
-        score += level
+    if collisione == safe.hex and collisione2 == safe.hex and collisione3 == safe.hex and collisione4 == safe.hex:
+        image(auto, giocatore_x, giocatore_y, 100, 31)
+        punteggio += livello
     else:
-        text('💥', player_x, player_y)
-        level = 0
+        testo('💥', giocatore_x, giocatore_y)
+        livello = 0
 
 
 def setup():
-    # Setup your animation here
+    # Imposta la tua animazione qui
     size(400, 400)
-    global car
-    car = load_image('car.png')
+    global auto
+    
     image_mode(CENTER)
   
   
 def draw():
-    # Things to do in every frame
-    global score, safe, level
-    safe = Color(128)
+    # Cose da fare in ogni fotogramma
+    global punteggio, safe, livello
+    sicurezza = Color(128)
     
-    if level > 0:
-        background(safe)
+    if livello > 0:
+        
         fill(255)
         text_size(16)
         text_align(RIGHT, TOP)
-        text('Score', width * 0.45, 10, width * 0.5, 20)
-        text(str(score), width * 0.45, 25, width * 0.5, 20)
+        text('Punteggio', width * 0.45, 10, width * 0.5, 20)
+        text(str(punteggio), width * 0.45, 25, width * 0.5, 20)
         text_size(20)
-        text_align(CENTER, TOP)  # position around the centre, top
-        draw_obstacles()
+        text_align(CENTER, TOP) # posizione attorno al centro, in alto
+        disegnare_ostacoli()
         draw_player()
   
 run()
