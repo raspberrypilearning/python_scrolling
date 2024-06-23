@@ -1,8 +1,8 @@
-## Upgrade your project
+## Migliora il tuo progetto
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-If you have time you can upgrade your project.
+Se hai più tempo, puoi migliorare il tuo progetto.
 </div>
 <div>
 
@@ -11,37 +11,37 @@ If you have time you can upgrade your project.
 </div>
 </div>
 
-Here are some ideas you could try:
+Ecco alcune idee che potresti provare:
 
-### Include a variety of obstacles
-You can add variety to your obstacles in a few ways:
- - Randomly choose between multiple images, emojis, or obstacle drawing functions
- - Randomly adjust the colour, shape, or size of obstacles by changing the parameters that draw them
- - Animate the obstacle by adding rotation, a colour change, or some other visual difference controlled by `frame_count`
+### Includere una varietà di ostacoli
+Puoi aggiungere varietà ai tuoi ostacoli in alcuni modi:
+ - Scegli in modo casuale tra più immagini, emoji o funzioni di disegno di ostacoli
+ - Regola in modo casuale il colore, la forma o la dimensione degli ostacoli modificando i parametri che li disegnano
+ - Anima l'ostacolo aggiungendo una rotazione, un cambio di colore o qualche altra differenza visiva controllata da `frame_count`
 
-### Add a win condition
-You can have players win the game in a few ways:
- - Achieving a winning score
- - Reaching a certain level of the game
+### Aggiungi una condizione di vittoria
+Puoi far vincere la partita ai giocatori in diversi modi:
+ - Raggiungendo un punteggio
+ - Raggiungendo un certo livello del gioco
 
-Once they have won, you should tell them somehow — maybe using `print()` or `text()` and then stop the game.
+Una volta che hanno vinto, dovresti dirglielo in qualche modo — magari usando `print()` o `text()` e poi interrompere il gioco.
 
-### Give players more than one life
-Add lives to your game, to allow players to survive a few collisions. This is a little trickier than just doing `lives -= 1` every time they collide with something:
- - The player may spend multiple frames in contact with an object, and so lose more than one life for a single collision — you'll need to prevent that from happening
- - You will also need a way for players to know how many lives they have left, and maybe some sort of warning that tells them when they're on their last life
- - You could add an object that, when the player collides with it, gives them an extra life. Remember that you'll need to modify your regular collision code so as it doesn't subtract a life at the same time!
+### Dai ai giocatori più di una vita
+Aggiungi vite al tuo gioco, per consentire ai giocatori di sopravvivere ad alcune collisioni. Questo è un po' più complicato che fare semplicemente `vite -= 1` ogni volta che si scontrano con qualcosa:
+ - Il giocatore può trascorrere più fotogrammi in contatto con un oggetto e quindi perdere più di una vita per una singola collisione — dovrai evitare che ciò accada
+ - Avrai anche bisogno di un modo per consentire ai giocatori di sapere quante vite hanno ancora a disposizione, e magari di una sorta di avvertimento che indichi loro quando è giunta l'ultima vita
+ - Potresti aggiungere un oggetto che, quando il giocatore si scontra con esso, gli dia una vita extra. Ricorda che dovrai modificare il tuo normale codice di collisione in modo che non sottragga una vita allo stesso tempo!
 
-Each example project in the Introduction allows you to look at the code, get ideas, and see how they work.
+Ogni progetto di esempio nell'Introduzione ti consente di osservare il codice, ottenere idee e vedere come funzionano.
 
-The "Dodge Asteroids" project below has all of these features:
+Il progetto "Schiva gli asteroidi" di seguito ha tutte queste caratteristiche:
 
-**Dodge asteroids**:
+**Schiva gli asteroidi**:
 <iframe src="https://editor.raspberrypi.org/en/embed/viewer/dodge-asteroids-example" width="600" height="700" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen>
 </iframe>
 
-You can find the Dodge asteroids project [here](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
+Puoi trovare il progetto Schiva gli asteroidi [qui](https://editor.raspberrypi.org/en/projects/dodge-asteroids-example){:target="_blank"}
 
-Take a look at some Don't collide projects created by community members in the Raspberry Pi Foundation’s [Don't collide - Community library](https://wke.lt/w/s/KobNfx){:target="_blank"}.
+Dai un'occhiata ad alcuni progetti Non scontrarti creati dai membri della comunità nella [Non scontrarti - Biblioteca della comunità](https://wke.lt/w/s/KobNfx){:target="_blank"} della Raspberry Pi Foundation.
 
 --- save ---
