@@ -1,72 +1,72 @@
-Add the colour of your theme
+Aggiungi il colore del tuo tema
 
-Positioned towards the screen bottom
+Posizionato verso la parte inferiore dello schermo
 
-Your chosen colour
+Il colore che hai scelto
 
-Load your image
+Carica la tua immagine
 
-Controls the size of the emoji
+Controlla la dimensione dell'emoji
 
-Position around the centre
+Posizionati circa al centro
 
-Face
+Volto
 
-Eyes
+Occhi
 
-Replace with your obstacle
+Sostituisci con il tuo ostacolo
 
-Before drawing the player
+Prima di disegnare il giocatore
 
-Load your player image
+Carica l'immagine del tuo giocatore
 
-Load your obstacle image
+Carica l'immagine dell'ostacolo
 
-Resize to fit your theme
+Ridimensiona per adattarlo al tuo tema
 
-Draw a fir tree
+Disegna un abete
 
-Green for needles
+Verde per gli aghi
 
-Brown for trunk
+Marrone per il tronco
 
-Increases each frame
+Aumenta ciascun fotogramma
 
-Wrap around
+Avvolgere
 
-Replace with your obstacle
+Sostituisci con il tuo ostacolo
 
-Any number is fine
+Qualsiasi numero va bene
 
-Draw collision point
+Disegna il punto di collisione
 
-Useful for debugging
+Utile per il debug
 
-Draw circles around the pixels to check for collisions
+Disegna cerchi attorno ai pixel per verificare le collisioni
 
-Off the left of the screen
+Alla sinistra dello schermo
 
-Off the right of the screen
+Alla destra dello schermo
 
-Include global variables here
+Includi qui le variabili globali
 
-Use the global level
+Usa global livello
 
-You have reached level
+Hai raggiunto il livello
 
-Score: 
+Punteggio: 
 
-Text to display
+Testo da visualizzare
 
-Great flying!
+Gran volo!
 
-Doing well!
+Stai facendo bene!
 
-Keep going!
+Continua così!
 
-But be careful!
+Ma fa attenzione!
 
-Push harder!
+Insisti!
 
-Head for base!
+Verso la base!
 
