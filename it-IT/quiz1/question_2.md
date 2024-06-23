@@ -1,50 +1,50 @@
 --- question ---
 ---
-legend: Question 2 of 3
+legend: Domanda 2 di 3
 ---
 
-In this project you used procedural generation — having the computer create and place parts of your world for you. While doing this is a great time saver, particularly if you're creating very large levels, it can create some issues. Which of these issues should you look out for when testing your procedural generation?
+In questo progetto hai usato la generazione procedurale — il computer crea e posiziona parti del tuo mondo per te. Anche se farlo fa risparmiare molto tempo, soprattutto se stai creando livelli molto grandi, può creare alcuni problemi. A quali di questi problemi dovresti prestare attenzione quando testi la tua generazione procedurale?
 
 --- choices ---
 
-- (x) All of them
+- (x) A tutti loro
 
   --- feedback ---
 
-Correct! All of these can happen when using procedural generation. You can either add more code to check for and work around these issues, or try different seeds until you find one that works.
+Corretto! Tutto ciò può accadere quando si utilizza la generazione procedurale. Puoi aggiungere altro codice per verificare e risolvere questi problemi o anche provare diverse seeds finché non ne trovi una che funzioni.
 
   --- /feedback ---
 
-- ( ) Obstacles could be generated that leave the player with no route forward.
+- ( ) Potrebbero essere generati ostacoli che lasciano il giocatore senza percorso da seguire.
 
   --- feedback ---
 
-Not quite. This can happen with procedurally generated obstacles, particularly when the game first starts.
+Non proprio. Ciò può accadere con ostacoli generati proceduralmente, in particolare all'avvio del gioco.
 
 
-**Tip:** You could work around this issue by preventing obstacles from appearing too close to the player's starting position. Can you think of other solutions?
+**Suggerimento:** Potresti aggirare questo problema impedendo che gli ostacoli appaiano troppo vicini alla posizione iniziale del giocatore. Ti vengono in mente altre soluzioni?
 
   --- /feedback ---
 
-- ( ) Obstacles appear directly underneath the player.
+- ( ) Gli ostacoli appaiono direttamente sotto il giocatore.
 
   --- feedback ---
 
-Not quite. This can happen either at the start of the game, or when new obstacles are added as a result of increasing the difficulty level, if they happen to choose a position close to the player's.
+Non proprio. Ciò può accadere sia all'inizio del gioco, sia quando vengono aggiunti nuovi ostacoli all'aumentare del livello di difficoltà, se capita che scelgano una posizione vicina a quella del giocatore.
 
 
-**Tip:** A potential solution might be to make the player temporarily immune to collision with all obstacles, or even only newly created obstacles, for a short time after a level increase. What problems might having the obstacle choose a new position create if it was too close to the player?
+**Suggerimento:** Una potenziale soluzione potrebbe essere quella di rendere il giocatore temporaneamente immune alla collisione con tutti gli ostacoli, o anche solo con quelli appena creati, per un breve periodo dopo un aumento di livello. Quali problemi potrebbe creare la scelta di una nuova posizione dell'ostacolo se fosse troppo vicino al giocatore?
 
   --- /feedback ---
 
-- ( ) The obstacles are all grouped together, leaving too much open space elsewhere.
+- ( ) Gli ostacoli sono tutti raggruppati insieme, lasciando troppo spazio aperto altrove.
 
   --- feedback ---
 
-Not quite. Because random generation can choose groups of numbers that are close together, this can be a problem.
+Non proprio. La generazione casuale può scegliere gruppi di numeri vicini tra loro, questo può essere un problema.
 
 
-**Tip:** One solution might be to switch to semi-random generation — break the screen up in to pieces and use random numbers to generate obstacles inside each of those pieces. Can you think of how you could use this sort of procedural generation to make your game more interesting, or more challenging?
+**Suggerimento:** Una soluzione potrebbe essere quella di passare alla generazione semi-casuale — dividi lo schermo in pezzi e usa numeri casuali per generare ostacoli all'interno di ciascuno di questi pezzi. Riesci a pensare a come potresti utilizzare questo tipo di generazione procedurale per rendere il tuo gioco più interessante o più impegnativo?
 
   --- /feedback ---
 
