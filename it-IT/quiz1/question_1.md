@@ -1,17 +1,17 @@
-## Quick quiz
+## Quiz veloce
 
-Answer the three questions. There are hints to guide you to the correct answer.
+Rispondi alle tre domande. Ci sono alcuni suggerimenti per aiutarti a trovare la risposta corretta.
 
-When you have answered each question, click on **Check my answer**.
+Dopo aver risposto a ciascuna domanda, fai clic su **Controlla la mia risposta**.
 
-Have fun!
+Divertiti!
 
 --- question ---
 ---
-legend: Question 1 of 3
+legend: Domanda 1 di 3
 ---
 
-You have used a lot of `if` statements to control your game's behaviour. Some of them might have had more complex conditions, using `and` to make multiple tests at once. If you ran the following piece of conditional code, what would you expect the output to be?
+Hai usato molte istruzioni `if` per controllare il comportamento del tuo gioco. Alcuni di loro potrebbero aver avuto condizioni più complesse, utilizzando `and` per eseguire più test contemporaneamente. Se eseguissi la seguente parte di codice condizionale, quale ti aspetteresti che sia l'output?
 
 ```python
 score = 5000
@@ -38,42 +38,42 @@ else:
 
 - ( )
 ```
-Great flying!
+Gran volo!
 ```
   --- feedback ---
 
-While `score >= 5000` is true, for an `and` condition both parts must be true, and `lives >= 3` is false.
+Mentre `score >= 5000` è vero, per ognuna delle condizioni `and` entrambe devono essere vere, e `lives >= 3` falsa.
 
   --- /feedback ---
 
 - (x)
 ```
-Doing well!
-Keep going!
+Stai facendo bene!
+Continua così!
 ```
   --- feedback ---
 
-This is correct — `score >= 5000` is true, and so is `lives > 1` on the nested `if` statement.
+Questo è corretto — `score >= 5000` è vera, e così lo è `lives > 1` sulla dichiarazione indentata `if`.
 
   --- /feedback ---
 
 - ( )
 ```
-Doing well!
+Stai facendo bene!
 ```
   --- feedback ---
 
-Close, but `score >= 5000` isn't the only condition the program would find true as it ran.
+Ci sei vicino, ma `score >= 5000` non è la sola condizione che il programma riterrebbe vera durante l'esecuzione.
 
   --- /feedback ---
 
 - ( )
 ```
-Push harder!
+Insisti!
 ```
   --- feedback ---
 
-While `lives > 1` is true, only the code inside the first true condition in an `if`/`elif`/`else` statement is executed, and `lives > 1` is not the first condition that is true.
+Mentre `lives > 1` è vera, solo il codice dentro la prima condizione vera nelle dichiarazioni `if`/`elif`/`else` è eseguita, e `lives > 1` non è la prima condizione che è vera.
 
   --- /feedback ---
 
