@@ -1,34 +1,34 @@
-## Set the theme
+## Prepara la scena
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
-Set the theme of your game and create a player character that follows the mouse pointer.
+Imposta il tema del tuo gioco e crea un personaggio che segue il puntatore del mouse.
 
 </div>
 <div>
 
-![Image of cartoon turtle viewed from above set against a blue background.](images/theme-turtle.png){:width="300px"}
+![Immagine di una tartaruga vista dall'alto in uno sfondo blu.](images/theme-turtle.png){:width="300px"}
 
 </div>
 </div>
 
-What is the theme of your game? Here are some ideas:
-- Sports
+Qual è il tema del tuo gioco? Ecco alcune idee:
+- Sport
 - Hobbies
-- Science
-- Nature
+- Scienza
+- Natura
 
 --- task ---
 
-Open the [Don't Collide! starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"} project. The code editor will open in another browser tab.
+Apri [Non scontrarti! progetto iniziale](https://editor.raspberrypi.org/en/projects/dont-collide-starter) progetto {:target="_blank"}. L'editor si aprirà in un'altra scheda del browser.
 
-If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
+Se disponi di un account Raspberry Pi, puoi fare clic sul pulsante **Salva** per salvarne una copia nei tuoi **Progetti**.
 
 --- /task ---
 
 --- task ---
 
-**Choose:** Set the size of your canvas.
+**Scegli:** Imposta la dimensione della tua cornice.
 
 --- code ---
 ---
@@ -44,9 +44,9 @@ def setup(): size(400, 400)
 
 --- task ---
 
-Create a variable called `safe` to store the background colour based on the theme you want for your game.
+Crea una variabile chiamata `safe` per memorizzare il colore di sfondo in base al tema che desideri per il tuo gioco.
 
-This is the colour that it is safe for the player to be on and you will use this variable again later.
+Questo è il colore su cui è sicuro che il giocatore si trovi e utilizzerai di nuovo questa variabile in seguito.
 
 --- code ---
 ---
@@ -64,19 +64,19 @@ def draw(): global safe safe = Color(200, 100, 0)  # Add the colour of your them
 
 --- task ---
 
-**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+**Test:** Esegui il codice per vedere il colore di sfondo. Cambialo finché non sei soddisfatto del colore e delle dimensioni dello schermo.
 
 --- /task ---
 
-Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
+Ora scegli il personaggio che sta giocando ed evitando gli ostacoli. Un oggetto, una persona, un animale o qualcos'altro?
 
-The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`.
+Il giocatore apparirà in una fissata posizione `y` e lo stesso sarà per la posizione `x` del puntatore del mouse, la quale è salvata nella `p5` variabile `mouse_x`.
 
 --- task ---
 
-It's a good idea to organise the code for drawing the player character into a function.
+È una buona idea organizzare il codice per stabilire quello che il personaggio può fare in una funzione.
 
-Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player:
+Definisci una funzione `disegna_giocatore()` e crea una posizione ` giocatore_y` per la posizione fissa `y` del giocatore:
 
 --- code ---
 ---
@@ -88,7 +88,7 @@ def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen
 
 --- /code ---
 
-Add code to `draw()` to call `draw_player()` each frame.
+Aggiungi codice per `draw()` per chiamare `disegna_giocatore()` ogni fotogramma.
 
 --- code ---
 ---
@@ -102,27 +102,27 @@ def draw(): global safe safe = Color(200, 100, 0)  # Your chosen colour backgrou
 
 --- /task ---
 
-Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
+Successivamente aggiungerai il codice alla funzione `disegna_giocatore()` per disegnare la tua forma. Potrebbe anche essere necessario aggiungere il codice `setup()`.
 
 --- task ---
 
-**Choose:** What does your player look like? Your player could be:
-+ An image provided in the starter project
-+ An emoji 🎈 or text
-+ Drawn using a series of shapes
+**Scegli:** Che aspetto ha il tuo giocatore? Il tuo giocatore potrebbe essere:
++ Un'immagine fornita nel progetto iniziale
++ Un'emoji 🎈 o un testo
++ Disegnato utilizzando una serie di forme
 
 --- collapse ---
 ---
-title: Use a starter image
+title: Usare un'immagine di partenza
 ---
 
-Images included in the starter project will be shown in the `Image gallery`.
+Le immagini incluse nel progetto iniziale verranno visualizzate nella `Galleria di immagini`.
 
-![The Image gallery displaying the included images.](images/starter-images.png)
+![La Galleria di immagini mostra le immagini incluse.](images/starter-images.png)
 
-Make a note of the name of the image you want to use.
+Prendi nota del nome dell'immagine che desideri utilizzare.
 
-Load the image into the `setup()` function
+Carica l'immagine nella funzione `setup()`
 
 --- code ---
 ---
@@ -134,7 +134,7 @@ def setup(): size(400, 400) global player player = load_image('turtle.png')  # L
 
 --- /code ---
 
-Call the `image()` and set it as global in the `draw_player()` function.
+Chiama `image()` e impostala come globale nella funzione `disegna_giocatore()`.
 
 --- code ---
 ---
@@ -150,12 +150,12 @@ def draw_player(): player_y = int(height * 0.8)  # Positioned towards the screen
 
 --- collapse ---
 ---
-title: Use emoji characters
+title: Usare come personaggi emoji
 ---
 
-You can use emoji characters in the p5 `text()` function to use an emoji to represent your player.
+Puoi utilizzare i caratteri emoji nella funzione p5 `text()` per usare un emoji per rappresentare il tuo giocatore.
 
-Here's an example:
+Ecco un esempio:
 
 --- code ---
 ---
@@ -167,7 +167,7 @@ def setup(): size(400, 400) text_size(40)  # Controls the size of the emoji text
 
 --- /code ---
 
-Call the `text()` and set it as global in the `draw_player()` function.
+Chiama `text()` e impostala come globale nella funzione `disegna_giocatore()`.
 
 --- code ---
 ---
@@ -195,14 +195,14 @@ def draw_player(): player_y = int(height * 0.8) text('🎈', mouse_x, player_y)
 
 [[[processing-stroke]]]
 
-**Tip:** You can use several simple shapes in the same function to create a more complex player.
+**Suggerimento:** Puoi utilizzare diverse forme semplici nella stessa funzione per creare un giocatore più complesso.
 
 --- collapse ---
 ---
-title: Draw a player using multiple shapes
+title: Disegna un giocatore utilizzando più forme
 ---
 
-![A face shape made from a green circle as a background and two eyes drawn from blue circles, with black circles within and a glint within those using a white circle.](images/face_player.png)
+![Una faccia composta da un cerchio verde come sfondo e due occhi disegnati da cerchi blu, con cerchi neri all'interno e un luccichio all'interno di quelli sono disegnati da un cerchio bianco.](images/face_player.png)
 
 --- code ---
 ---
@@ -231,40 +231,40 @@ def draw_player(): player_y = int(height * 0.8) noStroke() # Face fill(0, 200, 1
 
 --- task ---
 
-**Test:** Run your code and move the mouse to control the player.
+**Test:** Esegui il codice e muovi il mouse per controllare il giocatore.
 
-Does it move like you expect?
+Si muove come ti aspetti?
 
 --- /task ---
 
-**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+**Debug:** Potresti trovare alcuni bug nel tuo progetto che devi correggere. Ecco alcuni bug comuni.
 
 --- task ---
 
 --- collapse ---
 ---
-title: I can't see the player
+title: Non riesco a vedere il giocatore
 ---
 
-Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+Prova a passare allo schermo intero. Anche, controlla le coordinate `x` e `y` che hai usato per disegnare il giocatore — sii sicuro che le coordinate siano interne alla cornice che hai creato con `size()`.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image isn't loading
+title: Un'immagine non si carica
 ---
 
-First, check that the image is in the `Image gallery`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+Innanzitutto, controlla che l'immagine sia nella `Galleria immagini`. Quindi, controlla il nome del file con molta attenzione: ricorda che le lettere maiuscole sono diverse dalle lettere minuscole e la punteggiatura è importante.
 
 --- /collapse ---
 
 --- collapse ---
 ---
-title: An image is the wrong size
+title: Un'immagine è della dimensione errata
 ---
 
-Check the inputs that control the width and height of the image:
+Controlla gli input che controllano la larghezza e l'altezza dell'immagine:
 
 ```python
 image(image_file, x_coord, y_coord, width, height)
@@ -274,10 +274,10 @@ image(image_file, x_coord, y_coord, width, height)
 
 --- collapse ---
 ---
-title: An emoji is the wrong size
+title: Un'emoji è della dimensione errata
 ---
 
-If your emoji is too big or too small, change the value in `text_size()`.
+Se la tua emoji è troppo grande o troppo piccola, modifica il valore in `text_size()`.
 
 --- /collapse ---
 
