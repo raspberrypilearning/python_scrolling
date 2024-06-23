@@ -1,43 +1,43 @@
 --- question ---
 ---
-legend: Question 3 of 3
+legend: Domanda 3 di 3
 ---
 
-You made a game that you're really pleased with and shared it. A player has reviewed it and has shared some thoughtful feedback with some changes they would like to see.
+Hai realizzato un gioco di cui sei davvero soddisfatto e lo hai condiviso. Un giocatore lo ha esaminato e ha condiviso alcuni feedback con alcuni cambiamenti che vorrebbe vedere.
 
-What would be the best way to react to their suggestions?
+Quale sarebbe il modo migliore per reagire al suo suggerimento?
 
 --- choices ---
 
-- ( ) Immediately make all the changes they have suggested.
+- ( ) Apportare immediatamente tutte le modifiche suggerite.
 
   --- feedback ---
 
-It's great to get feedback, but you shouldn't change your game just to keep one player happy, maybe other players might give different feedback.
+È fantastico ricevere feedback, ma non dovresti cambiare il tuo gioco solo per accontentare un giocatore, magari altri giocatori potrebbero dare feedback diversi.
 
   --- /feedback ---
 
-- ( ) Ignore the suggestions because you know best.
+- ( ) Ignorare i suggerimenti perché ne sai di più.
 
   --- feedback ---
 
-Not quite. It's usually worth listening to what your users have to say about your work. If a player has given constructive feedback, then you should consider it.
+Non proprio. Di solito vale la pena ascoltare ciò che i tuoi utenti hanno da dire sul tuo lavoro. Se un giocatore ha dato un feedback costruttivo, allora dovresti tenerlo in considerazione.
 
   --- /feedback ---
 
-- (x) Consider their feedback with other feedback and decide how to improve your game.
+- (x) Considerare il suo feedback insieme ad altri feedback e decidere come migliorare il tuo gioco.
 
   --- feedback ---
 
-Correct! You should consider any feedback you get — while always trying to get more than one point of view — and make decisions to improve the game for all players.
+Corretto! Dovresti considerare qualsiasi feedback che ricevi — cercando sempre di ottenere più di un punto di vista — e prendere decisioni per migliorare il gioco per tutti i giocatori.
 
   --- /feedback ---
 
-- ( ) Feel really sad that the player didn't think your game was perfect.
+- ( ) Sentirsi davvero triste perché il giocatore non pensa che il gioco sia perfetto.
 
   --- feedback ---
 
-No! You shouldn't feel sad if someone suggests improvements to your game. Constructive feedback is really useful and can help improve your game. You should be pleased that they were interested enough in your game to give feedback.
+No! Non dovresti sentirti triste se qualcuno suggerisce miglioramenti al tuo gioco. Il feedback costruttivo è davvero utile e può aiutarti a migliorare il tuo gioco. Dovresti essere contento che siano stati abbastanza interessati al tuo gioco da fornire feedback.
 
   --- /feedback ---
 
