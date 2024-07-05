@@ -18,10 +18,10 @@ def disegnare_ostacoli():
         print('Hai raggiunto il livello', livello)
   
     for i in range(6 + livello):
-        
+        ob_x = randint(0, height)
         ob_y = randint(0, height) + (frame_count * livello)
         ob_y %= height  # arrotolare
-        
+        text('🌵', ob_x, ob_y)
 
 
 # La funzione disegna_giocatore va qui
@@ -59,10 +59,10 @@ def setup():
 def draw():
     # Cose da fare in ogni fotogramma
     global punteggio, safe, livello
-    
+    safe = Color(200, 150, 0)
 
     if livello > 0:
-        
+        background(safe)
         fill(255)
         text('Punteggio: ' + str(punteggio), width/2, 20)
         disegnare_ostacoli()
