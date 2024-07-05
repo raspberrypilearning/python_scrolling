@@ -17,17 +17,17 @@ def disegnare_ostacoli():
         velocita += 1
         print('Hai raggiunto il livello', velocita)
       
-    
-        
+    for i in range(6):
+        ob_x = randint(0, height)
         ob_y = randint(0, height) + (frame_count * velocita)
         ob_y %= height  # arrotolare
         no_stroke()
         fill(0,255,0)
-        
-        
-        
+        triangle(ob_x + 20, ob_y + 20, ob_x + 10, ob_y + 40, ob_x + 30, ob_y + 40)
+        triangle(ob_x + 20, ob_y + 30, ob_x + 5, ob_y + 55, ob_x + 35, ob_y + 55)
+        triangle(ob_x + 20, ob_y + 40, ob_x + 0, ob_y + 70, ob_x + 40, ob_y + 70)
         fill(150,100,100)
-        
+        rect(ob_x + 15, ob_y + 70, 10, 10)
     
 # La funzione disegna_giocatore va qui
 def disegna_giocatore():
@@ -35,7 +35,7 @@ def disegna_giocatore():
     
     giocatore_y = int(height * 0.8)
     
-    
+    fill(safe)
   
     collisione = get(mouse_x, giocatore_y).hex
     
