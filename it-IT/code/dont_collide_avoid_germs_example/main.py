@@ -90,10 +90,10 @@ def disegnare_ostacoli():
         print('Hai raggiunto il livello', livello)
     
     for i in range(9 + livello):
-        
-        
-        
-        
+        ob_x = randint(0, width)
+        ob_y = randint(0, height) + frame_count
+        ob_y %= height
+        text('🦠', ob_x, ob_y)
 
 def setup():
     # Metti qui sotto il codice che verrà eseguito una sola volta
@@ -106,10 +106,10 @@ def draw():
     # Metti qui sotto il codice che verrà eseguito ad ogni cambio di frame
     global safe, punteggio, livello
   
-    
+    safe = Color(149, 161, 195)
   
     if livello > 0:
-        
+        background(safe)
         fill(145, 134, 126)
         text('Punteggio: ' + str(punteggio), width/2, 20)
         disegnare_ostacoli()
