@@ -20,13 +20,13 @@ def disegnare_ostacoli():
         print('Hai raggiunto il livello', livello)
       
     for i in range(6 + livello):
-        
+        ob_x = randint(0, width)
         ob_y = randint(0, height) + (frame_count * livello)
         ob_y %= height  # arrotolare
         push_matrix()
-        
-        
-        
+        translate(ob_x, ob_y)
+        rotate(degrees(randint(1, 359)+frame_count / 1000))
+        image(rock, 0, 0, randint(18,24), randint(18,24))
         pop_matrix()
 
     
@@ -54,10 +54,10 @@ def disegna_giocatore():
       
         image(rocket, giocatore_x, giocatore_y + 25, 64, 64)
         punteggio += livello
-        
+        invun -= 1
         no_tint()
       
-        
+        if invun > 0:
             stroke(220)
             fill(220, 220, 220, 60)
             ellipse(giocatore_x, giocatore_y + 18, 47, 47)
@@ -75,7 +75,7 @@ def disegna_giocatore():
     
 
 def mostra_punteggio():
-    
+    global livello
     
     fill(255)
     text_size(16)
@@ -84,8 +84,8 @@ def mostra_punteggio():
     text(str(punteggio), width * 0.45, 25, width * 0.5, 20)
     
     if punteggio > 10000:
-        
-        print('🎉🎉 Hai vinto! 
+        livello = 0
+        print('🎉🎉 Hai vinto! 🎉🎉')
 
   
 def mostra_vite():
@@ -101,7 +101,7 @@ def mostra_vite():
 def setup():
     # Imposta la tua animazione qui
     size(400, 400)
-    
+    global rocket, rock, random_seed
     
     text_size(40)
     text_align(CENTER, TOP) # posizione attorno al centro, in alto
@@ -113,10 +113,10 @@ def setup():
 def draw():
     # Cose da fare in ogni fotogramma
     global punteggio, safe, livello
-    
+    safe = Color(0)
     
     if livello > 0:
-         
+        background(safe) 
         fill(255)
         image_mode(CENTER)
         disegnare_ostacoli()
