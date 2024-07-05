@@ -20,7 +20,7 @@ Qual è il tema del tuo gioco? Ecco alcune idee:
 
 --- task ---
 
-Apri [Non scontrarti! progetto iniziale](https://editor.raspberrypi.org/it-IT/projects/dont-collide-starter) progetto{:target="_blank"}. L'editor si aprirà in un'altra scheda del browser.
+Apri [Non scontrarti! progetto iniziale](https://editor.raspberrypi.org/it-IT/projects/dont-collide-starter){:target="_blank"} progetto. L'editor si aprirà in un'altra scheda del browser.
 
 Se disponi di un account Raspberry Pi, puoi fare clic sul pulsante **Salva** per salvarne una copia nei tuoi **Progetti**.
 
