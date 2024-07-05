@@ -19,9 +19,9 @@ def disegnare_ostacoli():
       
     for i in range(6 + livello):
         ob_y = randint(0, width) + (frame_count * livello)
-         
+        ob_y = randint(0, height) 
         ob_x %= width  # arrotolare
-        
+        text('💩', ob_x, ob_y)
     
 # La funzione disegna_giocatore va qui
 def disegna_giocatore():
@@ -51,7 +51,7 @@ def disegna_giocatore():
         image(auto, giocatore_x, giocatore_y, 100, 31)
         punteggio += livello
     else:
-        testo('💥', giocatore_x, giocatore_y)
+        text('💥', giocatore_x, giocatore_y)
         livello = 0
 
 
@@ -59,17 +59,17 @@ def setup():
     # Imposta la tua animazione qui
     size(400, 400)
     global auto
-    
+    auto = load_image('car.png')
     image_mode(CENTER)
   
   
 def draw():
     # Cose da fare in ogni fotogramma
     global punteggio, safe, livello
-    sicurezza = Color(128)
+    safe = Color(128)
     
     if livello > 0:
-        
+        background(safe)
         fill(255)
         text_size(16)
         text_align(RIGHT, TOP)
@@ -78,6 +78,6 @@ def draw():
         text_size(20)
         text_align(CENTER, TOP) # posizione attorno al centro, in alto
         disegnare_ostacoli()
-        draw_player()
+        disegna_giocatore()
   
 run()
