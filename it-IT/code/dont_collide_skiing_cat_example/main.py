@@ -58,11 +58,11 @@ def setup():
   
 def draw():
     # Cose da fare in ogni fotogramma
-    global punteggio, sicurezza, velocita, sciare, incidenti
-    sicurezza = Color(255)
+    global punteggio, safe, velocita, sciare, incidenti
+    safe = Color(255)
   
     if velocita > 0:
-        background(sicurezza) 
+        background(safe) 
         fill(0)
         text('Punteggio: ' + str(punteggio), width/2, 20)
         disegnare_ostacoli()
