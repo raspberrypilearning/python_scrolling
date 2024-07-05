@@ -1,4 +1,4 @@
-
+sicuro
 
 disegna_giocatore
 
@@ -10,11 +10,11 @@ disegna_giocatore
 
 mouse_x
 
+image_file
 
+x_coord
 
-
-
-
+y_coord
 
 larghezza
 
