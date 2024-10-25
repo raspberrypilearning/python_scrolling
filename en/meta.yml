@@ -16,8 +16,8 @@ steps:
   - title: Create obstacles
     completion:
       - engaged
-  - title: Collision detection
-  - title: Speed up!
+  - title: Lots of obstacles
+  - title: Collisions
     completion:
       - internal
   - title: Quick quiz

@@ -2,7 +2,7 @@
 
 --- task ---
 
-Open the [starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"} project. 
+Open the [starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"}. 
 
 --- /task ---
 
