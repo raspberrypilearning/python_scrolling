@@ -1,5 +1,7 @@
 ## Challenge
 
+--- challenge ---
+
 Now it is over to you! Use the skills you have learned to finish the game.
 
 --- task ---
@@ -25,10 +27,12 @@ Add an item for the player to pick up, which disappears when the player touches 
 --- /task ---
 --- task ---
 Add a variable to keep track of the player's score.
---- task ---
+--- /task ---
 --- task ---
 Stop the game if the player crashes.
 --- /task ---
 --- task ---
 Display a text message on the screen to say 'Game over'.
 --- /task ---
+
+--- /challenge ---

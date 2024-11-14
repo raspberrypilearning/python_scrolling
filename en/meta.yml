@@ -29,6 +29,7 @@ steps:
       passing_score: 3
     completion:
       - external
-  - title: Upgrade your project
+  - title: Challenge
+    challenge: true
   - title: Share
   - title: What next?
