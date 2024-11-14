@@ -1,4 +1,4 @@
-## Create obstacles
+## Create an obstacle
 
 <div style="display: flex; flex-wrap: wrap">
 <div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
@@ -74,7 +74,7 @@ def draw_obstacles():
     text('🌵', obstacle_x, obstacle_y) 
 
 --- /code ---
-</div>
+
 --- /task ---
 
 --- task ---
