@@ -1,4 +1,4 @@
-## Lots of obstacles
+## Random obstacles
 
 --- task ---
 
@@ -26,22 +26,6 @@ def draw_obstacles():
 
 --- task ---
 **Test:** Run your code and you should see the obstacle reach the bottom of the screen and then restart from the top.
---- /task ---
-
---- task ---
-
-In your `draw_player()` function, create a variable called `collide` and set it to get the hexadecimal (hex) colour value at the position of the player.
-
---- code ---
----
-language: python
-filename: main.py - draw_player()
----
-
-    collide = get(mouse_x, player_y).hex
-
---- /code ---
-
 --- /task ---
 
 --- task ---

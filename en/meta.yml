@@ -16,6 +16,7 @@ steps:
   - title: Create obstacles
     completion:
       - engaged
+  - title: Random obstacles
   - title: Lots of obstacles
   - title: Collisions
     completion:
