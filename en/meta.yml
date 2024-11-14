@@ -11,7 +11,7 @@ listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
-  - title: What you will mAKE
+  - title: What you will make
   - title: Set the scene
   - title: Create obstacles
     completion:
