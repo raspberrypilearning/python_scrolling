@@ -4,8 +4,6 @@
 
 Currently, the obstacle disappears off the bottom of the screen, because its `obstacle_y` position becomes larger than the screen size.
 
---- task ---
-
 Use the modulo (%) operator to divide the y position by the screen size and give you the **remainder**. This makes the obstacle reappear at the top!
 
 --- code ---
