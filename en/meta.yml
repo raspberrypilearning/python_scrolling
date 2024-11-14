@@ -31,5 +31,4 @@ steps:
       - external
   - title: Challenge
     challenge: true
-  - title: Share
   - title: What next?
