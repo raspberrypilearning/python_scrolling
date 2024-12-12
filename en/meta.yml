@@ -11,13 +11,14 @@ listed: true
 copyedit: true
 last_tested: "2021-10-06"
 steps:
-  - title: You will make
-  - title: Set the theme
-  - title: Create obstacles
+  - title: What you will make
+  - title: Set the scene
+  - title: Create an obstacle
     completion:
       - engaged
-  - title: Collision detection
-  - title: Speed up!
+  - title: Random obstacles
+  - title: Lots of obstacles
+  - title: Collisions
     completion:
       - internal
   - title: Quick quiz
@@ -28,6 +29,6 @@ steps:
       passing_score: 3
     completion:
       - external
-  - title: Upgrade your project
-  - title: Share
+  - title: Challenge
+    challenge: true
   - title: What next?

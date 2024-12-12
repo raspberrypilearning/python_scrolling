@@ -20,29 +20,7 @@ What is the theme of your game? Here are some ideas:
 
 --- task ---
 
-Open the [Don't Collide! starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"} project. The code editor will open in another browser tab.
-
-If you have a Raspberry Pi account, you can click on the **Save** button to save a copy to your **Projects**.
-
---- /task ---
-
---- task ---
-
-**Choose:** Set the size of your canvas.
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 9
-line_highlights: 10
----
-
-def setup():
-    size(400, 400)
-
---- /code ---
+Open the [starter project](https://editor.raspberrypi.org/en/projects/dont-collide-starter){:target="_blank"}. 
 
 --- /task ---
 
@@ -137,27 +115,7 @@ Next you will add code to the `draw_player()` function to draw your shape. You m
 title: Use a starter image
 ---
 
-Images included in the starter project will be shown in the `Image gallery`.
-
-![The Image gallery displaying the included images.](images/starter-images.png)
-
-Make a note of the name of the image you want to use.
-
-Load the image into the `setup()` function 
-
---- code ---
----
-language: python
-filename: main.py - setup()
-line_numbers: true
-line_number_start: 9
-line_highlights: 11-12
----
-
-def setup():
-    size(400, 400)
-    global player
-    player = load_image('turtle.png')  # Load your image
+[[[choose-an-emoji]]]
 
 --- /code ---
 
