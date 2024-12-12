@@ -85,6 +85,8 @@ You can paste in a different emoji if you want to.
 
 --- /task ---
 
+[[[choose-an-emoji]]]
+
 --- task ---
 
 To make the player follow the mouse as it moves from side to side, change the player's x position to `mouse_x`.
