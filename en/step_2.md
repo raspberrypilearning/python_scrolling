@@ -1,4 +1,22 @@
-## Set the scene
+## Set the theme
+
+<div style="display: flex; flex-wrap: wrap">
+<div style="flex-basis: 200px; flex-grow: 1; margin-right: 15px;">
+Set the theme of your game and create a player character that follows the mouse pointer.
+
+</div>
+<div>
+
+![Image of cartoon turtle viewed from above set against a blue background.](images/theme-turtle.png){:width="300px"}
+
+</div>
+</div>
+
+What is the theme of your game? Here are some ideas:
+- Sports
+- Hobbies
+- Science
+- Nature
 
 --- task ---
 
@@ -8,69 +26,74 @@ Open the [starter project](https://editor.raspberrypi.org/en/projects/dont-colli
 
 --- task ---
 
-Create a variable called `safe` to store the background colour.
+Create a variable called `safe` to store the background colour based on the theme you want for your game. 
 
-In the game, the player is safe if they are touching the background colour. 
+This is the colour that it is safe for the player to be on and you will use this variable again later.
 
 --- code ---
 ---
 language: python
+filename: main.py - draw()
 line_numbers: true
-line_number_start: 20
-line_highlights: 22-24
+line_number_start: 13
+line_highlights: 14, 15, 16
 ---
- 
-def draw():   
-    # Put code to run every frame here
+
+def draw():
     global safe
-    safe = Color(200, 100, 0) 
-    background(safe) 
-  
+    safe = Color(200, 100, 0)  # Add the colour of your theme
+    background(safe)
+
 --- /code ---
 
---- /task ---
+[[[generic-theory-simple-colours]]]
 
---- task ---
-**Test:** Run your code and you should see a coloured square. 
-
-The colour is three numbers - the amount of red, green and blue. Try changing the numbers to any whole number between 0 and 255 to get a different colour.
 --- /task ---
 
 --- task ---
 
-Define a `draw_player` function. Inside, add an emoji and a pair of x, y coordinates to represent the player. 
+**Test:** Run your code to see the background colour. Change it until you are happy with the colour and the size of the screen.
+
+--- /task ---
+
+Now choose the character that is playing the game and avoiding the obstacles. Is it an object, person, animal, or something else?
+
+The player will appear at a fixed `y` position and same `x` position as the mouse pointer, which is stored in the `p5` variable `mouse_x`. 
+
+--- task ---
+
+It's a good idea to organise the code for drawing the player character into a function.
+
+Define a `draw_player()` function and create a `player_y` position for the fixed `y` position of the player: 
 
 --- code ---
 ---
 language: python
+filename: main.py - draw_player()
 line_numbers: true
-line_number_start: 7
-line_highlights: 8-9
+line_number_start: 12
+line_highlights: 12-14
 ---
-# Draw player function goes here
+
 def draw_player():
-    text('🤠', 200, 320)
-  
+    player_y = int(height * 0.8)  # Positioned towards the screen bottom
+
 --- /code ---
 
---- /task ---
-
---- task ---
-
-Call the `draw_player` function so that the player is drawn on the screen.
+Add code to `draw()` to call `draw_player()` each frame.
 
 --- code ---
 ---
 language: python
+filename: main.py - draw()
 line_numbers: true
-line_number_start: 21
-line_highlights: 26
+line_number_start: 15
+line_highlights: 19
 ---
 
-def draw():  
-    # Put code to run every frame here 
+def draw():
     global safe
-    safe = Color(200, 100, 0) 
+    safe = Color(200, 100, 0)  # Your chosen colour
     background(safe)
     draw_player()
   
@@ -78,35 +101,192 @@ def draw():
 
 --- /task ---
 
+Next you will add code to the `draw_player()` function to draw your shape. You may also need to add `setup()` code.
+
 --- task ---
-**Test:** Run your code and you should see the emoji appear near the bottom of the screen. 
 
-You can paste in a different emoji if you want to.
+**Choose:** What does your player look like? Your player could be:
++ An image provided in the starter project
++ An emoji 🎈 or text
++ Drawn using a series of shapes 
 
---- /task ---
+--- collapse ---
+---
+title: Use a starter image
+---
 
 [[[choose-an-emoji]]]
 
---- task ---
+--- /code ---
 
-To make the player follow the mouse as it moves from side to side, change the player's x position to `mouse_x`.
+Call the `image()` and set it as global in the `draw_player()` function.
 
 --- code ---
 ---
 language: python
+filename: main.py - draw_player()
 line_numbers: true
-line_number_start: 7
-line_highlights: 9
+line_number_start: 14
+line_highlights: 16
 ---
-# Draw player function goes here
+
 def draw_player():
-    text('🤠', mouse_x, 320)
-  
+    player_y = int(height * 0.8)  # Positioned towards the screen bottom
+    image(player, mouse_x, player_y, 30, 30)
+
 --- /code ---
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: Use emoji characters
+---
+
+You can use emoji characters in the p5 `text()` function to use an emoji to represent your player. 
+
+Here's an example:
+
+--- code ---
+---
+language: python
+filename: main.py - setup()
+line_numbers: true
+line_number_start: 9
+line_highlights: 11-13
+---
+
+def setup():
+    size(400, 400)
+    text_size(40)  # Controls the size of the emoji
+    text_align(CENTER, TOP)  # Position around the centre
+
+--- /code ---
+
+Call the `text()` and set it as global in the `draw_player()` function.
+
+--- code ---
+---
+language: python
+filename: main.py - draw_player()
+line_numbers: true
+line_number_start: 14
+line_highlights: 16-17
+---
+
+def draw_player():
+    player_y = int(height * 0.8)
+    text('🎈', mouse_x, player_y)
+
+--- /code ---
+
+--- /collapse ---
+
+[[[processing-python-text]]]
+
+[[[generic-theory-simple-colours]]]
+
+[[[processing-python-ellipse]]]
+
+[[[processing-python-rect]]]
+
+[[[processing-python-triangle]]]
+
+[[[processing-tint]]]
+
+[[[processing-stroke]]]
+
+**Tip:** You can use several simple shapes in the same function to create a more complex player.
+
+--- collapse ---
+---
+title: Draw a player using multiple shapes
+---
+
+![A face shape made from a green circle as a background and two eyes drawn from blue circles, with black circles within and a glint within those using a white circle.](images/face_player.png)
+
+--- code ---
+---
+language: python
+filename: main.py - draw_player()
+---
+
+def draw_player():
+    player_y = int(height * 0.8)
+    noStroke()
+    # Face
+    fill(0, 200, 100)
+    ellipse(mouse_x, player_y, 60, 60)
+    
+    # Eyes
+    fill(0, 100, 200)
+    ellipse(mouse_x - 10, player_y - 10, 20, 20)
+    ellipse(mouse_x + 10, player_y - 10, 20, 20)
+    fill(0)
+    ellipse(mouse_x - 10, player_y - 10, 10, 10)
+    ellipse(mouse_x + 10, player_y - 10, 10, 10)
+    fill(255)
+    ellipse(mouse_x - 12, player_y - 12, 5, 5)
+    ellipse(mouse_x + 12, player_y - 12, 5, 5)
+
+--- /code ---
+
+--- /collapse ---
+
 --- /task ---
 
 --- task ---
-Run your code and check that the player moves left and right when you move the mouse. 
 
+**Test:** Run your code and move the mouse to control the player.
+
+Does it move like you expect?
 
 --- /task ---
+
+**Debug:** You might find some bugs in your project that you need to fix. Here are some common bugs.
+
+--- task ---
+
+--- collapse ---
+---
+title: I can't see the player
+---
+
+Try switching to full screen. Also, check the `x` and `y` coordinates that you used to draw the player — make sure they are inside the canvas you created with `size()`.
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: An image isn't loading
+---
+
+First, check that the image is in the `Image gallery`. Then, check the filename really carefully — remember capital letters are different to lower case letters and punctuation is important.
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: An image is the wrong size
+---
+
+Check the inputs that control the width and height of the image:
+
+```python
+image(image_file, x_coord, y_coord, width, height)
+```
+
+--- /collapse ---
+
+--- collapse ---
+---
+title: An emoji is the wrong size
+---
+
+If your emoji is too big or too small, change the value in `text_size()`.
+
+--- /collapse ---
+
+--- /task ---
+
+--- save ---
